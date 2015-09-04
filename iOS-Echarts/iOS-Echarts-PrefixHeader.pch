@@ -1,0 +1,18 @@
+//
+//  iOS-Echarts-PrefixHeader.pch
+//  iOS-Echarts
+//
+//  Created by ChipSea on 15/9/4.
+//  Copyright (c) 2015年 pluto-y. All rights reserved.
+//
+
+#ifndef iOS_Echarts_iOS_Echarts_PrefixHeader_pch
+#define iOS_Echarts_iOS_Echarts_PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+
+#import <UIKit/UIKit.h>
+
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif

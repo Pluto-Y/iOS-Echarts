@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<head>
+    <title>ECharts</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<style type="text/CSS">
+      div {background-color: transparent}
+	</style>
+    <!-- ECharts单文件引入 -->
+    <script src="js/echarts.js"></script>
+    <script type="text/javascript">
+	function test1(testdate) {
+        var testDataFromiOS = eval(testdate);
+        //alert(window.screen.width + "-" + window.screen.height);
+        //var divMain = document.getElementById('main');
+//        divMain.style.width = window.screen.width;
+		var lineTitle = [ // '邮件营销',
+							//'联盟广告',
+							//'视频广告'
+							//'直接访问',
+							//'搜索引擎'
+						];
+        var xAxisTitle = [
+								'周一',
+								'周二',
+								'周三',
+								'周四',
+								'周五',
+								'周六',
+								'周日'
+							];
+        var realData = [
+								220,
+								245,
+								330,
+                                {value:370},
+								420,
+								490,
+								650
+							];
+		var standardData1 = [
+								210,
+								250,
+								310,
+								370,
+								390,
+								410,
+								450
+							];
+		var standardData2 = [
+								620,
+								732,
+								701,
+								734,
+								1090,
+								1130,
+								1120
+							];
+        //testOne(testDataFromiOS.lineTitle,testDataFromiOS.xAxisTitle,testDataFromiOS.standardData1,testDataFromiOS.standardData2,testDataFromiOS.realData,testDataFromiOS.maxData);
+		testOne(lineTitle,xAxisTitle,standardData1,standardData2,realData);
+	}
+	function test2(testdate) {
+        var testDataFromiOS = eval(testdate);
+		var lineTitle = [ // '邮件营销',
+							//'联盟广告',
+							'视频广告'
+							//'直接访问',
+							//'搜索引擎'
+						];
+        var xAxisTitle = [
+								'周一',
+								'周二',
+								'周三',
+								'周四',
+								'周五',
+								'周六',
+								'周日'
+							];
+        var realData = [
+								220,
+								245,
+								330,
+								370,
+								420,
+								490,
+								650
+							];
+		var standardData = [
+								210,
+								250,
+								310,
+								370,
+								390,
+								410,
+								450
+							];
+        testTwo(testDataFromiOS.lineTitle,testDataFromiOS.xAxisTitle,testDataFromiOS.standardData1,testDataFromiOS.realData, testDataFromiOS.maxData);
+		//testTwo(lineTitle,xAxisTitle,standardData,realData);
+	}
+	function test3(testdate) {
+        var testDataFromiOS = eval(testdate);
+		var lineTitle = [ // '邮件营销',
+							//'联盟广告',
+							'视频广告'
+							//'直接访问',
+							//'搜索引擎'
+						];
+        var xAxisTitle = [
+								'周一',
+								'周二',
+								'周三',
+								'周四',
+								'周五',
+								'周六',
+								'周日'
+							];
+        var realData = [
+								220,
+								245,
+								330,
+								370,
+								420,
+								490,
+								650
+							];
+        testThree(testDataFromiOS.lineTitle,testDataFromiOS.xAxisTitle,testDataFromiOS.realData,testDataFromiOS.maxData);
+		//testThree(lineTitle,xAxisTitle,['-','-','-','-','-','-','-']);
+	}
+    function test4(testdate) {
+        var testDataFromiOS = eval(testdate);
+        testFour(testDataFromiOS.xAxisTitle, testDataFromiOS.realData);
+    }
+	/**  
+	 * 构建动态图表  
+	 * @param url   获取后台数据地址  
+	 * @param time  图表查询时间  
+	 * @param elem  加载容器  
+	 */  
+	function testOne(lineTitle,xAxisTitle,standardData1,standardData2,realData,maxData){
+		//alert(realData);
+		// 路径配置
+        require.config({
+            paths: {
+                echarts: 'js'
+            }
+        });
+        
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main')); 
+                
+                var option = {
+                    //tooltip : {
+                    //trigger: 'axis'
+                    //},
+					legend: {
+						data: lineTitle,
+						textStyle : {
+							color : 'white'
+						}
+					},
+					xAxis: [
+						{
+							type: 'category',
+							boundaryGap: false,
+							show : true,
+							axisLine : {
+							  show: false
+							},
+                            splitLine : {
+                              show : false
+                            },
+							axisLabel : {
+								show:true,
+								textStyle: {
+									color: 'rbga(255,255,255,0.7)',
+									fontFamily: 'sans-serif',
+									fontSize: 10//,
+									//fontStyle: 'italic'//,
+									//fontWeight: 'bold'
+								}
+							},
+							data: xAxisTitle
+						}
+					],
+					yAxis: [
+						{
+							type: 'value',
+							min : 0,
+							max : maxData,
+                            axisLine : {
+                              show: false
+                            },
+                            splitLine : {
+                                lineStyle : {
+                                    color : 'rgba(237,237,243,1)',
+                                    width : 1
+                                },
+                                show : true
+                            },
+							axisLabel : {
+								show:true,
+								textStyle: {
+									color: 'rbga(255,255,255,1)',
+									fontFamily: 'sans-serif',
+									fontSize: 10//,
+									//fontStyle: 'italic',
+									//fontWeight: 'bold'
+								},
+                                formatter : function(v){
+                                    return v.toFixed(0);
+                                }
+							}
+						}, 
+						{ 
+							//name : '降雨量(mm)',
+							type : 'value',
+							show : false,
+							min : -1 * maxData,
+							max : 0,
+                            axisLine : {
+                              show: false
+                            },
+							axisLabel : {
+								formatter: function(v){
+									return - v;
+								}
+							}
+						}
+					],
+					series: [
+						{
+							name: '视频广告',
+							type: 'line',
+							smooth : true,
+                            symbol : 'image://echart_dot.png',
+                            symbolSize : 4,
+                            borderColor : 'rgba(0,143,221,1)',
+							itemStyle: {
+								normal: {
+                                    areaStyle: {
+                                        color  : 'rgba(72,193,255,0.2)',// 数据线区域颜色
+                                        type: 'default'
+                                    },
+                                    lineStyle: {
+                                        color:'rgba(0,143,221,1)' // 数据线线条颜色
+                                    }
+								}
+							},
+							data: realData
+						},
+						{
+							name: '直接访问',
+							type: 'line',
+							smooth:true,
+							symbol : 'none',
+							itemStyle: {
+								normal: {
+									areaStyle: {
+										color  : 'rgba(255,255,255,0)',// 标准线区域颜色
+										type: 'default'
+									},
+									lineStyle: {
+                                        color:'rgba(231,231,238,1)'// 标准线线条颜色
+									}
+								}
+							},
+							data: standardData1
+						},
+						{
+							name: '搜索引擎',
+							type: 'line',
+							smooth:true,
+							symbol:'none',
+							yAxisIndex:1,
+							itemStyle: {
+								normal: {
+								  color:'rgba(255,255,255,0)',
+                                  areaStyle: {
+                                      color: 'rgba(255,255,255,0)',// 标准线区域颜色
+                                      type: 'default'
+                                  },
+                                  lineStyle : {
+                                      color:'rgba(231,231,238,1)' // 标准线线条颜色
+                                  }
+								}
+							},
+							data : (function(){
+                
+								var len = standardData2.length;
+								while(len--) {
+									standardData2[len] = (maxData - standardData2[len]) * -1;
+								}
+								return standardData2;
+							})()
+						}
+					]
+				};
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+            }
+        );
+	}
+    /**
+     * 构建动态图表
+     * @param url   获取后台数据地址
+     * @param time  图表查询时间
+     * @param elem  加载容器
+     */
+    function testTwo(lineTitle,xAxisTitle,standardData,realData,maxData){
+        //alert('345');
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'js'
+            }
+        });
+                       
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main'));
+                               
+                var option = {
+                    legend: {
+                        data: lineTitle,
+                        textStyle : {
+                            color : 'white'
+                        }
+                    },
+                    xAxis: [
+                        {
+                            type: 'category',
+                            boundaryGap: false,
+                            axisLine : {
+                                show: false
+                            },
+                            splitLine : {
+                                show : false
+                            },
+                            axisLabel : {
+                                show:true,
+                                textStyle: {
+                                    color: 'rbga(255,255,255,0.7)',
+                                    fontFamily: 'sans-serif',
+                                    fontSize: 10//,
+                                    //fontStyle: 'italic',
+                                    //fontWeight: 'bold'
+                                }
+                            },
+                            data: xAxisTitle
+                        }
+                    ],
+                    yAxis: [
+                        {
+                            type: 'value',
+                            max : maxData,
+                            axisLine : {
+                                show: false
+                            },
+                            axisLabel : {
+                                show:true,
+                                textStyle: {
+                                    color: 'rbga(255,255,255,0.7)',
+                                    fontFamily: 'sans-serif',
+                                    fontSize: 10//,
+                                    //fontStyle: 'italic',
+                                    //fontWeight: 'bold'
+                                },
+                                formatter : function(v){
+                                    return v.toFixed(0);
+                                }
+                            }
+                        }
+                    ],
+                    series: [
+                        {
+                            name: '视频广告',
+                            type: 'line',
+                            smooth : true,
+                            symbol : 'image://echart_dot.png',
+                            symbolSize : 4,
+                            borderColor : 'rgba(0,143,221,1)',
+                            itemStyle: {
+                                normal: {
+                                    areaStyle: {
+                                        color  : 'rgba(72,193,255,0.2)',// 数据线区域颜色
+                                        type: 'default'
+                                    },
+                                    lineStyle: {
+                                        color:'rgba(0,143,221,1)'// 数据线线条颜色
+                                    }
+                                }
+                            },
+                            data: realData
+                        },
+                        {
+                            name: '直接访问',
+                            type: 'line',
+                            smooth:true,
+                            //stack: '总量',
+                            symbol : 'none',
+                            itemStyle: {
+                                normal: {
+                                    areaStyle: {
+                                         color  : 'rgba(255,255,255,0)',// 标准线区域颜色
+                                         type: 'default'
+                                    },
+                                    lineStyle: {
+                                        //系列级个性化折线样式
+                                        color:'rgba(231,231,238,1)'// 标准线线条颜色
+                                    }
+                                }
+                            },
+                            data: standardData
+                        }
+                    ]
+                };
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+            }
+        );
+    }
+	/**  
+	 * 构建动态图表  
+	 * @param url   获取后台数据地址  
+	 * @param time  图表查询时间  
+	 * @param elem  加载容器  
+	 */  
+	function testThree(lineTitle,xAxisTitle,realData,maxData){
+        //alert(lineTitle);
+        //alert(xAxisTitle);
+        //alert(realData);
+		// 路径配置
+        require.config({
+            paths: {
+                echarts: 'js'
+            }
+        });
+        
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main')); 
+                
+                var option = {
+					xAxis: [
+						{
+							type: 'category',
+							boundaryGap: false,
+							axisLine : { 
+							  show: false
+							},
+                            splitLine : {
+                                show : false
+                            },
+							axisLabel : {
+								show:true,
+								textStyle: {
+									color: 'rgba(87,87,87,1)',
+									fontFamily: 'sans-serif',
+									fontSize: 10//,
+									//fontStyle: 'italic',
+									//fontWeight: 'bold'
+								}
+							},
+							data: xAxisTitle
+						}
+					],
+					yAxis: [
+						{
+							type: 'value',
+                            max : maxData,
+                            axisLine : {
+                                show: false
+                            },
+							axisLabel : {
+								show:true,
+								textStyle: {
+									color: 'rgba(87,87,87,1)',
+									fontFamily: 'sans-serif',
+									fontSize: 10//,
+									//fontStyle: 'italic',
+									//fontWeight: 'bold'
+								},
+                                formatter : function(v){
+                                return v.toFixed(0);
+                                }
+							}
+						}
+					],
+					series: [
+						{
+                             name: '视频广告',
+                             type: 'line',
+                             smooth : true,
+                             symbol : 'image://echart_dot.png',
+                             symbolSize : 4,
+                             borderColor : 'rgba(0,143,221,1)',
+                             itemStyle: {
+                                normal: {
+                                    areaStyle: {
+                                    color  : 'rgba(72,193,255,0.2)',// 数据线区域颜色
+                                    type: 'default'
+                                    },
+                                    lineStyle: {
+                                        color:'rgba(0,143,221,1)' // 数据线线条颜色
+                                    }
+                                }
+                             },
+							data: realData
+						}
+					]
+				};
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+                //onload="test1()"
+            }
+        );
+	}
+	/**  
+	 * 构建动态图表  
+	 * @param url   获取后台数据地址  
+	 * @param time  图表查询时间  
+	 * @param elem  加载容器  
+	 */  
+	function testFour(xAxisTitle, realData){
+		// 路径配置
+        require.config({
+            paths: {
+                echarts: 'js'
+            }
+        });
+        
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/line' // 使用柱状图就加载bar模块，按需加载
+            ],
+            function (ec) {
+                // 基于准备好的dom，初始化echarts图表
+                var myChart = ec.init(document.getElementById('main')); 
+                
+                var option = {
+					xAxis: [
+						{
+							type: 'category',
+							boundaryGap: false,
+                            show : true,
+							axisLine : { 
+							  show: false
+							},
+                            splitLine : {
+                                show : false
+                            },
+							axisLabel : {
+								show:true,
+								textStyle: {
+									color: 'rbga(87,87,87,1)',
+									fontFamily: 'sans-serif',
+									fontSize: 10//,
+									//fontStyle: 'italic',
+									//fontWeight: 'bold'
+								}
+							},
+							data: xAxisTitle
+                        }
+					],
+					yAxis: [
+						{
+							type: 'value',
+							min : 0,
+							max : 100,
+                            axisLine : {
+                                show: false
+                            },
+							axisLabel : {
+								show:true,
+								textStyle: {
+									color: 'rbga(87,87,87,1)',
+									fontFamily: 'sans-serif',
+									fontSize: 10//,
+									//fontStyle: 'italic',
+									//fontWeight: 'bold'
+								}
+							}
+						}
+					],
+					series: [
+						{
+							type: 'line',
+							//stack: '总量',
+							smooth : true,
+							itemStyle: {
+								normal: {
+									
+								}
+							},
+							data: realData
+						}
+					]
+				};
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+                //onload="test1()"
+            }
+        );
+	}
+    </script>
+</head>
+<body style="background-color: transparent">
+    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
+    <div id="main" style="height:270px;width:420px;margin-left:-30px;"></div>
+</body>
