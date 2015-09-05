@@ -622,9 +622,21 @@
             }
         );
 	}
+    function initAll(frameData) {
+        var frameDataFromIos = eval(frameData);
+        //alert("ios width:" + frameDataFromIos.width + "---- height:" + frameDataFromIos.height);
+        //alert("client width:" + document.body.scrollWidth + "height:" + document.body.scrollHeight );
+        var divMain = document.getElementById("main");
+        divMain.style.cssText = "height:" + (parseInt(frameDataFromIos.height) + 70) + "px;width:" + (parseInt(frameDataFromIos.width) + 100) + "px;margin-left:-50px;margin-top:-50px;background-color:blue";
+    }
+    
+    function resizeDiv(cssText) {
+        var divMain = document.getElementById("main");
+        divMain.style.cssText = cssText;
+    }
     </script>
 </head>
-<body style="background-color: transparent">
+<body style="background-color: red"><!-- transparent-->
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
-    <div id="main" style="height:270px;width:420px;margin-left:-30px;"></div>
+    <div id="main" style="height:270px;width:420px;" ></div><!-- style="height:270px;width:420px;margin-left:-30px;"-->
 </body>

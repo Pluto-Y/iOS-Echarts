@@ -1,9 +1,9 @@
 //
 //  SpecialPoint.m
-//  btWeigh
+//  iOS-Echarts
 //
-//  Created by ChipSea on 15/6/18.
-//  Copyright (c) 2015年 mac. All rights reserved.
+//  Created by Pluto Y on 15/6/18.
+//  Copyright (c) 2015年 Pluto Y. All rights reserved.
 //
 
 #import "SpecialPoint.h"

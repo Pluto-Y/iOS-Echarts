@@ -1,9 +1,9 @@
 //
-//  TestData.h
-//  btWeigh
+//  EChartsData.h
+//  iOS-Echarts
 //
-//  Created by ChipSea on 15-4-3.
-//  Copyright (c) 2015年 mac. All rights reserved.
+//  Created by Pluto Y on 15-4-3.
+//  Copyright (c) 2015年 Pluto Y. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>

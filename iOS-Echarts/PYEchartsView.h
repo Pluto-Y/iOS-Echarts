@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  PYEchartsView.h
 //  iOS-Echarts
 //
 //  Created by Pluto Y on 15/9/4.
@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController<UIWebViewDelegate>
+@interface PYEchartsView : UIWebView<UIWebViewDelegate>
 
+@property (assign, nonatomic) UIEdgeInsets padding;
 
 @end
-

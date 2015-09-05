@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>FF88D19D-1C18-4644-B041-D2FBB3556940</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iOS-Echarts</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>2D45F86B28BE56E866B445FF58A323D84B99DC01</key>
+		<string>https://github.com/Pluto-Y/iOS-Echarts.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS-Echarts.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>2D45F86B28BE56E866B445FF58A323D84B99DC01</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/Pluto-Y/iOS-Echarts.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>2D45F86B28BE56E866B445FF58A323D84B99DC01</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>2D45F86B28BE56E866B445FF58A323D84B99DC01</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS-Echarts</string>
+		</dict>
+	</array>
+</dict>
+</plist>

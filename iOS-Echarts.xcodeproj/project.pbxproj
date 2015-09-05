@@ -19,6 +19,7 @@
 		6CED89E21B997757000DE97E /* EChartUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CED89E11B997757000DE97E /* EChartUtil.m */; };
 		6CED89E51B99777C000DE97E /* EChartsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CED89E41B99777C000DE97E /* EChartsData.m */; };
 		6CED89E81B997795000DE97E /* SpecialPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CED89E71B997795000DE97E /* SpecialPoint.m */; };
+		6CED89ED1B998257000DE97E /* PYEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CED89EC1B998257000DE97E /* PYEchartsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		6CED89E61B997795000DE97E /* SpecialPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpecialPoint.h; sourceTree = "<group>"; };
 		6CED89E71B997795000DE97E /* SpecialPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpecialPoint.m; sourceTree = "<group>"; };
 		6CED89EA1B99784C000DE97E /* iOS-Echarts-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-Echarts-PrefixHeader.pch"; sourceTree = "<group>"; };
+		6CED89EB1B998257000DE97E /* PYEchartsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYEchartsView.h; sourceTree = "<group>"; };
+		6CED89EC1B998257000DE97E /* PYEchartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYEchartsView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,8 @@
 				6C4216791B98E310002D4B7A /* Supporting Files */,
 				6C4216801B98E310002D4B7A /* ViewController.h */,
 				6C4216811B98E310002D4B7A /* ViewController.m */,
+				6CED89EB1B998257000DE97E /* PYEchartsView.h */,
+				6CED89EC1B998257000DE97E /* PYEchartsView.m */,
 			);
 			path = "iOS-Echarts";
 			sourceTree = "<group>";
@@ -256,6 +261,7 @@
 				6CED89E51B99777C000DE97E /* EChartsData.m in Sources */,
 				6CED89E21B997757000DE97E /* EChartUtil.m in Sources */,
 				6C4216821B98E310002D4B7A /* ViewController.m in Sources */,
+				6CED89ED1B998257000DE97E /* PYEchartsView.m in Sources */,
 				6C42167F1B98E310002D4B7A /* AppDelegate.m in Sources */,
 				6C42167C1B98E310002D4B7A /* main.m in Sources */,
 			);
@@ -385,6 +391,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS-Echarts/iOS-Echarts-PrefixHeader.pch";
 				INFOPLIST_FILE = "iOS-Echarts/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -396,6 +403,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS-Echarts/iOS-Echarts-PrefixHeader.pch";
 				INFOPLIST_FILE = "iOS-Echarts/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
