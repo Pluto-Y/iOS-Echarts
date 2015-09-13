@@ -17,7 +17,7 @@
  *  @param data    需要传递到html中的数据信息
  *  @param webView 需要显示折线图的webView
  */
-+(void)showLineChart1:(EChartsData *)data webView:(UIWebView *)webView;
++(void)showLineChart1:(id)data webView:(UIWebView *)webView;
 
 /**
  *  显示有标准曲线的折线图

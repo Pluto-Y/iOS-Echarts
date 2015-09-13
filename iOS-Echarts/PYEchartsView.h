@@ -12,4 +12,11 @@
 
 @property (assign, nonatomic) UIEdgeInsets padding;
 
+/**
+ *  设置Echart的Option(最主要的跟Echart交互的参数)
+ *
+ *  @param option EChart的option
+ */
+-(void)setOption:(PYOption *)pyOption;
+
 @end

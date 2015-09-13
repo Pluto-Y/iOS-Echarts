@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C023F431BA4792500C0883D /* NSObject+PYObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C023F421BA4792500C0883D /* NSObject+PYObject.m */; };
 		6C42167C1B98E310002D4B7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C42167B1B98E310002D4B7A /* main.m */; };
 		6C42167F1B98E310002D4B7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C42167E1B98E310002D4B7A /* AppDelegate.m */; };
 		6C4216821B98E310002D4B7A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4216811B98E310002D4B7A /* ViewController.m */; };
@@ -14,12 +15,29 @@
 		6C4216871B98E310002D4B7A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C4216861B98E310002D4B7A /* Images.xcassets */; };
 		6C42168A1B98E310002D4B7A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C4216881B98E310002D4B7A /* LaunchScreen.xib */; };
 		6C4216961B98E310002D4B7A /* iOS_EchartsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4216951B98E310002D4B7A /* iOS_EchartsTests.m */; };
+		6C7C95571B9DE77D00D80042 /* PYAxisLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95561B9DE77D00D80042 /* PYAxisLine.m */; };
+		6C7C955A1B9DE82D00D80042 /* PYLineStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95591B9DE82D00D80042 /* PYLineStyle.m */; };
+		6C7C955D1B9DEA6900D80042 /* PYAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C955C1B9DEA6900D80042 /* PYAxis.m */; };
+		6C7C95601B9DEB5100D80042 /* PYAxisLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C955F1B9DEB5100D80042 /* PYAxisLabel.m */; };
+		6C7C95661B9DF04400D80042 /* PYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95651B9DF04400D80042 /* PYColor.m */; };
+		6C7C956A1B9DF2EF00D80042 /* JsonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95691B9DF2EF00D80042 /* JsonUtil.m */; };
+		6C7C956E1B9DF47800D80042 /* PYSplitLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C956D1B9DF47800D80042 /* PYSplitLine.m */; };
+		6C7C95711B9DF87400D80042 /* PYTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95701B9DF87400D80042 /* PYTextStyle.m */; };
+		6C7C95741B9E84B700D80042 /* PYLegend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95731B9E84B700D80042 /* PYLegend.m */; };
+		6C7C957A1B9EA39D00D80042 /* PYSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95791B9EA39D00D80042 /* PYSeries.m */; };
+		6C7C957D1B9EA53400D80042 /* PYCartesianSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C957C1B9EA53400D80042 /* PYCartesianSeries.m */; };
+		6C7C95831B9EB31A00D80042 /* PYItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95821B9EB31A00D80042 /* PYItemStyle.m */; };
+		6C7C95861B9EB35300D80042 /* PYItemStyleProp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95851B9EB35300D80042 /* PYItemStyleProp.m */; };
+		6C7C95891B9EB45A00D80042 /* PYAreaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95881B9EB45A00D80042 /* PYAreaStyle.m */; };
+		6C7C958C1B9EB65C00D80042 /* PYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C958B1B9EB65C00D80042 /* PYLabel.m */; };
+		6C7C958F1B9EC47500D80042 /* PYLabelLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C958E1B9EC47500D80042 /* PYLabelLine.m */; };
 		6CED89D71B9976B0000DE97E /* echarts.html in Resources */ = {isa = PBXBuildFile; fileRef = 6CED89D61B9976B0000DE97E /* echarts.html */; };
 		6CED89DF1B9976EF000DE97E /* js in Resources */ = {isa = PBXBuildFile; fileRef = 6CED89DE1B9976EF000DE97E /* js */; };
 		6CED89E21B997757000DE97E /* EChartUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CED89E11B997757000DE97E /* EChartUtil.m */; };
 		6CED89E51B99777C000DE97E /* EChartsData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CED89E41B99777C000DE97E /* EChartsData.m */; };
 		6CED89E81B997795000DE97E /* SpecialPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CED89E71B997795000DE97E /* SpecialPoint.m */; };
 		6CED89ED1B998257000DE97E /* PYEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CED89EC1B998257000DE97E /* PYEchartsView.m */; };
+		6CFF3AA51B9FF64C00BAF9A7 /* PYOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +51,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6C023F411BA4792500C0883D /* NSObject+PYObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+PYObject.h"; path = "Model/NSObject+PYObject.h"; sourceTree = "<group>"; };
+		6C023F421BA4792500C0883D /* NSObject+PYObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+PYObject.m"; path = "Model/NSObject+PYObject.m"; sourceTree = "<group>"; };
 		6C4216761B98E310002D4B7A /* iOS-Echarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Echarts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C42167A1B98E310002D4B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C42167B1B98E310002D4B7A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -46,6 +66,38 @@
 		6C42168F1B98E310002D4B7A /* iOS-EchartsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-EchartsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C4216941B98E310002D4B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C4216951B98E310002D4B7A /* iOS_EchartsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_EchartsTests.m; sourceTree = "<group>"; };
+		6C7C95551B9DE77D00D80042 /* PYAxisLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYAxisLine.h; path = Model/PYAxisLine.h; sourceTree = "<group>"; };
+		6C7C95561B9DE77D00D80042 /* PYAxisLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYAxisLine.m; path = Model/PYAxisLine.m; sourceTree = "<group>"; };
+		6C7C95581B9DE82D00D80042 /* PYLineStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYLineStyle.h; path = Model/PYLineStyle.h; sourceTree = "<group>"; };
+		6C7C95591B9DE82D00D80042 /* PYLineStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYLineStyle.m; path = Model/PYLineStyle.m; sourceTree = "<group>"; };
+		6C7C955B1B9DEA6900D80042 /* PYAxis.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYAxis.h; path = Model/PYAxis.h; sourceTree = "<group>"; };
+		6C7C955C1B9DEA6900D80042 /* PYAxis.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYAxis.m; path = Model/PYAxis.m; sourceTree = "<group>"; };
+		6C7C955E1B9DEB5100D80042 /* PYAxisLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYAxisLabel.h; path = Model/PYAxisLabel.h; sourceTree = "<group>"; };
+		6C7C955F1B9DEB5100D80042 /* PYAxisLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYAxisLabel.m; path = Model/PYAxisLabel.m; sourceTree = "<group>"; };
+		6C7C95641B9DF04400D80042 /* PYColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYColor.h; path = Model/PYColor.h; sourceTree = "<group>"; };
+		6C7C95651B9DF04400D80042 /* PYColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYColor.m; path = Model/PYColor.m; sourceTree = "<group>"; };
+		6C7C95681B9DF2EF00D80042 /* JsonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JsonUtil.h; path = Util/JsonUtil.h; sourceTree = "<group>"; };
+		6C7C95691B9DF2EF00D80042 /* JsonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JsonUtil.m; path = Util/JsonUtil.m; sourceTree = "<group>"; };
+		6C7C956C1B9DF47800D80042 /* PYSplitLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYSplitLine.h; path = Model/PYSplitLine.h; sourceTree = "<group>"; };
+		6C7C956D1B9DF47800D80042 /* PYSplitLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYSplitLine.m; path = Model/PYSplitLine.m; sourceTree = "<group>"; };
+		6C7C956F1B9DF87400D80042 /* PYTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYTextStyle.h; path = Model/PYTextStyle.h; sourceTree = "<group>"; };
+		6C7C95701B9DF87400D80042 /* PYTextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYTextStyle.m; path = Model/PYTextStyle.m; sourceTree = "<group>"; };
+		6C7C95721B9E84B700D80042 /* PYLegend.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYLegend.h; path = Model/PYLegend.h; sourceTree = "<group>"; };
+		6C7C95731B9E84B700D80042 /* PYLegend.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYLegend.m; path = Model/PYLegend.m; sourceTree = "<group>"; };
+		6C7C95781B9EA39D00D80042 /* PYSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYSeries.h; path = Model/Series/PYSeries.h; sourceTree = "<group>"; };
+		6C7C95791B9EA39D00D80042 /* PYSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYSeries.m; path = Model/Series/PYSeries.m; sourceTree = "<group>"; };
+		6C7C957B1B9EA53400D80042 /* PYCartesianSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYCartesianSeries.h; path = Model/Series/PYCartesianSeries.h; sourceTree = "<group>"; };
+		6C7C957C1B9EA53400D80042 /* PYCartesianSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYCartesianSeries.m; path = Model/Series/PYCartesianSeries.m; sourceTree = "<group>"; };
+		6C7C95811B9EB31A00D80042 /* PYItemStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYItemStyle.h; path = Model/PYItemStyle.h; sourceTree = "<group>"; };
+		6C7C95821B9EB31A00D80042 /* PYItemStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYItemStyle.m; path = Model/PYItemStyle.m; sourceTree = "<group>"; };
+		6C7C95841B9EB35300D80042 /* PYItemStyleProp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYItemStyleProp.h; sourceTree = "<group>"; };
+		6C7C95851B9EB35300D80042 /* PYItemStyleProp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYItemStyleProp.m; sourceTree = "<group>"; };
+		6C7C95871B9EB45A00D80042 /* PYAreaStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYAreaStyle.h; sourceTree = "<group>"; };
+		6C7C95881B9EB45A00D80042 /* PYAreaStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYAreaStyle.m; sourceTree = "<group>"; };
+		6C7C958A1B9EB65C00D80042 /* PYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLabel.h; sourceTree = "<group>"; };
+		6C7C958B1B9EB65C00D80042 /* PYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLabel.m; sourceTree = "<group>"; };
+		6C7C958D1B9EC47500D80042 /* PYLabelLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYLabelLine.h; path = Model/PYLabelLine.h; sourceTree = "<group>"; };
+		6C7C958E1B9EC47500D80042 /* PYLabelLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYLabelLine.m; path = Model/PYLabelLine.m; sourceTree = "<group>"; };
 		6CED89D61B9976B0000DE97E /* echarts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = echarts.html; path = Resources/echarts.html; sourceTree = "<group>"; };
 		6CED89DE1B9976EF000DE97E /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; name = js; path = Resources/js; sourceTree = "<group>"; };
 		6CED89E01B997757000DE97E /* EChartUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EChartUtil.h; sourceTree = "<group>"; };
@@ -57,6 +109,8 @@
 		6CED89EA1B99784C000DE97E /* iOS-Echarts-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-Echarts-PrefixHeader.pch"; sourceTree = "<group>"; };
 		6CED89EB1B998257000DE97E /* PYEchartsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYEchartsView.h; sourceTree = "<group>"; };
 		6CED89EC1B998257000DE97E /* PYEchartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYEchartsView.m; sourceTree = "<group>"; };
+		6CFF3AA31B9FF64C00BAF9A7 /* PYOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYOption.h; path = Model/PYOption.h; sourceTree = "<group>"; };
+		6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYOption.m; path = Model/PYOption.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +134,7 @@
 		6C42166D1B98E310002D4B7A = {
 			isa = PBXGroup;
 			children = (
+				6C7C95431B9DE2A800D80042 /* Library */,
 				6C4216781B98E310002D4B7A /* iOS-Echarts */,
 				6C4216921B98E310002D4B7A /* iOS-EchartsTests */,
 				6C4216771B98E310002D4B7A /* Products */,
@@ -98,6 +153,8 @@
 		6C4216781B98E310002D4B7A /* iOS-Echarts */ = {
 			isa = PBXGroup;
 			children = (
+				6C7C95671B9DF2DD00D80042 /* Util */,
+				6C7C95511B9DE2E800D80042 /* Model */,
 				6C42167D1B98E310002D4B7A /* AppDelegate.h */,
 				6C42167E1B98E310002D4B7A /* AppDelegate.m */,
 				6CED89E31B99777C000DE97E /* EChartsData.h */,
@@ -144,6 +201,71 @@
 				6C4216941B98E310002D4B7A /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6C7C95431B9DE2A800D80042 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Library;
+			sourceTree = "<group>";
+		};
+		6C7C95511B9DE2E800D80042 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6C7C955B1B9DEA6900D80042 /* PYAxis.h */,
+				6C7C955C1B9DEA6900D80042 /* PYAxis.m */,
+				6C7C955E1B9DEB5100D80042 /* PYAxisLabel.h */,
+				6C7C955F1B9DEB5100D80042 /* PYAxisLabel.m */,
+				6C7C95551B9DE77D00D80042 /* PYAxisLine.h */,
+				6C7C95561B9DE77D00D80042 /* PYAxisLine.m */,
+				6C7C95641B9DF04400D80042 /* PYColor.h */,
+				6C7C95651B9DF04400D80042 /* PYColor.m */,
+				6C7C95721B9E84B700D80042 /* PYLegend.h */,
+				6C7C95731B9E84B700D80042 /* PYLegend.m */,
+				6C7C95581B9DE82D00D80042 /* PYLineStyle.h */,
+				6C7C95591B9DE82D00D80042 /* PYLineStyle.m */,
+				6C7C956C1B9DF47800D80042 /* PYSplitLine.h */,
+				6C7C956D1B9DF47800D80042 /* PYSplitLine.m */,
+				6C7C956F1B9DF87400D80042 /* PYTextStyle.h */,
+				6C7C95701B9DF87400D80042 /* PYTextStyle.m */,
+				6C7C95771B9EA33E00D80042 /* Series */,
+				6C7C95811B9EB31A00D80042 /* PYItemStyle.h */,
+				6C7C95821B9EB31A00D80042 /* PYItemStyle.m */,
+				6C7C95841B9EB35300D80042 /* PYItemStyleProp.h */,
+				6C7C95851B9EB35300D80042 /* PYItemStyleProp.m */,
+				6C023F411BA4792500C0883D /* NSObject+PYObject.h */,
+				6C023F421BA4792500C0883D /* NSObject+PYObject.m */,
+				6C7C95871B9EB45A00D80042 /* PYAreaStyle.h */,
+				6C7C95881B9EB45A00D80042 /* PYAreaStyle.m */,
+				6C7C958A1B9EB65C00D80042 /* PYLabel.h */,
+				6C7C958B1B9EB65C00D80042 /* PYLabel.m */,
+				6C7C958D1B9EC47500D80042 /* PYLabelLine.h */,
+				6C7C958E1B9EC47500D80042 /* PYLabelLine.m */,
+				6CFF3AA31B9FF64C00BAF9A7 /* PYOption.h */,
+				6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		6C7C95671B9DF2DD00D80042 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				6C7C95681B9DF2EF00D80042 /* JsonUtil.h */,
+				6C7C95691B9DF2EF00D80042 /* JsonUtil.m */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		6C7C95771B9EA33E00D80042 /* Series */ = {
+			isa = PBXGroup;
+			children = (
+				6C7C957B1B9EA53400D80042 /* PYCartesianSeries.h */,
+				6C7C957C1B9EA53400D80042 /* PYCartesianSeries.m */,
+				6C7C95781B9EA39D00D80042 /* PYSeries.h */,
+				6C7C95791B9EA39D00D80042 /* PYSeries.m */,
+			);
+			name = Series;
 			sourceTree = "<group>";
 		};
 		6CED89D31B997644000DE97E /* Resources */ = {
@@ -257,13 +379,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C023F431BA4792500C0883D /* NSObject+PYObject.m in Sources */,
+				6C7C955A1B9DE82D00D80042 /* PYLineStyle.m in Sources */,
+				6CFF3AA51B9FF64C00BAF9A7 /* PYOption.m in Sources */,
+				6C7C958C1B9EB65C00D80042 /* PYLabel.m in Sources */,
+				6C7C957D1B9EA53400D80042 /* PYCartesianSeries.m in Sources */,
+				6C7C95861B9EB35300D80042 /* PYItemStyleProp.m in Sources */,
 				6CED89E81B997795000DE97E /* SpecialPoint.m in Sources */,
+				6C7C95571B9DE77D00D80042 /* PYAxisLine.m in Sources */,
 				6CED89E51B99777C000DE97E /* EChartsData.m in Sources */,
 				6CED89E21B997757000DE97E /* EChartUtil.m in Sources */,
+				6C7C95831B9EB31A00D80042 /* PYItemStyle.m in Sources */,
 				6C4216821B98E310002D4B7A /* ViewController.m in Sources */,
+				6C7C95661B9DF04400D80042 /* PYColor.m in Sources */,
+				6C7C956E1B9DF47800D80042 /* PYSplitLine.m in Sources */,
+				6C7C95601B9DEB5100D80042 /* PYAxisLabel.m in Sources */,
 				6CED89ED1B998257000DE97E /* PYEchartsView.m in Sources */,
+				6C7C955D1B9DEA6900D80042 /* PYAxis.m in Sources */,
 				6C42167F1B98E310002D4B7A /* AppDelegate.m in Sources */,
 				6C42167C1B98E310002D4B7A /* main.m in Sources */,
+				6C7C95741B9E84B700D80042 /* PYLegend.m in Sources */,
+				6C7C957A1B9EA39D00D80042 /* PYSeries.m in Sources */,
+				6C7C95711B9DF87400D80042 /* PYTextStyle.m in Sources */,
+				6C7C95891B9EB45A00D80042 /* PYAreaStyle.m in Sources */,
+				6C7C956A1B9DF2EF00D80042 /* JsonUtil.m in Sources */,
+				6C7C958F1B9EC47500D80042 /* PYLabelLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

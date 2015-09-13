@@ -11,63 +11,6 @@
 
 @implementation EChartUtil
 
-#pragma mark - static function
-+ (NSDictionary*)getObjectData:(id)obj{
-    NSMutableDictionary *dic = [NSMutableDictionary dictionary];
-    unsigned int propsCount;
-    objc_property_t *props = class_copyPropertyList([obj class], &propsCount);
-    for(int i = 0;i < propsCount; i++)
-    {
-        objc_property_t prop = props[i];
-        
-        NSString *propName = [NSString stringWithUTF8String:property_getName(prop)];
-        id value = [obj valueForKey:propName];
-        if(value == nil)
-        {
-            value = [NSNull null];
-        }
-        else
-        {
-            value = [self getObjectInternal:value];
-        }
-        [dic setObject:value forKey:propName];
-    }
-    return dic;
-}
-
-+ (id)getObjectInternal:(id)obj
-{
-    if([obj isKindOfClass:[NSString class]]
-       || [obj isKindOfClass:[NSNumber class]]
-       || [obj isKindOfClass:[NSNull class]])
-    {
-        return obj;
-    }
-    
-    if([obj isKindOfClass:[NSArray class]])
-    {
-        NSArray *objarr = obj;
-        NSMutableArray *arr = [NSMutableArray arrayWithCapacity:objarr.count];
-        for(int i = 0;i < objarr.count; i++)
-        {
-            [arr setObject:[self getObjectInternal:[objarr objectAtIndex:i]] atIndexedSubscript:i];
-        }
-        return arr;
-    }
-    
-    if([obj isKindOfClass:[NSDictionary class]])
-    {
-        NSDictionary *objdic = obj;
-        NSMutableDictionary *dic = [NSMutableDictionary dictionaryWithCapacity:[objdic count]];
-        for(NSString *key in objdic.allKeys)
-        {
-            [dic setObject:[self getObjectInternal:[objdic objectForKey:key]] forKey:key];
-        }
-        return dic;
-    }
-    return [self getObjectData:obj];
-}
-
 /**
  *  显示折线图
  *
@@ -75,9 +18,9 @@
  *  @param webView 需要显示折线图的webView
  *  @param methodName javascript方法名称
  */
-+(void)showLineChart:(EChartsData *)data webView:(UIWebView *)webView methodName:(NSString *)methodName; {
-    NSData *jsonData = [NSJSONSerialization dataWithJSONObject:[self getObjectData:data] options:NSJSONWritingPrettyPrinted error:nil];
-    NSString *jsonStr = [[NSString alloc] initWithData:jsonData encoding:NSUTF8StringEncoding];
++(void)showLineChart:(id)data webView:(UIWebView *)webView methodName:(NSString *)methodName; {
+
+    NSString *jsonStr = [JsonUtil getJSONString:data];
     NSLog(@"%@",jsonStr);
     
     NSString *js = [NSString stringWithFormat:@"%@(%@)", methodName, jsonStr];
@@ -90,7 +33,7 @@
  *  @param data    需要传递到html中的数据信息
  *  @param webView 需要显示折线图的webView
  */
-+(void)showLineChart1:(EChartsData *)data webView:(UIWebView *)webView {
++(void)showLineChart1:(id)data webView:(UIWebView *)webView {
     [EChartUtil showLineChart:data webView:webView methodName:@"test1"];
 }
 
