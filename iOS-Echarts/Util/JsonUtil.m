@@ -25,8 +25,7 @@
         NSString *tmpJson;
         jsonString = @"[";
         for (id object in obj) {
-            jsonData = [self getJSONData:object];
-            tmpJson = [[NSString alloc] initWithData:jsonData  encoding:NSUTF8StringEncoding];
+            tmpJson = [self getJSONString:object];;
             jsonString = [NSString stringWithFormat:@"%@%@,", jsonString, tmpJson];
         }
         jsonString = [[jsonString substringToIndex:jsonString.length-1] stringByAppendingString:@"]"];
