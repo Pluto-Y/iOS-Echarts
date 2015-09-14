@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		6C023F431BA4792500C0883D /* NSObject+PYObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C023F421BA4792500C0883D /* NSObject+PYObject.m */; };
+		6C023F9E1BA722EC00C0883D /* PYTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C023F9D1BA722EC00C0883D /* PYTitle.m */; };
+		6C023FA11BA7267000C0883D /* PYTooltip.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C023FA01BA7267000C0883D /* PYTooltip.m */; };
+		6C023FA41BA727DC00C0883D /* PYAxisPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C023FA31BA727DC00C0883D /* PYAxisPointer.m */; };
 		6C42167C1B98E310002D4B7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C42167B1B98E310002D4B7A /* main.m */; };
 		6C42167F1B98E310002D4B7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C42167E1B98E310002D4B7A /* AppDelegate.m */; };
 		6C4216821B98E310002D4B7A /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4216811B98E310002D4B7A /* ViewController.m */; };
@@ -53,6 +56,12 @@
 /* Begin PBXFileReference section */
 		6C023F411BA4792500C0883D /* NSObject+PYObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSObject+PYObject.h"; path = "Model/NSObject+PYObject.h"; sourceTree = "<group>"; };
 		6C023F421BA4792500C0883D /* NSObject+PYObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSObject+PYObject.m"; path = "Model/NSObject+PYObject.m"; sourceTree = "<group>"; };
+		6C023F9C1BA722EC00C0883D /* PYTitle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYTitle.h; path = Model/PYTitle.h; sourceTree = "<group>"; };
+		6C023F9D1BA722EC00C0883D /* PYTitle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYTitle.m; path = Model/PYTitle.m; sourceTree = "<group>"; };
+		6C023F9F1BA7267000C0883D /* PYTooltip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYTooltip.h; path = Model/PYTooltip.h; sourceTree = "<group>"; };
+		6C023FA01BA7267000C0883D /* PYTooltip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYTooltip.m; path = Model/PYTooltip.m; sourceTree = "<group>"; };
+		6C023FA21BA727DC00C0883D /* PYAxisPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYAxisPointer.h; path = Model/PYAxisPointer.h; sourceTree = "<group>"; };
+		6C023FA31BA727DC00C0883D /* PYAxisPointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYAxisPointer.m; path = Model/PYAxisPointer.m; sourceTree = "<group>"; };
 		6C4216761B98E310002D4B7A /* iOS-Echarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Echarts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C42167A1B98E310002D4B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C42167B1B98E310002D4B7A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -244,6 +253,12 @@
 				6C7C958E1B9EC47500D80042 /* PYLabelLine.m */,
 				6CFF3AA31B9FF64C00BAF9A7 /* PYOption.h */,
 				6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */,
+				6C023F9C1BA722EC00C0883D /* PYTitle.h */,
+				6C023F9D1BA722EC00C0883D /* PYTitle.m */,
+				6C023F9F1BA7267000C0883D /* PYTooltip.h */,
+				6C023FA01BA7267000C0883D /* PYTooltip.m */,
+				6C023FA21BA727DC00C0883D /* PYAxisPointer.h */,
+				6C023FA31BA727DC00C0883D /* PYAxisPointer.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -398,10 +413,13 @@
 				6C7C955D1B9DEA6900D80042 /* PYAxis.m in Sources */,
 				6C42167F1B98E310002D4B7A /* AppDelegate.m in Sources */,
 				6C42167C1B98E310002D4B7A /* main.m in Sources */,
+				6C023F9E1BA722EC00C0883D /* PYTitle.m in Sources */,
 				6C7C95741B9E84B700D80042 /* PYLegend.m in Sources */,
 				6C7C957A1B9EA39D00D80042 /* PYSeries.m in Sources */,
 				6C7C95711B9DF87400D80042 /* PYTextStyle.m in Sources */,
+				6C023FA11BA7267000C0883D /* PYTooltip.m in Sources */,
 				6C7C95891B9EB45A00D80042 /* PYAreaStyle.m in Sources */,
+				6C023FA41BA727DC00C0883D /* PYAxisPointer.m in Sources */,
 				6C7C956A1B9DF2EF00D80042 /* JsonUtil.m in Sources */,
 				6C7C958F1B9EC47500D80042 /* PYLabelLine.m in Sources */,
 			);
