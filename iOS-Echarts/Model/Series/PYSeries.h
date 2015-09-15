@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PYItemStyle.h"
+#import "PYTooltip.h"
 
 typedef enum {
     PYSeriesTypeLine,
@@ -29,6 +30,7 @@ typedef NSArray *(^DataFunction)(NSArray *data);
 @property (retain, nonatomic) NSNumber *z;
 @property (retain, nonatomic, readonly, getter=getType) NSString *type;
 @property (retain, nonatomic) NSString *name;
+@property (retain, nonatomic) PYTooltip *tooltip;
 @property (assign, nonatomic) BOOL clickable;
 @property (retain, nonatomic) PYItemStyle *itemStyle;
 @property (retain, nonatomic) NSArray *data;
