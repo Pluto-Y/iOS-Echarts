@@ -14,7 +14,7 @@
 
 @end
 
-@implementation PYEffect
+@implementation PYMarkLineEffect
 
 
 @end
@@ -35,7 +35,7 @@
         _bundling = [[PYBundling alloc] init];
         _bundling.enable = NO;
         _bundling.maxTurningAngle = @(45);
-        _effect = [[PYEffect alloc] init];
+        _effect = [[PYMarkLineEffect alloc] init];
         _effect.show = NO;
         _effect.loop = YES;
         _effect.period = @(15);

@@ -13,7 +13,7 @@ typedef enum {
     PYMarkPointEffectTypeBounce
 } PYMarkPointEffectType;
 
-@interface PYEffect : NSObject
+@interface PYMarkPointEffect : NSObject
 
 @property (assign, nonatomic) BOOL show;
 @property (retain, nonatomic, readonly, getter=getType) NSString *type;
@@ -36,7 +36,7 @@ typedef enum {
 @property (retain, nonatomic) id symbolSize;
 @property (retain, nonatomic) id symbolRotate;
 @property (assign, nonatomic) BOOL large;
-@property (retain, nonatomic) PYEffect *effect;
+@property (retain, nonatomic) PYMarkPointEffect *effect;
 @property (retain, nonatomic) PYItemStyle *itemStyle;
 @property (retain, nonatomic) NSArray *data;
 

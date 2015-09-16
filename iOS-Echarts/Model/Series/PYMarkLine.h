@@ -15,7 +15,7 @@
 
 @end
 
-@interface PYEffect : NSObject
+@interface PYMarkLineEffect : NSObject
 
 @property (assign, nonatomic) BOOL show;
 @property (assign, nonatomic) BOOL loop;
@@ -39,7 +39,7 @@
 @property (retain, nonatomic) NSNumber *smoothness;
 @property (retain, nonatomic) NSNumber *precision;
 @property (retain, nonatomic) PYBundling *bundling;
-@property (retain, nonatomic) PYEffect *effect;
+@property (retain, nonatomic) PYMarkLineEffect *effect;
 @property (retain, nonatomic) PYItemStyle *itemStyle;
 @property (retain, nonatomic) NSArray *data;
 

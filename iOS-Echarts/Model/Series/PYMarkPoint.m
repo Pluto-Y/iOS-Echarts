@@ -8,12 +8,12 @@
 
 #import "PYMarkPoint.h"
 
-@interface PYEffect() {
+@interface PYMarkPointEffect() {
     PYMarkPointEffectType type;
 }
 @end
 
-@implementation PYEffect
+@implementation PYMarkPointEffect
 
 -(NSString *)getType {
     switch (type) {
@@ -40,7 +40,7 @@
         _symbol = @"pin";
         _symbolSize = @(10);
         _large = NO;
-        _effect = [[PYEffect alloc] init];
+        _effect = [[PYMarkPointEffect alloc] init];
         _effect.show = NO;
         [_effect setMarPointEffectType:PYMarkPointEffectTypeScale];
         _effect.period = @(15);
