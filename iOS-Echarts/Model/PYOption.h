@@ -20,7 +20,7 @@
 @property (assign, nonatomic) BOOL renderAsImage;
 @property (retain, nonatomic) PYTitle *title;
 @property (retain, nonatomic) PYToolbox *toolbox;
-@property (retain, nonatomic) PYTooltip *tooptip;
+@property (retain, nonatomic) PYTooltip *tooltip;
 @property (retain, nonatomic) PYLegend *legend;
 @property (retain, nonatomic) NSMutableArray *xAxis;
 @property (retain, nonatomic) NSMutableArray *yAxis;
