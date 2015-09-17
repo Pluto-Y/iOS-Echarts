@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "PYItemStyle.h"
 #import "PYTooltip.h"
+#import "PYMarkLine.h"
+#import "PYMarkPoint.h"
 
 typedef enum {
     PYSeriesTypeLine,
