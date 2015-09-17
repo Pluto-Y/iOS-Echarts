@@ -15,8 +15,8 @@
 @property (retain, nonatomic) NSNumber *zlevel;
 @property (retain, nonatomic) NSNumber *z;
 @property (retain, nonatomic) NSString *orient;
-@property (retain, nonatomic) NSString *x;
-@property (retain, nonatomic) NSString *y;
+@property (retain, nonatomic) id x;
+@property (retain, nonatomic) id y;
 @property (retain, nonatomic) PYColor *backgroundColor;
 @property (retain, nonatomic) NSString *borderColor;
 @property (retain, nonatomic) NSNumber *borderWidth;
