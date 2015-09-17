@@ -18,6 +18,7 @@
 @property (retain, nonatomic) PYColor *backgroundColor;
 @property (retain, nonatomic) NSArray *color;
 @property (assign, nonatomic) BOOL renderAsImage;
+@property (assign, nonatomic) BOOL calculable;
 @property (retain, nonatomic) PYTitle *title;
 @property (retain, nonatomic) PYToolbox *toolbox;
 @property (retain, nonatomic) PYTooltip *tooltip;
