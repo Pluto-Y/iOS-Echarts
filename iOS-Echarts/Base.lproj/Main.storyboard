@@ -17,25 +17,33 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hur-6X-Dfg" customClass="PYEchartsView">
-                                <rect key="frame" x="0.0" y="184" width="320" height="200"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Demo目录" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0s-pS-3OI">
+                                <rect key="frame" x="120" y="29" width="80" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="JTR-Ly-VV4"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="UDL-xd-Mtz"/>
+                                    <constraint firstAttribute="height" constant="21" id="q68-nc-9nw"/>
                                 </constraints>
-                            </webView>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" tag="10000" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5W-J3-r7t">
+                                <rect key="frame" x="137" y="74" width="46" height="30"/>
+                                <state key="normal" title="折线图">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fPS-Xv-UdX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="hur-6X-Dfg" secondAttribute="trailing" id="1BC-Q1-4KE"/>
-                            <constraint firstAttribute="centerY" secondItem="hur-6X-Dfg" secondAttribute="centerY" id="ghR-9V-1HU"/>
-                            <constraint firstItem="hur-6X-Dfg" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="oIU-fh-v2l"/>
+                            <constraint firstAttribute="centerX" secondItem="Z0s-pS-3OI" secondAttribute="centerX" id="3qd-DQ-sqD"/>
+                            <constraint firstItem="Z0s-pS-3OI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" constant="29" id="mDX-sG-buo"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-                    <connections>
-                        <outlet property="kWeb" destination="hur-6X-Dfg" id="XQr-UM-DQ8"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

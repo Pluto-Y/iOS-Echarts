@@ -13,16 +13,7 @@
 #import "PYLegend.h"
 #import "PYCartesianSeries.h"
 
-@interface TestClass : NSObject
-
-@property (retain, nonatomic) NSArray *array;
-
-@end
-
-@implementation TestClass
-
-
-@end
+#import "LineDemoController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet PYEchartsView *kWeb;
@@ -40,6 +31,8 @@
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
+
+
 
 #pragma mark - custom functions
 #pragma mark 初始化
@@ -149,6 +142,20 @@
     [option setSeries:serieses];
     
     [_kWeb setOption:option];
+}
+
+- (IBAction)gotoDetailDemos:(id)sender {
+    UIButton *btn = (UIButton *)sender;
+    UIViewController *controller;
+    switch (btn.tag) {
+        case 10000:
+            controller = [[LineDemoController alloc] init];
+            break;
+            
+        default:
+            break;
+    }
+    [self presentViewController:controller animated:YES completion:nil];
 }
 
 @end

@@ -12,14 +12,13 @@
 		6C023FA11BA7267000C0883D /* PYTooltip.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C023FA01BA7267000C0883D /* PYTooltip.m */; };
 		6C023FA41BA727DC00C0883D /* PYAxisPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C023FA31BA727DC00C0883D /* PYAxisPointer.m */; };
 		6C305A331BA9C80D00762DBD /* PYAreaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A231BA9C80D00762DBD /* PYAreaStyle.m */; };
-		6C305A341BA9C80D00762DBD /* PYEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A251BA9C80D00762DBD /* PYEchartsView.m */; };
 		6C305A351BA9C80D00762DBD /* PYItemStyleProp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A271BA9C80D00762DBD /* PYItemStyleProp.m */; };
 		6C305A361BA9C80D00762DBD /* PYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A291BA9C80D00762DBD /* PYLabel.m */; };
-		6C305A371BA9C80D00762DBD /* PYCartesianSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A2C1BA9C80D00762DBD /* PYCartesianSeries.m */; };
-		6C305A381BA9C80D00762DBD /* PYMarkLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A2E1BA9C80D00762DBD /* PYMarkLine.m */; };
-		6C305A391BA9C80D00762DBD /* PYMarkPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A301BA9C80D00762DBD /* PYMarkPoint.m */; };
-		6C305A3A1BA9C80D00762DBD /* PYSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A321BA9C80D00762DBD /* PYSeries.m */; };
 		6C305A3D1BA9C8C400762DBD /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A3C1BA9C8C400762DBD /* ViewController.m */; };
+		6C305A411BA9CAF000762DBD /* LineDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A3F1BA9CAF000762DBD /* LineDemoController.m */; };
+		6C305A421BA9CAF000762DBD /* LineDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C305A401BA9CAF000762DBD /* LineDemoController.xib */; };
+		6C305A451BAAA7E500762DBD /* PYEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A441BAAA7E500762DBD /* PYEchartsView.m */; };
+		6C305A4C1BAB1EF900762DBD /* PYToolboxFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A4B1BAB1EF900762DBD /* PYToolboxFeature.m */; };
 		6C42167C1B98E310002D4B7A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C42167B1B98E310002D4B7A /* main.m */; };
 		6C42167F1B98E310002D4B7A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C42167E1B98E310002D4B7A /* AppDelegate.m */; };
 		6C4216851B98E310002D4B7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C4216831B98E310002D4B7A /* Main.storyboard */; };
@@ -71,22 +70,19 @@
 		6C023FA31BA727DC00C0883D /* PYAxisPointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYAxisPointer.m; path = Model/PYAxisPointer.m; sourceTree = "<group>"; };
 		6C305A221BA9C80D00762DBD /* PYAreaStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYAreaStyle.h; path = Model/PYAreaStyle.h; sourceTree = "<group>"; };
 		6C305A231BA9C80D00762DBD /* PYAreaStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYAreaStyle.m; path = Model/PYAreaStyle.m; sourceTree = "<group>"; };
-		6C305A241BA9C80D00762DBD /* PYEchartsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYEchartsView.h; path = Model/PYEchartsView.h; sourceTree = "<group>"; };
-		6C305A251BA9C80D00762DBD /* PYEchartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYEchartsView.m; path = Model/PYEchartsView.m; sourceTree = "<group>"; };
 		6C305A261BA9C80D00762DBD /* PYItemStyleProp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYItemStyleProp.h; path = Model/PYItemStyleProp.h; sourceTree = "<group>"; };
 		6C305A271BA9C80D00762DBD /* PYItemStyleProp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYItemStyleProp.m; path = Model/PYItemStyleProp.m; sourceTree = "<group>"; };
 		6C305A281BA9C80D00762DBD /* PYLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYLabel.h; path = Model/PYLabel.h; sourceTree = "<group>"; };
 		6C305A291BA9C80D00762DBD /* PYLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYLabel.m; path = Model/PYLabel.m; sourceTree = "<group>"; };
-		6C305A2B1BA9C80D00762DBD /* PYCartesianSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYCartesianSeries.h; sourceTree = "<group>"; };
-		6C305A2C1BA9C80D00762DBD /* PYCartesianSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYCartesianSeries.m; sourceTree = "<group>"; };
-		6C305A2D1BA9C80D00762DBD /* PYMarkLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYMarkLine.h; sourceTree = "<group>"; };
-		6C305A2E1BA9C80D00762DBD /* PYMarkLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYMarkLine.m; sourceTree = "<group>"; };
-		6C305A2F1BA9C80D00762DBD /* PYMarkPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYMarkPoint.h; sourceTree = "<group>"; };
-		6C305A301BA9C80D00762DBD /* PYMarkPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYMarkPoint.m; sourceTree = "<group>"; };
-		6C305A311BA9C80D00762DBD /* PYSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSeries.h; sourceTree = "<group>"; };
-		6C305A321BA9C80D00762DBD /* PYSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSeries.m; sourceTree = "<group>"; };
 		6C305A3B1BA9C8C400762DBD /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ViewController.h; path = Controller/ViewController.h; sourceTree = "<group>"; };
 		6C305A3C1BA9C8C400762DBD /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ViewController.m; path = Controller/ViewController.m; sourceTree = "<group>"; };
+		6C305A3E1BA9CAF000762DBD /* LineDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = LineDemoController.h; path = Controller/LineDemoController.h; sourceTree = "<group>"; };
+		6C305A3F1BA9CAF000762DBD /* LineDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = LineDemoController.m; path = Controller/LineDemoController.m; sourceTree = "<group>"; };
+		6C305A401BA9CAF000762DBD /* LineDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = LineDemoController.xib; path = Controller/LineDemoController.xib; sourceTree = "<group>"; };
+		6C305A431BAAA7E500762DBD /* PYEchartsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYEchartsView.h; sourceTree = "<group>"; };
+		6C305A441BAAA7E500762DBD /* PYEchartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYEchartsView.m; sourceTree = "<group>"; };
+		6C305A4A1BAB1EF900762DBD /* PYToolboxFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYToolboxFeature.h; path = Model/PYToolboxFeature.h; sourceTree = "<group>"; };
+		6C305A4B1BAB1EF900762DBD /* PYToolboxFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYToolboxFeature.m; path = Model/PYToolboxFeature.m; sourceTree = "<group>"; };
 		6C4216761B98E310002D4B7A /* iOS-Echarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Echarts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C42167A1B98E310002D4B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C42167B1B98E310002D4B7A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -166,24 +162,11 @@
 			children = (
 				6C305A3B1BA9C8C400762DBD /* ViewController.h */,
 				6C305A3C1BA9C8C400762DBD /* ViewController.m */,
+				6C305A3E1BA9CAF000762DBD /* LineDemoController.h */,
+				6C305A3F1BA9CAF000762DBD /* LineDemoController.m */,
+				6C305A401BA9CAF000762DBD /* LineDemoController.xib */,
 			);
 			name = Controller;
-			sourceTree = "<group>";
-		};
-		6C305A2A1BA9C80D00762DBD /* Series */ = {
-			isa = PBXGroup;
-			children = (
-				6C305A2B1BA9C80D00762DBD /* PYCartesianSeries.h */,
-				6C305A2C1BA9C80D00762DBD /* PYCartesianSeries.m */,
-				6C305A2D1BA9C80D00762DBD /* PYMarkLine.h */,
-				6C305A2E1BA9C80D00762DBD /* PYMarkLine.m */,
-				6C305A2F1BA9C80D00762DBD /* PYMarkPoint.h */,
-				6C305A301BA9C80D00762DBD /* PYMarkPoint.m */,
-				6C305A311BA9C80D00762DBD /* PYSeries.h */,
-				6C305A321BA9C80D00762DBD /* PYSeries.m */,
-			);
-			name = Series;
-			path = Model/Series;
 			sourceTree = "<group>";
 		};
 		6C42166D1B98E310002D4B7A = {
@@ -208,11 +191,9 @@
 		6C4216781B98E310002D4B7A /* iOS-Echarts */ = {
 			isa = PBXGroup;
 			children = (
-				6C305A211BA9C79300762DBD /* Controller */,
-				6C7C95671B9DF2DD00D80042 /* Util */,
-				6C7C95511B9DE2E800D80042 /* Model */,
 				6C42167D1B98E310002D4B7A /* AppDelegate.h */,
 				6C42167E1B98E310002D4B7A /* AppDelegate.m */,
+				6C305A211BA9C79300762DBD /* Controller */,
 				6CED89E31B99777C000DE97E /* EChartsData.h */,
 				6CED89E41B99777C000DE97E /* EChartsData.m */,
 				6CED89E01B997757000DE97E /* EChartUtil.h */,
@@ -220,10 +201,14 @@
 				6C4216861B98E310002D4B7A /* Images.xcassets */,
 				6C4216881B98E310002D4B7A /* LaunchScreen.xib */,
 				6C4216831B98E310002D4B7A /* Main.storyboard */,
+				6C7C95511B9DE2E800D80042 /* Model */,
+				6C305A431BAAA7E500762DBD /* PYEchartsView.h */,
+				6C305A441BAAA7E500762DBD /* PYEchartsView.m */,
 				6CED89D31B997644000DE97E /* Resources */,
 				6CED89E61B997795000DE97E /* SpecialPoint.h */,
 				6CED89E71B997795000DE97E /* SpecialPoint.m */,
 				6C4216791B98E310002D4B7A /* Supporting Files */,
+				6C7C95671B9DF2DD00D80042 /* Util */,
 			);
 			path = "iOS-Echarts";
 			sourceTree = "<group>";
@@ -267,13 +252,10 @@
 			children = (
 				6C305A221BA9C80D00762DBD /* PYAreaStyle.h */,
 				6C305A231BA9C80D00762DBD /* PYAreaStyle.m */,
-				6C305A241BA9C80D00762DBD /* PYEchartsView.h */,
-				6C305A251BA9C80D00762DBD /* PYEchartsView.m */,
 				6C305A261BA9C80D00762DBD /* PYItemStyleProp.h */,
 				6C305A271BA9C80D00762DBD /* PYItemStyleProp.m */,
 				6C305A281BA9C80D00762DBD /* PYLabel.h */,
 				6C305A291BA9C80D00762DBD /* PYLabel.m */,
-				6C305A2A1BA9C80D00762DBD /* Series */,
 				6C7C955B1B9DEA6900D80042 /* PYAxis.h */,
 				6C7C955C1B9DEA6900D80042 /* PYAxis.m */,
 				6C7C955E1B9DEB5100D80042 /* PYAxisLabel.h */,
@@ -307,6 +289,8 @@
 				6C023FA31BA727DC00C0883D /* PYAxisPointer.m */,
 				6CDE01231BA87A5A006A18D5 /* PYToolbox.h */,
 				6CDE01241BA87A5A006A18D5 /* PYToolbox.m */,
+				6C305A4A1BAB1EF900762DBD /* PYToolboxFeature.h */,
+				6C305A4B1BAB1EF900762DBD /* PYToolboxFeature.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -425,6 +409,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6CED89DF1B9976EF000DE97E /* js in Resources */,
+				6C305A421BA9CAF000762DBD /* LineDemoController.xib in Resources */,
 				6C4216851B98E310002D4B7A /* Main.storyboard in Resources */,
 				6CED89D71B9976B0000DE97E /* echarts.html in Resources */,
 				6C42168A1B98E310002D4B7A /* LaunchScreen.xib in Resources */,
@@ -448,7 +433,6 @@
 			files = (
 				6C023F431BA4792500C0883D /* NSObject+PYObject.m in Sources */,
 				6C7C955A1B9DE82D00D80042 /* PYLineStyle.m in Sources */,
-				6C305A341BA9C80D00762DBD /* PYEchartsView.m in Sources */,
 				6CFF3AA51B9FF64C00BAF9A7 /* PYOption.m in Sources */,
 				6C7C957D1B9EA53400D80042 /* PYCartesianSeries.m in Sources */,
 				6CED89E81B997795000DE97E /* SpecialPoint.m in Sources */,
@@ -457,27 +441,26 @@
 				6CED89E51B99777C000DE97E /* EChartsData.m in Sources */,
 				6CED89E21B997757000DE97E /* EChartUtil.m in Sources */,
 				6C7C95831B9EB31A00D80042 /* PYItemStyle.m in Sources */,
-				6C305A3A1BA9C80D00762DBD /* PYSeries.m in Sources */,
 				6C305A351BA9C80D00762DBD /* PYItemStyleProp.m in Sources */,
 				6CDE012E1BA88111006A18D5 /* PYMarkPoint.m in Sources */,
 				6C305A3D1BA9C8C400762DBD /* ViewController.m in Sources */,
 				6C7C95661B9DF04400D80042 /* PYColor.m in Sources */,
 				6C7C956E1B9DF47800D80042 /* PYSplitLine.m in Sources */,
+				6C305A411BA9CAF000762DBD /* LineDemoController.m in Sources */,
 				6CDE012B1BA87DD1006A18D5 /* PYMarkLine.m in Sources */,
 				6C7C95601B9DEB5100D80042 /* PYAxisLabel.m in Sources */,
+				6C305A4C1BAB1EF900762DBD /* PYToolboxFeature.m in Sources */,
 				6C7C955D1B9DEA6900D80042 /* PYAxis.m in Sources */,
 				6C305A361BA9C80D00762DBD /* PYLabel.m in Sources */,
-				6C305A391BA9C80D00762DBD /* PYMarkPoint.m in Sources */,
 				6C42167F1B98E310002D4B7A /* AppDelegate.m in Sources */,
-				6C305A381BA9C80D00762DBD /* PYMarkLine.m in Sources */,
 				6C42167C1B98E310002D4B7A /* main.m in Sources */,
 				6C305A331BA9C80D00762DBD /* PYAreaStyle.m in Sources */,
 				6C023F9E1BA722EC00C0883D /* PYTitle.m in Sources */,
+				6C305A451BAAA7E500762DBD /* PYEchartsView.m in Sources */,
 				6C7C95741B9E84B700D80042 /* PYLegend.m in Sources */,
 				6C7C957A1B9EA39D00D80042 /* PYSeries.m in Sources */,
 				6C7C95711B9DF87400D80042 /* PYTextStyle.m in Sources */,
 				6C023FA11BA7267000C0883D /* PYTooltip.m in Sources */,
-				6C305A371BA9C80D00762DBD /* PYCartesianSeries.m in Sources */,
 				6C023FA41BA727DC00C0883D /* PYAxisPointer.m in Sources */,
 				6C7C956A1B9DF2EF00D80042 /* JsonUtil.m in Sources */,
 				6C7C958F1B9EC47500D80042 /* PYLabelLine.m in Sources */,

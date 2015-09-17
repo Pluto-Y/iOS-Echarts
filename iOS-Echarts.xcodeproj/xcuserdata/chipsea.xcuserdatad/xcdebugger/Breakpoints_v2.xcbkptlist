@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "iOS-Echarts/PYEchartsView.m"
-            timestampString = "463898320.494392"
+            timestampString = "464198851.188004"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96">
+            startingLineNumber = "196"
+            endingLineNumber = "196">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
