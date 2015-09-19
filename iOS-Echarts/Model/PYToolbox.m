@@ -19,7 +19,7 @@
         _z = @(6);
         _orient = @"horizontal";
         _x = @"right";
-        _y = @"y";
+        _y = @"top";
         _backgroundColor = PYRGBA(0, 0, 0, 0);
         _borderColor = PYRGBA(12, 12, 12, 1);
         _borderWidth = @(0);
@@ -30,6 +30,7 @@
         _disableColor = PYRGBA(13, 13, 13, 0);
         _effectiveColor = PYRGBA(255, 0, 0, 1);
         _showTitle = YES;
+        _feature = [[PYToolboxFeature alloc] init];
     }
     return self;
 }

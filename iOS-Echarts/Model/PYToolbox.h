@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PYToolboxFeature.h"
 
 @interface PYToolbox : NSObject
 
@@ -27,6 +28,6 @@
 @property (retain, nonatomic) PYColor *effectiveColor;
 @property (assign, nonatomic) BOOL showTitle;
 @property (retain, nonatomic) PYTextStyle *textStyle;
-// PYFeature
+@property (retain, nonatomic) PYToolboxFeature *feature;
 
 @end
