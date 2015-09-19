@@ -37,9 +37,10 @@ typedef NSArray *(^DataFunction)(NSArray *data);
 @property (retain, nonatomic) PYItemStyle *itemStyle;
 @property (retain, nonatomic) NSArray *data;
 @property (copy, nonatomic) DataFunction dataFunction;
-@property (retain, nonatomic) NSArray *markPoint;
-@property (retain, nonatomic) NSArray *markLine;
-
+//@property (retain, nonatomic) NSArray *markPoint;
+//@property (retain, nonatomic) NSArray *markLine;
+@property (retain, nonatomic) PYMarkPoint *markPoint;
+@property (retain, nonatomic) PYMarkLine *markLine;
 -(void)reloadData;
 
 /**
