@@ -8,6 +8,10 @@
 
 #import "LineDemoController.h"
 
+typedef enum {
+    LineDemoTypeBtnTagStandard = 10000
+}LineDemoTypeBtnTag;
+
 @interface LineDemoController ()
 
 @end
@@ -20,6 +24,26 @@
 }
 
 -(void)initAll {
+    
+    
+}
+
+- (IBAction)kDemosClick:(id)sender {
+    UIButton *btn = (UIButton *)sender;
+    switch (btn.tag) {
+        case LineDemoTypeBtnTagStandard:
+            [self showStandardLineDemo];
+            break;
+        default:
+            break;
+    }
+    [_kEchartView loadEcharts];
+}
+
+/**
+ *  标准折线图
+ */
+-(void)showStandardLineDemo {
     PYOption *option = [[PYOption alloc] init];
     PYTitle *title = [[PYTitle alloc] init];
     title.text = @"未来一周气温变化";
@@ -33,7 +57,16 @@
     option.legend = legend;
     PYToolbox *toolbox = [[PYToolbox alloc] init];
     toolbox.show = YES;
-    //缺少Feature
+    toolbox.x = @"right";
+    toolbox.y = @"top";
+    toolbox.z = @(100);
+    toolbox.feature.mark.show = YES;
+    toolbox.feature.dataView.show = YES;
+    toolbox.feature.dataView.readOnly = NO;
+    toolbox.feature.magicType.show = YES;
+    toolbox.feature.magicType.type = @[@"line", @"bar"];
+    toolbox.feature.restore.show = YES;
+    toolbox.feature.saveAsImage.show = YES;
     option.toolbox = toolbox;
     option.calculable = YES;
     PYAxis *xAxis = [[PYAxis  alloc] init];
@@ -50,26 +83,24 @@
     [series1 setSeriesType:PYSeriesTypeLine];
     series1.data = @[@(11),@(11),@(15),@(13),@(12),@(13),@(10)];
     PYMarkPoint *markPoint = [[PYMarkPoint alloc] init];
-    markPoint.data = @[@{@"type" : @"max", @"name": @"最大值"},@{@"type" : @"mix", @"name": @"最小值"}];
-    series1.markPoint = @[markPoint];
+    markPoint.data = @[@{@"type" : @"max", @"name": @"最大值"},@{@"type" : @"min", @"name": @"最小值"}];
+    series1.markPoint = markPoint;
     PYMarkLine *markLine = [[PYMarkLine alloc] init];
     markLine.data = @[@{@"type" : @"average", @"name": @"平均值"}];
-    series1.markLine = @[markLine];
+    series1.markLine = markLine;
     PYSeries *series2 = [[PYSeries alloc] init];
     series2.name = @"最低温度";
     [series2 setSeriesType:PYSeriesTypeLine];
-    series1.data = @[@(1),@(-2),@(2),@(5),@(3),@(2),@(0)];
+    series2.data = @[@(1),@(-2),@(2),@(5),@(3),@(2),@(0)];
     PYMarkPoint *markPoint2 = [[PYMarkPoint alloc] init];
     markPoint2.data = @[@{@"value" : @(2), @"name": @"周最低", @"xAxis":@(1), @"yAxis" : @(-1.5)}];
-    series2.markPoint = @[markPoint2];
+    series2.markPoint = markPoint2;
     PYMarkLine *markLine2 = [[PYMarkLine alloc] init];
     markLine2.data = @[@{@"type" : @"average", @"name": @"平均值"}];
-    series2.markLine = @[markLine2];
+    series2.markLine = markLine2;
     option.series = [[NSMutableArray alloc] initWithObjects:series1, series2, nil];
     [_kEchartView setOption:option];
-    
 }
-
 
 //PYOption *option = [[PYOption alloc] init];
 //PYLegend *legend = [[PYLegend alloc] init];
