@@ -27,6 +27,7 @@
 
 @interface PYEchartsView() {
     PYOption *option;
+    NSURLRequest *request;
 }
 
 @end
@@ -55,13 +56,20 @@
 -(void)initAll {
     NSString *urlString = [[NSBundle mainBundle] pathForResource:@"echarts" ofType:@"html"];
     NSURL *url =[NSURL URLWithString:urlString];
-    NSURLRequest *request =[NSURLRequest requestWithURL:url];
+    request =[NSURLRequest requestWithURL:url];
     self.delegate = self;
     self.scrollView.bounces = NO;
     self.scrollView.scrollEnabled = NO;
     // 保证该view背景是透明的
     self.opaque = NO;
     self.backgroundColor = [UIColor clearColor];
+    
+}
+
+/**
+ *  加载视图
+ */
+-(void)loadEcharts {
     [self loadRequest:request];
 }
 
