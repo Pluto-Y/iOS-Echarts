@@ -10,7 +10,9 @@
 #import "PYAxis.h"
 #import "PYLegend.h"
 #import "PYTitle.h"
+#import "PYGrid.h"
 #import "PYToolbox.h"
+#import "PYDataZoom.h"
 #import "PYCartesianSeries.h"
 
 @interface PYOption : NSObject
@@ -23,6 +25,8 @@
 @property (retain, nonatomic) PYToolbox *toolbox;
 @property (retain, nonatomic) PYTooltip *tooltip;
 @property (retain, nonatomic) PYLegend *legend;
+@property (retain, nonatomic) PYDataZoom *dataZoom;
+@property (retain, nonatomic) PYGrid *grid;
 @property (retain, nonatomic) NSMutableArray *xAxis;
 @property (retain, nonatomic) NSMutableArray *yAxis;
 @property (retain, nonatomic) NSMutableArray *series;
