@@ -38,6 +38,8 @@
 		6C7C957D1B9EA53400D80042 /* PYCartesianSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C957C1B9EA53400D80042 /* PYCartesianSeries.m */; };
 		6C7C95831B9EB31A00D80042 /* PYItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95821B9EB31A00D80042 /* PYItemStyle.m */; };
 		6C7C958F1B9EC47500D80042 /* PYLabelLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C958E1B9EC47500D80042 /* PYLabelLine.m */; };
+		6CAB6A381BB1BA8B00293E0B /* PYDataZoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAB6A371BB1BA8B00293E0B /* PYDataZoom.m */; settings = {ASSET_TAGS = (); }; };
+		6CAB6A3B1BB266B100293E0B /* PYGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAB6A3A1BB266B100293E0B /* PYGrid.m */; settings = {ASSET_TAGS = (); }; };
 		6CDE01251BA87A5A006A18D5 /* PYToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE01241BA87A5A006A18D5 /* PYToolbox.m */; };
 		6CDE012B1BA87DD1006A18D5 /* PYMarkLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE012A1BA87DD1006A18D5 /* PYMarkLine.m */; };
 		6CDE012E1BA88111006A18D5 /* PYMarkPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE012D1BA88111006A18D5 /* PYMarkPoint.m */; };
@@ -120,6 +122,10 @@
 		6C7C95821B9EB31A00D80042 /* PYItemStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYItemStyle.m; path = Model/PYItemStyle.m; sourceTree = "<group>"; };
 		6C7C958D1B9EC47500D80042 /* PYLabelLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYLabelLine.h; path = Model/PYLabelLine.h; sourceTree = "<group>"; };
 		6C7C958E1B9EC47500D80042 /* PYLabelLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYLabelLine.m; path = Model/PYLabelLine.m; sourceTree = "<group>"; };
+		6CAB6A361BB1BA8B00293E0B /* PYDataZoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYDataZoom.h; path = Model/PYDataZoom.h; sourceTree = "<group>"; };
+		6CAB6A371BB1BA8B00293E0B /* PYDataZoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYDataZoom.m; path = Model/PYDataZoom.m; sourceTree = "<group>"; };
+		6CAB6A391BB266B100293E0B /* PYGrid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYGrid.h; path = Model/PYGrid.h; sourceTree = "<group>"; };
+		6CAB6A3A1BB266B100293E0B /* PYGrid.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYGrid.m; path = Model/PYGrid.m; sourceTree = "<group>"; };
 		6CDE01231BA87A5A006A18D5 /* PYToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYToolbox.h; path = Model/PYToolbox.h; sourceTree = "<group>"; };
 		6CDE01241BA87A5A006A18D5 /* PYToolbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYToolbox.m; path = Model/PYToolbox.m; sourceTree = "<group>"; };
 		6CDE01291BA87DD1006A18D5 /* PYMarkLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYMarkLine.h; path = Model/Series/PYMarkLine.h; sourceTree = "<group>"; };
@@ -291,6 +297,10 @@
 				6CDE01241BA87A5A006A18D5 /* PYToolbox.m */,
 				6C305A4A1BAB1EF900762DBD /* PYToolboxFeature.h */,
 				6C305A4B1BAB1EF900762DBD /* PYToolboxFeature.m */,
+				6CAB6A361BB1BA8B00293E0B /* PYDataZoom.h */,
+				6CAB6A371BB1BA8B00293E0B /* PYDataZoom.m */,
+				6CAB6A391BB266B100293E0B /* PYGrid.h */,
+				6CAB6A3A1BB266B100293E0B /* PYGrid.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -432,6 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C023F431BA4792500C0883D /* NSObject+PYObject.m in Sources */,
+				6CAB6A3B1BB266B100293E0B /* PYGrid.m in Sources */,
 				6C7C955A1B9DE82D00D80042 /* PYLineStyle.m in Sources */,
 				6CFF3AA51B9FF64C00BAF9A7 /* PYOption.m in Sources */,
 				6C7C957D1B9EA53400D80042 /* PYCartesianSeries.m in Sources */,
@@ -454,6 +465,7 @@
 				6C305A361BA9C80D00762DBD /* PYLabel.m in Sources */,
 				6C42167F1B98E310002D4B7A /* AppDelegate.m in Sources */,
 				6C42167C1B98E310002D4B7A /* main.m in Sources */,
+				6CAB6A381BB1BA8B00293E0B /* PYDataZoom.m in Sources */,
 				6C305A331BA9C80D00762DBD /* PYAreaStyle.m in Sources */,
 				6C023F9E1BA722EC00C0883D /* PYTitle.m in Sources */,
 				6C305A451BAAA7E500762DBD /* PYEchartsView.m in Sources */,

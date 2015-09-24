@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LineDemoController">
@@ -16,19 +17,116 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" tag="10000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZd-eZ-0VY">
-                    <rect key="frame" x="122.5" y="17" width="75" height="30"/>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzv-FD-Cq4">
+                    <rect key="frame" x="0.0" y="0.0" width="160" height="318"/>
+                    <subviews>
+                        <button opaque="NO" tag="10000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZd-eZ-0VY">
+                            <rect key="frame" x="42" y="32" width="75" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="4kT-MT-YyA"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="7x1-a9-0YZ"/>
+                            </constraints>
+                            <state key="normal" title="标准折线图">
+                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="YOQ-H2-jGE"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqY-hJ-lS3">
+                            <rect key="frame" x="42" y="70" width="75" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="47T-Tb-bvh"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="W4c-C6-kDq"/>
+                            </constraints>
+                            <state key="normal" title="堆积折线图"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="jPN-7O-SyS"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wU-B0-z2H">
+                            <rect key="frame" x="38" y="108" width="84" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="MKl-Mw-gud"/>
+                                <constraint firstAttribute="height" constant="30" id="eYb-DX-Dfr"/>
+                            </constraints>
+                            <state key="normal" title="标准折线图2"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="FjL-sc-11d"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wih-VB-h2w">
+                            <rect key="frame" x="42" y="146" width="75" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="LDk-jr-dEY"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="a8t-HI-5wJ"/>
+                            </constraints>
+                            <state key="normal" title="标准面积图"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="a5G-Nd-OQr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpL-QM-v8c">
+                            <rect key="frame" x="42" y="184" width="75" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="81k-6p-f4s"/>
+                                <constraint firstAttribute="height" constant="30" id="RX7-pT-Nge"/>
+                            </constraints>
+                            <state key="normal" title="堆积面积图"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="BUb-nL-jyw"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="4kT-MT-YyA"/>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="7x1-a9-0YZ"/>
+                        <constraint firstItem="jqY-hJ-lS3" firstAttribute="top" secondItem="QZd-eZ-0VY" secondAttribute="bottom" constant="8" id="2sW-o9-o4O"/>
+                        <constraint firstItem="4wU-B0-z2H" firstAttribute="top" secondItem="jqY-hJ-lS3" secondAttribute="bottom" constant="8" id="HIN-ja-hnK"/>
+                        <constraint firstItem="jqY-hJ-lS3" firstAttribute="centerX" secondItem="pzv-FD-Cq4" secondAttribute="centerX" id="RmV-pp-OLx"/>
+                        <constraint firstItem="QZd-eZ-0VY" firstAttribute="top" secondItem="pzv-FD-Cq4" secondAttribute="top" constant="32" id="TwT-OK-zwd"/>
+                        <constraint firstItem="wih-VB-h2w" firstAttribute="centerX" secondItem="pzv-FD-Cq4" secondAttribute="centerX" id="Tyc-jX-zR0"/>
+                        <constraint firstItem="QZd-eZ-0VY" firstAttribute="centerX" secondItem="pzv-FD-Cq4" secondAttribute="centerX" id="Yrc-rV-spV"/>
+                        <constraint firstItem="UpL-QM-v8c" firstAttribute="centerX" secondItem="pzv-FD-Cq4" secondAttribute="centerX" id="cSI-0u-Yw0"/>
+                        <constraint firstAttribute="height" constant="318" id="g8V-ET-xfB"/>
+                        <constraint firstItem="wih-VB-h2w" firstAttribute="top" secondItem="4wU-B0-z2H" secondAttribute="bottom" constant="8" id="hjO-ii-e5G"/>
+                        <constraint firstItem="4wU-B0-z2H" firstAttribute="centerX" secondItem="pzv-FD-Cq4" secondAttribute="centerX" id="j7f-Ym-fYk"/>
+                        <constraint firstItem="UpL-QM-v8c" firstAttribute="top" secondItem="wih-VB-h2w" secondAttribute="bottom" constant="8" id="sqd-o3-xJp"/>
                     </constraints>
-                    <state key="normal" title="标准折线图">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                    <connections>
-                        <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="YOQ-H2-jGE"/>
-                    </connections>
-                </button>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GCQ-fS-RZV">
+                    <rect key="frame" x="160" y="0.0" width="160" height="318"/>
+                    <subviews>
+                        <button opaque="NO" tag="10005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4RP-jc-S7T">
+                            <rect key="frame" x="35" y="32" width="90" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="c2I-NF-a7r"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="vdk-Gp-J14"/>
+                            </constraints>
+                            <state key="normal" title="不等距折线图"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="nwu-Eo-g2I"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ziu-eP-p2f">
+                            <rect key="frame" x="30.5" y="70" width="99" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="094-M0-ghb"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="krL-1E-AaF"/>
+                            </constraints>
+                            <state key="normal" title="不等距折线图2"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="Reg-GO-6Ag"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="Ziu-eP-p2f" firstAttribute="top" secondItem="4RP-jc-S7T" secondAttribute="bottom" constant="8" id="3cB-c9-frb"/>
+                        <constraint firstItem="Ziu-eP-p2f" firstAttribute="centerX" secondItem="GCQ-fS-RZV" secondAttribute="centerX" id="4RS-c7-ZR6"/>
+                        <constraint firstItem="4RP-jc-S7T" firstAttribute="top" secondItem="GCQ-fS-RZV" secondAttribute="top" constant="32" id="Ies-VC-zE8"/>
+                        <constraint firstItem="4RP-jc-S7T" firstAttribute="centerX" secondItem="GCQ-fS-RZV" secondAttribute="centerX" id="zIt-TM-PYj"/>
+                    </constraints>
+                </view>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fcf-T1-9D9" customClass="PYEchartsView">
                     <rect key="frame" x="0.0" y="318" width="320" height="200"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -39,14 +137,19 @@
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="pzv-FD-Cq4" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="62u-wZ-Szn"/>
                 <constraint firstAttribute="trailing" secondItem="Fcf-T1-9D9" secondAttribute="trailing" id="BIP-4Q-htt"/>
-                <constraint firstItem="QZd-eZ-0VY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="17" id="E0V-fR-FK9"/>
+                <constraint firstItem="GCQ-fS-RZV" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="DWp-w9-Uok"/>
                 <constraint firstAttribute="bottom" secondItem="Fcf-T1-9D9" secondAttribute="bottom" constant="50" id="I1i-1H-55M"/>
                 <constraint firstItem="Fcf-T1-9D9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Kue-vd-8SJ"/>
-                <constraint firstAttribute="centerX" secondItem="QZd-eZ-0VY" secondAttribute="centerX" id="cek-8L-KvS"/>
+                <constraint firstItem="pzv-FD-Cq4" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="bNz-OF-adA"/>
+                <constraint firstAttribute="trailing" secondItem="GCQ-fS-RZV" secondAttribute="trailing" id="ccU-Ta-8Hw"/>
+                <constraint firstItem="pzv-FD-Cq4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="gNB-82-zMv"/>
+                <constraint firstItem="GCQ-fS-RZV" firstAttribute="width" secondItem="pzv-FD-Cq4" secondAttribute="width" id="iNc-lD-mW8"/>
+                <constraint firstItem="GCQ-fS-RZV" firstAttribute="height" secondItem="pzv-FD-Cq4" secondAttribute="height" id="uDt-4g-ghk"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
-            <point key="canvasLocation" x="189" y="456"/>
+            <point key="canvasLocation" x="326" y="342"/>
         </view>
     </objects>
 </document>
