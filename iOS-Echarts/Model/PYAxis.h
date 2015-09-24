@@ -25,8 +25,9 @@ typedef enum {
 @property (retain, nonatomic) id boundaryGap;
 @property (retain, nonatomic) PYAxisLine *axisLine;
 @property (retain, nonatomic) PYAxisLabel *axisLabel;
-@property (retain, nonatomic) NSNumber *max;
 @property (retain, nonatomic) NSNumber *min;
+@property (retain, nonatomic) NSNumber *max;
+@property (retain, nonatomic) NSNumber *splitNumber;
 @property (retain, nonatomic) PYSplitLine *splitLine;
 @property (retain, nonatomic) NSArray *data;
 

@@ -17,6 +17,7 @@ typedef enum {
 
 @interface PYAxisPointer : NSObject
 
+@property (assign, nonatomic) BOOL show;
 @property (retain, nonatomic, readonly, getter=getType) NSString *type;
 @property (retain, nonatomic) PYLineStyle *lineStyle;
 @property (retain, nonatomic) PYLineStyle *crossStyle;
