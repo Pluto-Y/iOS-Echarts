@@ -24,6 +24,7 @@
 #define DEFAULT_HEAD_TOP_PADDING 45
 #define DEFAULT_HEAD_LEFT_PADDING 50
 #define DEFAULT_HEAD_RIGHT_PADDING 50
+#define DEFAULT_BOTTOM_PADDING 30
 
 @interface PYEchartsView() {
     PYOption *option;
@@ -175,6 +176,10 @@
         if (hasRight) {
             paddingRight += DEFAULT_HEAD_RIGHT_PADDING;
             width -= DEFAULT_HEAD_RIGHT_PADDING;
+        }
+        if (option.dataZoom != nil && option.dataZoom.show) {
+            paddingBottom += DEFAULT_BOTTOM_PADDING;
+            height -= DEFAULT_BOTTOM_PADDING;
         }
     }
     
