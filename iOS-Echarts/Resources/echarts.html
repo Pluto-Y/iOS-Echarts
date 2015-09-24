@@ -62,6 +62,8 @@
             try {
                 if(typeof(eval(obj)) == 'function'){
                     return eval(obj);
+                } else if (typeof(eval(obj) == 'object') && eval(obj) instanceof Array) {
+                    return eval(obj);
                 }
             }catch(e) {
                 return obj;
