@@ -35,7 +35,7 @@ typedef NSArray *(^DataFunction)(NSArray *data);
 @property (retain, nonatomic) PYTooltip *tooltip;
 @property (assign, nonatomic) BOOL clickable;
 @property (retain, nonatomic) PYItemStyle *itemStyle;
-@property (retain, nonatomic) NSArray *data;
+@property (retain, nonatomic) id data;
 @property (copy, nonatomic) DataFunction dataFunction;
 //@property (retain, nonatomic) NSArray *markPoint;
 //@property (retain, nonatomic) NSArray *markLine;
