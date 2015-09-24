@@ -19,7 +19,7 @@
 @property (retain, nonatomic) NSNumber *barWidth;
 @property (retain, nonatomic) NSNumber *barMaxWidth;
 @property (retain, nonatomic) NSString *symbol;
-@property (retain, nonatomic) NSNumber *symbolSize;
+@property (retain, nonatomic) id symbolSize;
 @property (retain, nonatomic) NSNumber *symbolRotate;
 @property (assign, nonatomic) BOOL showAllSymbol;
 @property (assign, nonatomic) BOOL smooth;
