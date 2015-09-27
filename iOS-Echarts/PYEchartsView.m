@@ -7,7 +7,6 @@
 //
 
 #import "PYEchartsView.h"
-#import "EChartUtil.h"
 #import "PYAxis.h"
 #import "PYLegend.H"
 
@@ -78,7 +77,11 @@
 #pragma mark UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     [self resizeDiv];
-    [EChartUtil showLineChart1:option webView:webView];
+    
+    NSString *jsonStr = [JsonUtil getJSONString:option];
+    NSLog(@"%@",jsonStr);
+    NSString *js = [NSString stringWithFormat:@"%@(%@)", @"loadEcharts", jsonStr];
+    [webView stringByEvaluatingJavaScriptFromString:js];
 }
 
 /**
