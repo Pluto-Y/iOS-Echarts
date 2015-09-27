@@ -21,6 +21,10 @@
     if (self) {
         axisType = PYAxisTypeCategory;
         _show = YES;
+        _zlevel = @(0);
+        _z = @(0);
+        _position = @"'bottom'|'left'";
+        _name = @"";
         _data = [[NSArray alloc] init];
         _axisLine = [[PYAxisLine alloc] init];
         _axisLabel = [[PYAxisLabel alloc] init];

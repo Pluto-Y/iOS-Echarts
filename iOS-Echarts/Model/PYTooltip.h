@@ -41,6 +41,6 @@ typedef enum {
  *
  *  @param pyTooltipTrigger 触发类型
  */
--(void)setPYTooltipTrigger:(PYTooltipTrigger) pyTooltipTrigger;
+-(void)setTooltipTrigger:(PYTooltipTrigger) pyTooltipTrigger;
 
 @end

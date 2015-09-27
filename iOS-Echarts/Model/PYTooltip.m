@@ -56,7 +56,7 @@
  *
  *  @param pyTooltipTrigger 触发类型
  */
--(void)setPYTooltipTrigger:(PYTooltipTrigger) pyTooltipTrigger {
+-(void)setTooltipTrigger:(PYTooltipTrigger) pyTooltipTrigger {
     trigger = pyTooltipTrigger;
 }
 

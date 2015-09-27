@@ -118,12 +118,38 @@
                                 <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="Reg-GO-6Ag"/>
                             </connections>
                         </button>
+                        <button opaque="NO" tag="10007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kw4-bj-YA6">
+                            <rect key="frame" x="57" y="108" width="46" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="46" id="IIq-P9-DW3"/>
+                                <constraint firstAttribute="height" constant="30" id="g0r-Un-9hy"/>
+                            </constraints>
+                            <state key="normal" title="折线图"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="DeT-55-Aqg"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10008" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wZ-lF-d2z">
+                            <rect key="frame" x="57" y="146" width="46" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="2JL-7S-hfZ"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="ql0-s2-iVx"/>
+                            </constraints>
+                            <state key="normal" title="对数轴"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="dht-sG-IJV"/>
+                            </connections>
+                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="Ziu-eP-p2f" firstAttribute="top" secondItem="4RP-jc-S7T" secondAttribute="bottom" constant="8" id="3cB-c9-frb"/>
                         <constraint firstItem="Ziu-eP-p2f" firstAttribute="centerX" secondItem="GCQ-fS-RZV" secondAttribute="centerX" id="4RS-c7-ZR6"/>
+                        <constraint firstItem="2wZ-lF-d2z" firstAttribute="centerX" secondItem="GCQ-fS-RZV" secondAttribute="centerX" id="IVt-OH-xBN"/>
                         <constraint firstItem="4RP-jc-S7T" firstAttribute="top" secondItem="GCQ-fS-RZV" secondAttribute="top" constant="32" id="Ies-VC-zE8"/>
+                        <constraint firstItem="2wZ-lF-d2z" firstAttribute="top" secondItem="kw4-bj-YA6" secondAttribute="bottom" constant="8" id="M3P-mP-px4"/>
+                        <constraint firstItem="kw4-bj-YA6" firstAttribute="top" secondItem="Ziu-eP-p2f" secondAttribute="bottom" constant="8" id="mZZ-YC-zKr"/>
+                        <constraint firstItem="kw4-bj-YA6" firstAttribute="centerX" secondItem="GCQ-fS-RZV" secondAttribute="centerX" id="ysz-Av-Tc4"/>
                         <constraint firstItem="4RP-jc-S7T" firstAttribute="centerX" secondItem="GCQ-fS-RZV" secondAttribute="centerX" id="zIt-TM-PYj"/>
                     </constraints>
                 </view>

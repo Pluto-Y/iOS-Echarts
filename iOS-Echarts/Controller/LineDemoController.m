@@ -13,9 +13,11 @@ typedef enum {
     LineDemoTypeBtnTagStackedLine = 10001,
     LineDemoTypeBtnTagBasicLine = 10002,
     LindDemoTypeBtnTagBasicArea = 10003,
-    LindDemoTypeBtnTagStackedAre = 10004,
+    LindDemoTypeBtnTagStackedArea = 10004,
     LindDemoTypeBtnTagIrregularLine = 10005,
-    LineDemoTypeBtnTagIrregularLine2 = 10006
+    LineDemoTypeBtnTagIrregularLine2 = 10006,
+    LineDemoTypeBtnTagLine = 10007,
+    LineDemoTypeBtnTagLogarithmic = 10008
 }LineDemoTypeBtnTag;
 
 @interface LineDemoController ()
@@ -49,7 +51,7 @@ typedef enum {
         case LindDemoTypeBtnTagBasicArea:
             [self showBasicAreaDemo];
             break;
-        case LindDemoTypeBtnTagStackedAre:
+        case LindDemoTypeBtnTagStackedArea:
             [self showStackedAreaDemo];
             break;
         case LindDemoTypeBtnTagIrregularLine:
@@ -58,10 +60,168 @@ typedef enum {
         case LineDemoTypeBtnTagIrregularLine2:
             [self showIrregularLine2Demo];
             break;
+        case LineDemoTypeBtnTagLine:
+            [self showLineDemo];
+            break;
+        case LineDemoTypeBtnTagLogarithmic:
+            [self showLogarithmicDemo];
+            break;
         default:
             break;
     }
     [_kEchartView loadEcharts];
+}
+
+-(void)showAreaDemo {
+    
+}
+
+-(void)showLogarithmicDemo {
+    PYOption *option = [[PYOption alloc] init];
+    option.title = [[PYTitle alloc] init];
+    option.title.text = @"对数轴实例";
+    option.title.x = @"center";
+    option.tooltip = [[PYTooltip alloc] init];
+    [option.tooltip setTooltipTrigger:PYTooltipTriggerItem];
+    option.tooltip.formatter = @"{a} <br/>{b} : {c}";
+    option.legend = [[PYLegend alloc] init];
+    option.legend.x = @"left";
+    option.legend.data = @[@"2的指数", @"3的指数"];
+    PYAxis *xAxis = [[PYAxis alloc] init];
+    [xAxis setAxisType:PYAxisTypeCategory];
+    xAxis.name = @"x";
+    xAxis.splitLine = [[PYSplitLine alloc] init];
+    xAxis.splitLine.show = NO;
+    xAxis.data = @[@"一",@"二",@"三",@"四",@"五",@"六",@"七",@"八",@"九"];
+    option.xAxis = [[NSMutableArray alloc] initWithObjects:xAxis, nil];
+    PYAxis *yAxis = [[PYAxis alloc] init];
+    [yAxis setAxisType:PYAxisTypeLog];
+    yAxis.name = @"y";
+    option.yAxis = [[NSMutableArray alloc] initWithObjects:yAxis, nil];
+//    option.toolbox = [[PYToolbox alloc] init];
+//    option.toolbox.show = YES;
+//    option.toolbox.feature = [[PYToolboxFeature alloc] init];
+//    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
+//    option.toolbox.feature.mark.show = YES;
+//    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
+//    option.toolbox.feature.dataView.show = YES;
+//    option.toolbox.feature.dataView.readOnly = NO;
+//    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
+//    option.toolbox.feature.magicType.show = YES;
+//    option.toolbox.feature.magicType.type = @[@"line", @"bar", @"stack", @"tiled"];
+//    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
+//    option.toolbox.feature.restore.show = YES;
+//    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
+//    option.toolbox.feature.saveAsImage.show = YES;
+    option.calculable = YES;
+    NSMutableArray *serieses = [[NSMutableArray alloc] init];
+    PYSeries *series1 = [[PYSeries alloc] init];
+    series1.name = @"3的指数";
+    [series1 setSeriesType:PYSeriesTypeLine];
+    series1.data = @[@(1),@(3),@(9),@(27),@(81),@(247),@(741),@(2223),@(6669)];
+    [serieses addObject:series1];
+    PYSeries *series2 = [[PYSeries alloc] init];
+    series2.name = @"2的指数";
+    [series2 setSeriesType:PYSeriesTypeLine];
+    series2.data = @[@(1),@(2),@(4),@(8),@(16),@(32),@(64),@(128),@(256)];
+    [serieses addObject:series2];
+    option.series = serieses;
+    [_kEchartView setOption:option];
+    
+}
+
+-(void)showLineDemo {
+    PYOption *option = [[PYOption alloc] init];
+    option.tooltip = [[PYTooltip alloc] init];
+    [option.tooltip setTooltipTrigger:PYTooltipTriggerAxis];
+    option.legend = [[PYLegend alloc] init];
+    option.legend.data = @[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",@"搜索引擎"];
+//    option.toolbox = [[PYToolbox alloc] init];
+//    option.toolbox.show = YES;
+//    option.toolbox.feature = [[PYToolboxFeature alloc] init];
+//    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
+//    option.toolbox.feature.mark.show = YES;
+//    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
+//    option.toolbox.feature.dataView.show = YES;
+//    option.toolbox.feature.dataView.readOnly = NO;
+//    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
+//    option.toolbox.feature.magicType.show = YES;
+//    option.toolbox.feature.magicType.type = @[@"line", @"bar", @"stack", @"tiled"];
+//    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
+//    option.toolbox.feature.restore.show = YES;
+//    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
+//    option.toolbox.feature.saveAsImage.show = YES;
+    option.calculable = YES;
+    PYAxis *xAxis = [[PYAxis alloc] init];
+    [xAxis setAxisType:PYAxisTypeCategory];
+    xAxis.boundaryGap = @(NO);
+    xAxis.data = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
+    option.xAxis = [[NSMutableArray alloc] initWithObjects:xAxis, nil];
+    PYAxis *yAxis = [[PYAxis alloc] init];
+    [yAxis setAxisType:PYAxisTypeValue];
+    option.yAxis = [[NSMutableArray alloc] initWithObjects:yAxis, nil];
+    NSMutableArray *serieses = [[NSMutableArray alloc] init];
+    PYCartesianSeries *series1 = [[PYCartesianSeries alloc] init];
+    series1.name = @"邮件营销";
+    [series1 setSeriesType:PYSeriesTypeLine];
+    series1.stack = @"总量";
+    series1.itemStyle = [[PYItemStyle alloc] init];
+    series1.itemStyle.normal = [[PYItemStyleProp alloc] init];
+    series1.itemStyle.normal.areaStyle = [[PYAreaStyle alloc] init];
+    series1.itemStyle.normal.areaStyle.color = @" (function (){var zrColor = require('zrender/tool/color');return zrColor.getLinearGradient(0, 200, 0, 400,[[0, 'rgba(255,0,0,0.8)'],[0.8, 'rgba(255,255,255,0.1)']])})()";
+    series1.data = @[@(120),@(132),@(101),@(134),@{@"value":@(90), @"symbol":@"droplet", @"symbolSize":@(5)},@(230),@(210)];
+    [serieses addObject:series1];
+    PYCartesianSeries *series2 = [[PYCartesianSeries alloc] init];
+    series2.name = @"联盟广告";
+    [series2 setSeriesType:PYSeriesTypeLine];
+    series2.stack = @"总量";
+    series2.smooth = YES;
+    series2.symbol = @"image://../asset/ico/favicon.png";
+    series2.symbolSize = @(8);
+    series2.itemStyle = [[PYItemStyle alloc] init];
+    series2.itemStyle.normal = [[PYItemStyleProp alloc] init];
+    series2.itemStyle.normal.areaStyle = [[PYAreaStyle alloc] init];
+    series2.itemStyle.normal.areaStyle.type = @"default";
+    series2.data = @[@(120), @(82), @{@"value":@(201), @"symbol":@"start", @"symbolSize":@(15),@"itemStyle":@{@"normal":@{@"label":@{@"show":@(YES),@"textStyle":@{@"fontSize":@(20),@"fontFamily":@"微软雅黑",@"fontWeight":@"bold"}}}}}, @{@"value":@(134),@"symbol":@"none"}, @(190), @{@"value":@(230),@"symbol":@"emptypin",@"symbolSize":@(8)}, @(110)];
+    [serieses addObject:series2];
+    PYCartesianSeries *series4 = [[PYCartesianSeries alloc] init];
+    series4.name = @"直接访问";
+    [series4 setSeriesType:PYSeriesTypeLine];
+    series4.stack = @"总量";
+    series4.symbol = @"arrow";
+    series4.symbolSize = @(6);
+    series4.symbolRotate = @(-45);
+    series4.itemStyle = [[PYItemStyle alloc] init];
+    series4.itemStyle.normal = [[PYItemStyleProp alloc] init];
+    series4.itemStyle.normal.color = PYRGBA(255, 0, 0, 1);
+    series4.itemStyle.normal.lineStyle = [[PYLineStyle alloc] init];
+    series4.itemStyle.normal.lineStyle.width = @(2);
+    [series4.itemStyle.normal.lineStyle setLineStyleType:PYLineStyleTypeDashed];
+    series4.itemStyle.emphasis = [[PYItemStyleProp alloc] init];
+    series4.itemStyle.emphasis.color = PYRGBA(0, 0, 255, 1);
+    series4.data = @[@(320), @(332), @"-", @(334), @{@"value":@(390),@"symbol":@"star6",@"symbolSize":@(20),@"symbolRotate":@(10),@"itemStyle":@{@"normal":@{@"color":@"yellowgreen"},@"emphasis":@{@"color":@"orange",@"lable":@{@"show":@(YES),@"position":@"inside",@"textStyle":@{@"fontSize":@(20)}}}}}, @(330), @(320)];
+    [serieses addObject:series4];
+    PYCartesianSeries *series5 = [[PYCartesianSeries alloc] init];
+    series5.name = @"搜索引擎";
+    [series5 setSeriesType:PYSeriesTypeLine];
+    series5.stack = @"总量";
+    series5.symbol = @"emptyCircle";
+    series5.itemStyle = [[PYItemStyle alloc] init];
+    series5.itemStyle.normal = [[PYItemStyleProp alloc] init];
+    series5.itemStyle.normal.lineStyle = [[PYLineStyle alloc] init];
+    series5.itemStyle.normal.lineStyle.width = @(2);
+    series5.itemStyle.normal.lineStyle.color = @"(function (){var zrColor = require('zrender/tool/color');return zrColor.getLinearGradient(0, 0, 1000, 0,[[0, 'rgba(255,0,0,0.8)'],[0.8, 'rgba(255,255,0,0.8)']])})()";
+    series5.itemStyle.normal.lineStyle.shadowColor = PYRGBA(0, 0, 0, .5);
+    series5.itemStyle.normal.lineStyle.shadowBlur = @(10);
+    series5.itemStyle.normal.lineStyle.shadowOffsetX = @(8);
+    series5.itemStyle.normal.lineStyle.shadowOffsetY = @(8);
+    series5.itemStyle.emphasis = [[PYItemStyleProp alloc] init];
+    series5.itemStyle.emphasis.label = [[PYLabel alloc] init];
+    series5.itemStyle.emphasis.label.show = YES;
+    series5.data = @[@(620), @(732), @(791), @{@"value":@(734),@"symbol":@"emptyHeart",@"symbolSize":@(10)}, @(890), @(930), @(820)];
+    [serieses addObject:series5];
+    [option setSeries:serieses];
+    [_kEchartView setOption:option];
 }
 
 -(void)showIrregularLine2Demo {
@@ -70,20 +230,20 @@ typedef enum {
     option.title.text = @"时间坐标折线图";
     option.title.subtext = @"dataZoom支持";
     option.tooltip = [[PYTooltip alloc] init];
-    [option.tooltip setPYTooltipTrigger:PYTooltipTriggerItem];
+    [option.tooltip setTooltipTrigger:PYTooltipTriggerItem];
     option.tooltip.formatter = @"(function(params){var date = new Date(params.value[0]);data = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes(); return data + '<br/>' + params.value[1] + ',' + params.value[2]})";
-    option.toolbox = [[PYToolbox alloc] init];
-    option.toolbox.show = YES;
-    option.toolbox.feature = [[PYToolboxFeature alloc] init];
-    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
-    option.toolbox.feature.mark.show = YES;
-    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
-    option.toolbox.feature.dataView.show = YES;
-    option.toolbox.feature.dataView.readOnly = NO;
-    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
-    option.toolbox.feature.restore.show = YES;
-    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
-    option.toolbox.feature.saveAsImage.show = YES;
+//    option.toolbox = [[PYToolbox alloc] init];
+//    option.toolbox.show = YES;
+//    option.toolbox.feature = [[PYToolboxFeature alloc] init];
+//    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
+//    option.toolbox.feature.mark.show = YES;
+//    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
+//    option.toolbox.feature.dataView.show = YES;
+//    option.toolbox.feature.dataView.readOnly = NO;
+//    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
+//    option.toolbox.feature.restore.show = YES;
+//    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
+//    option.toolbox.feature.saveAsImage.show = YES;
     option.dataZoom = [[PYDataZoom alloc] init];
     option.dataZoom.show = YES;
     option.dataZoom.start = @(70);
@@ -114,7 +274,7 @@ typedef enum {
     option.title.text = @"双数值轴折线";
     option.title.subtext = @"纯属虚构";
     option.tooltip = [[PYTooltip alloc] init];
-    [option.tooltip setPYTooltipTrigger:PYTooltipTriggerAxis];
+    [option.tooltip setTooltipTrigger:PYTooltipTriggerAxis];
     option.tooltip.axisPointer = [[PYAxisPointer alloc] init];
     option.tooltip.axisPointer.show = YES;
     [option.tooltip.axisPointer setPYAxisPointerType:PYAxisPointerTypeCross];
@@ -124,21 +284,21 @@ typedef enum {
     option.tooltip.formatter = @"(function(params){return params.seriesName + ':[' + params.value[0] + ',' + params.value[1] + ']'})";
     option.legend = [[PYLegend alloc] init];
     option.legend.data = @[@"数据1",@"数据2"];
-    option.toolbox = [[PYToolbox alloc] init];
-    option.toolbox.show = YES;
-    option.toolbox.feature = [[PYToolboxFeature alloc] init];
-    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
-    option.toolbox.feature.mark.show = YES;
-    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
-    option.toolbox.feature.dataView.show = YES;
-    option.toolbox.feature.dataView.readOnly = NO;
-    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
-    option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[@"line", @"bar"];
-    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
-    option.toolbox.feature.restore.show = YES;
-    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
-    option.toolbox.feature.saveAsImage.show = YES;
+//    option.toolbox = [[PYToolbox alloc] init];
+//    option.toolbox.show = YES;
+//    option.toolbox.feature = [[PYToolboxFeature alloc] init];
+//    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
+//    option.toolbox.feature.mark.show = YES;
+//    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
+//    option.toolbox.feature.dataView.show = YES;
+//    option.toolbox.feature.dataView.readOnly = NO;
+//    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
+//    option.toolbox.feature.magicType.show = YES;
+//    option.toolbox.feature.magicType.type = @[@"line", @"bar"];
+//    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
+//    option.toolbox.feature.restore.show = YES;
+//    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
+//    option.toolbox.feature.saveAsImage.show = YES;
     option.calculable = YES;
     PYAxis *xAxis = [[PYAxis alloc] init];
     [xAxis setAxisType:PYAxisTypeValue];
@@ -193,24 +353,24 @@ typedef enum {
 -(void)showStackedAreaDemo {
     PYOption *option = [[PYOption alloc] init];
     option.tooltip = [[PYTooltip alloc] init];
-    [option.tooltip setPYTooltipTrigger:PYTooltipTriggerAxis];
+    [option.tooltip setTooltipTrigger:PYTooltipTriggerAxis];
     option.legend = [[PYLegend alloc] init];
     option.legend.data = @[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",@"搜索引擎"];
-    option.toolbox = [[PYToolbox alloc] init];
-    option.toolbox.show = YES;
-    option.toolbox.feature = [[PYToolboxFeature alloc] init];
-    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
-    option.toolbox.feature.mark.show = YES;
-    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
-    option.toolbox.feature.dataView.show = YES;
-    option.toolbox.feature.dataView.readOnly = NO;
-    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
-    option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[@"line", @"bar", @"stack", @"tiled"];
-    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
-    option.toolbox.feature.restore.show = YES;
-    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
-    option.toolbox.feature.saveAsImage.show = YES;
+//    option.toolbox = [[PYToolbox alloc] init];
+//    option.toolbox.show = YES;
+//    option.toolbox.feature = [[PYToolboxFeature alloc] init];
+//    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
+//    option.toolbox.feature.mark.show = YES;
+//    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
+//    option.toolbox.feature.dataView.show = YES;
+//    option.toolbox.feature.dataView.readOnly = NO;
+//    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
+//    option.toolbox.feature.magicType.show = YES;
+//    option.toolbox.feature.magicType.type = @[@"line", @"bar", @"stack", @"tiled"];
+//    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
+//    option.toolbox.feature.restore.show = YES;
+//    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
+//    option.toolbox.feature.saveAsImage.show = YES;
     option.calculable = YES;
     PYAxis *xAxis = [[PYAxis alloc] init];
     [xAxis setAxisType:PYAxisTypeCategory];
@@ -281,24 +441,24 @@ typedef enum {
     option.title.text = @"某楼盘销售情况";
     option.title.subtext = @"纯属虚构";
     option.tooltip = [[PYTooltip alloc] init];
-    [option.tooltip setPYTooltipTrigger:PYTooltipTriggerAxis];
+    [option.tooltip setTooltipTrigger:PYTooltipTriggerAxis];
     option.legend = [[PYLegend alloc] init];
     option.legend.data = @[@"意向",@"预购",@"成交"];
-    option.toolbox = [[PYToolbox alloc] init];
-    option.toolbox.show = YES;
-    option.toolbox.feature = [[PYToolboxFeature alloc] init];
-    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
-    option.toolbox.feature.mark.show = YES;
-    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
-    option.toolbox.feature.dataView.show = YES;
-    option.toolbox.feature.dataView.readOnly = NO;
-    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
-    option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[@"line", @"bar", @"stack", @"tiled"];
-    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
-    option.toolbox.feature.restore.show = YES;
-    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
-    option.toolbox.feature.saveAsImage.show = YES;
+//    option.toolbox = [[PYToolbox alloc] init];
+//    option.toolbox.show = YES;
+//    option.toolbox.feature = [[PYToolboxFeature alloc] init];
+//    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
+//    option.toolbox.feature.mark.show = YES;
+//    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
+//    option.toolbox.feature.dataView.show = YES;
+//    option.toolbox.feature.dataView.readOnly = NO;
+//    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
+//    option.toolbox.feature.magicType.show = YES;
+//    option.toolbox.feature.magicType.type = @[@"line", @"bar", @"stack", @"tiled"];
+//    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
+//    option.toolbox.feature.restore.show = YES;
+//    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
+//    option.toolbox.feature.saveAsImage.show = YES;
     option.calculable = YES;
     PYAxis *xAxis = [[PYAxis alloc] init];
     [xAxis setAxisType:PYAxisTypeCategory];
@@ -349,22 +509,22 @@ typedef enum {
     option.legend.data = @[@"高度(km)与气温(°C)变化关系"];
     option.toolbox = [[PYToolbox alloc] init];
     option.toolbox.show = YES;
-    option.toolbox.feature = [[PYToolboxFeature alloc] init];
-    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
-    option.toolbox.feature.mark.show = YES;
-    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
-    option.toolbox.feature.dataView.show = YES;
-    option.toolbox.feature.dataView.readOnly = NO;
-    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
-    option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[@"line", @"bar"];
-    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
-    option.toolbox.feature.restore.show = YES;
-    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
-    option.toolbox.feature.saveAsImage.show = YES;
+//    option.toolbox.feature = [[PYToolboxFeature alloc] init];
+//    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
+//    option.toolbox.feature.mark.show = YES;
+//    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
+//    option.toolbox.feature.dataView.show = YES;
+//    option.toolbox.feature.dataView.readOnly = NO;
+//    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
+//    option.toolbox.feature.magicType.show = YES;
+//    option.toolbox.feature.magicType.type = @[@"line", @"bar"];
+//    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
+//    option.toolbox.feature.restore.show = YES;
+//    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
+//    option.toolbox.feature.saveAsImage.show = YES;
     option.calculable = YES;
     option.tooltip = [[PYTooltip alloc] init];
-    [option.tooltip setPYTooltipTrigger:PYTooltipTriggerAxis];
+    [option.tooltip setTooltipTrigger:PYTooltipTriggerAxis];
     option.tooltip.formatter = @"Temperature : <br/>{b}km : {c}°C";
     PYAxis *xAxis = [[PYAxis alloc] init];
     [xAxis setAxisType:PYAxisTypeValue];
@@ -396,24 +556,24 @@ typedef enum {
 -(void)showStackedLineDemo {
     PYOption *option = [[PYOption alloc] init];
     option.tooltip = [[PYTooltip alloc] init];
-    [option.tooltip setPYTooltipTrigger:PYTooltipTriggerAxis];
+    [option.tooltip setTooltipTrigger:PYTooltipTriggerAxis];
     option.legend = [[PYLegend alloc] init];
     option.legend.data = @[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",@"搜索引擎"];
     option.toolbox = [[PYToolbox alloc] init];
-    option.toolbox.show = YES;
-    option.toolbox.feature = [[PYToolboxFeature alloc] init];
-    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
-    option.toolbox.feature.mark.show = YES;
-    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
-    option.toolbox.feature.dataView.show = YES;
-    option.toolbox.feature.dataView.readOnly = NO;
-    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
-    option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[@"line", @"bar", @"stack", @"tiled"];
-    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
-    option.toolbox.feature.restore.show = YES;
-    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
-    option.toolbox.feature.saveAsImage.show = YES;
+//    option.toolbox.show = YES;
+//    option.toolbox.feature = [[PYToolboxFeature alloc] init];
+//    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
+//    option.toolbox.feature.mark.show = YES;
+//    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
+//    option.toolbox.feature.dataView.show = YES;
+//    option.toolbox.feature.dataView.readOnly = NO;
+//    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
+//    option.toolbox.feature.magicType.show = YES;
+//    option.toolbox.feature.magicType.type = @[@"line", @"bar", @"stack", @"tiled"];
+//    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
+//    option.toolbox.feature.restore.show = YES;
+//    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
+//    option.toolbox.feature.saveAsImage.show = YES;
     option.calculable = YES;
     PYAxis *xAxis = [[PYAxis alloc] init];
     [xAxis setAxisType:PYAxisTypeCategory];
@@ -468,24 +628,24 @@ typedef enum {
     title.subtext = @"纯属虚构";
     option.title = title;
     PYTooltip *tooltip = [[PYTooltip alloc] init];
-    [tooltip setPYTooltipTrigger:PYTooltipTriggerAxis];
+    [tooltip setTooltipTrigger:PYTooltipTriggerAxis];
     option.tooltip = tooltip;
     PYLegend *legend = [[PYLegend alloc] init];
     legend.data = @[@"最高温度",@"最低温度"];
     option.legend = legend;
-    PYToolbox *toolbox = [[PYToolbox alloc] init];
-    toolbox.show = YES;
-    toolbox.x = @"right";
-    toolbox.y = @"top";
-    toolbox.z = @(100);
-    toolbox.feature.mark.show = YES;
-    toolbox.feature.dataView.show = YES;
-    toolbox.feature.dataView.readOnly = NO;
-    toolbox.feature.magicType.show = YES;
-    toolbox.feature.magicType.type = @[@"line", @"bar"];
-    toolbox.feature.restore.show = YES;
-    toolbox.feature.saveAsImage.show = YES;
-    option.toolbox = toolbox;
+//    PYToolbox *toolbox = [[PYToolbox alloc] init];
+//    toolbox.show = YES;
+//    toolbox.x = @"right";
+//    toolbox.y = @"top";
+//    toolbox.z = @(100);
+//    toolbox.feature.mark.show = YES;
+//    toolbox.feature.dataView.show = YES;
+//    toolbox.feature.dataView.readOnly = NO;
+//    toolbox.feature.magicType.show = YES;
+//    toolbox.feature.magicType.type = @[@"line", @"bar"];
+//    toolbox.feature.restore.show = YES;
+//    toolbox.feature.saveAsImage.show = YES;
+//    option.toolbox = toolbox;
     option.calculable = YES;
     PYAxis *xAxis = [[PYAxis  alloc] init];
     [xAxis setAxisType:PYAxisTypeCategory];

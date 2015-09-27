@@ -22,6 +22,10 @@ typedef enum {
 
 @property (retain, nonatomic, readonly, getter=getType) NSString * type;
 @property (assign, nonatomic) BOOL show;
+@property (retain, nonatomic) NSNumber *zlevel;
+@property (retain, nonatomic) NSNumber *z;
+@property (retain, nonatomic) NSString *position;
+@property (retain, nonatomic) NSString *name;
 @property (retain, nonatomic) id boundaryGap;
 @property (retain, nonatomic) PYAxisLine *axisLine;
 @property (retain, nonatomic) PYAxisLabel *axisLabel;

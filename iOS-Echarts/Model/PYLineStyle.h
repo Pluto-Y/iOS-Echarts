@@ -18,7 +18,7 @@ typedef enum{
 
 @interface PYLineStyle : NSObject
 
-@property (retain, nonatomic) PYColor *color;
+@property (retain, nonatomic) id color;
 @property (retain, nonatomic, readonly) NSString *type;
 @property (retain, nonatomic) NSNumber *width;
 @property (retain, nonatomic) PYColor *shadowColor;

@@ -10,7 +10,7 @@
 
 @interface PYAreaStyle : NSObject
 
-@property (retain, nonatomic) PYColor *color;
+@property (retain, nonatomic) id color;
 @property (retain, nonatomic) NSString *type;
 
 @end
