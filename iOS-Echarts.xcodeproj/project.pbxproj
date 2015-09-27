@@ -11,6 +11,8 @@
 		6C023F9E1BA722EC00C0883D /* PYTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C023F9D1BA722EC00C0883D /* PYTitle.m */; };
 		6C023FA11BA7267000C0883D /* PYTooltip.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C023FA01BA7267000C0883D /* PYTooltip.m */; };
 		6C023FA41BA727DC00C0883D /* PYAxisPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C023FA31BA727DC00C0883D /* PYAxisPointer.m */; };
+		6C0658C71BB84954003CAAE5 /* BarDemoControllerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658C51BB84954003CAAE5 /* BarDemoControllerViewController.m */; settings = {ASSET_TAGS = (); }; };
+		6C0658C81BB84954003CAAE5 /* BarDemoControllerViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658C61BB84954003CAAE5 /* BarDemoControllerViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		6C305A331BA9C80D00762DBD /* PYAreaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A231BA9C80D00762DBD /* PYAreaStyle.m */; };
 		6C305A351BA9C80D00762DBD /* PYItemStyleProp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A271BA9C80D00762DBD /* PYItemStyleProp.m */; };
 		6C305A361BA9C80D00762DBD /* PYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A291BA9C80D00762DBD /* PYLabel.m */; };
@@ -70,6 +72,9 @@
 		6C023FA01BA7267000C0883D /* PYTooltip.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYTooltip.m; path = Model/PYTooltip.m; sourceTree = "<group>"; };
 		6C023FA21BA727DC00C0883D /* PYAxisPointer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYAxisPointer.h; path = Model/PYAxisPointer.h; sourceTree = "<group>"; };
 		6C023FA31BA727DC00C0883D /* PYAxisPointer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYAxisPointer.m; path = Model/PYAxisPointer.m; sourceTree = "<group>"; };
+		6C0658C41BB84954003CAAE5 /* BarDemoControllerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = BarDemoControllerViewController.h; path = Controller/BarDemoControllerViewController.h; sourceTree = "<group>"; };
+		6C0658C51BB84954003CAAE5 /* BarDemoControllerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = BarDemoControllerViewController.m; path = Controller/BarDemoControllerViewController.m; sourceTree = "<group>"; };
+		6C0658C61BB84954003CAAE5 /* BarDemoControllerViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = BarDemoControllerViewController.xib; path = Controller/BarDemoControllerViewController.xib; sourceTree = "<group>"; };
 		6C305A221BA9C80D00762DBD /* PYAreaStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYAreaStyle.h; path = Model/PYAreaStyle.h; sourceTree = "<group>"; };
 		6C305A231BA9C80D00762DBD /* PYAreaStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYAreaStyle.m; path = Model/PYAreaStyle.m; sourceTree = "<group>"; };
 		6C305A261BA9C80D00762DBD /* PYItemStyleProp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYItemStyleProp.h; path = Model/PYItemStyleProp.h; sourceTree = "<group>"; };
@@ -171,6 +176,9 @@
 				6C305A3E1BA9CAF000762DBD /* LineDemoController.h */,
 				6C305A3F1BA9CAF000762DBD /* LineDemoController.m */,
 				6C305A401BA9CAF000762DBD /* LineDemoController.xib */,
+				6C0658C41BB84954003CAAE5 /* BarDemoControllerViewController.h */,
+				6C0658C51BB84954003CAAE5 /* BarDemoControllerViewController.m */,
+				6C0658C61BB84954003CAAE5 /* BarDemoControllerViewController.xib */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -423,6 +431,7 @@
 				6C4216851B98E310002D4B7A /* Main.storyboard in Resources */,
 				6CED89D71B9976B0000DE97E /* echarts.html in Resources */,
 				6C42168A1B98E310002D4B7A /* LaunchScreen.xib in Resources */,
+				6C0658C81BB84954003CAAE5 /* BarDemoControllerViewController.xib in Resources */,
 				6C4216871B98E310002D4B7A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -472,6 +481,7 @@
 				6C7C95741B9E84B700D80042 /* PYLegend.m in Sources */,
 				6C7C957A1B9EA39D00D80042 /* PYSeries.m in Sources */,
 				6C7C95711B9DF87400D80042 /* PYTextStyle.m in Sources */,
+				6C0658C71BB84954003CAAE5 /* BarDemoControllerViewController.m in Sources */,
 				6C023FA11BA7267000C0883D /* PYTooltip.m in Sources */,
 				6C023FA41BA727DC00C0883D /* PYAxisPointer.m in Sources */,
 				6C7C956A1B9DF2EF00D80042 /* JsonUtil.m in Sources */,

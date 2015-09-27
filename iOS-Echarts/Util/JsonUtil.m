@@ -72,7 +72,7 @@
             id value = [obj valueForKey:propName];
             if(value == nil)
             {
-                value = [NSNull null];
+//                value = [NSNull null];
                 continue;
             }
             else
