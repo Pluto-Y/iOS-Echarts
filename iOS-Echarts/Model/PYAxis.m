@@ -8,9 +8,8 @@
 
 #import "PYAxis.h"
 
-@interface PYAxis() {
-    PYAxisType axisType;
-}
+#define AXIS_TYPE_SCOPE [NSArray arrayWithObjects:@"category", @"value", @"time", @"log", nil]
+@interface PYAxis()
 
 @end
 
@@ -19,7 +18,7 @@
 -(instancetype)init {
     self = [super init];
     if (self) {
-        axisType = PYAxisTypeCategory;
+        _type = @"category";
         _show = YES;
         _zlevel = @(0);
         _z = @(0);
@@ -33,57 +32,12 @@
     return self;
 }
 
--(void)reloadData {
-    switch (axisType) {
-        case PYAxisTypeCategory:
-            if ([_boundaryGap isKindOfClass:[NSString class]] || [_boundaryGap isKindOfClass:[NSNumber class]]) {
-                _boundaryGap = @([_boundaryGap boolValue]);
-            } else {
-                _boundaryGap = nil;
-                NSLog(@"PYAxis --> The type of boudary gap is error.");
-            }
-            break;
-        case PYAxisTypeValue:
-        case PYAxisTypeTime:
-            if ([_boundaryGap isKindOfClass:[NSArray class]] || [_boundaryGap isKindOfClass:[NSMutableArray class]]) {
-                _boundaryGap = (NSArray *) _boundaryGap;
-            } else {
-                _boundaryGap = nil;
-                NSLog(@"PYAxis --> The type of boudary gap is error.");
-            }
-            _data = nil;
-            break;
-        default:
-            break;
+-(void)setType:(NSString *)type {
+    if (![AXIS_TYPE_SCOPE containsObject:type]) {
+        NSLog(@"ERROR: Axis does not support the type --- %@", type);
+        type = @"category";
     }
-}
-
-/**
- *  设置坐标轴类型
- *
- *  @param pyAxisType 坐标轴类型
- */
--(void)setAxisType:(PYAxisType) pyAxisType {
-    axisType = pyAxisType;
-}
-
-/**
- *  获得Echart默认类型的字符串
- *
- *  @return Echart默认类型的字符串
- */
--(NSString *)getType {
-    //'category' | 'value' | 'time' | 'log'
-    switch (axisType) {
-        case PYAxisTypeCategory:
-            return @"category";
-        case PYAxisTypeLog:
-            return @"log";
-        case PYAxisTypeTime:
-            return @"time";
-        case PYAxisTypeValue:
-            return @"value";
-    }
+    _type = type;
 }
 
 @end

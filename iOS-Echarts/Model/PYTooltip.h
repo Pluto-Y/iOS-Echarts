@@ -9,18 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "PYAxisPointer.h"
 
-typedef enum {
-    PYTooltipTriggerItem,
-    PYTooltipTriggerAxis
-} PYTooltipTrigger;
-
 @interface PYTooltip : NSObject
 
 @property (assign, nonatomic) BOOL show;
 @property (retain, nonatomic) NSNumber *zlevel;
 @property (retain, nonatomic) NSNumber *z;
 @property (assign, nonatomic) BOOL showContent;
-@property (retain, nonatomic, readonly, getter=getTrigger) NSString *trigger;
+@property (retain, nonatomic) NSString *trigger;
 @property (retain, nonatomic) id position;
 @property (retain, nonatomic) id formatter;
 @property (retain, nonatomic) id islandFormmater;
@@ -35,12 +30,5 @@ typedef enum {
 @property (retain, nonatomic) id padding;
 @property (retain, nonatomic) PYAxisPointer *axisPointer;
 @property (retain, nonatomic) PYTextStyle *textStyle;
-
-/**
- *  设置触发类型
- *
- *  @param pyTooltipTrigger 触发类型
- */
--(void)setTooltipTrigger:(PYTooltipTrigger) pyTooltipTrigger;
 
 @end

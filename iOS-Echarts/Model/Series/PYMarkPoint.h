@@ -16,7 +16,7 @@ typedef enum {
 @interface PYMarkPointEffect : NSObject
 
 @property (assign, nonatomic) BOOL show;
-@property (retain, nonatomic, readonly, getter=getType) NSString *type;
+@property (retain, nonatomic) NSString *type;
 @property (assign, nonatomic) BOOL loop;
 @property (retain, nonatomic) NSNumber *period;
 @property (retain, nonatomic) NSNumber *scaleSize;
@@ -24,8 +24,6 @@ typedef enum {
 @property (retain, nonatomic) PYColor *color;
 @property (retain, nonatomic) PYColor *shadowColor;
 @property (retain, nonatomic) NSNumber *shadowBlur;
-
--(void)setMarPointEffectType:(PYMarkPointEffectType) markPointEffectType;
 
 @end
 

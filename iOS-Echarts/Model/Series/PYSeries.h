@@ -24,31 +24,20 @@ typedef enum {
     PYSeriesTypeMap
 } PYSeriesType;
 
-typedef NSArray *(^DataFunction)(NSArray *data);
-
 @interface PYSeries : NSObject
 
 @property (retain, nonatomic) NSNumber *zlevel;
 @property (retain, nonatomic) NSNumber *z;
-@property (retain, nonatomic, readonly, getter=getType) NSString *type;
+@property (retain, nonatomic) NSString *type;
 @property (retain, nonatomic) NSString *name;
 @property (retain, nonatomic) PYTooltip *tooltip;
 @property (assign, nonatomic) BOOL clickable;
 @property (retain, nonatomic) PYItemStyle *itemStyle;
 @property (retain, nonatomic) id data;
-@property (copy, nonatomic) DataFunction dataFunction;
 //@property (retain, nonatomic) NSArray *markPoint;
 //@property (retain, nonatomic) NSArray *markLine;
 @property (retain, nonatomic) PYMarkPoint *markPoint;
 @property (retain, nonatomic) PYMarkLine *markLine;
--(void)reloadData;
-
-/**
- *  设置数据内容的类型
- *
- *  @param pySeriesType 设置数据内容的类型
- */
--(void)setSeriesType:(PYSeriesType)pySeriesType;
 
 
 @end

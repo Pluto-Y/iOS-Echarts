@@ -8,6 +8,7 @@
     <!-- ECharts单文件引入 -->
     <script src="js/echarts.js"></script>
     <script type="text/javascript">
+    var option;
     function preTask(obj) {
         var result;
         if(typeof(obj) == 'object') {
@@ -66,8 +67,8 @@
             function (ec) {
                 // 基于准备好的dom，初始化echarts图表
                 var myChart = ec.init(document.getElementById('main')); 
-                testObj = preTask(testdate);
-                var option = testObj;
+                option = preTask(testdate);
+                //option = preTask(testdate);
                 // 为echarts对象加载数据
                 myChart.setOption(option);
             }

@@ -13,6 +13,7 @@
 #import "PYCartesianSeries.h"
 
 #import "LineDemoController.h"
+#import "BarDemoController.h"
 
 @interface ViewController ()
 @property (weak, nonatomic) IBOutlet PYEchartsView *kWeb;
@@ -44,7 +45,7 @@
     [option setLegend:legend];
     NSMutableArray *xAxises = [[NSMutableArray alloc] init];
     PYAxis *xAxis = [[PYAxis alloc] init];
-    [xAxis setAxisType:PYAxisTypeCategory];
+    xAxis.type = @"category";
     xAxis.show = YES;
     xAxis.boundaryGap = @(NO);
     xAxis.axisLine.show = NO;
@@ -58,7 +59,7 @@
     [option setXAxis:xAxises];
     NSMutableArray *yAxises = [[NSMutableArray alloc] init];
     PYAxis *yAxis = [[PYAxis alloc] init];
-    [yAxis setAxisType:PYAxisTypeValue];
+    yAxis.type = @"value";
     yAxis.min = @0;
     yAxis.max = @(1.1*1120);
     yAxis.boundaryGap = @[@(0), @(1)];
@@ -75,7 +76,7 @@
     yAxis.axisLabel.formatter = @"(function(v){return v.toFixed(0)})";
     [yAxises addObject:yAxis];
     PYAxis *yAxis1= [[PYAxis alloc] init];
-    [yAxis1 setAxisType:PYAxisTypeValue];
+    yAxis1.type = @"value";
     yAxis1.show = NO;
     yAxis1.min = @(- 1.1*1120);
     yAxis1.max = @(0);
@@ -87,7 +88,7 @@
     NSMutableArray *serieses = [[NSMutableArray alloc] init];
     PYCartesianSeries *lineSeries = [[PYCartesianSeries alloc] init];
     lineSeries.name = @"视频广告";
-    [lineSeries setSeriesType:PYSeriesTypeLine];
+    lineSeries.type = @"line";
     lineSeries.smooth = YES;
     lineSeries.symbol = @"image://echart_dot.png";
     lineSeries.symbolSize = @(4);
@@ -102,7 +103,7 @@
     [serieses addObject:lineSeries];
     PYCartesianSeries *lineSeries2 = [[PYCartesianSeries alloc] init];
     lineSeries2.name = @"视频广告";
-    [lineSeries2 setSeriesType:PYSeriesTypeLine];
+    lineSeries2.type = @"line";
     lineSeries2.smooth = YES;
     lineSeries2.symbol = @"none";
     PYItemStyleProp *normal2 = [[PYItemStyleProp alloc] init];
@@ -116,7 +117,7 @@
     [serieses addObject:lineSeries2];
     PYCartesianSeries *lineSeries3 = [[PYCartesianSeries alloc] init];
     lineSeries3.name = @"搜索引擎";
-    [lineSeries3 setSeriesType:PYSeriesTypeLine];
+    lineSeries3.type = @"line";
     lineSeries3.smooth = YES;
     lineSeries3.symbol = @"none";
     lineSeries3.yAxisIndex = @(1);
@@ -129,14 +130,7 @@
     lineSeries3.itemStyle = [[PYItemStyle alloc] init];
     lineSeries3.itemStyle.normal = normal3;
     lineSeries3.data = @[@(620),@(732), @(701), @(734), @(1090), @(1130), @(1120)];
-    lineSeries3.dataFunction = ^(NSArray *data) {
-        NSMutableArray *returnData = [[NSMutableArray alloc] init];
-        int maxData = 1120 * 1.1;
-        for (NSNumber *number in data) {
-            [returnData addObject:@((maxData - [number intValue]) * -1)];
-        }
-        return returnData;
-    };
+    lineSeries3.data = @"(funtion(){var datas = [620,732,701,734,1090,1130,1120];var maxData = Math.max.apply(Math, datas);var len = datas.length; while(len --) {datas[len] = (maxData - datas[len]) * -1 ;} return datas;})";
     [serieses addObject:lineSeries3];
     [option setSeries:serieses];
     
@@ -150,7 +144,9 @@
         case 10000:
             controller = [[LineDemoController alloc] init];
             break;
-            
+        case 10001:
+            controller = [[BarDemoController alloc] init];
+            break;
         default:
             break;
     }

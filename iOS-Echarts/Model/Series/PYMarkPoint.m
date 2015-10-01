@@ -8,24 +8,20 @@
 
 #import "PYMarkPoint.h"
 
-@interface PYMarkPointEffect() {
-    PYMarkPointEffectType type;
-}
+#define MARK_POINT_EFFECT_TYPE_SCOPE [NSArray arrayWithObjects:@"bounce", @"scale", nil]
+
+@interface PYMarkPointEffect()
+
 @end
 
 @implementation PYMarkPointEffect
 
--(NSString *)getType {
-    switch (type) {
-        case PYMarkPointEffectTypeBounce:
-            return @"bounce";
-        case PYMarkPointEffectTypeScale:
-            return @"scale";
+-(void)setType:(NSString *)type {
+    if (![MARK_POINT_EFFECT_TYPE_SCOPE containsObject:type]) {
+        NSLog(@"ERROR: MarkPointEffect does not support type --- %@", type);
+        type = @"scale";
     }
-}
-
--(void)setMarPointEffectType:(PYMarkPointEffectType)markPointEffectType {
-    type = markPointEffectType;
+    _type = type;
 }
 
 @end
@@ -42,7 +38,7 @@
         _large = NO;
         _effect = [[PYMarkPointEffect alloc] init];
         _effect.show = NO;
-        [_effect setMarPointEffectType:PYMarkPointEffectTypeScale];
+        _effect.type = @"scale";
         _effect.period = @(15);
         _effect.scaleSize = @(2);
         _effect.bounceDistance = @(10);

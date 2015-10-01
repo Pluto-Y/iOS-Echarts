@@ -8,9 +8,9 @@
 
 #import "PYSeries.h"
 
-@interface PYSeries() {
-    PYSeriesType seriesType;
-}
+#define SERIES_TYPE_SCOPE [NSArray arrayWithObjects:@"bar", @"chord", @"force", @"k", @"line", @"map", @"pie", @"radar", @"scatter", nil]
+
+@interface PYSeries()
 
 @end
 
@@ -28,47 +28,12 @@
     return self;
 }
 
--(void)reloadData {
-    if (_dataFunction != nil) {
-        _data = _dataFunction(_data);
+-(void)setType:(NSString *)type {
+    if (![SERIES_TYPE_SCOPE containsObject:type]) {
+        NSLog(@"ERROR: Series does not support type --- %@", type);
+        type = nil;
     }
-}
-
-/**
- *  设置数据内容的类型
- *
- *  @param pySeriesType 设置数据内容的类型
- */
--(void)setSeriesType:(PYSeriesType)pySeriesType {
-    seriesType = pySeriesType;
-}
-
-/**
- *  返回ECharts自带的类型字符串
- *
- *  @return ECharts自带的类型字符串
- */
--(NSString *)getType {
-    switch (seriesType) {
-        case PYSeriesTypeBar:
-            return @"bar";
-        case PYSeriesTypeChord:
-            return @"chord";
-        case PYSeriesTypeForce:
-            return @"force";
-        case PYSeriesTypeK:
-            return @"k";
-        case PYSeriesTypeLine:
-            return @"line";
-        case PYSeriesTypeMap:
-            return @"map";
-        case PYSeriesTypePie:
-            return @"pie";
-        case PYSeriesTypeRadar:
-            return @"radar";
-        case PYSeriesTypeScatter:
-            return @"scatter";
-    }
+    _type = type;
 }
 
 @end

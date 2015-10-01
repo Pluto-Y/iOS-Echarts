@@ -12,6 +12,8 @@
 // Include any system framework and library headers here that should be included in all compilation units.
 
 #import <UIKit/UIKit.h>
+//For the Demo Test.
+#import "RMMapper.h"
 
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
 

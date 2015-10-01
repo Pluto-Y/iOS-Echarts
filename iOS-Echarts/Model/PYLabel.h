@@ -15,7 +15,7 @@
 @property (retain, nonatomic) NSString *position;
 @property (assign, nonatomic) BOOL rotate;
 @property (retain, nonatomic) NSNumber *distance;
-@property (retain, nonatomic) NSString *formatter;
+@property (retain, nonatomic) id formatter;
 @property (retain, nonatomic) PYTextStyle *textStyle;
 @property (retain, nonatomic) NSNumber *x;
 @property (retain, nonatomic) NSNumber *y;

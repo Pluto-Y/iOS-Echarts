@@ -11,16 +11,9 @@
 #import "PYAxisLabel.h"
 #import "PYSplitLine.h"
 
-typedef enum {
-    PYAxisTypeCategory,
-    PYAxisTypeValue,
-    PYAxisTypeTime,
-    PYAxisTypeLog
-} PYAxisType;
-
 @interface PYAxis : NSObject
 
-@property (retain, nonatomic, readonly, getter=getType) NSString * type;
+@property (retain, nonatomic) NSString * type;
 @property (assign, nonatomic) BOOL show;
 @property (retain, nonatomic) NSNumber *zlevel;
 @property (retain, nonatomic) NSNumber *z;
@@ -34,14 +27,5 @@ typedef enum {
 @property (retain, nonatomic) NSNumber *splitNumber;
 @property (retain, nonatomic) PYSplitLine *splitLine;
 @property (retain, nonatomic) NSArray *data;
-
--(void)reloadData;
-
-/**
- *  设置坐标轴类型
- *
- *  @param pyAxisType 坐标轴类型
- */
--(void)setAxisType:(PYAxisType) pyAxisType;
 
 @end

@@ -8,9 +8,8 @@
 
 #import "PYLineStyle.h"
 
-@interface PYLineStyle() {
-    PYLineStyleType lineStyleType;
-}
+#define LINE_STYLE_TYPE_SCOPE [NSArray arrayWithObjects:@"solid", @"dotted", @"dashed", @"curve", @"broken", nil]
+@interface PYLineStyle()
 
 @end
 
@@ -19,7 +18,7 @@
 -(instancetype)init {
     self = [super init];
     if (self) {
-        lineStyleType = PYLineStyleTypeSolid;
+        _type = @"solid";
 //        _shadowColor = [[PYColor alloc] init];
         _shadowBlur = @(5);
         _shadowOffsetX = @(3);
@@ -28,13 +27,13 @@
     return self;
 }
 
-/**
- *  设置线条类型
- *
- *  @param pyLineStyleType 线条类型
- */
--(void)setLineStyleType:(PYLineStyleType)pyLineStyleType {
-    lineStyleType = pyLineStyleType;
+-(void)setType:(NSString *)type {
+    if (![LINE_STYLE_TYPE_SCOPE containsObject:type]) {
+        NSLog(@"ERROR: LineStyle does not support the type --- %@", type);
+        type = @"solid";
+    }
+    _type = type;
 }
+
 
 @end

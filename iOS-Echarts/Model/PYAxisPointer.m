@@ -8,9 +8,9 @@
 
 #import "PYAxisPointer.h"
 
-@interface PYAxisPointer() {
-    PYAxisPointerType type;
-}
+
+#define AXIS_POINT_SCOPE [NSArray arrayWithObjects:@"line", @"cross", @"shadow", @"none", nil]
+@interface PYAxisPointer()
 
 @end
 
@@ -21,31 +21,17 @@
 {
     self = [super init];
     if (self) {
-        type = PYAxisPointerTypeNone;
+        _type = @"line";
     }
     return self;
 }
 
-/**
- *  设置坐标轴指示器
- *
- *  @param pyAxisPointerType 坐标轴指示器
- */
--(void)setPYAxisPointerType:(PYAxisPointerType) pyAxisPointerType {
-    type = pyAxisPointerType;
-}
-
--(NSString *)getType {
-    switch (type) {
-        case PYAxisPointerTypeLine:
-            return @"line";
-        case PYAxisPointerTypeNone:
-            return @"none";
-        case PYAxisPointerTypeCross:
-            return @"cross";
-        case PYAxisPointerTypeShadow:
-            return @"shadow";
+-(void)setType:(NSString *)type {
+    if (![AXIS_POINT_SCOPE containsObject:type]) {
+        NSLog(@"ERROR: AxisPoint does not support the type --- %@", type);
+        type = @"line";
     }
+    _type = type;
 }
 
 @end

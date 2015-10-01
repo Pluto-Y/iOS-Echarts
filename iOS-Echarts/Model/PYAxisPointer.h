@@ -8,26 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
-    PYAxisPointerTypeLine,
-    PYAxisPointerTypeCross,
-    PYAxisPointerTypeShadow,
-    PYAxisPointerTypeNone
-} PYAxisPointerType;
-
 @interface PYAxisPointer : NSObject
 
 @property (assign, nonatomic) BOOL show;
-@property (retain, nonatomic, readonly, getter=getType) NSString *type;
+@property (retain, nonatomic) NSString *type;
 @property (retain, nonatomic) PYLineStyle *lineStyle;
 @property (retain, nonatomic) PYLineStyle *crossStyle;
 @property (retain, nonatomic) PYAreaStyle *shadowStyle;
-
-/**
- *  设置坐标轴指示器
- *
- *  @param pyAxisPointerType 坐标轴指示器
- */
--(void)setPYAxisPointerType:(PYAxisPointerType) pyAxisPointerType;
 
 @end

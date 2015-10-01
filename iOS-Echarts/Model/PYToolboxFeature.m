@@ -62,7 +62,7 @@
         _mark.lineStyle = [[PYLineStyle alloc] init];
         _mark.lineStyle.width = @(2);
         _mark.lineStyle.color = PYRGBA(30, 144, 255, 1);
-        [_mark.lineStyle setLineStyleType:PYLineStyleTypeDashed];
+        _mark.lineStyle.type = @"dashed";
         _dataZoom = [[PYToolboxFeatureDataZoom alloc] init];
         _dataZoom.show = YES;
         _dataZoom.title = [[PYToolboxFeatureDataZoomTitle alloc] init];
