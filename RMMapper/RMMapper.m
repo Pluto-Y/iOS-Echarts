@@ -44,19 +44,21 @@ static const char *getPropertyType(objc_property_t property) {
     NSMutableDictionary *results = [[NSMutableDictionary alloc] init];
     
     unsigned int outCount, i;
-    objc_property_t *properties = class_copyPropertyList(cls, &outCount);
-    for (i = 0; i < outCount; i++) {
-        objc_property_t property = properties[i];
-        const char *propName = property_getName(property);
-        if(propName) {
-            const char *propType = getPropertyType(property);
-            NSString *propertyName = [NSString stringWithUTF8String:propName];
-            NSString *propertyType = [NSString stringWithUTF8String:propType];
-            [results setObject:propertyType forKey:propertyName];
+    do {
+        objc_property_t *properties = class_copyPropertyList(cls, &outCount);
+        for (i = 0; i < outCount; i++) {
+            objc_property_t property = properties[i];
+            const char *propName = property_getName(property);
+            if(propName) {
+                const char *propType = getPropertyType(property);
+                NSString *propertyName = [NSString stringWithUTF8String:propName];
+                NSString *propertyType = [NSString stringWithUTF8String:propType];
+                [results setObject:propertyType forKey:propertyName];
+            }
         }
-    }
-    free(properties);
-    
+        free(properties);
+        cls = [cls superclass];
+    } while (cls != [NSObject class]);
     // returning a copy here to make sure the dictionary is immutable
     return [NSDictionary dictionaryWithDictionary:results];
 }
