@@ -70,8 +70,10 @@ typedef enum {
             [self showBasicBarDemo];
             break;
         case BarDemoTypeTagStackedBar:
+            [self showStackedBarDemo];
             break;
         case BarDemoTypeTagStackedFloatingBar:
+            [self showStackedFloatingBarDemo];
             break;
         case BarDemoTypeTagTornado:
             break;
@@ -167,6 +169,50 @@ typedef enum {
     NSData *jsonData = [basicBarJson dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
     PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
+    [_kEchartView setOption:option];
+}
+
+/**
+ *  堆积条形图
+ */
+-(void)showStackedBarDemo {
+    NSString *stackedBarJson = @"{\"tooltip\":{\"trigger\":\"axis\",\"axisPointer\":{\"type\":\"shadow\"}},\"legend\":{\"data\":[\"直接访问\",\"邮件营销\",\"联盟广告\",\"视频广告\",\"搜索引擎\"]},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"magicType\":{\"show\":true,\"type\":[\"line\",\"bar\",\"stack\",\"tiled\"]},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"calculable\":true,\"xAxis\":[{\"type\":\"value\"}],\"yAxis\":[{\"type\":\"category\",\"data\":[\"周一\",\"周二\",\"周三\",\"周四\",\"周五\",\"周六\",\"周日\"]}],\"series\":[{\"name\":\"直接访问\",\"type\":\"bar\",\"stack\":\"总量\",\"itemStyle\":{\"normal\":{\"label\":{\"show\":true,\"position\":\"insideRight\"}}},\"data\":[320,302,301,334,390,330,320]},{\"name\":\"邮件营销\",\"type\":\"bar\",\"stack\":\"总量\",\"itemStyle\":{\"normal\":{\"label\":{\"show\":true,\"position\":\"insideRight\"}}},\"data\":[120,132,101,134,90,230,210]},{\"name\":\"联盟广告\",\"type\":\"bar\",\"stack\":\"总量\",\"itemStyle\":{\"normal\":{\"label\":{\"show\":true,\"position\":\"insideRight\"}}},\"data\":[220,182,191,234,290,330,310]},{\"name\":\"视频广告\",\"type\":\"bar\",\"stack\":\"总量\",\"itemStyle\":{\"normal\":{\"label\":{\"show\":true,\"position\":\"insideRight\"}}},\"data\":[150,212,201,154,190,330,410]},{\"name\":\"搜索引擎\",\"type\":\"bar\",\"stack\":\"总量\",\"itemStyle\":{\"normal\":{\"label\":{\"show\":true,\"position\":\"insideRight\"}}},\"data\":[820,832,901,934,1290,1330,1320]}]}";
+    NSData *jsonData = [stackedBarJson dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
+    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
+    [_kEchartView setOption:option];
+}
+
+/**
+ *  多维条形图
+ */
+-(void)showStackedFloatingBarDemo {
+    NSString *placeHoldStyleJson = @"{\"normal\":{\"barBorderColor\":\"rgba(0,0,0,0)\",\"color\":\"rgba(0,0,0,0)\"},\"emphasis\":{\"barBorderColor\":\"rgba(0,0,0,0)\",\"color\":\"rgba(0,0,0,0)\"}}";
+    NSData *placeHoldStyleJsonData = [placeHoldStyleJson dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *placeHoldStyleJsonDic = [NSJSONSerialization JSONObjectWithData:placeHoldStyleJsonData options:NSJSONReadingAllowFragments error:nil];
+    PYItemStyle *placeHoldStyle = [RMMapper objectWithClass:[PYItemStyle class] fromDictionary:placeHoldStyleJsonDic];
+    NSString *dataStyleJson = @"{\"normal\":{\"label\":{\"show\":true,\"position\":\"insideLeft\",\"formatter\":\"{c}%\"}}}";
+    NSData *dataStyleJsonData = [dataStyleJson dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *dataStyleJsonDic = [NSJSONSerialization JSONObjectWithData:dataStyleJsonData options:NSJSONReadingAllowFragments error:nil];
+    PYItemStyle *dataStyle = [RMMapper objectWithClass:[PYItemStyle class] fromDictionary:dataStyleJsonDic];
+    NSString *stackedFloatingBarJson = @"{\"title\":{\"text\":\"多维条形图\",\"subtext\":\"From ExcelHome\",\"sublink\":\"http://e.weibo.com/1341556070/AiEscco0H\"},\"tooltip\":{\"trigger\":\"axis\",\"axisPointer\":{\"type\":\"shadow\"},\"formatter\":\"{b}<br/>{a0}:{c0}%<br/>{a2}:{c2}%<br/>{a4}:{c4}%<br/>{a6}:{c6}%\"},\"legend\":{\"y\":55,\"itemGap\":\"(funtion(){return document.getElementById(\'main\').offsetWidth / 8;})()\",\"data\":[\"GML\",\"PYP\",\"WTC\",\"ZTW\"]},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"grid\":{\"y\":80,\"y2\":30},\"xAxis\":[{\"type\":\"value\",\"position\":\"top\",\"splitLine\":{\"show\":false},\"axisLabel\":{\"show\":false}}],\"yAxis\":[{\"type\":\"category\",\"splitLine\":{\"show\":false},\"data\":[\"重庆\",\"天津\",\"上海\",\"北京\"]}],\"series\":[{\"name\":\"GML\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[38,50,33,72]},{\"name\":\"GML\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[62,50,67,28]},{\"name\":\"PYP\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[61,41,42,30]},{\"name\":\"PYP\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[39,59,58,70]},{\"name\":\"WTC\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[37,35,44,60]},{\"name\":\"WTC\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[63,65,56,40]},{\"name\":\"ZTW\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[71,50,31,39]},{\"name\":\"ZTW\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[29,50,69,61]}]}\n";
+    NSData *jsonData = [stackedFloatingBarJson dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
+    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
+    option.series = [RMMapper mutableArrayOfClass:[PYCartesianSeries class] fromArrayOfDictionary:option.series];
+    int i = 1;
+    NSMutableArray *serieses = [[NSMutableArray alloc] init];
+    for (PYSeries *series in option.series) {
+        if (i++ % 2 == 1) {
+            series.itemStyle = dataStyle;
+        } else {
+            series.itemStyle = placeHoldStyle;
+        }
+        [serieses addObject:series];
+    }
+    option.series = serieses;
+//    NSString *test = [_kEchartView stringByEvaluatingJavaScriptFromString:@"document.getElementById(\'main\').offsetWidth / 8"];
+
     [_kEchartView setOption:option];
 }
 
