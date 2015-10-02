@@ -64,8 +64,10 @@ typedef enum {
             [self showChangeWaterfallDemo];
             break;
         case BarDemoTypeTagStackedAndClusteredColumn:
+            [self showStackedAndClusteredColumnDemo];
             break;
         case BarDemoTypeTagBasicBar:
+            [self showBasicBarDemo];
             break;
         case BarDemoTypeTagStackedBar:
             break;
@@ -141,6 +143,28 @@ typedef enum {
 -(void)showChangeWaterfallDemo {
     NSString *changeWaterfallJson = @"{\"title\":{\"text\":\"阶梯瀑布图\",\"subtext\":\"From ExcelHome\",\"sublink\":\"http://e.weibo.com/1341556070/Aj1J2x5a5\"},\"tooltip\":{\"trigger\":\"axis\",\"axisPointer\":{\"type\":\"shadow\"},\"formatter\": \"(function (params) {var tar;if (params[1].value != '-') {tar = params[1];}else {tar = params[0];}return tar.name + '<br/>' + tar.seriesName + ' : ' + tar.value;})\"},\"legend\":{\"data\":[\"支出\",\"收入\"]},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"xAxis\":[{\"type\":\"category\",\"splitLine\":{\"show\":false},\"data\": \"(function (){var list = [];for (var i = 1; i <= 11; i++) {list.push('11月' + i + '日');}return list;}())\"}],\"yAxis\":[{\"type\":\"value\"}],\"series\":[{\"name\":\"辅助\",\"type\":\"bar\",\"stack\":\"总量\",\"itemStyle\":{\"normal\":{\"barBorderColor\":\"rgba(0,0,0,0)\",\"color\":\"rgba(0,0,0,0)\"},\"emphasis\":{\"barBorderColor\":\"rgba(0,0,0,0)\",\"color\":\"rgba(0,0,0,0)\"}},\"data\":[0,900,1245,1530,1376,1376,1511,1689,1856,1495,1292]},{\"name\":\"收入\",\"type\":\"bar\",\"stack\":\"总量\",\"itemStyle\":{\"normal\":{\"label\":{\"show\":true,\"position\":\"top\"}}},\"data\":[900,345,393,\"-\",\"-\",135,178,286,\"-\",\"-\",\"-\"]},{\"name\":\"支出\",\"type\":\"bar\",\"stack\":\"总量\",\"itemStyle\":{\"normal\":{\"label\":{\"show\":true,\"position\":\"bottom\"}}},\"data\":[\"-\",\"-\",\"-\",108,154,\"-\",\"-\",\"-\",119,361,203]}]}";
     NSData *jsonData = [changeWaterfallJson dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
+    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
+    [_kEchartView setOption:option];
+}
+
+/**
+ *  多系列层叠
+ */
+-(void)showStackedAndClusteredColumnDemo {
+    NSString *stackedAndClusteredColumnJson = @"{\"title\":{\"text\":\"ECharts2 vs ECharts1\",\"subtext\":\"Chrome下测试数据\"},\"tooltip\":{\"trigger\":\"axis\"},\"legend\":{\"data\":[\"ECharts1 - 2k数据\",\"ECharts1 - 2w数据\",\"ECharts1 - 20w数据\",\"\",\"ECharts2 - 2k数据\",\"ECharts2 - 2w数据\",\"ECharts2 - 20w数据\"]},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"magicType\":{\"show\":true,\"type\":[\"line\",\"bar\"]},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"calculable\":true,\"grid\":{\"y\":70,\"y2\":30,\"x2\":20},\"xAxis\":[{\"type\":\"category\",\"data\":[\"Line\",\"Bar\",\"Scatter\",\"K\",\"Map\"]},{\"type\":\"category\",\"axisLine\":{\"show\":false},\"axisTick\":{\"show\":false},\"axisLabel\":{\"show\":false},\"splitArea\":{\"show\":false},\"splitLine\":{\"show\":false},\"data\":[\"Line\",\"Bar\",\"Scatter\",\"K\",\"Map\"]}],\"yAxis\":[{\"type\":\"value\",\"axisLabel\":{\"formatter\":\"{value} ms\"}}],\"series\":[{\"name\":\"ECharts2 - 2k数据\",\"type\":\"bar\",\"itemStyle\":{\"normal\":{\"color\":\"rgba(193,35,43,1)\",\"label\":{\"show\":true}}},\"data\":[40,155,95,75,0]},{\"name\":\"ECharts2 - 2w数据\",\"type\":\"bar\",\"itemStyle\":{\"normal\":{\"color\":\"rgba(181,195,52,1)\",\"label\":{\"show\":true,\"textStyle\":{\"color\":\"#27727B\"}}}},\"data\":[100,200,105,100,156]},{\"name\":\"ECharts2 - 20w数据\",\"type\":\"bar\",\"itemStyle\":{\"normal\":{\"color\":\"rgba(252,206,16,1)\",\"label\":{\"show\":true,\"textStyle\":{\"color\":\"#E87C25\"}}}},\"data\":[906,911,908,778,0]},{\"name\":\"ECharts1 - 2k数据\",\"type\":\"bar\",\"xAxisIndex\":1,\"itemStyle\":{\"normal\":{\"color\":\"rgba(193,35,43,0.5)\",\"label\":{\"show\":true, \"formatter\":\"(function(p){return p.value > 0 ? (p.value +' '):' ';})\"}}},\"data\":[96,224,164,124,0]},{\"name\":\"ECharts1 - 2w数据\",\"type\":\"bar\",\"xAxisIndex\":1,\"itemStyle\":{\"normal\":{\"color\":\"rgba(181,195,52,0.5)\",\"label\":{\"show\":true}}},\"data\":[491,2035,389,955,347]},{\"name\":\"ECharts1 - 20w数据\",\"type\":\"bar\",\"xAxisIndex\":1,\"itemStyle\":{\"normal\":{\"color\":\"rgba(252,206,16,0.5)\",\"label\":{\"show\":true,\"formatter\":\"(function(p){return p.value > 0 ? (p.value +'+'):'';})\"}}},\"data\":[3000,3000,2817,3000,0]}]}";
+    NSData *jsonData = [stackedAndClusteredColumnJson dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
+    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
+    [_kEchartView setOption:option];
+}
+
+/**
+ *  标准条形图
+ */
+-(void)showBasicBarDemo {
+    NSString *basicBarJson = @"{\"title\":{\"text\":\"世界人口总量\",\"subtext\":\"数据来自网络\"},\"tooltip\":{\"trigger\":\"axis\"},\"legend\":{\"data\":[\"2011年\",\"2012年\"]},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"magicType\":{\"show\":true,\"type\":[\"line\",\"bar\"]},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"calculable\":true,\"xAxis\":[{\"type\":\"value\",\"boundaryGap\":[0,0.01]}],\"yAxis\":[{\"type\":\"category\",\"data\":[\"巴西\",\"印尼\",\"美国\",\"印度\",\"中国\",\"世界人口(万)\"]}],\"series\":[{\"name\":\"2011年\",\"type\":\"bar\",\"data\":[18203,23489,29034,104970,131744,630230]},{\"name\":\"2012年\",\"type\":\"bar\",\"data\":[19325,23438,31000,121594,134141,681807]}]}";
+    NSData *jsonData = [basicBarJson dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
     PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
     [_kEchartView setOption:option];
