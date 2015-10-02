@@ -76,6 +76,10 @@
 #pragma mark - Delegate
 #pragma mark UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
+    if (option == nil) {
+        NSLog(@"ERROR: The option is nil.");
+        return ;
+    }
     [self resizeDiv];
     
     NSString *jsonStr = [JsonUtil getJSONString:option];
