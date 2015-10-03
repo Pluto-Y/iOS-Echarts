@@ -12,18 +12,6 @@
 #import "PYMarkLine.h"
 #import "PYMarkPoint.h"
 
-typedef enum {
-    PYSeriesTypeLine,
-    PYSeriesTypeBar,
-    PYSeriesTypeScatter,
-    PYSeriesTypeK,
-    PYSeriesTypePie,
-    PYSeriesTypeRadar,
-    PYSeriesTypeChord,
-    PYSeriesTypeForce,
-    PYSeriesTypeMap
-} PYSeriesType;
-
 @interface PYSeries : NSObject
 
 @property (retain, nonatomic) NSNumber *zlevel;
@@ -34,8 +22,6 @@ typedef enum {
 @property (assign, nonatomic) BOOL clickable;
 @property (retain, nonatomic) PYItemStyle *itemStyle;
 @property (retain, nonatomic) id data;
-//@property (retain, nonatomic) NSArray *markPoint;
-//@property (retain, nonatomic) NSArray *markLine;
 @property (retain, nonatomic) PYMarkPoint *markPoint;
 @property (retain, nonatomic) PYMarkLine *markLine;
 
