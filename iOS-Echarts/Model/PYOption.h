@@ -9,6 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "PYAxis.h"
 #import "PYLegend.h"
+#import "PYTimeline.h"
 #import "PYTitle.h"
 #import "PYGrid.h"
 #import "PYToolbox.h"
@@ -21,6 +22,7 @@
 @property (retain, nonatomic) NSArray *color;
 @property (assign, nonatomic) BOOL renderAsImage;
 @property (assign, nonatomic) BOOL calculable;
+@property (retain, nonatomic) PYTimeline *timeline;
 @property (retain, nonatomic) PYTitle *title;
 @property (retain, nonatomic) PYToolbox *toolbox;
 @property (retain, nonatomic) PYTooltip *tooltip;
@@ -30,5 +32,6 @@
 @property (retain, nonatomic) NSMutableArray *xAxis;
 @property (retain, nonatomic) NSMutableArray *yAxis;
 @property (retain, nonatomic) NSMutableArray *series;
+@property (retain, nonatomic) PYOption *options;
 
 @end
