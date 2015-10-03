@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PieDemoController">
+            <connections>
+                <outlet property="kEchartView" destination="jrV-xF-VIX" id="q5p-4M-Q43"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jrV-xF-VIX" customClass="PYEchartsView">
+                    <rect key="frame" x="0.0" y="318" width="320" height="200"/>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="200" id="mvn-2H-zXt"/>
+                    </constraints>
+                </webView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5qc-K6-AQu">
+                    <rect key="frame" x="0.0" y="0.0" width="160" height="319"/>
+                    <subviews>
+                        <button opaque="NO" tag="30000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fGS-gV-faA">
+                            <rect key="frame" x="50" y="23" width="60" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="60" id="eIM-GL-P9U"/>
+                                <constraint firstAttribute="height" constant="30" id="mWi-qX-vPW"/>
+                            </constraints>
+                            <state key="normal" title="标准饼图"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="EOF-kT-jzf"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="30002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vic-VC-kKn">
+                            <rect key="frame" x="50" y="99" width="60" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="P5V-y7-ZG2"/>
+                                <constraint firstAttribute="height" constant="30" id="zjL-uQ-uuX"/>
+                            </constraints>
+                            <state key="normal" title="嵌套饼图"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="YyU-8a-ge7"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="30003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sat-Ea-6F3">
+                            <rect key="frame" x="27" y="137" width="105" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="3Od-11-DvE"/>
+                                <constraint firstAttribute="height" constant="30" id="WvR-ok-By8"/>
+                            </constraints>
+                            <state key="normal" title="南丁格尔玫瑰图"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="68c-mp-U2w"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="30004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1a-WD-EQr">
+                            <rect key="frame" x="57" y="175" width="46" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="EQG-2f-0ml"/>
+                                <constraint firstAttribute="height" constant="30" id="ciJ-FT-YBK"/>
+                            </constraints>
+                            <state key="normal" title="环形图"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="G8k-a4-Pau"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="30001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HIR-YF-6Gw">
+                            <rect key="frame" x="42" y="61" width="75" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="V80-Kr-djf"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="XLP-2N-FGf"/>
+                            </constraints>
+                            <state key="normal" title="标准环形图"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="U1T-ow-JFW"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="J1a-WD-EQr" firstAttribute="centerX" secondItem="5qc-K6-AQu" secondAttribute="centerX" id="BTw-Ki-hTe"/>
+                        <constraint firstAttribute="height" constant="319" id="F2H-I2-mTi"/>
+                        <constraint firstItem="fGS-gV-faA" firstAttribute="top" secondItem="5qc-K6-AQu" secondAttribute="top" constant="23" id="FAL-tz-lhy"/>
+                        <constraint firstItem="sat-Ea-6F3" firstAttribute="top" secondItem="vic-VC-kKn" secondAttribute="bottom" constant="8" id="IK5-S4-oHt"/>
+                        <constraint firstItem="vic-VC-kKn" firstAttribute="centerX" secondItem="5qc-K6-AQu" secondAttribute="centerX" id="K5h-yj-0dT"/>
+                        <constraint firstItem="HIR-YF-6Gw" firstAttribute="top" secondItem="fGS-gV-faA" secondAttribute="bottom" constant="8" id="OVS-al-7F9"/>
+                        <constraint firstItem="HIR-YF-6Gw" firstAttribute="centerX" secondItem="5qc-K6-AQu" secondAttribute="centerX" id="bdO-c3-rnS"/>
+                        <constraint firstItem="vic-VC-kKn" firstAttribute="top" secondItem="HIR-YF-6Gw" secondAttribute="bottom" constant="8" id="fWk-R1-9o8"/>
+                        <constraint firstItem="J1a-WD-EQr" firstAttribute="top" secondItem="sat-Ea-6F3" secondAttribute="bottom" constant="8" id="hTZ-ze-0EF"/>
+                        <constraint firstItem="sat-Ea-6F3" firstAttribute="centerX" secondItem="5qc-K6-AQu" secondAttribute="centerX" id="jgM-35-AgS"/>
+                        <constraint firstItem="fGS-gV-faA" firstAttribute="centerX" secondItem="5qc-K6-AQu" secondAttribute="centerX" id="sJ2-3K-GNb"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PWG-3H-dnS">
+                    <rect key="frame" x="160" y="0.0" width="160" height="319"/>
+                    <subviews>
+                        <button opaque="NO" tag="30005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w2N-RI-fMg">
+                            <rect key="frame" x="53" y="23" width="54" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="d2i-kE-st2"/>
+                                <constraint firstAttribute="height" constant="30" id="tad-fW-F3E"/>
+                            </constraints>
+                            <state key="normal" title="环形图2"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="h7P-BN-XMv"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="30006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="25r-py-Fqn">
+                            <rect key="frame" x="42.5" y="61" width="75" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="G08-ga-jPo"/>
+                                <constraint firstAttribute="height" constant="30" id="ec2-ed-NEN"/>
+                            </constraints>
+                            <state key="normal" title="搭配时间轴"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="kid-E5-bc0"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="30007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S1h-d3-RMN">
+                            <rect key="frame" x="57" y="99" width="46" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="PC6-5U-Nnv"/>
+                                <constraint firstAttribute="height" constant="30" id="hey-iM-jNM"/>
+                            </constraints>
+                            <state key="normal" title="千层饼"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="SgQ-vq-SsS"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="30008" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="psy-Jm-Lfg">
+                            <rect key="frame" x="57" y="137" width="46" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="FRc-4e-SbB"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="nJC-yP-dJn"/>
+                            </constraints>
+                            <state key="normal" title="饼图"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="hQj-Gl-m3s"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <animations/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="psy-Jm-Lfg" firstAttribute="top" secondItem="S1h-d3-RMN" secondAttribute="bottom" constant="8" id="2FE-1T-MoY"/>
+                        <constraint firstItem="25r-py-Fqn" firstAttribute="top" secondItem="w2N-RI-fMg" secondAttribute="bottom" constant="8" id="6Ie-s5-pvI"/>
+                        <constraint firstItem="S1h-d3-RMN" firstAttribute="centerX" secondItem="PWG-3H-dnS" secondAttribute="centerX" id="6wt-7x-GlN"/>
+                        <constraint firstItem="psy-Jm-Lfg" firstAttribute="centerX" secondItem="PWG-3H-dnS" secondAttribute="centerX" id="Jx4-HQ-I25"/>
+                        <constraint firstItem="25r-py-Fqn" firstAttribute="centerX" secondItem="PWG-3H-dnS" secondAttribute="centerX" id="Ssp-g2-PbI"/>
+                        <constraint firstItem="S1h-d3-RMN" firstAttribute="top" secondItem="25r-py-Fqn" secondAttribute="bottom" constant="8" id="f3m-yN-ZUi"/>
+                        <constraint firstItem="w2N-RI-fMg" firstAttribute="centerX" secondItem="PWG-3H-dnS" secondAttribute="centerX" id="lhl-Vr-4zk"/>
+                        <constraint firstItem="w2N-RI-fMg" firstAttribute="top" secondItem="PWG-3H-dnS" secondAttribute="top" constant="23" id="pNa-ou-1oe"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <animations/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="jrV-xF-VIX" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="LDD-Eh-AY8"/>
+                <constraint firstItem="PWG-3H-dnS" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="NEb-UW-7RZ"/>
+                <constraint firstItem="5qc-K6-AQu" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="QW5-ba-yjf"/>
+                <constraint firstItem="5qc-K6-AQu" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="aYA-eN-XKs"/>
+                <constraint firstAttribute="bottom" secondItem="jrV-xF-VIX" secondAttribute="bottom" constant="50" id="n7C-v8-l51"/>
+                <constraint firstItem="5qc-K6-AQu" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="oED-eY-ziQ"/>
+                <constraint firstAttribute="trailing" secondItem="jrV-xF-VIX" secondAttribute="trailing" id="qLd-eE-sxG"/>
+                <constraint firstItem="PWG-3H-dnS" firstAttribute="height" secondItem="5qc-K6-AQu" secondAttribute="height" id="vor-an-reX"/>
+                <constraint firstItem="PWG-3H-dnS" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="x5J-JB-1R9"/>
+                <constraint firstAttribute="trailing" secondItem="PWG-3H-dnS" secondAttribute="trailing" id="zid-04-Y7e"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+        </view>
+    </objects>
+</document>

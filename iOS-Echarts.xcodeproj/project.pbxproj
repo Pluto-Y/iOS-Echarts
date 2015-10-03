@@ -47,6 +47,8 @@
 		6CB02A7A1BBD40D9002E1126 /* NSUserDefaults+RMSaveCustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB02A751BBD40D9002E1126 /* NSUserDefaults+RMSaveCustomObject.m */; settings = {ASSET_TAGS = (); }; };
 		6CB02A7B1BBD40D9002E1126 /* RMMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB02A771BBD40D9002E1126 /* RMMapper.m */; settings = {ASSET_TAGS = (); }; };
 		6CB02A7E1BBEAC66002E1126 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB02A7D1BBEAC66002E1126 /* MainController.m */; settings = {ASSET_TAGS = (); }; };
+		6CB02A821BBF7739002E1126 /* PieDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB02A801BBF7739002E1126 /* PieDemoController.m */; settings = {ASSET_TAGS = (); }; };
+		6CB02A831BBF7739002E1126 /* PieDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CB02A811BBF7739002E1126 /* PieDemoController.xib */; settings = {ASSET_TAGS = (); }; };
 		6CDE01251BA87A5A006A18D5 /* PYToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE01241BA87A5A006A18D5 /* PYToolbox.m */; };
 		6CDE012B1BA87DD1006A18D5 /* PYMarkLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE012A1BA87DD1006A18D5 /* PYMarkLine.m */; };
 		6CDE012E1BA88111006A18D5 /* PYMarkPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE012D1BA88111006A18D5 /* PYMarkPoint.m */; };
@@ -143,6 +145,9 @@
 		6CB02A771BBD40D9002E1126 /* RMMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMMapper.m; sourceTree = "<group>"; };
 		6CB02A7C1BBEAC66002E1126 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
 		6CB02A7D1BBEAC66002E1126 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		6CB02A7F1BBF7739002E1126 /* PieDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieDemoController.h; sourceTree = "<group>"; };
+		6CB02A801BBF7739002E1126 /* PieDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieDemoController.m; sourceTree = "<group>"; };
+		6CB02A811BBF7739002E1126 /* PieDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PieDemoController.xib; sourceTree = "<group>"; };
 		6CDE01231BA87A5A006A18D5 /* PYToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYToolbox.h; path = Model/PYToolbox.h; sourceTree = "<group>"; };
 		6CDE01241BA87A5A006A18D5 /* PYToolbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYToolbox.m; path = Model/PYToolbox.m; sourceTree = "<group>"; };
 		6CDE01291BA87DD1006A18D5 /* PYMarkLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYMarkLine.h; path = Model/Series/PYMarkLine.h; sourceTree = "<group>"; };
@@ -199,6 +204,9 @@
 				6C0658E41BB85B4F003CAAE5 /* ViewController.m */,
 				6CB02A7C1BBEAC66002E1126 /* MainController.h */,
 				6CB02A7D1BBEAC66002E1126 /* MainController.m */,
+				6CB02A7F1BBF7739002E1126 /* PieDemoController.h */,
+				6CB02A801BBF7739002E1126 /* PieDemoController.m */,
+				6CB02A811BBF7739002E1126 /* PieDemoController.xib */,
 			);
 			name = Controller;
 			path = "iOS-Echarts_Demo/Controller";
@@ -457,6 +465,7 @@
 				6C0658E61BB85B4F003CAAE5 /* BarDemoController.xib in Resources */,
 				6C0658DB1BB85B46003CAAE5 /* Main.storyboard in Resources */,
 				6CED89DF1B9976EF000DE97E /* js in Resources */,
+				6CB02A831BBF7739002E1126 /* PieDemoController.xib in Resources */,
 				6CED89D71B9976B0000DE97E /* echarts.html in Resources */,
 				6C0658CD1BB85B29003CAAE5 /* Info.plist in Resources */,
 			);
@@ -506,6 +515,7 @@
 				6C0658E51BB85B4F003CAAE5 /* BarDemoController.m in Sources */,
 				6C7C95741B9E84B700D80042 /* PYLegend.m in Sources */,
 				6CB02A7E1BBEAC66002E1126 /* MainController.m in Sources */,
+				6CB02A821BBF7739002E1126 /* PieDemoController.m in Sources */,
 				6C7C957A1B9EA39D00D80042 /* PYSeries.m in Sources */,
 				6C0658E91BB85B4F003CAAE5 /* ViewController.m in Sources */,
 				6C7C95711B9DF87400D80042 /* PYTextStyle.m in Sources */,
