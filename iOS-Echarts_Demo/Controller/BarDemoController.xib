@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -177,7 +178,7 @@
                                 <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="FhA-05-OKj"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="20012" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xB7-2i-KIm">
+                        <button hidden="YES" opaque="NO" tag="20012" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xB7-2i-KIm">
                             <rect key="frame" x="42.5" y="126" width="75" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="Shh-lJ-gn3"/>
@@ -188,7 +189,7 @@
                                 <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="zWj-Yi-AQ2"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="20013" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5a-xk-tHD">
+                        <button hidden="YES" opaque="NO" tag="20013" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o5a-xk-tHD">
                             <rect key="frame" x="42.5" y="159" width="75" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="G4e-z3-6m5"/>
@@ -199,7 +200,7 @@
                                 <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="pqN-fR-WlJ"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="20014" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvZ-sO-hUl">
+                        <button hidden="YES" opaque="NO" tag="20014" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HvZ-sO-hUl">
                             <rect key="frame" x="20" y="192" width="120" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="F25-BY-vTd"/>
@@ -210,7 +211,7 @@
                                 <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="VTL-pD-FgD"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="20015" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAL-a8-3cr">
+                        <button hidden="YES" opaque="NO" tag="20015" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAL-a8-3cr">
                             <rect key="frame" x="57" y="219" width="46" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="4wm-8f-HII"/>
