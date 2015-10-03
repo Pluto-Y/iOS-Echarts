@@ -20,8 +20,30 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="pzv-FD-Cq4">
                     <rect key="frame" x="0.0" y="0.0" width="160" height="318"/>
                     <subviews>
+                        <button opaque="NO" tag="10003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wih-VB-h2w">
+                            <rect key="frame" x="42" y="137" width="75" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="LDk-jr-dEY"/>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="a8t-HI-5wJ"/>
+                            </constraints>
+                            <state key="normal" title="标准面积图"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="a5G-Nd-OQr"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="10004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpL-QM-v8c">
+                            <rect key="frame" x="42" y="175" width="75" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="81k-6p-f4s"/>
+                                <constraint firstAttribute="height" constant="30" id="RX7-pT-Nge"/>
+                            </constraints>
+                            <state key="normal" title="堆积面积图"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="BUb-nL-jyw"/>
+                            </connections>
+                        </button>
                         <button opaque="NO" tag="10000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QZd-eZ-0VY">
-                            <rect key="frame" x="42" y="32" width="75" height="30"/>
+                            <rect key="frame" x="42" y="23" width="75" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="4kT-MT-YyA"/>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="7x1-a9-0YZ"/>
@@ -34,7 +56,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="10001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jqY-hJ-lS3">
-                            <rect key="frame" x="42" y="70" width="75" height="30"/>
+                            <rect key="frame" x="42" y="61" width="75" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="47T-Tb-bvh"/>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="W4c-C6-kDq"/>
@@ -45,7 +67,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="10002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4wU-B0-z2H">
-                            <rect key="frame" x="38" y="108" width="84" height="30"/>
+                            <rect key="frame" x="38" y="99" width="84" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="MKl-Mw-gud"/>
                                 <constraint firstAttribute="height" constant="30" id="eYb-DX-Dfr"/>
@@ -55,35 +77,13 @@
                                 <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="FjL-sc-11d"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="10003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wih-VB-h2w">
-                            <rect key="frame" x="42" y="146" width="75" height="30"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="30" id="LDk-jr-dEY"/>
-                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="a8t-HI-5wJ"/>
-                            </constraints>
-                            <state key="normal" title="标准面积图"/>
-                            <connections>
-                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="a5G-Nd-OQr"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" tag="10004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UpL-QM-v8c">
-                            <rect key="frame" x="42" y="184" width="75" height="30"/>
-                            <constraints>
-                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="81k-6p-f4s"/>
-                                <constraint firstAttribute="height" constant="30" id="RX7-pT-Nge"/>
-                            </constraints>
-                            <state key="normal" title="堆积面积图"/>
-                            <connections>
-                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="BUb-nL-jyw"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     <constraints>
                         <constraint firstItem="jqY-hJ-lS3" firstAttribute="top" secondItem="QZd-eZ-0VY" secondAttribute="bottom" constant="8" id="2sW-o9-o4O"/>
                         <constraint firstItem="4wU-B0-z2H" firstAttribute="top" secondItem="jqY-hJ-lS3" secondAttribute="bottom" constant="8" id="HIN-ja-hnK"/>
                         <constraint firstItem="jqY-hJ-lS3" firstAttribute="centerX" secondItem="pzv-FD-Cq4" secondAttribute="centerX" id="RmV-pp-OLx"/>
-                        <constraint firstItem="QZd-eZ-0VY" firstAttribute="top" secondItem="pzv-FD-Cq4" secondAttribute="top" constant="32" id="TwT-OK-zwd"/>
+                        <constraint firstItem="QZd-eZ-0VY" firstAttribute="top" secondItem="pzv-FD-Cq4" secondAttribute="top" constant="23" id="TwT-OK-zwd"/>
                         <constraint firstItem="wih-VB-h2w" firstAttribute="centerX" secondItem="pzv-FD-Cq4" secondAttribute="centerX" id="Tyc-jX-zR0"/>
                         <constraint firstItem="QZd-eZ-0VY" firstAttribute="centerX" secondItem="pzv-FD-Cq4" secondAttribute="centerX" id="Yrc-rV-spV"/>
                         <constraint firstItem="UpL-QM-v8c" firstAttribute="centerX" secondItem="pzv-FD-Cq4" secondAttribute="centerX" id="cSI-0u-Yw0"/>
@@ -97,7 +97,7 @@
                     <rect key="frame" x="160" y="0.0" width="160" height="318"/>
                     <subviews>
                         <button opaque="NO" tag="10005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4RP-jc-S7T">
-                            <rect key="frame" x="35" y="32" width="90" height="30"/>
+                            <rect key="frame" x="35" y="23" width="90" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="c2I-NF-a7r"/>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="vdk-Gp-J14"/>
@@ -108,7 +108,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="10006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ziu-eP-p2f">
-                            <rect key="frame" x="30.5" y="70" width="99" height="30"/>
+                            <rect key="frame" x="30.5" y="61" width="99" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="094-M0-ghb"/>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="krL-1E-AaF"/>
@@ -119,7 +119,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="10007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kw4-bj-YA6">
-                            <rect key="frame" x="57" y="108" width="46" height="30"/>
+                            <rect key="frame" x="57" y="99" width="46" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="46" id="IIq-P9-DW3"/>
                                 <constraint firstAttribute="height" constant="30" id="g0r-Un-9hy"/>
@@ -130,7 +130,7 @@
                             </connections>
                         </button>
                         <button opaque="NO" tag="10008" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2wZ-lF-d2z">
-                            <rect key="frame" x="57" y="146" width="46" height="30"/>
+                            <rect key="frame" x="57" y="137" width="46" height="30"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30" id="2JL-7S-hfZ"/>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="ql0-s2-iVx"/>
@@ -146,7 +146,7 @@
                         <constraint firstItem="Ziu-eP-p2f" firstAttribute="top" secondItem="4RP-jc-S7T" secondAttribute="bottom" constant="8" id="3cB-c9-frb"/>
                         <constraint firstItem="Ziu-eP-p2f" firstAttribute="centerX" secondItem="GCQ-fS-RZV" secondAttribute="centerX" id="4RS-c7-ZR6"/>
                         <constraint firstItem="2wZ-lF-d2z" firstAttribute="centerX" secondItem="GCQ-fS-RZV" secondAttribute="centerX" id="IVt-OH-xBN"/>
-                        <constraint firstItem="4RP-jc-S7T" firstAttribute="top" secondItem="GCQ-fS-RZV" secondAttribute="top" constant="32" id="Ies-VC-zE8"/>
+                        <constraint firstItem="4RP-jc-S7T" firstAttribute="top" secondItem="GCQ-fS-RZV" secondAttribute="top" constant="23" id="Ies-VC-zE8"/>
                         <constraint firstItem="2wZ-lF-d2z" firstAttribute="top" secondItem="kw4-bj-YA6" secondAttribute="bottom" constant="8" id="M3P-mP-px4"/>
                         <constraint firstItem="kw4-bj-YA6" firstAttribute="top" secondItem="Ziu-eP-p2f" secondAttribute="bottom" constant="8" id="mZZ-YC-zKr"/>
                         <constraint firstItem="kw4-bj-YA6" firstAttribute="centerX" secondItem="GCQ-fS-RZV" secondAttribute="centerX" id="ysz-Av-Tc4"/>
