@@ -32,8 +32,9 @@ typedef enum {
 }
 
 -(void)initAll {
-    
-    
+    self.title = @"折线图";
+    [self showStandardLineDemo];
+    [_kEchartView loadEcharts];
 }
 
 - (IBAction)kDemosClick:(id)sender {

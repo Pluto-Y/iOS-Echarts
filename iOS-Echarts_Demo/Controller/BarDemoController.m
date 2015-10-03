@@ -41,7 +41,9 @@ typedef enum {
 
 #pragma mark - custom functions
 -(void)initAll {
-    
+    self.title = @"柱状图";
+    [self showBasicColumnDemo];
+    [_kEchartView loadEcharts];
 }
 
 
