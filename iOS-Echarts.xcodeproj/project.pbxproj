@@ -49,6 +49,8 @@
 		6CB02A7E1BBEAC66002E1126 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB02A7D1BBEAC66002E1126 /* MainController.m */; settings = {ASSET_TAGS = (); }; };
 		6CB02A821BBF7739002E1126 /* PieDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB02A801BBF7739002E1126 /* PieDemoController.m */; settings = {ASSET_TAGS = (); }; };
 		6CB02A831BBF7739002E1126 /* PieDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CB02A811BBF7739002E1126 /* PieDemoController.xib */; settings = {ASSET_TAGS = (); }; };
+		6CD026F91BC00A04009EE2AA /* PYPieSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD026F81BC00A04009EE2AA /* PYPieSeries.m */; settings = {ASSET_TAGS = (); }; };
+		6CD026FC1BC03AEA009EE2AA /* PYTimeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD026FB1BC03AEA009EE2AA /* PYTimeline.m */; settings = {ASSET_TAGS = (); }; };
 		6CDE01251BA87A5A006A18D5 /* PYToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE01241BA87A5A006A18D5 /* PYToolbox.m */; };
 		6CDE012B1BA87DD1006A18D5 /* PYMarkLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE012A1BA87DD1006A18D5 /* PYMarkLine.m */; };
 		6CDE012E1BA88111006A18D5 /* PYMarkPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE012D1BA88111006A18D5 /* PYMarkPoint.m */; };
@@ -148,6 +150,10 @@
 		6CB02A7F1BBF7739002E1126 /* PieDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieDemoController.h; sourceTree = "<group>"; };
 		6CB02A801BBF7739002E1126 /* PieDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieDemoController.m; sourceTree = "<group>"; };
 		6CB02A811BBF7739002E1126 /* PieDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PieDemoController.xib; sourceTree = "<group>"; };
+		6CD026F71BC00A04009EE2AA /* PYPieSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYPieSeries.h; path = Model/Series/PYPieSeries.h; sourceTree = "<group>"; };
+		6CD026F81BC00A04009EE2AA /* PYPieSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYPieSeries.m; path = Model/Series/PYPieSeries.m; sourceTree = "<group>"; };
+		6CD026FA1BC03AEA009EE2AA /* PYTimeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYTimeline.h; path = Model/PYTimeline.h; sourceTree = "<group>"; };
+		6CD026FB1BC03AEA009EE2AA /* PYTimeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYTimeline.m; path = Model/PYTimeline.m; sourceTree = "<group>"; };
 		6CDE01231BA87A5A006A18D5 /* PYToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYToolbox.h; path = Model/PYToolbox.h; sourceTree = "<group>"; };
 		6CDE01241BA87A5A006A18D5 /* PYToolbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYToolbox.m; path = Model/PYToolbox.m; sourceTree = "<group>"; };
 		6CDE01291BA87DD1006A18D5 /* PYMarkLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYMarkLine.h; path = Model/Series/PYMarkLine.h; sourceTree = "<group>"; };
@@ -328,6 +334,8 @@
 				6CAB6A371BB1BA8B00293E0B /* PYDataZoom.m */,
 				6CAB6A391BB266B100293E0B /* PYGrid.h */,
 				6CAB6A3A1BB266B100293E0B /* PYGrid.m */,
+				6CD026FA1BC03AEA009EE2AA /* PYTimeline.h */,
+				6CD026FB1BC03AEA009EE2AA /* PYTimeline.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -352,6 +360,8 @@
 				6CDE012A1BA87DD1006A18D5 /* PYMarkLine.m */,
 				6CDE012C1BA88111006A18D5 /* PYMarkPoint.h */,
 				6CDE012D1BA88111006A18D5 /* PYMarkPoint.m */,
+				6CD026F71BC00A04009EE2AA /* PYPieSeries.h */,
+				6CD026F81BC00A04009EE2AA /* PYPieSeries.m */,
 			);
 			name = Series;
 			sourceTree = "<group>";
@@ -493,8 +503,10 @@
 				6C7C957D1B9EA53400D80042 /* PYCartesianSeries.m in Sources */,
 				6C0658CE1BB85B29003CAAE5 /* main.m in Sources */,
 				6CDE01251BA87A5A006A18D5 /* PYToolbox.m in Sources */,
+				6CD026FC1BC03AEA009EE2AA /* PYTimeline.m in Sources */,
 				6C7C95571B9DE77D00D80042 /* PYAxisLine.m in Sources */,
 				6CB02A7A1BBD40D9002E1126 /* NSUserDefaults+RMSaveCustomObject.m in Sources */,
+				6CD026F91BC00A04009EE2AA /* PYPieSeries.m in Sources */,
 				6C7C95831B9EB31A00D80042 /* PYItemStyle.m in Sources */,
 				6C305A351BA9C80D00762DBD /* PYItemStyleProp.m in Sources */,
 				6CDE012E1BA88111006A18D5 /* PYMarkPoint.m in Sources */,

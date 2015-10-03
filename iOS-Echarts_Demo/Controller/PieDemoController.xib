@@ -64,7 +64,7 @@
                                 <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="68c-mp-U2w"/>
                             </connections>
                         </button>
-                        <button opaque="NO" tag="30004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1a-WD-EQr">
+                        <button hidden="YES" opaque="NO" tag="30004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1a-WD-EQr">
                             <rect key="frame" x="57" y="175" width="46" height="30"/>
                             <animations/>
                             <constraints>
@@ -186,6 +186,7 @@
                 <constraint firstAttribute="trailing" secondItem="PWG-3H-dnS" secondAttribute="trailing" id="zid-04-Y7e"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+            <point key="canvasLocation" x="33" y="342"/>
         </view>
     </objects>
 </document>
