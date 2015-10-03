@@ -12,8 +12,12 @@
 #import "PYLegend.h"
 #import "PYCartesianSeries.h"
 
+// 折现图
 #import "LineDemoController.h"
+// 柱状图
 #import "BarDemoController.h"
+// 饼图
+#import "PieDemoController.h"
 
 @interface ViewController ()
 
@@ -145,6 +149,9 @@
             break;
         case 10001:
             controller = [[BarDemoController alloc] init];
+            break;
+        case 10002:
+            controller = [[PieDemoController alloc] init];
             break;
         default:
             break;

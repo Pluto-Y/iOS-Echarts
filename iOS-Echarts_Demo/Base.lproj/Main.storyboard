@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
@@ -13,6 +13,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OOI-5z-FNr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
                     </navigationBar>
                     <connections>
                         <outlet property="kNavigationBar" destination="OOI-5z-FNr" id="iAk-Uu-5GP"/>
@@ -37,6 +38,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0s-pS-3OI">
                                 <rect key="frame" x="120" y="0.0" width="80" height="21"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="UDL-xd-Mtz"/>
                                     <constraint firstAttribute="height" constant="21" id="q68-nc-9nw"/>
@@ -47,6 +49,7 @@
                             </label>
                             <button opaque="NO" tag="10000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5W-J3-r7t">
                                 <rect key="frame" x="137" y="21" width="46" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LYE-g0-wVq"/>
                                     <constraint firstAttribute="width" constant="46" id="w04-6j-d0c"/>
@@ -60,6 +63,7 @@
                             </button>
                             <button opaque="NO" tag="10001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiU-vF-ufv">
                                 <rect key="frame" x="137" y="59" width="46" height="30"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Gyj-39-1wY"/>
                                     <constraint firstAttribute="width" constant="46" id="lxy-7d-YaV"/>
@@ -69,15 +73,30 @@
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="4Kc-8t-wpP"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="10002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJX-aJ-ZQR">
+                                <rect key="frame" x="137" y="97" width="46" height="30"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="dl2-Qt-FaJ"/>
+                                    <constraint firstAttribute="height" constant="30" id="opy-Pr-lkI"/>
+                                </constraints>
+                                <state key="normal" title="饼图"/>
+                                <connections>
+                                    <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nvG-30-Oi9"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Z0s-pS-3OI" secondAttribute="centerX" id="3qd-DQ-sqD"/>
                             <constraint firstItem="S5W-J3-r7t" firstAttribute="top" secondItem="Z0s-pS-3OI" secondAttribute="bottom" id="9KZ-d9-dUb"/>
                             <constraint firstItem="S5W-J3-r7t" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="GKi-s6-ZdY"/>
+                            <constraint firstItem="aJX-aJ-ZQR" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="LB9-Fo-rFV"/>
                             <constraint firstItem="AiU-vF-ufv" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="LRb-09-FDm"/>
                             <constraint firstItem="Z0s-pS-3OI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="mDX-sG-buo"/>
                             <constraint firstItem="AiU-vF-ufv" firstAttribute="top" secondItem="S5W-J3-r7t" secondAttribute="bottom" constant="8" id="oZl-Fe-CxG"/>
+                            <constraint firstItem="aJX-aJ-ZQR" firstAttribute="top" secondItem="AiU-vF-ufv" secondAttribute="bottom" constant="8" id="r68-Vc-M3p"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sSa-nS-qdn"/>
