@@ -45,8 +45,8 @@
 }
 
 -(NSString *)description {
-    CGFloat R, G, B, A;
-    int red, green, blue;
+    CGFloat R, G, B, A = 0.0;
+    int red = 0, green = 0, blue = 0;
     
     CGColorRef colorRef = [color CGColor];
 

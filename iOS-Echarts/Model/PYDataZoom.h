@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class PYColor;
+
 @interface PYDataZoom : NSObject
 
 @property (retain, nonatomic) NSNumber *zlevel;

@@ -7,6 +7,7 @@
 //
 
 #import "PYGrid.h"
+#import "PYColor.h"
 
 @implementation PYGrid
 

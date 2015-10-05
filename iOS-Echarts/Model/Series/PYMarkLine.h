@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class PYColor, PYItemStyle;
+
 @interface PYBundling : NSObject
 
 @property (assign, nonatomic) BOOL enable;

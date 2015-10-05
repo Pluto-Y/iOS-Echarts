@@ -7,6 +7,9 @@
 //
 
 #import "PYTimeline.h"
+#import "PYColor.h"
+#import "PYTextStyle.h"
+#import "PYLineStyle.h"
 
 @implementation PYTimelineLabel
 

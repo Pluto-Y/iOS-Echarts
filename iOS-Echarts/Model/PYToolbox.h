@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "PYToolboxFeature.h"
 
+@class PYColor, PYTextStyle;
+
 @interface PYToolbox : NSObject
 
 @property (assign, nonatomic) BOOL show;

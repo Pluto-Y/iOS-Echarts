@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class PYLineStyle, PYOption;
+
 @interface PYToolboxFeatureMarkTitle : NSObject
 
 @property (retain, nonatomic) NSString *mark;
@@ -64,7 +66,7 @@
 
 @property (assign, nonatomic) BOOL show;
 @property (retain, nonatomic) PYToolboxFeatureMagicTypeTitle *title;
-//@property    缺少option
+@property (retain, nonatomic) PYOption *option;
 @property (retain, nonatomic) NSArray *type;
 
 @end

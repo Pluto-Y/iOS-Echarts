@@ -7,6 +7,8 @@
 //
 
 #import "PYToolboxFeature.h"
+#import "PYColor.h"
+#import "PYLineStyle.h"
 
 @implementation PYToolboxFeatureMarkTitle
 

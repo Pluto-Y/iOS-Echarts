@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class PYOption;
+
 @interface PYEchartsView : UIWebView<UIWebViewDelegate>
 
 @property (assign, nonatomic) UIEdgeInsets padding;

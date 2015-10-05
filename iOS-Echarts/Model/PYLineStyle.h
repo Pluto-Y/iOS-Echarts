@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class PYColor;
+
 @interface PYLineStyle : NSObject
 
 @property (retain, nonatomic) id color;

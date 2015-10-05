@@ -7,6 +7,10 @@
 //
 
 #import "PYTooltip.h"
+#import "PYColor.h"
+#import "PYTextStyle.h"
+#import "PYLineStyle.h"
+#import "PYAreaStyle.h"
 
 #define TOOLTIP_TRIGGER_SCOPE [NSArray arrayWithObjects:@"axis", @"item", nil]
 @interface PYTooltip()

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class PYColor, PYTextStyle, PYLineStyle;
+
 @interface PYTimelineLabel : NSObject
 
 @property (assign, nonatomic) BOOL show;

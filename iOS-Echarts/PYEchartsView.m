@@ -8,7 +8,9 @@
 
 #import "PYEchartsView.h"
 #import "PYAxis.h"
-#import "PYLegend.H"
+#import "PYLegend.h"
+#import "PYOption.h"
+#import "JsonUtil.h"
 
 //#define DEFAULT_WIDTH_DIFF_CONSTANT 100
 //#define DEFAULT_HEIGHT_DIFF_CONSTANT 70
@@ -54,7 +56,9 @@
 #pragma mark 初始化
 /// 初始化变量
 -(void)initAll {
-    NSString *urlString = [[NSBundle mainBundle] pathForResource:@"echarts" ofType:@"html"];
+    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"iOS-Echarts" ofType:@"bundle"];
+    NSBundle *echartsBundle = [NSBundle bundleWithPath:bundlePath];
+    NSString *urlString = [echartsBundle pathForResource:@"echarts" ofType:@"html"];
     NSURL *url =[NSURL URLWithString:urlString];
     request =[NSURLRequest requestWithURL:url];
     self.delegate = self;

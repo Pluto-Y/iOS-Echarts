@@ -7,6 +7,7 @@
 //
 
 #import "PYItemStyleProp.h"
+#import "PYColor.h"
 
 @implementation PYItemStyleProp
 

@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class PYLineStyle, PYAreaStyle;
+
 @interface PYAxisPointer : NSObject
 
 @property (assign, nonatomic) BOOL show;

@@ -7,6 +7,7 @@
 //
 
 #import "PYDataZoom.h"
+#import "PYColor.h"
 
 @implementation PYDataZoom
 

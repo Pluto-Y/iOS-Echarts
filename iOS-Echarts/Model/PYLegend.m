@@ -7,6 +7,7 @@
 //
 
 #import "PYLegend.h"
+#import "PYColor.h"
 
 @implementation PYLegend
 

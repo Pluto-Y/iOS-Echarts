@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class PYColor, PYTextStyle;
+
 @interface PYTitle : NSObject
 
 @property (assign, nonatomic) BOOL show;

@@ -8,10 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef enum {
-    PYMarkPointEffectTypeScale,
-    PYMarkPointEffectTypeBounce
-} PYMarkPointEffectType;
+@class PYColor, PYItemStyle;
 
 @interface PYMarkPointEffect : NSObject
 

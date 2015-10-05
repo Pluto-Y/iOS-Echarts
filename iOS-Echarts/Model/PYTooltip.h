@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "PYAxisPointer.h"
 
+@class PYColor, PYTextStyle;
+
 @interface PYTooltip : NSObject
 
 @property (assign, nonatomic) BOOL show;

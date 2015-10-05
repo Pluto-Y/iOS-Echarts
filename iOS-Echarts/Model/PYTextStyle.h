@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class PYColor;
+
 @interface PYTextStyle : NSObject
 
 @property (retain, nonatomic) PYColor *color;
