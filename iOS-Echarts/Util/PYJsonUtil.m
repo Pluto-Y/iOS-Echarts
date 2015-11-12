@@ -6,11 +6,11 @@
 //  Copyright (c) 2015年 pluto-y. All rights reserved.
 //
 
-#import "JsonUtil.h"
+#import "PYJsonUtil.h"
 #import <objc/runtime.h>
 #import "PYColor.h"
 
-@implementation JsonUtil
+@implementation PYJsonUtil
 
 /**
  *  NSObject转json

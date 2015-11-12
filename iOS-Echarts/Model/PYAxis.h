@@ -10,6 +10,7 @@
 #import "PYAxisLine.h"
 #import "PYAxisLabel.h"
 #import "PYSplitLine.h"
+#import "PYAxisTick.h"
 
 @interface PYAxis : NSObject
 
@@ -21,6 +22,7 @@
 @property (retain, nonatomic) NSString *name;
 @property (retain, nonatomic) id boundaryGap;
 @property (retain, nonatomic) PYAxisLine *axisLine;
+@property (retain, nonatomic) PYAxisTick *axisTick;
 @property (retain, nonatomic) PYAxisLabel *axisLabel;
 @property (retain, nonatomic) NSNumber *min;
 @property (retain, nonatomic) NSNumber *max;

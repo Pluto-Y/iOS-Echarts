@@ -10,7 +10,7 @@
 #import "PYAxis.h"
 #import "PYLegend.h"
 #import "PYOption.h"
-#import "JsonUtil.h"
+#import "PYJsonUtil.h"
 
 //#define DEFAULT_WIDTH_DIFF_CONSTANT 100
 //#define DEFAULT_HEIGHT_DIFF_CONSTANT 70
@@ -86,7 +86,7 @@
     }
     [self resizeDiv];
     
-    NSString *jsonStr = [JsonUtil getJSONString:option];
+    NSString *jsonStr = [PYJsonUtil getJSONString:option];
     NSLog(@"%@",jsonStr);
     NSString *js = [NSString stringWithFormat:@"%@(%@)", @"loadEcharts", jsonStr];
     [webView stringByEvaluatingJavaScriptFromString:js];
@@ -191,7 +191,7 @@
 //            height -= DEFAULT_BOTTOM_PADDING;
 //        }
 //    }
-    float height = self.frame.size.height;
+    float height = self.frame.size.height - 20;
     float width = self.frame.size.width;
 //    NSString *divSizeCss = [NSString stringWithFormat:@"'height:%.0fpx;width:%.0fpx;margin-left:%.0fpx;margin-top:%.0fpx;margin-right:%.0fpx;margin-bottom:%.0fpx;'", height, width, paddingLeft, paddingTop, paddingRight, paddingBottom] ;
     NSString *divSizeCss = [NSString stringWithFormat:@"'height:%.0fpx;width:%.0fpx;'", height, width];

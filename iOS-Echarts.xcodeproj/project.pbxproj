@@ -11,28 +11,29 @@
 		6C023F9E1BA722EC00C0883D /* PYTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C023F9D1BA722EC00C0883D /* PYTitle.m */; };
 		6C023FA11BA7267000C0883D /* PYTooltip.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C023FA01BA7267000C0883D /* PYTooltip.m */; };
 		6C023FA41BA727DC00C0883D /* PYAxisPointer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C023FA31BA727DC00C0883D /* PYAxisPointer.m */; };
-		6C0658CD1BB85B29003CAAE5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658CA1BB85B29003CAAE5 /* Info.plist */; settings = {ASSET_TAGS = (); }; };
-		6C0658CE1BB85B29003CAAE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658CC1BB85B29003CAAE5 /* main.m */; settings = {ASSET_TAGS = (); }; };
-		6C0658D31BB85B34003CAAE5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658D01BB85B34003CAAE5 /* AppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		6C0658DA1BB85B46003CAAE5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658D61BB85B46003CAAE5 /* LaunchScreen.xib */; settings = {ASSET_TAGS = (); }; };
-		6C0658DB1BB85B46003CAAE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658D81BB85B46003CAAE5 /* Main.storyboard */; settings = {ASSET_TAGS = (); }; };
-		6C0658E51BB85B4F003CAAE5 /* BarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658DE1BB85B4F003CAAE5 /* BarDemoController.m */; settings = {ASSET_TAGS = (); }; };
-		6C0658E61BB85B4F003CAAE5 /* BarDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658DF1BB85B4F003CAAE5 /* BarDemoController.xib */; settings = {ASSET_TAGS = (); }; };
-		6C0658E71BB85B4F003CAAE5 /* LineDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658E11BB85B4F003CAAE5 /* LineDemoController.m */; settings = {ASSET_TAGS = (); }; };
-		6C0658E81BB85B4F003CAAE5 /* LineDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658E21BB85B4F003CAAE5 /* LineDemoController.xib */; settings = {ASSET_TAGS = (); }; };
-		6C0658E91BB85B4F003CAAE5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658E41BB85B4F003CAAE5 /* ViewController.m */; settings = {ASSET_TAGS = (); }; };
+		6C0658CD1BB85B29003CAAE5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658CA1BB85B29003CAAE5 /* Info.plist */; };
+		6C0658CE1BB85B29003CAAE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658CC1BB85B29003CAAE5 /* main.m */; };
+		6C0658D31BB85B34003CAAE5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658D01BB85B34003CAAE5 /* AppDelegate.m */; };
+		6C0658DA1BB85B46003CAAE5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658D61BB85B46003CAAE5 /* LaunchScreen.xib */; };
+		6C0658DB1BB85B46003CAAE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658D81BB85B46003CAAE5 /* Main.storyboard */; };
+		6C0658E51BB85B4F003CAAE5 /* BarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658DE1BB85B4F003CAAE5 /* BarDemoController.m */; };
+		6C0658E61BB85B4F003CAAE5 /* BarDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658DF1BB85B4F003CAAE5 /* BarDemoController.xib */; };
+		6C0658E71BB85B4F003CAAE5 /* LineDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658E11BB85B4F003CAAE5 /* LineDemoController.m */; };
+		6C0658E81BB85B4F003CAAE5 /* LineDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658E21BB85B4F003CAAE5 /* LineDemoController.xib */; };
+		6C0658E91BB85B4F003CAAE5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658E41BB85B4F003CAAE5 /* ViewController.m */; };
 		6C305A331BA9C80D00762DBD /* PYAreaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A231BA9C80D00762DBD /* PYAreaStyle.m */; };
 		6C305A351BA9C80D00762DBD /* PYItemStyleProp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A271BA9C80D00762DBD /* PYItemStyleProp.m */; };
 		6C305A361BA9C80D00762DBD /* PYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A291BA9C80D00762DBD /* PYLabel.m */; };
 		6C305A451BAAA7E500762DBD /* PYEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A441BAAA7E500762DBD /* PYEchartsView.m */; };
 		6C305A4C1BAB1EF900762DBD /* PYToolboxFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A4B1BAB1EF900762DBD /* PYToolboxFeature.m */; };
+		6C3916C51BE0557100A2388A /* PYAxisTick.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3916C41BE0557100A2388A /* PYAxisTick.m */; };
 		6C4216961B98E310002D4B7A /* iOS_EchartsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4216951B98E310002D4B7A /* iOS_EchartsTests.m */; };
 		6C7C95571B9DE77D00D80042 /* PYAxisLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95561B9DE77D00D80042 /* PYAxisLine.m */; };
 		6C7C955A1B9DE82D00D80042 /* PYLineStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95591B9DE82D00D80042 /* PYLineStyle.m */; };
 		6C7C955D1B9DEA6900D80042 /* PYAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C955C1B9DEA6900D80042 /* PYAxis.m */; };
 		6C7C95601B9DEB5100D80042 /* PYAxisLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C955F1B9DEB5100D80042 /* PYAxisLabel.m */; };
 		6C7C95661B9DF04400D80042 /* PYColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95651B9DF04400D80042 /* PYColor.m */; };
-		6C7C956A1B9DF2EF00D80042 /* JsonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95691B9DF2EF00D80042 /* JsonUtil.m */; };
+		6C7C956A1B9DF2EF00D80042 /* PYJsonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95691B9DF2EF00D80042 /* PYJsonUtil.m */; };
 		6C7C956E1B9DF47800D80042 /* PYSplitLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C956D1B9DF47800D80042 /* PYSplitLine.m */; };
 		6C7C95711B9DF87400D80042 /* PYTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95701B9DF87400D80042 /* PYTextStyle.m */; };
 		6C7C95741B9E84B700D80042 /* PYLegend.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95731B9E84B700D80042 /* PYLegend.m */; };
@@ -40,19 +41,19 @@
 		6C7C957D1B9EA53400D80042 /* PYCartesianSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C957C1B9EA53400D80042 /* PYCartesianSeries.m */; };
 		6C7C95831B9EB31A00D80042 /* PYItemStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95821B9EB31A00D80042 /* PYItemStyle.m */; };
 		6C7C958F1B9EC47500D80042 /* PYLabelLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C958E1B9EC47500D80042 /* PYLabelLine.m */; };
-		6CAB6A381BB1BA8B00293E0B /* PYDataZoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAB6A371BB1BA8B00293E0B /* PYDataZoom.m */; settings = {ASSET_TAGS = (); }; };
-		6CAB6A3B1BB266B100293E0B /* PYGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAB6A3A1BB266B100293E0B /* PYGrid.m */; settings = {ASSET_TAGS = (); }; };
-		6CB02A7E1BBEAC66002E1126 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB02A7D1BBEAC66002E1126 /* MainController.m */; settings = {ASSET_TAGS = (); }; };
-		6CB02A821BBF7739002E1126 /* PieDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB02A801BBF7739002E1126 /* PieDemoController.m */; settings = {ASSET_TAGS = (); }; };
-		6CB02A831BBF7739002E1126 /* PieDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CB02A811BBF7739002E1126 /* PieDemoController.xib */; settings = {ASSET_TAGS = (); }; };
-		6CC8465D1BC15E4D00947312 /* NSObject+RMArchivable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC846561BC15E4D00947312 /* NSObject+RMArchivable.m */; settings = {ASSET_TAGS = (); }; };
-		6CC8465E1BC15E4D00947312 /* NSObject+RMCopyable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC846581BC15E4D00947312 /* NSObject+RMCopyable.m */; settings = {ASSET_TAGS = (); }; };
-		6CC8465F1BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8465A1BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.m */; settings = {ASSET_TAGS = (); }; };
-		6CC846601BC15E4D00947312 /* RMMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8465C1BC15E4D00947312 /* RMMapper.m */; settings = {ASSET_TAGS = (); }; };
-		6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */; settings = {ASSET_TAGS = (); }; };
-		6CC846661BC278F000947312 /* iOS-Echarts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6CC846651BC278F000947312 /* iOS-Echarts.bundle */; settings = {ASSET_TAGS = (); }; };
-		6CD026F91BC00A04009EE2AA /* PYPieSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD026F81BC00A04009EE2AA /* PYPieSeries.m */; settings = {ASSET_TAGS = (); }; };
-		6CD026FC1BC03AEA009EE2AA /* PYTimeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD026FB1BC03AEA009EE2AA /* PYTimeline.m */; settings = {ASSET_TAGS = (); }; };
+		6CAB6A381BB1BA8B00293E0B /* PYDataZoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAB6A371BB1BA8B00293E0B /* PYDataZoom.m */; };
+		6CAB6A3B1BB266B100293E0B /* PYGrid.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CAB6A3A1BB266B100293E0B /* PYGrid.m */; };
+		6CB02A7E1BBEAC66002E1126 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB02A7D1BBEAC66002E1126 /* MainController.m */; };
+		6CB02A821BBF7739002E1126 /* PieDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB02A801BBF7739002E1126 /* PieDemoController.m */; };
+		6CB02A831BBF7739002E1126 /* PieDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CB02A811BBF7739002E1126 /* PieDemoController.xib */; };
+		6CC8465D1BC15E4D00947312 /* NSObject+RMArchivable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC846561BC15E4D00947312 /* NSObject+RMArchivable.m */; };
+		6CC8465E1BC15E4D00947312 /* NSObject+RMCopyable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC846581BC15E4D00947312 /* NSObject+RMCopyable.m */; };
+		6CC8465F1BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8465A1BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.m */; };
+		6CC846601BC15E4D00947312 /* RMMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8465C1BC15E4D00947312 /* RMMapper.m */; };
+		6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */; };
+		6CC846661BC278F000947312 /* iOS-Echarts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6CC846651BC278F000947312 /* iOS-Echarts.bundle */; };
+		6CD026F91BC00A04009EE2AA /* PYPieSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD026F81BC00A04009EE2AA /* PYPieSeries.m */; };
+		6CD026FC1BC03AEA009EE2AA /* PYTimeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD026FB1BC03AEA009EE2AA /* PYTimeline.m */; };
 		6CDE01251BA87A5A006A18D5 /* PYToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE01241BA87A5A006A18D5 /* PYToolbox.m */; };
 		6CDE012B1BA87DD1006A18D5 /* PYMarkLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE012A1BA87DD1006A18D5 /* PYMarkLine.m */; };
 		6CDE012E1BA88111006A18D5 /* PYMarkPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE012D1BA88111006A18D5 /* PYMarkPoint.m */; };
@@ -103,6 +104,8 @@
 		6C305A441BAAA7E500762DBD /* PYEchartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYEchartsView.m; sourceTree = "<group>"; };
 		6C305A4A1BAB1EF900762DBD /* PYToolboxFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYToolboxFeature.h; path = Model/PYToolboxFeature.h; sourceTree = "<group>"; };
 		6C305A4B1BAB1EF900762DBD /* PYToolboxFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYToolboxFeature.m; path = Model/PYToolboxFeature.m; sourceTree = "<group>"; };
+		6C3916C31BE0557100A2388A /* PYAxisTick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYAxisTick.h; path = Model/PYAxisTick.h; sourceTree = "<group>"; };
+		6C3916C41BE0557100A2388A /* PYAxisTick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYAxisTick.m; path = Model/PYAxisTick.m; sourceTree = "<group>"; };
 		6C4216761B98E310002D4B7A /* iOS-Echarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Echarts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C42168F1B98E310002D4B7A /* iOS-EchartsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-EchartsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C4216941B98E310002D4B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -117,8 +120,8 @@
 		6C7C955F1B9DEB5100D80042 /* PYAxisLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYAxisLabel.m; path = Model/PYAxisLabel.m; sourceTree = "<group>"; };
 		6C7C95641B9DF04400D80042 /* PYColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYColor.h; path = Model/PYColor.h; sourceTree = "<group>"; };
 		6C7C95651B9DF04400D80042 /* PYColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYColor.m; path = Model/PYColor.m; sourceTree = "<group>"; };
-		6C7C95681B9DF2EF00D80042 /* JsonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = JsonUtil.h; path = Util/JsonUtil.h; sourceTree = "<group>"; };
-		6C7C95691B9DF2EF00D80042 /* JsonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = JsonUtil.m; path = Util/JsonUtil.m; sourceTree = "<group>"; };
+		6C7C95681B9DF2EF00D80042 /* PYJsonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYJsonUtil.h; path = Util/PYJsonUtil.h; sourceTree = "<group>"; };
+		6C7C95691B9DF2EF00D80042 /* PYJsonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYJsonUtil.m; path = Util/PYJsonUtil.m; sourceTree = "<group>"; };
 		6C7C956C1B9DF47800D80042 /* PYSplitLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYSplitLine.h; path = Model/PYSplitLine.h; sourceTree = "<group>"; };
 		6C7C956D1B9DF47800D80042 /* PYSplitLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYSplitLine.m; path = Model/PYSplitLine.m; sourceTree = "<group>"; };
 		6C7C956F1B9DF87400D80042 /* PYTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYTextStyle.h; path = Model/PYTextStyle.h; sourceTree = "<group>"; };
@@ -222,9 +225,9 @@
 		6C42166D1B98E310002D4B7A = {
 			isa = PBXGroup;
 			children = (
-				6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */,
-				6C0658C91BB85A3E003CAAE5 /* iOS-Echarts_Demo */,
 				6C4216781B98E310002D4B7A /* iOS-Echarts */,
+				6C0658C91BB85A3E003CAAE5 /* iOS-Echarts_Demo */,
+				6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */,
 				6C4216921B98E310002D4B7A /* iOS-EchartsTests */,
 				6C4216771B98E310002D4B7A /* Products */,
 			);
@@ -329,6 +332,8 @@
 				6C023F9F1BA7267000C0883D /* PYTooltip.h */,
 				6C023FA01BA7267000C0883D /* PYTooltip.m */,
 				6C7C95771B9EA33E00D80042 /* Series */,
+				6C3916C31BE0557100A2388A /* PYAxisTick.h */,
+				6C3916C41BE0557100A2388A /* PYAxisTick.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -336,8 +341,8 @@
 		6C7C95671B9DF2DD00D80042 /* Util */ = {
 			isa = PBXGroup;
 			children = (
-				6C7C95681B9DF2EF00D80042 /* JsonUtil.h */,
-				6C7C95691B9DF2EF00D80042 /* JsonUtil.m */,
+				6C7C95681B9DF2EF00D80042 /* PYJsonUtil.h */,
+				6C7C95691B9DF2EF00D80042 /* PYJsonUtil.m */,
 			);
 			name = Util;
 			sourceTree = "<group>";
@@ -518,6 +523,7 @@
 				6CC8465D1BC15E4D00947312 /* NSObject+RMArchivable.m in Sources */,
 				6C305A451BAAA7E500762DBD /* PYEchartsView.m in Sources */,
 				6C0658E51BB85B4F003CAAE5 /* BarDemoController.m in Sources */,
+				6C3916C51BE0557100A2388A /* PYAxisTick.m in Sources */,
 				6C7C95741B9E84B700D80042 /* PYLegend.m in Sources */,
 				6CB02A7E1BBEAC66002E1126 /* MainController.m in Sources */,
 				6CB02A821BBF7739002E1126 /* PieDemoController.m in Sources */,
@@ -527,7 +533,7 @@
 				6CC846601BC15E4D00947312 /* RMMapper.m in Sources */,
 				6C023FA11BA7267000C0883D /* PYTooltip.m in Sources */,
 				6C023FA41BA727DC00C0883D /* PYAxisPointer.m in Sources */,
-				6C7C956A1B9DF2EF00D80042 /* JsonUtil.m in Sources */,
+				6C7C956A1B9DF2EF00D80042 /* PYJsonUtil.m in Sources */,
 				6C7C958F1B9EC47500D80042 /* PYLabelLine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

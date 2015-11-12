@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface JsonUtil : NSObject
+@interface PYJsonUtil : NSObject
 
 
 /**
