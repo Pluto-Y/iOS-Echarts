@@ -26,6 +26,8 @@
 		6C305A361BA9C80D00762DBD /* PYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A291BA9C80D00762DBD /* PYLabel.m */; };
 		6C305A451BAAA7E500762DBD /* PYEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A441BAAA7E500762DBD /* PYEchartsView.m */; };
 		6C305A4C1BAB1EF900762DBD /* PYToolboxFeature.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A4B1BAB1EF900762DBD /* PYToolboxFeature.m */; };
+		6C34720D1BF470E600C16B73 /* echarts.html in Resources */ = {isa = PBXBuildFile; fileRef = 6C3472061BF470E600C16B73 /* echarts.html */; };
+		6C3472131BF4712400C16B73 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 6C3472121BF4712400C16B73 /* js */; };
 		6C3916C51BE0557100A2388A /* PYAxisTick.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3916C41BE0557100A2388A /* PYAxisTick.m */; };
 		6C4216961B98E310002D4B7A /* iOS_EchartsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4216951B98E310002D4B7A /* iOS_EchartsTests.m */; };
 		6C7C95571B9DE77D00D80042 /* PYAxisLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95561B9DE77D00D80042 /* PYAxisLine.m */; };
@@ -51,7 +53,6 @@
 		6CC8465F1BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8465A1BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.m */; };
 		6CC846601BC15E4D00947312 /* RMMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8465C1BC15E4D00947312 /* RMMapper.m */; };
 		6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */; };
-		6CC846661BC278F000947312 /* iOS-Echarts.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 6CC846651BC278F000947312 /* iOS-Echarts.bundle */; };
 		6CD026F91BC00A04009EE2AA /* PYPieSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD026F81BC00A04009EE2AA /* PYPieSeries.m */; };
 		6CD026FC1BC03AEA009EE2AA /* PYTimeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD026FB1BC03AEA009EE2AA /* PYTimeline.m */; };
 		6CDE01251BA87A5A006A18D5 /* PYToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE01241BA87A5A006A18D5 /* PYToolbox.m */; };
@@ -104,6 +105,8 @@
 		6C305A441BAAA7E500762DBD /* PYEchartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYEchartsView.m; sourceTree = "<group>"; };
 		6C305A4A1BAB1EF900762DBD /* PYToolboxFeature.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYToolboxFeature.h; path = Model/PYToolboxFeature.h; sourceTree = "<group>"; };
 		6C305A4B1BAB1EF900762DBD /* PYToolboxFeature.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYToolboxFeature.m; path = Model/PYToolboxFeature.m; sourceTree = "<group>"; };
+		6C3472061BF470E600C16B73 /* echarts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = echarts.html; path = "iOS-Echarts.bundle/echarts.html"; sourceTree = "<group>"; };
+		6C3472121BF4712400C16B73 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; name = js; path = Resources/js; sourceTree = "<group>"; };
 		6C3916C31BE0557100A2388A /* PYAxisTick.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYAxisTick.h; path = Model/PYAxisTick.h; sourceTree = "<group>"; };
 		6C3916C41BE0557100A2388A /* PYAxisTick.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYAxisTick.m; path = Model/PYAxisTick.m; sourceTree = "<group>"; };
 		6C4216761B98E310002D4B7A /* iOS-Echarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Echarts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,7 +157,6 @@
 		6CC8465B1BC15E4D00947312 /* RMMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMMapper.h; sourceTree = "<group>"; };
 		6CC8465C1BC15E4D00947312 /* RMMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMMapper.m; sourceTree = "<group>"; };
 		6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iOS-Echarts.podspec"; sourceTree = "<group>"; };
-		6CC846651BC278F000947312 /* iOS-Echarts.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = "iOS-Echarts.bundle"; sourceTree = "<group>"; };
 		6CD026F71BC00A04009EE2AA /* PYPieSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYPieSeries.h; path = Model/Series/PYPieSeries.h; sourceTree = "<group>"; };
 		6CD026F81BC00A04009EE2AA /* PYPieSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYPieSeries.m; path = Model/Series/PYPieSeries.m; sourceTree = "<group>"; };
 		6CD026FA1BC03AEA009EE2AA /* PYTimeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYTimeline.h; path = Model/PYTimeline.h; sourceTree = "<group>"; };
@@ -222,6 +224,15 @@
 			path = "iOS-Echarts_Demo/Controller";
 			sourceTree = "<group>";
 		};
+		6C3472051BF470DB00C16B73 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				6C3472061BF470E600C16B73 /* echarts.html */,
+				6C3472121BF4712400C16B73 /* js */,
+			);
+			name = Resource;
+			sourceTree = "<group>";
+		};
 		6C42166D1B98E310002D4B7A = {
 			isa = PBXGroup;
 			children = (
@@ -245,11 +256,11 @@
 		6C4216781B98E310002D4B7A /* iOS-Echarts */ = {
 			isa = PBXGroup;
 			children = (
+				6C3472051BF470DB00C16B73 /* Resource */,
 				6C7C95511B9DE2E800D80042 /* Model */,
 				6C305A431BAAA7E500762DBD /* PYEchartsView.h */,
 				6C305A441BAAA7E500762DBD /* PYEchartsView.m */,
 				6C7C95671B9DF2DD00D80042 /* Util */,
-				6CC846651BC278F000947312 /* iOS-Echarts.bundle */,
 			);
 			path = "iOS-Echarts";
 			sourceTree = "<group>";
@@ -468,10 +479,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6CC846661BC278F000947312 /* iOS-Echarts.bundle in Resources */,
 				6C0658E81BB85B4F003CAAE5 /* LineDemoController.xib in Resources */,
 				6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */,
+				6C34720D1BF470E600C16B73 /* echarts.html in Resources */,
 				6C0658DA1BB85B46003CAAE5 /* LaunchScreen.xib in Resources */,
+				6C3472131BF4712400C16B73 /* js in Resources */,
 				6C0658E61BB85B4F003CAAE5 /* BarDemoController.xib in Resources */,
 				6C0658DB1BB85B46003CAAE5 /* Main.storyboard in Resources */,
 				6CB02A831BBF7739002E1126 /* PieDemoController.xib in Resources */,

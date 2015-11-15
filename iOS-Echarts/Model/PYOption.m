@@ -10,4 +10,13 @@
 
 @implementation PYOption
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _grid = [[PYGrid alloc] init];
+    }
+    return self;
+}
+
 @end

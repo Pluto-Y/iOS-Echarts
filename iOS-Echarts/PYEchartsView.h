@@ -13,6 +13,8 @@
 @interface PYEchartsView : UIWebView<UIWebViewDelegate>
 
 @property (assign, nonatomic) UIEdgeInsets padding;
+@property (assign, nonatomic) CGSize divSize;
+@property (assign, nonatomic) CGFloat maxWidth;
 
 /**
  *  加载视图

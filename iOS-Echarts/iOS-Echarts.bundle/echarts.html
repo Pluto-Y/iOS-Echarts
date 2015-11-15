@@ -9,6 +9,7 @@
     <script src="js/echarts.js"></script>
     <script type="text/javascript">
     var option;
+    var myChart;
     function preTask(obj) {
         var result;
         if(typeof(obj) == 'object') {
@@ -67,7 +68,7 @@
             ],
             function (ec) {
                 // 基于准备好的dom，初始化echarts图表
-                var myChart = ec.init(document.getElementById('main')); 
+                myChart = ec.init(document.getElementById('main'));
                 option = preTask(testdate);
                 //option = preTask(testdate);
                 // 为echarts对象加载数据
@@ -78,6 +79,37 @@
     function resizeDiv(cssText) {
         var divMain = document.getElementById("main");
         divMain.style.cssText = cssText;
+        if(myChart != null) {
+            myChart.clear();
+            myChart.dispose();
+        }
+        initEchartView();
+    }
+    function initEchartView() {
+        // 路径配置
+        require.config({
+            paths: {
+                echarts: 'js'
+            }
+        });
+        // 使用
+        require(
+            [
+                'echarts',
+                'echarts/chart/line', // 使用柱状图就加载line模块，按需加载
+                'echarts/chart/bar',
+                'echarts/chart/pie'
+            ],
+            function (ec) {
+                var ecConfig = require('echarts/config');
+                // 基于准备好的dom，初始化echarts图表
+                myChart = ec.init(document.getElementById('main'));
+                
+                // 为echarts对象加载数据
+                myChart.setOption(option);
+                myChart.on(ecConfig.EVENT.CLICK, echartViewAction);
+            }
+        );
     }
     </script>
 </head>

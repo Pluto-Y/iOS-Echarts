@@ -27,9 +27,17 @@
 #define DEFAULT_HEAD_RIGHT_PADDING 50
 #define DEFAULT_BOTTOM_PADDING 30
 
+#define     ACTION_TYPE_CLICK                   @"click"
+#define     ACTION_TYPE_DBCLICK                 @"dblclick"
+#define     ACTION_TYPE_DATA_ZOOM               @"dataZoom"
+#define     ACTION_TYPE_LEGEND_SELECTED         @"legendSelected"
+#define     ACTION_TYPE_MAGIC_TYPE_CHANGE       @"magicTypeChanged"
+
 @interface PYEchartsView() {
     PYOption *option;
     NSURLRequest *request;
+    CGFloat lastScale;
+    CGFloat minWidth;
 }
 
 @end
@@ -56,8 +64,8 @@
 #pragma mark 初始化
 /// 初始化变量
 -(void)initAll {
-    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"iOS-Echarts" ofType:@"bundle"];
-    NSBundle *echartsBundle = [NSBundle bundleWithPath:bundlePath];
+//    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"iOS-Echarts" ofType:@"bundle"];
+    NSBundle *echartsBundle = [NSBundle mainBundle];
     NSString *urlString = [echartsBundle pathForResource:@"echarts" ofType:@"html"];
     NSURL *url =[NSURL URLWithString:urlString];
     request =[NSURLRequest requestWithURL:url];
@@ -68,6 +76,16 @@
     self.opaque = NO;
     self.backgroundColor = [UIColor clearColor];
     
+    _divSize = CGSizeZero;
+    minWidth = self.frame.size.width - 10;
+    
+    
+    _maxWidth = NSIntegerMax;
+    
+    UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchGestureHandle:)];
+    pinchGestureRecognizer.cancelsTouchesInView = NO;
+    [self addGestureRecognizer:pinchGestureRecognizer];
+    
 }
 
 /**
@@ -75,6 +93,25 @@
  */
 -(void)loadEcharts {
     [self loadRequest:request];
+}
+/**
+ *  刷新图表，而不是重新加载(即恢复到最初设置的option)
+ */
+-(void)refreshEcharts {
+    NSString *js = [NSString stringWithFormat:@"myChart.refresh()"];
+    [self stringByEvaluatingJavaScriptFromString:js];
+}
+
+/**
+ *  根据新给的PYOption刷新Echarts
+ *  通过该方法可以保证重新加载Echarts而是刷新
+ *
+ *  @param newOption EChart的option
+ */
+-(void)refreshEchartsWithOption:(PYOption *)newOption {
+    NSString *jsonStr = [PYJsonUtil getJSONString:newOption];
+    NSString *js = [NSString stringWithFormat:@"refreshWithOption(%@)", jsonStr];
+    [self stringByEvaluatingJavaScriptFromString:js];
 }
 
 #pragma mark - Delegate
@@ -96,104 +133,14 @@
  *  根据
  */
 -(void)resizeDiv {
-//    float height = self.frame.size.height + DEFAULT_HEIGHT_DIFF_CONSTANT - _padding.top - _padding.bottom;
-//    float width = self.frame.size.width + DEFAULT_WIDTH_DIFF_CONSTANT - _padding.left - _padding.right;
-//    float paddingLeft = _padding.left + DEFAULT_LEFT_MARGIN_DIFF_CONSTANT;
-//    float paddingTop = _padding.top + DEFAULT_TOP_MARGIN_DIFF_CONSTANT;
-//    float paddingRight = _padding.right;
-//    float paddingBottom = _padding.bottom;
-//    float minLeft = 0.0; // title或legend哪个的x最小
-//    float minTop = 0.0;
-//    BOOL hasRight = NO;
-//    if(option != nil) {
-//        if (option.title != nil && option.title.show) {
-//            if ([option.title.x isKindOfClass:[NSString class]]) {
-//                if ([option.title.x isEqualToString:@"left"]) {
-//                    minLeft = 0.0;
-//                } else if ([option.title.x isEqualToString:@"right"]) {
-//                    hasRight = YES;
-//                }
-//                
-//            } else if ([option.title.x isKindOfClass:[NSNumber class]]) {
-//                minLeft = [option.title.x floatValue];
-//            }
-//            if ([option.title.y isKindOfClass:[NSString class]] && [option.title.y isEqualToString:@"top"]) {
-//                minTop = 0.0;
-//            } else if ([option.title.y isKindOfClass:[NSNumber class]]) {
-//                minTop = [option.title.y floatValue];
-//            }
-//        }
-//        if (option.legend != nil && option.legend.show) {
-//            if([option.legend.x isKindOfClass:[NSString class]]) {
-//                if ([option.legend.x isEqualToString:@"left"]) {
-//                    minLeft = 0.0;
-//                } else if ([option.legend.x isEqualToString:@"right"]) {
-//                    hasRight = YES;
-//                }
-//            } else if ([option.legend.x isKindOfClass:[NSNumber class]]) {
-//                if ([option.legend.x floatValue] < minLeft) {
-//                    minLeft = [option.legend.x floatValue];
-//                }
-//            }
-//            if ([option.legend.y isKindOfClass:[NSString class]] && [option.legend.y isEqualToString:@"top"]) {
-//                minTop = 0.0;
-//            } else if ([option.legend.y isKindOfClass:[NSNumber class]]) {
-//                if ([option.legend.y floatValue] < minTop) {
-//                    minTop = [option.legend.y floatValue];
-//                }
-//            }
-//        }
-//        if (option.toolbox != nil && option.toolbox.show) {
-//            if ([option.toolbox.x isKindOfClass:[NSString class]]) {
-//                if ([option.toolbox.x isEqualToString:@"left"]) {
-//                    minLeft = 0.0;
-//                } else if ([option.toolbox.x isEqualToString:@"right"]) {
-//                    hasRight = YES;
-//                }
-//            } else if ([option.toolbox.x isKindOfClass:[NSNumber class]]) {
-//                if ([option.toolbox.x floatValue] < minLeft) {
-//                    minLeft = [option.toolbox.x floatValue];
-//                }
-//            }
-//            if ([option.toolbox.y isKindOfClass:[NSString class]] && [option.toolbox.y isEqualToString:@"top"]) {
-//                minTop = 0.0;
-//            } else if ([option.toolbox.y isKindOfClass:[NSNumber class]]) {
-//                if ([option.toolbox.y floatValue] < minTop) {
-//                    minTop = [option.toolbox.y floatValue];
-//                }
-//            }
-//        }
-//        if (minLeft > 0) {
-//            if (minLeft < DEFAULT_HEAD_LEFT_PADDING) {
-//                paddingLeft += DEFAULT_HEAD_LEFT_PADDING - minLeft;
-//                width -= DEFAULT_HEAD_LEFT_PADDING - minLeft;
-//            }
-//        } else {
-//            paddingLeft += DEFAULT_HEAD_LEFT_PADDING;
-//            width -= DEFAULT_HEAD_LEFT_PADDING;
-//        }
-//        
-//        if (minTop > 0) {
-//            if (minTop < DEFAULT_HEAD_TOP_PADDING) {
-//                paddingTop += DEFAULT_HEAD_TOP_PADDING - minTop;
-//                height -= DEFAULT_HEAD_TOP_PADDING - minTop;
-//            }
-//        } else {
-//            paddingTop += DEFAULT_HEAD_TOP_PADDING;
-//            height -= DEFAULT_HEAD_TOP_PADDING;
-//        }
-//        if (hasRight) {
-//            paddingRight += DEFAULT_HEAD_RIGHT_PADDING;
-//            width -= DEFAULT_HEAD_RIGHT_PADDING;
-//        }
-//        if (option.dataZoom != nil && option.dataZoom.show) {
-//            paddingBottom += DEFAULT_BOTTOM_PADDING;
-//            height -= DEFAULT_BOTTOM_PADDING;
-//        }
-//    }
     float height = self.frame.size.height - 20;
     float width = self.frame.size.width;
-//    NSString *divSizeCss = [NSString stringWithFormat:@"'height:%.0fpx;width:%.0fpx;margin-left:%.0fpx;margin-top:%.0fpx;margin-right:%.0fpx;margin-bottom:%.0fpx;'", height, width, paddingLeft, paddingTop, paddingRight, paddingBottom] ;
+    if (!CGSizeEqualToSize(_divSize, CGSizeZero)) {
+        height = _divSize.height - 20;
+        width = _divSize.width;
+    } else {
+        _divSize = CGSizeMake(width, height);
+    }
     NSString *divSizeCss = [NSString stringWithFormat:@"'height:%.0fpx;width:%.0fpx;'", height, width];
     NSString *js = [NSString stringWithFormat:@"%@(%@)", @"resizeDiv", divSizeCss];
     [self stringByEvaluatingJavaScriptFromString:js];
@@ -202,6 +149,49 @@
 
 -(void)setOption:(PYOption *)pyOption {
     option = pyOption;
+}
+
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
+{
+    return YES;
+}
+
+-(void)pinchGestureHandle:(id)sender {
+    UIPinchGestureRecognizer *recognizer = (UIPinchGestureRecognizer *)sender;
+    int touchCount = (int)[recognizer numberOfTouches];
+    //当手指离开屏幕时,将lastscale设置为1.0
+    if([recognizer state] == UIGestureRecognizerStateEnded) {
+        lastScale = 1.0;
+        return;
+    }
+    CGFloat scale = 1.0 - (lastScale - [recognizer scale]);
+    //    CGAffineTransform currentTransform = [recognizer view].transform;
+    //    CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
+    //    [[recognizer view]setTransform:newTransform];
+    if (_divSize.width >= _maxWidth && scale > 1) {
+        return;
+    }
+    if (_divSize.width <= minWidth && scale < 1) {
+        return;
+    }
+    _divSize.width *= scale;
+    
+    if (_divSize.width < minWidth) {
+        _divSize.width = minWidth;
+    } else if (_divSize.width > _maxWidth) {
+        _divSize.width = _maxWidth;
+    }
+    if (touchCount == 2) {
+        CGPoint p1 = [recognizer locationOfTouch: 0 inView:self];
+        CGPoint p2 = [recognizer locationOfTouch: 1 inView:self];
+        CGPoint newCenter = CGPointMake((p1.x+p2.x)/2,(p1.y+p2.y)/2);
+        NSLog(@"%@", NSStringFromCGPoint(newCenter));
+        [self.scrollView setContentOffset:CGPointMake((self.scrollView.contentOffset.x + newCenter.x) * scale - newCenter.x, self.scrollView.contentOffset.y)];
+    }
+    [self resizeDiv];
+    
+    lastScale = [recognizer scale];
 }
 
 @end
