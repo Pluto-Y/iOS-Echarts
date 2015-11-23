@@ -60,6 +60,8 @@
 		6CDE012E1BA88111006A18D5 /* PYMarkPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE012D1BA88111006A18D5 /* PYMarkPoint.m */; };
 		6CF1AA2D1C02A32600F1B773 /* CandlestickDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1AA2B1C02A32600F1B773 /* CandlestickDemoController.m */; };
 		6CF1AA2E1C02A32600F1B773 /* CandlestickDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF1AA2C1C02A32600F1B773 /* CandlestickDemoController.xib */; };
+		6CF1AA321C02AF5600F1B773 /* ScatterDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1AA301C02AF5600F1B773 /* ScatterDemoController.m */; };
+		6CF1AA331C02AF5600F1B773 /* ScatterDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF1AA311C02AF5600F1B773 /* ScatterDemoController.xib */; };
 		6CFF3AA51B9FF64C00BAF9A7 /* PYOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */; };
 /* End PBXBuildFile section */
 
@@ -172,6 +174,9 @@
 		6CF1AA2A1C02A32600F1B773 /* CandlestickDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandlestickDemoController.h; sourceTree = "<group>"; };
 		6CF1AA2B1C02A32600F1B773 /* CandlestickDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandlestickDemoController.m; sourceTree = "<group>"; };
 		6CF1AA2C1C02A32600F1B773 /* CandlestickDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CandlestickDemoController.xib; sourceTree = "<group>"; };
+		6CF1AA2F1C02AF5600F1B773 /* ScatterDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScatterDemoController.h; sourceTree = "<group>"; };
+		6CF1AA301C02AF5600F1B773 /* ScatterDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScatterDemoController.m; sourceTree = "<group>"; };
+		6CF1AA311C02AF5600F1B773 /* ScatterDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScatterDemoController.xib; sourceTree = "<group>"; };
 		6CFF3AA31B9FF64C00BAF9A7 /* PYOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYOption.h; path = Model/PYOption.h; sourceTree = "<group>"; };
 		6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYOption.m; path = Model/PYOption.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -227,6 +232,9 @@
 				6CF1AA2A1C02A32600F1B773 /* CandlestickDemoController.h */,
 				6CF1AA2B1C02A32600F1B773 /* CandlestickDemoController.m */,
 				6CF1AA2C1C02A32600F1B773 /* CandlestickDemoController.xib */,
+				6CF1AA2F1C02AF5600F1B773 /* ScatterDemoController.h */,
+				6CF1AA301C02AF5600F1B773 /* ScatterDemoController.m */,
+				6CF1AA311C02AF5600F1B773 /* ScatterDemoController.xib */,
 			);
 			name = Controller;
 			path = "iOS-Echarts_Demo/Controller";
@@ -488,6 +496,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C0658E81BB85B4F003CAAE5 /* LineDemoController.xib in Resources */,
+				6CF1AA331C02AF5600F1B773 /* ScatterDemoController.xib in Resources */,
 				6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */,
 				6C34720D1BF470E600C16B73 /* echarts.html in Resources */,
 				6C0658DA1BB85B46003CAAE5 /* LaunchScreen.xib in Resources */,
@@ -555,6 +564,7 @@
 				6CC846601BC15E4D00947312 /* RMMapper.m in Sources */,
 				6C023FA11BA7267000C0883D /* PYTooltip.m in Sources */,
 				6C023FA41BA727DC00C0883D /* PYAxisPointer.m in Sources */,
+				6CF1AA321C02AF5600F1B773 /* ScatterDemoController.m in Sources */,
 				6C7C956A1B9DF2EF00D80042 /* PYJsonUtil.m in Sources */,
 				6C7C958F1B9EC47500D80042 /* PYLabelLine.m in Sources */,
 			);
