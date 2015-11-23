@@ -12,12 +12,6 @@
 #import "PYOption.h"
 #import "PYJsonUtil.h"
 
-//#define DEFAULT_WIDTH_DIFF_CONSTANT 100
-//#define DEFAULT_HEIGHT_DIFF_CONSTANT 70
-//#define DEFAULT_LEFT_MARGIN_DIFF_CONSTANT -50
-//#define DEFAULT_TOP_MARGIN_DIFF_CONSTANT -50
-//#define DEFAULT_LEGEND_HEIGHT 50
-
 #define DEFAULT_WIDTH_DIFF_CONSTANT 100
 #define DEFAULT_HEIGHT_DIFF_CONSTANT 70
 #define DEFAULT_LEFT_MARGIN_DIFF_CONSTANT -50
@@ -38,6 +32,7 @@
     NSURLRequest *request;
     CGFloat lastScale;
     CGFloat minWidth;
+    CGPoint tapPoint;
 }
 
 @end
@@ -124,7 +119,7 @@
     [self resizeDiv];
     
     NSString *jsonStr = [PYJsonUtil getJSONString:option];
-    NSLog(@"%@",jsonStr);
+//    NSLog(@"%@",jsonStr);
     NSString *js = [NSString stringWithFormat:@"%@(%@)", @"loadEcharts", jsonStr];
     [webView stringByEvaluatingJavaScriptFromString:js];
 }
@@ -144,7 +139,7 @@
     NSString *divSizeCss = [NSString stringWithFormat:@"'height:%.0fpx;width:%.0fpx;'", height, width];
     NSString *js = [NSString stringWithFormat:@"%@(%@)", @"resizeDiv", divSizeCss];
     [self stringByEvaluatingJavaScriptFromString:js];
-    NSLog(@"cssText:%@", divSizeCss);
+//    NSLog(@"cssText:%@", divSizeCss);
 }
 
 -(void)setOption:(PYOption *)pyOption {
@@ -157,6 +152,9 @@
     return YES;
 }
 
+/**
+ *  缩放手势
+ */
 -(void)pinchGestureHandle:(id)sender {
     UIPinchGestureRecognizer *recognizer = (UIPinchGestureRecognizer *)sender;
     int touchCount = (int)[recognizer numberOfTouches];
@@ -186,12 +184,54 @@
         CGPoint p1 = [recognizer locationOfTouch: 0 inView:self];
         CGPoint p2 = [recognizer locationOfTouch: 1 inView:self];
         CGPoint newCenter = CGPointMake((p1.x+p2.x)/2,(p1.y+p2.y)/2);
-        NSLog(@"%@", NSStringFromCGPoint(newCenter));
+//        NSLog(@"%@", NSStringFromCGPoint(newCenter));
         [self.scrollView setContentOffset:CGPointMake((self.scrollView.contentOffset.x + newCenter.x) * scale - newCenter.x, self.scrollView.contentOffset.y)];
     }
     [self resizeDiv];
     
     lastScale = [recognizer scale];
+}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
+    NSURL *url = request.URL;
+    NSLog(@"%@", url);
+    if (![[url.scheme lowercaseString] hasPrefix:@"pyechartaction"]) {
+        return YES;
+    }
+    
+    // get the action from the path
+    NSString *actionType = url.host;
+    // deserialize the request JSON
+    NSString *jsonDictString = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+    // decode the json params to dictionary
+    NSData *paramData = [jsonDictString dataUsingEncoding:NSUTF8StringEncoding];
+    NSError *err;
+    NSDictionary *paramsDic;
+    if (jsonDictString != nil && ![jsonDictString isEqualToString:@""]) {
+        paramsDic = [NSJSONSerialization JSONObjectWithData:paramData options:NSJSONReadingMutableContainers error:&err];
+        if(err) {
+            NSLog(@"Json decode failed：%@",err);
+            paramsDic = nil;
+        }
+    }
+    
+    
+    
+    // look at the actionType and do whatever you want here
+    if ([actionType isEqualToString:ACTION_TYPE_CLICK]) {
+        if (tapPoint.x != 0 || tapPoint.y != 0) {
+            if (paramsDic != nil) {
+                if (_echartDelegate != nil && [_echartDelegate respondsToSelector:@selector(echartClick:pointInView:)]) {
+                    [_echartDelegate echartClick:paramsDic pointInView:tapPoint];
+                }
+            }
+            tapPoint = CGPointZero;
+        }
+    } else if([actionType isEqualToString:ACTION_TYPE_DBCLICK]  ) {
+        
+    }
+    
+    return NO;
 }
 
 @end

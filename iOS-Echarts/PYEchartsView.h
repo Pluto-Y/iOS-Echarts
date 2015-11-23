@@ -10,11 +10,21 @@
 
 @class PYOption;
 
+@protocol PYEchartsViewDelegate <NSObject>
+
+@optional
+-(void)echartClick:(NSDictionary *)dic pointInView:(CGPoint) point;
+
+@end
+
+
 @interface PYEchartsView : UIWebView<UIWebViewDelegate>
 
 @property (assign, nonatomic) UIEdgeInsets padding;
 @property (assign, nonatomic) CGSize divSize;
 @property (assign, nonatomic) CGFloat maxWidth;
+
+@property (retain, nonatomic) id<PYEchartsViewDelegate> echartDelegate;
 
 /**
  *  加载视图
