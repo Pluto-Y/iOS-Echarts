@@ -18,6 +18,8 @@
 #import "BarDemoController.h"
 // 饼图
 #import "PieDemoController.h"
+// K线图
+#import "CandlestickDemoController.h"
 
 @interface ViewController ()
 
@@ -152,6 +154,9 @@
             break;
         case 10002:
             controller = [[PieDemoController alloc] init];
+            break;
+        case 10003:
+            controller = [[CandlestickDemoController alloc] init];
             break;
         default:
             break;

@@ -58,6 +58,8 @@
 		6CDE01251BA87A5A006A18D5 /* PYToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE01241BA87A5A006A18D5 /* PYToolbox.m */; };
 		6CDE012B1BA87DD1006A18D5 /* PYMarkLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE012A1BA87DD1006A18D5 /* PYMarkLine.m */; };
 		6CDE012E1BA88111006A18D5 /* PYMarkPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE012D1BA88111006A18D5 /* PYMarkPoint.m */; };
+		6CF1AA2D1C02A32600F1B773 /* CandlestickDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1AA2B1C02A32600F1B773 /* CandlestickDemoController.m */; };
+		6CF1AA2E1C02A32600F1B773 /* CandlestickDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF1AA2C1C02A32600F1B773 /* CandlestickDemoController.xib */; };
 		6CFF3AA51B9FF64C00BAF9A7 /* PYOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */; };
 /* End PBXBuildFile section */
 
@@ -167,6 +169,9 @@
 		6CDE012A1BA87DD1006A18D5 /* PYMarkLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYMarkLine.m; path = Model/Series/PYMarkLine.m; sourceTree = "<group>"; };
 		6CDE012C1BA88111006A18D5 /* PYMarkPoint.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYMarkPoint.h; path = Model/Series/PYMarkPoint.h; sourceTree = "<group>"; };
 		6CDE012D1BA88111006A18D5 /* PYMarkPoint.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYMarkPoint.m; path = Model/Series/PYMarkPoint.m; sourceTree = "<group>"; };
+		6CF1AA2A1C02A32600F1B773 /* CandlestickDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandlestickDemoController.h; sourceTree = "<group>"; };
+		6CF1AA2B1C02A32600F1B773 /* CandlestickDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandlestickDemoController.m; sourceTree = "<group>"; };
+		6CF1AA2C1C02A32600F1B773 /* CandlestickDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CandlestickDemoController.xib; sourceTree = "<group>"; };
 		6CFF3AA31B9FF64C00BAF9A7 /* PYOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYOption.h; path = Model/PYOption.h; sourceTree = "<group>"; };
 		6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYOption.m; path = Model/PYOption.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -219,6 +224,9 @@
 				6CB02A7F1BBF7739002E1126 /* PieDemoController.h */,
 				6CB02A801BBF7739002E1126 /* PieDemoController.m */,
 				6CB02A811BBF7739002E1126 /* PieDemoController.xib */,
+				6CF1AA2A1C02A32600F1B773 /* CandlestickDemoController.h */,
+				6CF1AA2B1C02A32600F1B773 /* CandlestickDemoController.m */,
+				6CF1AA2C1C02A32600F1B773 /* CandlestickDemoController.xib */,
 			);
 			name = Controller;
 			path = "iOS-Echarts_Demo/Controller";
@@ -485,6 +493,7 @@
 				6C0658DA1BB85B46003CAAE5 /* LaunchScreen.xib in Resources */,
 				6C3472131BF4712400C16B73 /* js in Resources */,
 				6C0658E61BB85B4F003CAAE5 /* BarDemoController.xib in Resources */,
+				6CF1AA2E1C02A32600F1B773 /* CandlestickDemoController.xib in Resources */,
 				6C0658DB1BB85B46003CAAE5 /* Main.storyboard in Resources */,
 				6CB02A831BBF7739002E1126 /* PieDemoController.xib in Resources */,
 				6C0658CD1BB85B29003CAAE5 /* Info.plist in Resources */,
@@ -540,6 +549,7 @@
 				6CB02A7E1BBEAC66002E1126 /* MainController.m in Sources */,
 				6CB02A821BBF7739002E1126 /* PieDemoController.m in Sources */,
 				6C7C957A1B9EA39D00D80042 /* PYSeries.m in Sources */,
+				6CF1AA2D1C02A32600F1B773 /* CandlestickDemoController.m in Sources */,
 				6C0658E91BB85B4F003CAAE5 /* ViewController.m in Sources */,
 				6C7C95711B9DF87400D80042 /* PYTextStyle.m in Sources */,
 				6CC846601BC15E4D00947312 /* RMMapper.m in Sources */,
