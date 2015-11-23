@@ -16,21 +16,27 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHg-NV-g33">
+                <button opaque="NO" tag="300001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHg-NV-g33">
                     <rect key="frame" x="152" y="29" width="70" height="30"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="gzl-pt-vcH"/>
                     </constraints>
                     <state key="normal" title="标准K线图"/>
+                    <connections>
+                        <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="MVs-71-a9F"/>
+                    </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdI-IQ-M6C">
+                <button opaque="NO" tag="300002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdI-IQ-M6C">
                     <rect key="frame" x="167" y="72" width="40" height="30"/>
                     <animations/>
                     <constraints>
                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="u7D-ST-B43"/>
                     </constraints>
                     <state key="normal" title="K线图"/>
+                    <connections>
+                        <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="RMY-cf-DzK"/>
+                    </connections>
                 </button>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0f-zu-Hn8" customClass="PYEchartsView">
                     <rect key="frame" x="0.0" y="417" width="375" height="200"/>

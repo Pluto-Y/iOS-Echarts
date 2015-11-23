@@ -17,10 +17,10 @@
     if (self) {
         _zlevel = @(0);
         _z = @(0);
-        _x = @(0);
-        _y = @(0);
-        _x2 = @(0);
-        _y2 = @(0);
+//        _x = @(0);
+//        _y = @(0);
+//        _x2 = @(0);
+//        _y2 = @(0);
         _backgroundColor = PYRGBA(0, 0, 0, 0);
         _borderWidth = @(1);
         _borderColor = PYRGBA(12, 12, 12, 1);
