@@ -2,7 +2,7 @@
 //  PYTimeline.m
 //  iOS-Echarts
 //
-//  Created by ChipSea on 15/10/4.
+//  Created by Pluto-Y on 15/10/4.
 //  Copyright © 2015年 pluto-y. All rights reserved.
 //
 

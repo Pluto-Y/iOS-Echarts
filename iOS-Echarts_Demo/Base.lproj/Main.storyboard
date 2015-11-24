@@ -96,13 +96,16 @@
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dzM-Ah-XrS"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWi-xk-cHA">
+                            <button opaque="NO" tag="10004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWi-xk-cHA">
                                 <rect key="frame" x="137.5" y="173" width="45" height="30"/>
                                 <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="Cio-Rf-0vR"/>
                                 </constraints>
                                 <state key="normal" title="散点图"/>
+                                <connections>
+                                    <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CXn-Nq-6MJ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>

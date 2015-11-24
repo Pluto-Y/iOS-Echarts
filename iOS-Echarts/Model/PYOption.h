@@ -15,6 +15,7 @@
 #import "PYToolbox.h"
 #import "PYDataZoom.h"
 #import "PYCartesianSeries.h"
+#import "PYDataRange.h"
 
 @interface PYOption : NSObject
 
@@ -22,11 +23,13 @@
 @property (retain, nonatomic) NSArray *color;
 @property (assign, nonatomic) BOOL renderAsImage;
 @property (assign, nonatomic) BOOL calculable;
+@property (assign, nonatomic) BOOL animation;
 @property (retain, nonatomic) PYTimeline *timeline;
 @property (retain, nonatomic) PYTitle *title;
 @property (retain, nonatomic) PYToolbox *toolbox;
 @property (retain, nonatomic) PYTooltip *tooltip;
 @property (retain, nonatomic) PYLegend *legend;
+@property (retain, nonatomic) PYDataRange *dataRange;
 @property (retain, nonatomic) PYDataZoom *dataZoom;
 @property (retain, nonatomic) PYGrid *grid;
 @property (retain, nonatomic) NSMutableArray *xAxis;

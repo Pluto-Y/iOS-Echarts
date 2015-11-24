@@ -2,7 +2,7 @@
 //  BarDemoControllerViewController.h
 //  iOS-Echarts
 //
-//  Created by ChipSea on 15/9/27.
+//  Created by Pluto-Y on 15/9/27.
 //  Copyright © 2015年 pluto-y. All rights reserved.
 //
 

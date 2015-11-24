@@ -62,6 +62,7 @@
 		6CF1AA2E1C02A32600F1B773 /* CandlestickDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF1AA2C1C02A32600F1B773 /* CandlestickDemoController.xib */; };
 		6CF1AA321C02AF5600F1B773 /* ScatterDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1AA301C02AF5600F1B773 /* ScatterDemoController.m */; };
 		6CF1AA331C02AF5600F1B773 /* ScatterDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF1AA311C02AF5600F1B773 /* ScatterDemoController.xib */; };
+		6CF1AA371C02EEE500F1B773 /* PYDataRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1AA361C02EEE500F1B773 /* PYDataRange.m */; };
 		6CFF3AA51B9FF64C00BAF9A7 /* PYOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */; };
 /* End PBXBuildFile section */
 
@@ -177,6 +178,8 @@
 		6CF1AA2F1C02AF5600F1B773 /* ScatterDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScatterDemoController.h; sourceTree = "<group>"; };
 		6CF1AA301C02AF5600F1B773 /* ScatterDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScatterDemoController.m; sourceTree = "<group>"; };
 		6CF1AA311C02AF5600F1B773 /* ScatterDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScatterDemoController.xib; sourceTree = "<group>"; };
+		6CF1AA351C02EEE500F1B773 /* PYDataRange.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYDataRange.h; path = Model/PYDataRange.h; sourceTree = "<group>"; };
+		6CF1AA361C02EEE500F1B773 /* PYDataRange.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYDataRange.m; path = Model/PYDataRange.m; sourceTree = "<group>"; };
 		6CFF3AA31B9FF64C00BAF9A7 /* PYOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYOption.h; path = Model/PYOption.h; sourceTree = "<group>"; };
 		6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYOption.m; path = Model/PYOption.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -361,6 +364,8 @@
 				6C7C95771B9EA33E00D80042 /* Series */,
 				6C3916C31BE0557100A2388A /* PYAxisTick.h */,
 				6C3916C41BE0557100A2388A /* PYAxisTick.m */,
+				6CF1AA351C02EEE500F1B773 /* PYDataRange.h */,
+				6CF1AA361C02EEE500F1B773 /* PYDataRange.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -546,6 +551,7 @@
 				6C305A4C1BAB1EF900762DBD /* PYToolboxFeature.m in Sources */,
 				6C7C955D1B9DEA6900D80042 /* PYAxis.m in Sources */,
 				6C305A361BA9C80D00762DBD /* PYLabel.m in Sources */,
+				6CF1AA371C02EEE500F1B773 /* PYDataRange.m in Sources */,
 				6CAB6A381BB1BA8B00293E0B /* PYDataZoom.m in Sources */,
 				6C305A331BA9C80D00762DBD /* PYAreaStyle.m in Sources */,
 				6CC8465F1BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.m in Sources */,

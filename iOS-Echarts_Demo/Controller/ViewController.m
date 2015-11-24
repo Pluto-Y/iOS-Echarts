@@ -20,6 +20,8 @@
 #import "PieDemoController.h"
 // K线图
 #import "CandlestickDemoController.h"
+// 散点图
+#import "ScatterDemoController.h"
 
 @interface ViewController ()
 
@@ -157,6 +159,9 @@
             break;
         case 10003:
             controller = [[CandlestickDemoController alloc] init];
+            break;
+        case 10004:
+            controller = [[ScatterDemoController alloc] init];
             break;
         default:
             break;

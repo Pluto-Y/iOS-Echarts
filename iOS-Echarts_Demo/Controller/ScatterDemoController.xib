@@ -20,37 +20,49 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vz4-mB-pXn">
                     <rect key="frame" x="0.0" y="0.0" width="187.5" height="200"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppr-w1-99m">
+                        <button opaque="NO" tag="300001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ppr-w1-99m">
                             <rect key="frame" x="56" y="23" width="75" height="30"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="Dsm-iw-PPf"/>
                             </constraints>
                             <state key="normal" title="标准散点图"/>
+                            <connections>
+                                <action selector="kDemoBtnClick:" destination="-1" eventType="touchUpInside" id="oAh-Zh-vnh"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Nn-Uh-VRU">
+                        <button opaque="NO" tag="300002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Nn-Uh-VRU">
                             <rect key="frame" x="56" y="61" width="75" height="30"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="x4H-Pc-or2"/>
                             </constraints>
                             <state key="normal" title="标准气泡图"/>
+                            <connections>
+                                <action selector="kDemoBtnClick:" destination="-1" eventType="touchUpInside" id="M2G-1v-Pp8"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ve-7X-Cbh">
+                        <button opaque="NO" tag="300003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4Ve-7X-Cbh">
                             <rect key="frame" x="48" y="99" width="90" height="30"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="v7E-dD-PXh"/>
                             </constraints>
                             <state key="normal" title="大规模散点图"/>
+                            <connections>
+                                <action selector="kDemoBtnClick:" destination="-1" eventType="touchUpInside" id="K08-eP-0Lz"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZa-hv-g3N">
+                        <button opaque="NO" tag="300004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oZa-hv-g3N">
                             <rect key="frame" x="56" y="137" width="75" height="30"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="3E8-dY-50H"/>
                             </constraints>
                             <state key="normal" title="类目散点图"/>
+                            <connections>
+                                <action selector="kDemoBtnClick:" destination="-1" eventType="touchUpInside" id="jOR-YT-koI"/>
+                            </connections>
                         </button>
                     </subviews>
                     <animations/>
@@ -70,37 +82,49 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LkJ-C5-rcv">
                     <rect key="frame" x="187" y="0.0" width="187.5" height="200"/>
                     <subviews>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnr-xg-zhL">
+                        <button opaque="NO" tag="300005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qnr-xg-zhL">
                             <rect key="frame" x="63" y="23" width="60" height="30"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="zi9-PN-xfD"/>
                             </constraints>
                             <state key="normal" title="时间坐标"/>
+                            <connections>
+                                <action selector="kDemoBtnClick:" destination="-1" eventType="touchUpInside" id="pjt-Ad-gZl"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqW-dt-fBc">
+                        <button opaque="NO" tag="300006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IqW-dt-fBc">
                             <rect key="frame" x="56" y="61" width="75" height="30"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="57c-Ec-jZL"/>
                             </constraints>
                             <state key="normal" title="搭配时间轴"/>
+                            <connections>
+                                <action selector="kDemoBtnClick:" destination="-1" eventType="touchUpInside" id="Waf-1M-1un"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndh-Cx-HAn">
+                        <button opaque="NO" tag="300007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndh-Cx-HAn">
                             <rect key="frame" x="48" y="99" width="90" height="30"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="r0F-Tl-JDV"/>
                             </constraints>
                             <state key="normal" title="搭配值域漫游"/>
+                            <connections>
+                                <action selector="kDemoBtnClick:" destination="-1" eventType="touchUpInside" id="8hK-53-y8c"/>
+                            </connections>
                         </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3g-oy-1qa">
+                        <button opaque="NO" tag="300008" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R3g-oy-1qa">
                             <rect key="frame" x="71" y="137" width="45" height="30"/>
                             <animations/>
                             <constraints>
                                 <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="45" id="G7S-Fy-QbE"/>
                             </constraints>
                             <state key="normal" title="散点图"/>
+                            <connections>
+                                <action selector="kDemoBtnClick:" destination="-1" eventType="touchUpInside" id="OSf-64-fUX"/>
+                            </connections>
                         </button>
                     </subviews>
                     <animations/>
@@ -118,11 +142,11 @@
                     </constraints>
                 </view>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dZ7-co-Zf4" customClass="PYEchartsView">
-                    <rect key="frame" x="0.0" y="417" width="375" height="200"/>
+                    <rect key="frame" x="0.0" y="267" width="375" height="350"/>
                     <animations/>
                     <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="200" id="zdw-hY-e4p"/>
+                        <constraint firstAttribute="height" constant="350" id="zdw-hY-e4p"/>
                     </constraints>
                 </webView>
             </subviews>
