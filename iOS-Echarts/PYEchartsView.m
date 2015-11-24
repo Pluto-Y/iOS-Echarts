@@ -29,7 +29,7 @@
 
 @interface PYEchartsView() {
     PYOption *option;
-    NSURLRequest *request;
+    NSURLRequest *localRequest;
     CGFloat lastScale;
     CGFloat minWidth;
     CGPoint tapPoint;
@@ -63,7 +63,7 @@
     NSBundle *echartsBundle = [NSBundle mainBundle];
     NSString *urlString = [echartsBundle pathForResource:@"echarts" ofType:@"html"];
     NSURL *url =[NSURL URLWithString:urlString];
-    request =[NSURLRequest requestWithURL:url];
+    localRequest =[NSURLRequest requestWithURL:url];
     self.delegate = self;
     self.scrollView.bounces = NO;
     self.scrollView.scrollEnabled = NO;
@@ -87,7 +87,7 @@
  *  加载视图
  */
 -(void)loadEcharts {
-    [self loadRequest:request];
+    [self loadRequest:localRequest];
 }
 /**
  *  刷新图表，而不是重新加载(即恢复到最初设置的option)
