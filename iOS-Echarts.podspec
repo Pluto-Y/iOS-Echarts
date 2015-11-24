@@ -3,7 +3,7 @@ Pod::Spec.new do |s|
   s.version      = "1.1.3"
   s.summary      = "A custom component for the ecomfe's echarts."
   s.homepage     = "https://github.com/Pluto-Y/iOS-Echarts"
-  s.license      = "MIT"
+  s.license      = { :type => "MIT", :file => 'LICENSE.md' }
   s.author       = { "PlutoY" => "kuaileainits@163.com" }
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/Pluto-Y/iOS-Echarts.git", :tag => s.version}
