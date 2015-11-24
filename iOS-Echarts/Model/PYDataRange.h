@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYColor.h"
 
-@class PYTextStyle;
+@class PYTextStyle, PYColor;
 
 @interface PYDataRange : NSObject
 

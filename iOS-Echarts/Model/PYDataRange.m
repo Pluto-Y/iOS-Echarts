@@ -7,6 +7,7 @@
 //
 
 #import "PYDataRange.h"
+#import "PYColor.h"
 
 @implementation PYDataRange
 
