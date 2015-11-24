@@ -7,7 +7,7 @@ Pod::Spec.new do |s|
   s.author       = { "PlutoY" => "kuaileainits@163.com" }
   s.platform     = :ios, "7.0"
   s.source       = { :git => "https://github.com/Pluto-Y/iOS-Echarts.git", :tag => s.version}
-  s.source_files = "iOS-Echarts/**/*.{h,m,js,html}"
-  s.resource     = "iOS-Echarts/iOS-Echarts.bundle"
+  s.source_files = "iOS-Echarts/**/*.{h,m}"
+  s.resource     = "iOS-Echarts/Resources/**"
   s.requires_arc = true
 end
