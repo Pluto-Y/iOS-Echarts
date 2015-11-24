@@ -6,7 +6,7 @@
 //  Copyright (c) 2015年 pluto-y. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #define PYRGBA(r, g, b, a) [[PYColor alloc] initWithColor:[UIColor colorWithRed:r/255.0 green:g/255.0 blue:b/255.0 alpha:a]]
 
