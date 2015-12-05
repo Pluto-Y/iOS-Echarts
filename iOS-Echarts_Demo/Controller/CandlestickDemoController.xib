@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CandlestickDemoController">
@@ -16,47 +16,61 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" tag="300001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHg-NV-g33">
-                    <rect key="frame" x="152" y="29" width="70" height="30"/>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QAd-vx-Wcp">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <subviews>
+                        <button opaque="NO" tag="300001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHg-NV-g33">
+                            <rect key="frame" x="152.5" y="20" width="70" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="gzl-pt-vcH"/>
+                            </constraints>
+                            <state key="normal" title="标准K线图"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="MVs-71-a9F"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" tag="300002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdI-IQ-M6C">
+                            <rect key="frame" x="167.5" y="63" width="40" height="30"/>
+                            <animations/>
+                            <constraints>
+                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="u7D-ST-B43"/>
+                            </constraints>
+                            <state key="normal" title="K线图"/>
+                            <connections>
+                                <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="RMY-cf-DzK"/>
+                            </connections>
+                        </button>
+                        <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0f-zu-Hn8" customClass="PYEchartsView">
+                            <rect key="frame" x="0.0" y="113" width="375" height="300"/>
+                            <animations/>
+                            <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="pKu-QY-D8l"/>
+                            </constraints>
+                        </webView>
+                    </subviews>
                     <animations/>
                     <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="gzl-pt-vcH"/>
+                        <constraint firstItem="hHg-NV-g33" firstAttribute="centerX" secondItem="QAd-vx-Wcp" secondAttribute="centerX" id="4qd-MT-bmt"/>
+                        <constraint firstAttribute="bottom" secondItem="u0f-zu-Hn8" secondAttribute="bottom" constant="20" id="5Z2-QU-G7p"/>
+                        <constraint firstItem="JdI-IQ-M6C" firstAttribute="centerX" secondItem="hHg-NV-g33" secondAttribute="centerX" id="686-bv-cLR"/>
+                        <constraint firstItem="JdI-IQ-M6C" firstAttribute="top" secondItem="hHg-NV-g33" secondAttribute="bottom" constant="13" id="DJ5-sk-NIw"/>
+                        <constraint firstItem="u0f-zu-Hn8" firstAttribute="leading" secondItem="QAd-vx-Wcp" secondAttribute="leading" id="EG8-uW-AG1"/>
+                        <constraint firstItem="hHg-NV-g33" firstAttribute="top" secondItem="QAd-vx-Wcp" secondAttribute="top" constant="20" id="NBw-yH-4em"/>
+                        <constraint firstAttribute="trailing" secondItem="u0f-zu-Hn8" secondAttribute="trailing" id="TpA-aY-rk9"/>
+                        <constraint firstItem="u0f-zu-Hn8" firstAttribute="top" secondItem="JdI-IQ-M6C" secondAttribute="bottom" constant="20" id="x1s-Aq-lDd"/>
                     </constraints>
-                    <state key="normal" title="标准K线图"/>
-                    <connections>
-                        <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="MVs-71-a9F"/>
-                    </connections>
-                </button>
-                <button opaque="NO" tag="300002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JdI-IQ-M6C">
-                    <rect key="frame" x="167" y="72" width="40" height="30"/>
-                    <animations/>
-                    <constraints>
-                        <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="u7D-ST-B43"/>
-                    </constraints>
-                    <state key="normal" title="K线图"/>
-                    <connections>
-                        <action selector="kDemosClick:" destination="-1" eventType="touchUpInside" id="RMY-cf-DzK"/>
-                    </connections>
-                </button>
-                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u0f-zu-Hn8" customClass="PYEchartsView">
-                    <rect key="frame" x="0.0" y="417" width="375" height="200"/>
-                    <animations/>
-                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="200" id="pKu-QY-D8l"/>
-                    </constraints>
-                </webView>
+                </scrollView>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="JdI-IQ-M6C" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="1UN-7i-5H4"/>
-                <constraint firstItem="hHg-NV-g33" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="AmI-1v-SRA"/>
-                <constraint firstAttribute="bottom" secondItem="u0f-zu-Hn8" secondAttribute="bottom" constant="50" id="eA7-Ow-aBB"/>
-                <constraint firstItem="hHg-NV-g33" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="29" id="fF4-32-CeM"/>
-                <constraint firstItem="JdI-IQ-M6C" firstAttribute="top" secondItem="hHg-NV-g33" secondAttribute="bottom" constant="13" id="j40-Mf-pIP"/>
-                <constraint firstItem="u0f-zu-Hn8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="qjx-FW-3BK"/>
-                <constraint firstAttribute="trailing" secondItem="u0f-zu-Hn8" secondAttribute="trailing" id="sL0-o6-44N"/>
+                <constraint firstAttribute="trailing" secondItem="QAd-vx-Wcp" secondAttribute="trailing" id="1lI-Xd-pcc"/>
+                <constraint firstAttribute="bottom" secondItem="QAd-vx-Wcp" secondAttribute="bottom" id="IIj-d1-HwU"/>
+                <constraint firstItem="QAd-vx-Wcp" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LUJ-Zg-wnk"/>
+                <constraint firstItem="QAd-vx-Wcp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="M3W-0g-4Ph"/>
+                <constraint firstItem="u0f-zu-Hn8" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="ipH-fW-G7E"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="122.5" y="336.5"/>

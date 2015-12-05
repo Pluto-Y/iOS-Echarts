@@ -9,6 +9,15 @@
     <script src="js/echarts.js"></script>
     <script type="text/javascript">
     var option;
+    var myChart;
+    function echartViewAction(param) {
+        if (typeof param.seriesIndex != 'undefined') {
+            document.location.href = 'pyEchartAction://' + param.type + '#{"seriesIndex":"' +  + param.seriesIndex + '","dataIndex":"' + param.dataIndex + '"}';
+        } else {
+            document.location.href = 'pyEchartAction://' + param.type;
+        }
+        //document.location.href = 'pyEchartAction://' + param.type + '#{' + param.seriesIndex + ':' + param.dataIndex + '}';
+    }
     function preTask(obj) {
         var result;
         if(typeof(obj) == 'object') {
@@ -69,7 +78,7 @@
             ],
             function (ec) {
                 // 基于准备好的dom，初始化echarts图表
-                var myChart = ec.init(document.getElementById('main')); 
+                myChart = ec.init(document.getElementById('main'));
                 option = preTask(testdate);
                 //option = preTask(testdate);
                 // 为echarts对象加载数据
@@ -94,7 +103,9 @@
                 'echarts',
                 'echarts/chart/line', // 使用柱状图就加载line模块，按需加载
                 'echarts/chart/bar',
-                'echarts/chart/pie'
+                'echarts/chart/pie',
+                'echarts/chart/k',
+                'echarts/chart/scatter'
             ],
             function (ec) {
                 var ecConfig = require('echarts/config');
@@ -104,6 +115,11 @@
                 // 为echarts对象加载数据
                 myChart.setOption(option);
                 myChart.on(ecConfig.EVENT.CLICK, echartViewAction);
+                myChart.on(ecConfig.EVENT.DBLCLICK, echartViewAction);
+                myChart.on(ecConfig.EVENT.DATA_ZOOM, echartViewAction);
+                myChart.on(ecConfig.EVENT.LEGEND_SELECTED, echartViewAction);
+                myChart.on(ecConfig.EVENT.MAGIC_TYPE_CHANGED, echartViewAction);
+                myChart.on(ecConfig.EVENT.DATA_VIEW_CHANGED, echartViewAction);
             }
         );
     }

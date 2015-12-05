@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        _grid = [[PYGrid alloc] init];
+        
     }
     return self;
 }

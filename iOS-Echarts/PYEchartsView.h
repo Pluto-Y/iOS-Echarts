@@ -13,7 +13,8 @@
 @protocol PYEchartsViewDelegate <NSObject>
 
 @optional
--(void)echartClick:(NSDictionary *)dic pointInView:(CGPoint) point;
+-(void)echartClick:(NSDictionary *)paramDic pointInView:(CGPoint) point;
+-(void)echartDbClick:(NSDictionary *)paramDic;
 
 @end
 
@@ -23,6 +24,7 @@
 @property (assign, nonatomic) UIEdgeInsets padding;
 @property (assign, nonatomic) CGSize divSize;
 @property (assign, nonatomic) CGFloat maxWidth;
+@property (assign, nonatomic) BOOL scalable;
 
 @property (retain, nonatomic) id<PYEchartsViewDelegate> echartDelegate;
 
@@ -37,5 +39,6 @@
  *  @param option EChart的option
  */
 -(void)setOption:(PYOption *)pyOption;
+
 
 @end

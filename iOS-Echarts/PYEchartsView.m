@@ -73,6 +73,7 @@
     
     _divSize = CGSizeZero;
     minWidth = self.frame.size.width - 10;
+    _scalable = NO;
     
     
     _maxWidth = NSIntegerMax;
@@ -119,13 +120,13 @@
     [self resizeDiv];
     
     NSString *jsonStr = [PYJsonUtil getJSONString:option];
-//    NSLog(@"%@",jsonStr);
+    NSLog(@"%@",jsonStr);
     NSString *js = [NSString stringWithFormat:@"%@(%@)", @"loadEcharts", jsonStr];
     [webView stringByEvaluatingJavaScriptFromString:js];
 }
 
 /**
- *  根据
+ *
  */
 -(void)resizeDiv {
     float height = self.frame.size.height - 20;
@@ -156,6 +157,9 @@
  *  缩放手势
  */
 -(void)pinchGestureHandle:(id)sender {
+    if (!_scalable) {
+        return;
+    }
     UIPinchGestureRecognizer *recognizer = (UIPinchGestureRecognizer *)sender;
     int touchCount = (int)[recognizer numberOfTouches];
     //当手指离开屏幕时,将lastscale设置为1.0
@@ -164,9 +168,6 @@
         return;
     }
     CGFloat scale = 1.0 - (lastScale - [recognizer scale]);
-    //    CGAffineTransform currentTransform = [recognizer view].transform;
-    //    CGAffineTransform newTransform = CGAffineTransformScale(currentTransform, scale, scale);
-    //    [[recognizer view]setTransform:newTransform];
     if (_divSize.width >= _maxWidth && scale > 1) {
         return;
     }
@@ -192,6 +193,10 @@
     lastScale = [recognizer scale];
 }
 
+/**
+ *  用于处理Echart出现的各种事件
+ *  如点击、双击等
+ */
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSURL *url = request.URL;
     NSLog(@"%@", url);
@@ -215,10 +220,8 @@
         }
     }
     
-    
-    
     // look at the actionType and do whatever you want here
-    if ([actionType isEqualToString:ACTION_TYPE_CLICK]) {
+    if ([actionType isEqualToString:ACTION_TYPE_CLICK]) {// Click Event
         if (tapPoint.x != 0 || tapPoint.y != 0) {
             if (paramsDic != nil) {
                 if (_echartDelegate != nil && [_echartDelegate respondsToSelector:@selector(echartClick:pointInView:)]) {
@@ -227,7 +230,13 @@
             }
             tapPoint = CGPointZero;
         }
-    } else if([actionType isEqualToString:ACTION_TYPE_DBCLICK]  ) {
+    } else if([actionType isEqualToString:ACTION_TYPE_DBCLICK]  ) {// Double Click Event
+        if (paramsDic != nil) {
+            if (_echartDelegate != nil && [_echartDelegate respondsToSelector:@selector(echartDbClick:)]) {
+                [_echartDelegate echartDbClick:paramsDic];
+            }
+        }
+    } else {
         
     }
     
