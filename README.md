@@ -3,6 +3,8 @@
 
 注：如果小伙伴觉得这个工具有用的话，麻烦点一下star，你的star是我继续的动力！
 
+![screen-shot](https://raw.githubusercontent.com/Pluto-Y/iOS-Echarts/master/Doc/Demos.gif)
+
 #Echarts信息
 [Echarts Github地址](https://github.com/ecomfe/echarts)
 
