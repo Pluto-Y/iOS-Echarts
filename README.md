@@ -1,6 +1,8 @@
 # iOS- Echarts - 将ECharts封装成iOS控件
 本项目是将百度的ECharts工具封装成对应的iOS的控件，并且将其中javascript的属性封装成对应的对象。方便程序员在编写程序的过程中更加关注OC的代码，避免在使用百度的ECharts工具的过程中过多的关注javascript语法和与javascript之间的交互。
 
+注：如果小伙伴觉得这个工具有用的话，麻烦点一下star，你的star是我继续的动力！
+
 #Echarts信息
 [Echarts Github地址](https://github.com/ecomfe/echarts)
 
@@ -19,3 +21,6 @@
 最后只需通过对图表的属性进行配置即可。
 
 至于其中的参数与文档可以参考上方的[Echart官网](http://echarts.baidu.com/)进行查看与配置。
+
+#打个广告
+由于这个项目需要封装的内容有点多，希望有小伙伴一起来封装，有兴趣的小伙伴可以通过联系[@叫什么都都不如叫Pluto-Y](http://weibo.com/5690716723/info)来联系我。
