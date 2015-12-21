@@ -22,6 +22,8 @@
 #import "CandlestickDemoController.h"
 // 散点图
 #import "ScatterDemoController.h"
+//雷达图
+#import "RadarDemoController.h"
 
 @interface ViewController ()
 
@@ -162,6 +164,9 @@
             break;
         case 10004:
             controller = [[ScatterDemoController alloc] init];
+            break;
+        case 10005:
+            controller = [[RadarDemoController alloc] init];
             break;
         default:
             break;
