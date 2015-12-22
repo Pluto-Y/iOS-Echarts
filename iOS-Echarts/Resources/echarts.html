@@ -85,6 +85,10 @@
             }
         );
 	}
+    function refreshWithOption(optionData) {
+        option = preTask(optionData);
+        myChart.setOption(option, true);
+    }
     function resizeDiv(cssText) {
         var divMain = document.getElementById("main");
         divMain.style.cssText = cssText;
