@@ -21,6 +21,9 @@
 		6C0658E71BB85B4F003CAAE5 /* LineDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658E11BB85B4F003CAAE5 /* LineDemoController.m */; };
 		6C0658E81BB85B4F003CAAE5 /* LineDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658E21BB85B4F003CAAE5 /* LineDemoController.xib */; };
 		6C0658E91BB85B4F003CAAE5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658E41BB85B4F003CAAE5 /* ViewController.m */; };
+		6C2805A21C27BBF80076EAFB /* RadarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2805A01C27BBF80076EAFB /* RadarDemoController.m */; };
+		6C2805A31C27BBF80076EAFB /* RadarDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C2805A11C27BBF80076EAFB /* RadarDemoController.xib */; };
+		6C2805A61C27C3590076EAFB /* PYPolar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2805A51C27C3590076EAFB /* PYPolar.m */; };
 		6C305A331BA9C80D00762DBD /* PYAreaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A231BA9C80D00762DBD /* PYAreaStyle.m */; };
 		6C305A351BA9C80D00762DBD /* PYItemStyleProp.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A271BA9C80D00762DBD /* PYItemStyleProp.m */; };
 		6C305A361BA9C80D00762DBD /* PYLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C305A291BA9C80D00762DBD /* PYLabel.m */; };
@@ -55,6 +58,7 @@
 		6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */; };
 		6CD026F91BC00A04009EE2AA /* PYPieSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD026F81BC00A04009EE2AA /* PYPieSeries.m */; };
 		6CD026FC1BC03AEA009EE2AA /* PYTimeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD026FB1BC03AEA009EE2AA /* PYTimeline.m */; };
+		6CD883EA1C27B9B700A751B9 /* PYRadarSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD883E91C27B9B700A751B9 /* PYRadarSeries.m */; };
 		6CDE01251BA87A5A006A18D5 /* PYToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE01241BA87A5A006A18D5 /* PYToolbox.m */; };
 		6CDE012B1BA87DD1006A18D5 /* PYMarkLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE012A1BA87DD1006A18D5 /* PYMarkLine.m */; };
 		6CDE012E1BA88111006A18D5 /* PYMarkPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE012D1BA88111006A18D5 /* PYMarkPoint.m */; };
@@ -101,6 +105,11 @@
 		6C0658E21BB85B4F003CAAE5 /* LineDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineDemoController.xib; sourceTree = "<group>"; };
 		6C0658E31BB85B4F003CAAE5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6C0658E41BB85B4F003CAAE5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6C28059F1C27BBF80076EAFB /* RadarDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarDemoController.h; sourceTree = "<group>"; };
+		6C2805A01C27BBF80076EAFB /* RadarDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarDemoController.m; sourceTree = "<group>"; };
+		6C2805A11C27BBF80076EAFB /* RadarDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadarDemoController.xib; sourceTree = "<group>"; };
+		6C2805A41C27C3590076EAFB /* PYPolar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYPolar.h; path = Model/PYPolar.h; sourceTree = "<group>"; };
+		6C2805A51C27C3590076EAFB /* PYPolar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYPolar.m; path = Model/PYPolar.m; sourceTree = "<group>"; };
 		6C305A221BA9C80D00762DBD /* PYAreaStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYAreaStyle.h; path = Model/PYAreaStyle.h; sourceTree = "<group>"; };
 		6C305A231BA9C80D00762DBD /* PYAreaStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYAreaStyle.m; path = Model/PYAreaStyle.m; sourceTree = "<group>"; };
 		6C305A261BA9C80D00762DBD /* PYItemStyleProp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYItemStyleProp.h; path = Model/PYItemStyleProp.h; sourceTree = "<group>"; };
@@ -166,6 +175,8 @@
 		6CD026F81BC00A04009EE2AA /* PYPieSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYPieSeries.m; path = Model/Series/PYPieSeries.m; sourceTree = "<group>"; };
 		6CD026FA1BC03AEA009EE2AA /* PYTimeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYTimeline.h; path = Model/PYTimeline.h; sourceTree = "<group>"; };
 		6CD026FB1BC03AEA009EE2AA /* PYTimeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYTimeline.m; path = Model/PYTimeline.m; sourceTree = "<group>"; };
+		6CD883E81C27B9B700A751B9 /* PYRadarSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYRadarSeries.h; path = Model/Series/PYRadarSeries.h; sourceTree = "<group>"; };
+		6CD883E91C27B9B700A751B9 /* PYRadarSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYRadarSeries.m; path = Model/Series/PYRadarSeries.m; sourceTree = "<group>"; };
 		6CDE01231BA87A5A006A18D5 /* PYToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYToolbox.h; path = Model/PYToolbox.h; sourceTree = "<group>"; };
 		6CDE01241BA87A5A006A18D5 /* PYToolbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYToolbox.m; path = Model/PYToolbox.m; sourceTree = "<group>"; };
 		6CDE01291BA87DD1006A18D5 /* PYMarkLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYMarkLine.h; path = Model/Series/PYMarkLine.h; sourceTree = "<group>"; };
@@ -239,6 +250,9 @@
 				6CF1AA2F1C02AF5600F1B773 /* ScatterDemoController.h */,
 				6CF1AA301C02AF5600F1B773 /* ScatterDemoController.m */,
 				6CF1AA311C02AF5600F1B773 /* ScatterDemoController.xib */,
+				6C28059F1C27BBF80076EAFB /* RadarDemoController.h */,
+				6C2805A01C27BBF80076EAFB /* RadarDemoController.m */,
+				6C2805A11C27BBF80076EAFB /* RadarDemoController.xib */,
 			);
 			name = Controller;
 			path = "iOS-Echarts_Demo/Controller";
@@ -367,6 +381,8 @@
 				6C023F9F1BA7267000C0883D /* PYTooltip.h */,
 				6C023FA01BA7267000C0883D /* PYTooltip.m */,
 				6C7C95771B9EA33E00D80042 /* Series */,
+				6C2805A41C27C3590076EAFB /* PYPolar.h */,
+				6C2805A51C27C3590076EAFB /* PYPolar.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -393,6 +409,8 @@
 				6CDE012D1BA88111006A18D5 /* PYMarkPoint.m */,
 				6CD026F71BC00A04009EE2AA /* PYPieSeries.h */,
 				6CD026F81BC00A04009EE2AA /* PYPieSeries.m */,
+				6CD883E81C27B9B700A751B9 /* PYRadarSeries.h */,
+				6CD883E91C27B9B700A751B9 /* PYRadarSeries.m */,
 			);
 			name = Series;
 			sourceTree = "<group>";
@@ -513,6 +531,7 @@
 				6CF944C31C0422910067F63B /* echarts.html in Resources */,
 				6CB02A831BBF7739002E1126 /* PieDemoController.xib in Resources */,
 				6C0658CD1BB85B29003CAAE5 /* Info.plist in Resources */,
+				6C2805A31C27BBF80076EAFB /* RadarDemoController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -530,12 +549,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C2805A61C27C3590076EAFB /* PYPolar.m in Sources */,
 				6C0658E71BB85B4F003CAAE5 /* LineDemoController.m in Sources */,
 				6C023F431BA4792500C0883D /* NSObject+PYObject.m in Sources */,
 				6CAB6A3B1BB266B100293E0B /* PYGrid.m in Sources */,
 				6C7C955A1B9DE82D00D80042 /* PYLineStyle.m in Sources */,
 				6CFF3AA51B9FF64C00BAF9A7 /* PYOption.m in Sources */,
 				6C7C957D1B9EA53400D80042 /* PYCartesianSeries.m in Sources */,
+				6CD883EA1C27B9B700A751B9 /* PYRadarSeries.m in Sources */,
 				6C0658CE1BB85B29003CAAE5 /* main.m in Sources */,
 				6CC8465E1BC15E4D00947312 /* NSObject+RMCopyable.m in Sources */,
 				6CDE01251BA87A5A006A18D5 /* PYToolbox.m in Sources */,
@@ -549,6 +570,7 @@
 				6C7C956E1B9DF47800D80042 /* PYSplitLine.m in Sources */,
 				6CDE012B1BA87DD1006A18D5 /* PYMarkLine.m in Sources */,
 				6C0658D31BB85B34003CAAE5 /* AppDelegate.m in Sources */,
+				6C2805A21C27BBF80076EAFB /* RadarDemoController.m in Sources */,
 				6C7C95601B9DEB5100D80042 /* PYAxisLabel.m in Sources */,
 				6C305A4C1BAB1EF900762DBD /* PYToolboxFeature.m in Sources */,
 				6C7C955D1B9DEA6900D80042 /* PYAxis.m in Sources */,
