@@ -16,11 +16,13 @@
 #import "PYDataZoom.h"
 #import "PYCartesianSeries.h"
 #import "PYDataRange.h"
+#import "PYPolar.h"
 
 @interface PYOption : NSObject
 
 @property (retain, nonatomic) PYColor *backgroundColor;
 @property (retain, nonatomic) NSArray *color;
+@property (retain, nonatomic) PYPolar *polar;
 @property (assign, nonatomic) BOOL renderAsImage;
 @property (assign, nonatomic) BOOL calculable;
 @property (assign, nonatomic) BOOL animation;
