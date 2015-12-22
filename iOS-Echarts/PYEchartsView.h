@@ -40,5 +40,18 @@
  */
 -(void)setOption:(PYOption *)pyOption;
 
+/**
+ *  根据新给的PYOption刷新Echarts
+ *  通过该方法可以保证重新加载Echarts而是刷新
+ *
+ *  @param newOption EChart的option
+ */
+-(void)refreshEchartsWithOption:(PYOption *)newOption;
+
+/**
+ *  刷新图表，而不是重新加载(即恢复到最初设置的option)
+ */
+-(void)refreshEcharts;
+
 
 @end
