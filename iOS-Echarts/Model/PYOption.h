@@ -17,6 +17,7 @@
 #import "PYCartesianSeries.h"
 #import "PYDataRange.h"
 #import "PYPolar.h"
+#import "PYRoamController.h"
 
 @interface PYOption : NSObject
 
@@ -33,6 +34,7 @@
 @property (retain, nonatomic) PYLegend *legend;
 @property (retain, nonatomic) PYDataRange *dataRange;
 @property (retain, nonatomic) PYDataZoom *dataZoom;
+@property (retain, nonatomic) PYRoamController *roamController;
 @property (retain, nonatomic) PYGrid *grid;
 @property (retain, nonatomic) NSMutableArray *xAxis;
 @property (retain, nonatomic) NSMutableArray *yAxis;

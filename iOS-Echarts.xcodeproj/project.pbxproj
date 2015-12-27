@@ -21,6 +21,7 @@
 		6C0658E71BB85B4F003CAAE5 /* LineDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658E11BB85B4F003CAAE5 /* LineDemoController.m */; };
 		6C0658E81BB85B4F003CAAE5 /* LineDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658E21BB85B4F003CAAE5 /* LineDemoController.xib */; };
 		6C0658E91BB85B4F003CAAE5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658E41BB85B4F003CAAE5 /* ViewController.m */; };
+		6C0882851C2F94EE00EA0D34 /* PYRoamController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0882841C2F94EE00EA0D34 /* PYRoamController.m */; };
 		6C2805A21C27BBF80076EAFB /* RadarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2805A01C27BBF80076EAFB /* RadarDemoController.m */; };
 		6C2805A31C27BBF80076EAFB /* RadarDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C2805A11C27BBF80076EAFB /* RadarDemoController.xib */; };
 		6C2805A61C27C3590076EAFB /* PYPolar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2805A51C27C3590076EAFB /* PYPolar.m */; };
@@ -105,6 +106,8 @@
 		6C0658E21BB85B4F003CAAE5 /* LineDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineDemoController.xib; sourceTree = "<group>"; };
 		6C0658E31BB85B4F003CAAE5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6C0658E41BB85B4F003CAAE5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6C0882831C2F94EE00EA0D34 /* PYRoamController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYRoamController.h; path = Model/PYRoamController.h; sourceTree = "<group>"; };
+		6C0882841C2F94EE00EA0D34 /* PYRoamController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYRoamController.m; path = Model/PYRoamController.m; sourceTree = "<group>"; };
 		6C28059F1C27BBF80076EAFB /* RadarDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarDemoController.h; sourceTree = "<group>"; };
 		6C2805A01C27BBF80076EAFB /* RadarDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarDemoController.m; sourceTree = "<group>"; };
 		6C2805A11C27BBF80076EAFB /* RadarDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadarDemoController.xib; sourceTree = "<group>"; };
@@ -383,6 +386,8 @@
 				6C7C95771B9EA33E00D80042 /* Series */,
 				6C2805A41C27C3590076EAFB /* PYPolar.h */,
 				6C2805A51C27C3590076EAFB /* PYPolar.m */,
+				6C0882831C2F94EE00EA0D34 /* PYRoamController.h */,
+				6C0882841C2F94EE00EA0D34 /* PYRoamController.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -585,6 +590,7 @@
 				6C0658E51BB85B4F003CAAE5 /* BarDemoController.m in Sources */,
 				6C3916C51BE0557100A2388A /* PYAxisTick.m in Sources */,
 				6C7C95741B9E84B700D80042 /* PYLegend.m in Sources */,
+				6C0882851C2F94EE00EA0D34 /* PYRoamController.m in Sources */,
 				6CB02A7E1BBEAC66002E1126 /* MainController.m in Sources */,
 				6CB02A821BBF7739002E1126 /* PieDemoController.m in Sources */,
 				6C7C957A1B9EA39D00D80042 /* PYSeries.m in Sources */,
