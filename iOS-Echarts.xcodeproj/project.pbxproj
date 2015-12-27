@@ -54,6 +54,7 @@
 		6CB02A7E1BBEAC66002E1126 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB02A7D1BBEAC66002E1126 /* MainController.m */; };
 		6CB02A821BBF7739002E1126 /* PieDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB02A801BBF7739002E1126 /* PieDemoController.m */; };
 		6CB02A831BBF7739002E1126 /* PieDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CB02A811BBF7739002E1126 /* PieDemoController.xib */; };
+		6CB97F2E1C304D120031C827 /* PYHeatmapSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB97F2D1C304D120031C827 /* PYHeatmapSeries.m */; };
 		6CC8465D1BC15E4D00947312 /* NSObject+RMArchivable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC846561BC15E4D00947312 /* NSObject+RMArchivable.m */; };
 		6CC8465E1BC15E4D00947312 /* NSObject+RMCopyable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC846581BC15E4D00947312 /* NSObject+RMCopyable.m */; };
 		6CC8465F1BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8465A1BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.m */; };
@@ -170,6 +171,8 @@
 		6CB02A7F1BBF7739002E1126 /* PieDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieDemoController.h; sourceTree = "<group>"; };
 		6CB02A801BBF7739002E1126 /* PieDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieDemoController.m; sourceTree = "<group>"; };
 		6CB02A811BBF7739002E1126 /* PieDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PieDemoController.xib; sourceTree = "<group>"; };
+		6CB97F2C1C304D120031C827 /* PYHeatmapSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYHeatmapSeries.h; path = Model/Series/PYHeatmapSeries.h; sourceTree = "<group>"; };
+		6CB97F2D1C304D120031C827 /* PYHeatmapSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYHeatmapSeries.m; path = Model/Series/PYHeatmapSeries.m; sourceTree = "<group>"; };
 		6CC846551BC15E4D00947312 /* NSObject+RMArchivable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RMArchivable.h"; sourceTree = "<group>"; };
 		6CC846561BC15E4D00947312 /* NSObject+RMArchivable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RMArchivable.m"; sourceTree = "<group>"; };
 		6CC846571BC15E4D00947312 /* NSObject+RMCopyable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RMCopyable.h"; sourceTree = "<group>"; };
@@ -424,6 +427,8 @@
 				6CD026F81BC00A04009EE2AA /* PYPieSeries.m */,
 				6CD883E81C27B9B700A751B9 /* PYRadarSeries.h */,
 				6CD883E91C27B9B700A751B9 /* PYRadarSeries.m */,
+				6CB97F2C1C304D120031C827 /* PYHeatmapSeries.h */,
+				6CB97F2D1C304D120031C827 /* PYHeatmapSeries.m */,
 			);
 			name = Series;
 			sourceTree = "<group>";
@@ -580,6 +585,7 @@
 				6C7C95831B9EB31A00D80042 /* PYItemStyle.m in Sources */,
 				6C305A351BA9C80D00762DBD /* PYItemStyleProp.m in Sources */,
 				6CDE012E1BA88111006A18D5 /* PYMarkPoint.m in Sources */,
+				6CB97F2E1C304D120031C827 /* PYHeatmapSeries.m in Sources */,
 				6C7C95661B9DF04400D80042 /* PYColor.m in Sources */,
 				6C7C956E1B9DF47800D80042 /* PYSplitLine.m in Sources */,
 				6CDE012B1BA87DD1006A18D5 /* PYMarkLine.m in Sources */,
