@@ -22,8 +22,10 @@
 #import "CandlestickDemoController.h"
 // 散点图
 #import "ScatterDemoController.h"
-//雷达图
+// 雷达图
 #import "RadarDemoController.h"
+// 地图
+#import "MapDemoController.h"
 
 @interface ViewController ()
 
@@ -150,23 +152,26 @@
     UIButton *btn = (UIButton *)sender;
     UIViewController *controller;
     switch (btn.tag) {
-        case 10000:
+        case 10000: // 折线图
             controller = [[LineDemoController alloc] init];
             break;
-        case 10001:
+        case 10001: // 柱状图
             controller = [[BarDemoController alloc] init];
             break;
-        case 10002:
+        case 10002: // 饼图
             controller = [[PieDemoController alloc] init];
             break;
-        case 10003:
+        case 10003: // K线图
             controller = [[CandlestickDemoController alloc] init];
             break;
-        case 10004:
+        case 10004: // 散点图
             controller = [[ScatterDemoController alloc] init];
             break;
-        case 10005:
+        case 10005: // 雷达图
             controller = [[RadarDemoController alloc] init];
+            break;
+        case 10006: // 地图
+            controller = [[MapDemoController alloc] init];
             break;
         default:
             break;

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
         <!--Main Controller-->
@@ -46,7 +47,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="10000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5W-J3-r7t">
-                                <rect key="frame" x="137" y="21" width="46" height="30"/>
+                                <rect key="frame" x="57" y="21" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LYE-g0-wVq"/>
                                     <constraint firstAttribute="width" constant="46" id="w04-6j-d0c"/>
@@ -59,7 +60,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiU-vF-ufv">
-                                <rect key="frame" x="137" y="59" width="46" height="30"/>
+                                <rect key="frame" x="57" y="59" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Gyj-39-1wY"/>
                                     <constraint firstAttribute="width" constant="46" id="lxy-7d-YaV"/>
@@ -70,7 +71,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJX-aJ-ZQR">
-                                <rect key="frame" x="137" y="97" width="46" height="30"/>
+                                <rect key="frame" x="57" y="97" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="dl2-Qt-FaJ"/>
                                     <constraint firstAttribute="height" constant="30" id="opy-Pr-lkI"/>
@@ -81,7 +82,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbF-qF-UwD">
-                                <rect key="frame" x="140" y="135" width="40" height="30"/>
+                                <rect key="frame" x="60" y="135" width="40" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="dZ4-S0-5Ie"/>
                                 </constraints>
@@ -91,7 +92,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWi-xk-cHA">
-                                <rect key="frame" x="137.5" y="173" width="45" height="30"/>
+                                <rect key="frame" x="57" y="173" width="45" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="Cio-Rf-0vR"/>
                                 </constraints>
@@ -100,22 +101,30 @@
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CXn-Nq-6MJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="10005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9J-ow-V3G">
-                                <rect key="frame" x="138" y="211" width="45" height="30"/>
+                            <button opaque="NO" tag="10005" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9J-ow-V3G">
+                                <rect key="frame" x="58" y="211" width="45" height="30"/>
                                 <state key="normal" title="雷达图"/>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gbs-9p-h1E"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" tag="10006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtY-4D-J1e">
+                                <rect key="frame" x="225" y="21" width="30" height="30"/>
+                                <state key="normal" title="地图"/>
+                                <connections>
+                                    <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xv2-n1-Rv8"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Z0s-pS-3OI" secondAttribute="centerX" id="3qd-DQ-sqD"/>
-                            <constraint firstItem="DWi-xk-cHA" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="7A5-bY-yhp"/>
+                            <constraint firstItem="DWi-xk-cHA" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="7A5-bY-yhp"/>
                             <constraint firstItem="S5W-J3-r7t" firstAttribute="top" secondItem="Z0s-pS-3OI" secondAttribute="bottom" id="9KZ-d9-dUb"/>
-                            <constraint firstItem="S5W-J3-r7t" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="GKi-s6-ZdY"/>
-                            <constraint firstItem="aJX-aJ-ZQR" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="LB9-Fo-rFV"/>
-                            <constraint firstItem="AiU-vF-ufv" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="LRb-09-FDm"/>
+                            <constraint firstItem="S5W-J3-r7t" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="GKi-s6-ZdY"/>
+                            <constraint firstItem="aJX-aJ-ZQR" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="LB9-Fo-rFV"/>
+                            <constraint firstItem="AiU-vF-ufv" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="LRb-09-FDm"/>
+                            <constraint firstItem="wtY-4D-J1e" firstAttribute="top" secondItem="S5W-J3-r7t" secondAttribute="top" id="fZv-qP-jGd"/>
                             <constraint firstItem="CbF-qF-UwD" firstAttribute="top" secondItem="aJX-aJ-ZQR" secondAttribute="bottom" constant="8" id="giP-GS-QKN"/>
                             <constraint firstItem="Z0s-pS-3OI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="mDX-sG-buo"/>
                             <constraint firstItem="DWi-xk-cHA" firstAttribute="top" secondItem="CbF-qF-UwD" secondAttribute="bottom" constant="8" id="oFc-S2-NWA"/>
@@ -123,7 +132,8 @@
                             <constraint firstItem="x9J-ow-V3G" firstAttribute="centerX" secondItem="DWi-xk-cHA" secondAttribute="centerX" id="q3c-1J-7Xj"/>
                             <constraint firstItem="aJX-aJ-ZQR" firstAttribute="top" secondItem="AiU-vF-ufv" secondAttribute="bottom" constant="8" id="r68-Vc-M3p"/>
                             <constraint firstItem="x9J-ow-V3G" firstAttribute="top" secondItem="DWi-xk-cHA" secondAttribute="bottom" constant="8" id="wqE-PO-xN2"/>
-                            <constraint firstItem="CbF-qF-UwD" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="z5W-C5-xfj"/>
+                            <constraint firstItem="wtY-4D-J1e" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="1.5" id="yDD-LO-isz"/>
+                            <constraint firstItem="CbF-qF-UwD" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="z5W-C5-xfj"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sSa-nS-qdn"/>

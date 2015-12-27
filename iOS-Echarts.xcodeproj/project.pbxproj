@@ -22,6 +22,8 @@
 		6C0658E81BB85B4F003CAAE5 /* LineDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658E21BB85B4F003CAAE5 /* LineDemoController.xib */; };
 		6C0658E91BB85B4F003CAAE5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658E41BB85B4F003CAAE5 /* ViewController.m */; };
 		6C0882851C2F94EE00EA0D34 /* PYRoamController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0882841C2F94EE00EA0D34 /* PYRoamController.m */; };
+		6C08828E1C303F4400EA0D34 /* MapDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08828C1C303F4400EA0D34 /* MapDemoController.m */; };
+		6C08828F1C303F4400EA0D34 /* MapDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C08828D1C303F4400EA0D34 /* MapDemoController.xib */; };
 		6C2805A21C27BBF80076EAFB /* RadarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2805A01C27BBF80076EAFB /* RadarDemoController.m */; };
 		6C2805A31C27BBF80076EAFB /* RadarDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C2805A11C27BBF80076EAFB /* RadarDemoController.xib */; };
 		6C2805A61C27C3590076EAFB /* PYPolar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2805A51C27C3590076EAFB /* PYPolar.m */; };
@@ -108,6 +110,9 @@
 		6C0658E41BB85B4F003CAAE5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6C0882831C2F94EE00EA0D34 /* PYRoamController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYRoamController.h; path = Model/PYRoamController.h; sourceTree = "<group>"; };
 		6C0882841C2F94EE00EA0D34 /* PYRoamController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYRoamController.m; path = Model/PYRoamController.m; sourceTree = "<group>"; };
+		6C08828B1C303F4400EA0D34 /* MapDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDemoController.h; sourceTree = "<group>"; };
+		6C08828C1C303F4400EA0D34 /* MapDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDemoController.m; sourceTree = "<group>"; };
+		6C08828D1C303F4400EA0D34 /* MapDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapDemoController.xib; sourceTree = "<group>"; };
 		6C28059F1C27BBF80076EAFB /* RadarDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarDemoController.h; sourceTree = "<group>"; };
 		6C2805A01C27BBF80076EAFB /* RadarDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarDemoController.m; sourceTree = "<group>"; };
 		6C2805A11C27BBF80076EAFB /* RadarDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadarDemoController.xib; sourceTree = "<group>"; };
@@ -256,6 +261,9 @@
 				6C28059F1C27BBF80076EAFB /* RadarDemoController.h */,
 				6C2805A01C27BBF80076EAFB /* RadarDemoController.m */,
 				6C2805A11C27BBF80076EAFB /* RadarDemoController.xib */,
+				6C08828B1C303F4400EA0D34 /* MapDemoController.h */,
+				6C08828C1C303F4400EA0D34 /* MapDemoController.m */,
+				6C08828D1C303F4400EA0D34 /* MapDemoController.xib */,
 			);
 			name = Controller;
 			path = "iOS-Echarts_Demo/Controller";
@@ -531,6 +539,7 @@
 				6C0658DA1BB85B46003CAAE5 /* LaunchScreen.xib in Resources */,
 				6C3472131BF4712400C16B73 /* js in Resources */,
 				6C0658E61BB85B4F003CAAE5 /* BarDemoController.xib in Resources */,
+				6C08828F1C303F4400EA0D34 /* MapDemoController.xib in Resources */,
 				6CF1AA2E1C02A32600F1B773 /* CandlestickDemoController.xib in Resources */,
 				6C0658DB1BB85B46003CAAE5 /* Main.storyboard in Resources */,
 				6CF944C31C0422910067F63B /* echarts.html in Resources */,
@@ -585,6 +594,7 @@
 				6C305A331BA9C80D00762DBD /* PYAreaStyle.m in Sources */,
 				6CC8465F1BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.m in Sources */,
 				6C023F9E1BA722EC00C0883D /* PYTitle.m in Sources */,
+				6C08828E1C303F4400EA0D34 /* MapDemoController.m in Sources */,
 				6CC8465D1BC15E4D00947312 /* NSObject+RMArchivable.m in Sources */,
 				6C305A451BAAA7E500762DBD /* PYEchartsView.m in Sources */,
 				6C0658E51BB85B4F003CAAE5 /* BarDemoController.m in Sources */,
