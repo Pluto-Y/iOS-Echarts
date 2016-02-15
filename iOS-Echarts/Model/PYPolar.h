@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PYLineStyle.h"
+#import "PYAxisLabel.h"
+#import "PYAreaStyle.h"
 
 @interface PYPolar : NSObject
 
