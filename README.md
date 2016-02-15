@@ -20,8 +20,8 @@
 
 * 通过`cocoapods`进行导入：`pod 'iOS-Echarts' `
 * 手动导入：
-* 将项目下的`iOS-Echarts`目录拷贝到项目中
-* `Remove References`移除js目录，然后通过`create floder references`的方式添加js目录
+    * 将项目下的`iOS-Echarts`目录拷贝到项目中
+    * `Remove References`移除js目录，然后通过`create floder references`的方式添加js目录
 
 在需要使用的地方引入`PYEchartsView.h`和`PYOption.h`。
 最后只需通过对图表的属性进行配置即可。
