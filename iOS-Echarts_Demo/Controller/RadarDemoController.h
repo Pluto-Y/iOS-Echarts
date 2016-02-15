@@ -2,7 +2,7 @@
 //  RadarDemoControllerViewController.h
 //  iOS-Echarts
 //
-//  Created by ChipSea on 15/12/21.
+//  Created by Pluto Y on 15/12/21.
 //  Copyright © 2015年 pluto-y. All rights reserved.
 //
 
