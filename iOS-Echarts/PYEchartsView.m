@@ -200,6 +200,10 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSURL *url = request.URL;
     NSLog(@"%@", url);
+    if ([[url.scheme lowercaseString] hasPrefix:@"http"]) {
+        [[UIApplication sharedApplication] openURL:url];
+        return YES;
+    }
     if (![[url.scheme lowercaseString] hasPrefix:@"pyechartaction"]) {
         return YES;
     }

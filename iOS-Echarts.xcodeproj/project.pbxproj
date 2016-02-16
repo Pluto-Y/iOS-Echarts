@@ -63,6 +63,7 @@
 		6CD026F91BC00A04009EE2AA /* PYPieSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD026F81BC00A04009EE2AA /* PYPieSeries.m */; };
 		6CD026FC1BC03AEA009EE2AA /* PYTimeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD026FB1BC03AEA009EE2AA /* PYTimeline.m */; };
 		6CD883EA1C27B9B700A751B9 /* PYRadarSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD883E91C27B9B700A751B9 /* PYRadarSeries.m */; };
+		6CD9740C1C73A14A0054BAE7 /* PYMapSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CD9740B1C73A14A0054BAE7 /* PYMapSeries.m */; };
 		6CDE01251BA87A5A006A18D5 /* PYToolbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE01241BA87A5A006A18D5 /* PYToolbox.m */; };
 		6CDE012B1BA87DD1006A18D5 /* PYMarkLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE012A1BA87DD1006A18D5 /* PYMarkLine.m */; };
 		6CDE012E1BA88111006A18D5 /* PYMarkPoint.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CDE012D1BA88111006A18D5 /* PYMarkPoint.m */; };
@@ -188,6 +189,8 @@
 		6CD026FB1BC03AEA009EE2AA /* PYTimeline.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYTimeline.m; path = Model/PYTimeline.m; sourceTree = "<group>"; };
 		6CD883E81C27B9B700A751B9 /* PYRadarSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYRadarSeries.h; path = Model/Series/PYRadarSeries.h; sourceTree = "<group>"; };
 		6CD883E91C27B9B700A751B9 /* PYRadarSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYRadarSeries.m; path = Model/Series/PYRadarSeries.m; sourceTree = "<group>"; };
+		6CD9740A1C73A14A0054BAE7 /* PYMapSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYMapSeries.h; path = Model/Series/PYMapSeries.h; sourceTree = "<group>"; };
+		6CD9740B1C73A14A0054BAE7 /* PYMapSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYMapSeries.m; path = Model/Series/PYMapSeries.m; sourceTree = "<group>"; };
 		6CDE01231BA87A5A006A18D5 /* PYToolbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYToolbox.h; path = Model/PYToolbox.h; sourceTree = "<group>"; };
 		6CDE01241BA87A5A006A18D5 /* PYToolbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYToolbox.m; path = Model/PYToolbox.m; sourceTree = "<group>"; };
 		6CDE01291BA87DD1006A18D5 /* PYMarkLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYMarkLine.h; path = Model/Series/PYMarkLine.h; sourceTree = "<group>"; };
@@ -429,6 +432,8 @@
 				6CD883E91C27B9B700A751B9 /* PYRadarSeries.m */,
 				6CB97F2C1C304D120031C827 /* PYHeatmapSeries.h */,
 				6CB97F2D1C304D120031C827 /* PYHeatmapSeries.m */,
+				6CD9740A1C73A14A0054BAE7 /* PYMapSeries.h */,
+				6CD9740B1C73A14A0054BAE7 /* PYMapSeries.m */,
 			);
 			name = Series;
 			sourceTree = "<group>";
@@ -590,6 +595,7 @@
 				6C7C956E1B9DF47800D80042 /* PYSplitLine.m in Sources */,
 				6CDE012B1BA87DD1006A18D5 /* PYMarkLine.m in Sources */,
 				6C0658D31BB85B34003CAAE5 /* AppDelegate.m in Sources */,
+				6CD9740C1C73A14A0054BAE7 /* PYMapSeries.m in Sources */,
 				6C2805A21C27BBF80076EAFB /* RadarDemoController.m in Sources */,
 				6C7C95601B9DEB5100D80042 /* PYAxisLabel.m in Sources */,
 				6C305A4C1BAB1EF900762DBD /* PYToolboxFeature.m in Sources */,
