@@ -6,7 +6,7 @@
       div {background-color: transparent}
 	</style>
     <!-- ECharts单文件引入 -->
-    <script src="js/echarts.js"></script>
+    <script src="js/echarts-all.js"></script>
     <script type="text/javascript">
     var option;
     var myChart;
@@ -52,39 +52,15 @@
     }
 	/**  
 	 * 构建动态图表  
-	 * @param url   获取后台数据地址  
-	 * @param time  图表查询时间  
-	 * @param elem  加载容器  
 	 */  
-	function loadEcharts(testdate){
-		// 路径配置
-        require.config({
-            paths: {
-                echarts: 'js'
-            }
-        });
-        
-        // 使用
-        require(
-            [
-                'echarts',
-                'echarts/chart/line', // 使用柱状图就加载line模块，按需加载
-                'echarts/chart/bar',
-                'echarts/chart/pie',
-                'echarts/chart/k',
-                'echarts/chart/scatter',
-                'echarts/chart/radar',
-                'echarts/chart/map'
-            ],
-            function (ec) {
-                // 基于准备好的dom，初始化echarts图表
-                myChart = ec.init(document.getElementById('main'));
-                option = preTask(testdate);
-                //option = preTask(testdate);
-                // 为echarts对象加载数据
-                myChart.setOption(option);
-            }
-        );
+	function loadEcharts(echartJson){
+		// 基于准备好的dom，初始化echarts图表
+        myChart = echarts.init(document.getElementById('main'));
+        //alert("json:" + JSON.stringify(echartJson));
+        option = preTask(echartJson);
+        //option = preTask(testdate);
+        // 为echarts对象加载数据
+        myChart.setOption(option);
 	}
     function refreshWithOption(optionData) {
         option = preTask(optionData);
@@ -95,43 +71,21 @@
         divMain.style.cssText = cssText;
     }
     function initEchartView() {
-        // 路径配置
-        require.config({
-            paths: {
-                echarts: 'js'
-            }
-        });
-        // 使用
-        require(
-            [
-                'echarts',
-                'echarts/chart/line', // 使用柱状图就加载line模块，按需加载
-                'echarts/chart/bar',
-                'echarts/chart/pie',
-                'echarts/chart/k',
-                'echarts/chart/scatter',
-                'echarts/chart/radar',
-                'echarts/chart/map'
-            ],
-            function (ec) {
-                var ecConfig = require('echarts/config');
-                // 基于准备好的dom，初始化echarts图表
-                myChart = ec.init(document.getElementById('main'));
+        // 基于准备好的dom，初始化echarts图表
+        myChart = echarts.init(document.getElementById('main'));
                 
-                // 为echarts对象加载数据
-                myChart.setOption(option);
-                myChart.on(ecConfig.EVENT.CLICK, echartViewAction);
-                myChart.on(ecConfig.EVENT.DBLCLICK, echartViewAction);
-                myChart.on(ecConfig.EVENT.DATA_ZOOM, echartViewAction);
-                myChart.on(ecConfig.EVENT.LEGEND_SELECTED, echartViewAction);
-                myChart.on(ecConfig.EVENT.MAGIC_TYPE_CHANGED, echartViewAction);
-                myChart.on(ecConfig.EVENT.DATA_VIEW_CHANGED, echartViewAction);
-            }
-        );
+        // 为echarts对象加载数据
+        myChart.setOption(option);
+        myChart.on(ecConfig.EVENT.CLICK, echartViewAction);
+        myChart.on(ecConfig.EVENT.DBLCLICK, echartViewAction);
+        myChart.on(ecConfig.EVENT.DATA_ZOOM, echartViewAction);
+        myChart.on(ecConfig.EVENT.LEGEND_SELECTED, echartViewAction);
+        myChart.on(ecConfig.EVENT.MAGIC_TYPE_CHANGED, echartViewAction);
+        myChart.on(ecConfig.EVENT.DATA_VIEW_CHANGED, echartViewAction);
     }
     </script>
 </head>
-<body style="background-color: transparent"><!-- transparent-->
+<body style="background-color: transparent" onload="test()"><!-- transparent-->
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="main" style="height:270px;width:420px;" ></div><!-- style="height:270px;width:420px;margin-left:-30px;"-->
 </body>
