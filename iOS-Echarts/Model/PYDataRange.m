@@ -11,4 +11,13 @@
 
 @implementation PYDataRange
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _show = true;
+    }
+    return self;
+}
+
 @end
