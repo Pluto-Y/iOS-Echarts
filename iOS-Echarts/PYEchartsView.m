@@ -200,9 +200,9 @@
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSURL *url = request.URL;
     NSLog(@"%@", url);
-    if ([[url.scheme lowercaseString] hasPrefix:@"http"]) {
+    if ([[url.scheme lowercaseString] hasPrefix:@"http"]) { // Just open with the safari
         [[UIApplication sharedApplication] openURL:url];
-        return YES;
+        return NO;
     }
     if (![[url.scheme lowercaseString] hasPrefix:@"pyechartaction"]) {
         return YES;
