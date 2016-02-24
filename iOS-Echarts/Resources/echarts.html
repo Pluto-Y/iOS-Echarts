@@ -10,6 +10,7 @@
     <script type="text/javascript">
     var option;
     var myChart;
+    var ecConfig = require('echarts/config');
     function echartViewAction(param) {
         if (typeof param.seriesIndex != 'undefined') {
             document.location.href = 'pyEchartAction://' + param.type + '#{"seriesIndex":"' +  + param.seriesIndex + '","dataIndex":"' + param.dataIndex + '"}';
@@ -61,6 +62,7 @@
         //option = preTask(testdate);
         // 为echarts对象加载数据
         myChart.setOption(option);
+        addMonitorOfAction();
 	}
     function refreshWithOption(optionData) {
         option = preTask(optionData);
@@ -76,6 +78,10 @@
                 
         // 为echarts对象加载数据
         myChart.setOption(option);
+        addMonitorOfAction();
+    }
+    function addMonitorOfAction() {
+        var ecConfig = echarts.config;
         myChart.on(ecConfig.EVENT.CLICK, echartViewAction);
         myChart.on(ecConfig.EVENT.DBLCLICK, echartViewAction);
         myChart.on(ecConfig.EVENT.DATA_ZOOM, echartViewAction);
@@ -85,7 +91,7 @@
     }
     </script>
 </head>
-<body style="background-color: transparent" onload="test()"><!-- transparent-->
+<body style="background-color: transparent"><!-- transparent-->
     <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="main" style="height:270px;width:420px;" ></div><!-- style="height:270px;width:420px;margin-left:-30px;"-->
 </body>

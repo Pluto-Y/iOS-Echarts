@@ -26,7 +26,7 @@
 @property (assign, nonatomic) CGFloat maxWidth;
 @property (assign, nonatomic) BOOL scalable;
 
-@property (retain, nonatomic) id<PYEchartsViewDelegate> echartDelegate;
+@property (weak, nonatomic) id<PYEchartsViewDelegate> echartDelegate;
 
 /**
  *  加载视图
