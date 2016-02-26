@@ -138,6 +138,7 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
  */
 -(void)refreshEchartsWithOption:(PYOption *)newOption {
     NSString *jsonStr = [PYJsonUtil getJSONString:newOption];
+    NSLog(@"jsonStr:%@", jsonStr);
     [self callJsMethods:[NSString stringWithFormat:@"refreshWithOption(%@)", jsonStr]];
 }
 
