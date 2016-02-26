@@ -26,7 +26,7 @@
 -(void)initAll {
     self.title = @"地图";
     // 初始化菜单名
-    menuNames = @[@"标准地图1",@"标准地图2",@"标准地图3-暂无",@"标准地图4",@"标准地图5",@"多地图", @"地图拓展1-暂无", @"地图拓展2-暂无", @"地图拓展3-暂无", @"地图拓展4-暂无", @"Echarts拓展1-暂无", @"Echarts拓展2-暂无", @"地图标线1", @"地图标注1", @"子区域模式-暂无", @"地图标线2", @"地图标线3-暂无", @"地图标线4-暂无", @"地图标线5-暂无", @"地图标注2-暂无", @"地图拓展1-暂无", @"地图拓展2-暂无", @"地图拓展3-暂无", @"搭配时间轴-暂无", @"地图拓展 + 搭配时间轴-暂无", @"地图-暂无", @"值域控件-暂无"];
+    menuNames = @[@"标准地图1",@"标准地图2",@"标准地图3-暂无",@"标准地图4",@"标准地图5",@"多地图", @"地图拓展1-暂无", @"地图拓展2-暂无", @"地图拓展3-暂无", @"地图拓展4-暂无", @"Echarts拓展1-暂无", @"Echarts拓展2-暂无", @"地图标线1", @"地图标注1", @"子区域模式-暂无", @"地图标线2", @"地图标线3", @"地图标线4-暂无", @"地图标线5-暂无", @"地图标注2-暂无", @"地图拓展1-暂无", @"地图拓展2-暂无", @"地图拓展3-暂无", @"搭配时间轴-暂无", @"地图拓展 + 搭配时间轴-暂无", @"地图", @"值域控件"];
     
     _yDemoMenusTb.delegate = self;
     _yDemoMenusTb.dataSource = self;
@@ -182,6 +182,39 @@
     [_yEchartView setOption:option];
 }
 
+/**
+ *  地图标线3
+ */
+-(void)showMapMarkLine3Demo {
+    NSString *json = @"{\"backgroundColor\":\"#1b1b1b\",\"color\":[\"gold\",\"aqua\",\"lime\"],\"title\":{\"text\":\"模拟迁徙\",\"subtext\":\"数据纯属虚构\",\"x\":\"center\",\"textStyle\":{\"color\":\"#fff\"}},\"tooltip\":{\"trigger\":\"item\",\"formatter\":\"{b}\"},\"legend\":{\"orient\":\"vertical\",\"x\":\"left\",\"data\":[\"北京\",\"上海\",\"广州\"],\"selectedMode\":\"single\",\"selected\":{\"上海\":false,\"广州\":false},\"textStyle\":{\"color\":\"#fff\"}},\"toolbox\":{\"show\":true,\"orient\":\"vertical\",\"x\":\"right\",\"y\":\"center\",\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"dataRange\":{\"min\":0,\"max\":100,\"calculable\":true,\"color\":[\"#ff3333\",\"orange\",\"yellow\",\"lime\",\"aqua\"],\"textStyle\":{\"color\":\"#fff\"}},\"animationDurationUpdate\":2000,\"series\":[{\"name\":\"北京\",\"type\":\"map\",\"roam\":true,\"hoverable\":false,\"mapType\":\"china\",\"itemStyle\":{\"normal\":{\"borderColor\":\"rgba(100,149,237,1)\",\"borderWidth\":0.5,\"areaStyle\":{\"color\":\"#1b1b1b\"}}},\"data\":[],\"geoCoord\":{\"上海\":[121.4648,31.2891],\"广州\":[113.5107,23.2196],\"北京\":[116.4551,40.2539]},\"markLine\":{\"smooth\":true,\"effect\":{\"show\":true,\"scaleSize\":1,\"period\":30,\"color\":\"#fff\",\"shadowBlur\":10},\"itemStyle\":{\"normal\":{\"borderWidth\":1,\"label\":{\"show\":false},\"lineStyle\":{\"type\":\"solid\",\"shadowBlur\":10}}},\"data\":[[{\"name\":\"北京\",\"smoothness\":0.2},{\"name\":\"广州\",\"value\":95}],[{\"name\":\"北京\",\"smoothness\":0.3},{\"name\":\"广州\",\"value\":90}],[{\"name\":\"北京\",\"smoothness\":0.4},{\"name\":\"广州\",\"value\":80}],[{\"name\":\"北京\",\"smoothness\":0.5},{\"name\":\"广州\",\"value\":70}],[{\"name\":\"北京\",\"smoothness\":0.6},{\"name\":\"广州\",\"value\":60}],[{\"name\":\"广州\",\"smoothness\":0.2},{\"name\":\"北京\",\"value\":50}],[{\"name\":\"广州\",\"smoothness\":0.3},{\"name\":\"北京\",\"value\":40}],[{\"name\":\"广州\",\"smoothness\":0.4},{\"name\":\"北京\",\"value\":30}],[{\"name\":\"广州\",\"smoothness\":0.5},{\"name\":\"北京\",\"value\":20}],[{\"name\":\"广州\",\"smoothness\":0.6},{\"name\":\"北京\",\"value\":10}]]}},{\"name\":\"上海\",\"type\":\"map\",\"mapType\":\"china\",\"data\":[],\"markLine\":{\"smooth\":true,\"effect\":{\"show\":true,\"scaleSize\":1,\"period\":30,\"color\":\"#fff\",\"shadowBlur\":10},\"itemStyle\":{\"normal\":{\"borderWidth\":1,\"label\":{\"show\":false},\"lineStyle\":{\"type\":\"solid\",\"shadowBlur\":10}}},\"data\":[[{\"name\":\"北京\",\"smoothness\":0.2},{\"name\":\"上海\",\"value\":95}],[{\"name\":\"北京\",\"smoothness\":0.3},{\"name\":\"上海\",\"value\":90}],[{\"name\":\"北京\",\"smoothness\":0.4},{\"name\":\"上海\",\"value\":80}],[{\"name\":\"北京\",\"smoothness\":0.5},{\"name\":\"上海\",\"value\":70}],[{\"name\":\"北京\",\"smoothness\":0.6},{\"name\":\"上海\",\"value\":60}],[{\"name\":\"上海\",\"smoothness\":0.2},{\"name\":\"北京\",\"value\":50}],[{\"name\":\"上海\",\"smoothness\":0.3},{\"name\":\"北京\",\"value\":40}],[{\"name\":\"上海\",\"smoothness\":0.4},{\"name\":\"北京\",\"value\":30}],[{\"name\":\"上海\",\"smoothness\":0.5},{\"name\":\"北京\",\"value\":20}],[{\"name\":\"上海\",\"smoothness\":0.6},{\"name\":\"北京\",\"value\":10}]]}},{\"name\":\"广州\",\"type\":\"map\",\"mapType\":\"china\",\"data\":[],\"markLine\":{\"smooth\":true,\"effect\":{\"show\":true,\"scaleSize\":1,\"period\":30,\"color\":\"#fff\",\"shadowBlur\":10},\"itemStyle\":{\"normal\":{\"borderWidth\":1,\"label\":{\"show\":false},\"lineStyle\":{\"type\":\"solid\",\"shadowBlur\":10}}},\"data\":[[{\"name\":\"上海\",\"smoothness\":0.2},{\"name\":\"广州\",\"value\":95}],[{\"name\":\"上海\",\"smoothness\":0.3},{\"name\":\"广州\",\"value\":90}],[{\"name\":\"上海\",\"smoothness\":0.4},{\"name\":\"广州\",\"value\":80}],[{\"name\":\"上海\",\"smoothness\":0.5},{\"name\":\"广州\",\"value\":70}],[{\"name\":\"上海\",\"smoothness\":0.6},{\"name\":\"广州\",\"value\":60}],[{\"name\":\"广州\",\"smoothness\":0.2},{\"name\":\"上海\",\"value\":50}],[{\"name\":\"广州\",\"smoothness\":0.3},{\"name\":\"上海\",\"value\":40}],[{\"name\":\"广州\",\"smoothness\":0.4},{\"name\":\"上海\",\"value\":30}],[{\"name\":\"广州\",\"smoothness\":0.5},{\"name\":\"上海\",\"value\":20}],[{\"name\":\"广州\",\"smoothness\":0.6},{\"name\":\"上海\",\"value\":10}]]}}]}";
+    NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
+    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
+    [_yEchartView setOption:option];
+}
+
+/**
+ *  值域控件
+ */
+-(void)showDataRangeDemo {
+    NSString *json = @"{\"title\":{\"text\":\"订单量\",\"subtext\":\"纯属虚构\",\"x\":\"center\"},\"tooltip\":{\"trigger\":\"item\"},\"legend\":{\"orient\":\"vertical\",\"x\":\"left\",\"data\":[\"订单量\"]},\"dataRange\":{\"x\":\"left\",\"y\":\"bottom\",\"splitList\":[{\"start\":1500},{\"start\":900,\"end\":1500},{\"start\":310,\"end\":1000},{\"start\":200,\"end\":300},{\"start\":10,\"end\":200,\"label\":\"10 到 200（自定义label）\"},{\"start\":5,\"end\":5,\"label\":\"5（自定义特殊颜色）\",\"color\":\"black\"},{\"end\":10}],\"color\":[\"#E0022B\",\"#E09107\",\"#A3E00B\"]},\"toolbox\":{\"show\":true,\"orient\":\"vertical\",\"x\":\"right\",\"y\":\"center\",\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"roamController\":{\"show\":true,\"width\":40,\"height\":60,\"x\":\"right\",\"mapTypeControl\":{\"china\":true}},\"series\":[{\"name\":\"订单量\",\"type\":\"map\",\"mapType\":\"china\",\"roam\":false,\"itemStyle\":{\"normal\":{\"label\":{\"show\":true,\"textStyle\":{\"color\":\"rgb(249, 249, 249)\"}}},\"emphasis\":{\"label\":{\"show\":true}}},\"data\":[{\"name\":\"北京\",\"value\":841},{\"name\":\"天津\",\"value\":281},{\"name\":\"上海\",\"value\":987},{\"name\":\"重庆\",\"value\":1725},{\"name\":\"河北\",\"value\":0},{\"name\":\"河南\",\"value\":196},{\"name\":\"云南\",\"value\":5},{\"name\":\"辽宁\",\"value\":305},{\"name\":\"黑龙江\",\"value\":108},{\"name\":\"湖南\",\"value\":200},{\"name\":\"安徽\",\"value\":1542},{\"name\":\"山东\",\"value\":1292},{\"name\":\"新疆\",\"value\":1004},{\"name\":\"江苏\",\"value\":785},{\"name\":\"浙江\",\"value\":355},{\"name\":\"江西\",\"value\":1490},{\"name\":\"湖北\",\"value\":1308},{\"name\":\"广西\",\"value\":390},{\"name\":\"甘肃\",\"value\":42},{\"name\":\"山西\",\"value\":1554},{\"name\":\"内蒙古\",\"value\":1367},{\"name\":\"陕西\",\"value\":1076},{\"name\":\"吉林\",\"value\":1650},{\"name\":\"福建\",\"value\":396},{\"name\":\"贵州\",\"value\":442},{\"name\":\"广东\",\"value\":371},{\"name\":\"青海\",\"value\":124},{\"name\":\"西藏\",\"value\":927},{\"name\":\"四川\",\"value\":1280},{\"name\":\"宁夏\",\"value\":234},{\"name\":\"海南\",\"value\":495},{\"name\":\"台湾\",\"value\":105},{\"name\":\"香港\",\"value\":1564},{\"name\":\"澳门\",\"value\":1796}]}]}";
+    NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
+    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
+    [_yEchartView setOption:option];
+}
+
+/**
+ *  地图
+ */
+-(void)showMapDemo {
+    NSString *json = @"{\"series\":[{\"name\":\"Map\",\"type\":\"map\",\"mapLocation\":{\"x\":\"left\",\"y\":\"top\",\"height\":500},\"selectedMode\":\"multiple\",\"itemStyle\":{\"normal\":{\"borderWidth\":2,\"borderColor\":\"lightgreen\",\"color\":\"orange\",\"label\":{\"show\":false}},\"emphasis\":{\"borderWidth\":2,\"borderColor\":\"#fff\",\"color\":\"#32cd32\",\"label\":{\"show\":true,\"textStyle\":{\"color\":\"#fff\"}}}},\"data\":[{\"name\":\"广东\",\"value\":831,\"itemStyle\":{\"normal\":{\"color\":\"#32cd32\",\"label\":{\"show\":true,\"textStyle\":{\"color\":\"#fff\",\"fontSize\":15}}},\"emphasis\":{\"borderWidth\":5,\"borderColor\":\"yellow\",\"color\":\"#cd5c5c\",\"label\":{\"show\":false,\"textStyle\":{\"color\":\"blue\"}}}}}],\"markPoint\":{\"itemStyle\":{\"normal\":{\"color\":\"skyblue\"}},\"data\":[{\"name\":\"天津\",\"value\":350},{\"name\":\"上海\",\"value\":103},{\"name\":\"echarts\",\"symbolSize\":21,\"x\":150,\"y\":50}]},\"geoCoord\":{\"上海\":[121.4648,31.2891],\"天津\":[117.4219,39.4189]}}]}";
+    NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
+    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
+    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
+    [_yEchartView setOption:option];
+}
+
 #pragma mark - Delegate
 #pragma mark - TableViewDelegate
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -226,6 +259,15 @@
             break;
         case 15:
             [self showMapMarkLine2Demo];
+            break;
+        case 16:
+            [self showMapMarkLine3Demo];
+            break;
+        case 25:
+            [self showMapDemo];
+            break;
+        case 26:
+            [self showDataRangeDemo];
             break;
         default:
             break;
