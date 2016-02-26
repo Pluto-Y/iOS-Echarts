@@ -28,6 +28,7 @@
         _itemWidth = @(20);
         _itemHeight = @(14);
         _textStyle = [[PYTextStyle alloc] init];
+        _selectedMode = @(YES);
         _textStyle.color = PYRGBA(3, 3, 3, 1);
         _data = @[];
     }

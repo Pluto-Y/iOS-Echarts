@@ -20,10 +20,14 @@
 @property (retain, nonatomic) PYColor *backgroundColor;
 @property (retain, nonatomic) NSString *borderColor;
 @property (retain, nonatomic) NSNumber *borderWidth;
+@property (retain, nonatomic) id padding;
 @property (retain, nonatomic) NSNumber *itemGap;
 @property (retain, nonatomic) NSNumber *itemWidth;
 @property (retain, nonatomic) NSNumber *itemHeight;
 @property (retain, nonatomic) PYTextStyle *textStyle;
+@property (retain, nonatomic) id formatter;
+@property (retain, nonatomic) id selectedMode;
+@property (retain, nonatomic) NSDictionary *selected;
 @property (retain, nonatomic) NSArray *data;
 
 @end
