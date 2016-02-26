@@ -12,20 +12,12 @@
 #import "PYOption.h"
 #import "PYJsonUtil.h"
 
-#define DEFAULT_WIDTH_DIFF_CONSTANT 100
-#define DEFAULT_HEIGHT_DIFF_CONSTANT 70
-#define DEFAULT_LEFT_MARGIN_DIFF_CONSTANT -50
-#define DEFAULT_TOP_MARGIN_DIFF_CONSTANT -50
-#define DEFAULT_HEAD_TOP_PADDING 45
-#define DEFAULT_HEAD_LEFT_PADDING 50
-#define DEFAULT_HEAD_RIGHT_PADDING 50
-#define DEFAULT_BOTTOM_PADDING 30
-
-#define     ACTION_TYPE_CLICK                   @"click"
-#define     ACTION_TYPE_DBCLICK                 @"dblclick"
-#define     ACTION_TYPE_DATA_ZOOM               @"dataZoom"
-#define     ACTION_TYPE_LEGEND_SELECTED         @"legendSelected"
-#define     ACTION_TYPE_MAGIC_TYPE_CHANGE       @"magicTypeChanged"
+NSString * const PYEchartActionClick = @"click";
+NSString * const PYEchartActionDbClick = @"dblclick";
+NSString * const PYEchartActionMapSelected = @"mapSelected";
+NSString * const PYEchartActionDataZoom = @"dataZoom";
+NSString * const PYEchartActionLegendSelected = @"legendSelected";
+NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
 
 @interface PYEchartsView() {
     PYOption *option;
@@ -33,6 +25,8 @@
     CGFloat lastScale;
     CGFloat minWidth;
     CGPoint tapPoint;
+    // This params store the handler of the echart actions
+    NSMutableDictionary<NSString *, PYEchartActionHandler> *actionHandleBlocks;
 }
 
 @end
@@ -67,7 +61,7 @@
     self.delegate = self;
     self.scrollView.bounces = NO;
     self.scrollView.scrollEnabled = NO;
-    // 保证该view背景是透明的
+    // set the view background is transparent
     self.opaque = NO;
     self.backgroundColor = [UIColor clearColor];
     
@@ -77,6 +71,7 @@
     
     
     _maxWidth = NSIntegerMax;
+    actionHandleBlocks = [[NSMutableDictionary alloc] init];
     
     UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchGestureHandle:)];
     pinchGestureRecognizer.cancelsTouchesInView = NO;
@@ -85,29 +80,86 @@
 }
 
 /**
- *  加载视图
+ *  Set the option for echart
+ *
+ *  @param pyOption The echart option
+ */
+-(void)setOption:(PYOption *)pyOption {
+    option = pyOption;
+}
+
+/**
+ *  Load the web view request
  */
 -(void)loadEcharts {
     [self loadRequest:localRequest];
 }
+
 /**
- *  刷新图表，而不是重新加载(即恢复到最初设置的option)
+ *  Call the js method
+ *
+ *  @param methodWithParam The format:`[instance.]methodname(params)`
  */
--(void)refreshEcharts {
-    NSString *js = [NSString stringWithFormat:@"myChart.refresh()"];
-    [self stringByEvaluatingJavaScriptFromString:js];
+-(void)callJsMethods:(NSString *)methodWithParam {
+    [self stringByEvaluatingJavaScriptFromString:methodWithParam];
 }
 
 /**
- *  根据新给的PYOption刷新Echarts
- *  通过该方法可以保证重新加载Echarts而是刷新
+ *  Resize the main div in the `echarts.html`
+ */
+-(void)resizeDiv {
+    float height = self.frame.size.height - 20;
+    float width = self.frame.size.width;
+    if (!CGSizeEqualToSize(_divSize, CGSizeZero)) {
+        height = _divSize.height - 20;
+        width = _divSize.width;
+    } else {
+        _divSize = CGSizeMake(width, height);
+    }
+    NSString *divSizeCss = [NSString stringWithFormat:@"'height:%.0fpx;width:%.0fpx;'", height, width];
+    NSString *js = [NSString stringWithFormat:@"%@(%@)", @"resizeDiv", divSizeCss];
+    [self stringByEvaluatingJavaScriptFromString:js];
+}
+
+#pragma mark - Echarts methods
+/**
+ *  Refresh echarts not re-load echarts
+ *  The option is the last option you had set
+ */
+-(void)refreshEcharts {
+    [self callJsMethods:@"myChart.refresh()"];
+}
+
+/**
+ *  Refresh echar with the option
+ *  You can call this method for refreshing not re-load the echart
  *
- *  @param newOption EChart的option
+ *  @param newOption EChart's option
  */
 -(void)refreshEchartsWithOption:(PYOption *)newOption {
     NSString *jsonStr = [PYJsonUtil getJSONString:newOption];
-    NSString *js = [NSString stringWithFormat:@"refreshWithOption(%@)", jsonStr];
-    [self stringByEvaluatingJavaScriptFromString:js];
+    [self callJsMethods:[NSString stringWithFormat:@"refreshWithOption(%@)", jsonStr]];
+}
+
+/**
+ *  Add the echart action handler
+ *
+ *  @param name  The echart event name
+ *  @param block The block handler
+ */
+-(void)addHandlerForAction:(NSString *) name withBlock:(PYEchartActionHandler) block {
+    [actionHandleBlocks setObject:block forKey:name];
+    [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler(%@)",name]];
+}
+
+/**
+ *  Remove the echart action hander
+ *
+ *  @param name The echart event name
+ */
+-(void)removeHandlerForAction:(NSString *)name {
+    [actionHandleBlocks removeObjectForKey:name];
+    [self callJsMethods:[NSString stringWithFormat:@"removeEchartActionHandler(%@)",name]];
 }
 
 #pragma mark - Delegate
@@ -123,79 +175,18 @@
     NSLog(@"%@",jsonStr);
     NSString *js = [NSString stringWithFormat:@"%@(%@)", @"loadEcharts", jsonStr];
     [webView stringByEvaluatingJavaScriptFromString:js];
+    for (NSString * name in actionHandleBlocks.allKeys) {
+        NSLog(@"%@", [NSString stringWithFormat:@"addEchartActionHandler('%@')",name]);
+        [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler('%@')",name]];//
+    }
+
 }
 
 /**
- *
- */
--(void)resizeDiv {
-    float height = self.frame.size.height - 20;
-    float width = self.frame.size.width;
-    if (!CGSizeEqualToSize(_divSize, CGSizeZero)) {
-        height = _divSize.height - 20;
-        width = _divSize.width;
-    } else {
-        _divSize = CGSizeMake(width, height);
-    }
-    NSString *divSizeCss = [NSString stringWithFormat:@"'height:%.0fpx;width:%.0fpx;'", height, width];
-    NSString *js = [NSString stringWithFormat:@"%@(%@)", @"resizeDiv", divSizeCss];
-    [self stringByEvaluatingJavaScriptFromString:js];
-//    NSLog(@"cssText:%@", divSizeCss);
-}
-
--(void)setOption:(PYOption *)pyOption {
-    option = pyOption;
-}
-
-
-- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer
-{
-    return YES;
-}
-
-/**
- *  缩放手势
- */
--(void)pinchGestureHandle:(id)sender {
-    if (!_scalable) {
-        return;
-    }
-    UIPinchGestureRecognizer *recognizer = (UIPinchGestureRecognizer *)sender;
-    int touchCount = (int)[recognizer numberOfTouches];
-    //当手指离开屏幕时,将lastscale设置为1.0
-    if([recognizer state] == UIGestureRecognizerStateEnded) {
-        lastScale = 1.0;
-        return;
-    }
-    CGFloat scale = 1.0 - (lastScale - [recognizer scale]);
-    if (_divSize.width >= _maxWidth && scale > 1) {
-        return;
-    }
-    if (_divSize.width <= minWidth && scale < 1) {
-        return;
-    }
-    _divSize.width *= scale;
-    
-    if (_divSize.width < minWidth) {
-        _divSize.width = minWidth;
-    } else if (_divSize.width > _maxWidth) {
-        _divSize.width = _maxWidth;
-    }
-    if (touchCount == 2) {
-        CGPoint p1 = [recognizer locationOfTouch: 0 inView:self];
-        CGPoint p2 = [recognizer locationOfTouch: 1 inView:self];
-        CGPoint newCenter = CGPointMake((p1.x+p2.x)/2,(p1.y+p2.y)/2);
-//        NSLog(@"%@", NSStringFromCGPoint(newCenter));
-        [self.scrollView setContentOffset:CGPointMake((self.scrollView.contentOffset.x + newCenter.x) * scale - newCenter.x, self.scrollView.contentOffset.y)];
-    }
-    [self resizeDiv];
-    
-    lastScale = [recognizer scale];
-}
-
-/**
- *  用于处理Echart出现的各种事件
- *  如点击、双击等
+ *  This method the echart action, the http link in the echarts and other links
+ *  If the scheme is the http, it will be opened by the sifari
+ *  If the scheme is pyechartaction, it means that url is the echart event, then it will call the block to handle the action
+ *  If the sheeme is others, use the default action
  */
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSURL *url = request.URL;
@@ -224,27 +215,56 @@
         }
     }
     
-    // look at the actionType and do whatever you want here
-    if ([actionType isEqualToString:ACTION_TYPE_CLICK]) {// Click Event
-        if (tapPoint.x != 0 || tapPoint.y != 0) {
-            if (paramsDic != nil) {
-                if (_echartDelegate != nil && [_echartDelegate respondsToSelector:@selector(echartClick:pointInView:)]) {
-                    [_echartDelegate echartClick:paramsDic pointInView:tapPoint];
-                }
-            }
-            tapPoint = CGPointZero;
-        }
-    } else if([actionType isEqualToString:ACTION_TYPE_DBCLICK]  ) {// Double Click Event
-        if (paramsDic != nil) {
-            if (_echartDelegate != nil && [_echartDelegate respondsToSelector:@selector(echartDbClick:)]) {
-                [_echartDelegate echartDbClick:paramsDic];
-            }
-        }
-    } else {
-        
+    // Check the action handle actions, if exists the block the invoke the block
+    if (actionHandleBlocks[actionType] != nil) {
+        PYEchartActionHandler hanler = (PYEchartActionHandler)actionHandleBlocks[actionType];
+        hanler(paramsDic);
     }
-    
     return NO;
+}
+
+- (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
+    return YES;
+}
+
+/**
+ *  The pinch gesture handle
+ */
+-(void)pinchGestureHandle:(id)sender {
+    if (!_scalable) {
+        return;
+    }
+    UIPinchGestureRecognizer *recognizer = (UIPinchGestureRecognizer *)sender;
+    int touchCount = (int)[recognizer numberOfTouches];
+    // Reset the scale valeu when the event is end
+    if([recognizer state] == UIGestureRecognizerStateEnded) {
+        lastScale = 1.0;
+        return;
+    }
+    CGFloat scale = 1.0 - (lastScale - [recognizer scale]);
+    if (_divSize.width >= _maxWidth && scale > 1) {
+        return;
+    }
+    if (_divSize.width <= minWidth && scale < 1) {
+        return;
+    }
+    _divSize.width *= scale;
+    
+    if (_divSize.width < minWidth) {
+        _divSize.width = minWidth;
+    } else if (_divSize.width > _maxWidth) {
+        _divSize.width = _maxWidth;
+    }
+    if (touchCount == 2) {
+        CGPoint p1 = [recognizer locationOfTouch: 0 inView:self];
+        CGPoint p2 = [recognizer locationOfTouch: 1 inView:self];
+        CGPoint newCenter = CGPointMake((p1.x+p2.x)/2,(p1.y+p2.y)/2);
+//        NSLog(@"%@", NSStringFromCGPoint(newCenter));
+        [self.scrollView setContentOffset:CGPointMake((self.scrollView.contentOffset.x + newCenter.x) * scale - newCenter.x, self.scrollView.contentOffset.y)];
+    }
+    [self resizeDiv];
+    
+    lastScale = [recognizer scale];
 }
 
 @end

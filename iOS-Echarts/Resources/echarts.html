@@ -10,13 +10,10 @@
     <script type="text/javascript">
     var option;
     var myChart;
-    var ecConfig = require('echarts/config');
+    var ecConfig;
     function echartViewAction(param) {
-        if (typeof param.seriesIndex != 'undefined') {
-            document.location.href = 'pyEchartAction://' + param.type + '#{"seriesIndex":"' +  + param.seriesIndex + '","dataIndex":"' + param.dataIndex + '"}';
-        } else {
-            document.location.href = 'pyEchartAction://' + param.type;
-        }
+//        alert(JSON.stringify(param));
+        document.location.href = 'pyEchartAction://' + param.type + '#' + JSON.stringify(param) + '';
     }
     function preTask(obj) {
         var result;
@@ -62,7 +59,6 @@
         //option = preTask(testdate);
         // 为echarts对象加载数据
         myChart.setOption(option);
-        addMonitorOfAction();
 	}
     function refreshWithOption(optionData) {
         option = preTask(optionData);
@@ -78,20 +74,16 @@
                 
         // 为echarts对象加载数据
         myChart.setOption(option);
-        addMonitorOfAction();
     }
-    function addMonitorOfAction() {
+    function addEchartActionHandler(eventName) {
         var ecConfig = echarts.config;
-        myChart.on(ecConfig.EVENT.CLICK, echartViewAction);
-        myChart.on(ecConfig.EVENT.DBLCLICK, echartViewAction);
-        myChart.on(ecConfig.EVENT.DATA_ZOOM, echartViewAction);
-        myChart.on(ecConfig.EVENT.LEGEND_SELECTED, echartViewAction);
-        myChart.on(ecConfig.EVENT.MAGIC_TYPE_CHANGED, echartViewAction);
-        myChart.on(ecConfig.EVENT.DATA_VIEW_CHANGED, echartViewAction);
+        myChart.on(eventName, echartViewAction);
+    }
+    function removeEchartActionHandler(name) {
+        myChart.un(name, echartViewAction);
     }
     </script>
 </head>
 <body style="background-color: transparent"><!-- transparent-->
-    <!-- 为ECharts准备一个具备大小（宽高）的Dom -->
     <div id="main" style="height:270px;width:420px;" ></div><!-- style="height:270px;width:420px;margin-left:-30px;"-->
 </body>

@@ -8,16 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
+extern NSString * const PYEchartActionClick;
+extern NSString * const PYEchartActionDbClick;
+extern NSString * const PYEchartActionMapSelected;
+extern NSString * const PYEchartActionDataZoom;
+extern NSString * const PYEchartActionLegendSelected;
+extern NSString * const PYEchartActionMagicTypeChange;
+
 @class PYOption;
 
-@protocol PYEchartsViewDelegate <NSObject>
-
-@optional
--(void)echartClick:(NSDictionary *)paramDic pointInView:(CGPoint) point;
--(void)echartDbClick:(NSDictionary *)paramDic;
-
-@end
-
+typedef void (^PYEchartActionHandler) (NSDictionary *params);
 
 @interface PYEchartsView : UIWebView<UIWebViewDelegate>
 
@@ -26,10 +26,9 @@
 @property (assign, nonatomic) CGFloat maxWidth;
 @property (assign, nonatomic) BOOL scalable;
 
-@property (weak, nonatomic) id<PYEchartsViewDelegate> echartDelegate;
 
 /**
- *  加载视图
+ *  Load echart
  */
 -(void)loadEcharts;
 
@@ -41,17 +40,32 @@
 -(void)setOption:(PYOption *)pyOption;
 
 /**
- *  根据新给的PYOption刷新Echarts
- *  通过该方法可以保证重新加载Echarts而是刷新
+ *  Refresh echar with the option
+ *  You can call this method for refreshing not re-load the echart
  *
- *  @param newOption EChart的option
+ *  @param newOption EChart's option
  */
 -(void)refreshEchartsWithOption:(PYOption *)newOption;
 
 /**
- *  刷新图表，而不是重新加载(即恢复到最初设置的option)
+ *  Refresh echarts not re-load echarts
+ *  The option is the last option you had set
  */
 -(void)refreshEcharts;
 
+/**
+ *  Add the echart action handler
+ *
+ *  @param name  The echart event name
+ *  @param block The block handler
+ */
+-(void)addHandlerForAction:(NSString *) name withBlock:(PYEchartActionHandler) block;
+
+/**
+ *  Remove the echart action hander
+ *
+ *  @param name The echart event name
+ */
+-(void)removeHandlerForAction:(NSString *)name;
 
 @end
