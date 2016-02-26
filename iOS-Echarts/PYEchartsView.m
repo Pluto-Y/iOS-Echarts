@@ -202,13 +202,13 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
     // get the action from the path
     NSString *actionType = url.host;
     // deserialize the request JSON
-    NSString *jsonDictString = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSASCIIStringEncoding];
+    NSString *jsonDictString = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     // decode the json params to dictionary
     NSData *paramData = [jsonDictString dataUsingEncoding:NSUTF8StringEncoding];
     NSError *err;
     NSDictionary *paramsDic;
     if (jsonDictString != nil && ![jsonDictString isEqualToString:@""]) {
-        paramsDic = [NSJSONSerialization JSONObjectWithData:paramData options:NSJSONReadingMutableContainers error:&err];
+        paramsDic = [NSJSONSerialization JSONObjectWithData:paramData options:NSJSONReadingMutableLeaves error:&err];
         if(err) {
             NSLog(@"Json decode failed：%@",err);
             paramsDic = nil;
