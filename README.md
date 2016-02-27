@@ -31,7 +31,7 @@ Finally you just need to initialze the PYEchartsView and PYOption you need.
 If you don't know how to set the right value for the option, you can check the documents in the [EChart Website](http://echarts.baidu.com/echarts2/).
 
 # Contact
-Follow and contact me on [Twitter]() or [Sina Weibo](). And if you want to contribute with this projust, please contact me as well.
+Follow and contact me on [Twitter](https://twitter.com/youtk21ai) or [Sina Weibo](http://weibo.com/5690716723/info). And if you want to contribute with this projust, please contact me as well.
 
 # Licenses
 All source code is licensed under the MIT License.
