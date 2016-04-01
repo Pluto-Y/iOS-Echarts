@@ -26,6 +26,10 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
 @property (assign, nonatomic) CGFloat maxWidth;
 @property (assign, nonatomic) BOOL scalable;
 
+/**
+ *  Resize the main div in the `echarts.html`
+ */
+-(void)resizeDiv;
 
 /**
  *  Load echart
