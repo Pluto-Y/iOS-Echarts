@@ -19,7 +19,9 @@ extern NSString * const PYEchartActionMagicTypeChange;
 
 typedef void (^PYEchartActionHandler) (NSDictionary *params);
 
-@interface PYEchartsView : UIWebView<UIWebViewDelegate>
+@interface PYEchartsView : UIWebView<UIWebViewDelegate> {
+    PYOption *option;
+}
 
 @property (assign, nonatomic) UIEdgeInsets padding;
 @property (assign, nonatomic) CGSize divSize;
@@ -56,6 +58,13 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
  *  The option is the last option you had set
  */
 -(void)refreshEcharts;
+
+/**
+ *  Call the js method
+ *
+ *  @param methodWithParam The format:`[instance.]methodname(params)`
+ */
+-(void)callJsMethods:(NSString *)methodWithParam;
 
 /**
  *  Add the echart action handler

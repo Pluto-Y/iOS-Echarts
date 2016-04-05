@@ -20,7 +20,6 @@ NSString * const PYEchartActionLegendSelected = @"legendSelected";
 NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
 
 @interface PYEchartsView() {
-    PYOption *option;
     NSURLRequest *localRequest;
     CGFloat lastScale;
     CGFloat minWidth;
