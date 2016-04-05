@@ -82,6 +82,9 @@
     function removeEchartActionHandler(name) {
         myChart.un(name, echartViewAction);
     }
+    function changeDataZoomRange(start, end) {
+        myChart.component.dataZoom.absoluteZoom({'start':start, 'end': end});
+    }
     </script>
 </head>
 <body style="background-color: transparent"><!-- transparent-->
