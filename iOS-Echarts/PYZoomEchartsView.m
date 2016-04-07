@@ -7,6 +7,8 @@
 //
 
 #import "PYZoomEchartsView.h"
+#import "PYOption.h"
+#import "PYDataZoom.h"
 
 @interface PYZoomEchartsView() {
     PYDataZoom *dataZoom;
