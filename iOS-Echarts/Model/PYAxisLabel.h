@@ -14,6 +14,6 @@
 @property (nonatomic, assign) BOOL show;
 @property (retain, nonatomic) PYTextStyle *textStyle;
 @property (retain, nonatomic) NSString *formatter;
-
+@property (nonatomic, strong) id interval;
 
 @end
