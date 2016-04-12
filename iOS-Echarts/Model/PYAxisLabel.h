@@ -12,8 +12,11 @@
 @interface PYAxisLabel : NSObject
 
 @property (nonatomic, assign) BOOL show;
-@property (retain, nonatomic) PYTextStyle *textStyle;
-@property (retain, nonatomic) NSString *formatter;
 @property (nonatomic, strong) id interval;
+@property (strong, nonatomic) NSNumber *rotate;
+@property (strong, nonatomic) NSNumber *margin;
+@property (assign, nonatomic) BOOL clickable;
+@property (retain, nonatomic) NSString *formatter;
+@property (retain, nonatomic) PYTextStyle *textStyle;
 
 @end

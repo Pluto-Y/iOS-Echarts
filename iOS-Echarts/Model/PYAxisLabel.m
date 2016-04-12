@@ -14,6 +14,10 @@
     self = [super init];
     if (self) {
         _show = YES;
+        _interval = @"auto";
+        _rotate = @0;
+        _margin = @8;
+        _clickable = false;
     }
     return self;
 }
