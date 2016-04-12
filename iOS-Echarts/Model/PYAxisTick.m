@@ -10,4 +10,19 @@
 
 @implementation PYAxisTick
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _interval = @"auto";
+        _onGap = nil;
+        _inside = NO;
+        _length = @5;
+        _lineStyle = [PYLineStyle new];
+        _lineStyle.color = PYRGBA(3, 3, 3, 1);
+        _lineStyle.width = @1;
+    }
+    return self;
+}
+
 @end
