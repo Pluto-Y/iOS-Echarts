@@ -7,6 +7,7 @@
 //
 
 #import "PYSplitArea.h"
+#import "PYColor.h"
 
 @implementation PYSplitArea
 

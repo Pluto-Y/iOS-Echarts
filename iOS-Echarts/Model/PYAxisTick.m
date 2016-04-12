@@ -7,6 +7,8 @@
 //
 
 #import "PYAxisTick.h"
+#import "PYColor.h"
+#import "PYLineStyle.h"
 
 @implementation PYAxisTick
 
@@ -15,12 +17,12 @@
     self = [super init];
     if (self) {
         _interval = @"auto";
-        _onGap = nil;
+        _onGap = NO;
         _inside = NO;
-        _length = @5;
+        _length = @(5);
         _lineStyle = [PYLineStyle new];
         _lineStyle.color = PYRGBA(3, 3, 3, 1);
-        _lineStyle.width = @1;
+        _lineStyle.width = @(1);
     }
     return self;
 }
