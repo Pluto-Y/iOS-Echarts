@@ -52,12 +52,9 @@
 	 * 构建动态图表  
 	 */  
 	function loadEcharts(echartJson){
-		// 基于准备好的dom，初始化echarts图表
-        myChart = echarts.init(document.getElementById('main'));
-        //alert("json:" + JSON.stringify(echartJson));
+        initEchartView();
+        
         option = preTask(echartJson);
-        //option = preTask(testdate);
-        // 为echarts对象加载数据
         myChart.setOption(option);
 	}
     function refreshWithOption(optionData) {
@@ -71,9 +68,6 @@
     function initEchartView() {
         // 基于准备好的dom，初始化echarts图表
         myChart = echarts.init(document.getElementById('main'));
-                
-        // 为echarts对象加载数据
-        myChart.setOption(option);
     }
     function addEchartActionHandler(eventName) {
         var ecConfig = echarts.config;
