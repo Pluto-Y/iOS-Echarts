@@ -88,4 +88,9 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
  */
 -(void)showLoading:(PYLoadingOption *)loadingOption;
 
+/**
+ *  Hide loading screen
+ */
+-(void)hideLoading;
+
 @end

@@ -174,6 +174,13 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
     [self callJsMethods:[NSString stringWithFormat:@"myChart.showLoading(%@)",loadingOptionStr]];
 }
 
+/**
+ *  Hide loading screen
+ */
+-(void)hideLoading {
+    [self callJsMethods:@"myChart.hideLoading()"];
+}
+
 #pragma mark - Delegate
 #pragma mark UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
