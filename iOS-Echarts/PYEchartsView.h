@@ -15,7 +15,7 @@ extern NSString * const PYEchartActionDataZoom;
 extern NSString * const PYEchartActionLegendSelected;
 extern NSString * const PYEchartActionMagicTypeChange;
 
-@class PYOption;
+@class PYOption, PYLoadingOption;
 
 typedef void (^PYEchartActionHandler) (NSDictionary *params);
 
@@ -80,5 +80,12 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
  *  @param name The echart event name
  */
 -(void)removeHandlerForAction:(NSString *)name;
+
+/**
+ *  Option for the loading screen, show a loading label text.
+ *
+ *  @param loadingOption The loading options control the appearance of the loading screen that covers the plot area on chart operations.
+ */
+-(void)showLoading:(PYLoadingOption *)loadingOption;
 
 @end

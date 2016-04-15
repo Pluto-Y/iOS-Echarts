@@ -11,6 +11,7 @@
 #import "PYLegend.h"
 #import "PYOption.h"
 #import "PYJsonUtil.h"
+#import "PYLoadingOption.h"
 
 NSString * const PYEchartActionClick = @"click";
 NSString * const PYEchartActionDbClick = @"dblclick";
@@ -160,6 +161,17 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
 -(void)removeHandlerForAction:(NSString *)name {
     [actionHandleBlocks removeObjectForKey:name];
     [self callJsMethods:[NSString stringWithFormat:@"removeEchartActionHandler(%@)",name]];
+}
+
+/**
+ *  Option for the loading screen, show a loading label text.
+ *
+ *  @param loadingOption The loading options control the appearance of the loading screen that covers the plot area on chart operations.
+ */
+-(void)showLoading:(PYLoadingOption *)loadingOption {
+    NSString *loadingOptionStr = [PYJsonUtil getJSONString:loadingOption];
+    NSLog(@"loadingOption:%@", loadingOptionStr);
+    [self callJsMethods:[NSString stringWithFormat:@"myChart.showLoading(%@)",loadingOptionStr]];
 }
 
 #pragma mark - Delegate
