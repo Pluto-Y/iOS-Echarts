@@ -12,20 +12,22 @@
 #import "PYLegend.h"
 #import "PYCartesianSeries.h"
 
-// 折现图
+// Line
 #import "LineDemoController.h"
-// 柱状图
+// Bar
 #import "BarDemoController.h"
-// 饼图
+// Pie
 #import "PieDemoController.h"
-// K线图
+// Candlestick
 #import "CandlestickDemoController.h"
-// 散点图
+// Scatter
 #import "ScatterDemoController.h"
-// 雷达图
+// Radar
 #import "RadarDemoController.h"
-// 地图
+// Map
 #import "MapDemoController.h"
+// Other Demo
+#import "OtherDemoController.h"
 
 @interface ViewController ()
 
@@ -172,6 +174,9 @@
             break;
         case 10006: // 地图
             controller = [[MapDemoController alloc] init];
+            break;
+        case 11000:
+            controller = [[OtherDemoController alloc] init];
             break;
         default:
             break;

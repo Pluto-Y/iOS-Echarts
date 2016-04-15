@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -33,7 +33,7 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0s-pS-3OI">
@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="height" constant="21" id="q68-nc-9nw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="10000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5W-J3-r7t">
@@ -101,8 +101,8 @@
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CXn-Nq-6MJ"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="10005" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9J-ow-V3G">
-                                <rect key="frame" x="58" y="211" width="45" height="30"/>
+                            <button opaque="NO" tag="10005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9J-ow-V3G">
+                                <rect key="frame" x="57" y="211" width="45" height="30"/>
                                 <state key="normal" title="雷达图"/>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gbs-9p-h1E"/>
@@ -115,6 +115,13 @@
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xv2-n1-Rv8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="11000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUG-2Q-8qE">
+                                <rect key="frame" x="65" y="249" width="30" height="30"/>
+                                <state key="normal" title="其他"/>
+                                <connections>
+                                    <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AGA-yJ-zxh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -122,8 +129,10 @@
                             <constraint firstItem="DWi-xk-cHA" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="7A5-bY-yhp"/>
                             <constraint firstItem="S5W-J3-r7t" firstAttribute="top" secondItem="Z0s-pS-3OI" secondAttribute="bottom" id="9KZ-d9-dUb"/>
                             <constraint firstItem="S5W-J3-r7t" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="GKi-s6-ZdY"/>
+                            <constraint firstItem="NUG-2Q-8qE" firstAttribute="centerX" secondItem="x9J-ow-V3G" secondAttribute="centerX" id="H4D-fe-wf4"/>
                             <constraint firstItem="aJX-aJ-ZQR" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="LB9-Fo-rFV"/>
                             <constraint firstItem="AiU-vF-ufv" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="LRb-09-FDm"/>
+                            <constraint firstItem="NUG-2Q-8qE" firstAttribute="top" secondItem="x9J-ow-V3G" secondAttribute="bottom" constant="8" id="XfS-W9-CFm"/>
                             <constraint firstItem="wtY-4D-J1e" firstAttribute="top" secondItem="S5W-J3-r7t" secondAttribute="top" id="fZv-qP-jGd"/>
                             <constraint firstItem="CbF-qF-UwD" firstAttribute="top" secondItem="aJX-aJ-ZQR" secondAttribute="bottom" constant="8" id="giP-GS-QKN"/>
                             <constraint firstItem="Z0s-pS-3OI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="mDX-sG-buo"/>
@@ -137,6 +146,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="sSa-nS-qdn"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
