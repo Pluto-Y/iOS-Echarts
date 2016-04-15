@@ -36,6 +36,7 @@
 		6C3472131BF4712400C16B73 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 6C3472121BF4712400C16B73 /* js */; };
 		6C3916C51BE0557100A2388A /* PYAxisTick.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C3916C41BE0557100A2388A /* PYAxisTick.m */; };
 		6C4216961B98E310002D4B7A /* iOS_EchartsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4216951B98E310002D4B7A /* iOS_EchartsTests.m */; };
+		6C6011A21CC137610048F6F6 /* PYLoadingOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6011A11CC137610048F6F6 /* PYLoadingOption.m */; };
 		6C7C95571B9DE77D00D80042 /* PYAxisLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95561B9DE77D00D80042 /* PYAxisLine.m */; };
 		6C7C955A1B9DE82D00D80042 /* PYLineStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C95591B9DE82D00D80042 /* PYLineStyle.m */; };
 		6C7C955D1B9DEA6900D80042 /* PYAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C7C955C1B9DEA6900D80042 /* PYAxis.m */; };
@@ -139,6 +140,8 @@
 		6C42168F1B98E310002D4B7A /* iOS-EchartsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-EchartsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C4216941B98E310002D4B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C4216951B98E310002D4B7A /* iOS_EchartsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_EchartsTests.m; sourceTree = "<group>"; };
+		6C6011A01CC137610048F6F6 /* PYLoadingOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYLoadingOption.h; path = Model/PYLoadingOption.h; sourceTree = "<group>"; };
+		6C6011A11CC137610048F6F6 /* PYLoadingOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYLoadingOption.m; path = Model/PYLoadingOption.m; sourceTree = "<group>"; };
 		6C7C95551B9DE77D00D80042 /* PYAxisLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYAxisLine.h; path = Model/PYAxisLine.h; sourceTree = "<group>"; };
 		6C7C95561B9DE77D00D80042 /* PYAxisLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYAxisLine.m; path = Model/PYAxisLine.m; sourceTree = "<group>"; };
 		6C7C95581B9DE82D00D80042 /* PYLineStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYLineStyle.h; path = Model/PYLineStyle.h; sourceTree = "<group>"; };
@@ -412,6 +415,8 @@
 				6C0882841C2F94EE00EA0D34 /* PYRoamController.m */,
 				6C8B721B1CBD2F8B00478356 /* PYSplitArea.h */,
 				6C8B721C1CBD2F8B00478356 /* PYSplitArea.m */,
+				6C6011A01CC137610048F6F6 /* PYLoadingOption.h */,
+				6C6011A11CC137610048F6F6 /* PYLoadingOption.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -627,6 +632,7 @@
 				6CB02A7E1BBEAC66002E1126 /* MainController.m in Sources */,
 				6CB02A821BBF7739002E1126 /* PieDemoController.m in Sources */,
 				6C7C957A1B9EA39D00D80042 /* PYSeries.m in Sources */,
+				6C6011A21CC137610048F6F6 /* PYLoadingOption.m in Sources */,
 				6CA3C96A1CB3E37A00982AD8 /* PYZoomEchartsView.m in Sources */,
 				6CF1AA2D1C02A32600F1B773 /* CandlestickDemoController.m in Sources */,
 				6C0658E91BB85B4F003CAAE5 /* ViewController.m in Sources */,
