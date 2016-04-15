@@ -181,11 +181,19 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
     [self callJsMethods:@"myChart.hideLoading()"];
 }
 
+/**
+ *  Clear the drawing content. Instances are available after Clearing.
+ */
+-(void)clearEcharts {
+    [self callJsMethods:@"myChart.clear()"];
+}
+
 #pragma mark - Delegate
 #pragma mark UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     if (option == nil) {
-        NSLog(@"ERROR: The option is nil.");
+        NSLog(@"Warning: The option is nil.");
+        [self callJsMethods:@"initEchartView()"];
         return ;
     }
     [self resizeDiv];

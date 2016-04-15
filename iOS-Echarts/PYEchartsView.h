@@ -93,4 +93,9 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
  */
 -(void)hideLoading;
 
+/**
+ *  Clear the drawing content. Instances are available after Clearing.
+ */
+-(void)clearEcharts;
+
 @end
