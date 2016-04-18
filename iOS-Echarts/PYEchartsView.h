@@ -15,7 +15,7 @@ extern NSString * const PYEchartActionDataZoom;
 extern NSString * const PYEchartActionLegendSelected;
 extern NSString * const PYEchartActionMagicTypeChange;
 
-@class PYOption, PYLoadingOption;
+@class PYOption, PYLoadingOption, PYNoDataLoadingOption;
 
 typedef void (^PYEchartActionHandler) (NSDictionary *params);
 
@@ -28,6 +28,9 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
 @property (assign, nonatomic) CGFloat maxWidth;
 @property (assign, nonatomic) BOOL scalable;
 
+// You should set this property before `loadEcharts`, or it will be useless
+@property (strong, nonatomic) PYNoDataLoadingOption *noDataLoadingOption;
+
 /**
  *  Resize the main div in the `echarts.html`
  */
@@ -39,9 +42,9 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
 -(void)loadEcharts;
 
 /**
- *  设置Echart的Option(最主要的跟Echart交互的参数)
+ *  Set the option for Echarts
  *
- *  @param option EChart的option
+ *  @param option The option of EChart
  */
 -(void)setOption:(PYOption *)pyOption;
 

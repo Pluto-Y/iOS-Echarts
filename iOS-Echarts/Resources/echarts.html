@@ -51,8 +51,9 @@
 	/**  
 	 * 构建动态图表  
 	 */  
-	function loadEcharts(echartJson){
-        initEchartView();
+	function loadEcharts(echartJson, initParams){
+        alert('init params : ' + JSON.stringify(initParams));
+        initEchartView(initParams);
         
         option = preTask(echartJson);
         myChart.setOption(option);
@@ -65,9 +66,13 @@
         var divMain = document.getElementById("main");
         divMain.style.cssText = cssText;
     }
-    function initEchartView() {
+    function initEchartView(initParams) {
         // 基于准备好的dom，初始化echarts图表
-        myChart = echarts.init(document.getElementById('main'));
+        if (initParams == null || initParams == 'undefined') {
+            myChart = echarts.init(document.getElementById('main'));
+        } else {
+            myChart = echarts.init(document.getElementById('main'), initParams);
+        }
     }
     function addEchartActionHandler(eventName) {
         var ecConfig = echarts.config;

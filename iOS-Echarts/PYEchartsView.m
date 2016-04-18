@@ -51,7 +51,7 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
 
 #pragma mark - custom functions
 #pragma mark 初始化
-/// 初始化变量
+/// Initialize
 -(void)initAll {
 //    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"iOS-Echarts" ofType:@"bundle"];
     NSBundle *echartsBundle = [NSBundle mainBundle];
@@ -199,8 +199,16 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
     [self resizeDiv];
     
     NSString *jsonStr = [PYJsonUtil getJSONString:option];
+    NSString *js;
     NSLog(@"%@",jsonStr);
-    NSString *js = [NSString stringWithFormat:@"%@(%@)", @"loadEcharts", jsonStr];
+   
+    if (_noDataLoadingOption != nil) {
+        NSDictionary *dic = @{@"noDataLoadingOption":_noDataLoadingOption};
+        NSLog(@"nodataLoadingOption:%@", [PYJsonUtil getJSONString:dic]);
+        js = [NSString stringWithFormat:@"%@(%@, %@)", @"loadEcharts", jsonStr, [PYJsonUtil getJSONString:dic]];
+    } else {
+        js = [NSString stringWithFormat:@"%@(%@)", @"loadEcharts", jsonStr];
+    }
     [webView stringByEvaluatingJavaScriptFromString:js];
     for (NSString * name in actionHandleBlocks.allKeys) {
         NSLog(@"%@", [NSString stringWithFormat:@"addEchartActionHandler('%@')",name]);

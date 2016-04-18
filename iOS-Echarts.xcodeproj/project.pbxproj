@@ -79,6 +79,7 @@
 		6CF1AA371C02EEE500F1B773 /* PYDataRange.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1AA361C02EEE500F1B773 /* PYDataRange.m */; };
 		6CF944C31C0422910067F63B /* echarts.html in Resources */ = {isa = PBXBuildFile; fileRef = 6CF944C21C0422910067F63B /* echarts.html */; };
 		6CFF3AA51B9FF64C00BAF9A7 /* PYOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */; };
+		6F2BFD0B1CC5388800408965 /* PYNoDataLoadingOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2BFD0A1CC5388800408965 /* PYNoDataLoadingOption.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -222,6 +223,8 @@
 		6CF944C21C0422910067F63B /* echarts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = echarts.html; path = Resources/echarts.html; sourceTree = "<group>"; };
 		6CFF3AA31B9FF64C00BAF9A7 /* PYOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYOption.h; path = Model/PYOption.h; sourceTree = "<group>"; };
 		6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYOption.m; path = Model/PYOption.m; sourceTree = "<group>"; };
+		6F2BFD091CC5388800408965 /* PYNoDataLoadingOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYNoDataLoadingOption.h; path = Model/PYNoDataLoadingOption.h; sourceTree = "<group>"; };
+		6F2BFD0A1CC5388800408965 /* PYNoDataLoadingOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYNoDataLoadingOption.m; path = Model/PYNoDataLoadingOption.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -425,6 +428,8 @@
 				6C8B721C1CBD2F8B00478356 /* PYSplitArea.m */,
 				6C6011A01CC137610048F6F6 /* PYLoadingOption.h */,
 				6C6011A11CC137610048F6F6 /* PYLoadingOption.m */,
+				6F2BFD091CC5388800408965 /* PYNoDataLoadingOption.h */,
+				6F2BFD0A1CC5388800408965 /* PYNoDataLoadingOption.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -650,6 +655,7 @@
 				6CC846601BC15E4D00947312 /* RMMapper.m in Sources */,
 				6C023FA11BA7267000C0883D /* PYTooltip.m in Sources */,
 				6C023FA41BA727DC00C0883D /* PYAxisPointer.m in Sources */,
+				6F2BFD0B1CC5388800408965 /* PYNoDataLoadingOption.m in Sources */,
 				6CF1AA321C02AF5600F1B773 /* ScatterDemoController.m in Sources */,
 				6C7C956A1B9DF2EF00D80042 /* PYJsonUtil.m in Sources */,
 				6C7C958F1B9EC47500D80042 /* PYLabelLine.m in Sources */,
