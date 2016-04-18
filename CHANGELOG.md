@@ -1,3 +1,11 @@
+1.1.7 Release notes (2016-04-19)
+============================================================
+
+* Add PYLoadingOption
+* Add PYNoDataLoadingOption
+* Update the PYAxis
+* Add some method for PYEchartsView
+
 1.1.6 Release notes (2016-04-12)
 =============================================================
 
