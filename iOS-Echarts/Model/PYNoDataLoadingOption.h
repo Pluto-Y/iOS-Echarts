@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class  PYTextStyle;
+
 @interface PYNoDataLoadingOption : NSObject
 
 @property (strong, nonatomic) NSString *text;
