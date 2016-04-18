@@ -8,6 +8,7 @@
 
 #import "OtherDemoController.h"
 #import "PYLoadingOption.h"
+#import "PYNoDataLoadingOption.h"
 static int effectIndex = 0;
 static NSArray *effect;
 @interface OtherDemoController () {
@@ -37,12 +38,17 @@ static NSArray *effect;
 }
 
 - (IBAction)showOtherDemo:(id)sender {
+    _yEchartsView.noDataLoadingOption = nil;
     UIButton *btn = (UIButton *)sender;
     switch (btn.tag) {
         case 90001:
             [_yEchartsView clearEcharts];
             loadingTimer.fireDate = [NSDate dateWithTimeIntervalSinceNow:2];
             [self showLoadingDemo];
+            break;
+        case 90002:
+            [self showNoDataLoadingDemo];
+            [_yEchartsView loadEcharts];
             break;
         default:
             break;
@@ -65,6 +71,64 @@ static NSArray *effect;
     NSData *jsonData = [basicColumnJson dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
     PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
+    [_yEchartsView setOption:option];
+}
+
+-(void)showNoDataLoadingDemo {
+    PYNoDataLoadingOption *noDataLoadingOption = [[PYNoDataLoadingOption alloc] init];
+    noDataLoadingOption.text = @"暂无数据......Pluto Y";
+    noDataLoadingOption.effect = @"whirling";
+    _yEchartsView.noDataLoadingOption = noDataLoadingOption;
+    PYOption *option = [[PYOption alloc] init];
+    option.legend = [[PYLegend alloc] init];
+    option.legend.data = @[@"高度(km)与气温(°C)变化关系"];
+    PYGrid *grid = [[PYGrid alloc] init];
+    grid.x = @(40);
+    grid.x2 = @(50);
+    option.grid = grid;
+    option.toolbox = [[PYToolbox alloc] init];
+    option.toolbox.show = YES;
+    option.toolbox.feature = [[PYToolboxFeature alloc] init];
+    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
+    option.toolbox.feature.mark.show = YES;
+    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
+    option.toolbox.feature.dataView.show = YES;
+    option.toolbox.feature.dataView.readOnly = NO;
+    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
+    option.toolbox.feature.magicType.show = YES;
+    option.toolbox.feature.magicType.type = @[@"line", @"bar"];
+    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
+    option.toolbox.feature.restore.show = YES;
+    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
+    option.toolbox.feature.saveAsImage.show = YES;
+    option.calculable = YES;
+    option.tooltip = [[PYTooltip alloc] init];
+    option.tooltip.trigger = @"axis";
+    option.tooltip.formatter = @"Temperature : <br/>{b}km : {c}°C";
+    PYAxis *xAxis = [[PYAxis alloc] init];
+    xAxis.type = @"value";
+    xAxis.axisLabel = [[PYAxisLabel alloc] init];
+    xAxis.axisLabel.formatter = @"{value} °C";
+    option.xAxis = [[NSMutableArray alloc] initWithObjects:xAxis, nil];
+    PYAxis *yAxis = [[PYAxis alloc] init];
+    yAxis.type = @"category";
+    yAxis.axisLine = [[PYAxisLine alloc] init];
+    yAxis.axisLine.onZero = NO;
+    yAxis.boundaryGap = @(NO);
+    yAxis.data = @[@"0", @"10", @"20", @"30", @"40", @"50", @"60", @"70", @"80"];
+    option.yAxis = [[NSMutableArray alloc] initWithObjects:yAxis, nil];
+    NSMutableArray *serieses = [[NSMutableArray alloc] init];
+    PYCartesianSeries *series1 = [[PYCartesianSeries alloc] init];
+    series1.name = @"高度(km)与气温(°C)变化关系";
+    series1.type = @"line";
+    series1.smooth = YES;
+    series1.itemStyle = [[PYItemStyle alloc] init];
+    series1.itemStyle.normal = [[PYItemStyleProp alloc] init];
+    series1.itemStyle.normal.lineStyle = [[PYLineStyle alloc] init];
+    series1.itemStyle.normal.lineStyle.shadowColor = PYRGBA(0, 0, 0, .4);
+    series1.data = @[];//@[@(15),@(-50),@(-56.5f),@(-46.5),@(-22.1),@(-2.5),@(-27.7),@(-55.7), @(-76.5)];
+    [serieses addObject:series1];
+    [option setSeries:serieses];
     [_yEchartsView setOption:option];
 }
 
