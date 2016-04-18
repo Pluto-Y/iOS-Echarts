@@ -203,9 +203,9 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
     NSLog(@"%@",jsonStr);
    
     if (_noDataLoadingOption != nil) {
-        NSDictionary *dic = @{@"noDataLoadingOption":_noDataLoadingOption};
-        NSLog(@"nodataLoadingOption:%@", [PYJsonUtil getJSONString:dic]);
-        js = [NSString stringWithFormat:@"%@(%@, %@)", @"loadEcharts", jsonStr, [PYJsonUtil getJSONString:dic]];
+        NSLog(@"nodataLoadingOption:%@", [PYJsonUtil getJSONString:_noDataLoadingOption]);
+        NSString *noDataLoadingOptionString = [NSString stringWithFormat:@"{\"noDataLoadingOption\":%@ \n}", [PYJsonUtil getJSONString:_noDataLoadingOption]];
+        js = [NSString stringWithFormat:@"%@(%@, %@)", @"loadEcharts", jsonStr, noDataLoadingOptionString];
     } else {
         js = [NSString stringWithFormat:@"%@(%@)", @"loadEcharts", jsonStr];
     }
