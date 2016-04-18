@@ -24,6 +24,8 @@
         _z = @(0);
         _position = @"'bottom'|'left'";
         _name = @"";
+        _nameLocation = @"end";
+        _scale = false;
         _data = [[NSArray alloc] init];
         _axisLine = [[PYAxisLine alloc] init];
         _axisLabel = [[PYAxisLabel alloc] init];
