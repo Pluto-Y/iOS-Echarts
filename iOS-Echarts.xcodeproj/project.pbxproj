@@ -80,6 +80,7 @@
 		6CF944C31C0422910067F63B /* echarts.html in Resources */ = {isa = PBXBuildFile; fileRef = 6CF944C21C0422910067F63B /* echarts.html */; };
 		6CFF3AA51B9FF64C00BAF9A7 /* PYOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */; };
 		6F2BFD0B1CC5388800408965 /* PYNoDataLoadingOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2BFD0A1CC5388800408965 /* PYNoDataLoadingOption.m */; };
+		6FD4593C1CC928F800BDBEDC /* PYVennSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD4593B1CC928F800BDBEDC /* PYVennSeries.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -225,6 +226,8 @@
 		6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYOption.m; path = Model/PYOption.m; sourceTree = "<group>"; };
 		6F2BFD091CC5388800408965 /* PYNoDataLoadingOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYNoDataLoadingOption.h; path = Model/PYNoDataLoadingOption.h; sourceTree = "<group>"; };
 		6F2BFD0A1CC5388800408965 /* PYNoDataLoadingOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYNoDataLoadingOption.m; path = Model/PYNoDataLoadingOption.m; sourceTree = "<group>"; };
+		6FD4593A1CC928F800BDBEDC /* PYVennSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYVennSeries.h; path = Model/Series/PYVennSeries.h; sourceTree = "<group>"; };
+		6FD4593B1CC928F800BDBEDC /* PYVennSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYVennSeries.m; path = Model/Series/PYVennSeries.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -462,6 +465,8 @@
 				6CB97F2D1C304D120031C827 /* PYHeatmapSeries.m */,
 				6CD9740A1C73A14A0054BAE7 /* PYMapSeries.h */,
 				6CD9740B1C73A14A0054BAE7 /* PYMapSeries.m */,
+				6FD4593A1CC928F800BDBEDC /* PYVennSeries.h */,
+				6FD4593B1CC928F800BDBEDC /* PYVennSeries.m */,
 			);
 			name = Series;
 			sourceTree = "<group>";
@@ -612,6 +617,7 @@
 				6C7C957D1B9EA53400D80042 /* PYCartesianSeries.m in Sources */,
 				6CD883EA1C27B9B700A751B9 /* PYRadarSeries.m in Sources */,
 				6C0658CE1BB85B29003CAAE5 /* main.m in Sources */,
+				6FD4593C1CC928F800BDBEDC /* PYVennSeries.m in Sources */,
 				6CC8465E1BC15E4D00947312 /* NSObject+RMCopyable.m in Sources */,
 				6CDE01251BA87A5A006A18D5 /* PYToolbox.m in Sources */,
 				6CD026FC1BC03AEA009EE2AA /* PYTimeline.m in Sources */,
