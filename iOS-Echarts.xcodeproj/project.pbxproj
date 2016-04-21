@@ -82,6 +82,7 @@
 		6F2BFD0B1CC5388800408965 /* PYNoDataLoadingOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2BFD0A1CC5388800408965 /* PYNoDataLoadingOption.m */; };
 		6FD4593C1CC928F800BDBEDC /* PYVennSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD4593B1CC928F800BDBEDC /* PYVennSeries.m */; };
 		6FD4593F1CC92CE600BDBEDC /* PYWordCloudSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD4593E1CC92CE600BDBEDC /* PYWordCloudSeries.m */; };
+		6FD459421CC933A000BDBEDC /* PYTreeSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD459411CC933A000BDBEDC /* PYTreeSeries.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -231,6 +232,8 @@
 		6FD4593B1CC928F800BDBEDC /* PYVennSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYVennSeries.m; path = Model/Series/PYVennSeries.m; sourceTree = "<group>"; };
 		6FD4593D1CC92CE600BDBEDC /* PYWordCloudSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYWordCloudSeries.h; path = Model/Series/PYWordCloudSeries.h; sourceTree = "<group>"; };
 		6FD4593E1CC92CE600BDBEDC /* PYWordCloudSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYWordCloudSeries.m; path = Model/Series/PYWordCloudSeries.m; sourceTree = "<group>"; };
+		6FD459401CC933A000BDBEDC /* PYTreeSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYTreeSeries.h; path = Model/Series/PYTreeSeries.h; sourceTree = "<group>"; };
+		6FD459411CC933A000BDBEDC /* PYTreeSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYTreeSeries.m; path = Model/Series/PYTreeSeries.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -472,6 +475,8 @@
 				6FD4593B1CC928F800BDBEDC /* PYVennSeries.m */,
 				6FD4593D1CC92CE600BDBEDC /* PYWordCloudSeries.h */,
 				6FD4593E1CC92CE600BDBEDC /* PYWordCloudSeries.m */,
+				6FD459401CC933A000BDBEDC /* PYTreeSeries.h */,
+				6FD459411CC933A000BDBEDC /* PYTreeSeries.m */,
 			);
 			name = Series;
 			sourceTree = "<group>";
@@ -625,6 +630,7 @@
 				6FD4593C1CC928F800BDBEDC /* PYVennSeries.m in Sources */,
 				6CC8465E1BC15E4D00947312 /* NSObject+RMCopyable.m in Sources */,
 				6CDE01251BA87A5A006A18D5 /* PYToolbox.m in Sources */,
+				6FD459421CC933A000BDBEDC /* PYTreeSeries.m in Sources */,
 				6CD026FC1BC03AEA009EE2AA /* PYTimeline.m in Sources */,
 				6C7C95571B9DE77D00D80042 /* PYAxisLine.m in Sources */,
 				6CD026F91BC00A04009EE2AA /* PYPieSeries.m in Sources */,
