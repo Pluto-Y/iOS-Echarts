@@ -85,6 +85,7 @@
 		6FD459421CC933A000BDBEDC /* PYTreeSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD459411CC933A000BDBEDC /* PYTreeSeries.m */; };
 		6FD459451CCBED6400BDBEDC /* PYTreeMapSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD459441CCBED6400BDBEDC /* PYTreeMapSeries.m */; };
 		6FD459481CCBEEE300BDBEDC /* PYEventRiverSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD459471CCBEEE300BDBEDC /* PYEventRiverSeries.m */; };
+		6FD4594B1CCBF02900BDBEDC /* PYFunnelSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD4594A1CCBF02900BDBEDC /* PYFunnelSeries.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -240,6 +241,8 @@
 		6FD459441CCBED6400BDBEDC /* PYTreeMapSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYTreeMapSeries.m; path = Model/Series/PYTreeMapSeries.m; sourceTree = "<group>"; };
 		6FD459461CCBEEE300BDBEDC /* PYEventRiverSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYEventRiverSeries.h; path = Model/Series/PYEventRiverSeries.h; sourceTree = "<group>"; };
 		6FD459471CCBEEE300BDBEDC /* PYEventRiverSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYEventRiverSeries.m; path = Model/Series/PYEventRiverSeries.m; sourceTree = "<group>"; };
+		6FD459491CCBF02900BDBEDC /* PYFunnelSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYFunnelSeries.h; path = Model/Series/PYFunnelSeries.h; sourceTree = "<group>"; };
+		6FD4594A1CCBF02900BDBEDC /* PYFunnelSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYFunnelSeries.m; path = Model/Series/PYFunnelSeries.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -487,6 +490,8 @@
 				6FD459441CCBED6400BDBEDC /* PYTreeMapSeries.m */,
 				6FD459461CCBEEE300BDBEDC /* PYEventRiverSeries.h */,
 				6FD459471CCBEEE300BDBEDC /* PYEventRiverSeries.m */,
+				6FD459491CCBF02900BDBEDC /* PYFunnelSeries.h */,
+				6FD4594A1CCBF02900BDBEDC /* PYFunnelSeries.m */,
 			);
 			name = Series;
 			sourceTree = "<group>";
@@ -680,6 +685,7 @@
 				6C6011A21CC137610048F6F6 /* PYLoadingOption.m in Sources */,
 				6CA3C96A1CB3E37A00982AD8 /* PYZoomEchartsView.m in Sources */,
 				6CF1AA2D1C02A32600F1B773 /* CandlestickDemoController.m in Sources */,
+				6FD4594B1CCBF02900BDBEDC /* PYFunnelSeries.m in Sources */,
 				6C0658E91BB85B4F003CAAE5 /* ViewController.m in Sources */,
 				6C7C95711B9DF87400D80042 /* PYTextStyle.m in Sources */,
 				6CC846601BC15E4D00947312 /* RMMapper.m in Sources */,
