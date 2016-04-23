@@ -12,7 +12,7 @@
 
 @interface PYTextStyle : NSObject
 
-@property (retain, nonatomic) PYColor *color;
+@property (retain, nonatomic) id color;
 @property (retain, nonatomic) NSString *decoration;
 @property (retain, nonatomic) NSString *align;
 @property (retain, nonatomic) NSString *baseLine;
