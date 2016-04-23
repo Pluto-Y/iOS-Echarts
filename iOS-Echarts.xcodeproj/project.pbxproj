@@ -84,6 +84,7 @@
 		6FD4593F1CC92CE600BDBEDC /* PYWordCloudSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD4593E1CC92CE600BDBEDC /* PYWordCloudSeries.m */; };
 		6FD459421CC933A000BDBEDC /* PYTreeSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD459411CC933A000BDBEDC /* PYTreeSeries.m */; };
 		6FD459451CCBED6400BDBEDC /* PYTreeMapSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD459441CCBED6400BDBEDC /* PYTreeMapSeries.m */; };
+		6FD459481CCBEEE300BDBEDC /* PYEventRiverSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD459471CCBEEE300BDBEDC /* PYEventRiverSeries.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -237,6 +238,8 @@
 		6FD459411CC933A000BDBEDC /* PYTreeSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYTreeSeries.m; path = Model/Series/PYTreeSeries.m; sourceTree = "<group>"; };
 		6FD459431CCBED6400BDBEDC /* PYTreeMapSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYTreeMapSeries.h; path = Model/Series/PYTreeMapSeries.h; sourceTree = "<group>"; };
 		6FD459441CCBED6400BDBEDC /* PYTreeMapSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYTreeMapSeries.m; path = Model/Series/PYTreeMapSeries.m; sourceTree = "<group>"; };
+		6FD459461CCBEEE300BDBEDC /* PYEventRiverSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYEventRiverSeries.h; path = Model/Series/PYEventRiverSeries.h; sourceTree = "<group>"; };
+		6FD459471CCBEEE300BDBEDC /* PYEventRiverSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYEventRiverSeries.m; path = Model/Series/PYEventRiverSeries.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -482,6 +485,8 @@
 				6FD459411CC933A000BDBEDC /* PYTreeSeries.m */,
 				6FD459431CCBED6400BDBEDC /* PYTreeMapSeries.h */,
 				6FD459441CCBED6400BDBEDC /* PYTreeMapSeries.m */,
+				6FD459461CCBEEE300BDBEDC /* PYEventRiverSeries.h */,
+				6FD459471CCBEEE300BDBEDC /* PYEventRiverSeries.m */,
 			);
 			name = Series;
 			sourceTree = "<group>";
@@ -625,6 +630,7 @@
 				6C8B721D1CBD2F8B00478356 /* PYSplitArea.m in Sources */,
 				6C2805A61C27C3590076EAFB /* PYPolar.m in Sources */,
 				6C0658E71BB85B4F003CAAE5 /* LineDemoController.m in Sources */,
+				6FD459481CCBEEE300BDBEDC /* PYEventRiverSeries.m in Sources */,
 				6C023F431BA4792500C0883D /* NSObject+PYObject.m in Sources */,
 				6CAB6A3B1BB266B100293E0B /* PYGrid.m in Sources */,
 				6C7C955A1B9DE82D00D80042 /* PYLineStyle.m in Sources */,
