@@ -55,7 +55,7 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
 -(void)initAll {
 //    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"iOS-Echarts" ofType:@"bundle"];
     NSBundle *echartsBundle = [NSBundle mainBundle];
-    NSString *urlString = [echartsBundle pathForResource:@"echarts" ofType:@"html"];
+    NSString *urlString = [[echartsBundle pathForResource:@"echarts" ofType:@"html"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; // Fixes the url string contain chinese characters
     NSURL *url =[NSURL URLWithString:urlString];
     localRequest =[NSURLRequest requestWithURL:url];
     self.delegate = self;
