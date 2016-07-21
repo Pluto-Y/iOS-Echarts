@@ -20,7 +20,7 @@
         _radius = @(0.75);
         _startAngle = @(90);
         _spliteNumber = @(5);
-        _name = @{@"show":@(YES), @"formatter":@"null", @"textStyle":@{@"color":@"#333"}};
+        _name = @{@"show":@(YES), @"textStyle":@{@"color":@"#333"}};
         _scale = NO;
         _type = @"polygon";
         

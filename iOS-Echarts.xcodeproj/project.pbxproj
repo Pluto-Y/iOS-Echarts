@@ -569,6 +569,7 @@
 		6C42166E1B98E310002D4B7A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = PY;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "pluto-y";
 				TargetAttributes = {

@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PYRadarSeries : NSObject
+@interface PYRadarSeries : PYSeries
 
 @property (retain, nonatomic) NSNumber *polarIndex;
 @property (retain, nonatomic) NSString *symbol;

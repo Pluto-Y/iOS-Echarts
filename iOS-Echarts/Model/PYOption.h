@@ -23,7 +23,7 @@
 
 @property (retain, nonatomic) PYColor *backgroundColor;
 @property (retain, nonatomic) NSArray *color;
-@property (retain, nonatomic) PYPolar *polar;
+@property (retain, nonatomic) NSMutableArray<PYPolar *> *polar;
 @property (assign, nonatomic) BOOL renderAsImage;
 @property (assign, nonatomic) BOOL calculable;
 @property (assign, nonatomic) BOOL animation;
