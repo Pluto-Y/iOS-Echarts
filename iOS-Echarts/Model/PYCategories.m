@@ -8,7 +8,7 @@
 
 #import "PYCategories.h"
 
-@implementation PYCategries
+@implementation PYCategories
 
 - (instancetype)init
 {

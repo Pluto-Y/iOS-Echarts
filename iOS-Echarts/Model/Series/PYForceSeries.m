@@ -8,7 +8,7 @@
 
 #import "PYForceSeries.h"
 
-@implementation PYForceSeries
+@implementation PYForceNodes
 
 @end
 

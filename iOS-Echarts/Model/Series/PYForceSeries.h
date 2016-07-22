@@ -25,7 +25,7 @@
 @interface PYForceSeries : PYSeries
 
 @property (strong, nonatomic) NSMutableArray<PYCategories *> *categories;
-@property (strong, nonatomic) NSMutableArray<PYForceSeries *> *nodes;
+@property (strong, nonatomic) NSMutableArray<PYForceNodes *> *nodes;
 @property (strong, nonatomic) NSMutableArray<PYLinks *> *links;
 @property (strong, nonatomic) NSMutableArray *matrix;
 @property (strong, nonatomic) NSArray *center;
