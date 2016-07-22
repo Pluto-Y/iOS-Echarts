@@ -26,8 +26,11 @@
 #import "RadarDemoController.h"
 // Map
 #import "MapDemoController.h"
+// Force
+#import "ForceDemoController.h"
 // Other Demo
 #import "OtherDemoController.h"
+
 
 @interface ViewController ()
 
@@ -174,6 +177,9 @@
             break;
         case 10006: // 地图
             controller = [[MapDemoController alloc] init];
+            break;
+        case 10007: // 力导向布局图
+            controller = [[ForceDemoController alloc] init];
             break;
         case 11000:
             controller = [[OtherDemoController alloc] init];
