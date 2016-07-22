@@ -82,6 +82,7 @@
 		6F2BFD0B1CC5388800408965 /* PYNoDataLoadingOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2BFD0A1CC5388800408965 /* PYNoDataLoadingOption.m */; };
 		6F9391A01D42363A00CD54FC /* PYForceSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F93919F1D42363A00CD54FC /* PYForceSeries.m */; };
 		6F9391A31D4236B000CD54FC /* PYCategries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9391A21D4236B000CD54FC /* PYCategries.m */; };
+		6F9391A61D42389700CD54FC /* PYNodes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9391A51D42389700CD54FC /* PYNodes.m */; };
 		6FD4593C1CC928F800BDBEDC /* PYVennSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD4593B1CC928F800BDBEDC /* PYVennSeries.m */; };
 		6FD4593F1CC92CE600BDBEDC /* PYWordCloudSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD4593E1CC92CE600BDBEDC /* PYWordCloudSeries.m */; };
 		6FD459421CC933A000BDBEDC /* PYTreeSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FD459411CC933A000BDBEDC /* PYTreeSeries.m */; };
@@ -238,6 +239,8 @@
 		6F93919F1D42363A00CD54FC /* PYForceSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYForceSeries.m; path = Model/Series/PYForceSeries.m; sourceTree = "<group>"; };
 		6F9391A11D4236B000CD54FC /* PYCategries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYCategries.h; path = Model/PYCategries.h; sourceTree = "<group>"; };
 		6F9391A21D4236B000CD54FC /* PYCategries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYCategries.m; path = Model/PYCategries.m; sourceTree = "<group>"; };
+		6F9391A41D42389700CD54FC /* PYNodes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYNodes.h; path = Model/PYNodes.h; sourceTree = "<group>"; };
+		6F9391A51D42389700CD54FC /* PYNodes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYNodes.m; path = Model/PYNodes.m; sourceTree = "<group>"; };
 		6FD4593A1CC928F800BDBEDC /* PYVennSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYVennSeries.h; path = Model/Series/PYVennSeries.h; sourceTree = "<group>"; };
 		6FD4593B1CC928F800BDBEDC /* PYVennSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYVennSeries.m; path = Model/Series/PYVennSeries.m; sourceTree = "<group>"; };
 		6FD4593D1CC92CE600BDBEDC /* PYWordCloudSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYWordCloudSeries.h; path = Model/Series/PYWordCloudSeries.h; sourceTree = "<group>"; };
@@ -459,6 +462,8 @@
 				6F2BFD0A1CC5388800408965 /* PYNoDataLoadingOption.m */,
 				6F9391A11D4236B000CD54FC /* PYCategries.h */,
 				6F9391A21D4236B000CD54FC /* PYCategries.m */,
+				6F9391A41D42389700CD54FC /* PYNodes.h */,
+				6F9391A51D42389700CD54FC /* PYNodes.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -698,6 +703,7 @@
 				6C7C95741B9E84B700D80042 /* PYLegend.m in Sources */,
 				6C0882851C2F94EE00EA0D34 /* PYRoamController.m in Sources */,
 				6CB02A7E1BBEAC66002E1126 /* MainController.m in Sources */,
+				6F9391A61D42389700CD54FC /* PYNodes.m in Sources */,
 				6CB02A821BBF7739002E1126 /* PieDemoController.m in Sources */,
 				6C6011AB1CC144710048F6F6 /* OtherDemoController.m in Sources */,
 				6C7C957A1B9EA39D00D80042 /* PYSeries.m in Sources */,
