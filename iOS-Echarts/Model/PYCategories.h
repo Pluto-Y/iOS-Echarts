@@ -10,7 +10,7 @@
 
 @class PYItemStyle;
 
-@interface PYCategries : NSObject
+@interface PYCategories : NSObject
 
 @property (strong, nonatomic) NSString *name;
 @property (strong, nonatomic) NSString *symbol;
