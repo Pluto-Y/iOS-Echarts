@@ -6,7 +6,7 @@
 //  Copyright © 2015年 pluto-y. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "PYSeries.h"
 
 @interface PYRadarSeries : PYSeries
 

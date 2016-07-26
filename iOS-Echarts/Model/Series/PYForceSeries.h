@@ -18,7 +18,6 @@
 @property (assign, nonatomic) BOOL fixY;
 @property (assign, nonatomic) BOOL ignore;
 @property (assign, nonatomic) BOOL draggable;
-@property (strong, nonatomic) NSNumber *category;
 
 @end
 
