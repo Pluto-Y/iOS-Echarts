@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PYNodeStyle.h"
+#import "PYLinks.h"
 
-@class PYLinkStyle, PYLabelLine, PYAreaStyle, PYLabel, PYLineStyle;
+@class PYLabelLine, PYAreaStyle, PYLabel, PYLineStyle;
 
 @interface PYItemStyleProp : NSObject
 
@@ -29,7 +31,7 @@
 
 @interface PYItemStyleProp(Force)
 
+@property (strong, nonatomic) PYNodeStyle *nodeStyle;
 @property (strong, nonatomic) PYLineStyle *linkStyle;
-
 
 @end

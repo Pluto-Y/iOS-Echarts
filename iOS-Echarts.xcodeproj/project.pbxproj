@@ -81,6 +81,7 @@
 		6CFF3AA51B9FF64C00BAF9A7 /* PYOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */; };
 		6F2BFD0B1CC5388800408965 /* PYNoDataLoadingOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2BFD0A1CC5388800408965 /* PYNoDataLoadingOption.m */; };
 		6F77EE4F1D473FB3000AB19C /* PYLinkStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F77EE4E1D473FB3000AB19C /* PYLinkStyle.m */; };
+		6F77EE521D47425D000AB19C /* PYNodeStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F77EE511D47425D000AB19C /* PYNodeStyle.m */; };
 		6F9391A01D42363A00CD54FC /* PYForceSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F93919F1D42363A00CD54FC /* PYForceSeries.m */; };
 		6F9391A31D4236B000CD54FC /* PYCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9391A21D4236B000CD54FC /* PYCategories.m */; };
 		6F9391A61D42389700CD54FC /* PYNodes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9391A51D42389700CD54FC /* PYNodes.m */; };
@@ -241,6 +242,8 @@
 		6F2BFD0A1CC5388800408965 /* PYNoDataLoadingOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYNoDataLoadingOption.m; path = Model/PYNoDataLoadingOption.m; sourceTree = "<group>"; };
 		6F77EE4D1D473FB3000AB19C /* PYLinkStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYLinkStyle.h; path = Model/PYLinkStyle.h; sourceTree = "<group>"; };
 		6F77EE4E1D473FB3000AB19C /* PYLinkStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYLinkStyle.m; path = Model/PYLinkStyle.m; sourceTree = "<group>"; };
+		6F77EE501D47425D000AB19C /* PYNodeStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYNodeStyle.h; path = Model/PYNodeStyle.h; sourceTree = "<group>"; };
+		6F77EE511D47425D000AB19C /* PYNodeStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYNodeStyle.m; path = Model/PYNodeStyle.m; sourceTree = "<group>"; };
 		6F93919E1D42363A00CD54FC /* PYForceSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYForceSeries.h; path = Model/Series/PYForceSeries.h; sourceTree = "<group>"; };
 		6F93919F1D42363A00CD54FC /* PYForceSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYForceSeries.m; path = Model/Series/PYForceSeries.m; sourceTree = "<group>"; };
 		6F9391A11D4236B000CD54FC /* PYCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYCategories.h; path = Model/PYCategories.h; sourceTree = "<group>"; };
@@ -482,6 +485,8 @@
 				6F9391A81D423ABF00CD54FC /* PYLinks.m */,
 				6F77EE4D1D473FB3000AB19C /* PYLinkStyle.h */,
 				6F77EE4E1D473FB3000AB19C /* PYLinkStyle.m */,
+				6F77EE501D47425D000AB19C /* PYNodeStyle.h */,
+				6F77EE511D47425D000AB19C /* PYNodeStyle.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -705,6 +710,7 @@
 				6C2805A21C27BBF80076EAFB /* RadarDemoController.m in Sources */,
 				6F9391A31D4236B000CD54FC /* PYCategories.m in Sources */,
 				6C7C95601B9DEB5100D80042 /* PYAxisLabel.m in Sources */,
+				6F77EE521D47425D000AB19C /* PYNodeStyle.m in Sources */,
 				6FD4593F1CC92CE600BDBEDC /* PYWordCloudSeries.m in Sources */,
 				6C305A4C1BAB1EF900762DBD /* PYToolboxFeature.m in Sources */,
 				6F9391AD1D42414800CD54FC /* ForceDemoController.m in Sources */,
