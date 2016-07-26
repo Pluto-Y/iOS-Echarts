@@ -16,13 +16,13 @@
 @property (strong, nonatomic) NSMutableArray *initial;
 @property (assign, nonatomic) BOOL fixX;
 @property (assign, nonatomic) BOOL fixY;
-@property (assign, nonatomic) BOOL ignore;
 @property (assign, nonatomic) BOOL draggable;
 
 @end
 
 @interface PYForceSeries : PYSeries
 
+@property (assign, nonatomic) BOOL ribbonType;
 @property (strong, nonatomic) NSMutableArray<PYCategories *> *categories;
 @property (strong, nonatomic) NSMutableArray<PYForceNodes *> *nodes;
 @property (strong, nonatomic) NSMutableArray<PYLinks *> *links;
