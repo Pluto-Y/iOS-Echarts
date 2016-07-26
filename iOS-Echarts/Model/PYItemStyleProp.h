@@ -17,7 +17,7 @@
 @property (retain, nonatomic) PYColor *color;
 @property (retain, nonatomic) PYLineStyle *lineStyle;
 @property (retain, nonatomic) PYAreaStyle *areaStyle;
-// chordStyle, nodeStyle
+// chordStyle
 @property (retain, nonatomic) PYColor *borderColor;
 @property (retain, nonatomic) NSNumber *borderWidth;
 @property (retain, nonatomic) PYColor *barBorderColor;
