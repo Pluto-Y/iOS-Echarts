@@ -80,6 +80,7 @@
 		6CF944C31C0422910067F63B /* echarts.html in Resources */ = {isa = PBXBuildFile; fileRef = 6CF944C21C0422910067F63B /* echarts.html */; };
 		6CFF3AA51B9FF64C00BAF9A7 /* PYOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */; };
 		6F2BFD0B1CC5388800408965 /* PYNoDataLoadingOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2BFD0A1CC5388800408965 /* PYNoDataLoadingOption.m */; };
+		6F77EE4F1D473FB3000AB19C /* PYLinkStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F77EE4E1D473FB3000AB19C /* PYLinkStyle.m */; };
 		6F9391A01D42363A00CD54FC /* PYForceSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F93919F1D42363A00CD54FC /* PYForceSeries.m */; };
 		6F9391A31D4236B000CD54FC /* PYCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9391A21D4236B000CD54FC /* PYCategories.m */; };
 		6F9391A61D42389700CD54FC /* PYNodes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9391A51D42389700CD54FC /* PYNodes.m */; };
@@ -238,6 +239,8 @@
 		6CFF3AA41B9FF64C00BAF9A7 /* PYOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYOption.m; path = Model/PYOption.m; sourceTree = "<group>"; };
 		6F2BFD091CC5388800408965 /* PYNoDataLoadingOption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYNoDataLoadingOption.h; path = Model/PYNoDataLoadingOption.h; sourceTree = "<group>"; };
 		6F2BFD0A1CC5388800408965 /* PYNoDataLoadingOption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYNoDataLoadingOption.m; path = Model/PYNoDataLoadingOption.m; sourceTree = "<group>"; };
+		6F77EE4D1D473FB3000AB19C /* PYLinkStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYLinkStyle.h; path = Model/PYLinkStyle.h; sourceTree = "<group>"; };
+		6F77EE4E1D473FB3000AB19C /* PYLinkStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYLinkStyle.m; path = Model/PYLinkStyle.m; sourceTree = "<group>"; };
 		6F93919E1D42363A00CD54FC /* PYForceSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYForceSeries.h; path = Model/Series/PYForceSeries.h; sourceTree = "<group>"; };
 		6F93919F1D42363A00CD54FC /* PYForceSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYForceSeries.m; path = Model/Series/PYForceSeries.m; sourceTree = "<group>"; };
 		6F9391A11D4236B000CD54FC /* PYCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYCategories.h; path = Model/PYCategories.h; sourceTree = "<group>"; };
@@ -477,6 +480,8 @@
 				6F9391A51D42389700CD54FC /* PYNodes.m */,
 				6F9391A71D423ABF00CD54FC /* PYLinks.h */,
 				6F9391A81D423ABF00CD54FC /* PYLinks.m */,
+				6F77EE4D1D473FB3000AB19C /* PYLinkStyle.h */,
+				6F77EE4E1D473FB3000AB19C /* PYLinkStyle.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -725,6 +730,7 @@
 				6C7C957A1B9EA39D00D80042 /* PYSeries.m in Sources */,
 				6C6011A21CC137610048F6F6 /* PYLoadingOption.m in Sources */,
 				6CA3C96A1CB3E37A00982AD8 /* PYZoomEchartsView.m in Sources */,
+				6F77EE4F1D473FB3000AB19C /* PYLinkStyle.m in Sources */,
 				6CF1AA2D1C02A32600F1B773 /* CandlestickDemoController.m in Sources */,
 				6FD4594B1CCBF02900BDBEDC /* PYFunnelSeries.m in Sources */,
 				6C0658E91BB85B4F003CAAE5 /* ViewController.m in Sources */,

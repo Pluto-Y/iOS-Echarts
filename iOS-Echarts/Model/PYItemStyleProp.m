@@ -8,6 +8,10 @@
 
 #import "PYItemStyleProp.h"
 #import "PYColor.h"
+#import "PYLineStyle.h"
+#import "PYAreaStyle.h"
+#import "PYLabel.h"
+#import "PYLabelLine.h"
 
 @implementation PYItemStyleProp
 
