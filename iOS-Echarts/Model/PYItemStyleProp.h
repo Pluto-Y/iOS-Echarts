@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "PYNodeStyle.h"
+#import "PYLinkStyle.h"
 #import "PYLinks.h"
 
 @class PYLabelLine, PYAreaStyle, PYLabel, PYLineStyle;
@@ -19,7 +20,7 @@
 @property (retain, nonatomic) PYAreaStyle *areaStyle;
 // chordStyle
 @property (strong, nonatomic) PYNodeStyle *nodeStyle;
-@property (strong, nonatomic) PYLineStyle *linkStyle;
+@property (strong, nonatomic) PYLinkStyle *linkStyle;
 @property (retain, nonatomic) PYColor *borderColor;
 @property (retain, nonatomic) NSNumber *borderWidth;
 @property (retain, nonatomic) PYColor *barBorderColor;

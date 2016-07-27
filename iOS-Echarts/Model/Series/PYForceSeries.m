@@ -18,11 +18,14 @@
 {
     self = [super init];
     if (self) {
+        // the data property is useless in force series
+        self.data = nil;
         _nodes = [NSMutableArray new];
         _links = [NSMutableArray new];
-        _matrix = [NSMutableArray new];
+//        _matrix = [NSMutableArray new];
         _center = @[@"50%", @"50%"];
-        _size = @(1);
+        
+//        _size = @(1);
         _minRadius = @(10);
         _maxRadius = @(20);
         _symbol = @"circle";
