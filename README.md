@@ -33,7 +33,10 @@ If you don't know how to set the right value for the option, you can check the d
 # Contact
 Follow and contact me on [Twitter](https://twitter.com/youtk21ai) or [Sina Weibo](http://weibo.com/5690716723/info). And if you want to contribute with this projust, please contact me as well.
 
+If you have QQ, you can join the group which number is 485591970.
+
 # Licenses
 All source code is licensed under the MIT License.
+
 
 
