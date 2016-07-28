@@ -82,6 +82,10 @@
 		6F2BFD0B1CC5388800408965 /* PYNoDataLoadingOption.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F2BFD0A1CC5388800408965 /* PYNoDataLoadingOption.m */; };
 		6F77EE4F1D473FB3000AB19C /* PYLinkStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F77EE4E1D473FB3000AB19C /* PYLinkStyle.m */; };
 		6F77EE521D47425D000AB19C /* PYNodeStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F77EE511D47425D000AB19C /* PYNodeStyle.m */; };
+		6F8A3EFF1D49AFA5008268BD /* MultiEchartsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A3EFD1D49AFA5008268BD /* MultiEchartsController.m */; };
+		6F8A3F001D49AFA5008268BD /* MultiEchartsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F8A3EFE1D49AFA5008268BD /* MultiEchartsController.xib */; };
+		6F8A3F051D49B598008268BD /* EchartsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A3F031D49B598008268BD /* EchartsViewCell.m */; };
+		6F8A3F061D49B598008268BD /* EchartsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F8A3F041D49B598008268BD /* EchartsViewCell.xib */; };
 		6F9391A01D42363A00CD54FC /* PYForceSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F93919F1D42363A00CD54FC /* PYForceSeries.m */; };
 		6F9391A31D4236B000CD54FC /* PYCategories.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9391A21D4236B000CD54FC /* PYCategories.m */; };
 		6F9391A61D42389700CD54FC /* PYNodes.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9391A51D42389700CD54FC /* PYNodes.m */; };
@@ -244,6 +248,12 @@
 		6F77EE4E1D473FB3000AB19C /* PYLinkStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYLinkStyle.m; path = Model/PYLinkStyle.m; sourceTree = "<group>"; };
 		6F77EE501D47425D000AB19C /* PYNodeStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYNodeStyle.h; path = Model/PYNodeStyle.h; sourceTree = "<group>"; };
 		6F77EE511D47425D000AB19C /* PYNodeStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYNodeStyle.m; path = Model/PYNodeStyle.m; sourceTree = "<group>"; };
+		6F8A3EFC1D49AFA5008268BD /* MultiEchartsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiEchartsController.h; sourceTree = "<group>"; };
+		6F8A3EFD1D49AFA5008268BD /* MultiEchartsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiEchartsController.m; sourceTree = "<group>"; };
+		6F8A3EFE1D49AFA5008268BD /* MultiEchartsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiEchartsController.xib; sourceTree = "<group>"; };
+		6F8A3F021D49B598008268BD /* EchartsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EchartsViewCell.h; path = "iOS-Echarts_Demo/Cell/EchartsViewCell.h"; sourceTree = "<group>"; };
+		6F8A3F031D49B598008268BD /* EchartsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EchartsViewCell.m; path = "iOS-Echarts_Demo/Cell/EchartsViewCell.m"; sourceTree = "<group>"; };
+		6F8A3F041D49B598008268BD /* EchartsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EchartsViewCell.xib; path = "iOS-Echarts_Demo/Cell/EchartsViewCell.xib"; sourceTree = "<group>"; };
 		6F93919E1D42363A00CD54FC /* PYForceSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYForceSeries.h; path = Model/Series/PYForceSeries.h; sourceTree = "<group>"; };
 		6F93919F1D42363A00CD54FC /* PYForceSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = PYForceSeries.m; path = Model/Series/PYForceSeries.m; sourceTree = "<group>"; };
 		6F9391A11D4236B000CD54FC /* PYCategories.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PYCategories.h; path = Model/PYCategories.h; sourceTree = "<group>"; };
@@ -292,6 +302,7 @@
 		6C0658C91BB85A3E003CAAE5 /* iOS-Echarts_Demo */ = {
 			isa = PBXGroup;
 			children = (
+				6F8A3F011D49B571008268BD /* Cell */,
 				6CC846531BC15E4D00947312 /* Library */,
 				6C0658DC1BB85B4F003CAAE5 /* Controller */,
 				6C0658D61BB85B46003CAAE5 /* LaunchScreen.xib */,
@@ -337,6 +348,9 @@
 				6F9391AA1D42414800CD54FC /* ForceDemoController.h */,
 				6F9391AB1D42414800CD54FC /* ForceDemoController.m */,
 				6F9391AC1D42414800CD54FC /* ForceDemoController.xib */,
+				6F8A3EFC1D49AFA5008268BD /* MultiEchartsController.h */,
+				6F8A3EFD1D49AFA5008268BD /* MultiEchartsController.m */,
+				6F8A3EFE1D49AFA5008268BD /* MultiEchartsController.xib */,
 			);
 			name = Controller;
 			path = "iOS-Echarts_Demo/Controller";
@@ -563,6 +577,16 @@
 			path = RMMapper;
 			sourceTree = "<group>";
 		};
+		6F8A3F011D49B571008268BD /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6F8A3F021D49B598008268BD /* EchartsViewCell.h */,
+				6F8A3F031D49B598008268BD /* EchartsViewCell.m */,
+				6F8A3F041D49B598008268BD /* EchartsViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -653,11 +677,13 @@
 				6C3472131BF4712400C16B73 /* js in Resources */,
 				6C6011AC1CC144710048F6F6 /* OtherDemoController.xib in Resources */,
 				6C0658E61BB85B4F003CAAE5 /* BarDemoController.xib in Resources */,
+				6F8A3F001D49AFA5008268BD /* MultiEchartsController.xib in Resources */,
 				6C08828F1C303F4400EA0D34 /* MapDemoController.xib in Resources */,
 				6CF1AA2E1C02A32600F1B773 /* CandlestickDemoController.xib in Resources */,
 				6C0658DB1BB85B46003CAAE5 /* Main.storyboard in Resources */,
 				6CF944C31C0422910067F63B /* echarts.html in Resources */,
 				6CB02A831BBF7739002E1126 /* PieDemoController.xib in Resources */,
+				6F8A3F061D49B598008268BD /* EchartsViewCell.xib in Resources */,
 				6C0658CD1BB85B29003CAAE5 /* Info.plist in Resources */,
 				6C2805A31C27BBF80076EAFB /* RadarDemoController.xib in Resources */,
 			);
@@ -684,6 +710,7 @@
 				6C023F431BA4792500C0883D /* NSObject+PYObject.m in Sources */,
 				6CAB6A3B1BB266B100293E0B /* PYGrid.m in Sources */,
 				6C7C955A1B9DE82D00D80042 /* PYLineStyle.m in Sources */,
+				6F8A3EFF1D49AFA5008268BD /* MultiEchartsController.m in Sources */,
 				6CFF3AA51B9FF64C00BAF9A7 /* PYOption.m in Sources */,
 				6C7C957D1B9EA53400D80042 /* PYCartesianSeries.m in Sources */,
 				6CD883EA1C27B9B700A751B9 /* PYRadarSeries.m in Sources */,
@@ -714,6 +741,7 @@
 				6FD4593F1CC92CE600BDBEDC /* PYWordCloudSeries.m in Sources */,
 				6C305A4C1BAB1EF900762DBD /* PYToolboxFeature.m in Sources */,
 				6F9391AD1D42414800CD54FC /* ForceDemoController.m in Sources */,
+				6F8A3F051D49B598008268BD /* EchartsViewCell.m in Sources */,
 				6C7C955D1B9DEA6900D80042 /* PYAxis.m in Sources */,
 				6C305A361BA9C80D00762DBD /* PYLabel.m in Sources */,
 				6CF1AA371C02EEE500F1B773 /* PYDataRange.m in Sources */,

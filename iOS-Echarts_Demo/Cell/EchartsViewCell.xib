@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="EchartsViewCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="299.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9a7-4K-rB3" customClass="PYEchartsView">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="299.5"/>
+                        <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    </webView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9a7-4K-rB3" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="FF9-yO-fEo"/>
+                    <constraint firstAttribute="trailing" secondItem="9a7-4K-rB3" secondAttribute="trailing" id="LNH-cK-XWI"/>
+                    <constraint firstAttribute="bottom" secondItem="9a7-4K-rB3" secondAttribute="bottom" id="xOp-dM-I3Q"/>
+                    <constraint firstItem="9a7-4K-rB3" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="ySM-ZW-p6v"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="echartView" destination="9a7-4K-rB3" id="WFX-19-ACa"/>
+            </connections>
+            <point key="canvasLocation" x="451" y="384"/>
+        </tableViewCell>
+    </objects>
+</document>

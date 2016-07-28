@@ -9,6 +9,8 @@
 #import "OtherDemoController.h"
 #import "PYLoadingOption.h"
 #import "PYNoDataLoadingOption.h"
+#import "MultiEchartsController.h"
+
 static int effectIndex = 0;
 static NSArray *effect;
 @interface OtherDemoController () {
@@ -50,6 +52,11 @@ static NSArray *effect;
             [self showNoDataLoadingDemo];
             [_yEchartsView loadEcharts];
             break;
+        case 90003: {
+            MultiEchartsController *controller = [[MultiEchartsController alloc] init];
+            [self.navigationController pushViewController:controller animated:YES];
+            return;
+        }
         default:
             break;
     }

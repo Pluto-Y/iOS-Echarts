@@ -8,6 +8,7 @@
 
 #import "LineDemoController.h"
 #import "PYColor.h"
+#import "PYLabel.h"
 
 typedef enum {
     LineDemoTypeBtnTagStandardLine = 10000,

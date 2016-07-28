@@ -38,12 +38,21 @@
                         <action selector="showOtherDemo:" destination="-1" eventType="touchUpInside" id="ZEp-4e-Q4g"/>
                     </connections>
                 </button>
+                <button opaque="NO" tag="90003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g0C-B1-6Z8">
+                    <rect key="frame" x="72" y="108" width="45" height="30"/>
+                    <state key="normal" title="多图表"/>
+                    <connections>
+                        <action selector="showOtherDemo:" destination="-1" eventType="touchUpInside" id="nTe-aN-4NH"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="UG4-lp-nP3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5KS-6O-1Wx"/>
                 <constraint firstAttribute="bottom" secondItem="UG4-lp-nP3" secondAttribute="bottom" constant="20" id="7Q0-zd-do3"/>
+                <constraint firstItem="g0C-B1-6Z8" firstAttribute="top" secondItem="lyc-2x-o5o" secondAttribute="bottom" constant="8" id="8wS-Zt-IGK"/>
                 <constraint firstAttribute="trailing" secondItem="UG4-lp-nP3" secondAttribute="trailing" id="M8C-uA-gyj"/>
+                <constraint firstItem="g0C-B1-6Z8" firstAttribute="centerX" secondItem="lyc-2x-o5o" secondAttribute="centerX" id="MWZ-ai-qZi"/>
                 <constraint firstItem="tB8-y5-rpI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.5" id="XjO-F2-aOj"/>
                 <constraint firstItem="lyc-2x-o5o" firstAttribute="top" secondItem="tB8-y5-rpI" secondAttribute="bottom" constant="8" id="YNP-TC-fOa"/>
                 <constraint firstItem="lyc-2x-o5o" firstAttribute="centerX" secondItem="tB8-y5-rpI" secondAttribute="centerX" id="czY-1Y-1JX"/>
