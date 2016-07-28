@@ -21,7 +21,7 @@ NSString * const PYEchartActionLegendSelected = @"legendSelected";
 NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
 
 @interface PYEchartsView() {
-    NSURLRequest *localRequest;
+    NSString *localHtmlContents;
     CGFloat lastScale;
     CGFloat minWidth;
     CGPoint tapPoint;
@@ -53,11 +53,9 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
 #pragma mark 初始化
 /// Initialize
 -(void)initAll {
-//    NSString *bundlePath = [[NSBundle mainBundle] pathForResource:@"iOS-Echarts" ofType:@"bundle"];
     NSBundle *echartsBundle = [NSBundle mainBundle];
     NSString *urlString = [[echartsBundle pathForResource:@"echarts" ofType:@"html"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; // Fixes the url string contain chinese characters
-    NSURL *url =[NSURL URLWithString:urlString];
-    localRequest =[NSURLRequest requestWithURL:url];
+    localHtmlContents =[[NSString alloc] initWithContentsOfFile:urlString encoding:NSUTF8StringEncoding error:nil];
     self.delegate = self;
     self.scrollView.bounces = NO;
     self.scrollView.scrollEnabled = NO;
@@ -92,7 +90,7 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
  *  Load the web view request
  */
 -(void)loadEcharts {
-    [self loadRequest:localRequest];
+    [self loadHTMLString:localHtmlContents baseURL:[NSURL fileURLWithPath: [[NSBundle mainBundle] bundlePath]]];
 }
 
 /**
