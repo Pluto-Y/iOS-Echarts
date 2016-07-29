@@ -101,4 +101,6 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
  */
 -(void)clearEcharts;
 
+-(void)getImage;
+
 @end

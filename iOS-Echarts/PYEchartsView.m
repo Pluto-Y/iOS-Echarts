@@ -20,7 +20,10 @@ NSString * const PYEchartActionDataZoom = @"dataZoom";
 NSString * const PYEchartActionLegendSelected = @"legendSelected";
 NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
 
+static NSString *const kEchartActionObtainImg = @"obtainImg";
+
 @interface PYEchartsView() {
+    NSString *bundlePath;
     NSString *localHtmlContents;
     CGFloat lastScale;
     CGFloat minWidth;
@@ -53,12 +56,20 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
 #pragma mark 初始化
 /// Initialize
 -(void)initAll {
-    NSBundle *echartsBundle = [NSBundle mainBundle];
+    bundlePath = [[[NSBundle mainBundle] pathForResource:@"iOS-Echarts" ofType:@"bundle"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    NSBundle *echartsBundle;
+    if (bundlePath != nil) { // If 'iOS-Echarts' is installed by Cocoapods
+        echartsBundle = [NSBundle bundleWithPath:bundlePath];
+    } else { // If 'iOS-Echarts' is installed manually
+        echartsBundle = [NSBundle mainBundle];
+        bundlePath = [echartsBundle bundlePath];
+    }
     NSString *urlString = [[echartsBundle pathForResource:@"echarts" ofType:@"html"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; // Fixes the url string contain chinese characters
     localHtmlContents =[[NSString alloc] initWithContentsOfFile:urlString encoding:NSUTF8StringEncoding error:nil];
     self.delegate = self;
     self.scrollView.bounces = NO;
     self.scrollView.scrollEnabled = NO;
+    self.scalesPageToFit = NO;
     // set the view background is transparent
     self.opaque = NO;
     self.backgroundColor = [UIColor clearColor];
@@ -90,7 +101,7 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
  *  Load the web view request
  */
 -(void)loadEcharts {
-    [self loadHTMLString:localHtmlContents baseURL:[NSURL fileURLWithPath: [[NSBundle mainBundle] bundlePath]]];
+    [self loadHTMLString:localHtmlContents baseURL:[NSURL fileURLWithPath: bundlePath]];
 }
 
 /**
@@ -116,6 +127,11 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
     }
     NSString *divSizeCss = [NSString stringWithFormat:@"'height:%.0fpx;width:%.0fpx;'", height, width];
     NSString *js = [NSString stringWithFormat:@"%@(%@)", @"resizeDiv", divSizeCss];
+    [self stringByEvaluatingJavaScriptFromString:js];
+}
+
+-(void)getImage {
+    NSString *js = [NSString stringWithFormat:@"%@(%@)", @"obtainEchartsImage", @"jpeg"];
     [self stringByEvaluatingJavaScriptFromString:js];
 }
 
@@ -212,7 +228,6 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
         NSLog(@"%@", [NSString stringWithFormat:@"addEchartActionHandler('%@')",name]);
         [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler('%@')",name]];//
     }
-
 }
 
 /**
@@ -234,24 +249,35 @@ NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
     
     // get the action from the path
     NSString *actionType = url.host;
-    // deserialize the request JSON
-    NSString *jsonDictString = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-    // decode the json params to dictionary
-    NSData *paramData = [jsonDictString dataUsingEncoding:NSUTF8StringEncoding];
-    NSError *err;
-    NSDictionary *paramsDic;
-    if (jsonDictString != nil && ![jsonDictString isEqualToString:@""]) {
-        paramsDic = [NSJSONSerialization JSONObjectWithData:paramData options:NSJSONReadingMutableLeaves error:&err];
-        if(err) {
-            NSLog(@"Json decode failed：%@",err);
-            paramsDic = nil;
-        }
-    }
     
-    // Check the action handle actions, if exists the block the invoke the block
-    if (actionHandleBlocks[actionType] != nil) {
-        PYEchartActionHandler hanler = (PYEchartActionHandler)actionHandleBlocks[actionType];
-        hanler(paramsDic);
+    if ([kEchartActionObtainImg isEqualToString:actionType]) {
+        NSString *imgBase64Str = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        NSURL *url = [NSURL URLWithString:imgBase64Str];
+        NSData *imgData = [NSData dataWithContentsOfURL:url];
+        UIImage *img = [UIImage imageWithData:imgData];
+        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+        imgView.image = img;
+        [self addSubview:imgView];
+    } else {
+        // deserialize the request JSON
+        NSString *jsonDictString = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        // decode the json params to dictionary
+        NSData *paramData = [jsonDictString dataUsingEncoding:NSUTF8StringEncoding];
+        NSError *err;
+        NSDictionary *paramsDic;
+        if (jsonDictString != nil && ![jsonDictString isEqualToString:@""]) {
+            paramsDic = [NSJSONSerialization JSONObjectWithData:paramData options:NSJSONReadingMutableLeaves error:&err];
+            if(err) {
+                NSLog(@"Json decode failed：%@",err);
+                paramsDic = nil;
+            }
+        }
+        
+        // Check the action handle actions, if exists the block the invoke the block
+        if (actionHandleBlocks[actionType] != nil) {
+            PYEchartActionHandler hanler = (PYEchartActionHandler)actionHandleBlocks[actionType];
+            hanler(paramsDic);
+        }
     }
     return NO;
 }
