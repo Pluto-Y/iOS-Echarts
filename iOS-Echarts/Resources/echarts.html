@@ -52,24 +52,35 @@
 	 * 构建动态图表  
 	 */  
 	function loadEcharts(echartJson, initParams){
-        //alert('init params : ' + JSON.stringify(initParams));
+        //alert('init params : ' + JSON.stringify(echartJson));
         initEchartView(initParams);
-        
+        //alert('myChart:'+ myChart);
         option = preTask(echartJson);
+        //alert('option:'+ option);
         myChart.setOption(option);
+        obtainEchartsImage('png');
+        
 	}
     function refreshWithOption(optionData) {
         option = preTask(optionData);
         myChart.setOption(option, true);
     }
     function resizeDiv(cssText) {
+        //alert('cssText:'+cssText);
         var divMain = document.getElementById("main");
+        //alert('divMain:'+divMain);
         divMain.style.cssText = cssText;
+    }
+    function obtainEchartsImage(type){
+        var result = myChart.getDataURL(type);
+        //alert('result:'+result);
+        document.location.href = 'pyEchartAction://obtainImg#' + result + '';
     }
     function initEchartView(initParams) {
         // 基于准备好的dom，初始化echarts图表
         if (initParams == null || initParams == 'undefined') {
             myChart = echarts.init(document.getElementById('main'));
+            //alert('myChart:' + myChart);
         } else {
             myChart = echarts.init(document.getElementById('main'), initParams);
         }
