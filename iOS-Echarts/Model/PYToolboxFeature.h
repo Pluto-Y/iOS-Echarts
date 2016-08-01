@@ -80,7 +80,7 @@
 
 @interface PYToolboxFeatureSaveAsImage : NSObject
 
-@property (assign, nonatomic) BOOL show;
+@property (assign, nonatomic, getter=isShow) BOOL show;
 @property (retain, nonatomic) NSString *title;
 @property (retain, nonatomic) NSString *type;
 @property (retain, nonatomic) NSString *lang;
@@ -95,7 +95,7 @@
 @property (retain, nonatomic) PYToolboxFeatureDataView *dataView;
 @property (retain, nonatomic) PYToolboxFeatureMagicType *magicType;
 @property (retain, nonatomic) PYToolboxFeatureRestore *restore;
-@property (retain, nonatomic) PYToolboxFeatureSaveAsImage *saveAsImage;
+@property (retain, nonatomic, getter=getSaveAsImage) PYToolboxFeatureSaveAsImage *saveAsImage;
 
 
 @end

@@ -45,6 +45,10 @@
 
 @implementation PYToolboxFeatureSaveAsImage
 
+-(BOOL) isShow {
+    return NO;
+}
+
 @end
 
 
@@ -96,6 +100,10 @@
         _saveAsImage.lang = @"点击保存";
     }
     return self;
+}
+
+-(PYToolboxFeatureSaveAsImage *)getSaveAsImage {
+    return nil;
 }
 
 @end

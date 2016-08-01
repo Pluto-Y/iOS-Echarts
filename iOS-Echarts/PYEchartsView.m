@@ -251,13 +251,13 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     NSString *actionType = url.host;
     
     if ([kEchartActionObtainImg isEqualToString:actionType]) {
-        NSString *imgBase64Str = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-        NSURL *url = [NSURL URLWithString:imgBase64Str];
-        NSData *imgData = [NSData dataWithContentsOfURL:url];
-        UIImage *img = [UIImage imageWithData:imgData];
-        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-        imgView.image = img;
-        [self addSubview:imgView];
+//        NSString *imgBase64Str = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//        NSURL *url = [NSURL URLWithString:imgBase64Str];
+//        NSData *imgData = [NSData dataWithContentsOfURL:url];
+//        UIImage *img = [UIImage imageWithData:imgData];
+//        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
+//        imgView.image = img;
+//        [self addSubview:imgView];
     } else {
         // deserialize the request JSON
         NSString *jsonDictString = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
