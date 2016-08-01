@@ -95,7 +95,7 @@
 @property (retain, nonatomic) PYToolboxFeatureDataView *dataView;
 @property (retain, nonatomic) PYToolboxFeatureMagicType *magicType;
 @property (retain, nonatomic) PYToolboxFeatureRestore *restore;
-@property (retain, nonatomic, getter=getSaveAsImage) PYToolboxFeatureSaveAsImage *saveAsImage;
+@property (retain, nonatomic, getter=getSaveAsImage) PYToolboxFeatureSaveAsImage *saveAsImage NS_EXTENSION_UNAVAILABLE_IOS("Use UIAlertController instead.");
 
 
 @end

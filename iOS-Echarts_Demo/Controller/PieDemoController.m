@@ -8,7 +8,6 @@
 
 #import "PieDemoController.h"
 #import "PYEchartsView.h"
-#import "PYPieSeries.h"
 
 typedef enum {
     PieDemoTypeBtnTagBasicPie = 30000,
