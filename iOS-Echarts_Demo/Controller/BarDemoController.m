@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "BarDemoController.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, BarDemoTypeTag) {
     BarDemoTypeTagBasicColumn = 20000,
     BarDemoTypeTagStackedColumn = 20001,
     BarDemoTypeTagTermometer = 20002,
@@ -26,7 +26,7 @@ typedef enum {
     BarDemoTypeTagRainbowBar = 20013,
     BarDemoTypeTagMultipleSreiesRainbowBar = 20014,
     BarDemoTypeTagColumn = 20015
-}BarDemoTypeTag;
+};
 
 @interface BarDemoController ()
 

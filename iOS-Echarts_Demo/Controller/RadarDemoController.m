@@ -8,13 +8,13 @@
 
 #import "RadarDemoController.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, RadarDemoTypeTag) {
     RadarDemoTypeTagBasicRadar          = 40001,
     RadarDemoTypeTagBasicFilledRadar    = 40002,
     RadarDemoTypeTagMutipleRadars       = 40003,
     RadarDemoTypeTagWormhole            = 40004,
     RadarDemoTypeTagRadar               = 40005
-}RadarDemoTypeTag;
+};
 
 @interface RadarDemoController ()
 

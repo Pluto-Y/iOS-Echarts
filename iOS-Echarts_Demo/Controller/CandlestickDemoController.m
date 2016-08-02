@@ -8,10 +8,10 @@
 
 #import "CandlestickDemoController.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, CandlesticDemoTypeBtnTag) {
     CandlesticDemoTypeBtnTag1 = 300001,
     CandlesticDemoTypeBtnTag2 = 300002
-}CandlesticDemoTypeBtnTag;
+};
 
 @interface CandlestickDemoController ()
 

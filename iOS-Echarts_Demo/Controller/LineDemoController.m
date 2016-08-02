@@ -10,7 +10,7 @@
 #import "PYColor.h"
 #import "PYLabel.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     LineDemoTypeBtnTagStandardLine = 10000,
     LineDemoTypeBtnTagStackedLine = 10001,
     LineDemoTypeBtnTagBasicLine = 10002,
@@ -20,7 +20,7 @@ typedef enum {
     LineDemoTypeBtnTagIrregularLine2 = 10006,
     LineDemoTypeBtnTagLine = 10007,
     LineDemoTypeBtnTagLogarithmic = 10008
-}LineDemoTypeBtnTag;
+};
 
 @interface LineDemoController ()
 

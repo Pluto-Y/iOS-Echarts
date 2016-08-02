@@ -9,7 +9,7 @@
 #import "PieDemoController.h"
 #import "PYEchartsView.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, PieDemoTypeBtnTag) {
     PieDemoTypeBtnTagBasicPie = 30000,
     PieDemoTypeBtnTagDoughnut = 30001,
     PieDemoTypeBtnTagNestedPie = 30002,
@@ -19,7 +19,7 @@ typedef enum {
     PieDemoTypeBtnTagTimeline = 30006,
     PieDemoTypeBtnTagLasagna = 30007,
     PieDemoTypeBtnTagPie = 30008
-} PieDemoTypeBtnTag;
+};
 
 @interface PieDemoController ()
 

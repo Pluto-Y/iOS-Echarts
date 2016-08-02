@@ -8,9 +8,9 @@
 
 #import "ForceDemoController.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, ForceDemoTypeBtnTag) {
     ForceDemoTypeBtnTagSimpleTopology = 10000
-}ForceDemoTypeBtnTag;
+};
 
 @interface ForceDemoController ()
 

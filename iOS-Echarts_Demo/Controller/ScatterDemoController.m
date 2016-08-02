@@ -8,7 +8,7 @@
 
 #import "ScatterDemoController.h"
 
-typedef enum {
+typedef NS_ENUM(NSInteger, ScatterDemoTypeBtnTag) {
     ScatterDemoTypeBtnTagBasicScatter = 300001,
     ScatterDemoTypeBtnTagBasicBubble = 300002,
     ScatterDemoTypeBtnTagLargeScaleScatter = 300003,
@@ -17,7 +17,7 @@ typedef enum {
     ScatterDemoTypeBtnTagTimeLine = 300006,
     ScatterDemoTypeBtnTagScaleRoaming = 300007,
     ScatterDemoTypeBtnTagScatter = 300008
-}ScatterDemoTypeBtnTag;
+};
 
 @interface ScatterDemoController ()
 
