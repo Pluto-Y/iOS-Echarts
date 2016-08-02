@@ -89,10 +89,10 @@
 		6F4D590B1D4FE34F00246943 /* PYVennSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58CB1D4FE34F00246943 /* PYVennSeries.m */; };
 		6F4D590C1D4FE34F00246943 /* PYWordCloudSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58CD1D4FE34F00246943 /* PYWordCloudSeries.m */; };
 		6F4D590D1D4FE34F00246943 /* echarts.html in Resources */ = {isa = PBXBuildFile; fileRef = 6F4D58CF1D4FE34F00246943 /* echarts.html */; };
-		6F4D590E1D4FE34F00246943 /* echarts-all.js in Resources */ = {isa = PBXBuildFile; fileRef = 6F4D58D11D4FE34F00246943 /* echarts-all.js */; };
 		6F4D590F1D4FE34F00246943 /* PYJsonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58D41D4FE34F00246943 /* PYJsonUtil.m */; };
 		6F4D59101D4FE34F00246943 /* PYEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58D71D4FE34F00246943 /* PYEchartsView.m */; };
 		6F4D59111D4FE34F00246943 /* PYZoomEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58D91D4FE34F00246943 /* PYZoomEchartsView.m */; };
+		6F7352BD1D50A779006CD119 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 6F7352BC1D50A779006CD119 /* js */; };
 		6F8A3EFF1D49AFA5008268BD /* MultiEchartsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A3EFD1D49AFA5008268BD /* MultiEchartsController.m */; };
 		6F8A3F001D49AFA5008268BD /* MultiEchartsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F8A3EFE1D49AFA5008268BD /* MultiEchartsController.xib */; };
 		6F8A3F051D49B598008268BD /* EchartsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A3F031D49B598008268BD /* EchartsViewCell.m */; };
@@ -264,13 +264,13 @@
 		6F4D58CC1D4FE34F00246943 /* PYWordCloudSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYWordCloudSeries.h; sourceTree = "<group>"; };
 		6F4D58CD1D4FE34F00246943 /* PYWordCloudSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYWordCloudSeries.m; sourceTree = "<group>"; };
 		6F4D58CF1D4FE34F00246943 /* echarts.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = echarts.html; sourceTree = "<group>"; };
-		6F4D58D11D4FE34F00246943 /* echarts-all.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = "echarts-all.js"; sourceTree = "<group>"; };
 		6F4D58D31D4FE34F00246943 /* PYJsonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYJsonUtil.h; sourceTree = "<group>"; };
 		6F4D58D41D4FE34F00246943 /* PYJsonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYJsonUtil.m; sourceTree = "<group>"; };
 		6F4D58D61D4FE34F00246943 /* PYEchartsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYEchartsView.h; sourceTree = "<group>"; };
 		6F4D58D71D4FE34F00246943 /* PYEchartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYEchartsView.m; sourceTree = "<group>"; };
 		6F4D58D81D4FE34F00246943 /* PYZoomEchartsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYZoomEchartsView.h; sourceTree = "<group>"; };
 		6F4D58D91D4FE34F00246943 /* PYZoomEchartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYZoomEchartsView.m; sourceTree = "<group>"; };
+		6F7352BC1D50A779006CD119 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
 		6F8A3EFC1D49AFA5008268BD /* MultiEchartsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiEchartsController.h; sourceTree = "<group>"; };
 		6F8A3EFD1D49AFA5008268BD /* MultiEchartsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiEchartsController.m; sourceTree = "<group>"; };
 		6F8A3EFE1D49AFA5008268BD /* MultiEchartsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiEchartsController.xib; sourceTree = "<group>"; };
@@ -561,18 +561,10 @@
 		6F4D58CE1D4FE34F00246943 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6F7352BC1D50A779006CD119 /* js */,
 				6F4D58CF1D4FE34F00246943 /* echarts.html */,
-				6F4D58D01D4FE34F00246943 /* js */,
 			);
 			path = Resources;
-			sourceTree = "<group>";
-		};
-		6F4D58D01D4FE34F00246943 /* js */ = {
-			isa = PBXGroup;
-			children = (
-				6F4D58D11D4FE34F00246943 /* echarts-all.js */,
-			);
-			path = js;
 			sourceTree = "<group>";
 		};
 		6F4D58D21D4FE34F00246943 /* Util */ = {
@@ -687,6 +679,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F9391AE1D42414800CD54FC /* ForceDemoController.xib in Resources */,
+				6F7352BD1D50A779006CD119 /* js in Resources */,
 				6C0658E81BB85B4F003CAAE5 /* LineDemoController.xib in Resources */,
 				6CF1AA331C02AF5600F1B773 /* ScatterDemoController.xib in Resources */,
 				6F4D590D1D4FE34F00246943 /* echarts.html in Resources */,
@@ -695,7 +688,6 @@
 				6C0658DA1BB85B46003CAAE5 /* LaunchScreen.xib in Resources */,
 				6C6011AC1CC144710048F6F6 /* OtherDemoController.xib in Resources */,
 				6C0658E61BB85B4F003CAAE5 /* BarDemoController.xib in Resources */,
-				6F4D590E1D4FE34F00246943 /* echarts-all.js in Resources */,
 				6F8A3F001D49AFA5008268BD /* MultiEchartsController.xib in Resources */,
 				6C08828F1C303F4400EA0D34 /* MapDemoController.xib in Resources */,
 				6CF1AA2E1C02A32600F1B773 /* CandlestickDemoController.xib in Resources */,

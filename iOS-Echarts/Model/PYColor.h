@@ -15,13 +15,13 @@
  */
 @interface PYColor : NSObject
 
--(instancetype)initWithColor:(UIColor *) uiColor;
+- (instancetype)initWithColor:(UIColor *) uiColor;
 
 /**
  *  设置颜色
  *
  *  @param uiColor 颜色
  */
--(void)setColor:(UIColor *) uiColor;
+- (void)setColor:(UIColor *) uiColor;
 
 @end

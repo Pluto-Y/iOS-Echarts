@@ -12,9 +12,9 @@
 
 @interface PYCategories : NSObject
 
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *symbol;
-@property (strong, nonatomic) id symbolSize;
-@property (strong, nonatomic) PYItemStyle *itemStyle;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *symbol;
+@property (nonatomic, strong) id symbolSize;
+@property (nonatomic, strong) PYItemStyle *itemStyle;
 
 @end

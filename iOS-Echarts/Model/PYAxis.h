@@ -16,26 +16,26 @@
 
 @interface PYAxis : NSObject
 
-@property (retain, nonatomic) NSString * type;
-@property (assign, nonatomic) BOOL show;
-@property (retain, nonatomic) NSNumber *zlevel;
-@property (retain, nonatomic) NSNumber *z;
-@property (retain, nonatomic) NSString *position;
-@property (retain, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *nameLocation;
-@property (strong, nonatomic) PYTextStyle *nameTextStyle;
-@property (retain, nonatomic) id boundaryGap;
-@property (retain, nonatomic) NSNumber *min;
-@property (retain, nonatomic) NSNumber *max;
-@property (assign, nonatomic) BOOL scale;
-@property (retain, nonatomic) NSNumber *splitNumber;
-@property (strong, nonatomic) NSNumber *logLabelBase;
-@property (strong, nonatomic) NSDictionary *logPositive;
-@property (retain, nonatomic) PYAxisLine *axisLine;
-@property (retain, nonatomic) PYAxisTick *axisTick;
-@property (retain, nonatomic) PYAxisLabel *axisLabel;
-@property (retain, nonatomic) PYSplitLine *splitLine;
-@property (strong, nonatomic) PYSplitArea *splitArea;
-@property (retain, nonatomic) NSArray *data;
+@property (nonatomic, copy) NSString * type;
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, strong) NSNumber *zlevel;
+@property (nonatomic, strong) NSNumber *z;
+@property (nonatomic, copy) NSString *position;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *nameLocation;
+@property (nonatomic, strong) PYTextStyle *nameTextStyle;
+@property (nonatomic, strong) id boundaryGap;
+@property (nonatomic, strong) NSNumber *min;
+@property (nonatomic, strong) NSNumber *max;
+@property (nonatomic, assign) BOOL scale;
+@property (nonatomic, strong) NSNumber *splitNumber;
+@property (nonatomic, strong) NSNumber *logLabelBase;
+@property (nonatomic, copy) NSDictionary *logPositive;
+@property (nonatomic, strong) PYAxisLine *axisLine;
+@property (nonatomic, strong) PYAxisTick *axisTick;
+@property (nonatomic, strong) PYAxisLabel *axisLabel;
+@property (nonatomic, strong) PYSplitLine *splitLine;
+@property (nonatomic, strong) PYSplitArea *splitArea;
+@property (nonatomic, copy) NSArray *data;
 
 @end

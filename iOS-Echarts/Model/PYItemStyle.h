@@ -11,7 +11,7 @@
 
 @interface PYItemStyle : NSObject
 
-@property (retain, nonatomic) PYItemStyleProp *normal;
-@property (retain, nonatomic) PYItemStyleProp *emphasis;
+@property (nonatomic, strong) PYItemStyleProp *normal;
+@property (nonatomic, strong) PYItemStyleProp *emphasis;
 
 @end

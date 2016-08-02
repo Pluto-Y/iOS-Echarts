@@ -17,7 +17,7 @@
 
 @implementation PYColor
 
--(instancetype)init {
+- (instancetype)init {
     self = [super init];
     if (self) {
         color = [UIColor clearColor];
@@ -26,7 +26,7 @@
     return self;
 }
 
--(instancetype)initWithColor:(UIColor *) uiColor {
+- (instancetype)initWithColor:(UIColor *) uiColor {
     self = [super init];
     if (self) {
         color = uiColor;
@@ -40,11 +40,11 @@
  *
  *  @param uiColor 颜色
  */
--(void)setColor:(UIColor *) uiColor {
+- (void)setColor:(UIColor *) uiColor {
     color = uiColor;
 }
 
--(NSString *)description {
+- (NSString *)description {
     CGFloat R, G, B, A = 0.0;
     int red = 0, green = 0, blue = 0;
     

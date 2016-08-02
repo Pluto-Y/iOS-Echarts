@@ -13,32 +13,32 @@
 
 @interface PYDataRange : NSObject
 
-@property (assign, nonatomic) BOOL show;
-@property (retain, nonatomic) NSNumber *zlevel;
-@property (retain, nonatomic) NSNumber *z;
-@property (retain, nonatomic) NSString *orient;
-@property (retain, nonatomic) id x;
-@property (retain, nonatomic) id y;
-@property (retain, nonatomic) PYColor *backgroundColor;
-@property (retain, nonatomic) PYColor *borderColor;
-@property (retain, nonatomic) NSNumber *borderWidth;
-@property (retain, nonatomic) id padding;
-@property (retain, nonatomic) NSNumber *itemGap;
-@property (retain, nonatomic) NSNumber *itemWidth;
-@property (retain, nonatomic) NSNumber *itemHeight;
-@property (retain, nonatomic) NSNumber *min;
-@property (retain, nonatomic) NSNumber *max;
-@property (retain, nonatomic) NSNumber *precision;
-@property (retain, nonatomic) NSNumber *splitNumber;
-@property (retain, nonatomic) NSMutableArray *splitList;
-@property (retain, nonatomic) NSObject *range;
-@property (retain, nonatomic) id selectedMode;
-@property (assign, nonatomic) BOOL calculable;
-@property (assign, nonatomic) BOOL hoverLink;
-@property (assign, nonatomic) BOOL realtime;
-@property (retain, nonatomic) NSMutableArray *color;
-@property (retain, nonatomic) id formatter;
-@property (retain, nonatomic) NSMutableArray *text;
-@property (retain, nonatomic) PYTextStyle *textStyle;
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, strong) NSNumber *zlevel;
+@property (nonatomic, strong) NSNumber *z;
+@property (nonatomic, copy) NSString *orient;
+@property (nonatomic, strong) id x;
+@property (nonatomic, strong) id y;
+@property (nonatomic, strong) PYColor *backgroundColor;
+@property (nonatomic, strong) PYColor *borderColor;
+@property (nonatomic, strong) NSNumber *borderWidth;
+@property (nonatomic, strong) id padding;
+@property (nonatomic, strong) NSNumber *itemGap;
+@property (nonatomic, strong) NSNumber *itemWidth;
+@property (nonatomic, strong) NSNumber *itemHeight;
+@property (nonatomic, strong) NSNumber *min;
+@property (nonatomic, strong) NSNumber *max;
+@property (nonatomic, strong) NSNumber *precision;
+@property (nonatomic, strong) NSNumber *splitNumber;
+@property (nonatomic, strong) NSMutableArray *splitList;
+@property (nonatomic, strong) NSObject *range;
+@property (nonatomic, strong) id selectedMode;
+@property (nonatomic, assign) BOOL calculable;
+@property (nonatomic, assign) BOOL hoverLink;
+@property (nonatomic, assign) BOOL realtime;
+@property (nonatomic, strong) NSMutableArray *color;
+@property (nonatomic, strong) id formatter;
+@property (nonatomic, strong) NSMutableArray *text;
+@property (nonatomic, strong) PYTextStyle *textStyle;
 
 @end

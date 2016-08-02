@@ -26,7 +26,7 @@
     return self;
 }
 
--(void)setType:(NSString *)type {
+- (void)setType:(NSString *)type {
     if (![AXIS_POINT_SCOPE containsObject:type]) {
         NSLog(@"ERROR: AxisPoint does not support the type --- %@", type);
         type = @"line";

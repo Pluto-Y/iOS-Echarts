@@ -12,11 +12,11 @@
 
 @interface PYAxisTick : NSObject
 
-@property (assign, nonatomic) BOOL show;
-@property (retain, nonatomic) id interval;
-@property (assign, nonatomic) BOOL onGap;
-@property (assign, nonatomic) BOOL inside;
-@property (retain, nonatomic) NSNumber *length;
-@property (retain, nonatomic) PYLineStyle *lineStyle;
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, strong) id interval;
+@property (nonatomic, assign) BOOL onGap;
+@property (nonatomic, assign) BOOL inside;
+@property (nonatomic, strong) NSNumber *length;
+@property (nonatomic, strong) PYLineStyle *lineStyle;
 
 @end

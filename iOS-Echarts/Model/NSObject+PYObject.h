@@ -10,6 +10,6 @@
 
 @interface NSObject (PYObject)
 
--(void)reloadData;
+- (void)reloadData;
 
 @end

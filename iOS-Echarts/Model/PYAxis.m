@@ -15,7 +15,7 @@
 
 @implementation PYAxis
 
--(instancetype)init {
+- (instancetype)init {
     self = [super init];
     if (self) {
         _type = @"category";

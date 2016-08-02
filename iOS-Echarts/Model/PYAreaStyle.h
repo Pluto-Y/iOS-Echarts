@@ -10,7 +10,7 @@
 
 @interface PYAreaStyle : NSObject
 
-@property (retain, nonatomic) id color;
-@property (retain, nonatomic) NSString *type;
+@property (nonatomic, strong) id color;
+@property (nonatomic, copy) NSString *type;
 
 @end

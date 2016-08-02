@@ -12,10 +12,10 @@
 
 @interface PYAxisPointer : NSObject
 
-@property (assign, nonatomic) BOOL show;
-@property (retain, nonatomic) NSString *type;
-@property (retain, nonatomic) PYLineStyle *lineStyle;
-@property (retain, nonatomic) PYLineStyle *crossStyle;
-@property (retain, nonatomic) PYAreaStyle *shadowStyle;
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, copy) NSString *type;
+@property (nonatomic, strong) PYLineStyle *lineStyle;
+@property (nonatomic, strong) PYLineStyle *crossStyle;
+@property (nonatomic, strong) PYAreaStyle *shadowStyle;
 
 @end

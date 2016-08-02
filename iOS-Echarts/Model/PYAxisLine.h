@@ -12,8 +12,8 @@
 
 @interface PYAxisLine : NSObject
 
-@property (assign, nonatomic) BOOL show;
-@property (assign, nonatomic) BOOL onZero;
-@property (retain, nonatomic) PYLineStyle *lineStyle;
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, assign) BOOL onZero;
+@property (nonatomic, strong) PYLineStyle *lineStyle;
 
 @end

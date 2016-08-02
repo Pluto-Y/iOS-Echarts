@@ -15,18 +15,18 @@
 
 @interface PYItemStyleProp : NSObject
 
-@property (retain, nonatomic) PYColor *color;
-@property (retain, nonatomic) PYLineStyle *lineStyle;
-@property (retain, nonatomic) PYAreaStyle *areaStyle;
+@property (nonatomic, strong) PYColor *color;
+@property (nonatomic, strong) PYLineStyle *lineStyle;
+@property (nonatomic, strong) PYAreaStyle *areaStyle;
 // chordStyle
-@property (strong, nonatomic) PYNodeStyle *nodeStyle;
-@property (strong, nonatomic) PYLinkStyle *linkStyle;
-@property (retain, nonatomic) PYColor *borderColor;
-@property (retain, nonatomic) NSNumber *borderWidth;
-@property (retain, nonatomic) PYColor *barBorderColor;
+@property (nonatomic, strong) PYNodeStyle *nodeStyle;
+@property (nonatomic, strong) PYLinkStyle *linkStyle;
+@property (nonatomic, strong) PYColor *borderColor;
+@property (nonatomic, strong) NSNumber *borderWidth;
+@property (nonatomic, strong) PYColor *barBorderColor;
 // barBorderRadius
-@property (retain, nonatomic) NSNumber *barBorderWidth;
-@property (retain, nonatomic) PYLabel *label;
-@property (retain, nonatomic) PYLabelLine *labelLine;
+@property (nonatomic, strong) NSNumber *barBorderWidth;
+@property (nonatomic, strong) PYLabel *label;
+@property (nonatomic, strong) PYLabelLine *labelLine;
 
 @end

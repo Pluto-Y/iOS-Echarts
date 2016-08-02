@@ -13,10 +13,10 @@
 
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, strong) id interval;
-@property (strong, nonatomic) NSNumber *rotate;
-@property (strong, nonatomic) NSNumber *margin;
-@property (assign, nonatomic) BOOL clickable;
-@property (retain, nonatomic) NSString *formatter;
-@property (retain, nonatomic) PYTextStyle *textStyle;
+@property (nonatomic, strong) NSNumber *rotate;
+@property (nonatomic, strong) NSNumber *margin;
+@property (nonatomic, assign) BOOL clickable;
+@property (nonatomic, copy) NSString *formatter;
+@property (nonatomic, strong) PYTextStyle *textStyle;
 
 @end
