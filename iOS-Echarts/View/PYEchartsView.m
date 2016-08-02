@@ -58,12 +58,24 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
 -(void)initAll {
     bundlePath = [[[NSBundle mainBundle] pathForResource:@"iOS-Echarts" ofType:@"bundle"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSBundle *echartsBundle;
-    if (bundlePath != nil) { // If 'iOS-Echarts' is installed by Cocoapods
+    if (bundlePath != nil) { // If 'iOS-Echarts' is installed by Cocoapods and don't use 'use_frameworks!' command
         echartsBundle = [NSBundle bundleWithPath:bundlePath];
-    } else { // If 'iOS-Echarts' is installed manually
+    } else { // If 'iOS-Echarts' is installed manually or use 'use_frameworks!' command
         echartsBundle = [NSBundle mainBundle];
-        bundlePath = [echartsBundle bundlePath];
+        
+        // If 'iOS-Echarts' is install by Cocoapods and use 'use_frameworks!' command
+        if ([[echartsBundle pathForResource:@"echarts" ofType:@"html"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] == nil) {
+            NSArray *allFrameworks = [echartsBundle pathsForResourcesOfType:@"framework" inDirectory:@"Frameworks"];
+            for (NSString *path in allFrameworks) {
+                if ([path hasSuffix:@"iOS_Echarts.framework"]) { // if the framework name has suffix 'iOS_Echarts.framework', I think it's iOS-Echart's framework
+                    bundlePath = [path stringByAppendingString:@"/iOS-Echarts.bundle"];
+                    echartsBundle = [NSBundle bundleWithPath:bundlePath];
+                    break;
+                }
+            }
+        }
     }
+    bundlePath = [echartsBundle bundlePath];
     NSString *urlString = [[echartsBundle pathForResource:@"echarts" ofType:@"html"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; // Fixes the url string contain chinese characters
     localHtmlContents =[[NSString alloc] initWithContentsOfFile:urlString encoding:NSUTF8StringEncoding error:nil];
     self.delegate = self;
