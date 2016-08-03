@@ -36,7 +36,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
 
 @implementation PYEchartsView
 
--(id)initWithCoder:(NSCoder *)aDecoder {
+- (instancetype)initWithCoder:(NSCoder *)aDecoder {
     self = [super initWithCoder:aDecoder];
     if (self) {
         [self initAll];
@@ -44,7 +44,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     return self;
 }
 
--(instancetype)initWithFrame:(CGRect)frame {
+- (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
         [self initAll];
@@ -55,7 +55,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
 #pragma mark - custom functions
 #pragma mark 初始化
 /// Initialize
--(void)initAll {
+- (void)initAll {
     bundlePath = [[[NSBundle mainBundle] pathForResource:@"iOS-Echarts" ofType:@"bundle"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
     NSBundle *echartsBundle;
     if (bundlePath != nil) { // If 'iOS-Echarts' is installed by Cocoapods and don't use 'use_frameworks!' command
@@ -105,14 +105,14 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  *
  *  @param pyOption The echart option
  */
--(void)setOption:(PYOption *)pyOption {
+- (void)setOption:(PYOption *)pyOption {
     option = pyOption;
 }
 
 /**
  *  Load the web view request
  */
--(void)loadEcharts {
+- (void)loadEcharts {
     [self loadHTMLString:localHtmlContents baseURL:[NSURL fileURLWithPath: bundlePath]];
 }
 
@@ -121,14 +121,14 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  *
  *  @param methodWithParam The format:`[instance.]methodname(params)`
  */
--(void)callJsMethods:(NSString *)methodWithParam {
+- (void)callJsMethods:(NSString *)methodWithParam {
     [self stringByEvaluatingJavaScriptFromString:methodWithParam];
 }
 
 /**
  *  Resize the main div in the `echarts.html`
  */
--(void)resizeDiv {
+- (void)resizeDiv {
     float height = self.frame.size.height - 20;
     float width = self.frame.size.width;
     if (!CGSizeEqualToSize(_divSize, CGSizeZero)) {
@@ -142,7 +142,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     [self stringByEvaluatingJavaScriptFromString:js];
 }
 
--(void)getImage {
+- (void)getImage {
     NSString *js = [NSString stringWithFormat:@"%@(%@)", @"obtainEchartsImage", @"jpeg"];
     [self stringByEvaluatingJavaScriptFromString:js];
 }
@@ -152,7 +152,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  *  Refresh echarts not re-load echarts
  *  The option is the last option you had set
  */
--(void)refreshEcharts {
+- (void)refreshEcharts {
     [self callJsMethods:@"myChart.refresh()"];
 }
 
@@ -162,7 +162,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  *
  *  @param newOption EChart's option
  */
--(void)refreshEchartsWithOption:(PYOption *)newOption {
+- (void)refreshEchartsWithOption:(PYOption *)newOption {
     NSString *jsonStr = [PYJsonUtil getJSONString:newOption];
     NSLog(@"jsonStr:%@", jsonStr);
     [self callJsMethods:[NSString stringWithFormat:@"refreshWithOption(%@)", jsonStr]];
@@ -174,7 +174,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  *  @param name  The echart event name
  *  @param block The block handler
  */
--(void)addHandlerForAction:(NSString *) name withBlock:(PYEchartActionHandler) block {
+- (void)addHandlerForAction:(NSString *)name withBlock:(PYEchartActionHandler)block {
     [actionHandleBlocks setObject:block forKey:name];
     [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler(%@)",name]];
 }
@@ -184,7 +184,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  *
  *  @param name The echart event name
  */
--(void)removeHandlerForAction:(NSString *)name {
+- (void)removeHandlerForAction:(NSString *)name {
     [actionHandleBlocks removeObjectForKey:name];
     [self callJsMethods:[NSString stringWithFormat:@"removeEchartActionHandler(%@)",name]];
 }
@@ -194,7 +194,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  *
  *  @param loadingOption The loading options control the appearance of the loading screen that covers the plot area on chart operations.
  */
--(void)showLoading:(PYLoadingOption *)loadingOption {
+- (void)showLoading:(PYLoadingOption *)loadingOption {
     NSString *loadingOptionStr = [PYJsonUtil getJSONString:loadingOption];
     NSLog(@"loadingOption:%@", loadingOptionStr);
     [self callJsMethods:[NSString stringWithFormat:@"myChart.showLoading(%@)",loadingOptionStr]];
@@ -203,14 +203,14 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
 /**
  *  Hide loading screen
  */
--(void)hideLoading {
+- (void)hideLoading {
     [self callJsMethods:@"myChart.hideLoading()"];
 }
 
 /**
  *  Clear the drawing content. Instances are available after Clearing.
  */
--(void)clearEcharts {
+- (void)clearEcharts {
     [self callJsMethods:@"myChart.clear()"];
 }
 
@@ -301,7 +301,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
 /**
  *  The pinch gesture handle
  */
--(void)pinchGestureHandle:(id)sender {
+- (void)pinchGestureHandle:(id)sender {
     if (!_scalable) {
         return;
     }

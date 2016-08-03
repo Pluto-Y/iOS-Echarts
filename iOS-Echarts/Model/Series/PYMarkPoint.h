@@ -12,27 +12,27 @@
 
 @interface PYMarkPointEffect : NSObject
 
-@property (assign, nonatomic) BOOL show;
-@property (retain, nonatomic) NSString *type;
-@property (assign, nonatomic) BOOL loop;
-@property (retain, nonatomic) NSNumber *period;
-@property (retain, nonatomic) NSNumber *scaleSize;
-@property (retain, nonatomic) NSNumber *bounceDistance;
-@property (retain, nonatomic) PYColor *color;
-@property (retain, nonatomic) PYColor *shadowColor;
-@property (retain, nonatomic) NSNumber *shadowBlur;
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, copy) NSString *type;
+@property (nonatomic, assign) BOOL loop;
+@property (nonatomic, strong) NSNumber *period;
+@property (nonatomic, strong) NSNumber *scaleSize;
+@property (nonatomic, strong) NSNumber *bounceDistance;
+@property (nonatomic, strong) PYColor *color;
+@property (nonatomic, strong) PYColor *shadowColor;
+@property (nonatomic, strong) NSNumber *shadowBlur;
 
 @end
 
 @interface PYMarkPoint : NSObject
 
-@property (assign, nonatomic) BOOL clickable;
-@property (retain, nonatomic) id symbol;
-@property (retain, nonatomic) id symbolSize;
-@property (retain, nonatomic) id symbolRotate;
-@property (assign, nonatomic) BOOL large;
-@property (retain, nonatomic) PYMarkPointEffect *effect;
-@property (retain, nonatomic) PYItemStyle *itemStyle;
-@property (retain, nonatomic) NSArray *data;
+@property (nonatomic, assign) BOOL clickable;
+@property (nonatomic, strong) id symbol;
+@property (nonatomic, strong) id symbolSize;
+@property (nonatomic, strong) id symbolRotate;
+@property (nonatomic, assign) BOOL large;
+@property (nonatomic, strong) PYMarkPointEffect *effect;
+@property (nonatomic, strong) PYItemStyle *itemStyle;
+@property (nonatomic, copy) NSArray *data;
 
 @end

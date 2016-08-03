@@ -11,6 +11,6 @@
 
 @interface OtherDemoController : UIViewController
 
-@property (weak, nonatomic) IBOutlet PYEchartsView *yEchartsView;
+@property (nonatomic, weak) IBOutlet PYEchartsView *yEchartsView;
 
 @end

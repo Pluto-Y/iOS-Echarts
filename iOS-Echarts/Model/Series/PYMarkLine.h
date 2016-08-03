@@ -12,38 +12,38 @@
 
 @interface PYBundling : NSObject
 
-@property (assign, nonatomic) BOOL enable;
-@property (retain, nonatomic) NSNumber *maxTurningAngle;
+@property (nonatomic, assign) BOOL enable;
+@property (nonatomic, strong) NSNumber *maxTurningAngle;
 
 @end
 
 @interface PYMarkLineEffect : NSObject
 
-@property (assign, nonatomic) BOOL show;
-@property (assign, nonatomic) BOOL loop;
-@property (retain, nonatomic) NSNumber *period;
-@property (retain, nonatomic) NSNumber *scaleSize;
-@property (retain, nonatomic) PYColor *color;
-@property (retain, nonatomic) PYColor *shadowColor;
-@property (retain, nonatomic) NSNumber *shadowBlur;
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, assign) BOOL loop;
+@property (nonatomic, strong) NSNumber *period;
+@property (nonatomic, strong) NSNumber *scaleSize;
+@property (nonatomic, strong) PYColor *color;
+@property (nonatomic, strong) PYColor *shadowColor;
+@property (nonatomic, strong) NSNumber *shadowBlur;
 
 @end
 
 
 @interface PYMarkLine : NSObject
 
-@property (assign, nonatomic) BOOL clickable;
-@property (retain, nonatomic) id symbol;
-@property (retain, nonatomic) id symbolSize;
-@property (retain, nonatomic) id symbolRotate;
-@property (assign, nonatomic) BOOL large;
-@property (assign, nonatomic) BOOL smooth;
-@property (retain, nonatomic) NSNumber *smoothness;
-@property (retain, nonatomic) NSNumber *precision;
-@property (retain, nonatomic) PYBundling *bundling;
-@property (retain, nonatomic) PYMarkLineEffect *effect;
-@property (retain, nonatomic) PYItemStyle *itemStyle;
-@property (retain, nonatomic) NSArray *data;
+@property (nonatomic, assign) BOOL clickable;
+@property (nonatomic, strong) id symbol;
+@property (nonatomic, strong) id symbolSize;
+@property (nonatomic, strong) id symbolRotate;
+@property (nonatomic, assign) BOOL large;
+@property (nonatomic, assign) BOOL smooth;
+@property (nonatomic, strong) NSNumber *smoothness;
+@property (nonatomic, strong) NSNumber *precision;
+@property (nonatomic, strong) PYBundling *bundling;
+@property (nonatomic, strong) PYMarkLineEffect *effect;
+@property (nonatomic, strong) PYItemStyle *itemStyle;
+@property (nonatomic, copy) NSArray *data;
 
 
 @end

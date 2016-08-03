@@ -10,8 +10,8 @@
 
 @interface PYTreeMapSeries : PYSeries
 
-@property (strong, nonatomic) NSArray *center;
-@property (strong, nonatomic) NSArray *size;
-@property (strong, nonatomic) NSString *root;
+@property (nonatomic, copy) NSArray *center;
+@property (nonatomic, copy) NSArray *size;
+@property (nonatomic, copy) NSString *root;
 
 @end

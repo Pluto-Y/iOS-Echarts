@@ -13,20 +13,20 @@
 
 @interface PYPolar : NSObject
 
-@property (retain, nonatomic) NSNumber *zlevel;
-@property (retain, nonatomic) NSNumber *z;
-@property (retain, nonatomic) NSMutableArray *center;
-@property (retain, nonatomic) NSNumber *radius;
-@property (retain, nonatomic) NSNumber *startAngle;
-@property (retain, nonatomic) NSNumber *spliteNumber;
-@property (retain, nonatomic) id name;
-@property (retain, nonatomic) NSMutableArray *boundaryGap;
-@property (assign, nonatomic) BOOL scale;
-@property (retain, nonatomic) PYLineStyle *axisLine;
-@property (retain, nonatomic) PYAxisLabel *axisLabel;
-@property (retain, nonatomic) PYLineStyle *spliteLine;
-@property (retain, nonatomic) PYAreaStyle *spliteArea;
-@property (retain, nonatomic) NSString *type;
-@property (retain, nonatomic) NSMutableArray *indicator;
+@property (nonatomic, strong) NSNumber *zlevel;
+@property (nonatomic, strong) NSNumber *z;
+@property (nonatomic, strong) NSMutableArray *center;
+@property (nonatomic, strong) NSNumber *radius;
+@property (nonatomic, strong) NSNumber *startAngle;
+@property (nonatomic, strong) NSNumber *spliteNumber;
+@property (nonatomic, strong) id name;
+@property (nonatomic, strong) NSMutableArray *boundaryGap;
+@property (nonatomic, assign) BOOL scale;
+@property (nonatomic, strong) PYLineStyle *axisLine;
+@property (nonatomic, strong) PYAxisLabel *axisLabel;
+@property (nonatomic, strong) PYLineStyle *spliteLine;
+@property (nonatomic, strong) PYAreaStyle *spliteArea;
+@property (nonatomic, copy) NSString *type;
+@property (nonatomic, strong) NSMutableArray *indicator;
 
 @end

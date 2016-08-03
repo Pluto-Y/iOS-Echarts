@@ -12,8 +12,8 @@
 
 @interface PYNodeStyle : NSObject
 
-@property (strong, nonatomic) PYColor *color;
-@property (strong, nonatomic) PYColor *borderColor;
-@property (strong, nonatomic) NSNumber *borderWidth;
+@property (nonatomic, strong) PYColor *color;
+@property (nonatomic, strong) PYColor *borderColor;
+@property (nonatomic, strong) NSNumber *borderWidth;
 
 @end

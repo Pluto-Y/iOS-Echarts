@@ -15,20 +15,20 @@
  */
 @interface PYRoamController : NSObject
 
-@property (assign, nonatomic) BOOL show;
-@property (retain, nonatomic) NSNumber *zlevel;
-@property (retain, nonatomic) NSNumber *z;
-@property (retain, nonatomic) id x;
-@property (retain, nonatomic) id y;
-@property (retain, nonatomic) NSNumber *width;
-@property (retain, nonatomic) NSNumber *height;
-@property (retain, nonatomic) PYColor *backgroundColor;
-@property (retain, nonatomic) PYColor *borderColor;
-@property (retain, nonatomic) NSNumber *borderWidth;
-@property (retain, nonatomic) id padding;
-@property (retain, nonatomic) PYColor *fillerColor;
-@property (retain, nonatomic) PYColor *handleColor;
-@property (retain, nonatomic) NSNumber *step;
-@property (retain, nonatomic) NSDictionary *mapTypeControl;
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, strong) NSNumber *zlevel;
+@property (nonatomic, strong) NSNumber *z;
+@property (nonatomic, strong) id x;
+@property (nonatomic, strong) id y;
+@property (nonatomic, strong) NSNumber *width;
+@property (nonatomic, strong) NSNumber *height;
+@property (nonatomic, strong) PYColor *backgroundColor;
+@property (nonatomic, strong) PYColor *borderColor;
+@property (nonatomic, strong) NSNumber *borderWidth;
+@property (nonatomic, strong) id padding;
+@property (nonatomic, strong) PYColor *fillerColor;
+@property (nonatomic, strong) PYColor *handleColor;
+@property (nonatomic, strong) NSNumber *step;
+@property (nonatomic, copy) NSDictionary *mapTypeControl;
 
 @end

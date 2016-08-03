@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [self initAll];
 }
 
--(void)initAll {
+- (void)initAll {
     self.title = @"折线图";
     [self showStandardLineDemo];
     [_kEchartView loadEcharts];
@@ -75,11 +75,11 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [_kEchartView loadEcharts];
 }
 
--(void)showAreaDemo {
+- (void)showAreaDemo {
     
 }
 
--(void)showLogarithmicDemo {
+- (void)showLogarithmicDemo {
     PYOption *option = [[PYOption alloc] init];
     option.title = [[PYTitle alloc] init];
     option.title.text = @"对数轴实例";
@@ -137,7 +137,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     
 }
 
--(void)showLineDemo {
+- (void)showLineDemo {
     PYOption *option = [[PYOption alloc] init];
     option.tooltip = [[PYTooltip alloc] init];
     option.tooltip.trigger = @"axis";
@@ -235,7 +235,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [_kEchartView setOption:option];
 }
 
--(void)showIrregularLine2Demo {
+- (void)showIrregularLine2Demo {
     PYOption *option = [[PYOption alloc] init];
     option.title = [[PYTitle alloc] init];
     option.title.text = @"时间坐标折线图";
@@ -283,7 +283,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [_kEchartView setOption:option];
 }
 
--(void)showIrregularLineDemo {
+- (void)showIrregularLineDemo {
     PYOption *option = [[PYOption alloc] init];
     option.title = [[PYTitle alloc] init];
     option.title.text = @"双数值轴折线";
@@ -369,7 +369,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [_kEchartView setOption:option];
 }
 
--(void)showStackedAreaDemo {
+- (void)showStackedAreaDemo {
     PYOption *option = [[PYOption alloc] init];
     option.tooltip = [[PYTooltip alloc] init];
     option.tooltip.trigger = @"axis";
@@ -458,7 +458,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [_kEchartView setOption:option];
 }
 
--(void)showBasicAreaDemo {
+- (void)showBasicAreaDemo {
     PYOption *option = [[PYOption alloc] init];
     option.title = [[PYTitle alloc] init];
     option.title.text = @"某楼盘销售情况";
@@ -530,7 +530,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [_kEchartView setOption:option];
 }
 
--(void)showBasicLindeDemo {
+- (void)showBasicLindeDemo {
     PYOption *option = [[PYOption alloc] init];
     option.legend = [[PYLegend alloc] init];
     option.legend.data = @[@"高度(km)与气温(°C)变化关系"];
@@ -584,7 +584,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [_kEchartView setOption:option];
 }
 
--(void)showStackedLineDemo {
+- (void)showStackedLineDemo {
     PYOption *option = [[PYOption alloc] init];
     option.tooltip = [[PYTooltip alloc] init];
     option.tooltip.trigger = @"axis";
@@ -656,7 +656,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
 /**
  *  标准折线图
  */
--(void)showStandardLineDemo {
+- (void)showStandardLineDemo {
     PYOption *option = [[PYOption alloc] init];
     PYTitle *title = [[PYTitle alloc] init];
     title.text = @"未来一周气温变化";

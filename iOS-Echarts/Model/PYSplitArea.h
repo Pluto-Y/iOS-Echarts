@@ -11,8 +11,8 @@
 
 @interface PYSplitArea : NSObject
 
-@property (assign, nonatomic) BOOL show;
-@property (assign, nonatomic) BOOL onGap;
-@property (strong, nonatomic) PYAreaStyle *areaStyle;
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, assign) BOOL onGap;
+@property (nonatomic, strong) PYAreaStyle *areaStyle;
 
 @end

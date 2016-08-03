@@ -11,24 +11,24 @@
 
 @interface PYTreeSeriesData : NSObject
 
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSNumber *value;
-@property (strong, nonatomic) NSString *symbol;
-@property (strong, nonatomic) id symbolSize;
-@property (strong, nonatomic) NSArray *children;
-@property (strong, nonatomic) PYItemStyle *itemStyle;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, strong) NSNumber *value;
+@property (nonatomic, copy) NSString *symbol;
+@property (nonatomic, strong) id symbolSize;
+@property (nonatomic, copy) NSArray *children;
+@property (nonatomic, strong) PYItemStyle *itemStyle;
 
 @end
 
 @interface PYTreeSeries : PYSeries
 
-@property (strong, nonatomic) NSDictionary *rootLocation;
-@property (strong, nonatomic) NSNumber *layerPadding;
-@property (strong, nonatomic) NSNumber *nodePadding;
-@property (strong, nonatomic) NSString *orient;
-@property (strong, nonatomic) NSString *direction;
-@property (strong, nonatomic) id roam;
-@property (strong, nonatomic) NSString *symbol;
-@property (strong, nonatomic) id symbolSize;
+@property (nonatomic, copy) NSDictionary *rootLocation;
+@property (nonatomic, strong) NSNumber *layerPadding;
+@property (nonatomic, strong) NSNumber *nodePadding;
+@property (nonatomic, copy) NSString *orient;
+@property (nonatomic, copy) NSString *direction;
+@property (nonatomic, strong) id roam;
+@property (nonatomic, copy) NSString *symbol;
+@property (nonatomic, strong) id symbolSize;
 
 @end

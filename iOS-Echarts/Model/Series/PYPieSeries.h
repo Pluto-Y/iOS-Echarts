@@ -10,14 +10,14 @@
 
 @interface PYPieSeries : PYSeries
 
-@property (retain, nonatomic) NSArray *center;
-@property (retain, nonatomic) id radius;
-@property (retain, nonatomic) NSNumber *startAngle;
-@property (retain, nonatomic) NSNumber *minAngle;
-@property (assign, nonatomic) BOOL clockWise;
-@property (retain, nonatomic) NSString *roseType;
-@property (retain, nonatomic) NSNumber *selectedOffset;
-@property (retain, nonatomic) id selectedMode;
-@property (assign, nonatomic) BOOL legendHoverLink;
+@property (nonatomic, copy) NSArray *center;
+@property (nonatomic, strong) id radius;
+@property (nonatomic, strong) NSNumber *startAngle;
+@property (nonatomic, strong) NSNumber *minAngle;
+@property (nonatomic, assign) BOOL clockWise;
+@property (nonatomic, copy) NSString *roseType;
+@property (nonatomic, strong) NSNumber *selectedOffset;
+@property (nonatomic, strong) id selectedMode;
+@property (nonatomic, assign) BOOL legendHoverLink;
 
 @end

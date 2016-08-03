@@ -28,7 +28,7 @@
     return self;
 }
 
--(void)setStartAngle:(NSNumber *)startAngle {
+- (void)setStartAngle:(NSNumber *)startAngle {
     if (startAngle.floatValue > 180) {
         NSLog(@"ERROR: Start Angle is out of limit ---- %.0f", startAngle.floatValue);
         _startAngle = @(180);

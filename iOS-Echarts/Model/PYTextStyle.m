@@ -28,7 +28,7 @@
  *
  *  @param number 字体粗细
  */
--(void)setFontWeightByNumber:(NSNumber *)number {
+- (void)setFontWeightByNumber:(NSNumber *)number {
     _fontWeight = [NSString stringWithFormat:@"%d", [number intValue]];
 }
 

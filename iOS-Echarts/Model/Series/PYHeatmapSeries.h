@@ -14,19 +14,19 @@
  */
 @interface PYHeatmapSeries : PYSeries
 
-@property (retain, nonatomic) id selectedMode;
-@property (retain, nonatomic) NSString *mapType;
-@property (assign, nonatomic) BOOL hoverable;
-@property (assign, nonatomic) BOOL dataRangeHoverLink;
-@property (retain, nonatomic) NSDictionary *mapLocation;
-@property (retain, nonatomic) NSString *mapValueCalculation;
-@property (retain, nonatomic) NSNumber *mapValuePrecision;
-@property (assign, nonatomic) BOOL showLegendSymbol;
-@property (retain, nonatomic) id roam;
-@property (retain, nonatomic) NSDictionary *scaleLimit;
-@property (retain, nonatomic) NSDictionary *nameMap;
-@property (retain, nonatomic) NSDictionary *textFixed;
-@property (retain, nonatomic) NSDictionary *geoCoord;
-@property (retain, nonatomic) NSDictionary *heatmap;
+@property (nonatomic, strong) id selectedMode;
+@property (nonatomic, copy) NSString *mapType;
+@property (nonatomic, assign) BOOL hoverable;
+@property (nonatomic, assign) BOOL dataRangeHoverLink;
+@property (nonatomic, copy) NSDictionary *mapLocation;
+@property (nonatomic, copy) NSString *mapValueCalculation;
+@property (nonatomic, strong) NSNumber *mapValuePrecision;
+@property (nonatomic, assign) BOOL showLegendSymbol;
+@property (nonatomic, strong) id roam;
+@property (nonatomic, copy) NSDictionary *scaleLimit;
+@property (nonatomic, copy) NSDictionary *nameMap;
+@property (nonatomic, copy) NSDictionary *textFixed;
+@property (nonatomic, copy) NSDictionary *geoCoord;
+@property (nonatomic, copy) NSDictionary *heatmap;
 
 @end

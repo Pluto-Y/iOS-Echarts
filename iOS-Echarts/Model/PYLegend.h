@@ -11,23 +11,23 @@
 
 @interface PYLegend : NSObject
 
-@property (assign, nonatomic) BOOL show;
-@property (retain, nonatomic) NSNumber *zlevel;
-@property (retain, nonatomic) NSNumber *z;
-@property (retain, nonatomic) NSString *orient;
-@property (retain, nonatomic) id x;
-@property (retain, nonatomic) id y;
-@property (retain, nonatomic) PYColor *backgroundColor;
-@property (retain, nonatomic) NSString *borderColor;
-@property (retain, nonatomic) NSNumber *borderWidth;
-@property (retain, nonatomic) id padding;
-@property (retain, nonatomic) NSNumber *itemGap;
-@property (retain, nonatomic) NSNumber *itemWidth;
-@property (retain, nonatomic) NSNumber *itemHeight;
-@property (retain, nonatomic) PYTextStyle *textStyle;
-@property (retain, nonatomic) id formatter;
-@property (retain, nonatomic) id selectedMode;
-@property (retain, nonatomic) NSDictionary *selected;
-@property (retain, nonatomic) NSArray *data;
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, strong) NSNumber *zlevel;
+@property (nonatomic, strong) NSNumber *z;
+@property (nonatomic, copy) NSString *orient;
+@property (nonatomic, strong) id x;
+@property (nonatomic, strong) id y;
+@property (nonatomic, strong) PYColor *backgroundColor;
+@property (nonatomic, copy) NSString *borderColor;
+@property (nonatomic, strong) NSNumber *borderWidth;
+@property (nonatomic, strong) id padding;
+@property (nonatomic, strong) NSNumber *itemGap;
+@property (nonatomic, strong) NSNumber *itemWidth;
+@property (nonatomic, strong) NSNumber *itemHeight;
+@property (nonatomic, strong) PYTextStyle *textStyle;
+@property (nonatomic, strong) id formatter;
+@property (nonatomic, strong) id selectedMode;
+@property (nonatomic, copy) NSDictionary *selected;
+@property (nonatomic, copy) NSArray *data;
 
 @end

@@ -14,16 +14,16 @@
 
 @interface PYSeries : NSObject
 
-@property (retain, nonatomic) NSNumber *zlevel;
-@property (retain, nonatomic) NSNumber *z;
-@property (retain, nonatomic) NSString *type;
-@property (retain, nonatomic) NSString *name;
-@property (retain, nonatomic) PYTooltip *tooltip;
-@property (assign, nonatomic) BOOL clickable;
-@property (retain, nonatomic) PYItemStyle *itemStyle;
-@property (retain, nonatomic) id data;
-@property (retain, nonatomic) PYMarkPoint *markPoint;
-@property (retain, nonatomic) PYMarkLine *markLine;
+@property (nonatomic, strong) NSNumber *zlevel;
+@property (nonatomic, strong) NSNumber *z;
+@property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, strong) PYTooltip *tooltip;
+@property (nonatomic, assign) BOOL clickable;
+@property (nonatomic, strong) PYItemStyle *itemStyle;
+@property (nonatomic, strong) id data;
+@property (nonatomic, strong) PYMarkPoint *markPoint;
+@property (nonatomic, strong) PYMarkLine *markLine;
 
 
 @end

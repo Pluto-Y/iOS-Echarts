@@ -45,7 +45,7 @@
 
 @implementation PYToolboxFeatureSaveAsImage
 
--(BOOL) isShow {
+- (BOOL)isShow {
     return NO;
 }
 
@@ -102,7 +102,7 @@
     return self;
 }
 
--(PYToolboxFeatureSaveAsImage *)getSaveAsImage {
+- (PYToolboxFeatureSaveAsImage *)getSaveAsImage {
     return nil;
 }
 

@@ -10,8 +10,8 @@
 
 @interface PYEventRiverSeries : PYSeries
 
-@property (strong, nonatomic) NSNumber *xAxisIndex;
-@property (strong, nonatomic) NSNumber *weight;
-@property (assign, nonatomic) BOOL legendHoverLink;
+@property (nonatomic, strong) NSNumber *xAxisIndex;
+@property (nonatomic, strong) NSNumber *weight;
+@property (nonatomic, assign) BOOL legendHoverLink;
 
 @end

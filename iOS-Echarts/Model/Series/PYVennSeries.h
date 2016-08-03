@@ -12,9 +12,9 @@
 
 @interface PYVennSeriesData : NSObject
 
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSNumber *value;
-@property (strong, nonatomic) PYItemStyle *itemStyle;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, strong) NSNumber *value;
+@property (nonatomic, strong) PYItemStyle *itemStyle;
 
 @end
 

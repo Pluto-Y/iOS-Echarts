@@ -10,9 +10,9 @@
 
 @interface PYWordCloudSeries : PYSeries
 
-@property (strong, nonatomic) NSArray *center;
-@property (strong, nonatomic) NSArray *size;
-@property (strong, nonatomic) NSArray *textRotation;
-@property (strong, nonatomic) NSDictionary *autoSize;
+@property (nonatomic, copy) NSArray *center;
+@property (nonatomic, copy) NSArray *size;
+@property (nonatomic, copy) NSArray *textRotation;
+@property (nonatomic, copy) NSDictionary *autoSize;
 
 @end

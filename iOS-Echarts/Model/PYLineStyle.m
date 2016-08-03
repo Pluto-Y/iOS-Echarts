@@ -27,7 +27,7 @@
     return self;
 }
 
--(void)setType:(NSString *)type {
+- (void)setType:(NSString *)type {
     if (![LINE_STYLE_TYPE_SCOPE containsObject:type]) {
         NSLog(@"ERROR: LineStyle does not support the type --- %@", type);
         type = @"solid";

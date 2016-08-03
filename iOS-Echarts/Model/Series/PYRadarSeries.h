@@ -10,10 +10,10 @@
 
 @interface PYRadarSeries : PYSeries
 
-@property (retain, nonatomic) NSNumber *polarIndex;
-@property (retain, nonatomic) NSString *symbol;
-@property (retain, nonatomic) id symbolSize;
-@property (retain, nonatomic) NSNumber *symbolRotate;
-@property (assign, nonatomic) BOOL legendHoverLink;
+@property (nonatomic, strong) NSNumber *polarIndex;
+@property (nonatomic, copy) NSString *symbol;
+@property (nonatomic, strong) id symbolSize;
+@property (nonatomic, strong) NSNumber *symbolRotate;
+@property (nonatomic, assign) BOOL legendHoverLink;
 
 @end

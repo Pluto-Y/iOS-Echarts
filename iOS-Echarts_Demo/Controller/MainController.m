@@ -26,7 +26,7 @@
 /**
  *  初始化
  */
--(void)initAll {
+- (void)initAll {
     _kNavigationBar.backgroundColor = [UIColor orangeColor];
     _kNavigationBar.translucent = NO;
 }

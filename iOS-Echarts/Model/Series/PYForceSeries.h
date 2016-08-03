@@ -13,34 +13,34 @@
 
 @interface PYForceNodes : PYNodes
 
-@property (strong, nonatomic) NSMutableArray *initial;
-@property (assign, nonatomic) BOOL fixX;
-@property (assign, nonatomic) BOOL fixY;
-@property (assign, nonatomic) BOOL draggable;
+@property (nonatomic, strong) NSMutableArray *initial;
+@property (nonatomic, assign) BOOL fixX;
+@property (nonatomic, assign) BOOL fixY;
+@property (nonatomic, assign) BOOL draggable;
 
 @end
 
 @interface PYForceSeries : PYSeries
 
-@property (assign, nonatomic) BOOL ribbonType;
-@property (strong, nonatomic) NSMutableArray<PYCategories *> *categories;
-@property (strong, nonatomic) NSMutableArray<PYForceNodes *> *nodes;
-@property (strong, nonatomic) NSMutableArray<PYLinks *> *links;
-@property (strong, nonatomic) NSMutableArray *matrix;
-@property (strong, nonatomic) NSArray *center;
-@property (strong, nonatomic) NSNumber *size;
-@property (strong, nonatomic) NSNumber *minRadius;
-@property (strong, nonatomic) NSNumber *maxRadius;
-@property (strong, nonatomic) NSString *symbol;
-@property (strong, nonatomic) id symbolSize;
-@property (strong, nonatomic) NSString *linkSymbol;
-@property (strong, nonatomic) NSArray *linkSymbolSize;
-@property (strong, nonatomic) NSNumber *scaling;
-@property (strong, nonatomic) NSNumber *gravity;
-@property (assign, nonatomic) BOOL draggable;
-@property (assign, nonatomic) BOOL large;
-@property (assign, nonatomic) BOOL useWorker;
-@property (strong, nonatomic) NSNumber *steps;
-@property (strong, nonatomic) id roam;
+@property (nonatomic, assign) BOOL ribbonType;
+@property (nonatomic, strong) NSMutableArray<PYCategories *> *categories;
+@property (nonatomic, strong) NSMutableArray<PYForceNodes *> *nodes;
+@property (nonatomic, strong) NSMutableArray<PYLinks *> *links;
+@property (nonatomic, strong) NSMutableArray *matrix;
+@property (nonatomic, copy) NSArray *center;
+@property (nonatomic, strong) NSNumber *size;
+@property (nonatomic, strong) NSNumber *minRadius;
+@property (nonatomic, strong) NSNumber *maxRadius;
+@property (nonatomic, copy) NSString *symbol;
+@property (nonatomic, strong) id symbolSize;
+@property (nonatomic, copy) NSString *linkSymbol;
+@property (nonatomic, copy) NSArray *linkSymbolSize;
+@property (nonatomic, strong) NSNumber *scaling;
+@property (nonatomic, strong) NSNumber *gravity;
+@property (nonatomic, assign) BOOL draggable;
+@property (nonatomic, assign) BOOL large;
+@property (nonatomic, assign) BOOL useWorker;
+@property (nonatomic, strong) NSNumber *steps;
+@property (nonatomic, strong) id roam;
 
 @end

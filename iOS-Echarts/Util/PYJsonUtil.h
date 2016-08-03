@@ -18,7 +18,7 @@
  *
  *  @return 转换后的Json
  */
-+(NSString *)getJSONString:(id)obj;
++ (NSString *)getJSONString:(id)obj;
 
 /**
  *  NSObject转json

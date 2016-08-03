@@ -12,13 +12,13 @@
 
 @interface PYNodes : NSObject
 
-@property (strong, nonatomic) NSString *name;
-@property (strong, nonatomic) NSString *label;
-@property (strong, nonatomic) NSNumber *value;
-@property (assign, nonatomic) BOOL ignore;
-@property (strong, nonatomic) NSString *symbol;
-@property (strong, nonatomic) id symboleSize;
-@property (strong, nonatomic) NSNumber *category;
-@property (strong, nonatomic) PYItemStyle *itemStyle;
+@property (nonatomic, copy) NSString *name;
+@property (nonatomic, copy) NSString *label;
+@property (nonatomic, strong) NSNumber *value;
+@property (nonatomic, assign) BOOL ignore;
+@property (nonatomic, copy) NSString *symbol;
+@property (nonatomic, strong) id symboleSize;
+@property (nonatomic, strong) NSNumber *category;
+@property (nonatomic, strong) PYItemStyle *itemStyle;
 
 @end

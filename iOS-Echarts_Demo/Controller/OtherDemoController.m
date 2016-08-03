@@ -26,13 +26,13 @@ static NSArray *effect;
     [self initAll];
 }
 
--(void)viewDidAppear:(BOOL)animated {
+- (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     loadingTimer.fireDate = [NSDate dateWithTimeIntervalSinceNow:2];
     [self showLoadingDemo];
 }
 
--(void)initAll {
+- (void)initAll {
     effect = @[@"spin", @"bar", @"ring", @"whirling", @"dynamicLine", @"bubble"];
     loadingTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(clearLoading) userInfo:nil repeats:YES];
     loadingTimer.fireDate = [NSDate distantFuture];
@@ -62,13 +62,13 @@ static NSArray *effect;
     }
 }
 
--(void)clearLoading {
+- (void)clearLoading {
     [_yEchartsView hideLoading];
     [_yEchartsView loadEcharts];
     loadingTimer.fireDate = [NSDate distantFuture];
 }
 
--(void)showLoadingDemo {
+- (void)showLoadingDemo {
     effectIndex = (effectIndex + 1) % (int)effect.count;
     PYLoadingOption *loadingOption = [[PYLoadingOption alloc] init];
     loadingOption.text = effect[effectIndex];
@@ -81,7 +81,7 @@ static NSArray *effect;
     [_yEchartsView setOption:option];
 }
 
--(void)showNoDataLoadingDemo {
+- (void)showNoDataLoadingDemo {
     PYNoDataLoadingOption *noDataLoadingOption = [[PYNoDataLoadingOption alloc] init];
     noDataLoadingOption.text = @"暂无数据......Pluto Y";
     noDataLoadingOption.effect = @"whirling";

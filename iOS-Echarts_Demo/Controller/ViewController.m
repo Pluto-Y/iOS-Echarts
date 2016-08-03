@@ -52,7 +52,7 @@
 #pragma mark - custom functions
 #pragma mark 初始化
 /// 初始化
--(void)initAll {
+- (void)initAll {
     self.title = @"Demo目录";
 //    PYOption *option = [[PYOption alloc] init];
 //    PYLegend *legend = [[PYLegend alloc] init];

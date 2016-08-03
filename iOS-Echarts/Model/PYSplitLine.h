@@ -11,8 +11,8 @@
 
 @interface PYSplitLine : NSObject
 
-@property (assign, nonatomic) BOOL show;
-@property (assign, nonatomic) BOOL onGap;
-@property (retain, nonatomic) PYLineStyle *lineStyle;
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, assign) BOOL onGap;
+@property (nonatomic, strong) PYLineStyle *lineStyle;
 
 @end

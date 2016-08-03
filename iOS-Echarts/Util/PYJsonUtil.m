@@ -19,7 +19,7 @@
  *
  *  @return The json string
  */
-+(NSString *)getJSONString:(id)obj {
++ (NSString *)getJSONString:(id)obj {
     NSString *jsonString;
     NSData *jsonData;
     if ([obj isKindOfClass:[NSArray class]] || [obj isKindOfClass:[NSMutableArray class]]) {
@@ -39,7 +39,7 @@
     return jsonString;
 }
 
-+(NSString*) jsonStringWithPrettyPrint:(BOOL) prettyPrint dic:(NSDictionary *)dic {
++ (NSString*)jsonStringWithPrettyPrint:(BOOL)prettyPrint dic:(NSDictionary *)dic {
     NSError *error;
     NSData *jsonData = [NSJSONSerialization dataWithJSONObject:dic
                                                        options:(NSJSONWritingOptions)    (prettyPrint ? NSJSONWritingPrettyPrinted : 0)

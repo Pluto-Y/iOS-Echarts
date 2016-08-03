@@ -50,7 +50,7 @@
  *  The pinch gesture handle scription
  *  To deal with the data zoom
  */
--(void)pinchHandle:(UIPinchGestureRecognizer *)gesture {
+- (void)pinchHandle:(UIPinchGestureRecognizer *)gesture {
     
     if ([gesture state] == UIGestureRecognizerStateEnded) {
         lastRangeWidth = [dataZoom.end floatValue] - [dataZoom.start floatValue];
@@ -91,7 +91,7 @@
     [self callJsMethods:[NSString stringWithFormat:@"changeDataZoomRange(%.2f, %.2f)", [dataZoom.start floatValue], [dataZoom.end floatValue]]];
 }
 
--(void)panHandle:(UIPanGestureRecognizer *)gesture {
+- (void)panHandle:(UIPanGestureRecognizer *)gesture {
     switch ([gesture state]) {
         case UIGestureRecognizerStateBegan: {
             panStartPointX = [gesture translationInView:self].x;
@@ -122,7 +122,7 @@
     }
 }
 
--(void)setOption:(PYOption *)pyOption {
+- (void)setOption:(PYOption *)pyOption {
     if (pyOption.dataZoom == nil) {
         dataZoom = [[PYDataZoom alloc] init];
         dataZoom.show = NO;

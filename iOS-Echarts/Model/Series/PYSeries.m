@@ -28,7 +28,7 @@
     return self;
 }
 
--(void)setType:(NSString *)type {
+- (void)setType:(NSString *)type {
     if (![SERIES_TYPE_SCOPE containsObject:type]) {
         NSLog(@"ERROR: Series does not support type --- %@", type);
         type = nil;

@@ -11,8 +11,8 @@
 
 @interface PYLabelLine : NSObject
 
-@property (assign, nonatomic) BOOL show;
-@property (retain, nonatomic) NSNumber *length;
-@property (retain, nonatomic) PYLineStyle *lineStyle;
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, strong) NSNumber *length;
+@property (nonatomic, strong) PYLineStyle *lineStyle;
 
 @end

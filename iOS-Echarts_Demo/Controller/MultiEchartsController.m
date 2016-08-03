@@ -13,7 +13,7 @@ static NSString *const tableViewIdentifier = @"EchartsViewCell";
 
 @interface MultiEchartsController ()<UITableViewDataSource>
 
-@property (weak, nonatomic) IBOutlet UITableView *tableView;
+@property (nonatomic, weak) IBOutlet UITableView *tableView;
 
 @end
 
@@ -24,13 +24,13 @@ static NSString *const tableViewIdentifier = @"EchartsViewCell";
     [self initAll];
 }
 
--(void)initAll {
+- (void)initAll {
     self.title = @"多图表";
     [_tableView registerNib:[UINib nibWithNibName:tableViewIdentifier bundle:nil] forCellReuseIdentifier:tableViewIdentifier];
 }
 
 #pragma mark UITableViewDataSource
--(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     EchartsViewCell *cell = [tableView dequeueReusableCellWithIdentifier:tableViewIdentifier forIndexPath:indexPath];
     PYOption *option;
     if (indexPath.row == 0) {
@@ -43,14 +43,14 @@ static NSString *const tableViewIdentifier = @"EchartsViewCell";
     return cell;
 }
 
--(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return 2;
 }
 
 /**
  *  标准折线图
  */
--(PYOption *)obtainStandardLineOption {
+- (PYOption *)obtainStandardLineOption {
     PYOption *option = [[PYOption alloc] init];
     PYTitle *title = [[PYTitle alloc] init];
     title.text = @"未来一周气温变化";
@@ -116,7 +116,7 @@ static NSString *const tableViewIdentifier = @"EchartsViewCell";
 /**
  *  虫洞
  */
--(PYOption *)obtainWormholeOption {
+- (PYOption *)obtainWormholeOption {
     NSString *json = @"{\"color\":\"(function (){var zrColor = require(\'zrender/tool/color\');return zrColor.getStepColors(\'yellow\', \'red\', 28);})()\",\"title\":{\"text\":\"浏览器占比变化\",\"subtext\":\"纯属虚构\",\"x\":\"right\",\"y\":\"bottom\"},\"tooltip\":{\"trigger\":\"item\",\"backgroundColor\":\"rgba(0,0,250,0.2)\"},\"legend\":{\"show\":false,\"data\":\"function (){var list = [];for (var i = 1; i <=28; i++) {list.push(i + 2000);}return list;}()\"},\"toolbox\":{\"show\":true,\"orient\":\"vertical\",\"y\":\"center\",\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"polar\":[{\"indicator\":[{\"text\":\"IE8-\",\"max\":400},{\"text\":\"IE9+\",\"max\":400},{\"text\":\"Safari\",\"max\":400},{\"text\":\"Firefox\",\"max\":400},{\"text\":\"Chrome\",\"max\":400}],\"center\":[\"50%\",120],\"radius\":50}],\"calculable\":false,\"series\":\"(function (){var series = [];for (var i = 1; i <= 28; i++) {series.push({name:\'浏览器（数据纯属虚构）\',type:\'radar\',symbol:\'none\',itemStyle: {normal: {lineStyle: {width:1}},emphasis : {areaStyle: {color:\'rgba(0,250,0,0.3)\'}}},data:[{value:[(40 - i) * 10,(38 - i) * 4 + 60,i * 5 + 10,i * 9,i * i /2],name:i + 2000}]})} return series;})()\"}";
     NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];

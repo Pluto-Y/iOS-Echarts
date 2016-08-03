@@ -12,12 +12,12 @@
 
 @interface PYLineStyle : NSObject
 
-@property (retain, nonatomic) id color;
-@property (retain, nonatomic) NSString *type;
-@property (retain, nonatomic) NSNumber *width;
-@property (retain, nonatomic) PYColor *shadowColor;
-@property (retain, nonatomic) NSNumber *shadowBlur;
-@property (retain, nonatomic) NSNumber *shadowOffsetX;
-@property (retain, nonatomic) NSNumber *shadowOffsetY;
+@property (nonatomic, strong) id color;
+@property (nonatomic, copy) NSString *type;
+@property (nonatomic, strong) NSNumber *width;
+@property (nonatomic, strong) PYColor *shadowColor;
+@property (nonatomic, strong) NSNumber *shadowBlur;
+@property (nonatomic, strong) NSNumber *shadowOffsetX;
+@property (nonatomic, strong) NSNumber *shadowOffsetY;
 
 @end

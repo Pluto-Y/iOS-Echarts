@@ -10,19 +10,19 @@
 
 @interface PYFunnelSeries : PYSeries
 
-@property (strong, nonatomic) NSNumber *x;
-@property (strong, nonatomic) NSNumber *y;
-@property (strong, nonatomic) NSNumber *x2;
-@property (strong, nonatomic) NSNumber *y2;
-@property (strong, nonatomic) id width;
-@property (strong, nonatomic) id height;
-@property (strong, nonatomic) NSString *funnelAlign;
-@property (strong, nonatomic) NSNumber *min;
-@property (strong, nonatomic) NSNumber *max;
-@property (strong, nonatomic) NSString *minSize;
-@property (strong, nonatomic) NSString *maxSize;
-@property (strong, nonatomic) NSString *sort;
-@property (strong, nonatomic) NSNumber *gap;
-@property (assign, nonatomic) BOOL legendHoverLink;
+@property (nonatomic, strong) NSNumber *x;
+@property (nonatomic, strong) NSNumber *y;
+@property (nonatomic, strong) NSNumber *x2;
+@property (nonatomic, strong) NSNumber *y2;
+@property (nonatomic, strong) id width;
+@property (nonatomic, strong) id height;
+@property (nonatomic, copy) NSString *funnelAlign;
+@property (nonatomic, strong) NSNumber *min;
+@property (nonatomic, strong) NSNumber *max;
+@property (nonatomic, copy) NSString *minSize;
+@property (nonatomic, copy) NSString *maxSize;
+@property (nonatomic, copy) NSString *sort;
+@property (nonatomic, strong) NSNumber *gap;
+@property (nonatomic, assign) BOOL legendHoverLink;
 
 @end

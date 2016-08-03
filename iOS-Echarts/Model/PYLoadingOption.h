@@ -11,12 +11,12 @@
 
 @interface PYLoadingOption : NSObject
 
-@property (strong, nonatomic) NSString *text;
-@property (strong, nonatomic) id x;
-@property (strong, nonatomic) id y;
-@property (strong, nonatomic) PYTextStyle *textStyle;
-@property (strong, nonatomic) id effect;
-@property (strong, nonatomic) NSDictionary *effectOption;
-@property (strong, nonatomic) NSNumber *progress;
+@property (nonatomic, copy) NSString *text;
+@property (nonatomic, strong) id x;
+@property (nonatomic, strong) id y;
+@property (nonatomic, strong) PYTextStyle *textStyle;
+@property (nonatomic, strong) id effect;
+@property (nonatomic, copy) NSDictionary *effectOption;
+@property (nonatomic, strong) NSNumber *progress;
 
 @end

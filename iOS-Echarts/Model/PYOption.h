@@ -21,24 +21,24 @@
 
 @interface PYOption : NSObject
 
-@property (retain, nonatomic) PYColor *backgroundColor;
-@property (retain, nonatomic) NSArray *color;
-@property (retain, nonatomic) NSMutableArray<PYPolar *> *polar;
-@property (assign, nonatomic) BOOL renderAsImage;
-@property (assign, nonatomic) BOOL calculable;
-@property (assign, nonatomic) BOOL animation;
-@property (retain, nonatomic) PYTimeline *timeline;
-@property (retain, nonatomic) PYTitle *title;
-@property (retain, nonatomic) PYToolbox *toolbox;
-@property (retain, nonatomic) PYTooltip *tooltip;
-@property (retain, nonatomic) PYLegend *legend;
-@property (retain, nonatomic) PYDataRange *dataRange;
-@property (retain, nonatomic) PYDataZoom *dataZoom;
-@property (retain, nonatomic) PYRoamController *roamController;
-@property (retain, nonatomic) PYGrid *grid;
-@property (retain, nonatomic) NSMutableArray *xAxis;
-@property (retain, nonatomic) NSMutableArray *yAxis;
-@property (retain, nonatomic) NSMutableArray *series;
-@property (retain, nonatomic) PYOption *options;
+@property (nonatomic, strong) PYColor *backgroundColor;
+@property (nonatomic, strong) NSArray *color;
+@property (nonatomic, strong) NSMutableArray<PYPolar *> *polar;
+@property (nonatomic, assign) BOOL renderAsImage;
+@property (nonatomic, assign) BOOL calculable;
+@property (nonatomic, assign) BOOL animation;
+@property (nonatomic, strong) PYTimeline *timeline;
+@property (nonatomic, strong) PYTitle *title;
+@property (nonatomic, strong) PYToolbox *toolbox;
+@property (nonatomic, strong) PYTooltip *tooltip;
+@property (nonatomic, strong) PYLegend *legend;
+@property (nonatomic, strong) PYDataRange *dataRange;
+@property (nonatomic, strong) PYDataZoom *dataZoom;
+@property (nonatomic, strong) PYRoamController *roamController;
+@property (nonatomic, strong) PYGrid *grid;
+@property (nonatomic, strong) NSMutableArray *xAxis;
+@property (nonatomic, strong) NSMutableArray *yAxis;
+@property (nonatomic, strong) NSMutableArray *series;
+@property (nonatomic, strong) PYOption *options;
 
 @end

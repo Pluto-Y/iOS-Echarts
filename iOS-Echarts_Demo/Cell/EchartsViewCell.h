@@ -11,6 +11,6 @@
 
 @interface EchartsViewCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet PYEchartsView *echartView;
+@property (nonatomic, weak) IBOutlet PYEchartsView *echartView;
 
 @end

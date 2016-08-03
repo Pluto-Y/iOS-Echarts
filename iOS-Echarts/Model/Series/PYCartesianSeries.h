@@ -10,22 +10,22 @@
 
 @interface PYCartesianSeries : PYSeries
 
-@property (retain, nonatomic) NSString *stack;
-@property (retain, nonatomic) NSNumber *xAxisIndex;
-@property (retain, nonatomic) NSNumber *yAxisIndex;
-@property (retain, nonatomic) NSString *barGap;
-@property (retain, nonatomic) NSString *barCategoryGap;
-@property (retain, nonatomic) NSNumber *barMinHeight;
-@property (retain, nonatomic) NSNumber *barWidth;
-@property (retain, nonatomic) NSNumber *barMaxWidth;
-@property (retain, nonatomic) NSString *symbol;
-@property (retain, nonatomic) id symbolSize;
-@property (retain, nonatomic) NSNumber *symbolRotate;
-@property (assign, nonatomic) BOOL showAllSymbol;
-@property (assign, nonatomic) BOOL smooth;
-@property (retain, nonatomic) NSString *dataFilter;
-@property (assign, nonatomic) BOOL large;
-@property (retain, nonatomic) NSNumber *largeThreshold;
-@property (assign, nonatomic) BOOL legendHoverLink;
+@property (nonatomic, copy) NSString *stack;
+@property (nonatomic, strong) NSNumber *xAxisIndex;
+@property (nonatomic, strong) NSNumber *yAxisIndex;
+@property (nonatomic, copy) NSString *barGap;
+@property (nonatomic, copy) NSString *barCategoryGap;
+@property (nonatomic, strong) NSNumber *barMinHeight;
+@property (nonatomic, strong) NSNumber *barWidth;
+@property (nonatomic, strong) NSNumber *barMaxWidth;
+@property (nonatomic, copy) NSString *symbol;
+@property (nonatomic, strong) id symbolSize;
+@property (nonatomic, strong) NSNumber *symbolRotate;
+@property (nonatomic, assign) BOOL showAllSymbol;
+@property (nonatomic, assign) BOOL smooth;
+@property (nonatomic, copy) NSString *dataFilter;
+@property (nonatomic, assign) BOOL large;
+@property (nonatomic, strong) NSNumber *largeThreshold;
+@property (nonatomic, assign) BOOL legendHoverLink;
 
 @end

@@ -15,8 +15,8 @@ extern NSString *const PYLinkStyleTypeCurve;
 
 @interface PYLinkStyle : NSObject
 
-@property (strong, nonatomic) NSString *type;
-@property (strong, nonatomic) PYColor *color;
-@property (strong, nonatomic) NSNumber *width;
+@property (nonatomic, copy) NSString *type;
+@property (nonatomic, strong) PYColor *color;
+@property (nonatomic, strong) NSNumber *width;
 
 @end

@@ -11,6 +11,6 @@
 
 @interface RadarDemoController : UIViewController
 
-@property (weak, nonatomic) IBOutlet PYEchartsView *kEchartView;
+@property (nonatomic, weak) IBOutlet PYEchartsView *kEchartView;
 
 @end

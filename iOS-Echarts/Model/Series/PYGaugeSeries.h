@@ -12,50 +12,50 @@
 
 @interface PYGaugeDetail : NSObject
 
-@property (assign, nonatomic) BOOL show;
-@property (strong, nonatomic) PYColor *backgroundColor;
-@property (strong, nonatomic) NSNumber *borderWidth;
-@property (strong, nonatomic) PYColor *borderColor;
-@property (strong, nonatomic) NSNumber *width;
-@property (strong, nonatomic) NSNumber *height;
-@property (strong, nonatomic) NSArray *offsetCenter;
-@property (strong, nonatomic) id formatter;
-@property (strong, nonatomic) PYTextStyle *textStyle;
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, strong) PYColor *backgroundColor;
+@property (nonatomic, strong) NSNumber *borderWidth;
+@property (nonatomic, strong) PYColor *borderColor;
+@property (nonatomic, strong) NSNumber *width;
+@property (nonatomic, strong) NSNumber *height;
+@property (nonatomic, copy) NSArray *offsetCenter;
+@property (nonatomic, strong) id formatter;
+@property (nonatomic, strong) PYTextStyle *textStyle;
 
 @end
 
 @interface PYGaugePointer : NSObject
 
-@property (strong, nonatomic) NSString *length;
-@property (strong, nonatomic) NSNumber *width;
-@property (strong, nonatomic) id color;
+@property (nonatomic, copy) NSString *length;
+@property (nonatomic, strong) NSNumber *width;
+@property (nonatomic, strong) id color;
 
 @end
 
 @interface PYGaugeTitle : NSObject
 
-@property (assign, nonatomic) BOOL show;
-@property (strong, nonatomic) NSArray *offsetCenter;
-@property (strong, nonatomic) PYTextStyle *textStyle;
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, copy) NSArray *offsetCenter;
+@property (nonatomic, strong) PYTextStyle *textStyle;
 
 @end
 
 @interface PYGaugeSeries : PYSeries
 
-@property (strong, nonatomic) NSArray *center;
-@property (strong, nonatomic) id radius;
-@property (strong, nonatomic) NSNumber *startAngle;
-@property (strong, nonatomic) NSNumber *endAngle;
-@property (strong, nonatomic) NSNumber *min;
-@property (strong, nonatomic) NSNumber *max;
-@property (strong, nonatomic) NSNumber *splitNumber;
-@property (strong, nonatomic) PYAxisLine *axisLine;
-@property (strong, nonatomic) PYAxisTick *axisTick;
-@property (strong, nonatomic) PYAxisLabel *axisLabel;
-@property (strong, nonatomic) NSDictionary *splitLine;
-@property (strong, nonatomic) NSDictionary *pointer;
-@property (strong, nonatomic) PYGaugeTitle *title;
-@property (strong, nonatomic) PYGaugeDetail *detail;
-@property (assign, nonatomic) BOOL legendHoverLink;
+@property (nonatomic, copy) NSArray *center;
+@property (nonatomic, strong) id radius;
+@property (nonatomic, strong) NSNumber *startAngle;
+@property (nonatomic, strong) NSNumber *endAngle;
+@property (nonatomic, strong) NSNumber *min;
+@property (nonatomic, strong) NSNumber *max;
+@property (nonatomic, strong) NSNumber *splitNumber;
+@property (nonatomic, strong) PYAxisLine *axisLine;
+@property (nonatomic, strong) PYAxisTick *axisTick;
+@property (nonatomic, strong) PYAxisLabel *axisLabel;
+@property (nonatomic, copy) NSDictionary *splitLine;
+@property (nonatomic, copy) NSDictionary *pointer;
+@property (nonatomic, strong) PYGaugeTitle *title;
+@property (nonatomic, strong) PYGaugeDetail *detail;
+@property (nonatomic, assign) BOOL legendHoverLink;
 
 @end

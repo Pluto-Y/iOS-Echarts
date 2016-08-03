@@ -12,9 +12,9 @@
 
 @interface PYLinks : NSObject
 
-@property (strong, nonatomic) id source;
-@property (strong, nonatomic) id target;
-@property (strong, nonatomic) NSNumber *weight;
-@property (strong, nonatomic) PYItemStyle *itemStyle;
+@property (nonatomic, strong) id source;
+@property (nonatomic, strong) id target;
+@property (nonatomic, strong) NSNumber *weight;
+@property (nonatomic, strong) PYItemStyle *itemStyle;
 
 @end

@@ -15,7 +15,7 @@
  */
 @interface MapDemoController : UIViewController<UITableViewDelegate, UITableViewDataSource>
 
-@property (strong, nonatomic) IBOutlet PYEchartsView *yEchartView;
-@property (strong, nonatomic) IBOutlet UITableView *yDemoMenusTb;
+@property (nonatomic, weak) IBOutlet PYEchartsView *yEchartView;
+@property (nonatomic, weak) IBOutlet UITableView *yDemoMenusTb;
 
 @end

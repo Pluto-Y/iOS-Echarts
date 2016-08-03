@@ -11,6 +11,6 @@
 
 @interface CandlestickDemoController : UIViewController
 
-@property (strong, nonatomic) IBOutlet PYEchartsView *kEchartView;
+@property (nonatomic, weak) IBOutlet PYEchartsView *kEchartView;
 
 @end

@@ -16,7 +16,7 @@
 
 @implementation PYMarkPointEffect
 
--(void)setType:(NSString *)type {
+- (void)setType:(NSString *)type {
     if (![MARK_POINT_EFFECT_TYPE_SCOPE containsObject:type]) {
         NSLog(@"ERROR: MarkPointEffect does not support type --- %@", type);
         type = @"scale";

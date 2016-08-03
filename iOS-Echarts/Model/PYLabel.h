@@ -11,13 +11,13 @@
 
 @interface PYLabel : NSObject
 
-@property (assign, nonatomic) BOOL show;
-@property (retain, nonatomic) NSString *position;
-@property (assign, nonatomic) BOOL rotate;
-@property (retain, nonatomic) NSNumber *distance;
-@property (retain, nonatomic) id formatter;
-@property (retain, nonatomic) PYTextStyle *textStyle;
-@property (retain, nonatomic) NSNumber *x;
-@property (retain, nonatomic) NSNumber *y;
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, copy) NSString *position;
+@property (nonatomic, assign) BOOL rotate;
+@property (nonatomic, strong) NSNumber *distance;
+@property (nonatomic, strong) id formatter;
+@property (nonatomic, strong) PYTextStyle *textStyle;
+@property (nonatomic, strong) NSNumber *x;
+@property (nonatomic, strong) NSNumber *y;
 
 @end

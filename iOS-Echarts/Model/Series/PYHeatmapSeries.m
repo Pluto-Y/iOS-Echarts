@@ -26,7 +26,7 @@
     return self;
 }
 
--(void)setMapValueCalculation:(NSString *)mapValueCalculation {
+- (void)setMapValueCalculation:(NSString *)mapValueCalculation {
     // 检查传入参数是否支持对应方式
     if (![HEATMAP_SERIES_MAP_VALUE_CAL_SCOPE containsObject:mapValueCalculation]) {
         NSLog(@"ERROR: Map Value Caculation does not support the type --- %@", mapValueCalculation);
