@@ -11,14 +11,14 @@
 #import "PYLinkStyle.h"
 #import "PYLinks.h"
 
-@class PYLabelLine, PYAreaStyle, PYLabel, PYLineStyle;
+@class PYLabelLine, PYAreaStyle, PYLabel, PYLineStyle, PYChordStyle;
 
 @interface PYItemStyleProp : NSObject
 
 @property (nonatomic, strong) PYColor *color;
 @property (nonatomic, strong) PYLineStyle *lineStyle;
 @property (nonatomic, strong) PYAreaStyle *areaStyle;
-// chordStyle
+@property (nonatomic, strong) PYChordStyle *chordStyle;
 @property (nonatomic, strong) PYNodeStyle *nodeStyle;
 @property (nonatomic, strong) PYLinkStyle *linkStyle;
 @property (nonatomic, strong) PYColor *borderColor;
