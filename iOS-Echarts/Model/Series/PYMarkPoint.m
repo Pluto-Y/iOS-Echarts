@@ -7,6 +7,7 @@
 //
 
 #import "PYMarkPoint.h"
+#import "PYUtilities.h"
 
 PYMarkPointEffectType const PYMarkPointEffectTypeScale  = @"scale";
 PYMarkPointEffectType const PYMarkPointEffectTypeBounce = @"bounce";

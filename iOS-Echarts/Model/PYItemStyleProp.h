@@ -11,7 +11,7 @@
 #import "PYLinkStyle.h"
 #import "PYLinks.h"
 
-@class PYLabelLine, PYAreaStyle, PYLineStyle, PYChordStyle;
+@class PYLabelLine, PYAreaStyle, PYLineStyle, PYChordStyle, PYTextStyle;
 
 @interface PYLabelLine : NSObject
 

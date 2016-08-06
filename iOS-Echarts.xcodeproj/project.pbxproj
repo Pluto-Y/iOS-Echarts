@@ -275,7 +275,7 @@
 		6F9391AC1D42414800CD54FC /* ForceDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForceDemoController.xib; sourceTree = "<group>"; };
 		6FEFF6E91D56448300E8B77E /* NSObject+PYObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PYObject.h"; sourceTree = "<group>"; };
 		6FEFF6EA1D56448300E8B77E /* NSObject+PYObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PYObject.m"; sourceTree = "<group>"; };
-		6FEFF6ED1D5644E500E8B77E /* PYUtitilies.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYUtitilies.h; sourceTree = "<group>"; };
+		6FEFF6ED1D5644E500E8B77E /* PYUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYUtilities.h; sourceTree = "<group>"; };
 		6FEFF6EE1D564D5C00E8B77E /* PYChordStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYChordStyle.h; sourceTree = "<group>"; };
 		6FEFF6EF1D564D5C00E8B77E /* PYChordStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYChordStyle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -433,7 +433,7 @@
 				6FEFF6E81D56446F00E8B77E /* Categories */,
 				6F4D58651D4FE34F00246943 /* iOS-Echarts.h */,
 				6F4D58661D4FE34F00246943 /* Model */,
-				6FEFF6ED1D5644E500E8B77E /* PYUtitilies.h */,
+				6FEFF6ED1D5644E500E8B77E /* PYUtilities.h */,
 				6F4D58CE1D4FE34F00246943 /* Resources */,
 				6F4D58D21D4FE34F00246943 /* Util */,
 				6F4D58D51D4FE34F00246943 /* View */,

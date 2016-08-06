@@ -7,6 +7,8 @@
 //
 
 #import "PYSeries.h"
+#import "PYUtilities.h"
+
 @class PYItemStyle;
 
 @interface PYTreeSeriesData : NSObject

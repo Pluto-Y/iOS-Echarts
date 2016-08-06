@@ -9,7 +9,7 @@
 #import "PYAxisTick.h"
 #import "PYColor.h"
 #import "PYLineStyle.h"
-#import "PYUtitilies.h"
+#import "PYUtilities.h"
 
 @implementation PYAxisTick
 

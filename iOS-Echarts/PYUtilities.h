@@ -1,13 +1,20 @@
 //
-//  PYUtitilies.h
+//  PYUtilities.h
 //  iOS-Echarts
 //
 //  Created by Pluto Y on 8/7/16.
 //  Copyright © 2016 pluto-y. All rights reserved.
 //
 
-#ifndef PYUtitilies_h
-#define PYUtitilies_h
+#ifndef PYUtilities_h
+#define PYUtilities_h
+
+//#define __DEBUG__ 1
+#ifdef __DEBUG__
+#define PYLog(...) NSLog(__VA_ARGS__)
+#else
+#define PYLog(...) do{} while(0)
+#endif
 
 typedef NSString *PYInterval;
 static PYInterval PYIntervalAuto = @"auto";
@@ -31,4 +38,4 @@ static PYSymbol PYSymbolStar5          = @"star5";
 
 
 
-#endif /* PYUtitilies_h */
+#endif /* PYUtilities_h */

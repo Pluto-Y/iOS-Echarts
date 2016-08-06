@@ -7,7 +7,7 @@
 //
 
 #import "PYAxisLabel.h"
-#import "PYUtitilies.h"
+#import "PYUtilities.h"
 
 @implementation PYAxisLabel
 

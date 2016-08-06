@@ -12,7 +12,7 @@
 PYLinkStyleType const PYLinkStyleTypeLine = @"line";
 PYLinkStyleType const PYLinkStyleTypeCurve = @"curve";
 
-static NSArray<PYLineStyleType> *linkStyleTypeScope;
+static NSArray<PYLinkStyleType> *linkStyleTypeScope;
 @implementation PYLinkStyle
 
 + (void)initialize
