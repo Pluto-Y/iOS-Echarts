@@ -66,7 +66,7 @@
 
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, strong) PYToolboxFeatureMagicTypeTitle *title;
-@property (nonatomic, strong) PYOption *option;
+@property (nonatomic, copy) NSDictionary<NSString *, PYOption *> *option;
 @property (nonatomic, copy) NSArray *type;
 
 @end
@@ -88,6 +88,12 @@
 @end
 
 
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#Toolbox
+ *
+ */
 @interface PYToolboxFeature : NSObject
 
 @property (nonatomic, strong) PYToolboxFeatureMark *mark;
@@ -95,7 +101,7 @@
 @property (nonatomic, strong) PYToolboxFeatureDataView *dataView;
 @property (nonatomic, strong) PYToolboxFeatureMagicType *magicType;
 @property (nonatomic, strong) PYToolboxFeatureRestore *restore;
-@property (nonatomic, strong, getter=getSaveAsImage) PYToolboxFeatureSaveAsImage *saveAsImage NS_EXTENSION_UNAVAILABLE_IOS("Use UIAlertController instead.");
+@property (nonatomic, strong, getter=getSaveAsImage) PYToolboxFeatureSaveAsImage *saveAsImage NS_EXTENSION_UNAVAILABLE_IOS("Use PYEchartView `getImage` instead.");
 
 
 @end

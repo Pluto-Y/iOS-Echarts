@@ -9,10 +9,18 @@
 #import "PYLinkStyle.h"
 #import "PYColor.h"
 
-NSString *const PYLinkStyleTypeLine = @"line";
-NSString *const PYLinkStyleTypeCurve = @"curve";
+PYLinkStyleType const PYLinkStyleTypeLine = @"line";
+PYLinkStyleType const PYLinkStyleTypeCurve = @"curve";
 
+static NSArray<PYLineStyleType> *linkStyleTypeScope;
 @implementation PYLinkStyle
+
++ (void)initialize
+{
+    if (self == [PYLinkStyle class]) {
+        linkStyleTypeScope = @[PYLinkStyleTypeLine, PYLinkStyleTypeCurve];
+    }
+}
 
 - (instancetype)init
 {
@@ -23,6 +31,15 @@ NSString *const PYLinkStyleTypeCurve = @"curve";
         _width = @1;
     }
     return self;
+}
+
+- (void)setType:(PYLinkStyleType)type {
+    if (![linkStyleTypeScope containsObject:type]) {
+        NSLog(@"ERROR: LinkStyle does not support the type --- %@", type);
+        _type = PYLinkStyleTypeLine;
+        return;
+    }
+    _type = [type copy];
 }
 
 @end

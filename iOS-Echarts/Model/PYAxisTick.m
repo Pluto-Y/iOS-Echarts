@@ -9,6 +9,7 @@
 #import "PYAxisTick.h"
 #import "PYColor.h"
 #import "PYLineStyle.h"
+#import "PYUtitilies.h"
 
 @implementation PYAxisTick
 
@@ -16,7 +17,7 @@
 {
     self = [super init];
     if (self) {
-        _interval = @"auto";
+        _interval = PYIntervalAuto;
         _onGap = NO;
         _inside = NO;
         _length = @(5);

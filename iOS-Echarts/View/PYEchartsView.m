@@ -78,6 +78,11 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     bundlePath = [echartsBundle bundlePath];
     NSString *urlString = [[echartsBundle pathForResource:@"echarts" ofType:@"html"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; // Fixes the url string contain chinese characters
     localHtmlContents =[[NSString alloc] initWithContentsOfFile:urlString encoding:NSUTF8StringEncoding error:nil];
+    
+    if (localHtmlContents == nil || [localHtmlContents isEqualToString:@""]) {
+        NSLog(@"Error: Can't load echart's files.");
+    }
+    
     self.delegate = self;
     self.scrollView.bounces = NO;
     self.scrollView.scrollEnabled = NO;
@@ -164,7 +169,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  */
 - (void)refreshEchartsWithOption:(PYOption *)newOption {
     NSString *jsonStr = [PYJsonUtil getJSONString:newOption];
-    NSLog(@"jsonStr:%@", jsonStr);
+    PYLog(@"jsonStr:%@", jsonStr);
     [self callJsMethods:[NSString stringWithFormat:@"refreshWithOption(%@)", jsonStr]];
 }
 
@@ -196,7 +201,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  */
 - (void)showLoading:(PYLoadingOption *)loadingOption {
     NSString *loadingOptionStr = [PYJsonUtil getJSONString:loadingOption];
-    NSLog(@"loadingOption:%@", loadingOptionStr);
+    PYLog(@"loadingOption:%@", loadingOptionStr);
     [self callJsMethods:[NSString stringWithFormat:@"myChart.showLoading(%@)",loadingOptionStr]];
 }
 
@@ -226,10 +231,10 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     
     NSString *jsonStr = [PYJsonUtil getJSONString:option];
     NSString *js;
-    NSLog(@"%@",jsonStr);
+    PYLog(@"%@",jsonStr);
    
     if (_noDataLoadingOption != nil) {
-        NSLog(@"nodataLoadingOption:%@", [PYJsonUtil getJSONString:_noDataLoadingOption]);
+        PYLog(@"nodataLoadingOption:%@", [PYJsonUtil getJSONString:_noDataLoadingOption]);
         NSString *noDataLoadingOptionString = [NSString stringWithFormat:@"{\"noDataLoadingOption\":%@ \n}", [PYJsonUtil getJSONString:_noDataLoadingOption]];
         js = [NSString stringWithFormat:@"%@(%@, %@)", @"loadEcharts", jsonStr, noDataLoadingOptionString];
     } else {
@@ -237,7 +242,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     }
     [webView stringByEvaluatingJavaScriptFromString:js];
     for (NSString * name in actionHandleBlocks.allKeys) {
-        NSLog(@"%@", [NSString stringWithFormat:@"addEchartActionHandler('%@')",name]);
+        PYLog(@"%@", [NSString stringWithFormat:@"addEchartActionHandler('%@')",name]);
         [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler('%@')",name]];//
     }
 }
@@ -250,7 +255,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  */
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSURL *url = request.URL;
-    NSLog(@"%@", url);
+    PYLog(@"%@", url);
     if ([[url.scheme lowercaseString] hasPrefix:@"http"]) { // Just open with the safari
         [[UIApplication sharedApplication] openURL:url];
         return NO;
@@ -330,7 +335,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
         CGPoint p1 = [recognizer locationOfTouch: 0 inView:self];
         CGPoint p2 = [recognizer locationOfTouch: 1 inView:self];
         CGPoint newCenter = CGPointMake((p1.x+p2.x)/2,(p1.y+p2.y)/2);
-//        NSLog(@"%@", NSStringFromCGPoint(newCenter));
+        PYLog(@"%@", NSStringFromCGPoint(newCenter));
         [self.scrollView setContentOffset:CGPointMake((self.scrollView.contentOffset.x + newCenter.x) * scale - newCenter.x, self.scrollView.contentOffset.y)];
     }
     [self resizeDiv];

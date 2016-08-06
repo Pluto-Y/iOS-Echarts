@@ -8,9 +8,18 @@
 
 #import "PYPolar.h"
 
-#define POLAR_TYPE_SCOPE [NSArray arrayWithObjects:@"polygon", @"circle", nil]
+PYPolarType const PYPolarTypePolygon = @"polygon";
+PYPolarType const PYPolarTypeCircle = @"circle";
 
+static NSArray<PYPolarType> *polarTypeScope;
 @implementation PYPolar
+
++ (void)initialize
+{
+    if (self == [PYPolar class]) {
+        polarTypeScope = @[PYPolarTypePolygon, PYPolarTypeCircle];
+    }
+}
 
 - (instancetype)init
 {
@@ -22,7 +31,7 @@
         _spliteNumber = @(5);
         _name = @{@"show":@(YES), @"textStyle":@{@"color":@"#333"}};
         _scale = NO;
-        _type = @"polygon";
+        _type = PYPolarTypePolygon;
         
     }
     return self;
@@ -41,11 +50,12 @@
 }
 
 -(void)setType:(NSString *)type {
-    if (![POLAR_TYPE_SCOPE containsObject:type]) {
+    if (![polarTypeScope containsObject:type]) {
         NSLog(@"ERROR: Polar does not support the type --- %@", type);
-        type = @"polygon";
+        _type = PYPolarTypePolygon;
+        return;
     }
-    _type = type;
+    _type = [type copy];
 }
 
 @end

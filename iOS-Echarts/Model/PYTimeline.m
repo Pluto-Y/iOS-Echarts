@@ -61,7 +61,18 @@
 
 @end
 
+PYTimelineType const PYTimelineTypeTime = @"time";
+PYTimelineType const PYTimelineTypeNumber = @"number";
+
+static NSArray<PYTimelineType> *timelineTypeScope;
 @implementation PYTimeline
+
++ (void)initialize
+{
+    if (self == [PYTimeline class]) {
+        timelineTypeScope = @[PYTimelineTypeTime, PYTimelineTypeNumber];
+    }
+}
 
 - (instancetype)init
 {
@@ -70,7 +81,7 @@
         _show = YES;
         _zlevel = @(0);
         _z = @(4);
-        _type = @"time";
+        _type = PYTimelineTypeTime;
         _notMerge = NO;
         _realtime = YES;
         _x = @(80);
@@ -88,15 +99,24 @@
         _lineStyle = [[PYLineStyle alloc] init];
         _lineStyle.color = PYRGBA(6, 6, 6, 1);
         _lineStyle.width = @(1);
-        _lineStyle.type = @"dashed";
+        _lineStyle.type = PYLineStyleTypeDashed;
         _label = [[PYTimelineLabel alloc] init];
         _checkpointStyle = [[PYTimelineCheckpointStyle alloc] init];
         _controlStyle = [[PYTimelineControlStyle alloc] init];
-        _symbol = @"emptyDiamond";
+        _symbol = PYSymbolEmptyDiamond;
         _symbolSize = @(4);
         _currentIndex = @(0);
     }
     return self;
+}
+
+- (void)setType:(PYTimelineType)type {
+    if (![timelineTypeScope containsObject:type]) {
+        NSLog(@"ERROR: Timeline does not support the type --- %@", type);
+        _type = type;
+        return;
+    }
+    _type = [type copy];
 }
 
 @end

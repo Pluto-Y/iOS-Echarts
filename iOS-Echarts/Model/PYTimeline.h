@@ -40,12 +40,23 @@
 
 @end
 
+typedef NSString *PYTimelineType;
+
+extern PYTimelineType const PYTimelineTypeTime;
+extern PYTimelineType const PYTimelineTypeNumber;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#Timeline
+ *
+ */
 @interface PYTimeline : NSObject
 
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, strong) NSNumber *zlevel;
 @property (nonatomic, strong) NSNumber *z;
-@property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) PYTimelineType type;
 @property (nonatomic, assign) BOOL notMerge;
 @property (nonatomic, assign) BOOL realtime;
 @property (nonatomic, strong) id x;
@@ -66,7 +77,7 @@
 @property (nonatomic, strong) PYTimelineLabel *label;
 @property (nonatomic, strong) PYTimelineCheckpointStyle *checkpointStyle;
 @property (nonatomic, strong) PYTimelineControlStyle *controlStyle;
-@property (nonatomic, copy) NSString *symbol;
+@property (nonatomic, copy) PYSymbol symbol;
 @property (nonatomic, strong) NSNumber *symbolSize;
 @property (nonatomic, strong) NSNumber *currentIndex;
 @property (nonatomic, strong) NSMutableArray *data;

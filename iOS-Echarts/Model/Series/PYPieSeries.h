@@ -8,6 +8,17 @@
 
 #import "PYSeries.h"
 
+typedef NSString *PYPieSeriesRoseType;
+
+extern PYPieSeriesRoseType const PYPieSeriesRoseTypeRadius;
+extern PYPieSeriesRoseType const PYPieSeriesRoseTypeArea;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#SeriesPie
+ *
+ */
 @interface PYPieSeries : PYSeries
 
 @property (nonatomic, copy) NSArray *center;
@@ -15,7 +26,7 @@
 @property (nonatomic, strong) NSNumber *startAngle;
 @property (nonatomic, strong) NSNumber *minAngle;
 @property (nonatomic, assign) BOOL clockWise;
-@property (nonatomic, copy) NSString *roseType;
+@property (nonatomic, copy) PYPieSeriesRoseType roseType;
 @property (nonatomic, strong) NSNumber *selectedOffset;
 @property (nonatomic, strong) id selectedMode;
 @property (nonatomic, assign) BOOL legendHoverLink;

@@ -8,6 +8,17 @@
 
 #import "PYSeries.h"
 
+typedef NSString *PYMapSeriesMapValueCalculation;
+
+extern PYMapSeriesMapValueCalculation const PYMapSeriesMapValueCalculationSum;
+extern PYMapSeriesMapValueCalculation const PYMapSeriesMapValueCalculationAverage;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#SeriesMap
+ *
+ */
 @interface PYMapSeries : PYSeries
 
 @property (nonatomic, strong) id selectedMode;
@@ -15,7 +26,7 @@
 @property (nonatomic, assign) BOOL hoverable;
 @property (nonatomic, assign) BOOL dataRangeHoverLink;
 @property (nonatomic, copy) NSDictionary *mapLocation;
-@property (nonatomic, copy) NSString *mapValueCalculation;
+@property (nonatomic, copy) PYMapSeriesMapValueCalculation mapValueCalculation;
 @property (nonatomic, strong) NSNumber *mapValuePrecision;
 @property (nonatomic, assign) BOOL showLegendSymbol;
 @property (nonatomic, strong) id roam;

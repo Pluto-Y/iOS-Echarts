@@ -10,6 +10,12 @@
 
 @class PYColor, PYTextStyle;
 
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#Title
+ *
+ */
 @interface PYTitle : NSObject
 
 @property (nonatomic, assign) BOOL show;

@@ -7,6 +7,7 @@
 //
 
 #import "PYAxisLabel.h"
+#import "PYUtitilies.h"
 
 @implementation PYAxisLabel
 
@@ -14,7 +15,7 @@
     self = [super init];
     if (self) {
         _show = YES;
-        _interval = @"auto";
+        _interval = PYIntervalAuto;
         _rotate = @0;
         _margin = @8;
         _clickable = false;

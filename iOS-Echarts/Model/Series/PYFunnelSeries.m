@@ -8,7 +8,18 @@
 
 #import "PYFunnelSeries.h"
 
+PYFunnelSeriesSort const PYFunnelSeriesSortAscending = @"ascending";
+PYFunnelSeriesSort const PYFunnelSeriesSortDescending = @"descending";
+
+static NSArray *funnelSeriesSortScope;
 @implementation PYFunnelSeries
+
++ (void)initialize
+{
+    if (self == [PYFunnelSeries class]) {
+        funnelSeriesSortScope = @[PYFunnelSeriesSortAscending, PYFunnelSeriesSortDescending];
+    }
+}
 
 - (instancetype)init {
     self = [super init];
@@ -22,10 +33,19 @@
         _max = @(100);
         _minSize = @"0%";
         _maxSize = @"100%";
-        _sort = @"descending";
+        _sort = PYFunnelSeriesSortDescending;
         _legendHoverLink = YES;
     }
     return self;
+}
+
+- (void)setSort:(PYFunnelSeriesSort)sort {
+    if (![funnelSeriesSortScope containsObject:sort]) {
+        NSLog(@"ERROR: FunnelSeries does not support the sort --- %@", sort);
+        _sort = PYFunnelSeriesSortDescending;
+        return;
+    }
+    _sort = [sort copy];
 }
 
 @end

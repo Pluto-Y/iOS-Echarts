@@ -7,8 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYAreaStyle.h"
 
+@class PYAreaStyle;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#AxisSplitarea
+ *
+ */
 @interface PYSplitArea : NSObject
 
 @property (nonatomic, assign) BOOL show;

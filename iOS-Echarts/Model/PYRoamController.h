@@ -10,8 +10,10 @@
 #import "PYColor.h"
 
 /**
- *  漫游缩放组件,搭配地图使用
- *  详情可见：http://echarts.baidu.com/doc/doc.html#RoamController
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#RoamController
+ *
  */
 @interface PYRoamController : NSObject
 

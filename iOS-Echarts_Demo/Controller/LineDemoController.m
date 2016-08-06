@@ -8,7 +8,6 @@
 
 #import "LineDemoController.h"
 #import "PYColor.h"
-#import "PYLabel.h"
 
 typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     LineDemoTypeBtnTagStandardLine = 10000,
@@ -115,7 +114,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.toolbox.feature.dataView.readOnly = NO;
     option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
     option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[@"line", @"bar", @"stack", @"tiled"];
+    option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar", @"stack", @"tiled"];
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
     option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
@@ -124,12 +123,12 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     NSMutableArray *serieses = [[NSMutableArray alloc] init];
     PYSeries *series1 = [[PYSeries alloc] init];
     series1.name = @"3的指数";
-    series1.type = @"line";
+    series1.type = PYSeriesTypeLine;
     series1.data = @[@(1),@(3),@(9),@(27),@(81),@(247),@(741),@(2223),@(6669)];
     [serieses addObject:series1];
     PYSeries *series2 = [[PYSeries alloc] init];
     series2.name = @"2的指数";
-    series2.type = @"line";
+    series2.type = PYSeriesTypeLine;
     series2.data = @[@(1),@(2),@(4),@(8),@(16),@(32),@(64),@(128),@(256)];
     [serieses addObject:series2];
     option.series = serieses;
@@ -157,7 +156,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.toolbox.feature.dataView.readOnly = NO;
     option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
     option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[@"line", @"bar", @"stack", @"tiled"];
+    option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar", @"stack", @"tiled"];
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
     option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
@@ -174,7 +173,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     NSMutableArray *serieses = [[NSMutableArray alloc] init];
     PYCartesianSeries *series1 = [[PYCartesianSeries alloc] init];
     series1.name = @"邮件营销";
-    series1.type = @"line";
+    series1.type = PYSeriesTypeLine;
     series1.stack = @"总量";
     series1.itemStyle = [[PYItemStyle alloc] init];
     series1.itemStyle.normal = [[PYItemStyleProp alloc] init];
@@ -184,7 +183,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [serieses addObject:series1];
     PYCartesianSeries *series2 = [[PYCartesianSeries alloc] init];
     series2.name = @"联盟广告";
-    series2.type = @"line";
+    series2.type = PYSeriesTypeLine;
     series2.stack = @"总量";
     series2.smooth = YES;
     series2.symbol = @"image://../asset/ico/favicon.png";
@@ -197,7 +196,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [serieses addObject:series2];
     PYCartesianSeries *series4 = [[PYCartesianSeries alloc] init];
     series4.name = @"直接访问";
-    series4.type = @"line";
+    series4.type = PYSeriesTypeLine;
     series4.stack = @"总量";
     series4.symbol = @"arrow";
     series4.symbolSize = @(6);
@@ -214,7 +213,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [serieses addObject:series4];
     PYCartesianSeries *series5 = [[PYCartesianSeries alloc] init];
     series5.name = @"搜索引擎";
-    series5.type = @"line";
+    series5.type = PYSeriesTypeLine;
     series5.stack = @"总量";
     series5.symbol = @"emptyCircle";
     series5.itemStyle = [[PYItemStyle alloc] init];
@@ -267,15 +266,15 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.grid = [[PYGrid alloc] init];
     option.grid.y2 = @(80);
     PYAxis *xAxis = [[PYAxis alloc] init];
-    xAxis.type = @"time";
+    xAxis.type = PYAxisTypeTime;
     xAxis.splitNumber = @(10);
     option.xAxis = [[NSMutableArray alloc] initWithObjects:xAxis, nil];
     PYAxis *yAxis = [[PYAxis alloc] init];
-    yAxis.type = @"value";
+    yAxis.type = PYAxisTypeValue;
     option.yAxis = [[NSMutableArray alloc] initWithObjects:yAxis, nil];
     PYCartesianSeries *series = [[PYCartesianSeries alloc] init];
     series.name = @"series1";
-    series.type = @"line";
+    series.type = PYSeriesTypeLine;
     series.showAllSymbol = YES;
     series.symbolSize = @"(function(value) {return Math.round(value[2]/100) + 2;})";
     series.data = @"(function () {var d = [];var len = 0;var now = new Date();var value;while (len++ < 200) {d.push([new Date(2014, 9, 1, 0, len * 10000),(Math.random()*30).toFixed(2) - 0,(Math.random()*100).toFixed(2) - 0]);}return d;})()";
@@ -313,7 +312,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.toolbox.feature.dataView.readOnly = NO;
     option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
     option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[@"line", @"bar"];
+    option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar"];
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
     option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
@@ -332,7 +331,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     PYCartesianSeries *series1 = [[PYCartesianSeries alloc] init];
     series1.name = @"数据1";
     series1.smooth = YES;
-    series1.type = @"line";
+    series1.type = PYSeriesTypeLine;
     series1.itemStyle = [[PYItemStyle alloc] init];
     series1.itemStyle.normal = [[PYItemStyleProp alloc] init];
     series1.itemStyle.normal.areaStyle = [[PYAreaStyle alloc] init];
@@ -362,7 +361,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     PYCartesianSeries *series2 = [[PYCartesianSeries alloc] init];
     series2.name = @"数据2";
     series2.smooth = YES;
-    series2.type = @"line";
+    series2.type = PYSeriesTypeLine;
     series2.data = @[@[@(1),@(2)],@[@(2),@(3)],@[@(4),@(2)],@[@(7), @(5)],@[@(11), @(2)],@[@(18), @(3)]];
     [serieses addObject:series2];
     [option setSeries:serieses];
@@ -372,7 +371,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
 - (void)showStackedAreaDemo {
     PYOption *option = [[PYOption alloc] init];
     option.tooltip = [[PYTooltip alloc] init];
-    option.tooltip.trigger = @"axis";
+    option.tooltip.trigger = PYTooltipTriggerAxis;
     option.legend = [[PYLegend alloc] init];
     option.legend.data = @[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",@"搜索引擎"];
     PYGrid *grid = [[PYGrid alloc] init];
@@ -389,14 +388,14 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.toolbox.feature.dataView.readOnly = NO;
     option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
     option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[@"line", @"bar", @"stack", @"tiled"];
+    option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar", @"stack", @"tiled"];
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
     option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
     option.toolbox.feature.saveAsImage.show = YES;
     option.calculable = YES;
     PYAxis *xAxis = [[PYAxis alloc] init];
-    xAxis.type = @"category";
+    xAxis.type = PYAxisTypeCategory;
     xAxis.boundaryGap = @(NO);
     xAxis.data = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
     option.xAxis = [[NSMutableArray alloc] initWithObjects:xAxis, nil];
@@ -406,7 +405,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     NSMutableArray *serieses = [[NSMutableArray alloc] init];
     PYCartesianSeries *series1 = [[PYCartesianSeries alloc] init];
     series1.name = @"邮件营销";
-    series1.type = @"line";
+    series1.type = PYSeriesTypeLine;
     series1.stack = @"总量";
     series1.itemStyle = [[PYItemStyle alloc] init];
     series1.itemStyle.normal = [[PYItemStyleProp alloc] init];
@@ -416,7 +415,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [serieses addObject:series1];
     PYCartesianSeries *series2 = [[PYCartesianSeries alloc] init];
     series2.name = @"联盟广告";
-    series2.type = @"line";
+    series2.type = PYSeriesTypeLine;
     series2.stack = @"总量";
     series2.itemStyle = [[PYItemStyle alloc] init];
     series2.itemStyle.normal = [[PYItemStyleProp alloc] init];
@@ -426,7 +425,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [serieses addObject:series2];
     PYCartesianSeries *series3 = [[PYCartesianSeries alloc] init];
     series3.name = @"视频广告";
-    series3.type = @"line";
+    series3.type = PYSeriesTypeLine;
     series3.stack = @"总量";
     series3.itemStyle = [[PYItemStyle alloc] init];
     series3.itemStyle.normal = [[PYItemStyleProp alloc] init];
@@ -436,7 +435,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [serieses addObject:series3];
     PYCartesianSeries *series4 = [[PYCartesianSeries alloc] init];
     series4.name = @"直接访问";
-    series4.type = @"line";
+    series4.type = PYSeriesTypeLine;
     series4.stack = @"总量";
     series4.itemStyle = [[PYItemStyle alloc] init];
     series4.itemStyle.normal = [[PYItemStyleProp alloc] init];
@@ -446,7 +445,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [serieses addObject:series4];
     PYCartesianSeries *series5 = [[PYCartesianSeries alloc] init];
     series5.name = @"搜索引擎";
-    series5.type = @"line";
+    series5.type = PYSeriesTypeLine;
     series5.stack = @"总量";
     series5.itemStyle = [[PYItemStyle alloc] init];
     series5.itemStyle.normal = [[PYItemStyleProp alloc] init];
@@ -481,7 +480,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.toolbox.feature.dataView.readOnly = NO;
     option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
     option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[@"line", @"bar", @"stack", @"tiled"];
+    option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar", @"stack", @"tiled"];
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
     option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
@@ -498,7 +497,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     NSMutableArray *serieses = [[NSMutableArray alloc] init];
     PYCartesianSeries *series1 = [[PYCartesianSeries alloc] init];
     series1.name = @"成交";
-    series1.type = @"line";
+    series1.type = PYSeriesTypeLine;
     series1.smooth = YES;
     series1.itemStyle = [[PYItemStyle alloc] init];
     series1.itemStyle.normal = [[PYItemStyleProp alloc] init];
@@ -508,7 +507,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [serieses addObject:series1];
     PYCartesianSeries *series2 = [[PYCartesianSeries alloc] init];
     series2.name = @"预购";
-    series2.type = @"line";
+    series2.type = PYSeriesTypeLine;
     series2.smooth = YES;
     series2.itemStyle = [[PYItemStyle alloc] init];
     series2.itemStyle.normal = [[PYItemStyleProp alloc] init];
@@ -518,7 +517,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     [serieses addObject:series2];
     PYCartesianSeries *series3 = [[PYCartesianSeries alloc] init];
     series3.name = @"意向";
-    series3.type = @"line";
+    series3.type = PYSeriesTypeLine;
     series3.smooth = YES;
     series3.itemStyle = [[PYItemStyle alloc] init];
     series3.itemStyle.normal = [[PYItemStyleProp alloc] init];
@@ -548,7 +547,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.toolbox.feature.dataView.readOnly = NO;
     option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
     option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[@"line", @"bar"];
+    option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar"];
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
     option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
@@ -572,7 +571,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     NSMutableArray *serieses = [[NSMutableArray alloc] init];
     PYCartesianSeries *series1 = [[PYCartesianSeries alloc] init];
     series1.name = @"高度(km)与气温(°C)变化关系";
-    series1.type = @"line";
+    series1.type = PYSeriesTypeLine;
     series1.smooth = YES;
     series1.itemStyle = [[PYItemStyle alloc] init];
     series1.itemStyle.normal = [[PYItemStyleProp alloc] init];
@@ -604,7 +603,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.toolbox.feature.dataView.readOnly = NO;
     option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
     option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[@"line", @"bar", @"stack", @"tiled"];
+    option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar", @"stack", @"tiled"];
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
     option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
@@ -621,31 +620,31 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     NSMutableArray *serieses = [[NSMutableArray alloc] init];
     PYCartesianSeries *series1 = [[PYCartesianSeries alloc] init];
     series1.name = @"邮件营销";
-    series1.type = @"line";
+    series1.type = PYSeriesTypeLine;
     series1.stack = @"总量";
     series1.data = @[@(120),@(132),@(101),@(134),@(90),@(230),@(210)];
     [serieses addObject:series1];
     PYCartesianSeries *series2 = [[PYCartesianSeries alloc] init];
     series2.name = @"联盟广告";
-    series2.type = @"line";
+    series2.type = PYSeriesTypeLine;
     series2.stack = @"总量";
     series2.data = @[@(220), @(182), @(191), @(234), @(290), @(330), @(310)];
     [serieses addObject:series2];
     PYCartesianSeries *series3 = [[PYCartesianSeries alloc] init];
     series3.name = @"视频广告";
-    series3.type = @"line";
+    series3.type = PYSeriesTypeLine;
     series3.stack = @"总量";
     series3.data = @[@(150), @(232), @(201), @(153), @(190), @(330), @(410)];
     [serieses addObject:series3];
     PYCartesianSeries *series4 = [[PYCartesianSeries alloc] init];
     series4.name = @"直接访问";
-    series4.type = @"line";
+    series4.type = PYSeriesTypeLine;
     series4.stack = @"总量";
     series4.data = @[@(320), @(332), @(301), @(334), @(390), @(330), @(320)];
     [serieses addObject:series4];
     PYCartesianSeries *series5 = [[PYCartesianSeries alloc] init];
     series5.name = @"搜索引擎";
-    series5.type = @"line";
+    series5.type = PYSeriesTypeLine;
     series5.stack = @"总量";
     series5.data = @[@(820), @(932), @(901), @(934), @(1290), @(1330), @(1320)];
     [serieses addObject:series5];
@@ -681,7 +680,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     toolbox.feature.dataView.show = YES;
     toolbox.feature.dataView.readOnly = NO;
     toolbox.feature.magicType.show = YES;
-    toolbox.feature.magicType.type = @[@"line", @"bar"];
+    toolbox.feature.magicType.type = @[PYSeriesTypeLine, PYSeriesTypeBar];
     toolbox.feature.restore.show = YES;
     toolbox.feature.saveAsImage.show = YES;
     option.toolbox = toolbox;
@@ -697,7 +696,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.yAxis = [[NSMutableArray alloc] initWithObjects:yAxis, nil];
     PYSeries *series1 = [[PYSeries alloc] init];
     series1.name = @"最高温度";
-    series1.type = @"line";
+    series1.type = PYSeriesTypeLine;
     series1.data = @[@(11),@(11),@(15),@(13),@(12),@(13),@(10)];
     PYMarkPoint *markPoint = [[PYMarkPoint alloc] init];
     markPoint.data = @[@{@"type" : @"max", @"name": @"最大值"},@{@"type" : @"min", @"name": @"最小值"}];
@@ -707,7 +706,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     series1.markLine = markLine;
     PYSeries *series2 = [[PYSeries alloc] init];
     series2.name = @"最低温度";
-    series2.type = @"line";
+    series2.type = PYSeriesTypeLine;
     series2.data = @[@(1),@(-2),@(2),@(5),@(3),@(2),@(0)];
     PYMarkPoint *markPoint2 = [[PYMarkPoint alloc] init];
     markPoint2.data = @[@{@"value" : @(2), @"name": @"周最低", @"xAxis":@(1), @"yAxis" : @(-1.5)}];

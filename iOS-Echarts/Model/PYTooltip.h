@@ -7,17 +7,27 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYAxisPointer.h"
 
-@class PYColor, PYTextStyle;
+@class PYColor, PYTextStyle, PYAxisPointer;
 
+typedef NSString *PYTooltipTrigger;
+
+extern PYTooltipTrigger const PYTooltipTriggerItem;
+extern PYTooltipTrigger const PYTooltipTriggerAxis;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#Tooltip
+ *
+ */
 @interface PYTooltip : NSObject
 
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, strong) NSNumber *zlevel;
 @property (nonatomic, strong) NSNumber *z;
 @property (nonatomic, assign) BOOL showContent;
-@property (nonatomic, copy) NSString *trigger;
+@property (nonatomic, copy) PYTooltipTrigger trigger;
 @property (nonatomic, strong) id position;
 @property (nonatomic, strong) id formatter;
 @property (nonatomic, strong) id islandFormmater;

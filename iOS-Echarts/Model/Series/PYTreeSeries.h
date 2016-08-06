@@ -20,6 +20,12 @@
 
 @end
 
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#SeriesTree
+ *
+ */
 @interface PYTreeSeries : PYSeries
 
 @property (nonatomic, copy) NSDictionary *rootLocation;
@@ -28,7 +34,7 @@
 @property (nonatomic, copy) NSString *orient;
 @property (nonatomic, copy) NSString *direction;
 @property (nonatomic, strong) id roam;
-@property (nonatomic, copy) NSString *symbol;
+@property (nonatomic, copy) PYSymbol symbol;
 @property (nonatomic, strong) id symbolSize;
 
 @end

@@ -8,20 +8,30 @@
 
 #import "PYMarkPoint.h"
 
-#define MARK_POINT_EFFECT_TYPE_SCOPE [NSArray arrayWithObjects:@"bounce", @"scale", nil]
+PYMarkPointEffectType const PYMarkPointEffectTypeScale  = @"scale";
+PYMarkPointEffectType const PYMarkPointEffectTypeBounce = @"bounce";
 
+static NSArray<PYMarkPointEffectType> *markPointEffectTypeScope;
 @interface PYMarkPointEffect()
 
 @end
 
 @implementation PYMarkPointEffect
 
-- (void)setType:(NSString *)type {
-    if (![MARK_POINT_EFFECT_TYPE_SCOPE containsObject:type]) {
-        NSLog(@"ERROR: MarkPointEffect does not support type --- %@", type);
-        type = @"scale";
++ (void)initialize
+{
+    if (self == [PYMarkPointEffect class]) {
+        markPointEffectTypeScope = @[PYMarkPointEffectTypeScale, PYMarkPointEffectTypeBounce];
     }
-    _type = type;
+}
+
+- (void)setType:(PYMarkPointEffectType)type {
+    if (![markPointEffectTypeScope containsObject:type]) {
+        NSLog(@"ERROR: MarkPointEffect does not support type --- %@", type);
+        type = PYMarkPointEffectTypeScale;
+        return;
+    }
+    _type = [type copy];
 }
 
 @end
@@ -33,12 +43,12 @@
     self = [super init];
     if (self) {
         _clickable = YES;
-        _symbol = @"pin";
+        _symbol = PYSymbolPin;
         _symbolSize = @(10);
         _large = NO;
         _effect = [[PYMarkPointEffect alloc] init];
         _effect.show = NO;
-        _effect.type = @"scale";
+        _effect.type = PYMarkPointEffectTypeScale;
         _effect.period = @(15);
         _effect.scaleSize = @(2);
         _effect.bounceDistance = @(10);

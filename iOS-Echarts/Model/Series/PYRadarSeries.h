@@ -8,10 +8,16 @@
 
 #import "PYSeries.h"
 
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#SeriesRadar
+ *
+ */
 @interface PYRadarSeries : PYSeries
 
 @property (nonatomic, strong) NSNumber *polarIndex;
-@property (nonatomic, copy) NSString *symbol;
+@property (nonatomic, copy) PYSymbol symbol;
 @property (nonatomic, strong) id symbolSize;
 @property (nonatomic, strong) NSNumber *symbolRotate;
 @property (nonatomic, assign) BOOL legendHoverLink;

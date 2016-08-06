@@ -6,6 +6,8 @@
 //  Copyright © 2016 pluto-y. All rights reserved.
 //
 
+#import "PYUtitilies.h"
+
 #import "PYEchartsView.h"
 #import "PYZoomEchartsView.h"
 
@@ -29,5 +31,15 @@
 #import "PYTreeSeries.h"
 #import "PYVennSeries.h"
 #import "PYWordCloudSeries.h"
+#import "PYAxisPointer.h"
+#import "PYNodes.h"
+#import "PYCategories.h"
+#import "PYLinks.h"
 
 
+//#define __DEBUG__ 1
+#ifdef __DEBUG__
+#define PYLog(...) NSLog(__VA_ARGS__)
+#else
+#define PYLog(...) do{} while(0)
+#endif

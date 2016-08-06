@@ -10,10 +10,15 @@
 
 @class PYColor, PYItemStyle;
 
+typedef NSString *PYMarkPointEffectType;
+
+extern PYMarkPointEffectType const PYMarkPointEffectTypeScale;
+extern PYMarkPointEffectType const PYMarkPointEffectTypeBounce;
+
 @interface PYMarkPointEffect : NSObject
 
 @property (nonatomic, assign) BOOL show;
-@property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) PYMarkPointEffectType type;
 @property (nonatomic, assign) BOOL loop;
 @property (nonatomic, strong) NSNumber *period;
 @property (nonatomic, strong) NSNumber *scaleSize;
@@ -24,6 +29,12 @@
 
 @end
 
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#SeriesMarkPoint
+ *
+ */
 @interface PYMarkPoint : NSObject
 
 @property (nonatomic, assign) BOOL clickable;

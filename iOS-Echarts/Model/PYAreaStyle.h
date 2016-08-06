@@ -8,9 +8,19 @@
 
 #import <Foundation/Foundation.h>
 
+typedef NSString *PYAreaStyleType;
+
+extern PYAreaStyleType const PYAreaStyleTypeDefault;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#AreaStyle
+ *
+ */
 @interface PYAreaStyle : NSObject
 
 @property (nonatomic, strong) id color;
-@property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) PYAreaStyleType type;
 
 @end

@@ -10,6 +10,24 @@
 
 @class PYColor;
 
+typedef NSString *PYTextStyleFontStyle;
+typedef NSString *PYTextStyleFontWeight;
+
+extern PYTextStyleFontStyle const PYTextStyleFontStyleNormal;
+extern PYTextStyleFontStyle const PYTextStyleFontStyleItalic;
+extern PYTextStyleFontStyle const PYTextStyleFontStyleOblique;
+
+extern PYTextStyleFontWeight const PYTextStyleFontWeightNormal;
+extern PYTextStyleFontWeight const PYTextStyleFontWeightBold;
+extern PYTextStyleFontWeight const PYTextStyleFontWeightBolder;
+extern PYTextStyleFontWeight const PYTextStyleFontWeightLighter;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#TextStyle
+ *
+ */
 @interface PYTextStyle : NSObject
 
 @property (nonatomic, strong) id color;
@@ -18,14 +36,8 @@
 @property (nonatomic, copy) NSString *baseLine;
 @property (nonatomic, copy) NSString *fontFamily;
 @property (nonatomic, strong) NSNumber *fontSize;
-@property (nonatomic, copy) NSString *fontStyle;
-@property (nonatomic, copy) NSString *fontWeight;
+@property (nonatomic, copy) PYTextStyleFontStyle fontStyle;
+@property (nonatomic, copy) id fontWeight;
 
-/**
- *  用number类型来设置fontWeight
- *
- *  @param number 字体粗细
- */
-- (void)setFontWeightByNumber:(NSNumber *)number;
 
 @end

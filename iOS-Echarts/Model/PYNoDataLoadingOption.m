@@ -15,10 +15,10 @@
 {
     self = [super init];
     if (self) {
-        _text = @"暂无数据";
-        _x = @"center";
-        _y = @"center";
-        _effect = @"bubble";
+        self.text = @"暂无数据";
+        self.x = @"center";
+        self.y = @"center";
+        self.effect = PYLoadingOptionEffectBubble;
     }
     return self;
 }

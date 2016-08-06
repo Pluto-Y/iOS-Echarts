@@ -7,8 +7,15 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYLineStyle.h"
 
+@class PYLineStyle;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#AxisSplitline
+ *
+ */
 @interface PYSplitLine : NSObject
 
 @property (nonatomic, assign) BOOL show;

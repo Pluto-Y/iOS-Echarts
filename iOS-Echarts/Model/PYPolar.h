@@ -11,6 +11,16 @@
 #import "PYAxisLabel.h"
 #import "PYAreaStyle.h"
 
+typedef NSString *PYPolarType;
+extern PYPolarType const PYPolarTypePolygon;
+extern PYPolarType const PYPolarTypeCircle;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#Polar
+ *
+ */
 @interface PYPolar : NSObject
 
 @property (nonatomic, strong) NSNumber *zlevel;
@@ -26,7 +36,7 @@
 @property (nonatomic, strong) PYAxisLabel *axisLabel;
 @property (nonatomic, strong) PYLineStyle *spliteLine;
 @property (nonatomic, strong) PYAreaStyle *spliteArea;
-@property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) PYPolarType type;
 @property (nonatomic, strong) NSMutableArray *indicator;
 
 @end

@@ -8,15 +8,24 @@
 
 #import "PYAreaStyle.h"
 
+PYAreaStyleType const PYAreaStyleTypeDefault = @"default";
+
 @implementation PYAreaStyle
 
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _type = @"default";
+        _type = PYAreaStyleTypeDefault;
     }
     return self;
+}
+
+- (void)setType:(PYAreaStyleType)type {
+    if (![type isEqualToString:PYAreaStyleTypeDefault]) {
+        NSLog(@"ERROR:AreaStyle not support type");
+    }
+    type = PYAreaStyleTypeDefault;
 }
 
 @end

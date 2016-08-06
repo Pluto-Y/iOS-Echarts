@@ -8,7 +8,18 @@
 
 #import "PYPieSeries.h"
 
+PYPieSeriesRoseType const PYPieSeriesRoseTypeRadius = @"radius";
+PYPieSeriesRoseType const PYPieSeriesRoseTypeArea   = @"area";
+
+static NSArray<PYPieSeriesRoseType> *pieSeriesRoleTypeScope;
 @implementation PYPieSeries
+
++ (void)initialize
+{
+    if (self == [PYPieSeries class]) {
+        pieSeriesRoleTypeScope = @[PYPieSeriesRoseTypeRadius, PYPieSeriesRoseTypeArea];
+    }
+}
 
 - (instancetype)init
 {
@@ -23,6 +34,15 @@
         _legendHoverLink = YES;
     }
     return self;
+}
+
+- (void)setRoseType:(PYPieSeriesRoseType)roseType {
+    if (roseType != nil && ![pieSeriesRoleTypeScope containsObject:roseType]) {
+        NSLog(@"ERROR: PYPieSeries does not support roseType --- %@", roseType);
+        _roseType = nil;
+        return;
+    }
+    _roseType = [roseType copy];
 }
 
 @end

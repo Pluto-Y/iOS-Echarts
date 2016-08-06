@@ -10,6 +10,12 @@
 
 @class PYColor;
 
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#Grid
+ *
+ */
 @interface PYGrid : NSObject
 
 @property (nonatomic, strong) NSNumber *zlevel;

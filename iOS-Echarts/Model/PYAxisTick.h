@@ -10,6 +10,12 @@
 
 @class PYLineStyle;
 
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#AxisAxistick
+ *
+ */
 @interface PYAxisTick : NSObject
 
 @property (nonatomic, assign) BOOL show;

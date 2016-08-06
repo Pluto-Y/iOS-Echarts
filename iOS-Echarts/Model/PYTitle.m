@@ -32,7 +32,7 @@
         _itemGap = @(5);
         _textStyle = [[PYTextStyle alloc] init];
         _textStyle.fontSize = @(18);
-        _textStyle.fontWeight = @"bolder";
+        _textStyle.fontWeight = PYTextStyleFontWeightBolder;
         _textStyle.color = PYRGBA(3, 3, 3, 1);
         _subtextStyle = [[PYTextStyle alloc] init];
         _subtextStyle.color = PYRGBA(10, 10, 10, 1);

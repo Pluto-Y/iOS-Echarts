@@ -8,8 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@class color;
-
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#ChordStyle
+ *
+ */
 @interface PYChordStyle : NSObject
 
 @property (nonatomic, strong) NSNumber *width;

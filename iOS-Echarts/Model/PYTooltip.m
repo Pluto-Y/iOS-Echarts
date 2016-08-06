@@ -11,13 +11,24 @@
 #import "PYTextStyle.h"
 #import "PYLineStyle.h"
 #import "PYAreaStyle.h"
+#import "PYAxisPointer.h"
 
-#define TOOLTIP_TRIGGER_SCOPE [NSArray arrayWithObjects:@"axis", @"item", nil]
+PYTooltipTrigger const PYTooltipTriggerItem = @"item";
+PYTooltipTrigger const PYTooltipTriggerAxis = @"axis";
+
+static NSArray<PYTooltipTrigger> *tooltipTriggerScope;
 @interface PYTooltip()
 
 @end
 
 @implementation PYTooltip
+
++ (void)initialize
+{
+    if (self == [PYTooltip class]) {
+        tooltipTriggerScope = @[PYTooltipTriggerItem, PYTooltipTriggerAxis];
+    }
+}
 
 - (instancetype)init
 {
@@ -28,7 +39,7 @@
         _z = @(8);
         _showContent = YES;
         _islandFormmater = @"{a} < br/>{b} : {c}";
-        _trigger = @"item";
+        _trigger = PYTooltipTriggerItem;
         _showDelay = @(20);
         _hideDelay = @(100);
         _transitionDuration = @(0.4);
@@ -39,15 +50,15 @@
         _borderWidth = @(0);
         _padding = @(5);
         _axisPointer = [[PYAxisPointer alloc] init];
-        _axisPointer.type = @"line";
+        _axisPointer.type = PYAxisPointerLine;
         _axisPointer.lineStyle = [[PYLineStyle alloc] init];
         _axisPointer.lineStyle.color = PYRGBA(4, 8, 11, 1);
         _axisPointer.lineStyle.width = @(2);
-        _axisPointer.lineStyle.type = @"solid";
+        _axisPointer.lineStyle.type = PYLineStyleTypeSolid;
         _axisPointer.crossStyle = [[PYLineStyle alloc] init];
         _axisPointer.crossStyle.color = PYRGBA(30, 144, 255, 1);
         _axisPointer.crossStyle.width = @(1);
-        _axisPointer.crossStyle.type = @"dashed";
+        _axisPointer.crossStyle.type = PYLineStyleTypeDashed;
         _axisPointer.shadowStyle = [[PYAreaStyle alloc] init];
         _axisPointer.shadowStyle.color = PYRGBA(150, 150, 150, .3);
     }
@@ -55,11 +66,12 @@
 }
 
 -(void)setTrigger:(NSString *)trigger {
-    if (![TOOLTIP_TRIGGER_SCOPE containsObject:trigger]) {
+    if (![tooltipTriggerScope containsObject:trigger]) {
         NSLog(@"ERROR: Tooltip does not support the trigger --- %@", trigger);
-        trigger = @"item";
+        trigger = PYTooltipTriggerItem;
+        return;
     }
-    _trigger = trigger;
+    _trigger = [trigger copy];
 }
 
 

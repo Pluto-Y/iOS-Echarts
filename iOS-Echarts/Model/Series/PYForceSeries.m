@@ -7,6 +7,11 @@
 //
 
 #import "PYForceSeries.h"
+#import "PYCategories.h"
+#import "PYLinks.h"
+
+NSString * const PYForceSeriesRoamScale = @"scale";
+NSString * const PYForceSeriesRoamMove = @"move";
 
 @implementation PYForceNodes
 
@@ -22,14 +27,11 @@
         self.data = nil;
         _nodes = [NSMutableArray new];
         _links = [NSMutableArray new];
-//        _matrix = [NSMutableArray new];
         _center = @[@"50%", @"50%"];
-        
-//        _size = @(1);
         _minRadius = @(10);
         _maxRadius = @(20);
-        _symbol = @"circle";
-        _linkSymbol = @"none";
+        _symbol = PYSymbolCircle;
+        _linkSymbol = PYSymbolNone;
         _linkSymbolSize = @[@(10), @(15)];
         _scaling = @(1);
         _gravity = @(1);

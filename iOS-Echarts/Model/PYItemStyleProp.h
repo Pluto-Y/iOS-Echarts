@@ -11,8 +11,35 @@
 #import "PYLinkStyle.h"
 #import "PYLinks.h"
 
-@class PYLabelLine, PYAreaStyle, PYLabel, PYLineStyle, PYChordStyle;
+@class PYLabelLine, PYAreaStyle, PYLineStyle, PYChordStyle;
 
+@interface PYLabelLine : NSObject
+
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, strong) NSNumber *length;
+@property (nonatomic, strong) PYLineStyle *lineStyle;
+
+@end
+
+@interface PYLabel : NSObject
+
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, copy) NSString *position;
+@property (nonatomic, assign) BOOL rotate;
+@property (nonatomic, strong) NSNumber *distance;
+@property (nonatomic, strong) id formatter;
+@property (nonatomic, strong) PYTextStyle *textStyle;
+@property (nonatomic, strong) NSNumber *x;
+@property (nonatomic, strong) NSNumber *y;
+
+@end
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#ItemStyle
+ *
+ */
 @interface PYItemStyleProp : NSObject
 
 @property (nonatomic, strong) PYColor *color;
@@ -24,7 +51,7 @@
 @property (nonatomic, strong) PYColor *borderColor;
 @property (nonatomic, strong) NSNumber *borderWidth;
 @property (nonatomic, strong) PYColor *barBorderColor;
-// barBorderRadius
+@property (nonatomic, strong) id barBorderRadius;
 @property (nonatomic, strong) NSNumber *barBorderWidth;
 @property (nonatomic, strong) PYLabel *label;
 @property (nonatomic, strong) PYLabelLine *labelLine;

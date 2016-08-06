@@ -14,9 +14,22 @@
 #import "PYTextStyle.h"
 #import "PYSplitArea.h"
 
+typedef NSString *PYAxisType;
+
+extern PYAxisType const PYAxisTypeCategory;
+extern PYAxisType const PYAxisTypeValue;
+extern PYAxisType const PYAxisTypeTime;
+extern PYAxisType const PYAxisTypeLog;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#Axis
+ *
+ */
 @interface PYAxis : NSObject
 
-@property (nonatomic, copy) NSString * type;
+@property (nonatomic, copy) PYAxisType type;
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, strong) NSNumber *zlevel;
 @property (nonatomic, strong) NSNumber *z;

@@ -8,13 +8,29 @@
 
 #import "PYSeries.h"
 
-#define SERIES_TYPE_SCOPE [NSArray arrayWithObjects:@"bar", @"chord", @"force", @"k", @"line", @"map", @"pie", @"radar", @"scatter", nil]
+PYSeriesType const PYSeriesTypeLine    = @"line";
+PYSeriesType const PYSeriesTypeBar     = @"bar";
+PYSeriesType const PYSeriesTypeScatter = @"scatter";
+PYSeriesType const PYSeriesTypeK       = @"k";
+PYSeriesType const PYSeriesTypePie     = @"pie";
+PYSeriesType const PYSeriesTypeRadar   = @"radar";
+PYSeriesType const PYSeriesTypeChord   = @"chord";
+PYSeriesType const PYSeriesTypeForce   = @"force";
+PYSeriesType const PYSeriesTypeMap     = @"map";
 
+static NSArray<PYSeriesType> *seriesTypeScope;
 @interface PYSeries()
 
 @end
 
 @implementation PYSeries
+
++ (void)initialize
+{
+    if (self == [PYSeries class]) {
+        seriesTypeScope = @[PYSeriesTypeLine, PYSeriesTypeBar, PYSeriesTypeScatter, PYSeriesTypeK, PYSeriesTypePie, PYSeriesTypeRadar, PYSeriesTypeChord, PYSeriesTypeForce, PYSeriesTypeMap];
+    }
+}
 
 - (instancetype)init
 {
@@ -29,11 +45,12 @@
 }
 
 - (void)setType:(NSString *)type {
-    if (![SERIES_TYPE_SCOPE containsObject:type]) {
+    if (type != nil && ![seriesTypeScope containsObject:type]) {
         NSLog(@"ERROR: Series does not support type --- %@", type);
         type = nil;
+        return;
     }
-    _type = type;
+    _type = [type copy];
 }
 
 @end

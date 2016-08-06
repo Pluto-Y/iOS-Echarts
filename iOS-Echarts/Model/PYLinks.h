@@ -10,6 +10,12 @@
 
 @class PYItemStyle;
 
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#GraphLinks
+ *
+ */
 @interface PYLinks : NSObject
 
 @property (nonatomic, strong) id source;

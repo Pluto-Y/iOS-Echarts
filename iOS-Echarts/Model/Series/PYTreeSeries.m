@@ -14,4 +14,18 @@
 
 @implementation PYTreeSeries
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _layerPadding = @100;
+        _nodePadding = @30;
+        _orient = @"vertical";
+        _roam = @NO;
+        _symbol = PYSymbolCircle;
+        _symbolSize = @20;
+    }
+    return self;
+}
+
 @end

@@ -23,7 +23,7 @@
     self = [super init];
     if (self) {
         _clickable = YES;
-        _symbol = @[@"circle", @"arrow"];
+        _symbol = @[PYSymbolCircle, PYSymbolArrow];
         _symbolSize = @[@(2), @(4)];
         _large = NO;
         _smooth = NO;

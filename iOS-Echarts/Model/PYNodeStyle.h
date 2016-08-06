@@ -10,6 +10,12 @@
 
 @class PYColor;
 
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#NodeStyle
+ *
+ */
 @interface PYNodeStyle : NSObject
 
 @property (nonatomic, strong) PYColor *color;

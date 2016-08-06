@@ -7,6 +7,7 @@
 //
 
 #import "PYSplitLine.h"
+#import "PYLineStyle.h"
 
 @implementation PYSplitLine
 

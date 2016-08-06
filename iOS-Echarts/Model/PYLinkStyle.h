@@ -10,12 +10,20 @@
 
 @class PYColor;
 
-extern NSString *const PYLinkStyleTypeLine;
-extern NSString *const PYLinkStyleTypeCurve;
+typedef NSString *PYLinkStyleType;
 
+extern PYLinkStyleType const PYLinkStyleTypeLine;
+extern PYLinkStyleType const PYLinkStyleTypeCurve;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#LinkStyle
+ *
+ */
 @interface PYLinkStyle : NSObject
 
-@property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) PYLinkStyleType type;
 @property (nonatomic, strong) PYColor *color;
 @property (nonatomic, strong) NSNumber *width;
 

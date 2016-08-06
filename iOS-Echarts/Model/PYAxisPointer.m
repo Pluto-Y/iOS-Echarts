@@ -8,8 +8,12 @@
 
 #import "PYAxisPointer.h"
 
+PYAxisPointerType PYAxisPointerLine = @"line";
+PYAxisPointerType PYAxisPointerCross = @"cross";
+PYAxisPointerType PYAxisPointerShadow = @"shadow";
+PYAxisPointerType PYAxisPointerNone = @"none";
 
-#define AXIS_POINT_SCOPE [NSArray arrayWithObjects:@"line", @"cross", @"shadow", @"none", nil]
+static NSArray<PYAxisPointerType> *axisPointScope;
 @interface PYAxisPointer()
 
 @end
@@ -17,21 +21,29 @@
 
 @implementation PYAxisPointer
 
++ (void)initialize
+{
+    if (self == [PYAxisPointer class]) {
+        axisPointScope = @[PYAxisPointerLine, PYAxisPointerCross, PYAxisPointerShadow, PYAxisPointerNone];
+    }
+}
+
 - (instancetype)init
 {
     self = [super init];
     if (self) {
-        _type = @"line";
+        _type = PYAxisPointerLine;
     }
     return self;
 }
 
 - (void)setType:(NSString *)type {
-    if (![AXIS_POINT_SCOPE containsObject:type]) {
+    if (![axisPointScope containsObject:type]) {
         NSLog(@"ERROR: AxisPoint does not support the type --- %@", type);
-        type = @"line";
+        _type = PYAxisPointerLine;
+        return;
     }
-    _type = type;
+    _type = [type copy];
 }
 
 @end

@@ -8,9 +8,15 @@
 
 #import "PYSeries.h"
 #import "PYNodes.h"
-#import "PYCategories.h"
-#import "PYLinks.h"
 
+@class PYCategories, PYLinks;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#nodes(data)
+ *
+ */
 @interface PYForceNodes : PYNodes
 
 @property (nonatomic, strong) NSMutableArray *initial;
@@ -20,6 +26,15 @@
 
 @end
 
+extern NSString * const PYForceSeriesRoamScale;
+extern NSString * const PYForceSeriesRoamMove;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#SeriesForce
+ *
+ */
 @interface PYForceSeries : PYSeries
 
 @property (nonatomic, assign) BOOL ribbonType;
@@ -31,7 +46,7 @@
 @property (nonatomic, strong) NSNumber *size;
 @property (nonatomic, strong) NSNumber *minRadius;
 @property (nonatomic, strong) NSNumber *maxRadius;
-@property (nonatomic, copy) NSString *symbol;
+@property (nonatomic, copy) PYSymbol symbol;
 @property (nonatomic, strong) id symbolSize;
 @property (nonatomic, copy) NSString *linkSymbol;
 @property (nonatomic, copy) NSArray *linkSymbolSize;

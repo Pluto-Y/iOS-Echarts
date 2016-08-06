@@ -19,6 +19,12 @@
 #import "PYPolar.h"
 #import "PYRoamController.h"
 
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#Option
+ *
+ */
 @interface PYOption : NSObject
 
 @property (nonatomic, strong) PYColor *backgroundColor;

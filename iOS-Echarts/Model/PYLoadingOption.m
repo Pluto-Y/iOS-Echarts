@@ -8,6 +8,13 @@
 
 #import "PYLoadingOption.h"
 
+PYLoadingOptionEffect const PYLoadingOptionEffectSpin        = @"spin";
+PYLoadingOptionEffect const PYLoadingOptionEffectBar         = @"bar";
+PYLoadingOptionEffect const PYLoadingOptionEffectRing        = @"ring";
+PYLoadingOptionEffect const PYLoadingOptionEffectWhirling    = @"whirling";
+PYLoadingOptionEffect const PYLoadingOptionEffectDynamicLine = @"dynamicLine";
+PYLoadingOptionEffect const PYLoadingOptionEffectBubble      = @"bubble";
+
 @implementation PYLoadingOption
 
 - (instancetype)init
@@ -17,7 +24,7 @@
         _text = @"数据读取中...";
         _x = @"center";
         _y = @"center";
-        _effect = @"spin";
+        _effect = PYLoadingOptionEffectSpin;
     }
     return self;
 }

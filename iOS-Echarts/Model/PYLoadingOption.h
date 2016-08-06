@@ -9,6 +9,20 @@
 #import <Foundation/Foundation.h>
 #import "PYTextStyle.h"
 
+typedef NSString *PYLoadingOptionEffect;
+extern PYLoadingOptionEffect const PYLoadingOptionEffectSpin;
+extern PYLoadingOptionEffect const PYLoadingOptionEffectBar;
+extern PYLoadingOptionEffect const PYLoadingOptionEffectRing;
+extern PYLoadingOptionEffect const PYLoadingOptionEffectWhirling;
+extern PYLoadingOptionEffect const PYLoadingOptionEffectDynamicLine;
+extern PYLoadingOptionEffect const PYLoadingOptionEffectBubble;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#Loadingoption
+ *
+ */
 @interface PYLoadingOption : NSObject
 
 @property (nonatomic, copy) NSString *text;

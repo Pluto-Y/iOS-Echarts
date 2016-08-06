@@ -10,8 +10,36 @@
 #import "PYColor.h"
 #import "PYLineStyle.h"
 #import "PYAreaStyle.h"
-#import "PYLabel.h"
-#import "PYLabelLine.h"
+
+@implementation PYLabelLine
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _show = YES;
+        _length = @(40);
+        _lineStyle = [[PYLineStyle alloc] init];
+    }
+    return self;
+}
+
+@end
+
+@implementation PYLabel
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _show = YES;
+        _rotate = NO;
+        _distance = @(10);
+    }
+    return self;
+}
+
+@end
 
 @implementation PYItemStyleProp
 

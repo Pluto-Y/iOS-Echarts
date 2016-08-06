@@ -10,10 +10,24 @@
 
 @class PYColor;
 
+typedef NSString *PYLineStyleType;
+
+extern PYLineStyleType const PYLineStyleTypeSolid;
+extern PYLineStyleType const PYLineStyleTypeDotted;
+extern PYLineStyleType const PYLineStyleTypeDashed;
+extern PYLineStyleType const PYLineStyleTypeCurve;
+extern PYLineStyleType const PYLineStyleTypeBroken;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#LineStyle
+ *
+ */
 @interface PYLineStyle : NSObject
 
 @property (nonatomic, strong) id color;
-@property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) PYLineStyleType type;
 @property (nonatomic, strong) NSNumber *width;
 @property (nonatomic, strong) PYColor *shadowColor;
 @property (nonatomic, strong) NSNumber *shadowBlur;

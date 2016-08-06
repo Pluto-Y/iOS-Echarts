@@ -8,17 +8,30 @@
 
 #import "PYLineStyle.h"
 
-#define LINE_STYLE_TYPE_SCOPE [NSArray arrayWithObjects:@"solid", @"dotted", @"dashed", @"curve", @"broken", nil]
+PYLineStyleType const PYLineStyleTypeSolid = @"solid";
+PYLineStyleType const PYLineStyleTypeDotted = @"dotted";
+PYLineStyleType const PYLineStyleTypeDashed = @"dashed";
+PYLineStyleType const PYLineStyleTypeCurve = @"curve";
+PYLineStyleType const PYLineStyleTypeBroken = @"broken";
+
+static NSArray<PYLineStyleType> *lineStyleTypeScope;
 @interface PYLineStyle()
 
 @end
 
 @implementation PYLineStyle
 
++ (void)initialize
+{
+    if (self == [PYLineStyle class]) {
+        lineStyleTypeScope = @[PYLineStyleTypeSolid, PYLineStyleTypeDotted, PYLineStyleTypeDashed, PYLineStyleTypeCurve, PYLineStyleTypeBroken];
+    }
+}
+
 -(instancetype)init {
     self = [super init];
     if (self) {
-        _type = @"solid";
+        _type = PYLineStyleTypeSolid;
 //        _shadowColor = [[PYColor alloc] init];
         _shadowBlur = @(5);
         _shadowOffsetX = @(3);
@@ -28,11 +41,12 @@
 }
 
 - (void)setType:(NSString *)type {
-    if (![LINE_STYLE_TYPE_SCOPE containsObject:type]) {
+    if (![lineStyleTypeScope containsObject:type]) {
         NSLog(@"ERROR: LineStyle does not support the type --- %@", type);
-        type = @"solid";
+        type = PYLineStyleTypeSolid;
+        return;
     }
-    _type = type;
+    _type = [type copy];
 }
 
 

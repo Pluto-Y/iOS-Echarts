@@ -8,7 +8,20 @@
 
 #import "PYCartesianSeries.h"
 
+PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterNearest = @"nearest";
+PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterMin = @"min";
+PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterMax = @"max";
+PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterAverage = @"average";
+
+static NSArray<PYCartesianSeriesDataFilter> *cartesianSeriesDataFilterScope;
 @implementation PYCartesianSeries
+
++ (void)initialize
+{
+    if (self == [PYCartesianSeries class]) {
+        cartesianSeriesDataFilterScope = @[PYCartesianSeriesDataFilterNearest, PYCartesianSeriesDataFilterMin, PYCartesianSeriesDataFilterMax, PYCartesianSeriesDataFilterAverage];
+    }
+}
 
 - (instancetype)init
 {
@@ -18,12 +31,21 @@
         _barCategoryGap = @"30%";
         _showAllSymbol = NO;
         _smooth = NO;
-        _dataFilter = @"nearst";
+        _dataFilter = PYCartesianSeriesDataFilterNearest;
         _large = NO;
         _largeThreshold = @(2000);
         _legendHoverLink = YES;
     }
     return self;
+}
+
+- (void)setDataFilter:(PYCartesianSeriesDataFilter)dataFilter {
+    if (![cartesianSeriesDataFilterScope containsObject:dataFilter]) {
+        NSLog(@"ERROR: Tooltip does not support the trigger --- %@", dataFilter);
+        _dataFilter = PYCartesianSeriesDataFilterNearest;
+        return;
+    }
+    _dataFilter = [dataFilter copy];
 }
 
 @end

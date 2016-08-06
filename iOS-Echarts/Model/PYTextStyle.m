@@ -8,7 +8,24 @@
 
 #import "PYTextStyle.h"
 
+PYTextStyleFontStyle const PYTextStyleFontStyleNormal    = @"normal";
+PYTextStyleFontStyle const PYTextStyleFontStyleItalic    = @"italic";
+PYTextStyleFontStyle const PYTextStyleFontStyleOblique   = @"oblique";
+
+PYTextStyleFontWeight const PYTextStyleFontWeightNormal  = @"normal";
+PYTextStyleFontWeight const PYTextStyleFontWeightBold    = @"bold";
+PYTextStyleFontWeight const PYTextStyleFontWeightBolder  = @"bolder";
+PYTextStyleFontWeight const PYTextStyleFontWeightLighter = @"lighter";
+
+static NSArray<PYTextStyleFontStyle> *textStyleFontStyle;
 @implementation PYTextStyle
+
++ (void)initialize
+{
+    if (self == [PYTextStyle class]) {
+        textStyleFontStyle = @[PYTextStyleFontStyleNormal, PYTextStyleFontStyleItalic, PYTextStyleFontStyleOblique];
+    }
+}
 
 - (instancetype)init
 {
@@ -17,19 +34,19 @@
         _decoration = @"none";
         _fontFamily = @"Arial, Verdana, sans-serif";
         _fontSize = @(12);
-        _fontStyle = @"normal";
-        _fontWeight = @"normal";
+        _fontStyle = PYTextStyleFontStyleNormal;
+        _fontWeight = PYTextStyleFontWeightNormal;
     }
     return self;
 }
 
-/**
- *  用number类型来设置fontWeight
- *
- *  @param number 字体粗细
- */
-- (void)setFontWeightByNumber:(NSNumber *)number {
-    _fontWeight = [NSString stringWithFormat:@"%d", [number intValue]];
+- (void)setFontStyle:(PYTextStyleFontStyle)fontStyle {
+    if (![textStyleFontStyle containsObject:fontStyle]) {
+        NSLog(@"ERROR: TextStyle does not support the font style --- %@", fontStyle);
+        _fontStyle = PYTextStyleFontStyleNormal;
+        return;
+    }
+    _fontStyle = [fontStyle copy];
 }
 
 @end

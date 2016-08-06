@@ -10,6 +10,19 @@
 
 @class PYLineStyle, PYAreaStyle;
 
+typedef NSString * PYAxisPointerType;
+
+extern PYAxisPointerType PYAxisPointerLine;
+extern PYAxisPointerType PYAxisPointerCross;
+extern PYAxisPointerType PYAxisPointerShadow;
+extern PYAxisPointerType PYAxisPointerNone;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#AxisAxisline
+ *
+ */
 @interface PYAxisPointer : NSObject
 
 @property (nonatomic, assign) BOOL show;

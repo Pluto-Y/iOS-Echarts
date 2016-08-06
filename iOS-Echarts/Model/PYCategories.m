@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        _symbol = @"circle";
+        _symbol = PYSymbolCircle;
     }
     return self;
 }

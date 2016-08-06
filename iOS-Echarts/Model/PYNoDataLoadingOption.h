@@ -6,18 +6,14 @@
 //  Copyright © 2016 pluto-y. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import "PYLoadingOption.h"
 
-@class  PYTextStyle;
-
-@interface PYNoDataLoadingOption : NSObject
-
-@property (nonatomic, copy) NSString *text;
-@property (nonatomic, strong) id x;
-@property (nonatomic, strong) id y;
-@property (nonatomic, strong) PYTextStyle *textStyle;
-@property (nonatomic, strong) id effect;
-@property (nonatomic, copy) NSDictionary *effectOption;
-@property (nonatomic, strong) NSNumber *progress;
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#NoDataLoadingOption
+ *
+ */
+@interface PYNoDataLoadingOption : PYLoadingOption
 
 @end

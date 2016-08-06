@@ -8,6 +8,19 @@
 
 #import "PYSeries.h"
 
+typedef NSString *PYCartesianSeriesDataFilter;
+
+extern PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterNearest;
+extern PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterMin;
+extern PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterMax;
+extern PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterAverage;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#SeriesCartesian
+ *
+ */
 @interface PYCartesianSeries : PYSeries
 
 @property (nonatomic, copy) NSString *stack;
@@ -18,12 +31,12 @@
 @property (nonatomic, strong) NSNumber *barMinHeight;
 @property (nonatomic, strong) NSNumber *barWidth;
 @property (nonatomic, strong) NSNumber *barMaxWidth;
-@property (nonatomic, copy) NSString *symbol;
+@property (nonatomic, copy) PYSymbol symbol;
 @property (nonatomic, strong) id symbolSize;
 @property (nonatomic, strong) NSNumber *symbolRotate;
 @property (nonatomic, assign) BOOL showAllSymbol;
 @property (nonatomic, assign) BOOL smooth;
-@property (nonatomic, copy) NSString *dataFilter;
+@property (nonatomic, copy) PYCartesianSeriesDataFilter dataFilter;
 @property (nonatomic, assign) BOOL large;
 @property (nonatomic, strong) NSNumber *largeThreshold;
 @property (nonatomic, assign) BOOL legendHoverLink;

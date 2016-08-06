@@ -10,10 +10,16 @@
 
 @class PYItemStyle;
 
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#categories
+ *
+ */
 @interface PYCategories : NSObject
 
 @property (nonatomic, copy) NSString *name;
-@property (nonatomic, copy) NSString *symbol;
+@property (nonatomic, copy) PYSymbol symbol;
 @property (nonatomic, strong) id symbolSize;
 @property (nonatomic, strong) PYItemStyle *itemStyle;
 

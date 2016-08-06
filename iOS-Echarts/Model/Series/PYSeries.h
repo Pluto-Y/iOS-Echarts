@@ -12,11 +12,29 @@
 #import "PYMarkLine.h"
 #import "PYMarkPoint.h"
 
+typedef NSString *PYSeriesType;
+
+extern PYSeriesType const PYSeriesTypeLine;
+extern PYSeriesType const PYSeriesTypeBar;
+extern PYSeriesType const PYSeriesTypeScatter;
+extern PYSeriesType const PYSeriesTypeK;
+extern PYSeriesType const PYSeriesTypePie;
+extern PYSeriesType const PYSeriesTypeRadar;
+extern PYSeriesType const PYSeriesTypeChord;
+extern PYSeriesType const PYSeriesTypeForce;
+extern PYSeriesType const PYSeriesTypeMap;
+
+/**
+ *
+ *  You can goto this website for references:
+ *  http://echarts.baidu.com/echarts2/doc/doc.html#Series
+ *
+ */
 @interface PYSeries : NSObject
 
 @property (nonatomic, strong) NSNumber *zlevel;
 @property (nonatomic, strong) NSNumber *z;
-@property (nonatomic, copy) NSString *type;
+@property (nonatomic, copy) PYSeriesType type;
 @property (nonatomic, copy) NSString *name;
 @property (nonatomic, strong) PYTooltip *tooltip;
 @property (nonatomic, assign) BOOL clickable;
