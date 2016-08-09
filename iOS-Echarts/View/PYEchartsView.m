@@ -13,12 +13,15 @@
 #import "PYJsonUtil.h"
 #import "PYLoadingOption.h"
 
-NSString * const PYEchartActionClick = @"click";
-NSString * const PYEchartActionDbClick = @"dblclick";
-NSString * const PYEchartActionMapSelected = @"mapSelected";
-NSString * const PYEchartActionDataZoom = @"dataZoom";
-NSString * const PYEchartActionLegendSelected = @"legendSelected";
-NSString * const PYEchartActionMagicTypeChange = @"magicTypeChanged";
+PYEchartsViewImageType const PYEchartsViewImageTypeJEPG = @"jpeg";
+PYEchartsViewImageType const PYEchartsViewImageTypePNG = @"png";
+
+PYEchartAction const PYEchartActionClick = @"click";
+PYEchartAction const PYEchartActionDbClick = @"dblclick";
+PYEchartAction const PYEchartActionMapSelected = @"mapSelected";
+PYEchartAction const PYEchartActionDataZoom = @"dataZoom";
+PYEchartAction const PYEchartActionLegendSelected = @"legendSelected";
+PYEchartAction const PYEchartActionMagicTypeChange = @"magicTypeChanged";
 
 static NSString *const kEchartActionObtainImg = @"obtainImg";
 
@@ -30,6 +33,8 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     CGPoint tapPoint;
     // This params store the handler of the echart actions
     NSMutableDictionary<NSString *, PYEchartActionHandler> *actionHandleBlocks;
+    // This block will store for get image from echarts and will clear when the block is called
+    void (^obtainImgCompletedBlock)(UIImage *image);
 }
 
 @end
@@ -147,9 +152,18 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     [self stringByEvaluatingJavaScriptFromString:js];
 }
 
-- (void)getImage {
-    NSString *js = [NSString stringWithFormat:@"%@(%@)", @"obtainEchartsImage", @"jpeg"];
-    [self stringByEvaluatingJavaScriptFromString:js];
+/**
+ *  Obtain the screen of echarts view with type
+ *
+ *  @param type           The type you want get, now just support `PYEchartsViewImageTypeJEPG` and `PYEchartsViewImageTypePNG`.
+ *  @param completedBlock A block called when get the image from echarts.
+ */
+- (void)obtainEchartsImageWithType:(PYEchartsViewImageType)type completed:(void(^)(UIImage *image))completedBlock {
+    if (completedBlock != nil) {
+        obtainImgCompletedBlock = completedBlock;
+        NSString *js = [NSString stringWithFormat:@"%@('%@')", @"obtainEchartsImage", type];
+        [self stringByEvaluatingJavaScriptFromString:js];
+    }
 }
 
 #pragma mark - Echarts methods
@@ -179,7 +193,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  *  @param name  The echart event name
  *  @param block The block handler
  */
-- (void)addHandlerForAction:(NSString *)name withBlock:(PYEchartActionHandler)block {
+- (void)addHandlerForAction:(PYEchartAction)name withBlock:(PYEchartActionHandler)block {
     [actionHandleBlocks setObject:block forKey:name];
     [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler(%@)",name]];
 }
@@ -271,13 +285,20 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     NSString *actionType = url.host;
     
     if ([kEchartActionObtainImg isEqualToString:actionType]) {
-//        NSString *imgBase64Str = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//        NSURL *url = [NSURL URLWithString:imgBase64Str];
-//        NSData *imgData = [NSData dataWithContentsOfURL:url];
-//        UIImage *img = [UIImage imageWithData:imgData];
-//        UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 100, 100)];
-//        imgView.image = img;
-//        [self addSubview:imgView];
+        if (obtainImgCompletedBlock != nil) {
+            __weak typeof(obtainImgCompletedBlock) block = obtainImgCompletedBlock;
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+                UIImage *image = nil;
+                NSString *imgBase64Str = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+                NSURL *url = [NSURL URLWithString:imgBase64Str];
+                NSData *imgData = [NSData dataWithContentsOfURL:url];
+                image = [UIImage imageWithData:imgData];
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    block(image);
+                });
+            });
+            
+        }
     } else {
         // deserialize the request JSON
         NSString *jsonDictString = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];

@@ -70,6 +70,7 @@
         divMain.style.cssText = cssText;
     }
     function obtainEchartsImage(type){
+        //alert("type:" + type);
         var result = myChart.getDataURL(type);
         //alert('result:'+result);
         document.location.href = 'pyEchartAction://obtainImg#' + result + '';

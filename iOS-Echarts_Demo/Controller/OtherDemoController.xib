@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -45,11 +45,19 @@
                         <action selector="showOtherDemo:" destination="-1" eventType="touchUpInside" id="nTe-aN-4NH"/>
                     </connections>
                 </button>
+                <button opaque="NO" tag="90004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="i5H-ZE-g7M">
+                    <rect key="frame" x="64" y="146" width="60" height="30"/>
+                    <state key="normal" title="获得截图"/>
+                    <connections>
+                        <action selector="showOtherDemo:" destination="-1" eventType="touchUpInside" id="Jrs-0u-PMl"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="UG4-lp-nP3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="5KS-6O-1Wx"/>
                 <constraint firstAttribute="bottom" secondItem="UG4-lp-nP3" secondAttribute="bottom" constant="20" id="7Q0-zd-do3"/>
+                <constraint firstItem="i5H-ZE-g7M" firstAttribute="top" secondItem="g0C-B1-6Z8" secondAttribute="bottom" constant="8" id="8NI-Qp-ow2"/>
                 <constraint firstItem="g0C-B1-6Z8" firstAttribute="top" secondItem="lyc-2x-o5o" secondAttribute="bottom" constant="8" id="8wS-Zt-IGK"/>
                 <constraint firstAttribute="trailing" secondItem="UG4-lp-nP3" secondAttribute="trailing" id="M8C-uA-gyj"/>
                 <constraint firstItem="g0C-B1-6Z8" firstAttribute="centerX" secondItem="lyc-2x-o5o" secondAttribute="centerX" id="MWZ-ai-qZi"/>
@@ -57,6 +65,7 @@
                 <constraint firstItem="lyc-2x-o5o" firstAttribute="top" secondItem="tB8-y5-rpI" secondAttribute="bottom" constant="8" id="YNP-TC-fOa"/>
                 <constraint firstItem="lyc-2x-o5o" firstAttribute="centerX" secondItem="tB8-y5-rpI" secondAttribute="centerX" id="czY-1Y-1JX"/>
                 <constraint firstItem="tB8-y5-rpI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="32" id="u13-68-3pN"/>
+                <constraint firstItem="i5H-ZE-g7M" firstAttribute="centerX" secondItem="g0C-B1-6Z8" secondAttribute="centerX" id="xbW-JF-oNH"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
             <point key="canvasLocation" x="385.5" y="481.5"/>

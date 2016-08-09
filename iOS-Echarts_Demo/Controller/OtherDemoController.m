@@ -33,6 +33,7 @@ static NSArray *effect;
 }
 
 - (void)initAll {
+    self.title = @"其他";
     effect = @[@"spin", @"bar", @"ring", @"whirling", @"dynamicLine", @"bubble"];
     loadingTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(clearLoading) userInfo:nil repeats:YES];
     loadingTimer.fireDate = [NSDate distantFuture];
@@ -57,6 +58,18 @@ static NSArray *effect;
             [self.navigationController pushViewController:controller animated:YES];
             return;
         }
+        case 90004: {
+            __weak OtherDemoController *weakSelf = self;
+            [_yEchartsView obtainEchartsImageWithType:PYEchartsViewImageTypePNG completed:[^(UIImage *image) {
+                UIImageView *imgView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, weakSelf.yEchartsView.frame.size.width, weakSelf.yEchartsView.frame.size.height)];
+                imgView.userInteractionEnabled = YES;
+                imgView.image = image;
+                UITapGestureRecognizer *tapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:imgView action:@selector(removeFromSuperview)];
+                [imgView addGestureRecognizer:tapRecognizer];
+                [weakSelf.view addSubview:imgView];
+            } copy]];
+        }
+            
         default:
             break;
     }
@@ -106,8 +119,6 @@ static NSArray *effect;
     option.toolbox.feature.magicType.type = @[@"line", @"bar"];
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
-    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
-    option.toolbox.feature.saveAsImage.show = YES;
     option.calculable = YES;
     option.tooltip = [[PYTooltip alloc] init];
     option.tooltip.trigger = @"axis";

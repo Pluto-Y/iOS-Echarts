@@ -27,12 +27,17 @@
 
 @end
 
-extern NSString * const PYEchartActionClick;
-extern NSString * const PYEchartActionDbClick;
-extern NSString * const PYEchartActionMapSelected;
-extern NSString * const PYEchartActionDataZoom;
-extern NSString * const PYEchartActionLegendSelected;
-extern NSString * const PYEchartActionMagicTypeChange;
+typedef NSString *PYEchartsViewImageType;
+extern PYEchartsViewImageType const PYEchartsViewImageTypeJEPG;
+extern PYEchartsViewImageType const PYEchartsViewImageTypePNG;
+
+typedef NSString *PYEchartAction;
+extern PYEchartAction const PYEchartActionClick;
+extern PYEchartAction const PYEchartActionDbClick;
+extern PYEchartAction const PYEchartActionMapSelected;
+extern PYEchartAction const PYEchartActionDataZoom;
+extern PYEchartAction const PYEchartActionLegendSelected;
+extern PYEchartAction const PYEchartActionMagicTypeChange;
 
 @class PYOption, PYLoadingOption, PYNoDataLoadingOption;
 
@@ -96,7 +101,7 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
  *  @param name  The echart event name
  *  @param block The block handler
  */
--(void)addHandlerForAction:(NSString *)name withBlock:(PYEchartActionHandler)block;
+-(void)addHandlerForAction:(PYEchartAction)name withBlock:(PYEchartActionHandler)block;
 
 /**
  *  Remove the echart action hander
@@ -122,6 +127,12 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
  */
 - (void)clearEcharts;
 
-- (void)getImage;
+/**
+ *  Obtain the screen of echarts view with type
+ *
+ *  @param type           The type you want get, now just support `PYEchartsViewImageTypeJEPG` and `PYEchartsViewImageTypePNG`.
+ *  @param completedBlock A block called when get the image from echarts.
+ */
+- (void)obtainEchartsImageWithType:(PYEchartsViewImageType)type completed:(void(^)(UIImage *image))completedBlock;
 
 @end

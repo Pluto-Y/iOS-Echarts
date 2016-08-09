@@ -101,7 +101,7 @@
 @property (nonatomic, strong) PYToolboxFeatureDataView *dataView;
 @property (nonatomic, strong) PYToolboxFeatureMagicType *magicType;
 @property (nonatomic, strong) PYToolboxFeatureRestore *restore;
-@property (nonatomic, strong, getter=getSaveAsImage) PYToolboxFeatureSaveAsImage *saveAsImage NS_EXTENSION_UNAVAILABLE_IOS("Use PYEchartView `getImage` instead.");
+@property (nonatomic, strong, getter=getSaveAsImage) PYToolboxFeatureSaveAsImage *saveAsImage __deprecated_msg("Use PYEchartView `obtainEchartsImageWithType:completedBlock:` instead.");
 
 
 @end
