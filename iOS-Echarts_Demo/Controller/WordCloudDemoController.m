@@ -8,7 +8,7 @@
 
 #import "WordCloudDemoController.h"
 
-@interface WordCloudDemoController ()
+@interface WordCloudDemoController ()<PYEchartsViewDelegate>
 
 @property (weak, nonatomic) IBOutlet PYEchartsView *kEcharts;
 
@@ -24,6 +24,7 @@
 - (void)initAll {
     self.title = @"字符云";
     [self showWordCloudDemo];
+    _kEcharts.eDelegate = self;
     [_kEcharts loadEcharts];
 }
 
@@ -48,6 +49,12 @@
 
 -(NSDictionary *)createRandomItemStyle {
     return @{@"normal":@{@"color":PYRGBA((arc4random() % 256)*160.0/256, (arc4random() % 256)*160.0/256, (arc4random() % 256)*160.0/256, 1.0)}};
+}
+
+#pragma mark PYEchartsViewDelegate
+- (BOOL)echartsView:(PYEchartsView *)echartsView didReceivedLinkURL:(NSURL *)url {
+    [[UIApplication sharedApplication] openURL:url];
+    return NO;
 }
 
 @end

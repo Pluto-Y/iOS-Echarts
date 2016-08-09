@@ -8,6 +8,25 @@
 
 #import <UIKit/UIKit.h>
 
+@class PYEchartsView;
+
+@protocol PYEchartsViewDelegate <NSObject>
+
+@optional
+/**
+ *  When the title link or other http links occur, this method will be called for user
+ *  If return NO, you can do anything you can do with this url
+ *  If return YES, the `PYEchartsView` will open this url
+ *
+ *  @param echartsView The echatsView provide this action
+ *  @param url         The HTTP request url
+ *
+ *  @return The same as the description
+ */
+- (BOOL)echartsView:(PYEchartsView *)echartsView didReceivedLinkURL:(NSURL *)url;
+
+@end
+
 extern NSString * const PYEchartActionClick;
 extern NSString * const PYEchartActionDbClick;
 extern NSString * const PYEchartActionMapSelected;
@@ -27,6 +46,8 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
 @property (nonatomic, assign) CGSize divSize;
 @property (nonatomic, assign) CGFloat maxWidth;
 @property (nonatomic, assign) BOOL scalable;
+
+@property (nonatomic, weak) id<PYEchartsViewDelegate> eDelegate;
 
 // You should set this property before `loadEcharts`, or it will be useless
 @property (nonatomic, strong) PYNoDataLoadingOption *noDataLoadingOption;
