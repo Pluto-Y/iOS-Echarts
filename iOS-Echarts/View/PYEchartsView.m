@@ -56,7 +56,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
 #pragma mark 初始化
 /// Initialize
 - (void)initAll {
-    bundlePath = [[[NSBundle mainBundle] pathForResource:@"iOS-Echarts" ofType:@"bundle"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+    bundlePath = [[NSBundle mainBundle] pathForResource:@"iOS-Echarts" ofType:@"bundle"];
     NSBundle *echartsBundle;
     if (bundlePath != nil) { // If 'iOS-Echarts' is installed by Cocoapods and don't use 'use_frameworks!' command
         echartsBundle = [NSBundle bundleWithPath:bundlePath];
@@ -64,7 +64,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
         echartsBundle = [NSBundle mainBundle];
         
         // If 'iOS-Echarts' is install by Cocoapods and use 'use_frameworks!' command
-        if ([[echartsBundle pathForResource:@"echarts" ofType:@"html"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding] == nil) {
+        if ([echartsBundle pathForResource:@"echarts" ofType:@"html"] == nil) {
             NSArray *allFrameworks = [echartsBundle pathsForResourcesOfType:@"framework" inDirectory:@"Frameworks"];
             for (NSString *path in allFrameworks) {
                 if ([path hasSuffix:@"iOS_Echarts.framework"]) { // if the framework name has suffix 'iOS_Echarts.framework', I think it's iOS-Echart's framework
@@ -76,7 +76,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
         }
     }
     bundlePath = [echartsBundle bundlePath];
-    NSString *urlString = [[echartsBundle pathForResource:@"echarts" ofType:@"html"] stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]; // Fixes the url string contain chinese characters
+    NSString *urlString = [echartsBundle pathForResource:@"echarts" ofType:@"html"];
     localHtmlContents =[[NSString alloc] initWithContentsOfFile:urlString encoding:NSUTF8StringEncoding error:nil];
     
     if (localHtmlContents == nil || [localHtmlContents isEqualToString:@""]) {
