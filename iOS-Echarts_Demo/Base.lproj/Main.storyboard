@@ -129,12 +129,21 @@
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KMZ-JG-gK7"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="10008" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpi-4Q-kVe">
+                                <rect key="frame" x="217.5" y="97" width="45" height="30"/>
+                                <state key="normal" title="字符云"/>
+                                <connections>
+                                    <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3PI-oG-CfM"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Z0s-pS-3OI" secondAttribute="centerX" id="3qd-DQ-sqD"/>
                             <constraint firstItem="DWi-xk-cHA" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="7A5-bY-yhp"/>
                             <constraint firstItem="S5W-J3-r7t" firstAttribute="top" secondItem="Z0s-pS-3OI" secondAttribute="bottom" id="9KZ-d9-dUb"/>
+                            <constraint firstItem="qpi-4Q-kVe" firstAttribute="top" secondItem="Icm-JT-9P3" secondAttribute="bottom" constant="8" id="EZb-nT-4oD"/>
+                            <constraint firstItem="qpi-4Q-kVe" firstAttribute="centerX" secondItem="Icm-JT-9P3" secondAttribute="centerX" id="G8f-So-nk5"/>
                             <constraint firstItem="S5W-J3-r7t" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="GKi-s6-ZdY"/>
                             <constraint firstItem="NUG-2Q-8qE" firstAttribute="centerX" secondItem="x9J-ow-V3G" secondAttribute="centerX" id="H4D-fe-wf4"/>
                             <constraint firstItem="aJX-aJ-ZQR" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="LB9-Fo-rFV"/>

@@ -23,6 +23,7 @@
 #import "PYForceSeries.h"
 #import "PYFunnelSeries.h"
 #import "PYGaugeSeries.h"
+#import "PYWordCloudSeries.h"
 #import "PYHeatmapSeries.h"
 #import "PYMapSeries.h"
 #import "PYPieSeries.h"

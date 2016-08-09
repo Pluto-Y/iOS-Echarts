@@ -96,6 +96,8 @@
 		6F8A3F061D49B598008268BD /* EchartsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F8A3F041D49B598008268BD /* EchartsViewCell.xib */; };
 		6F9391AD1D42414800CD54FC /* ForceDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9391AB1D42414800CD54FC /* ForceDemoController.m */; };
 		6F9391AE1D42414800CD54FC /* ForceDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9391AC1D42414800CD54FC /* ForceDemoController.xib */; };
+		6FC0911B1D5A464200D52879 /* WordCloudDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC091191D5A464200D52879 /* WordCloudDemoController.m */; };
+		6FC0911C1D5A464200D52879 /* WordCloudDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC0911A1D5A464200D52879 /* WordCloudDemoController.xib */; };
 		6FEFF6EB1D56448300E8B77E /* NSObject+PYObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEFF6EA1D56448300E8B77E /* NSObject+PYObject.m */; };
 		6FEFF6F01D564D5C00E8B77E /* PYChordStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEFF6EF1D564D5C00E8B77E /* PYChordStyle.m */; };
 /* End PBXBuildFile section */
@@ -273,6 +275,9 @@
 		6F9391AA1D42414800CD54FC /* ForceDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForceDemoController.h; sourceTree = "<group>"; };
 		6F9391AB1D42414800CD54FC /* ForceDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForceDemoController.m; sourceTree = "<group>"; };
 		6F9391AC1D42414800CD54FC /* ForceDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForceDemoController.xib; sourceTree = "<group>"; };
+		6FC091181D5A464200D52879 /* WordCloudDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordCloudDemoController.h; sourceTree = "<group>"; };
+		6FC091191D5A464200D52879 /* WordCloudDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordCloudDemoController.m; sourceTree = "<group>"; };
+		6FC0911A1D5A464200D52879 /* WordCloudDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordCloudDemoController.xib; sourceTree = "<group>"; };
 		6FEFF6E91D56448300E8B77E /* NSObject+PYObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PYObject.h"; sourceTree = "<group>"; };
 		6FEFF6EA1D56448300E8B77E /* NSObject+PYObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PYObject.m"; sourceTree = "<group>"; };
 		6FEFF6ED1D5644E500E8B77E /* PYUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYUtilities.h; sourceTree = "<group>"; };
@@ -350,6 +355,9 @@
 				6F8A3EFC1D49AFA5008268BD /* MultiEchartsController.h */,
 				6F8A3EFD1D49AFA5008268BD /* MultiEchartsController.m */,
 				6F8A3EFE1D49AFA5008268BD /* MultiEchartsController.xib */,
+				6FC091181D5A464200D52879 /* WordCloudDemoController.h */,
+				6FC091191D5A464200D52879 /* WordCloudDemoController.m */,
+				6FC0911A1D5A464200D52879 /* WordCloudDemoController.xib */,
 			);
 			name = Controller;
 			path = "iOS-Echarts_Demo/Controller";
@@ -690,6 +698,7 @@
 				6F4D590D1D4FE34F00246943 /* echarts.html in Resources */,
 				6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */,
 				6C34720D1BF470E600C16B73 /* (null) in Resources */,
+				6FC0911C1D5A464200D52879 /* WordCloudDemoController.xib in Resources */,
 				6C0658DA1BB85B46003CAAE5 /* LaunchScreen.xib in Resources */,
 				6C6011AC1CC144710048F6F6 /* OtherDemoController.xib in Resources */,
 				6C0658E61BB85B4F003CAAE5 /* BarDemoController.xib in Resources */,
@@ -720,6 +729,7 @@
 			files = (
 				6F4D58E21D4FE34F00246943 /* PYColor.m in Sources */,
 				6C0658E71BB85B4F003CAAE5 /* LineDemoController.m in Sources */,
+				6FC0911B1D5A464200D52879 /* WordCloudDemoController.m in Sources */,
 				6F4D59051D4FE34F00246943 /* PYMarkPoint.m in Sources */,
 				6F4D58EC1D4FE34F00246943 /* PYLinks.m in Sources */,
 				6F8A3EFF1D49AFA5008268BD /* MultiEchartsController.m in Sources */,

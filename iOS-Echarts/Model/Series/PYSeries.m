@@ -8,15 +8,16 @@
 
 #import "PYSeries.h"
 
-PYSeriesType const PYSeriesTypeLine    = @"line";
-PYSeriesType const PYSeriesTypeBar     = @"bar";
-PYSeriesType const PYSeriesTypeScatter = @"scatter";
-PYSeriesType const PYSeriesTypeK       = @"k";
-PYSeriesType const PYSeriesTypePie     = @"pie";
-PYSeriesType const PYSeriesTypeRadar   = @"radar";
-PYSeriesType const PYSeriesTypeChord   = @"chord";
-PYSeriesType const PYSeriesTypeForce   = @"force";
-PYSeriesType const PYSeriesTypeMap     = @"map";
+PYSeriesType const PYSeriesTypeLine      = @"line";
+PYSeriesType const PYSeriesTypeBar       = @"bar";
+PYSeriesType const PYSeriesTypeScatter   = @"scatter";
+PYSeriesType const PYSeriesTypeK         = @"k";
+PYSeriesType const PYSeriesTypePie       = @"pie";
+PYSeriesType const PYSeriesTypeRadar     = @"radar";
+PYSeriesType const PYSeriesTypeChord     = @"chord";
+PYSeriesType const PYSeriesTypeForce     = @"force";
+PYSeriesType const PYSeriesTypeMap       = @"map";
+PYSeriesType const PYSeriesTypeWordCloud = @"wordCloud";
 
 static NSArray<PYSeriesType> *seriesTypeScope;
 @interface PYSeries()
@@ -28,7 +29,7 @@ static NSArray<PYSeriesType> *seriesTypeScope;
 + (void)initialize
 {
     if (self == [PYSeries class]) {
-        seriesTypeScope = @[PYSeriesTypeLine, PYSeriesTypeBar, PYSeriesTypeScatter, PYSeriesTypeK, PYSeriesTypePie, PYSeriesTypeRadar, PYSeriesTypeChord, PYSeriesTypeForce, PYSeriesTypeMap];
+        seriesTypeScope = @[PYSeriesTypeLine, PYSeriesTypeBar, PYSeriesTypeScatter, PYSeriesTypeK, PYSeriesTypePie, PYSeriesTypeRadar, PYSeriesTypeChord, PYSeriesTypeForce, PYSeriesTypeMap, PYSeriesTypeWordCloud];
     }
 }
 

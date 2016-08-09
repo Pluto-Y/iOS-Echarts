@@ -30,6 +30,8 @@
 #import "ForceDemoController.h"
 // Other Demo
 #import "OtherDemoController.h"
+// Word Cloud
+#import "WordCloudDemoController.h"
 
 
 @interface ViewController ()
@@ -181,13 +183,19 @@
         case 10007: // 力导向布局图
             controller = [[ForceDemoController alloc] init];
             break;
-        case 11000:
+        case 10008:
+            controller = [[WordCloudDemoController alloc] init];
+            break;
+        case 11000: // 其他
             controller = [[OtherDemoController alloc] init];
             break;
         default:
             break;
     }
-    [self.navigationController pushViewController:controller animated:YES];
+    if (controller != nil) {
+        [self.navigationController pushViewController:controller animated:YES];
+    }
+    
 }
 
 @end

@@ -20,5 +20,6 @@
 @property (nonatomic, copy) NSArray *size;
 @property (nonatomic, copy) NSArray *textRotation;
 @property (nonatomic, copy) NSDictionary *autoSize;
+@property (nonatomic, strong) NSNumber *textPadding;
 
 @end
