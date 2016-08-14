@@ -32,6 +32,8 @@
 #import "OtherDemoController.h"
 // Word Cloud
 #import "WordCloudDemoController.h"
+// Venn
+#import "VennDemoController.h"
 
 
 @interface ViewController ()
@@ -183,8 +185,11 @@
         case 10007: // 力导向布局图
             controller = [[ForceDemoController alloc] init];
             break;
-        case 10008:
+        case 10008: // 字符云
             controller = [[WordCloudDemoController alloc] init];
+            break;
+        case 10009: // 韦恩图
+            controller = [[VennDemoController alloc] init];
             break;
         case 11000: // 其他
             controller = [[OtherDemoController alloc] init];
