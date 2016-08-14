@@ -18,6 +18,7 @@ PYSeriesType const PYSeriesTypeChord     = @"chord";
 PYSeriesType const PYSeriesTypeForce     = @"force";
 PYSeriesType const PYSeriesTypeMap       = @"map";
 PYSeriesType const PYSeriesTypeWordCloud = @"wordCloud";
+PYSeriesType const PYSeriesTypeVenn      = @"venn";
 
 static NSArray<PYSeriesType> *seriesTypeScope;
 @interface PYSeries()
@@ -29,7 +30,7 @@ static NSArray<PYSeriesType> *seriesTypeScope;
 + (void)initialize
 {
     if (self == [PYSeries class]) {
-        seriesTypeScope = @[PYSeriesTypeLine, PYSeriesTypeBar, PYSeriesTypeScatter, PYSeriesTypeK, PYSeriesTypePie, PYSeriesTypeRadar, PYSeriesTypeChord, PYSeriesTypeForce, PYSeriesTypeMap, PYSeriesTypeWordCloud];
+        seriesTypeScope = @[PYSeriesTypeLine, PYSeriesTypeBar, PYSeriesTypeScatter, PYSeriesTypeK, PYSeriesTypePie, PYSeriesTypeRadar, PYSeriesTypeChord, PYSeriesTypeForce, PYSeriesTypeMap, PYSeriesTypeWordCloud, PYSeriesTypeVenn];
     }
 }
 

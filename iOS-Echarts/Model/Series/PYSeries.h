@@ -24,6 +24,7 @@ extern PYSeriesType const PYSeriesTypeChord;
 extern PYSeriesType const PYSeriesTypeForce;
 extern PYSeriesType const PYSeriesTypeMap;
 extern PYSeriesType const PYSeriesTypeWordCloud;
+extern PYSeriesType const PYSeriesTypeVenn;
 
 /**
  *
