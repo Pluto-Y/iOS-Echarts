@@ -159,6 +159,10 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  *  @param completedBlock A block called when get the image from echarts.
  */
 - (void)obtainEchartsImageWithType:(PYEchartsViewImageType)type completed:(void(^)(UIImage *image))completedBlock {
+    if (![type isEqualToString:PYEchartsViewImageTypePNG] && ![type isEqualToString:PYEchartsViewImageTypeJEPG]) {
+        NSLog(@"Error: Echarts does not support this type --- %@, so it will be obtain JEPG type", type);
+        type = PYEchartsViewImageTypeJEPG;
+    }
     if (completedBlock != nil) {
         obtainImgCompletedBlock = completedBlock;
         NSString *js = [NSString stringWithFormat:@"%@('%@')", @"obtainEchartsImage", type];
