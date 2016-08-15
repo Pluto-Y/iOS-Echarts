@@ -100,6 +100,8 @@
 		6FC0911C1D5A464200D52879 /* WordCloudDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC0911A1D5A464200D52879 /* WordCloudDemoController.xib */; };
 		6FC091321D60C39C00D52879 /* VennDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC091301D60C39C00D52879 /* VennDemoController.m */; };
 		6FC091331D60C39C00D52879 /* VennDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC091311D60C39C00D52879 /* VennDemoController.xib */; };
+		6FDCE6F81D61FED900F580FD /* TreemapDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDCE6F61D61FED900F580FD /* TreemapDemoController.m */; };
+		6FDCE6F91D61FED900F580FD /* TreemapDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FDCE6F71D61FED900F580FD /* TreemapDemoController.xib */; };
 		6FEFF6EB1D56448300E8B77E /* NSObject+PYObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEFF6EA1D56448300E8B77E /* NSObject+PYObject.m */; };
 		6FEFF6F01D564D5C00E8B77E /* PYChordStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEFF6EF1D564D5C00E8B77E /* PYChordStyle.m */; };
 /* End PBXBuildFile section */
@@ -283,6 +285,9 @@
 		6FC0912F1D60C39C00D52879 /* VennDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VennDemoController.h; sourceTree = "<group>"; };
 		6FC091301D60C39C00D52879 /* VennDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VennDemoController.m; sourceTree = "<group>"; };
 		6FC091311D60C39C00D52879 /* VennDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VennDemoController.xib; sourceTree = "<group>"; };
+		6FDCE6F51D61FED900F580FD /* TreemapDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreemapDemoController.h; sourceTree = "<group>"; };
+		6FDCE6F61D61FED900F580FD /* TreemapDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreemapDemoController.m; sourceTree = "<group>"; };
+		6FDCE6F71D61FED900F580FD /* TreemapDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TreemapDemoController.xib; sourceTree = "<group>"; };
 		6FEFF6E91D56448300E8B77E /* NSObject+PYObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PYObject.h"; sourceTree = "<group>"; };
 		6FEFF6EA1D56448300E8B77E /* NSObject+PYObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PYObject.m"; sourceTree = "<group>"; };
 		6FEFF6ED1D5644E500E8B77E /* PYUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYUtilities.h; sourceTree = "<group>"; };
@@ -366,6 +371,9 @@
 				6FC0912F1D60C39C00D52879 /* VennDemoController.h */,
 				6FC091301D60C39C00D52879 /* VennDemoController.m */,
 				6FC091311D60C39C00D52879 /* VennDemoController.xib */,
+				6FDCE6F51D61FED900F580FD /* TreemapDemoController.h */,
+				6FDCE6F61D61FED900F580FD /* TreemapDemoController.m */,
+				6FDCE6F71D61FED900F580FD /* TreemapDemoController.xib */,
 			);
 			name = Controller;
 			path = "iOS-Echarts_Demo/Controller";
@@ -706,6 +714,7 @@
 				6F4D590D1D4FE34F00246943 /* echarts.html in Resources */,
 				6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */,
 				6C34720D1BF470E600C16B73 /* (null) in Resources */,
+				6FDCE6F91D61FED900F580FD /* TreemapDemoController.xib in Resources */,
 				6FC091331D60C39C00D52879 /* VennDemoController.xib in Resources */,
 				6FC0911C1D5A464200D52879 /* WordCloudDemoController.xib in Resources */,
 				6C0658DA1BB85B46003CAAE5 /* LaunchScreen.xib in Resources */,
@@ -759,6 +768,7 @@
 				6C08828E1C303F4400EA0D34 /* MapDemoController.m in Sources */,
 				6CC8465D1BC15E4D00947312 /* NSObject+RMArchivable.m in Sources */,
 				6F4D58FD1D4FE34F00246943 /* PYCartesianSeries.m in Sources */,
+				6FDCE6F81D61FED900F580FD /* TreemapDemoController.m in Sources */,
 				6C0658E51BB85B4F003CAAE5 /* BarDemoController.m in Sources */,
 				6F4D58F61D4FE34F00246943 /* PYSplitLine.m in Sources */,
 				6F4D59001D4FE34F00246943 /* PYFunnelSeries.m in Sources */,

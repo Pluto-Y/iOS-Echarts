@@ -34,6 +34,8 @@
 #import "WordCloudDemoController.h"
 // Venn
 #import "VennDemoController.h"
+// Treemap
+#import "TreemapDemoController.h"
 
 
 @interface ViewController ()
@@ -190,6 +192,9 @@
             break;
         case 10009: // 韦恩图
             controller = [[VennDemoController alloc] init];
+            break;
+        case 10010: // 矩形树图
+            controller = [[TreemapDemoController alloc] init];
             break;
         case 11000: // 其他
             controller = [[OtherDemoController alloc] init];

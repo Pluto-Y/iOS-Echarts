@@ -143,10 +143,18 @@
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tWz-lS-f66"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="10010" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29j-oJ-6g2">
+                                <rect key="frame" x="210" y="173" width="60" height="30"/>
+                                <state key="normal" title="矩形树图"/>
+                                <connections>
+                                    <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Fx0-eI-o59"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerX" secondItem="Z0s-pS-3OI" secondAttribute="centerX" id="3qd-DQ-sqD"/>
+                            <constraint firstItem="29j-oJ-6g2" firstAttribute="top" secondItem="TJ0-jm-4Cy" secondAttribute="bottom" constant="8" id="4ww-ot-Rkp"/>
                             <constraint firstItem="DWi-xk-cHA" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="7A5-bY-yhp"/>
                             <constraint firstItem="S5W-J3-r7t" firstAttribute="top" secondItem="Z0s-pS-3OI" secondAttribute="bottom" id="9KZ-d9-dUb"/>
                             <constraint firstItem="qpi-4Q-kVe" firstAttribute="top" secondItem="Icm-JT-9P3" secondAttribute="bottom" constant="8" id="EZb-nT-4oD"/>
@@ -167,6 +175,7 @@
                             <constraint firstItem="x9J-ow-V3G" firstAttribute="centerX" secondItem="DWi-xk-cHA" secondAttribute="centerX" id="q3c-1J-7Xj"/>
                             <constraint firstItem="aJX-aJ-ZQR" firstAttribute="top" secondItem="AiU-vF-ufv" secondAttribute="bottom" constant="8" id="r68-Vc-M3p"/>
                             <constraint firstItem="x9J-ow-V3G" firstAttribute="top" secondItem="DWi-xk-cHA" secondAttribute="bottom" constant="8" id="wqE-PO-xN2"/>
+                            <constraint firstItem="29j-oJ-6g2" firstAttribute="centerX" secondItem="TJ0-jm-4Cy" secondAttribute="centerX" id="xoE-bq-irG"/>
                             <constraint firstItem="wtY-4D-J1e" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="1.5" id="yDD-LO-isz"/>
                             <constraint firstItem="CbF-qF-UwD" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="z5W-C5-xfj"/>
                             <constraint firstItem="Icm-JT-9P3" firstAttribute="top" secondItem="wtY-4D-J1e" secondAttribute="bottom" constant="8" id="zM1-bd-6dS"/>
