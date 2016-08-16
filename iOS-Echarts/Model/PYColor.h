@@ -17,6 +17,8 @@
 
 - (instancetype)initWithColor:(UIColor *) uiColor;
 
++ (PYColor *)colorWithHexString:(NSString *)hexString;
+
 /**
  *  设置颜色
  *
