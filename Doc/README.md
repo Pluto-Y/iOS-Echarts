@@ -1,4 +1,8 @@
 # iOS- Echarts - 将ECharts封装成iOS控件
+
+[![Build Status](https://travis-ci.org/Pluto-Y/iOS-Echarts.svg)](https://travis-ci.org/Pluto-Y/iOS-Echarts)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/iOS-Echarts.svg)](https://img.shields.io/cocoapods/v/iOS-Echarts.svg)
+
 本项目是将百度的ECharts(echarts2)工具封装成对应的iOS的控件，并且将其中javascript的属性封装成对应的对象。方便程序员在编写程序的过程中更加关注OC的代码，避免在使用百度的ECharts工具的过程中过多的关注javascript语法和与javascript之间的交互。
 
 注：如果小伙伴觉得这个工具有用的话，麻烦点一下star，你的star是我继续的动力！

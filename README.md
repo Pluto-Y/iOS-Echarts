@@ -1,6 +1,9 @@
 # iOS- Echarts - A control build with echarts 
 [中文文档](https://github.com/Pluto-Y/iOS-Echarts/tree/master/Doc)
 
+[![Build Status](https://travis-ci.org/Pluto-Y/iOS-Echarts.svg)](https://travis-ci.org/Pluto-Y/iOS-Echarts)
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/iOS-Echarts.svg)](https://img.shields.io/cocoapods/v/iOS-Echarts.svg)
+
 This is a highly custom chart control for iOS apps, which build with the EChart(Echart2). It just encapsulate the conrol of the javascript. It's convinient for foucing on the logic of the app and optimizing the code. It avoid diverting developers' mind on the interaction between javascript and Objective-C.
 
 If you like this control, please star it. It can make me pay more attention on it.
