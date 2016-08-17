@@ -96,6 +96,8 @@
 		6F8A3F061D49B598008268BD /* EchartsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F8A3F041D49B598008268BD /* EchartsViewCell.xib */; };
 		6F9391AD1D42414800CD54FC /* ForceDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9391AB1D42414800CD54FC /* ForceDemoController.m */; };
 		6F9391AE1D42414800CD54FC /* ForceDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9391AC1D42414800CD54FC /* ForceDemoController.xib */; };
+		6FA439A81D64E4F500FE5D9F /* GaugesDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA439A61D64E4F500FE5D9F /* GaugesDemoController.m */; };
+		6FA439A91D64E4F500FE5D9F /* GaugesDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FA439A71D64E4F500FE5D9F /* GaugesDemoController.xib */; };
 		6FC0911B1D5A464200D52879 /* WordCloudDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC091191D5A464200D52879 /* WordCloudDemoController.m */; };
 		6FC0911C1D5A464200D52879 /* WordCloudDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC0911A1D5A464200D52879 /* WordCloudDemoController.xib */; };
 		6FC091321D60C39C00D52879 /* VennDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC091301D60C39C00D52879 /* VennDemoController.m */; };
@@ -279,6 +281,9 @@
 		6F9391AA1D42414800CD54FC /* ForceDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForceDemoController.h; sourceTree = "<group>"; };
 		6F9391AB1D42414800CD54FC /* ForceDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForceDemoController.m; sourceTree = "<group>"; };
 		6F9391AC1D42414800CD54FC /* ForceDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForceDemoController.xib; sourceTree = "<group>"; };
+		6FA439A51D64E4F500FE5D9F /* GaugesDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaugesDemoController.h; sourceTree = "<group>"; };
+		6FA439A61D64E4F500FE5D9F /* GaugesDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugesDemoController.m; sourceTree = "<group>"; };
+		6FA439A71D64E4F500FE5D9F /* GaugesDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GaugesDemoController.xib; sourceTree = "<group>"; };
 		6FC091181D5A464200D52879 /* WordCloudDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordCloudDemoController.h; sourceTree = "<group>"; };
 		6FC091191D5A464200D52879 /* WordCloudDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordCloudDemoController.m; sourceTree = "<group>"; };
 		6FC0911A1D5A464200D52879 /* WordCloudDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordCloudDemoController.xib; sourceTree = "<group>"; };
@@ -374,6 +379,9 @@
 				6FDCE6F51D61FED900F580FD /* TreemapDemoController.h */,
 				6FDCE6F61D61FED900F580FD /* TreemapDemoController.m */,
 				6FDCE6F71D61FED900F580FD /* TreemapDemoController.xib */,
+				6FA439A51D64E4F500FE5D9F /* GaugesDemoController.h */,
+				6FA439A61D64E4F500FE5D9F /* GaugesDemoController.m */,
+				6FA439A71D64E4F500FE5D9F /* GaugesDemoController.xib */,
 			);
 			name = Controller;
 			path = "iOS-Echarts_Demo/Controller";
@@ -717,6 +725,7 @@
 				6FDCE6F91D61FED900F580FD /* TreemapDemoController.xib in Resources */,
 				6FC091331D60C39C00D52879 /* VennDemoController.xib in Resources */,
 				6FC0911C1D5A464200D52879 /* WordCloudDemoController.xib in Resources */,
+				6FA439A91D64E4F500FE5D9F /* GaugesDemoController.xib in Resources */,
 				6C0658DA1BB85B46003CAAE5 /* LaunchScreen.xib in Resources */,
 				6C6011AC1CC144710048F6F6 /* OtherDemoController.xib in Resources */,
 				6C0658E61BB85B4F003CAAE5 /* BarDemoController.xib in Resources */,
@@ -807,6 +816,7 @@
 				6F4D58EF1D4FE34F00246943 /* PYNoDataLoadingOption.m in Sources */,
 				6FEFF6EB1D56448300E8B77E /* NSObject+PYObject.m in Sources */,
 				6CC846601BC15E4D00947312 /* RMMapper.m in Sources */,
+				6FA439A81D64E4F500FE5D9F /* GaugesDemoController.m in Sources */,
 				6F4D58E51D4FE34F00246943 /* PYGrid.m in Sources */,
 				6F4D59011D4FE34F00246943 /* PYGaugeSeries.m in Sources */,
 				6F4D58E11D4FE34F00246943 /* PYCategories.m in Sources */,

@@ -150,6 +150,13 @@
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Fx0-eI-o59"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="10011" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iR-tp-UNC">
+                                <rect key="frame" x="218" y="211" width="45" height="30"/>
+                                <state key="normal" title="仪表盘"/>
+                                <connections>
+                                    <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kdd-Fm-Rul"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -176,7 +183,9 @@
                             <constraint firstItem="aJX-aJ-ZQR" firstAttribute="top" secondItem="AiU-vF-ufv" secondAttribute="bottom" constant="8" id="r68-Vc-M3p"/>
                             <constraint firstItem="x9J-ow-V3G" firstAttribute="top" secondItem="DWi-xk-cHA" secondAttribute="bottom" constant="8" id="wqE-PO-xN2"/>
                             <constraint firstItem="29j-oJ-6g2" firstAttribute="centerX" secondItem="TJ0-jm-4Cy" secondAttribute="centerX" id="xoE-bq-irG"/>
+                            <constraint firstItem="4iR-tp-UNC" firstAttribute="top" secondItem="29j-oJ-6g2" secondAttribute="bottom" constant="8" id="xre-q7-hFh"/>
                             <constraint firstItem="wtY-4D-J1e" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="1.5" id="yDD-LO-isz"/>
+                            <constraint firstItem="4iR-tp-UNC" firstAttribute="centerX" secondItem="29j-oJ-6g2" secondAttribute="centerX" id="ydH-xQ-2Bf"/>
                             <constraint firstItem="CbF-qF-UwD" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="z5W-C5-xfj"/>
                             <constraint firstItem="Icm-JT-9P3" firstAttribute="top" secondItem="wtY-4D-J1e" secondAttribute="bottom" constant="8" id="zM1-bd-6dS"/>
                         </constraints>

@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GaugesDemoController">
+            <connections>
+                <outlet property="echartsView" destination="a5H-yi-ZM0" id="1Qd-xn-Wu7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="40006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iFK-hr-o0s">
+                    <rect key="frame" x="408" y="69" width="85" height="30"/>
+                    <state key="normal" title="标准仪表盘4"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="rZS-Ux-H7a"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="40005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evY-z8-DUF">
+                    <rect key="frame" x="416" y="38" width="69" height="30"/>
+                    <state key="normal" title="多仪表盘2"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="pMh-SJ-z2c"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="40004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yP4-Wh-3PN">
+                    <rect key="frame" x="417" y="8" width="67" height="30"/>
+                    <state key="normal" title="多仪表盘1"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="CfP-pO-kbf"/>
+                    </connections>
+                </button>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a5H-yi-ZM0" customClass="PYEchartsView">
+                    <rect key="frame" x="0.0" y="280" width="600" height="300"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="4Yd-ZU-D2b"/>
+                    </constraints>
+                </webView>
+                <button opaque="NO" tag="40001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HF0-hh-Rv1">
+                    <rect key="frame" x="109" y="8" width="82" height="30"/>
+                    <state key="normal" title="标准仪表盘1"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="apk-cM-joU"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="40002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y61-a4-soo">
+                    <rect key="frame" x="108" y="38" width="84" height="30"/>
+                    <state key="normal" title="标准仪表盘2"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="3AR-Jj-SoZ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="40003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mHf-bB-qMH">
+                    <rect key="frame" x="108" y="69" width="85" height="30"/>
+                    <state key="normal" title="标准仪表盘3"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="puT-uZ-n0c"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="mHf-bB-qMH" firstAttribute="centerX" secondItem="Y61-a4-soo" secondAttribute="centerX" id="2hu-ni-Erw"/>
+                <constraint firstItem="mHf-bB-qMH" firstAttribute="top" secondItem="Y61-a4-soo" secondAttribute="bottom" constant="1" id="4qz-Wf-Kv8"/>
+                <constraint firstItem="iFK-hr-o0s" firstAttribute="top" secondItem="evY-z8-DUF" secondAttribute="bottom" constant="1" id="BPE-iE-GL4"/>
+                <constraint firstItem="HF0-hh-Rv1" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.5" id="GVh-2l-eMH"/>
+                <constraint firstItem="iFK-hr-o0s" firstAttribute="centerX" secondItem="evY-z8-DUF" secondAttribute="centerX" id="HaB-dq-TQ3"/>
+                <constraint firstItem="yP4-Wh-3PN" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.5" id="OO8-0H-6Ps"/>
+                <constraint firstAttribute="bottom" secondItem="a5H-yi-ZM0" secondAttribute="bottom" constant="20" id="T6K-hI-8DE"/>
+                <constraint firstItem="a5H-yi-ZM0" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XBC-uu-SIG"/>
+                <constraint firstItem="Y61-a4-soo" firstAttribute="top" secondItem="HF0-hh-Rv1" secondAttribute="bottom" id="dOe-Xd-o0c"/>
+                <constraint firstItem="Y61-a4-soo" firstAttribute="centerX" secondItem="HF0-hh-Rv1" secondAttribute="centerX" id="ixq-u9-oag"/>
+                <constraint firstItem="yP4-Wh-3PN" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="knH-AL-NKB"/>
+                <constraint firstItem="HF0-hh-Rv1" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="ltP-D4-MsU"/>
+                <constraint firstItem="evY-z8-DUF" firstAttribute="centerX" secondItem="yP4-Wh-3PN" secondAttribute="centerX" id="wRn-CU-BOa"/>
+                <constraint firstItem="evY-z8-DUF" firstAttribute="top" secondItem="yP4-Wh-3PN" secondAttribute="bottom" id="xbQ-zL-RKW"/>
+                <constraint firstAttribute="trailing" secondItem="a5H-yi-ZM0" secondAttribute="trailing" id="yT3-LX-2AF"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
