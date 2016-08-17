@@ -1,0 +1,2 @@
+language: objective-c
+script: xcodebuild -project iOS-Echarts.xcodeproj -target iOS-Echarts -sdk iphonesimulator ONLY_ACTIVE_ARCH=NO
