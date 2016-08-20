@@ -8,19 +8,23 @@
 
 #import "PYSeries.h"
 
-PYSeriesType const PYSeriesTypeLine      = @"line";
-PYSeriesType const PYSeriesTypeBar       = @"bar";
-PYSeriesType const PYSeriesTypeScatter   = @"scatter";
-PYSeriesType const PYSeriesTypeK         = @"k";
-PYSeriesType const PYSeriesTypePie       = @"pie";
-PYSeriesType const PYSeriesTypeRadar     = @"radar";
-PYSeriesType const PYSeriesTypeChord     = @"chord";
-PYSeriesType const PYSeriesTypeForce     = @"force";
-PYSeriesType const PYSeriesTypeMap       = @"map";
-PYSeriesType const PYSeriesTypeWordCloud = @"wordCloud";
-PYSeriesType const PYSeriesTypeVenn      = @"venn";
-PYSeriesType const PYSeriesTypeTreemap   = @"treemap";
-PYSeriesType const PYSeriesTypeGauge     = @"gauge";
+PYSeriesType const PYSeriesTypeLine       = @"line";
+PYSeriesType const PYSeriesTypeBar        = @"bar";
+PYSeriesType const PYSeriesTypeScatter    = @"scatter";
+PYSeriesType const PYSeriesTypeK          = @"k";
+PYSeriesType const PYSeriesTypePie        = @"pie";
+PYSeriesType const PYSeriesTypeRadar      = @"radar";
+PYSeriesType const PYSeriesTypeChord      = @"chord";
+PYSeriesType const PYSeriesTypeForce      = @"force";
+PYSeriesType const PYSeriesTypeMap        = @"map";
+PYSeriesType const PYSeriesTypeWordCloud  = @"wordCloud";
+PYSeriesType const PYSeriesTypeVenn       = @"venn";
+PYSeriesType const PYSeriesTypeTreemap    = @"treemap";
+PYSeriesType const PYSeriesTypeGauge      = @"gauge";
+PYSeriesType const PYSeriesTypeEventRiver = @"eventRiver";
+PYSeriesType const PYSeriesTypeFunnel     = @"funnel";
+PYSeriesType const PYSeriesTypeHeatmap    = @"heatmap";
+PYSeriesType const PYSeriesTypeTree       = @"tree";
 
 static NSArray<PYSeriesType> *seriesTypeScope;
 @interface PYSeries()
@@ -32,7 +36,7 @@ static NSArray<PYSeriesType> *seriesTypeScope;
 + (void)initialize
 {
     if (self == [PYSeries class]) {
-        seriesTypeScope = @[PYSeriesTypeLine, PYSeriesTypeBar, PYSeriesTypeScatter, PYSeriesTypeK, PYSeriesTypePie, PYSeriesTypeRadar, PYSeriesTypeChord, PYSeriesTypeForce, PYSeriesTypeMap, PYSeriesTypeWordCloud, PYSeriesTypeVenn, PYSeriesTypeTreemap, PYSeriesTypeGauge];
+        seriesTypeScope = @[PYSeriesTypeLine, PYSeriesTypeBar, PYSeriesTypeScatter, PYSeriesTypeK, PYSeriesTypePie, PYSeriesTypeRadar, PYSeriesTypeChord, PYSeriesTypeForce, PYSeriesTypeMap, PYSeriesTypeWordCloud, PYSeriesTypeVenn, PYSeriesTypeTreemap, PYSeriesTypeGauge, PYSeriesTypeEventRiver, PYSeriesTypeFunnel, PYSeriesTypeHeatmap, PYSeriesTypeTree];
     }
 }
 

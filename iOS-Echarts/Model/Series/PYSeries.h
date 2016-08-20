@@ -27,6 +27,10 @@ extern PYSeriesType const PYSeriesTypeWordCloud;
 extern PYSeriesType const PYSeriesTypeVenn;
 extern PYSeriesType const PYSeriesTypeTreemap;
 extern PYSeriesType const PYSeriesTypeGauge;
+extern PYSeriesType const PYSeriesTypeEventRiver;
+extern PYSeriesType const PYSeriesTypeFunnel;
+extern PYSeriesType const PYSeriesTypeHeatmap;
+extern PYSeriesType const PYSeriesTypeTree;
 
 /**
  *
