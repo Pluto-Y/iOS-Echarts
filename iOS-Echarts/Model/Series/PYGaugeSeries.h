@@ -67,7 +67,7 @@
 @property (nonatomic, strong) PYAxisTick *axisTick;
 @property (nonatomic, strong) PYAxisLabel *axisLabel;
 @property (nonatomic, copy) PYGaugeSpliteLine *splitLine;
-@property (nonatomic, copy) NSDictionary *pointer;
+@property (nonatomic, copy) PYGaugePointer *pointer;
 @property (nonatomic, strong) PYGaugeTitle *title;
 @property (nonatomic, strong) PYGaugeDetail *detail;
 @property (nonatomic, assign) BOOL legendHoverLink;
