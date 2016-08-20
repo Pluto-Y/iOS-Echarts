@@ -26,6 +26,7 @@ extern PYSeriesType const PYSeriesTypeMap;
 extern PYSeriesType const PYSeriesTypeWordCloud;
 extern PYSeriesType const PYSeriesTypeVenn;
 extern PYSeriesType const PYSeriesTypeTreemap;
+extern PYSeriesType const PYSeriesTypeGauge;
 
 /**
  *
