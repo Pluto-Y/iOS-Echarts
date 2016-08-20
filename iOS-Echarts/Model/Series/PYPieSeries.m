@@ -25,6 +25,7 @@ static NSArray<PYPieSeriesRoseType> *pieSeriesRoleTypeScope;
 {
     self = [super init];
     if (self) {
+        self.type = PYSeriesTypePie;
         _center = @[@"50%", @"50%"];
         _radius = @[@"0", @"75%"];
         _startAngle = @(90);

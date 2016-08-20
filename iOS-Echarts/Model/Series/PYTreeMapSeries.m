@@ -13,6 +13,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        self.type = PYSeriesTypeTreemap;
         _center = @[@"50%", @"50%"];
         _size = @[@"80%", @"80%"];
         _root = @"";

@@ -10,4 +10,13 @@
 
 @implementation PYWordCloudSeries
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.type = PYSeriesTypeWordCloud;
+    }
+    return self;
+}
+
 @end

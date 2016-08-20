@@ -25,6 +25,7 @@ NSString * const PYForceSeriesRoamMove = @"move";
     if (self) {
         // the data property is useless in force series
         self.data = nil;
+        self.type = PYSeriesTypeForce;
         _nodes = [NSMutableArray new];
         _links = [NSMutableArray new];
         _center = @[@"50%", @"50%"];

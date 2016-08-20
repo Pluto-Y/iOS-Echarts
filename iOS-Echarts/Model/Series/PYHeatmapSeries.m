@@ -14,6 +14,7 @@
 {
     self = [super init];
     if (self) {
+        self.type = PYSeriesTypeHeatmap;
         _blurSize = @30;
         _gradientColors = @[@"blue", @"cyan", @"lime", @"yellow", @"red"];
         _minAlpha = @0.05;

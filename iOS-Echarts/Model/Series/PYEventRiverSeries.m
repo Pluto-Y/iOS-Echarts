@@ -13,6 +13,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        self.type = PYSeriesTypeEventRiver;
         _xAxisIndex = 0;
         _weight = @(1);
         _legendHoverLink = YES;

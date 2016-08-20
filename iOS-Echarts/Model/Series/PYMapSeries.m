@@ -25,6 +25,7 @@ static NSArray<PYMapSeriesMapValueCalculation> *mapValueCalculationScope;
 {
     self = [super init];
     if (self) {
+        self.type = PYSeriesTypeMap;
         _mapType = @"China";
         _hoverable = YES;
         _dataRangeHoverLink = YES;

@@ -24,6 +24,7 @@ static NSArray *funnelSeriesSortScope;
 - (instancetype)init {
     self = [super init];
     if (self) {
+        self.type = PYSeriesTypeFunnel;
         _x = @(80);
         _y = @(60);
         _x2 = @(80);

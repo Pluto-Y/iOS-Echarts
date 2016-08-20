@@ -14,6 +14,7 @@
 {
     self = [super init];
     if (self) {
+        self.type = PYSeriesTypeRadar;
         _polarIndex = (0);
         _symbolSize = @(2);
         _legendHoverLink = YES;

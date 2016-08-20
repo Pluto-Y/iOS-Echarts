@@ -10,4 +10,13 @@
 
 @implementation PYVennSeries
 
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        self.type = PYSeriesTypeVenn;
+    }
+    return self;
+}
+
 @end

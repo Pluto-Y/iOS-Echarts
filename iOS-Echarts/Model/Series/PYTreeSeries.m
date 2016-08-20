@@ -18,6 +18,7 @@
 {
     self = [super init];
     if (self) {
+        self.type = PYSeriesTypeTree;
         _layerPadding = @100;
         _nodePadding = @30;
         _orient = @"vertical";

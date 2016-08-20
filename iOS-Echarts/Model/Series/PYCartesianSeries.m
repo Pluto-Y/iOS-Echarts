@@ -27,6 +27,7 @@ static NSArray<PYCartesianSeriesDataFilter> *cartesianSeriesDataFilterScope;
 {
     self = [super init];
     if (self) {
+        self.type = PYSeriesTypeLine;
         _barGap = @"30%";
         _barCategoryGap = @"30%";
         _showAllSymbol = NO;

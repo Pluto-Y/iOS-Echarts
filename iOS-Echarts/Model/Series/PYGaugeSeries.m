@@ -87,6 +87,7 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
+        self.type = PYSeriesTypeGauge;
         _center = @[@"50%", @"50%"];
         _radius = @[@"0", @"75%"];
         _startAngle = @(225);
