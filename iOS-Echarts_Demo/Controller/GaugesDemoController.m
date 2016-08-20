@@ -213,7 +213,10 @@ typedef NS_ENUM(NSInteger, GaugesDemoTypeTag) {
     series.axisLabel.textStyle.fontSize = @10;
     series.axisLabel.textStyle.fontWeight = PYTextStyleFontWeightBolder;
     
-    series.pointer = @{@"width":@25, @"length":@"90%", @"color":@"rgba(255,255,255,0.8)"};
+    series.pointer = [[PYGaugePointer alloc] init];
+    series.pointer.width = @25;
+    series.pointer.length = @"90%";
+    series.pointer.color = PYRGBA(255, 255, 255, 0.8);
     series.title = [[PYGaugeTitle alloc] init];
     series.title.show = YES;
     series.title.offsetCenter = @[@0, @"-50%"];
@@ -243,7 +246,184 @@ typedef NS_ENUM(NSInteger, GaugesDemoTypeTag) {
 }
 
 - (void)showMultipleAngularGauges1Demo {
+    PYOption *option = [[PYOption alloc] init];
+    option.tooltip = [[PYTooltip alloc] init];
+    option.tooltip.formatter = @"{a} <br/>{b} : {c}%";
+    option.toolbox = [[PYToolbox alloc] init];
+    option.toolbox.show = YES;
+    option.toolbox.feature = [[PYToolboxFeature alloc] init];
+    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
+    option.toolbox.feature.mark.show = YES;
+    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
+    option.toolbox.feature.restore.show = YES;
     
+    PYGaugeSeries *series1 = [[PYGaugeSeries alloc] init];
+    series1.name = @"速度";
+    series1.type = PYSeriesTypeGauge;
+    series1.z = @3;
+    series1.min = @0;
+    series1.max = @220;
+    series1.radius = @"60%";
+    series1.splitNumber = @11;
+    series1.axisLine = [[PYAxisLine alloc] init];
+    series1.axisLine.lineStyle = [[PYLineStyle alloc] init];
+    series1.axisLine.lineStyle.width = @10;
+    series1.axisTick = [[PYAxisTick alloc] init];
+    series1.axisTick.length = @15;
+    series1.axisTick.lineStyle = [[PYLineStyle alloc] init];
+    series1.axisTick.lineStyle.color = @"auto";
+    series1.splitLine = [[PYGaugeSpliteLine alloc] init];
+    series1.splitLine.length = @20;
+    series1.splitLine.lineStyle = [[PYLineStyle alloc] init];
+    series1.title = [[PYGaugeTitle alloc] init];
+    series1.title.textStyle = [[PYTextStyle alloc] init];
+    series1.title.offsetCenter = @[@"0", @"-35%"];
+    series1.title.textStyle.fontWeight = PYTextStyleFontWeightBolder;
+    series1.title.textStyle.fontSize = @12;
+    series1.title.textStyle.fontStyle = @"italic";
+    series1.detail = [[PYGaugeDetail alloc] init];
+    series1.detail.textStyle = [[PYTextStyle alloc] init];
+    series1.detail.textStyle.fontWeight = PYTextStyleFontWeightBolder;
+    series1.data = @[@{@"value":@40, @"name":@"km/h"}];
+    
+    PYGaugeSeries *series2 =[[PYGaugeSeries alloc] init];
+    series2.name = @"转速";
+    series2.type = PYSeriesTypeGauge;
+    series2.center = @[@"15%", @"55%"];
+    series2.radius = @"45%";
+    series2.min = @0;
+    series2.max = @7;
+    series2.endAngle = @45;
+    series2.splitNumber = @7;
+    series2.axisLine = [[PYAxisLine alloc] init];
+    series2.axisLine.lineStyle = [[PYLineStyle alloc] init];
+    series2.axisLine.lineStyle.width = @8;
+    series2.axisTick = [[PYAxisTick alloc] init];
+    series2.axisTick.length = @12;
+    series2.axisTick.lineStyle = [[PYLineStyle alloc] init];
+    series2.axisTick.lineStyle.color = @"auto";
+    series2.splitLine = [[PYGaugeSpliteLine alloc] init];
+    series2.splitLine.length = @20;
+    series2.splitLine.lineStyle = [[PYLineStyle alloc] init];
+    series2.splitLine.lineStyle.color = @"auto";
+    series2.pointer = [[PYGaugePointer alloc] init];
+    series2.pointer.width = @5;
+    series2.title = [[PYGaugeTitle alloc] init];
+    series2.title.offsetCenter = @[@0, @"-20%"];
+    series2.title.textStyle = [[PYTextStyle alloc] init];
+    series2.title.textStyle.fontSize = @8;
+    series2.detail = [[PYGaugeDetail alloc] init];
+    series2.detail.textStyle = [[PYTextStyle alloc] init];
+    series2.detail.textStyle.fontWeight = PYTextStyleFontWeightBolder;
+    series2.data = @[@{@"value":@1.5, @"name":@"x1000 r/min"}];
+    
+    PYGaugeSeries *series3 =[[PYGaugeSeries alloc] init];
+    series3.name = @"油表";
+    series3.type = PYSeriesTypeGauge;
+    series3.center = @[@"85%", @"50%"];
+    series3.radius = @"45%";
+    series3.min = @0;
+    series3.max = @2;
+    series3.startAngle = @135;
+    series3.endAngle = @45;
+    series3.splitNumber = @2;
+    series3.axisLine = [[PYAxisLine alloc] init];
+    series3.axisLine.lineStyle = [[PYLineStyle alloc] init];
+    series3.axisLine.lineStyle.color = @[
+                                         @[@0.2, [PYColor colorWithHexString:@"#ff4500"]],
+                                         @[@0.8, [PYColor colorWithHexString:@"#48b"]],
+                                         @[@1, [PYColor colorWithHexString:@"#228b22"]]
+                                         ];
+    series3.axisLine.lineStyle.width = @8;
+    series3.axisTick = [[PYAxisTick alloc] init];
+    series3.axisTick.splitNumber = @5;
+    series3.axisTick.length = @10;
+    series3.axisTick.lineStyle = [[PYLineStyle alloc] init];
+    series3.axisTick.lineStyle.color = @"auto";
+    series3.axisLabel = [[PYAxisLabel alloc] init];
+    series3.axisLabel.formatter = @"(function(v){switch (v + \'\') {case \'0\' : return \'E\';case \'1\' : return \'Gas\';case \'2\' : return \'F\';}})";
+    series3.splitLine = [[PYGaugeSpliteLine alloc] init];
+    series3.splitLine.length = @15;
+    series3.splitLine.lineStyle = [[PYLineStyle alloc] init];
+    series3.splitLine.lineStyle.color = @"auto";
+    series3.pointer = [[PYGaugePointer alloc] init];
+    series3.pointer.width = @2;
+    series3.title = [[PYGaugeTitle alloc] init];
+    series3.title.show = NO;
+    series3.detail = [[PYGaugeDetail alloc] init];
+    series3.detail.show = NO;
+    series3.data = @[@{@"value":@0.5, @"name":@"gas"}];
+    
+    
+    PYGaugeSeries *series4 = [[PYGaugeSeries alloc] init];
+    series4.name = @"水表";
+    series4.type = PYSeriesTypeGauge;
+    series4.center = @[@"85%", @"50%"];
+    series4.radius = @"45%";
+    series4.min = @0;
+    series4.max = @2;
+    series4.startAngle = @315;
+    series4.endAngle = @225;
+    series4.splitNumber = @2;
+    series4.axisLine = [[PYAxisLine alloc] init];
+    series4.axisLine.lineStyle = [[PYLineStyle alloc] init];
+    series4.axisLine.lineStyle.color = @[
+                                         @[@0.2, [PYColor colorWithHexString:@"#ff4500"]],
+                                         @[@0.8, [PYColor colorWithHexString:@"#48b"]],
+                                         @[@1, [PYColor colorWithHexString:@"#228b22"]]
+                                         ];
+    series4.axisLine.lineStyle.width = @8;
+    series4.axisTick = [[PYAxisTick alloc] init];
+    series4.axisTick.show = NO;
+    series4.axisLabel = [[PYAxisLabel alloc] init];
+    series4.axisLabel.formatter = @"(function(v){switch (v + \'\') {case \'0\' : return \'H\';case \'1\' : return \'Water\';case \'2\' : return \'C\';}})";
+    series4.splitLine = [[PYGaugeSpliteLine alloc] init];
+    series4.splitLine.length = @15;
+    series4.splitLine.lineStyle = [[PYLineStyle alloc] init];
+    series4.splitLine.lineStyle.color = @"auto";
+    series4.pointer = [[PYGaugePointer alloc] init];
+    series4.pointer.width = @2;
+    series4.title = [[PYGaugeTitle alloc] init];
+    series4.title.show = NO;
+    series4.detail = [[PYGaugeDetail alloc] init];
+    series4.detail.show = NO;
+    series4.data = @[@{@"value":@0.5, @"name":@"gas"}];
+    
+    option.series = [[NSMutableArray alloc] initWithArray:@[series1, series2, series3, series4]];
+    
+    _option = option;
+    [_echartsView setOption:_option];
+    
+    _timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(multipleAngularGaugesTimerTick) userInfo:nil repeats:YES];
+}
+
+- (void)multipleAngularGaugesTimerTick {
+    PYGaugeSeries *series1 = _option.series[0];
+    NSMutableDictionary *dataDic1 = [[NSMutableDictionary alloc] initWithDictionary:series1.data[0]];
+    float value1 = arc4random_uniform(10000)/100.0;
+    dataDic1[@"value"] = @(value1);
+    series1.data = @[dataDic1];
+    
+    PYGaugeSeries *series2 = _option.series[1];
+    NSMutableDictionary *dataDic2 = [[NSMutableDictionary alloc] initWithDictionary:series2.data[0]];
+    float value2 = arc4random_uniform(700)/100.0;
+    dataDic2[@"value"] = @(value2);
+    series2.data = @[dataDic2];
+    
+    PYGaugeSeries *series3 = _option.series[2];
+    NSMutableDictionary *dataDic3 = [[NSMutableDictionary alloc] initWithDictionary:series3.data[0]];
+    float value3 = arc4random_uniform(200)/100.0;
+    dataDic3[@"value"] = @(value3);
+    series3.data = @[dataDic3];
+    
+    PYGaugeSeries *series4 = _option.series[3];
+    NSMutableDictionary *dataDic4 = [[NSMutableDictionary alloc] initWithDictionary:series4.data[0]];
+    float value4 = arc4random_uniform(200)/100.0;
+    dataDic4[@"value"] = @(value4);
+    series4.data = @[dataDic4];
+    
+    _option.series = [[NSMutableArray alloc] initWithArray:@[series1, series2, series3, series4]];
+    [_echartsView refreshEchartsWithOption:_option];
 }
 
 - (void)showMultipleAngularGauges2Demo {
