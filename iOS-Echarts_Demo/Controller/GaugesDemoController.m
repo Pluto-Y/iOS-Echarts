@@ -119,7 +119,64 @@ typedef NS_ENUM(NSInteger, GaugesDemoTypeTag) {
 }
 
 - (void)showBasicAngularGauge2Demo {
+    PYOption *option = [[PYOption alloc] init];
+    option.tooltip = [[PYTooltip alloc] init];
+    option.tooltip.formatter = @"{a} <br/>{b} : {c}%";
+    option.toolbox = [[PYToolbox alloc] init];
+    option.toolbox.show = YES;
+    option.toolbox.feature = [[PYToolboxFeature alloc] init];
+    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
+    option.toolbox.feature.mark.show = YES;
+    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
+    option.toolbox.feature.restore.show = YES;
+    PYGaugeSeries *series = [[PYGaugeSeries alloc] init];
+    series.name = @"业务指标";
+    series.type = PYSeriesTypeGauge;
+    series.splitNumber = @10;
+    series.axisLine = [[PYAxisLine alloc] init];
+    series.axisLine.lineStyle = [[PYLineStyle alloc] init];
+    series.axisLine.lineStyle.color = @[@[@0.2, [PYColor colorWithHexString:@"#228b22"], @[@0.8, [PYColor colorWithHexString:@"#48b"]], @[@1, [PYColor colorWithHexString:@"ff4500"]]]];
+    series.axisLine.lineStyle.width = @8;
     
+    series.axisTick = [[PYAxisTick alloc] init];
+    series.axisTick.show = YES;
+    series.axisTick.splitNumber = @10;
+    series.axisTick.length = @12;
+    series.axisTick.lineStyle = [[PYLineStyle alloc] init];
+    series.axisTick.lineStyle.color = @"auto";
+    series.axisTick.lineStyle.width = @1;
+    series.axisTick.lineStyle.type = PYLineStyleTypeSolid;
+    
+    series.axisLabel = [[PYAxisLabel alloc] init];
+    series.axisLabel.textStyle = [[PYTextStyle alloc] init];
+    series.axisLabel.textStyle.color = @"auto";
+    
+    series.splitLine = [[PYGaugeSpliteLine alloc] init];
+    series.splitLine.show = YES;
+    series.splitLine.length = @20;
+    series.splitLine.lineStyle = [[PYLineStyle alloc] init];
+    series.splitLine.lineStyle.color = @"auto";
+    
+    series.title = [[PYGaugeTitle alloc] init];
+    series.title.show = YES;
+    series.title.offsetCenter = @[@0, @"-40%"];
+    series.title.textStyle = [[PYTextStyle alloc] init];
+    series.title.textStyle.fontWeight = PYTextStyleFontWeightBolder;
+    
+    
+    series.detail = [[PYGaugeDetail alloc] init];
+    series.detail.formatter = @"{value}%";
+    series.detail.textStyle = [[PYTextStyle alloc] init];
+    series.detail.textStyle.color = @"auto";
+    series.detail.textStyle.fontWeight= PYTextStyleFontWeightBolder;
+    
+    series.data = @[@{@"value":@50, @"name":@"完成率"}];
+    
+    option.series = [[NSMutableArray alloc] initWithObjects:series, nil];
+    _option = option;
+    [_echartsView setOption:_option];
+    
+    _timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(angularGauge1DemoTimerTicket) userInfo:nil repeats:YES];
 }
 
 - (void)showBasicAngularGauge3Demo {
