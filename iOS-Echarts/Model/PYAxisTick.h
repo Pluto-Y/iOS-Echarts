@@ -20,6 +20,7 @@
 
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, strong) id interval;
+@property (nonatomic, strong) NSNumber *splitNumber;
 @property (nonatomic, assign) BOOL onGap;
 @property (nonatomic, assign) BOOL inside;
 @property (nonatomic, strong) NSNumber *length;
