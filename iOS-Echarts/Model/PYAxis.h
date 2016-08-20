@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "PYAxisLine.h"
 #import "PYAxisLabel.h"
-#import "PYSplitLine.h"
+#import "PYAxisSplitLine.h"
 #import "PYAxisTick.h"
 #import "PYTextStyle.h"
 #import "PYSplitArea.h"
@@ -47,7 +47,7 @@ extern PYAxisType const PYAxisTypeLog;
 @property (nonatomic, strong) PYAxisLine *axisLine;
 @property (nonatomic, strong) PYAxisTick *axisTick;
 @property (nonatomic, strong) PYAxisLabel *axisLabel;
-@property (nonatomic, strong) PYSplitLine *splitLine;
+@property (nonatomic, strong) PYAxisSplitLine *splitLine;
 @property (nonatomic, strong) PYSplitArea *splitArea;
 @property (nonatomic, copy) NSArray *data;
 

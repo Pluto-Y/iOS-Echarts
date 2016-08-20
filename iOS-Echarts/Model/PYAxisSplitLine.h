@@ -16,7 +16,7 @@
  *  http://echarts.baidu.com/echarts2/doc/doc.html#AxisSplitline
  *
  */
-@interface PYSplitLine : NSObject
+@interface PYAxisSplitLine : NSObject
 
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, assign) BOOL onGap;

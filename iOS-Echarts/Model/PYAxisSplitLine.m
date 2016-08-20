@@ -6,10 +6,10 @@
 //  Copyright (c) 2015年 pluto-y. All rights reserved.
 //
 
-#import "PYSplitLine.h"
+#import "PYAxisSplitLine.h"
 #import "PYLineStyle.h"
 
-@implementation PYSplitLine
+@implementation PYAxisSplitLine
 
 - (instancetype)init
 {

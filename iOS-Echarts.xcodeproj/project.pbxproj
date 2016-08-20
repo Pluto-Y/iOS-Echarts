@@ -62,7 +62,7 @@
 		6F4D58F31D4FE34F00246943 /* PYPolar.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D589A1D4FE34F00246943 /* PYPolar.m */; };
 		6F4D58F41D4FE34F00246943 /* PYRoamController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D589C1D4FE34F00246943 /* PYRoamController.m */; };
 		6F4D58F51D4FE34F00246943 /* PYSplitArea.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D589E1D4FE34F00246943 /* PYSplitArea.m */; };
-		6F4D58F61D4FE34F00246943 /* PYSplitLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58A01D4FE34F00246943 /* PYSplitLine.m */; };
+		6F4D58F61D4FE34F00246943 /* PYAxisSplitLine.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58A01D4FE34F00246943 /* PYAxisSplitLine.m */; };
 		6F4D58F71D4FE34F00246943 /* PYTextStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58A21D4FE34F00246943 /* PYTextStyle.m */; };
 		6F4D58F81D4FE34F00246943 /* PYTimeline.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58A41D4FE34F00246943 /* PYTimeline.m */; };
 		6F4D58F91D4FE34F00246943 /* PYTitle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58A61D4FE34F00246943 /* PYTitle.m */; };
@@ -218,8 +218,8 @@
 		6F4D589C1D4FE34F00246943 /* PYRoamController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYRoamController.m; sourceTree = "<group>"; };
 		6F4D589D1D4FE34F00246943 /* PYSplitArea.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSplitArea.h; sourceTree = "<group>"; };
 		6F4D589E1D4FE34F00246943 /* PYSplitArea.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSplitArea.m; sourceTree = "<group>"; };
-		6F4D589F1D4FE34F00246943 /* PYSplitLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYSplitLine.h; sourceTree = "<group>"; };
-		6F4D58A01D4FE34F00246943 /* PYSplitLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYSplitLine.m; sourceTree = "<group>"; };
+		6F4D589F1D4FE34F00246943 /* PYAxisSplitLine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYAxisSplitLine.h; sourceTree = "<group>"; };
+		6F4D58A01D4FE34F00246943 /* PYAxisSplitLine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYAxisSplitLine.m; sourceTree = "<group>"; };
 		6F4D58A11D4FE34F00246943 /* PYTextStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYTextStyle.h; sourceTree = "<group>"; };
 		6F4D58A21D4FE34F00246943 /* PYTextStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYTextStyle.m; sourceTree = "<group>"; };
 		6F4D58A31D4FE34F00246943 /* PYTimeline.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYTimeline.h; sourceTree = "<group>"; };
@@ -528,8 +528,8 @@
 				6F4D589C1D4FE34F00246943 /* PYRoamController.m */,
 				6F4D589D1D4FE34F00246943 /* PYSplitArea.h */,
 				6F4D589E1D4FE34F00246943 /* PYSplitArea.m */,
-				6F4D589F1D4FE34F00246943 /* PYSplitLine.h */,
-				6F4D58A01D4FE34F00246943 /* PYSplitLine.m */,
+				6F4D589F1D4FE34F00246943 /* PYAxisSplitLine.h */,
+				6F4D58A01D4FE34F00246943 /* PYAxisSplitLine.m */,
 				6F4D58A11D4FE34F00246943 /* PYTextStyle.h */,
 				6F4D58A21D4FE34F00246943 /* PYTextStyle.m */,
 				6F4D58A31D4FE34F00246943 /* PYTimeline.h */,
@@ -779,7 +779,7 @@
 				6F4D58FD1D4FE34F00246943 /* PYCartesianSeries.m in Sources */,
 				6FDCE6F81D61FED900F580FD /* TreemapDemoController.m in Sources */,
 				6C0658E51BB85B4F003CAAE5 /* BarDemoController.m in Sources */,
-				6F4D58F61D4FE34F00246943 /* PYSplitLine.m in Sources */,
+				6F4D58F61D4FE34F00246943 /* PYAxisSplitLine.m in Sources */,
 				6F4D59001D4FE34F00246943 /* PYFunnelSeries.m in Sources */,
 				6F4D59061D4FE34F00246943 /* PYPieSeries.m in Sources */,
 				6F4D58EB1D4FE34F00246943 /* PYLineStyle.m in Sources */,

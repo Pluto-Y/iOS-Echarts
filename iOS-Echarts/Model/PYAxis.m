@@ -38,7 +38,7 @@ static NSArray<PYAxisType> *axisTypeSupported;
         _data = [[NSArray alloc] init];
         _axisLine = [[PYAxisLine alloc] init];
         _axisLabel = [[PYAxisLabel alloc] init];
-        _splitLine = [[PYSplitLine alloc] init];
+        _splitLine = [[PYAxisSplitLine alloc] init];
     }
     return self;
 }

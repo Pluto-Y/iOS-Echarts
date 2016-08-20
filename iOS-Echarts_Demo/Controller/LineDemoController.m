@@ -96,7 +96,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     PYAxis *xAxis = [[PYAxis alloc] init];
     xAxis.type = @"category";
     xAxis.name = @"x";
-    xAxis.splitLine = [[PYSplitLine alloc] init];
+    xAxis.splitLine = [[PYAxisSplitLine alloc] init];
     xAxis.splitLine.show = NO;
     xAxis.data = @[@"一",@"二",@"三",@"四",@"五",@"六",@"七",@"八",@"九"];
     option.xAxis = [[NSMutableArray alloc] initWithObjects:xAxis, nil];
