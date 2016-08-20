@@ -13,6 +13,24 @@
 #import "PYAxisTick.h"
 #import "PYAxisLabel.h"
 
+@implementation PYGaugeSpliteLine
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        _show = YES;
+        _length = @30;
+        _lineStyle = [[PYLineStyle alloc] init];
+        _lineStyle.color = [PYColor colorWithHexString:@"#eee"];
+        _lineStyle.width = @2;
+        _lineStyle.type = PYLineStyleTypeSolid;
+    }
+    return self;
+}
+
+@end
+
 @implementation PYGaugeDetail
 
 - (instancetype)init {

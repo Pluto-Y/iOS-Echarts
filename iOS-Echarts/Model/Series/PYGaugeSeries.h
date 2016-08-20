@@ -8,7 +8,15 @@
 
 #import "PYSeries.h"
 
-@class PYAxisLine, PYAxisLabel, PYAxisTick, PYTextStyle, PYColor;
+@class PYAxisLine, PYAxisLabel, PYAxisTick, PYTextStyle, PYColor, PYLineStyle;
+
+@interface PYGaugeSpliteLine : NSObject
+
+@property (nonatomic, assign) BOOL show;
+@property (nonatomic, strong) NSNumber *length;
+@property (nonatomic, strong) PYLineStyle *lineStyle;
+
+@end
 
 @interface PYGaugeDetail : NSObject
 
@@ -58,7 +66,7 @@
 @property (nonatomic, strong) PYAxisLine *axisLine;
 @property (nonatomic, strong) PYAxisTick *axisTick;
 @property (nonatomic, strong) PYAxisLabel *axisLabel;
-@property (nonatomic, copy) NSDictionary *splitLine;
+@property (nonatomic, copy) PYGaugeSpliteLine *splitLine;
 @property (nonatomic, copy) NSDictionary *pointer;
 @property (nonatomic, strong) PYGaugeTitle *title;
 @property (nonatomic, strong) PYGaugeDetail *detail;
