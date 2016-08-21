@@ -157,6 +157,13 @@
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kdd-Fm-Rul"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="10012" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQ3-xg-ofq">
+                                <rect key="frame" x="218" y="249" width="45" height="30"/>
+                                <state key="normal" title="漏斗图"/>
+                                <connections>
+                                    <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HxD-rE-i8d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -181,9 +188,11 @@
                             <constraint firstItem="TJ0-jm-4Cy" firstAttribute="centerX" secondItem="qpi-4Q-kVe" secondAttribute="centerX" id="pIR-GS-kxH"/>
                             <constraint firstItem="x9J-ow-V3G" firstAttribute="centerX" secondItem="DWi-xk-cHA" secondAttribute="centerX" id="q3c-1J-7Xj"/>
                             <constraint firstItem="aJX-aJ-ZQR" firstAttribute="top" secondItem="AiU-vF-ufv" secondAttribute="bottom" constant="8" id="r68-Vc-M3p"/>
+                            <constraint firstItem="EQ3-xg-ofq" firstAttribute="centerX" secondItem="4iR-tp-UNC" secondAttribute="centerX" id="uHS-BF-fLt"/>
                             <constraint firstItem="x9J-ow-V3G" firstAttribute="top" secondItem="DWi-xk-cHA" secondAttribute="bottom" constant="8" id="wqE-PO-xN2"/>
                             <constraint firstItem="29j-oJ-6g2" firstAttribute="centerX" secondItem="TJ0-jm-4Cy" secondAttribute="centerX" id="xoE-bq-irG"/>
                             <constraint firstItem="4iR-tp-UNC" firstAttribute="top" secondItem="29j-oJ-6g2" secondAttribute="bottom" constant="8" id="xre-q7-hFh"/>
+                            <constraint firstItem="EQ3-xg-ofq" firstAttribute="top" secondItem="4iR-tp-UNC" secondAttribute="bottom" constant="8" id="y37-7h-ssO"/>
                             <constraint firstItem="wtY-4D-J1e" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="1.5" id="yDD-LO-isz"/>
                             <constraint firstItem="4iR-tp-UNC" firstAttribute="centerX" secondItem="29j-oJ-6g2" secondAttribute="centerX" id="ydH-xQ-2Bf"/>
                             <constraint firstItem="CbF-qF-UwD" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="z5W-C5-xfj"/>

@@ -98,6 +98,8 @@
 		6F9391AE1D42414800CD54FC /* ForceDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9391AC1D42414800CD54FC /* ForceDemoController.xib */; };
 		6FA439A81D64E4F500FE5D9F /* GaugesDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA439A61D64E4F500FE5D9F /* GaugesDemoController.m */; };
 		6FA439A91D64E4F500FE5D9F /* GaugesDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FA439A71D64E4F500FE5D9F /* GaugesDemoController.xib */; };
+		6FA439E91D6A084400FE5D9F /* FunnelDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA439E71D6A084400FE5D9F /* FunnelDemoController.m */; };
+		6FA439EA1D6A084400FE5D9F /* FunnelDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FA439E81D6A084400FE5D9F /* FunnelDemoController.xib */; };
 		6FC0911B1D5A464200D52879 /* WordCloudDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC091191D5A464200D52879 /* WordCloudDemoController.m */; };
 		6FC0911C1D5A464200D52879 /* WordCloudDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC0911A1D5A464200D52879 /* WordCloudDemoController.xib */; };
 		6FC091321D60C39C00D52879 /* VennDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC091301D60C39C00D52879 /* VennDemoController.m */; };
@@ -284,6 +286,9 @@
 		6FA439A51D64E4F500FE5D9F /* GaugesDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaugesDemoController.h; sourceTree = "<group>"; };
 		6FA439A61D64E4F500FE5D9F /* GaugesDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugesDemoController.m; sourceTree = "<group>"; };
 		6FA439A71D64E4F500FE5D9F /* GaugesDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GaugesDemoController.xib; sourceTree = "<group>"; };
+		6FA439E61D6A084400FE5D9F /* FunnelDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnelDemoController.h; sourceTree = "<group>"; };
+		6FA439E71D6A084400FE5D9F /* FunnelDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnelDemoController.m; sourceTree = "<group>"; };
+		6FA439E81D6A084400FE5D9F /* FunnelDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunnelDemoController.xib; sourceTree = "<group>"; };
 		6FC091181D5A464200D52879 /* WordCloudDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordCloudDemoController.h; sourceTree = "<group>"; };
 		6FC091191D5A464200D52879 /* WordCloudDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordCloudDemoController.m; sourceTree = "<group>"; };
 		6FC0911A1D5A464200D52879 /* WordCloudDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordCloudDemoController.xib; sourceTree = "<group>"; };
@@ -382,6 +387,9 @@
 				6FA439A51D64E4F500FE5D9F /* GaugesDemoController.h */,
 				6FA439A61D64E4F500FE5D9F /* GaugesDemoController.m */,
 				6FA439A71D64E4F500FE5D9F /* GaugesDemoController.xib */,
+				6FA439E61D6A084400FE5D9F /* FunnelDemoController.h */,
+				6FA439E71D6A084400FE5D9F /* FunnelDemoController.m */,
+				6FA439E81D6A084400FE5D9F /* FunnelDemoController.xib */,
 			);
 			name = Controller;
 			path = "iOS-Echarts_Demo/Controller";
@@ -735,6 +743,7 @@
 				6C0658DB1BB85B46003CAAE5 /* Main.storyboard in Resources */,
 				6CB02A831BBF7739002E1126 /* PieDemoController.xib in Resources */,
 				6F8A3F061D49B598008268BD /* EchartsViewCell.xib in Resources */,
+				6FA439EA1D6A084400FE5D9F /* FunnelDemoController.xib in Resources */,
 				6C0658CD1BB85B29003CAAE5 /* Info.plist in Resources */,
 				6C2805A31C27BBF80076EAFB /* RadarDemoController.xib in Resources */,
 			);
@@ -789,6 +798,7 @@
 				6F4D58FA1D4FE34F00246943 /* PYToolbox.m in Sources */,
 				6F4D59101D4FE34F00246943 /* PYEchartsView.m in Sources */,
 				6F4D58F41D4FE34F00246943 /* PYRoamController.m in Sources */,
+				6FA439E91D6A084400FE5D9F /* FunnelDemoController.m in Sources */,
 				6F4D58DF1D4FE34F00246943 /* PYAxisPointer.m in Sources */,
 				6F4D58EA1D4FE34F00246943 /* PYLegend.m in Sources */,
 				6F4D590F1D4FE34F00246943 /* PYJsonUtil.m in Sources */,

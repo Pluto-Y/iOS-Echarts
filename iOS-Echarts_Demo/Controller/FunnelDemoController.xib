@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="FunnelDemoController">
+            <connections>
+                <outlet property="echartsView" destination="Zyq-Tg-wf3" id="erX-8e-cgz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="20001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DKt-rb-k1k">
+                    <rect key="frame" x="109" y="8" width="82" height="30"/>
+                    <state key="normal" title="标准漏斗图1"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="Fhi-mg-y8G"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="20002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ihm-m1-GfB">
+                    <rect key="frame" x="117" y="46" width="67" height="30"/>
+                    <state key="normal" title="多漏斗图1"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="XkD-w0-Zbr"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="20003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2TV-om-pUV">
+                    <rect key="frame" x="116" y="84" width="69" height="30"/>
+                    <state key="normal" title="多漏斗图2"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="ipQ-7n-nOO"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="20004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3cg-fi-OH2">
+                    <rect key="frame" x="415" y="8" width="70" height="30"/>
+                    <state key="normal" title="多漏斗图3"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="BqP-fG-dyJ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="20005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UHQ-ww-uVX">
+                    <rect key="frame" x="408" y="46" width="84" height="30"/>
+                    <state key="normal" title="标准漏斗图2"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="JZK-mA-YB5"/>
+                    </connections>
+                </button>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zyq-Tg-wf3" customClass="PYEchartsView">
+                    <rect key="frame" x="0.0" y="280" width="600" height="300"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="n01-Y7-DbK"/>
+                    </constraints>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="3cg-fi-OH2" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.5" id="KMN-Qc-EFg"/>
+                <constraint firstItem="DKt-rb-k1k" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.5" id="QzO-E6-cOr"/>
+                <constraint firstItem="3cg-fi-OH2" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="STp-vF-euH"/>
+                <constraint firstItem="UHQ-ww-uVX" firstAttribute="centerX" secondItem="3cg-fi-OH2" secondAttribute="centerX" id="V9M-yI-7br"/>
+                <constraint firstItem="UHQ-ww-uVX" firstAttribute="top" secondItem="3cg-fi-OH2" secondAttribute="bottom" constant="8" id="VvW-Hu-BhU"/>
+                <constraint firstItem="Zyq-Tg-wf3" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="XRf-sg-XF1"/>
+                <constraint firstAttribute="bottom" secondItem="Zyq-Tg-wf3" secondAttribute="bottom" constant="20" id="ddA-yR-0Mo"/>
+                <constraint firstItem="Ihm-m1-GfB" firstAttribute="top" secondItem="DKt-rb-k1k" secondAttribute="bottom" constant="8" id="gSj-LA-cSD"/>
+                <constraint firstAttribute="trailing" secondItem="Zyq-Tg-wf3" secondAttribute="trailing" id="kAv-Cq-rv0"/>
+                <constraint firstItem="Ihm-m1-GfB" firstAttribute="centerX" secondItem="DKt-rb-k1k" secondAttribute="centerX" id="mlo-cb-lGF"/>
+                <constraint firstItem="2TV-om-pUV" firstAttribute="centerX" secondItem="Ihm-m1-GfB" secondAttribute="centerX" id="o3w-DO-aen"/>
+                <constraint firstItem="DKt-rb-k1k" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="vit-3d-5DE"/>
+                <constraint firstItem="2TV-om-pUV" firstAttribute="top" secondItem="Ihm-m1-GfB" secondAttribute="bottom" constant="8" id="wwN-76-9xY"/>
+            </constraints>
+            <point key="canvasLocation" x="416" y="353"/>
+        </view>
+    </objects>
+</document>
