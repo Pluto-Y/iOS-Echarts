@@ -38,6 +38,7 @@ extern PYTextStyleFontWeight const PYTextStyleFontWeightLighter;
 @property (nonatomic, strong) NSNumber *fontSize;
 @property (nonatomic, copy) PYTextStyleFontStyle fontStyle;
 @property (nonatomic, copy) id fontWeight;
-
+@property (nonatomic, strong) id shadowColor;
+@property (nonatomic, strong) NSNumber *shadowBlur;
 
 @end

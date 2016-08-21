@@ -29,6 +29,8 @@
 @property (nonatomic, copy) NSArray *offsetCenter;
 @property (nonatomic, strong) id formatter;
 @property (nonatomic, strong) PYTextStyle *textStyle;
+@property (nonatomic, strong) id shadowColor;
+@property (nonatomic, strong) NSNumber *shadowBlur;
 
 @end
 
@@ -37,11 +39,16 @@
 @property (nonatomic, copy) NSString *length;
 @property (nonatomic, strong) NSNumber *width;
 @property (nonatomic, strong) id color;
+@property (nonatomic, strong) id shadowColor;
+@property (nonatomic, strong) NSNumber *shadowBlur;
 
 @end
 
 @interface PYGaugeTitle : NSObject
 
+@property (nonatomic, strong) id color;
+@property (nonatomic, strong) id shadowColor;
+@property (nonatomic, strong) NSNumber *shadowBlur;
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, copy) NSArray *offsetCenter;
 @property (nonatomic, strong) PYTextStyle *textStyle;
