@@ -40,6 +40,8 @@
 #import "GaugesDemoController.h"
 // Funnel
 #import "FunnelDemoController.h"
+// Chord
+#import "ChordDemoController.h"
 
 
 @interface ViewController ()
@@ -205,6 +207,9 @@
             break;
         case 10012: // 漏斗图
             controller = [[FunnelDemoController alloc] init];
+            break;
+        case 10013: // 和弦图
+            controller = [[ChordDemoController alloc] init];
             break;
         case 11000: // 其他
             controller = [[OtherDemoController alloc] init];

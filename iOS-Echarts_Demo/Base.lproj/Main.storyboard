@@ -115,13 +115,6 @@
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xv2-n1-Rv8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" tag="11000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUG-2Q-8qE">
-                                <rect key="frame" x="65" y="249" width="30" height="30"/>
-                                <state key="normal" title="其他"/>
-                                <connections>
-                                    <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AGA-yJ-zxh"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" tag="10007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icm-JT-9P3">
                                 <rect key="frame" x="195" y="59" width="90" height="30"/>
                                 <state key="normal" title="力导向布局图"/>
@@ -137,7 +130,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10009" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ0-jm-4Cy">
-                                <rect key="frame" x="217.5" y="135" width="45" height="30"/>
+                                <rect key="frame" x="217" y="135" width="45" height="30"/>
                                 <state key="normal" title="韦恩图"/>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tWz-lS-f66"/>
@@ -164,6 +157,17 @@
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HxD-rE-i8d"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="10013" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHu-RG-oWf">
+                                <rect key="frame" x="57" y="249" width="45" height="30"/>
+                                <state key="normal" title="和弦图"/>
+                            </button>
+                            <button opaque="NO" tag="11000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUG-2Q-8qE">
+                                <rect key="frame" x="65" y="287" width="30" height="30"/>
+                                <state key="normal" title="其他"/>
+                                <connections>
+                                    <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AGA-yJ-zxh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -174,21 +178,23 @@
                             <constraint firstItem="qpi-4Q-kVe" firstAttribute="top" secondItem="Icm-JT-9P3" secondAttribute="bottom" constant="8" id="EZb-nT-4oD"/>
                             <constraint firstItem="qpi-4Q-kVe" firstAttribute="centerX" secondItem="Icm-JT-9P3" secondAttribute="centerX" id="G8f-So-nk5"/>
                             <constraint firstItem="S5W-J3-r7t" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="GKi-s6-ZdY"/>
-                            <constraint firstItem="NUG-2Q-8qE" firstAttribute="centerX" secondItem="x9J-ow-V3G" secondAttribute="centerX" id="H4D-fe-wf4"/>
                             <constraint firstItem="aJX-aJ-ZQR" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="LB9-Fo-rFV"/>
                             <constraint firstItem="AiU-vF-ufv" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" multiplier="0.5" id="LRb-09-FDm"/>
-                            <constraint firstItem="NUG-2Q-8qE" firstAttribute="top" secondItem="x9J-ow-V3G" secondAttribute="bottom" constant="8" id="XfS-W9-CFm"/>
                             <constraint firstItem="Icm-JT-9P3" firstAttribute="centerX" secondItem="wtY-4D-J1e" secondAttribute="centerX" id="ZvT-ih-lo4"/>
                             <constraint firstItem="wtY-4D-J1e" firstAttribute="top" secondItem="S5W-J3-r7t" secondAttribute="top" id="fZv-qP-jGd"/>
+                            <constraint firstItem="NUG-2Q-8qE" firstAttribute="centerX" secondItem="hHu-RG-oWf" secondAttribute="centerX" id="g8n-nL-xfk"/>
                             <constraint firstItem="CbF-qF-UwD" firstAttribute="top" secondItem="aJX-aJ-ZQR" secondAttribute="bottom" constant="8" id="giP-GS-QKN"/>
                             <constraint firstItem="Z0s-pS-3OI" firstAttribute="top" secondItem="kh9-bI-dsS" secondAttribute="top" id="mDX-sG-buo"/>
+                            <constraint firstItem="hHu-RG-oWf" firstAttribute="top" secondItem="x9J-ow-V3G" secondAttribute="bottom" constant="8" id="maD-AZ-ZYn"/>
                             <constraint firstItem="TJ0-jm-4Cy" firstAttribute="top" secondItem="qpi-4Q-kVe" secondAttribute="bottom" constant="8" id="n0n-Lp-ykD"/>
                             <constraint firstItem="DWi-xk-cHA" firstAttribute="top" secondItem="CbF-qF-UwD" secondAttribute="bottom" constant="8" id="oFc-S2-NWA"/>
                             <constraint firstItem="AiU-vF-ufv" firstAttribute="top" secondItem="S5W-J3-r7t" secondAttribute="bottom" constant="8" id="oZl-Fe-CxG"/>
                             <constraint firstItem="TJ0-jm-4Cy" firstAttribute="centerX" secondItem="qpi-4Q-kVe" secondAttribute="centerX" id="pIR-GS-kxH"/>
                             <constraint firstItem="x9J-ow-V3G" firstAttribute="centerX" secondItem="DWi-xk-cHA" secondAttribute="centerX" id="q3c-1J-7Xj"/>
                             <constraint firstItem="aJX-aJ-ZQR" firstAttribute="top" secondItem="AiU-vF-ufv" secondAttribute="bottom" constant="8" id="r68-Vc-M3p"/>
+                            <constraint firstItem="NUG-2Q-8qE" firstAttribute="top" secondItem="hHu-RG-oWf" secondAttribute="bottom" constant="8" id="rrw-TT-eGk"/>
                             <constraint firstItem="EQ3-xg-ofq" firstAttribute="centerX" secondItem="4iR-tp-UNC" secondAttribute="centerX" id="uHS-BF-fLt"/>
+                            <constraint firstItem="hHu-RG-oWf" firstAttribute="centerX" secondItem="x9J-ow-V3G" secondAttribute="centerX" id="uYl-qH-prh"/>
                             <constraint firstItem="x9J-ow-V3G" firstAttribute="top" secondItem="DWi-xk-cHA" secondAttribute="bottom" constant="8" id="wqE-PO-xN2"/>
                             <constraint firstItem="29j-oJ-6g2" firstAttribute="centerX" secondItem="TJ0-jm-4Cy" secondAttribute="centerX" id="xoE-bq-irG"/>
                             <constraint firstItem="4iR-tp-UNC" firstAttribute="top" secondItem="29j-oJ-6g2" secondAttribute="bottom" constant="8" id="xre-q7-hFh"/>

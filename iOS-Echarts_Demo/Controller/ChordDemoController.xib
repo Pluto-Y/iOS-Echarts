@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ChordDemoController">
+            <connections>
+                <outlet property="echartsView" destination="3ll-XP-wIS" id="ibm-ho-uQk"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="40001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="quw-mH-Jt8">
+                    <rect key="frame" x="109" y="8" width="82" height="30"/>
+                    <state key="normal" title="标准和弦图1"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="Fzx-HZ-7Md"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="40002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WZd-rM-1g4">
+                    <rect key="frame" x="105" y="46" width="90" height="30"/>
+                    <state key="normal" title="多系列和弦图"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="pMx-o7-pvB"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="40003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rTf-vd-pbp">
+                    <rect key="frame" x="108" y="84" width="84" height="30"/>
+                    <state key="normal" title="标准和弦图2"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="Heo-yE-r37"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="40004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eZ-N4-Ood">
+                    <rect key="frame" x="405" y="8" width="90" height="30"/>
+                    <state key="normal" title="非缎带和弦图"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="iku-Cm-b0c"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" tag="40005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JyS-wL-Gki">
+                    <rect key="frame" x="405.5" y="46" width="90" height="30"/>
+                    <state key="normal" title="复杂关系网络"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="S58-JK-vga"/>
+                    </connections>
+                </button>
+                <button hidden="YES" opaque="NO" tag="40006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="89f-b4-WWP">
+                    <rect key="frame" x="428" y="84" width="45" height="30"/>
+                    <state key="normal" title="和弦图"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="siJ-gx-FU1"/>
+                    </connections>
+                </button>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3ll-XP-wIS" customClass="PYEchartsView">
+                    <rect key="frame" x="0.0" y="280" width="600" height="300"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="jgr-Wq-BWk"/>
+                    </constraints>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="WZd-rM-1g4" firstAttribute="centerX" secondItem="quw-mH-Jt8" secondAttribute="centerX" id="7s4-Te-F9I"/>
+                <constraint firstItem="2eZ-N4-Ood" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="Hau-OB-02r"/>
+                <constraint firstItem="89f-b4-WWP" firstAttribute="centerX" secondItem="JyS-wL-Gki" secondAttribute="centerX" id="IYw-r0-d1T"/>
+                <constraint firstItem="2eZ-N4-Ood" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="1.5" id="JHS-IX-FTZ"/>
+                <constraint firstAttribute="bottom" secondItem="3ll-XP-wIS" secondAttribute="bottom" constant="20" id="Mnt-Mi-gE0"/>
+                <constraint firstItem="JyS-wL-Gki" firstAttribute="top" secondItem="2eZ-N4-Ood" secondAttribute="bottom" constant="8" id="MuE-KI-0El"/>
+                <constraint firstItem="JyS-wL-Gki" firstAttribute="centerX" secondItem="2eZ-N4-Ood" secondAttribute="centerX" id="V3D-ye-4Ld"/>
+                <constraint firstItem="3ll-XP-wIS" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="VeI-05-JGX"/>
+                <constraint firstAttribute="trailing" secondItem="3ll-XP-wIS" secondAttribute="trailing" id="aDZ-Xp-iaz"/>
+                <constraint firstItem="89f-b4-WWP" firstAttribute="top" secondItem="JyS-wL-Gki" secondAttribute="bottom" constant="8" id="bvB-cD-oLf"/>
+                <constraint firstItem="quw-mH-Jt8" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.5" id="cWM-mg-6il"/>
+                <constraint firstItem="quw-mH-Jt8" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="cpy-RE-mbK"/>
+                <constraint firstItem="WZd-rM-1g4" firstAttribute="top" secondItem="quw-mH-Jt8" secondAttribute="bottom" constant="8" id="dIt-pt-tON"/>
+                <constraint firstItem="rTf-vd-pbp" firstAttribute="top" secondItem="WZd-rM-1g4" secondAttribute="bottom" constant="8" id="gbT-Ng-yjP"/>
+                <constraint firstItem="rTf-vd-pbp" firstAttribute="centerX" secondItem="WZd-rM-1g4" secondAttribute="centerX" id="uR1-Kt-CZQ"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

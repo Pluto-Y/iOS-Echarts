@@ -38,6 +38,8 @@
 		6CF1AA321C02AF5600F1B773 /* ScatterDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1AA301C02AF5600F1B773 /* ScatterDemoController.m */; };
 		6CF1AA331C02AF5600F1B773 /* ScatterDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF1AA311C02AF5600F1B773 /* ScatterDemoController.xib */; };
 		6F09E9D91D6CD106006A76CD /* PYChordSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F09E9D81D6CD106006A76CD /* PYChordSeries.m */; };
+		6F09E9DD1D6CD8F6006A76CD /* ChordDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F09E9DB1D6CD8F6006A76CD /* ChordDemoController.m */; };
+		6F09E9DE1D6CD8F6006A76CD /* ChordDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F09E9DC1D6CD8F6006A76CD /* ChordDemoController.xib */; };
 		6F4D58DB1D4FE34F00246943 /* PYAreaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D586A1D4FE34F00246943 /* PYAreaStyle.m */; };
 		6F4D58DC1D4FE34F00246943 /* PYAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D586C1D4FE34F00246943 /* PYAxis.m */; };
 		6F4D58DD1D4FE34F00246943 /* PYAxisLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D586E1D4FE34F00246943 /* PYAxisLabel.m */; };
@@ -172,6 +174,9 @@
 		6CF1AA311C02AF5600F1B773 /* ScatterDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScatterDemoController.xib; sourceTree = "<group>"; };
 		6F09E9D71D6CD106006A76CD /* PYChordSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYChordSeries.h; sourceTree = "<group>"; };
 		6F09E9D81D6CD106006A76CD /* PYChordSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYChordSeries.m; sourceTree = "<group>"; };
+		6F09E9DA1D6CD8F6006A76CD /* ChordDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChordDemoController.h; sourceTree = "<group>"; };
+		6F09E9DB1D6CD8F6006A76CD /* ChordDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordDemoController.m; sourceTree = "<group>"; };
+		6F09E9DC1D6CD8F6006A76CD /* ChordDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChordDemoController.xib; sourceTree = "<group>"; };
 		6F4D58651D4FE34F00246943 /* iOS-Echarts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOS-Echarts.h"; sourceTree = "<group>"; };
 		6F4D58691D4FE34F00246943 /* PYAreaStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYAreaStyle.h; sourceTree = "<group>"; };
 		6F4D586A1D4FE34F00246943 /* PYAreaStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYAreaStyle.m; sourceTree = "<group>"; };
@@ -393,6 +398,9 @@
 				6FA439E61D6A084400FE5D9F /* FunnelDemoController.h */,
 				6FA439E71D6A084400FE5D9F /* FunnelDemoController.m */,
 				6FA439E81D6A084400FE5D9F /* FunnelDemoController.xib */,
+				6F09E9DA1D6CD8F6006A76CD /* ChordDemoController.h */,
+				6F09E9DB1D6CD8F6006A76CD /* ChordDemoController.m */,
+				6F09E9DC1D6CD8F6006A76CD /* ChordDemoController.xib */,
 			);
 			name = Controller;
 			path = "iOS-Echarts_Demo/Controller";
@@ -729,6 +737,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F9391AE1D42414800CD54FC /* ForceDemoController.xib in Resources */,
+				6F09E9DE1D6CD8F6006A76CD /* ChordDemoController.xib in Resources */,
 				6F7352BD1D50A779006CD119 /* js in Resources */,
 				6C0658E81BB85B4F003CAAE5 /* LineDemoController.xib in Resources */,
 				6CF1AA331C02AF5600F1B773 /* ScatterDemoController.xib in Resources */,
@@ -801,6 +810,7 @@
 				6F4D58E31D4FE34F00246943 /* PYDataRange.m in Sources */,
 				6F4D58E61D4FE34F00246943 /* PYItemStyle.m in Sources */,
 				6F4D58FA1D4FE34F00246943 /* PYToolbox.m in Sources */,
+				6F09E9DD1D6CD8F6006A76CD /* ChordDemoController.m in Sources */,
 				6F4D59101D4FE34F00246943 /* PYEchartsView.m in Sources */,
 				6F4D58F41D4FE34F00246943 /* PYRoamController.m in Sources */,
 				6FA439E91D6A084400FE5D9F /* FunnelDemoController.m in Sources */,
