@@ -106,7 +106,72 @@ typedef NS_ENUM(NSInteger, FunnelDemoTypeTag) {
 }
 
 - (void)showMultipleFunnelDemo1 {
+    PYOption *option = [[PYOption alloc] init];
+    option.color = @[
+                     PYRGBA(255, 69, 0, 0.5),
+                     PYRGBA(255, 150, 0, 0.5),
+                     PYRGBA(255, 200, 0, 0.5),
+                     PYRGBA(155, 200, 50, 0.5),
+                     PYRGBA(55, 200, 100, 0.5)
+                     ];
+    option.tooltip = [[PYTooltip alloc] init];
+    option.title.text = @"漏斗图";
+    option.title.subtext = @"纯属虚构";
+    option.tooltip = [[PYTooltip alloc] init];
+    option.tooltip.trigger = PYTooltipTriggerItem;
+    option.tooltip.formatter = @"{a} <br/>{b} : {c}%";
+    option.toolbox.feature = [[PYToolboxFeature alloc] init];
+    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
+    option.toolbox.feature.mark.show = YES;
+    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
+    option.toolbox.feature.dataView.show = YES;
+    option.toolbox.feature.dataView.readOnly = NO;
+    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
+    option.toolbox.feature.restore.show = YES;
+    option.legend = [[PYLegend alloc] init];
+    option.legend.data = @[@"展现", @"点击", @"访问", @"咨询", @"订单"];
+    option.calculable = YES;
     
+    PYFunnelSeries *series1 = [[PYFunnelSeries alloc] init];
+    series1.name = @"预期";
+    series1.type = PYSeriesTypeFunnel;
+    series1.x = @"15%";
+    series1.width = @"70%";
+    series1.itemStyle = [[PYItemStyle alloc] init];
+    series1.itemStyle.normal = [[PYItemStyleProp alloc] init];
+    series1.itemStyle.normal.label = [[PYLabel alloc] init];
+    series1.itemStyle.normal.label.formatter = @"{b}预期";
+    series1.itemStyle.normal.labelLine = [[PYLabelLine alloc] init];
+    series1.itemStyle.normal.labelLine.show = NO;
+    series1.itemStyle.emphasis = [[PYItemStyleProp alloc] init];
+    series1.itemStyle.emphasis.label = [[PYLabel alloc] init];
+    series1.itemStyle.emphasis.label.position = @"inside";
+    series1.itemStyle.emphasis.label.formatter = @"{b}预期 : {c}%";
+    series1.data = @[@{@"value":@60, @"name":@"访问"}, @{@"value":@40, @"name":@"咨询"}, @{@"value":@20, @"name":@"订单"}, @{@"value":@80, @"name":@"点击"}, @{@"value":@100, @"name":@"展现"}];
+    
+    PYFunnelSeries *series2 = [[PYFunnelSeries alloc] init];
+    series2.name = @"实际";
+    series2.type = PYSeriesTypeFunnel;
+    series2.x = @"15%";
+    series2.width = @"70%";
+    series2.maxSize = @"70%";
+    series2.itemStyle = [[PYItemStyle alloc] init];
+    series2.itemStyle.normal = [[PYItemStyleProp alloc] init];
+    series2.itemStyle.normal.borderColor = [PYColor colorWithHexString:@"#fff"];
+    series2.itemStyle.normal.borderWidth = @2;
+    series2.itemStyle.normal.label = [[PYLabel alloc] init];
+    series2.itemStyle.normal.label.position = @"inside";
+    series2.itemStyle.normal.label.formatter = @"{c}%";
+    series2.itemStyle.normal.label.textStyle = [[PYTextStyle alloc] init];
+    series2.itemStyle.normal.label.textStyle.color = [PYColor colorWithHexString:@"#fff"];
+    series2.itemStyle.emphasis = [[PYItemStyleProp alloc] init];
+    series2.itemStyle.emphasis.label = [[PYLabel alloc] init];
+    series2.itemStyle.emphasis.label.position = @"inside";
+    series2.itemStyle.emphasis.label.formatter = @"{b}实际 : {c}%";
+    series2.data = @[@{@"value":@30, @"name":@"访问"}, @{@"value":@10, @"name":@"咨询"}, @{@"value":@5, @"name":@"订单"}, @{@"value":@50, @"name":@"点击"}, @{@"value":@80, @"name":@"展现"}];
+    option.series = [[NSMutableArray alloc] initWithArray:@[series1, series2]];
+    
+    [_echartsView setOption:option];
 }
 
 - (void)showMultipleFunnelDemo2 {
