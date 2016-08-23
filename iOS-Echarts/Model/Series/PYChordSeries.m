@@ -14,6 +14,7 @@
 {
     self = [super init];
     if (self) {
+        self.type = PYSeriesTypeChord;
         _ribbonType = YES;
         _symbol = PYSymbolCircle;
         _minRadius = @10;
