@@ -17,7 +17,10 @@ static NSArray *funnelSeriesSortScope;
 + (void)initialize
 {
     if (self == [PYFunnelSeries class]) {
-        funnelSeriesSortScope = @[PYFunnelSeriesSortAscending, PYFunnelSeriesSortDescending];
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wdeprecated"
+        funnelSeriesSortScope = @[PYSortNone, PYSortAscending, PYSortDescending, PYFunnelSeriesSortAscending, PYFunnelSeriesSortDescending];
+#pragma clang diagnostic pop
     }
 }
 
@@ -34,16 +37,16 @@ static NSArray *funnelSeriesSortScope;
         _max = @(100);
         _minSize = @"0%";
         _maxSize = @"100%";
-        _sort = PYFunnelSeriesSortDescending;
+        _sort = PYSortDescending;
         _legendHoverLink = YES;
     }
     return self;
 }
 
-- (void)setSort:(PYFunnelSeriesSort)sort {
+- (void)setSort:(PYSort)sort {
     if (![funnelSeriesSortScope containsObject:sort]) {
         NSLog(@"ERROR: FunnelSeries does not support the sort --- %@", sort);
-        _sort = PYFunnelSeriesSortDescending;
+        _sort = PYSortDescending;
         return;
     }
     _sort = [sort copy];
