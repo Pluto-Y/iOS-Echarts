@@ -67,7 +67,7 @@
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, strong) PYToolboxFeatureMagicTypeTitle *title;
 @property (nonatomic, copy) NSDictionary<NSString *, PYOption *> *option;
-@property (nonatomic, copy) NSArray *type;
+@property (nonatomic, copy) NSArray<NSString *> *type;
 
 @end
 
