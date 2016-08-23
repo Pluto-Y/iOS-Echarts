@@ -8,10 +8,10 @@
 
 #import "PYSeries.h"
 
-typedef NSString *PYFunnelSeriesSort;
+typedef NSString *PYFunnelSeriesSort __deprecated_msg("Use PYSort instead");
 
-extern PYFunnelSeriesSort const PYFunnelSeriesSortAscending;
-extern PYFunnelSeriesSort const PYFunnelSeriesSortDescending;
+extern PYFunnelSeriesSort const PYFunnelSeriesSortAscending __deprecated_msg("Use PYSortAscending instead");
+extern PYFunnelSeriesSort const PYFunnelSeriesSortDescending __deprecated_msg("Use PYSortDescending instead");
 
 /**
  *
@@ -32,7 +32,7 @@ extern PYFunnelSeriesSort const PYFunnelSeriesSortDescending;
 @property (nonatomic, strong) NSNumber *max;
 @property (nonatomic, copy) NSString *minSize;
 @property (nonatomic, copy) NSString *maxSize;
-@property (nonatomic, copy) PYFunnelSeriesSort sort;
+@property (nonatomic, copy) PYSort sort;
 @property (nonatomic, strong) NSNumber *gap;
 @property (nonatomic, assign) BOOL legendHoverLink;
 

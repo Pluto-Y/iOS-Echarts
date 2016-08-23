@@ -36,6 +36,9 @@ static PYSymbol PYSymbolPin            = @"pin";
 static PYSymbol PYSymbolArrow          = @"arrow";
 static PYSymbol PYSymbolStar5          = @"star5";
 
-
+typedef NSString *PYSort;
+static PYSort PYSortNone       = @"none";
+static PYSort PYSortAscending  = @"ascending";
+static PYSort PYSortDescending = @"descending";
 
 #endif /* PYUtilities_h */
