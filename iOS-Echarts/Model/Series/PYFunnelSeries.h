@@ -21,10 +21,10 @@ extern PYFunnelSeriesSort const PYFunnelSeriesSortDescending;
  */
 @interface PYFunnelSeries : PYSeries
 
-@property (nonatomic, strong) NSNumber *x;
-@property (nonatomic, strong) NSNumber *y;
-@property (nonatomic, strong) NSNumber *x2;
-@property (nonatomic, strong) NSNumber *y2;
+@property (nonatomic, strong) id x;
+@property (nonatomic, strong) id y;
+@property (nonatomic, strong) id x2;
+@property (nonatomic, strong) id y2;
 @property (nonatomic, strong) id width;
 @property (nonatomic, strong) id height;
 @property (nonatomic, copy) NSString *funnelAlign;
