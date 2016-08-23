@@ -94,7 +94,7 @@ typedef NS_ENUM(NSInteger, FunnelDemoTypeTag) {
     series2.type = PYSeriesTypeFunnel;
     series2.x = @"55%";
     series2.width = @"40%";
-    series2.sort = PYFunnelSeriesSortAscending;
+    series2.sort = PYSortAscending;
     series2.itemStyle = [[PYItemStyle alloc] init];
     series2.itemStyle.normal = [[PYItemStyleProp alloc] init];
     series2.itemStyle.normal.label = [[PYLabel alloc] init];
@@ -218,7 +218,7 @@ typedef NS_ENUM(NSInteger, FunnelDemoTypeTag) {
     series2.height = @"45%";
     series2.x = @"5%";
     series2.y = @"5%";
-    series2.sort = PYFunnelSeriesSortAscending;
+    series2.sort = PYSortAscending;
     series2.data = @[@{@"value":@60, @"name":@"访问"}, @{@"value":@30, @"name":@"咨询"}, @{@"value":@10, @"name":@"订单"}, @{@"value":@80, @"name":@"点击"}, @{@"value":@100, @"name":@"展现"}];
     
     PYFunnelSeries *series3 = [[PYFunnelSeries alloc] init];
@@ -241,7 +241,7 @@ typedef NS_ENUM(NSInteger, FunnelDemoTypeTag) {
     series4.height = @"45%";
     series4.x = @"55%";
     series4.y = @"50%";
-    series4.sort = PYFunnelSeriesSortAscending;
+    series4.sort = PYSortAscending;
     series4.itemStyle = [[PYItemStyle alloc] init];
     series4.itemStyle.normal = [[PYItemStyleProp alloc] init];
     series4.itemStyle.normal.label = [[PYLabel alloc] init];
@@ -302,7 +302,7 @@ typedef NS_ENUM(NSInteger, FunnelDemoTypeTag) {
     series2.x = @"5%";
     series2.y = @"5%";
     series2.funnelAlign = @"right";
-    series2.sort = PYFunnelSeriesSortAscending;
+    series2.sort = PYSortAscending;
     series2.data = @[@{@"value":@60, @"name":@"产品C"}, @{@"value":@30, @"name":@"产品D"}, @{@"value":@10, @"name":@"产品E"}, @{@"value":@80, @"name":@"产品B"}, @{@"value":@100, @"name":@"产品A"}];
     
     PYFunnelSeries *series3 = [[PYFunnelSeries alloc] init];
@@ -327,7 +327,7 @@ typedef NS_ENUM(NSInteger, FunnelDemoTypeTag) {
     series4.x = @"65%";
     series4.y = @"50%";
     series4.funnelAlign = @"left";
-    series4.sort = PYFunnelSeriesSortAscending;
+    series4.sort = PYSortAscending;
     series4.itemStyle = [[PYItemStyle alloc] init];
     series4.itemStyle.normal = [[PYItemStyleProp alloc] init];
     series4.itemStyle.normal.label = [[PYLabel alloc] init];
@@ -374,7 +374,7 @@ typedef NS_ENUM(NSInteger, FunnelDemoTypeTag) {
     series.max = @100;
     series.minSize = @"0%";
     series.maxSize = @"100%";
-    series.sort = PYFunnelSeriesSortDescending;
+    series.sort = PYSortDescending;
     series.gap = @10;
     series.itemStyle = [[PYItemStyle alloc] init];
     
