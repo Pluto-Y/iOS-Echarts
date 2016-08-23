@@ -77,7 +77,6 @@ static NSString *const tableViewIdentifier = @"EchartsViewCell";
     toolbox.feature.magicType.show = YES;
     toolbox.feature.magicType.type = @[@"line", @"bar"];
     toolbox.feature.restore.show = YES;
-    toolbox.feature.saveAsImage.show = YES;
     option.toolbox = toolbox;
     option.calculable = YES;
     PYAxis *xAxis = [[PYAxis  alloc] init];

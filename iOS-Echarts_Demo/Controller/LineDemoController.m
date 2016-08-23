@@ -117,8 +117,6 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar", @"stack", @"tiled"];
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
-    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
-    option.toolbox.feature.saveAsImage.show = YES;
     option.calculable = YES;
     NSMutableArray *serieses = [[NSMutableArray alloc] init];
     PYSeries *series1 = [[PYSeries alloc] init];
@@ -159,8 +157,6 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar", @"stack", @"tiled"];
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
-    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
-    option.toolbox.feature.saveAsImage.show = YES;
     option.calculable = YES;
     PYAxis *xAxis = [[PYAxis alloc] init];
     xAxis.type = @"category";
@@ -256,8 +252,6 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.toolbox.feature.dataView.readOnly = NO;
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
-    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
-    option.toolbox.feature.saveAsImage.show = YES;
     option.dataZoom = [[PYDataZoom alloc] init];
     option.dataZoom.show = YES;
     option.dataZoom.start = @(70);
@@ -315,8 +309,6 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar"];
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
-    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
-    option.toolbox.feature.saveAsImage.show = YES;
     option.calculable = YES;
     PYAxis *xAxis = [[PYAxis alloc] init];
     xAxis.type = @"value";
@@ -391,8 +383,6 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar", @"stack", @"tiled"];
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
-    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
-    option.toolbox.feature.saveAsImage.show = YES;
     option.calculable = YES;
     PYAxis *xAxis = [[PYAxis alloc] init];
     xAxis.type = PYAxisTypeCategory;
@@ -483,8 +473,6 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar", @"stack", @"tiled"];
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
-    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
-    option.toolbox.feature.saveAsImage.show = YES;
     option.calculable = YES;
     PYAxis *xAxis = [[PYAxis alloc] init];
     xAxis.type = @"category";
@@ -550,8 +538,6 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar"];
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
-    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
-    option.toolbox.feature.saveAsImage.show = YES;
     option.calculable = YES;
     option.tooltip = [[PYTooltip alloc] init];
     option.tooltip.trigger = @"axis";
@@ -606,8 +592,6 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar", @"stack", @"tiled"];
     option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
     option.toolbox.feature.restore.show = YES;
-    option.toolbox.feature.saveAsImage = [[PYToolboxFeatureSaveAsImage alloc] init];
-    option.toolbox.feature.saveAsImage.show = YES;
     option.calculable = YES;
     PYAxis *xAxis = [[PYAxis alloc] init];
     xAxis.type = @"category";
@@ -682,7 +666,6 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     toolbox.feature.magicType.show = YES;
     toolbox.feature.magicType.type = @[PYSeriesTypeLine, PYSeriesTypeBar];
     toolbox.feature.restore.show = YES;
-    toolbox.feature.saveAsImage.show = YES;
     option.toolbox = toolbox;
     option.calculable = YES;
     PYAxis *xAxis = [[PYAxis  alloc] init];
