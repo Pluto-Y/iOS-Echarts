@@ -160,6 +160,9 @@
                             <button opaque="NO" tag="10013" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHu-RG-oWf">
                                 <rect key="frame" x="57" y="249" width="45" height="30"/>
                                 <state key="normal" title="和弦图"/>
+                                <connections>
+                                    <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nRm-ix-V4V"/>
+                                </connections>
                             </button>
                             <button opaque="NO" tag="11000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUG-2Q-8qE">
                                 <rect key="frame" x="65" y="287" width="30" height="30"/>

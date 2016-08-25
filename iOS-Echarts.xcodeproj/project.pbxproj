@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C0658CD1BB85B29003CAAE5 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658CA1BB85B29003CAAE5 /* Info.plist */; };
 		6C0658CE1BB85B29003CAAE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658CC1BB85B29003CAAE5 /* main.m */; };
 		6C0658D31BB85B34003CAAE5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658D01BB85B34003CAAE5 /* AppDelegate.m */; };
 		6C0658DA1BB85B46003CAAE5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658D61BB85B46003CAAE5 /* LaunchScreen.xib */; };
@@ -758,7 +757,6 @@
 				6CB02A831BBF7739002E1126 /* PieDemoController.xib in Resources */,
 				6F8A3F061D49B598008268BD /* EchartsViewCell.xib in Resources */,
 				6FA439EA1D6A084400FE5D9F /* FunnelDemoController.xib in Resources */,
-				6C0658CD1BB85B29003CAAE5 /* Info.plist in Resources */,
 				6C2805A31C27BBF80076EAFB /* RadarDemoController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
