@@ -32,6 +32,7 @@
 #import "PYTreeSeries.h"
 #import "PYVennSeries.h"
 #import "PYWordCloudSeries.h"
+#import "PYChordSeries.h"
 #import "PYAxisPointer.h"
 #import "PYNodes.h"
 #import "PYCategories.h"
