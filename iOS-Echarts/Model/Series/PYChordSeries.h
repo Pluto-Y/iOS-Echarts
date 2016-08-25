@@ -18,6 +18,7 @@
  */
 @interface PYChordSeries : PYSeries
 
+@property (nonatomic, copy) NSString *insertToSerie;
 @property (nonatomic, copy) NSArray<PYCategories *> *categories;
 @property (nonatomic, copy) NSArray<PYNodes *> *nodes;
 @property (nonatomic, copy) NSArray<PYLinks *> *links;
