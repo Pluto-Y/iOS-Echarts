@@ -14,7 +14,7 @@
 {
     self = [super init];
     if (self) {
-        
+        _animation = YES;
     }
     return self;
 }
