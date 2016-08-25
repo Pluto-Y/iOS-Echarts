@@ -109,7 +109,104 @@ typedef NS_ENUM(NSInteger, ChordDemoTypeTag) {
 }
 
 - (void)showMultipleDimesionsDemo {
+    PYOption *option = [[PYOption alloc] init];
+    option.color = @[@"#FBB367",@"#80B1D2",@"#FB8070",@"#CC99FF",@"#B0D961",
+                     @"#99CCCC",@"#BEBBD8",@"#FFCC99",@"#8DD3C8",@"#FF9999",
+                     @"#CCEAC4",@"#BB81BC",@"#FBCCEC",@"#CCFF66",@"#99CC66",
+                     @"#66CC66",@"#FF6666",@"#FFED6F",@"#ff7f50",@"#87cefa",];
+    option.title = [[PYTitle alloc] init];
+    option.title.text = @"中东关系的敌友关系";
+    option.title.subtext = @"数据来自财新网";
+    option.title.sublink = @"http://international.caixin.com/2013-09-06/100579154.html";
+    option.title.x = @"right";
+    option.title.y = @"bottom";
     
+    option.toolbox = [[PYToolbox alloc] init];
+    option.toolbox.show = YES;
+    option.toolbox.feature = [[PYToolboxFeature alloc] init];
+    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
+    option.toolbox.feature.restore.show = YES;
+    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
+    option.toolbox.feature.magicType.show = YES;
+    option.toolbox.feature.magicType.type = @[PYSeriesTypeForce, PYSeriesTypeChord];
+    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
+    option.toolbox.feature.restore.show = YES;
+    
+    option.tooltip = [[PYTooltip alloc] init];
+    option.tooltip.trigger = PYTooltipTriggerItem;
+    option.tooltip.formatter = @"(function (params) {if (params.name && params.name.indexOf(\'-\') != -1) {return params.name.replace(\'-\', \' \' + params.seriesName + \' \');}else {return params.name ? params.name : params.data.id;}})";
+    option.legend = [[PYLegend alloc] init];
+    option.legend.data = @[@"美国", @"叙利亚反对派", @"阿萨德", @"伊朗", @"塞西", @"哈马斯", @"以色列", @"穆斯林兄弟会", @"基地组织", @"俄罗斯", @"黎巴嫩什叶派", @"土耳其", @"卡塔尔", @"沙特", @"黎巴嫩逊尼派", @"", @"支持", @"反对", @"未表态"];
+    option.legend.orient = @"vertical";
+    option.legend.x = @"left";
+    PYChordSeries *series1 = [[PYChordSeries alloc] init];
+    series1.name = @"支持";
+    series1.type = PYSeriesTypeChord;
+    series1.showScaleText = NO;
+    series1.clockWise = NO;
+    series1.data = @[@{@"name":@"美国"}, @{@"name":@"叙利亚反对派"}, @{@"name":@"阿萨德"}, @{@"name":@"伊朗"}, @{@"name":@"塞西"}, @{@"name":@"哈马斯"}, @{@"name":@"以色列"}, @{@"name":@"穆斯林兄弟会"}, @{@"name":@"基地组织"}, @{@"name":@"俄罗斯"}, @{@"name":@"黎巴嫩什叶派"}, @{@"name":@"土耳其"}, @{@"name":@"卡塔尔"}, @{@"name":@"沙特"}, @{@"name":@"黎巴嫩逊尼派"}];
+    series1.matrix = @[@[@0,@100,@0,@0,@0,@0,@100,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@10,@0,@0,@0,@0,@10,@10,@0,@10,@0,@0,@10,@10,@10,@10],
+                       @[@0,@0,@0,@10,@0,@0,@0,@0,@0,@10,@10,@0,@0,@0,@0],
+                       @[@0,@0,@100,@0,@0,@100,@0,@0,@0,@0,@100,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@10,@0],
+                       @[@0,@100,@0,@10,@0,@0,@0,@0,@0,@0,@0,@0,@10,@0,@0],
+                       @[@10,@100,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@10,@10,@0,@0],
+                       @[@0,@100,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@100,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@100,@10,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@100,@0,@0,@0,@0,@0,@100,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@100,@0,@0,@0,@100,@0,@100,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@100,@0,@0,@100,@0,@0,@0,@0,@0,@0,@0,@0,@0,@100],
+                       @[@0,@100,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@10,@0]];
+    
+    PYChordSeries *series2 = [[PYChordSeries alloc] init];
+    series2.name = @"反对";
+    series2.type = PYSeriesTypeChord;
+    series2.insertToSerie = @"支持";
+    series2.data = @[@{@"name":@"美国"}, @{@"name":@"叙利亚反对派"}, @{@"name":@"阿萨德"}, @{@"name":@"伊朗"}, @{@"name":@"塞西"}, @{@"name":@"哈马斯"}, @{@"name":@"以色列"}, @{@"name":@"穆斯林兄弟会"}, @{@"name":@"基地组织"}, @{@"name":@"俄罗斯"}, @{@"name":@"黎巴嫩什叶派"}, @{@"name":@"土耳其"}, @{@"name":@"卡塔尔"}, @{@"name":@"沙特"}, @{@"name":@"黎巴嫩逊尼派"}];
+    series2.matrix = @[@[@0,@0,@100,@100,@0,@100,@0,@0,@100,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@10,@0,@0,@0,@0,@0,@10,@10,@0,@0,@0,@0],
+                       @[@10,@0,@0,@0,@0,@0,@10,@10,@10,@0,@0,@10,@10,@0,@10],
+                       @[@10,@100,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@10,@0,@100,@0,@0,@0,@10,@0,@0,@0],
+                       @[@10,@0,@0,@0,@100,@0,@10,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@100,@0,@0,@100,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@100,@0,@10,@0,@0,@0,@0,@0,@0,@0,@0,@10,@0],
+                       @[@10,@0,@100,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@100,@0],
+                       @[@0,@100,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@100,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@100,@0,@100,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@100,@0,@100,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@0,@0,@100,@10,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@100,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0]];
+    
+    PYChordSeries *series3 = [[PYChordSeries alloc] init];
+    series3.name = @"未表态";
+    series3.type = PYSeriesTypeChord;
+    series3.insertToSerie = @"支持";
+    series3.data = @[@{@"name":@"美国"}, @{@"name":@"叙利亚反对派"}, @{@"name":@"阿萨德"}, @{@"name":@"伊朗"}, @{@"name":@"塞西"}, @{@"name":@"哈马斯"}, @{@"name":@"以色列"}, @{@"name":@"穆斯林兄弟会"}, @{@"name":@"基地组织"}, @{@"name":@"俄罗斯"}, @{@"name":@"黎巴嫩什叶派"}, @{@"name":@"土耳其"}, @{@"name":@"卡塔尔"}, @{@"name":@"沙特"}, @{@"name":@"黎巴嫩逊尼派"}];
+    series3.matrix = @[
+                       @[@0,@0,@0,@0,@100,@0,@0,@100,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@10,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@10,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0],
+                       @[@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0,@0]
+                       ];
+    option.series = [[NSMutableArray alloc] initWithArray:@[series1, series2, series3]];
+    
+    [_echartsView setOption:option];
 }
 
 - (void)showBasicChordDemo2 {
