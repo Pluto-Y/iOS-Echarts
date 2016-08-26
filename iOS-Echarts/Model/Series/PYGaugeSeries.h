@@ -7,6 +7,7 @@
 //
 
 #import "PYSeries.h"
+#import "PYUtilities.h"
 
 @class PYAxisLine, PYAxisLabel, PYAxisTick, PYTextStyle, PYColor, PYLineStyle;
 

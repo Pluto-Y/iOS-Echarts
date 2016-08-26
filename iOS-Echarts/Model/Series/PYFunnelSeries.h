@@ -7,6 +7,7 @@
 //
 
 #import "PYSeries.h"
+#import "PYUtilities.h"
 
 typedef NSString *PYFunnelSeriesSort __deprecated_msg("Use PYSort instead");
 

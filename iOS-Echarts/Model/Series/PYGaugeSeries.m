@@ -12,6 +12,7 @@
 #import "PYAxisLine.h"
 #import "PYAxisTick.h"
 #import "PYAxisLabel.h"
+#import "PYLineStyle.h"
 
 @implementation PYGaugeSpliteLine
 
