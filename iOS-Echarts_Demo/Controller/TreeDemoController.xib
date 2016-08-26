@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="TreeDemoController">
+            <connections>
+                <outlet property="echartsView" destination="WFb-1q-FUp" id="VC6-I7-RRf"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="40001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wBk-df-8CK">
+                    <rect key="frame" x="282" y="8" width="37" height="30"/>
+                    <state key="normal" title="树图1"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="jxu-mS-n61"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="40002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbC-ss-ERb">
+                    <rect key="frame" x="281" y="46" width="39" height="30"/>
+                    <state key="normal" title="树图2"/>
+                </button>
+                <button opaque="NO" tag="40003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awL-aA-HzU">
+                    <rect key="frame" x="281" y="84" width="40" height="30"/>
+                    <state key="normal" title="树图3"/>
+                </button>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFb-1q-FUp" customClass="PYEchartsView">
+                    <rect key="frame" x="0.0" y="280" width="600" height="300"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="pKq-n3-w4v"/>
+                    </constraints>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="WFb-1q-FUp" secondAttribute="trailing" id="2js-1y-ZK4"/>
+                <constraint firstItem="WFb-1q-FUp" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="FpG-hK-Fda"/>
+                <constraint firstItem="awL-aA-HzU" firstAttribute="top" secondItem="TbC-ss-ERb" secondAttribute="bottom" constant="8" id="Kim-Cb-rVJ"/>
+                <constraint firstAttribute="bottom" secondItem="WFb-1q-FUp" secondAttribute="bottom" constant="20" id="MjW-Rz-3Ie"/>
+                <constraint firstItem="awL-aA-HzU" firstAttribute="centerX" secondItem="TbC-ss-ERb" secondAttribute="centerX" id="Qft-Gl-23Q"/>
+                <constraint firstItem="TbC-ss-ERb" firstAttribute="centerX" secondItem="wBk-df-8CK" secondAttribute="centerX" id="igF-1C-8Qo"/>
+                <constraint firstItem="wBk-df-8CK" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="mRC-F7-pVm"/>
+                <constraint firstItem="wBk-df-8CK" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mdY-zr-pzI"/>
+                <constraint firstItem="TbC-ss-ERb" firstAttribute="top" secondItem="wBk-df-8CK" secondAttribute="bottom" constant="8" id="wcy-HW-Fxo"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

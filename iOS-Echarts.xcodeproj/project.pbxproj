@@ -110,6 +110,8 @@
 		6FDCE6F91D61FED900F580FD /* TreemapDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FDCE6F71D61FED900F580FD /* TreemapDemoController.xib */; };
 		6FEFF6EB1D56448300E8B77E /* NSObject+PYObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEFF6EA1D56448300E8B77E /* NSObject+PYObject.m */; };
 		6FEFF6F01D564D5C00E8B77E /* PYChordStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEFF6EF1D564D5C00E8B77E /* PYChordStyle.m */; };
+		6FF5EAB71D70B375000D275E /* TreeDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5EAB51D70B375000D275E /* TreeDemoController.m */; };
+		6FF5EAB81D70B375000D275E /* TreeDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5EAB61D70B375000D275E /* TreeDemoController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -310,6 +312,9 @@
 		6FEFF6ED1D5644E500E8B77E /* PYUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYUtilities.h; sourceTree = "<group>"; };
 		6FEFF6EE1D564D5C00E8B77E /* PYChordStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYChordStyle.h; sourceTree = "<group>"; };
 		6FEFF6EF1D564D5C00E8B77E /* PYChordStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYChordStyle.m; sourceTree = "<group>"; };
+		6FF5EAB41D70B375000D275E /* TreeDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeDemoController.h; sourceTree = "<group>"; };
+		6FF5EAB51D70B375000D275E /* TreeDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeDemoController.m; sourceTree = "<group>"; };
+		6FF5EAB61D70B375000D275E /* TreeDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TreeDemoController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -400,6 +405,9 @@
 				6F09E9DA1D6CD8F6006A76CD /* ChordDemoController.h */,
 				6F09E9DB1D6CD8F6006A76CD /* ChordDemoController.m */,
 				6F09E9DC1D6CD8F6006A76CD /* ChordDemoController.xib */,
+				6FF5EAB41D70B375000D275E /* TreeDemoController.h */,
+				6FF5EAB51D70B375000D275E /* TreeDemoController.m */,
+				6FF5EAB61D70B375000D275E /* TreeDemoController.xib */,
 			);
 			name = Controller;
 			path = "iOS-Echarts_Demo/Controller";
@@ -751,6 +759,7 @@
 				6C6011AC1CC144710048F6F6 /* OtherDemoController.xib in Resources */,
 				6C0658E61BB85B4F003CAAE5 /* BarDemoController.xib in Resources */,
 				6F8A3F001D49AFA5008268BD /* MultiEchartsController.xib in Resources */,
+				6FF5EAB81D70B375000D275E /* TreeDemoController.xib in Resources */,
 				6C08828F1C303F4400EA0D34 /* MapDemoController.xib in Resources */,
 				6CF1AA2E1C02A32600F1B773 /* CandlestickDemoController.xib in Resources */,
 				6C0658DB1BB85B46003CAAE5 /* Main.storyboard in Resources */,
@@ -783,6 +792,7 @@
 				6F8A3EFF1D49AFA5008268BD /* MultiEchartsController.m in Sources */,
 				6F4D58EE1D4FE34F00246943 /* PYLoadingOption.m in Sources */,
 				6C0658CE1BB85B29003CAAE5 /* main.m in Sources */,
+				6FF5EAB71D70B375000D275E /* TreeDemoController.m in Sources */,
 				6CC8465E1BC15E4D00947312 /* NSObject+RMCopyable.m in Sources */,
 				6F4D59031D4FE34F00246943 /* PYMapSeries.m in Sources */,
 				6FEFF6F01D564D5C00E8B77E /* PYChordStyle.m in Sources */,

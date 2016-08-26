@@ -42,6 +42,8 @@
 #import "FunnelDemoController.h"
 // Chord
 #import "ChordDemoController.h"
+// Tree
+#import "TreeDemoController.h"
 
 
 @interface ViewController ()
@@ -210,6 +212,9 @@
             break;
         case 10013: // 和弦图
             controller = [[ChordDemoController alloc] init];
+            break;
+        case 10014: // 树图
+            controller = [[TreeDemoController alloc] init];
             break;
         case 11000: // 其他
             controller = [[OtherDemoController alloc] init];
