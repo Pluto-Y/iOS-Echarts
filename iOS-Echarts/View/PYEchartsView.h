@@ -25,6 +25,12 @@
  */
 - (BOOL)echartsView:(PYEchartsView *)echartsView didReceivedLinkURL:(NSURL *)url;
 
+/**
+ *  When the options are loaded complete, this method will be called for user
+ *
+ *  @param echartsView The echatsView provide this action
+ */
+- (void)echartsViewDidFinishLoad:(PYEchartsView *)echartsView;
 @end
 
 typedef NSString *PYEchartsViewImageType;
