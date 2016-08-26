@@ -263,6 +263,9 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
         PYLog(@"%@", [NSString stringWithFormat:@"addEchartActionHandler('%@')",name]);
         [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler('%@')",name]];//
     }
+    if (self.eDelegate && [self.eDelegate respondsToSelector:@selector(echartsViewDidFinishLoad:)]) {
+        [self.eDelegate echartsViewDidFinishLoad:self];
+    }
 }
 
 /**
