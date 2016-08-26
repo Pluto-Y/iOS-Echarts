@@ -1,3 +1,23 @@
+1.2.3 Relase notes (2016-08-26)
+============================================================
+
+### Add
+* Add demos for Gauge
+* Add demos for Funnel
+* Add demos for Chord
+* Add support for Travis
+* Add default for all subclasses of PYSeries
+* Add all support types for PYSeries
+* Add new subclass of PYSeries for Chord named 'PYChordSeries'
+* Add all sort const values
+
+### Changed
+* Change type PYFunnelSeriesSort into PYSort
+
+### Fixed
+* Fixed some property type
+
+
 1.2.2 Release notes (2016-08-17)
 ============================================================
 
@@ -49,6 +69,7 @@
 * Add Radar and Map Demos
 * Replace js files and support all echarts types
 * Add PYZoomEchartsView
+
 
 
 
