@@ -38,5 +38,6 @@
 @property (nonatomic, strong) id roam;
 @property (nonatomic, copy) PYSymbol symbol;
 @property (nonatomic, strong) id symbolSize;
+@property (nonatomic, assign) BOOL hoverable;
 
 @end
