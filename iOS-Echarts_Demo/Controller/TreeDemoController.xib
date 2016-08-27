@@ -26,10 +26,16 @@
                 <button opaque="NO" tag="40002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TbC-ss-ERb">
                     <rect key="frame" x="281" y="46" width="39" height="30"/>
                     <state key="normal" title="树图2"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="gcf-gq-O33"/>
+                    </connections>
                 </button>
                 <button opaque="NO" tag="40003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="awL-aA-HzU">
                     <rect key="frame" x="281" y="84" width="40" height="30"/>
                     <state key="normal" title="树图3"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="aI8-7U-JY6"/>
+                    </connections>
                 </button>
                 <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WFb-1q-FUp" customClass="PYEchartsView">
                     <rect key="frame" x="0.0" y="280" width="600" height="300"/>
