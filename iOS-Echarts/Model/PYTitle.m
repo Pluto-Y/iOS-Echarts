@@ -8,6 +8,7 @@
 
 #import "PYTitle.h"
 #import "PYColor.h"
+#import "PYTextStyle.h"
 
 @implementation PYTitle
 

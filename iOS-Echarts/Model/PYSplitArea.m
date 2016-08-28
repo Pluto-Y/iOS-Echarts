@@ -8,6 +8,7 @@
 
 #import "PYSplitArea.h"
 #import "PYColor.h"
+#import "PYAreaStyle.h"
 
 @implementation PYSplitArea
 

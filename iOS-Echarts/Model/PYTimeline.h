@@ -7,10 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYTextStyle.h"
-#import "PYLineStyle.h"
 
-@class PYColor;
+@class PYColor, PYTextStyle, PYLineStyle;
 
 @interface PYTimelineLabel : NSObject
 

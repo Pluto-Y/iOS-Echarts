@@ -24,4 +24,9 @@
 
 PYInitializerTemplate(PYNodeStyle, nodeStyle);
 
+
+PYPropertyEqualTemplate(PYNodeStyle,PYColor *, color);
+PYPropertyEqualTemplate(PYNodeStyle,PYColor *, borderColor);
+PYPropertyEqualTemplate(PYNodeStyle,NSNumber *, borderWidth);
+
 @end

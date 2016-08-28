@@ -47,3 +47,4 @@
 #import "PYAreaStyle.h"
 #import "PYDataZoom.h"
 #import "PYDataRange.h"
+#import "PYToolboxFeature.h"

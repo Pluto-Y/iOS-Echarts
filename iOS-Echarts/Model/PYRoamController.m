@@ -7,6 +7,7 @@
 //
 
 #import "PYRoamController.h"
+#import "PYColor.h"
 
 @implementation PYRoamController
 
@@ -33,5 +34,21 @@
 }
 
 PYInitializerImpTemplate(PYRoamController);
+
+PYPropertyEqualImpTemplate(PYRoamController, BOOL, show);
+PYPropertyEqualImpTemplate(PYRoamController, NSNumber *, zlevel);
+PYPropertyEqualImpTemplate(PYRoamController, NSNumber *, z);
+PYPropertyEqualImpTemplate(PYRoamController, id, x);
+PYPropertyEqualImpTemplate(PYRoamController, id, y);
+PYPropertyEqualImpTemplate(PYRoamController, NSNumber *, width);
+PYPropertyEqualImpTemplate(PYRoamController, NSNumber *, height);
+PYPropertyEqualImpTemplate(PYRoamController, PYColor *, backgroundColor);
+PYPropertyEqualImpTemplate(PYRoamController, PYColor *, borderColor);
+PYPropertyEqualImpTemplate(PYRoamController, NSNumber *, borderWidth);
+PYPropertyEqualImpTemplate(PYRoamController, id, padding);
+PYPropertyEqualImpTemplate(PYRoamController, PYColor *, fillerColor);
+PYPropertyEqualImpTemplate(PYRoamController, PYColor *, handleColor);
+PYPropertyEqualImpTemplate(PYRoamController, NSNumber *, step);
+PYPropertyEqualImpTemplate(PYRoamController, NSDictionary *, mapTypeControl);
 
 @end

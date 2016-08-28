@@ -76,6 +76,23 @@ static NSArray<PYTooltipTrigger> *tooltipTriggerScope;
 
 PYInitializerImpTemplate(PYTooltip);
 
+PYPropertyEqualImpTemplate(PYTooltip, BOOL, show);
+PYPropertyEqualImpTemplate(PYTooltip, NSNumber *, zlevel);
+PYPropertyEqualImpTemplate(PYTooltip, NSNumber *, z);
+PYPropertyEqualImpTemplate(PYTooltip, BOOL, showContent);
+PYPropertyEqualImpTemplate(PYTooltip, PYTooltipTrigger, trigger);
+PYPropertyEqualImpTemplate(PYTooltip, id, position);
+PYPropertyEqualImpTemplate(PYTooltip, id, formatter);
+PYPropertyEqualImpTemplate(PYTooltip, id, islandFormmater);
+PYPropertyEqualImpTemplate(PYTooltip, NSNumber *, showDelay);
+PYPropertyEqualImpTemplate(PYTooltip, NSNumber *, hideDelay);
+PYPropertyEqualImpTemplate(PYTooltip, NSNumber *, transitionDuration);
+PYPropertyEqualImpTemplate(PYTooltip, BOOL, enterable);
+PYPropertyEqualImpTemplate(PYTooltip, PYColor *, backgroundColor);
+PYPropertyEqualImpTemplate(PYTooltip, PYColor *, borderColor);
+PYPropertyEqualImpTemplate(PYTooltip, NSNumber *, borderRadius);
+PYPropertyEqualImpTemplate(PYTooltip, NSNumber *, borderWidth);
+PYPropertyEqualImpTemplate(PYTooltip, id, padding);
 PYPropertyEqualImpTemplate(PYTooltip, PYAxisPointer *, axisPointer);
 PYPropertyEqualImpTemplate(PYTooltip, PYTextStyle *, textStyle);
 

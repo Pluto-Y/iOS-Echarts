@@ -51,4 +51,15 @@ static NSArray<PYTextStyleFontStyle> *textStyleFontStyle;
 
 PYInitializerImpTemplate(PYTextStyle);
 
+PYPropertyEqualImpTemplate(PYTextStyle, id, color);
+PYPropertyEqualImpTemplate(PYTextStyle, NSString *, decoration);
+PYPropertyEqualImpTemplate(PYTextStyle, NSString *, align);
+PYPropertyEqualImpTemplate(PYTextStyle, NSString *, baseLine);
+PYPropertyEqualImpTemplate(PYTextStyle, NSString *, fontFamily);
+PYPropertyEqualImpTemplate(PYTextStyle, NSNumber *, fontSize);
+PYPropertyEqualImpTemplate(PYTextStyle, PYTextStyleFontStyle, fontStyle);
+PYPropertyEqualImpTemplate(PYTextStyle, id, fontWeight);
+PYPropertyEqualImpTemplate(PYTextStyle, id, shadowColor);
+PYPropertyEqualImpTemplate(PYTextStyle, NSNumber *, shadowBlur);
+
 @end

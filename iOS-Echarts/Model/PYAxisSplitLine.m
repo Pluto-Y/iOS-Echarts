@@ -7,6 +7,7 @@
 //
 
 #import "PYAxisSplitLine.h"
+#import "PYLineStyle.h"
 
 @implementation PYAxisSplitLine
 

@@ -43,4 +43,15 @@ extern PYTextStyleFontWeight const PYTextStyleFontWeightLighter;
 
 PYInitializerTemplate(PYTextStyle, textStyle);
 
+PYPropertyEqualTemplate(PYTextStyle, id, color);
+PYPropertyEqualTemplate(PYTextStyle, NSString *, decoration);
+PYPropertyEqualTemplate(PYTextStyle, NSString *, align);
+PYPropertyEqualTemplate(PYTextStyle, NSString *, baseLine);
+PYPropertyEqualTemplate(PYTextStyle, NSString *, fontFamily);
+PYPropertyEqualTemplate(PYTextStyle, NSNumber *, fontSize);
+PYPropertyEqualTemplate(PYTextStyle, PYTextStyleFontStyle, fontStyle);
+PYPropertyEqualTemplate(PYTextStyle, id, fontWeight);
+PYPropertyEqualTemplate(PYTextStyle, id, shadowColor);
+PYPropertyEqualTemplate(PYTextStyle, NSNumber *, shadowBlur);
+
 @end

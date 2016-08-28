@@ -8,6 +8,8 @@
 
 #import "PYToolbox.h"
 #import "PYColor.h"
+#import "PYToolboxFeature.h"
+#import "PYTextStyle.h"
 
 @implementation PYToolbox
 
@@ -38,6 +40,22 @@
 
 PYInitializerImpTemplate(PYToolbox);
 
+PYPropertyEqualImpTemplate(PYToolbox, BOOL, show);
+PYPropertyEqualImpTemplate(PYToolbox, NSNumber *, zlevel);
+PYPropertyEqualImpTemplate(PYToolbox, NSNumber *, z);
+PYPropertyEqualImpTemplate(PYToolbox, NSString *, orient);
+PYPropertyEqualImpTemplate(PYToolbox, id, x);
+PYPropertyEqualImpTemplate(PYToolbox, id, y);
+PYPropertyEqualImpTemplate(PYToolbox, PYColor *, backgroundColor);
+PYPropertyEqualImpTemplate(PYToolbox, PYColor *, borderColor);
+PYPropertyEqualImpTemplate(PYToolbox, NSNumber *, borderWidth);
+PYPropertyEqualImpTemplate(PYToolbox, id, padding);
+PYPropertyEqualImpTemplate(PYToolbox, NSNumber *, itemGap);
+PYPropertyEqualImpTemplate(PYToolbox, NSNumber *, itemSize);
+PYPropertyEqualImpTemplate(PYToolbox, NSArray *, color);
+PYPropertyEqualImpTemplate(PYToolbox, PYColor *, disableColor);
+PYPropertyEqualImpTemplate(PYToolbox, PYColor *, effectiveColor);
+PYPropertyEqualImpTemplate(PYToolbox, BOOL, showTitle);
 PYPropertyEqualImpTemplate(PYToolbox, PYTextStyle *, textStyle);
 PYPropertyEqualImpTemplate(PYToolbox, PYToolboxFeature *, feature);
 

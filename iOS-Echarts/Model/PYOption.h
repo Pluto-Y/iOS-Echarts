@@ -7,17 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYAxis.h"
-#import "PYLegend.h"
-#import "PYTimeline.h"
-#import "PYTitle.h"
-#import "PYGrid.h"
-#import "PYToolbox.h"
-#import "PYDataZoom.h"
-#import "PYCartesianSeries.h"
-#import "PYDataRange.h"
-#import "PYPolar.h"
-#import "PYRoamController.h"
+
+@class PYAxis, PYLegend, PYTimeline, PYTitle, PYGrid, PYToolbox, PYDataZoom, PYDataRange, PYPolar, PYRoamController, PYColor, PYTooltip;
 
 /**
  *
@@ -49,6 +40,13 @@
 
 PYInitializerTemplate(PYOption, option);
 
+
+PYPropertyEqualTemplate(PYOption, PYColor *, backgroundColor);
+PYPropertyEqualTemplate(PYOption, NSArray *, color);
+PYPropertyEqualTemplate(PYOption, NSMutableArray *, polar);
+PYPropertyEqualTemplate(PYOption, BOOL, renderAsImage);
+PYPropertyEqualTemplate(PYOption, BOOL, calculable);
+PYPropertyEqualTemplate(PYOption, BOOL, animation);
 PYPropertyEqualTemplate(PYOption, PYTimeline *, timeline);
 PYPropertyEqualTemplate(PYOption, PYTitle *, title);
 PYPropertyEqualTemplate(PYOption, PYToolbox *, toolbox);
@@ -58,6 +56,11 @@ PYPropertyEqualTemplate(PYOption, PYDataRange *, dataRange);
 PYPropertyEqualTemplate(PYOption, PYDataZoom *, dataZoom);
 PYPropertyEqualTemplate(PYOption, PYRoamController *, roamController);
 PYPropertyEqualTemplate(PYOption, PYGrid *, grid);
+PYPropertyEqualTemplate(PYOption, NSMutableArray *, xAxis);
+PYPropertyEqualTemplate(PYOption, NSMutableArray *, yAxis);
+PYPropertyEqualTemplate(PYOption, NSMutableArray *, series);
+PYPropertyEqualTemplate(PYOption, PYOption *, options);
+
 
 
 @end

@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYAreaStyle.h"
+
+@class PYAreaStyle;
 
 /**
  *

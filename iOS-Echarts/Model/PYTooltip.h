@@ -7,10 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYTextStyle.h"
-#import "PYAxisPointer.h"
 
-@class PYColor;
+@class PYColor, PYTextStyle, PYAxisPointer;
 
 typedef NSString *PYTooltipTrigger;
 
@@ -47,6 +45,23 @@ extern PYTooltipTrigger const PYTooltipTriggerAxis;
 
 PYInitializerTemplate(PYTooltip, tooltip);
 
+PYPropertyEqualTemplate(PYTooltip, BOOL, show);
+PYPropertyEqualTemplate(PYTooltip, NSNumber *, zlevel);
+PYPropertyEqualTemplate(PYTooltip, NSNumber *, z);
+PYPropertyEqualTemplate(PYTooltip, BOOL, showContent);
+PYPropertyEqualTemplate(PYTooltip, PYTooltipTrigger, trigger);
+PYPropertyEqualTemplate(PYTooltip, id, position);
+PYPropertyEqualTemplate(PYTooltip, id, formatter);
+PYPropertyEqualTemplate(PYTooltip, id, islandFormmater);
+PYPropertyEqualTemplate(PYTooltip, NSNumber *, showDelay);
+PYPropertyEqualTemplate(PYTooltip, NSNumber *, hideDelay);
+PYPropertyEqualTemplate(PYTooltip, NSNumber *, transitionDuration);
+PYPropertyEqualTemplate(PYTooltip, BOOL, enterable);
+PYPropertyEqualTemplate(PYTooltip, PYColor *, backgroundColor);
+PYPropertyEqualTemplate(PYTooltip, PYColor *, borderColor);
+PYPropertyEqualTemplate(PYTooltip, NSNumber *, borderRadius);
+PYPropertyEqualTemplate(PYTooltip, NSNumber *, borderWidth);
+PYPropertyEqualTemplate(PYTooltip, id, padding);
 PYPropertyEqualTemplate(PYTooltip, PYAxisPointer *, axisPointer);
 PYPropertyEqualTemplate(PYTooltip, PYTextStyle *, textStyle);
 

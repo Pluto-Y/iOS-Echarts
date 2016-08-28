@@ -24,4 +24,8 @@
 
 PYInitializerImpTemplate(PYNodeStyle);
 
+PYPropertyEqualImpTemplate(PYNodeStyle,PYColor *, color);
+PYPropertyEqualImpTemplate(PYNodeStyle,PYColor *, borderColor);
+PYPropertyEqualImpTemplate(PYNodeStyle,NSNumber *, borderWidth);
+
 @end

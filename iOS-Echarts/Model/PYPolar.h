@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYLineStyle.h"
-#import "PYAxisLabel.h"
-#import "PYAreaStyle.h"
+
+@class PYLineStyle, PYAxisLabel, PYAreaStyle;
 
 typedef NSString *PYPolarType;
 extern PYPolarType const PYPolarTypePolygon;
@@ -41,9 +40,19 @@ extern PYPolarType const PYPolarTypeCircle;
 
 PYInitializerTemplate(PYPolar, polar);
 
+PYPropertyEqualTemplate(PYPolar, NSNumber *, zlevel);
+PYPropertyEqualTemplate(PYPolar, NSNumber *, z);
+PYPropertyEqualTemplate(PYPolar, NSMutableArray *, center);
+PYPropertyEqualTemplate(PYPolar, NSNumber *, radius);
+PYPropertyEqualTemplate(PYPolar, NSNumber *, startAngle);
+PYPropertyEqualTemplate(PYPolar, NSNumber *, spliteNumber);
+PYPropertyEqualTemplate(PYPolar, id, name);
+PYPropertyEqualTemplate(PYPolar, NSMutableArray *, boundaryGap);
+PYPropertyEqualTemplate(PYPolar, BOOL, scale);
 PYPropertyEqualTemplate(PYPolar, PYLineStyle *, axisLine);
 PYPropertyEqualTemplate(PYPolar, PYAxisLabel *, axisLabel);
 PYPropertyEqualTemplate(PYPolar, PYLineStyle *, spliteLine);
 PYPropertyEqualTemplate(PYPolar, PYAreaStyle *, spliteArea);
+PYPropertyEqualTemplate(PYPolar, NSMutableArray *, indicator);
 
 @end

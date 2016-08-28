@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYColor.h"
+
+@class PYColor;
 
 /**
  *
@@ -34,5 +35,21 @@
 @property (nonatomic, copy) NSDictionary *mapTypeControl;
 
 PYInitializerTemplate(PYRoamController, roamController);
+
+PYPropertyEqualTemplate(PYRoamController, BOOL, show);
+PYPropertyEqualTemplate(PYRoamController, NSNumber *, zlevel);
+PYPropertyEqualTemplate(PYRoamController, NSNumber *, z);
+PYPropertyEqualTemplate(PYRoamController, id, x);
+PYPropertyEqualTemplate(PYRoamController, id, y);
+PYPropertyEqualTemplate(PYRoamController, NSNumber *, width);
+PYPropertyEqualTemplate(PYRoamController, NSNumber *, height);
+PYPropertyEqualTemplate(PYRoamController, PYColor *, backgroundColor);
+PYPropertyEqualTemplate(PYRoamController, PYColor *, borderColor);
+PYPropertyEqualTemplate(PYRoamController, NSNumber *, borderWidth);
+PYPropertyEqualTemplate(PYRoamController, id, padding);
+PYPropertyEqualTemplate(PYRoamController, PYColor *, fillerColor);
+PYPropertyEqualTemplate(PYRoamController, PYColor *, handleColor);
+PYPropertyEqualTemplate(PYRoamController, NSNumber *, step);
+PYPropertyEqualTemplate(PYRoamController, NSDictionary *, mapTypeControl);
 
 @end
