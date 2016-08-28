@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYTextStyle.h"
+
+@class PYTextStyle;
 
 /**
  *

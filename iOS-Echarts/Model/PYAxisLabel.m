@@ -7,6 +7,7 @@
 //
 
 #import "PYAxisLabel.h"
+#import "PYTextStyle.h"
 
 @implementation PYAxisLabel
 
