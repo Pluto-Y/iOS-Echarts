@@ -10,4 +10,6 @@
 
 @implementation PYChordStyle
 
+PYInitializerImpTemplate(PYChordStyle);
+
 @end

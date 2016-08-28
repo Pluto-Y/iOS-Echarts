@@ -31,4 +31,6 @@ extern PYPieSeriesRoseType const PYPieSeriesRoseTypeArea;
 @property (nonatomic, strong) id selectedMode;
 @property (nonatomic, assign) BOOL legendHoverLink;
 
+PYInitializerTemplate(PYPieSeries, series);
+
 @end

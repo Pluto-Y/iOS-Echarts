@@ -22,4 +22,6 @@
 @property (nonatomic, copy) NSDictionary *autoSize;
 @property (nonatomic, strong) NSNumber *textPadding;
 
+PYInitializerTemplate(PYWordCloudSeries, series);
+
 @end

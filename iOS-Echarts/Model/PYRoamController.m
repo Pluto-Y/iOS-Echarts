@@ -32,4 +32,6 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYRoamController);
+
 @end

@@ -15,6 +15,8 @@ NSString * const PYForceSeriesRoamMove = @"move";
 
 @implementation PYForceNodes
 
+PYInitializerImpTemplate(PYForceNodes);
+
 @end
 
 @implementation PYForceSeries
@@ -45,5 +47,7 @@ NSString * const PYForceSeriesRoamMove = @"move";
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYForceSeries);
 
 @end

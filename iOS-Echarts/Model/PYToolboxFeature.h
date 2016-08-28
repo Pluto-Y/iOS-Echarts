@@ -16,6 +16,8 @@
 @property (nonatomic, copy) NSString *markUndo;
 @property (nonatomic, copy) NSString *markClear;
 
+PYInitializerTemplate(PYToolboxFeatureMarkTitle, title);
+
 @end
 
 @interface PYToolboxFeatureMark : NSObject
@@ -24,6 +26,10 @@
 @property (nonatomic, strong) PYToolboxFeatureMarkTitle *title;
 @property (nonatomic, strong) PYLineStyle *lineStyle;
 
+PYInitializerTemplate(PYToolboxFeatureMark, mark);
+
+PYPropertyEqualTemplate(PYToolboxFeatureMark, PYToolboxFeatureMarkTitle, title);
+
 @end
 
 @interface PYToolboxFeatureDataZoomTitle : NSObject
@@ -31,12 +37,18 @@
 @property (nonatomic, copy) NSString *dataZoom;
 @property (nonatomic, copy) NSString *dataZoomReset;
 
+PYInitializerTemplate(PYToolboxFeatureDataZoomTitle, title);
+
 @end
 
 @interface PYToolboxFeatureDataZoom : NSObject
 
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, strong) PYToolboxFeatureDataZoomTitle *title;
+
+PYInitializerTemplate(PYToolboxFeatureDataZoom, dataZoom);
+
+PYPropertyEqualTemplate(PYToolboxFeatureDataZoom, PYToolboxFeatureDataZoomTitle, title);
 
 @end
 
@@ -46,6 +58,8 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, assign) BOOL readOnly;
 @property (nonatomic, copy) NSArray *lang;
+
+PYInitializerTemplate(PYToolboxFeatureDataView, dataView);
 
 @end
 
@@ -60,6 +74,8 @@
 @property (nonatomic, copy) NSString *pie;
 @property (nonatomic, copy) NSString *funnel;
 
+PYInitializerTemplate(PYToolboxFeatureMagicTypeTitle, title);
+
 @end
 
 @interface PYToolboxFeatureMagicType : NSObject
@@ -69,12 +85,18 @@
 @property (nonatomic, copy) NSDictionary<NSString *, PYOption *> *option;
 @property (nonatomic, copy) NSArray<NSString *> *type;
 
+PYInitializerTemplate(PYToolboxFeatureMagicType, magicType);
+
+PYPropertyEqualTemplate(PYToolboxFeatureMagicType, PYToolboxFeatureMagicTypeTitle, title);
+
 @end
 
 @interface PYToolboxFeatureRestore : NSObject
 
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, copy) NSString *title;
+
+PYInitializerTemplate(PYToolboxFeatureRestore, restore);
 
 @end
 
@@ -84,6 +106,8 @@
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *type;
 @property (nonatomic, copy) NSString *lang;
+
+PYInitializerTemplate(PYToolboxFeatureSaveAsImage, saveAsImage);
 
 @end
 
@@ -103,5 +127,12 @@
 @property (nonatomic, strong) PYToolboxFeatureRestore *restore;
 @property (nonatomic, strong, getter=getSaveAsImage) PYToolboxFeatureSaveAsImage *saveAsImage __deprecated_msg("Use PYEchartView `obtainEchartsImageWithType:completedBlock:` instead.");
 
+PYInitializerTemplate(PYToolboxFeature, feature);
+
+PYPropertyEqualTemplate(PYToolboxFeature, PYToolboxFeatureMark, mark);
+PYPropertyEqualTemplate(PYToolboxFeature, PYToolboxFeatureDataZoom, dataZoom);
+PYPropertyEqualTemplate(PYToolboxFeature, PYToolboxFeatureDataView, dataView);
+PYPropertyEqualTemplate(PYToolboxFeature, PYToolboxFeatureMagicType, magicType);
+PYPropertyEqualTemplate(PYToolboxFeature, PYToolboxFeatureRestore, restore);
 
 @end

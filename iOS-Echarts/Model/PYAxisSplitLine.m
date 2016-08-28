@@ -7,7 +7,6 @@
 //
 
 #import "PYAxisSplitLine.h"
-#import "PYLineStyle.h"
 
 @implementation PYAxisSplitLine
 
@@ -21,5 +20,9 @@
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYAxisSplitLine);
+
+PYPropertyEqualImpTemplate(PYAxisSplitLine, PYLineStyle, lineStyle);
 
 @end

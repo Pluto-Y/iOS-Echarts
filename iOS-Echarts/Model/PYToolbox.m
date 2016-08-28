@@ -36,4 +36,9 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYToolbox);
+
+PYPropertyEqualImpTemplate(PYToolbox, PYTextStyle, textStyle);
+PYPropertyEqualImpTemplate(PYToolbox, PYToolboxFeature, feature);
+
 @end

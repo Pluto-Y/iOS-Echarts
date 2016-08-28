@@ -7,7 +7,6 @@
 //
 
 #import "PYMarkPoint.h"
-#import "PYUtilities.h"
 
 PYMarkPointEffectType const PYMarkPointEffectTypeScale  = @"scale";
 PYMarkPointEffectType const PYMarkPointEffectTypeBounce = @"bounce";
@@ -35,6 +34,8 @@ static NSArray<PYMarkPointEffectType> *markPointEffectTypeScope;
     _type = [type copy];
 }
 
+PYInitializerImpTemplate(PYMarkPointEffect);
+
 @end
 
 @implementation PYMarkPoint
@@ -57,5 +58,10 @@ static NSArray<PYMarkPointEffectType> *markPointEffectTypeScope;
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYMarkPoint);
+
+PYPropertyEqualImpTemplate(PYMarkPoint, PYMarkPointEffect, effect);
+PYPropertyEqualImpTemplate(PYMarkPoint, PYItemStyle, itemStyle);
 
 @end

@@ -35,4 +35,8 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYLegend);
+
+PYPropertyEqualImpTemplate(PYLegend, PYTextStyle, textStyle);
+
 @end

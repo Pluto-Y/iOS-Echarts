@@ -36,4 +36,8 @@
 @property (nonatomic, copy) NSDictionary *selected;
 @property (nonatomic, copy) NSArray *data;
 
+PYInitializerTemplate(PYLegend, legend);
+
+PYPropertyEqualTemplate(PYLegend, PYTextStyle, textStyle);
+
 @end

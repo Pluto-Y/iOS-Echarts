@@ -12,34 +12,55 @@
 
 @implementation PYToolboxFeatureMarkTitle
 
+PYInitializerImpTemplate(PYToolboxFeatureMarkTitle);
+
 @end
 
 @implementation PYToolboxFeatureMark
+
+PYInitializerImpTemplate(PYToolboxFeatureMark);
+
+PYPropertyEqualImpTemplate(PYToolboxFeatureMark, PYToolboxFeatureMarkTitle, title);
 
 @end
 
 @implementation PYToolboxFeatureDataZoomTitle
 
+PYInitializerImpTemplate(PYToolboxFeatureDataZoomTitle);
 
 @end
 
 @implementation PYToolboxFeatureDataZoom
 
+PYInitializerImpTemplate(PYToolboxFeatureDataZoom);
+
+PYPropertyEqualImpTemplate(PYToolboxFeatureDataZoom, PYToolboxFeatureDataZoomTitle, title);
+
 @end
 
 @implementation PYToolboxFeatureDataView
+
+PYInitializerImpTemplate(PYToolboxFeatureDataView);
 
 @end
 
 @implementation PYToolboxFeatureMagicTypeTitle
 
+PYInitializerImpTemplate(PYToolboxFeatureMagicTypeTitle);
+
 @end
 
 @implementation PYToolboxFeatureMagicType
 
+PYInitializerImpTemplate(PYToolboxFeatureMagicType);
+
+PYPropertyEqualImpTemplate(PYToolboxFeatureMagicType, PYToolboxFeatureMagicTypeTitle, title);
+
 @end
 
 @implementation PYToolboxFeatureRestore
+
+PYInitializerImpTemplate(PYToolboxFeatureRestore);
 
 @end
 
@@ -48,6 +69,8 @@
 - (BOOL)isShow {
     return NO;
 }
+
+PYInitializerImpTemplate(PYToolboxFeatureSaveAsImage);
 
 @end
 
@@ -105,5 +128,13 @@
 - (PYToolboxFeatureSaveAsImage *)getSaveAsImage {
     return nil;
 }
+
+PYInitializerImpTemplate(PYToolboxFeature);
+
+PYPropertyEqualImpTemplate(PYToolboxFeature, PYToolboxFeatureMark, mark);
+PYPropertyEqualImpTemplate(PYToolboxFeature, PYToolboxFeatureDataZoom, dataZoom);
+PYPropertyEqualImpTemplate(PYToolboxFeature, PYToolboxFeatureDataView, dataView);
+PYPropertyEqualImpTemplate(PYToolboxFeature, PYToolboxFeatureMagicType, magicType);
+PYPropertyEqualImpTemplate(PYToolboxFeature, PYToolboxFeatureRestore, restore);
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "PYSeries.h"
-#import "PYUtilities.h"
 
 @class PYCategories, PYNodes, PYLinks;
 
@@ -36,5 +35,7 @@
 @property (nonatomic, copy) PYSort sort;
 @property (nonatomic, copy) PYSort sortSub;
 @property (nonatomic, assign) BOOL clockWise;
+
+PYInitializerTemplate(PYChordSeries, series);
 
 @end

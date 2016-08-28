@@ -33,4 +33,6 @@ extern PYLoadingOptionEffect const PYLoadingOptionEffectBubble;
 @property (nonatomic, copy) NSDictionary *effectOption;
 @property (nonatomic, strong) NSNumber *progress;
 
+PYPropertyEqualTemplate(PYLoadingOption, PYTextStyle, textStyle);
+
 @end

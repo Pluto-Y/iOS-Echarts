@@ -25,4 +25,8 @@
 @property (nonatomic, copy) NSString *formatter;
 @property (nonatomic, strong) PYTextStyle *textStyle;
 
+PYInitializerTemplate(PYAxisLabel, axisLabel);
+
+PYPropertyEqualTemplate(PYAxisLabel, PYTextStyle, textStyle);
+
 @end

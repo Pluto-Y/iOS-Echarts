@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PYTextStyle.h"
 
-@class PYTextStyle;
 @class PYColor;
 
 /**
@@ -46,5 +46,9 @@
 @property (nonatomic, strong) id formatter;
 @property (nonatomic, strong) NSMutableArray *text;
 @property (nonatomic, strong) PYTextStyle *textStyle;
+
+PYInitializerTemplate(PYDataRange, dataRange);
+
+PYPropertyEqualTemplate(PYDataRange, PYTextStyle, textStyle);
 
 @end

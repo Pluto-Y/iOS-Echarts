@@ -24,6 +24,10 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYLabelLine);
+
+PYPropertyEqualImpTemplate(PYLabelLine, PYLineStyle, lineStyle);
+
 @end
 
 @implementation PYLabel
@@ -38,6 +42,10 @@
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYLabel);
+
+PYPropertyEqualImpTemplate(PYLabel, PYTextStyle, textStyle)
 
 @end
 
@@ -56,5 +64,15 @@
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYItemStyleProp);
+
+PYPropertyEqualImpTemplate(PYItemStyleProp, PYLineStyle, lineStyle);
+PYPropertyEqualImpTemplate(PYItemStyleProp, PYAreaStyle, areaStyle);
+PYPropertyEqualImpTemplate(PYItemStyleProp, PYChordStyle, chordStyle);
+PYPropertyEqualImpTemplate(PYItemStyleProp, PYNodeStyle, nodeStyle);
+PYPropertyEqualImpTemplate(PYItemStyleProp, PYLinkStyle, linkStyle);
+PYPropertyEqualImpTemplate(PYItemStyleProp, PYLabel, label);
+PYPropertyEqualImpTemplate(PYItemStyleProp, PYLabelLine, labelLine);
 
 @end

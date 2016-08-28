@@ -19,4 +19,6 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYWordCloudSeries);
+
 @end

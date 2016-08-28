@@ -27,4 +27,8 @@
 @property (nonatomic, strong) NSNumber *category;
 @property (nonatomic, strong) PYItemStyle *itemStyle;
 
+PYInitializerTemplate(PYNodes, nodes);
+
+PYPropertyEqualTemplate(PYNodes, PYItemStyle, itemStyle);
+
 @end

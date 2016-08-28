@@ -27,4 +27,6 @@ extern PYLinkStyleType const PYLinkStyleTypeCurve;
 @property (nonatomic, strong) PYColor *color;
 @property (nonatomic, strong) NSNumber *width;
 
+PYInitializerTemplate(PYLinkStyle, linkStyle);
+
 @end

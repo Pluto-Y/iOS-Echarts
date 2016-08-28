@@ -7,7 +7,6 @@
 //
 
 #import "PYAxisLine.h"
-#import "PYLineStyle.h"
 
 @implementation PYAxisLine
 
@@ -20,5 +19,9 @@
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYAxisLine);
+
+PYPropertyEqualImpTemplate(PYAxisLine, PYLineStyle, lineStyle);
 
 @end

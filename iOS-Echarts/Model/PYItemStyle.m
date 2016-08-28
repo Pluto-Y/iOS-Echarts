@@ -20,4 +20,9 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYItemStyle);
+
+PYPropertyEqualImpTemplate(PYItemStyle, PYItemStyleProp, normal);
+PYPropertyEqualImpTemplate(PYItemStyle, PYItemStyleProp, emphasis);
+
 @end

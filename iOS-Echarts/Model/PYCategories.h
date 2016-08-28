@@ -7,9 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYUtilities.h"
-
-@class PYItemStyle;
+#import "PYItemStyle.h"
 
 /**
  *
@@ -23,5 +21,9 @@
 @property (nonatomic, copy) PYSymbol symbol;
 @property (nonatomic, strong) id symbolSize;
 @property (nonatomic, strong) PYItemStyle *itemStyle;
+
+PYInitializerTemplate(PYCategories, categories);
+
+PYPropertyEqualTemplate(PYCategories, PYItemStyle, itemStyle);
 
 @end

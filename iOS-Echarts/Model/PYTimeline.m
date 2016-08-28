@@ -26,6 +26,10 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYTimelineLabel);
+
+PYPropertyEqualImpTemplate(PYTimelineLabel, PYTextStyle, textStyle);
+
 @end
 
 @implementation PYTimelineCheckpointStyle
@@ -43,6 +47,10 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYTimelineCheckpointStyle);
+
+PYPropertyEqualImpTemplate(PYTimelineCheckpointStyle, PYTimelineLabel, label);
+
 @end
 
 @implementation PYTimelineControlStyle
@@ -58,6 +66,8 @@
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYTimelineControlStyle);
 
 @end
 
@@ -118,5 +128,12 @@ static NSArray<PYTimelineType> *timelineTypeScope;
     }
     _type = [type copy];
 }
+
+PYInitializerImpTemplate(PYTimeline);
+
+PYPropertyEqualImpTemplate(PYTimeline, PYLineStyle, lineStyle);
+PYPropertyEqualImpTemplate(PYTimeline, PYTimelineLabel, label);
+PYPropertyEqualImpTemplate(PYTimeline, PYTimelineCheckpointStyle, checkpointStyle);
+PYPropertyEqualImpTemplate(PYTimeline, PYTimelineControlStyle, controlStyle);
 
 @end

@@ -28,4 +28,6 @@ PYAreaStyleType const PYAreaStyleTypeDefault = @"default";
     type = PYAreaStyleTypeDefault;
 }
 
+PYInitializerImpTemplate(PYAreaStyle);
+
 @end

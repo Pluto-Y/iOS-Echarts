@@ -22,4 +22,6 @@
 @property (nonatomic, strong) PYColor *borderColor;
 @property (nonatomic, strong) NSNumber *borderWidth;
 
+PYInitializerTemplate(PYNodeStyle, nodeStyle);
+
 @end

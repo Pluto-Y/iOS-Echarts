@@ -36,4 +36,6 @@ extern PYMapSeriesMapValueCalculation const PYMapSeriesMapValueCalculationAverag
 @property (nonatomic, copy) NSDictionary *geoCoord;
 @property (nonatomic, copy) NSDictionary *heatmap;
 
+PYInitializerTemplate(PYMapSeries, series);
+
 @end

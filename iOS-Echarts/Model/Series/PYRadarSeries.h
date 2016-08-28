@@ -7,7 +7,6 @@
 //
 
 #import "PYSeries.h"
-#import "PYUtilities.h"
 
 /**
  *
@@ -22,5 +21,7 @@
 @property (nonatomic, strong) id symbolSize;
 @property (nonatomic, strong) NSNumber *symbolRotate;
 @property (nonatomic, assign) BOOL legendHoverLink;
+
+PYInitializerTemplate(PYRadarSeries, series);
 
 @end

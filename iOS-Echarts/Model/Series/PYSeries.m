@@ -61,4 +61,11 @@ static NSArray<PYSeriesType> *seriesTypeScope;
     _type = [type copy];
 }
 
+PYInitializerImpTemplate(PYSeries);
+
+PYPropertyEqualImpTemplate(PYSeries, PYTooltip, tooltip);
+PYPropertyEqualImpTemplate(PYSeries, PYItemStyle, itemStyle);
+PYPropertyEqualImpTemplate(PYSeries, PYMarkPoint, markPoint);
+PYPropertyEqualImpTemplate(PYSeries, PYMarkLine, markLine);
+
 @end

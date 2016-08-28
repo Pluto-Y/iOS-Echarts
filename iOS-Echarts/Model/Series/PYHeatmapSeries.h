@@ -22,4 +22,6 @@
 @property (nonatomic, strong) NSNumber *valueScale;
 @property (nonatomic, strong) NSNumber *opacity;
 
+PYInitializerTemplate(PYHeatmapSeries, series);
+
 @end

@@ -21,4 +21,6 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYEventRiverSeries);
+
 @end

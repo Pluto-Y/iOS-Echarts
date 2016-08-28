@@ -23,4 +23,8 @@
 @property (nonatomic, strong) NSNumber *weight;
 @property (nonatomic, strong) PYItemStyle *itemStyle;
 
+PYInitializerTemplate(PYLinks, links);
+
+PYPropertyEqualTemplate(PYLinks, PYItemStyle, itemStyle);
+
 @end

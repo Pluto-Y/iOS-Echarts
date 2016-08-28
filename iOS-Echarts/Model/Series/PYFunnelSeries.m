@@ -52,4 +52,6 @@ static NSArray *funnelSeriesSortScope;
     _sort = [sort copy];
 }
 
+PYInitializerImpTemplate(PYFunnelSeries);
+
 @end

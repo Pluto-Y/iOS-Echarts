@@ -23,4 +23,7 @@ extern PYAreaStyleType const PYAreaStyleTypeDefault;
 @property (nonatomic, strong) id color;
 @property (nonatomic, copy) PYAreaStyleType type;
 
+PYInitializerTemplate(PYAreaStyle, areaStyle);
+
 @end
+

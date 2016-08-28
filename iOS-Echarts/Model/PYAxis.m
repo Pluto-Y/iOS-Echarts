@@ -52,4 +52,13 @@ static NSArray<PYAxisType> *axisTypeSupported;
     _type = [type copy];
 }
 
+PYInitializerImpTemplate(PYAxis);
+
+PYPropertyEqualImpTemplate(PYAxis, PYTextStyle, nameTextStyle);
+PYPropertyEqualImpTemplate(PYAxis, PYAxisLine, axisLine);
+PYPropertyEqualImpTemplate(PYAxis, PYAxisTick, axisTick);
+PYPropertyEqualImpTemplate(PYAxis, PYAxisLabel, axisLabel);
+PYPropertyEqualImpTemplate(PYAxis, PYAxisSplitLine, splitLine);
+PYPropertyEqualImpTemplate(PYAxis, PYSplitArea, splitArea);
+
 @end

@@ -33,4 +33,6 @@
 @property (nonatomic, strong) NSNumber *step;
 @property (nonatomic, copy) NSDictionary *mapTypeControl;
 
+PYInitializerTemplate(PYRoamController, roamController);
+
 @end

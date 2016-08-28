@@ -7,7 +7,6 @@
 //
 
 #import "PYSeries.h"
-#import "PYUtilities.h"
 
 @class PYItemStyle;
 
@@ -19,6 +18,10 @@
 @property (nonatomic, strong) id symbolSize;
 @property (nonatomic, copy) NSArray *children;
 @property (nonatomic, strong) PYItemStyle *itemStyle;
+
+PYInitializerTemplate(PYTreeSeriesData, data);
+
+PYPropertyEqualTemplate(PYTreeSeriesData, PYItemStyle, itemStyle);
 
 @end
 
@@ -39,5 +42,7 @@
 @property (nonatomic, copy) PYSymbol symbol;
 @property (nonatomic, strong) id symbolSize;
 @property (nonatomic, assign) BOOL hoverable;
+
+PYInitializerTemplate(PYTreeSeries, series);
 
 @end

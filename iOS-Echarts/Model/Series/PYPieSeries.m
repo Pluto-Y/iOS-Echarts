@@ -46,4 +46,6 @@ static NSArray<PYPieSeriesRoseType> *pieSeriesRoleTypeScope;
     _roseType = [roseType copy];
 }
 
+PYInitializerImpTemplate(PYPieSeries);
+
 @end

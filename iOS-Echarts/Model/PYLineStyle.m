@@ -49,5 +49,6 @@ static NSArray<PYLineStyleType> *lineStyleTypeScope;
     _type = [type copy];
 }
 
+PYInitializerImpTemplate(PYLineStyle);
 
 @end

@@ -30,4 +30,6 @@
 @property (nonatomic, strong) NSNumber *borderWidth;
 @property (nonatomic, strong) PYColor *borderColor;
 
+PYInitializerTemplate(PYGrid, grid);
+
 @end

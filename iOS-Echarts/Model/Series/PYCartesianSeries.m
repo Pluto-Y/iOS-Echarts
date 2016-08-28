@@ -49,4 +49,6 @@ static NSArray<PYCartesianSeriesDataFilter> *cartesianSeriesDataFilterScope;
     _dataFilter = [dataFilter copy];
 }
 
+PYInitializerImpTemplate(PYCartesianSeries);
+
 @end

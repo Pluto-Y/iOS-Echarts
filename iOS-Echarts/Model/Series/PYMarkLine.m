@@ -7,13 +7,16 @@
 //
 
 #import "PYMarkLine.h"
-#import "PYUtilities.h"
 
 @implementation PYBundling
+
+PYInitializerImpTemplate(PYBundling);
 
 @end
 
 @implementation PYMarkLineEffect
+
+PYInitializerImpTemplate(PYMarkLineEffect);
 
 @end
 
@@ -41,5 +44,11 @@
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYMarkLine);
+
+PYPropertyEqualImpTemplate(PYMarkLine, PYBundling, bundling);
+PYPropertyEqualImpTemplate(PYMarkLine, PYMarkLineEffect, effect);
+PYPropertyEqualImpTemplate(PYMarkLine, PYItemStyle, itemStyle);
 
 @end

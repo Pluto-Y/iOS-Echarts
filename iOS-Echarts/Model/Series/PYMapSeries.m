@@ -46,4 +46,6 @@ static NSArray<PYMapSeriesMapValueCalculation> *mapValueCalculationScope;
     _mapValueCalculation = [mapValueCalculation copy];
 }
 
+PYInitializerImpTemplate(PYMapSeries);
+
 @end

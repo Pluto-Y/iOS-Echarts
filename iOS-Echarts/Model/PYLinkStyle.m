@@ -42,4 +42,6 @@ static NSArray<PYLinkStyleType> *linkStyleTypeScope;
     _type = [type copy];
 }
 
+PYInitializerImpTemplate(PYLinkStyle);
+
 @end

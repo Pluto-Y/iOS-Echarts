@@ -8,8 +8,6 @@
 
 #import "PYAxisTick.h"
 #import "PYColor.h"
-#import "PYLineStyle.h"
-#import "PYUtilities.h"
 
 @implementation PYAxisTick
 
@@ -27,5 +25,9 @@
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYAxisTick);
+
+PYPropertyEqualImpTemplate(PYAxisTick, PYLineStyle, lineStyle);
 
 @end

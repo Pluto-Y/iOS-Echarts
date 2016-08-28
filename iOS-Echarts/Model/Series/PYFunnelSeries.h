@@ -7,7 +7,6 @@
 //
 
 #import "PYSeries.h"
-#import "PYUtilities.h"
 
 typedef NSString *PYFunnelSeriesSort __deprecated_msg("Use PYSort instead");
 
@@ -36,5 +35,7 @@ extern PYFunnelSeriesSort const PYFunnelSeriesSortDescending __deprecated_msg("U
 @property (nonatomic, copy) PYSort sort;
 @property (nonatomic, strong) NSNumber *gap;
 @property (nonatomic, assign) BOOL legendHoverLink;
+
+PYInitializerTemplate(PYFunnelSeries, series);
 
 @end

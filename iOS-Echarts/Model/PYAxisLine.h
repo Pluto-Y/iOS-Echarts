@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PYLineStyle.h"
 
 @class PYLineStyle;
 
@@ -21,5 +22,9 @@
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, assign) BOOL onZero;
 @property (nonatomic, strong) PYLineStyle *lineStyle;
+
+PYInitializerTemplate(PYAxisLine, axisLine);
+
+PYPropertyEqualTemplate(PYAxisLine, PYLineStyle, lineStyle);
 
 @end

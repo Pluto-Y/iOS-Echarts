@@ -8,7 +8,6 @@
 
 #import "PYTitle.h"
 #import "PYColor.h"
-#import "PYTextStyle.h"
 
 @implementation PYTitle
 
@@ -39,5 +38,10 @@
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYTitle);
+
+PYPropertyEqualImpTemplate(PYTitle, PYTextStyle, textStyle)
+PYPropertyEqualImpTemplate(PYTitle, PYTextStyle, subtextStyle)
 
 @end

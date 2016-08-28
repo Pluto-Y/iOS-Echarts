@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PYTextStyle.h"
+#import "PYAxisPointer.h"
 
-@class PYColor, PYTextStyle, PYAxisPointer;
+@class PYColor;
 
 typedef NSString *PYTooltipTrigger;
 
@@ -42,5 +44,10 @@ extern PYTooltipTrigger const PYTooltipTriggerAxis;
 @property (nonatomic, strong) id padding;
 @property (nonatomic, strong) PYAxisPointer *axisPointer;
 @property (nonatomic, strong) PYTextStyle *textStyle;
+
+PYInitializerTemplate(PYTooltip, tooltip);
+
+PYPropertyEqualTemplate(PYTooltip, PYAxisPointer, axisPointer);
+PYPropertyEqualTemplate(PYTooltip, PYTextStyle, textStyle);
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "PYSeries.h"
-#import "PYUtilities.h"
 
 typedef NSString *PYCartesianSeriesDataFilter;
 
@@ -41,5 +40,7 @@ extern PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterAverage;
 @property (nonatomic, assign) BOOL large;
 @property (nonatomic, strong) NSNumber *largeThreshold;
 @property (nonatomic, assign) BOOL legendHoverLink;
+
+PYInitializerTemplate(PYCartesianSeries, series);
 
 @end

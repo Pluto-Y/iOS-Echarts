@@ -29,4 +29,6 @@ PYLoadingOptionEffect const PYLoadingOptionEffectBubble      = @"bubble";
     return self;
 }
 
+PYPropertyEqualImpTemplate(PYLoadingOption, PYTextStyle, textStyle);
+
 @end

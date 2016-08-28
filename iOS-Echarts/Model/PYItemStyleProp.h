@@ -10,8 +10,12 @@
 #import "PYNodeStyle.h"
 #import "PYLinkStyle.h"
 #import "PYLinks.h"
+#import "PYTextStyle.h"
+#import "PYLineStyle.h"
+#import "PYAreaStyle.h"
+#import "PYChordStyle.h"
 
-@class PYLabelLine, PYAreaStyle, PYLineStyle, PYChordStyle, PYTextStyle;
+@class PYLabelLine;
 
 @interface PYLabelLine : NSObject
 
@@ -19,7 +23,13 @@
 @property (nonatomic, strong) NSNumber *length;
 @property (nonatomic, strong) PYLineStyle *lineStyle;
 
+PYInitializerTemplate(PYLabelLine, labelLine);
+
+PYPropertyEqualTemplate(PYLabelLine, PYLineStyle, lineStyle);
+
 @end
+
+
 
 @interface PYLabel : NSObject
 
@@ -31,6 +41,10 @@
 @property (nonatomic, strong) PYTextStyle *textStyle;
 @property (nonatomic, strong) NSNumber *x;
 @property (nonatomic, strong) NSNumber *y;
+
+PYInitializerTemplate(PYLabel, label);
+
+PYPropertyEqualTemplate(PYLabel, PYTextStyle, textStyle);
 
 @end
 
@@ -55,5 +69,15 @@
 @property (nonatomic, strong) NSNumber *barBorderWidth;
 @property (nonatomic, strong) PYLabel *label;
 @property (nonatomic, strong) PYLabelLine *labelLine;
+
+PYInitializerTemplate(PYItemStyleProp, itemStyleProp);
+
+PYPropertyEqualTemplate(PYItemStyleProp, PYLineStyle, lineStyle);
+PYPropertyEqualTemplate(PYItemStyleProp, PYAreaStyle, areaStyle);
+PYPropertyEqualTemplate(PYItemStyleProp, PYChordStyle, chordStyle);
+PYPropertyEqualTemplate(PYItemStyleProp, PYNodeStyle, nodeStyle);
+PYPropertyEqualTemplate(PYItemStyleProp, PYLinkStyle, linkStyle);
+PYPropertyEqualTemplate(PYItemStyleProp, PYLabel, label);
+PYPropertyEqualTemplate(PYItemStyleProp, PYLabelLine, labelLine);
 
 @end

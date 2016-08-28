@@ -51,4 +51,14 @@ extern PYAxisType const PYAxisTypeLog;
 @property (nonatomic, strong) PYSplitArea *splitArea;
 @property (nonatomic, copy) NSArray *data;
 
+PYInitializerTemplate(PYAxis, axis);
+
+PYPropertyEqualTemplate(PYAxis, PYTextStyle, nameTextStyle);
+PYPropertyEqualTemplate(PYAxis, PYAxisLine, axisLine);
+PYPropertyEqualTemplate(PYAxis, PYAxisTick, axisTick);
+PYPropertyEqualTemplate(PYAxis, PYAxisLabel, axisLabel);
+PYPropertyEqualTemplate(PYAxis, PYAxisSplitLine, splitLine);
+PYPropertyEqualTemplate(PYAxis, PYSplitArea, splitArea);
+
+
 @end

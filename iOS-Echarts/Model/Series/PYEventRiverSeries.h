@@ -20,4 +20,6 @@
 @property (nonatomic, strong) NSNumber *weight;
 @property (nonatomic, assign) BOOL legendHoverLink;
 
+PYInitializerTemplate(PYEventRiverSeries, series);
+
 @end

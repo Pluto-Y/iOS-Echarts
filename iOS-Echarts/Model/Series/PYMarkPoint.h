@@ -7,8 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PYItemStyle.h"
 
-@class PYColor, PYItemStyle;
+@class PYColor;
 
 typedef NSString *PYMarkPointEffectType;
 
@@ -26,6 +27,8 @@ extern PYMarkPointEffectType const PYMarkPointEffectTypeBounce;
 @property (nonatomic, strong) PYColor *color;
 @property (nonatomic, strong) PYColor *shadowColor;
 @property (nonatomic, strong) NSNumber *shadowBlur;
+
+PYInitializerTemplate(PYMarkPointEffect, effect);
 
 @end
 
@@ -45,5 +48,10 @@ extern PYMarkPointEffectType const PYMarkPointEffectTypeBounce;
 @property (nonatomic, strong) PYMarkPointEffect *effect;
 @property (nonatomic, strong) PYItemStyle *itemStyle;
 @property (nonatomic, copy) NSArray *data;
+
+PYInitializerTemplate(PYMarkPoint, point);
+
+PYPropertyEqualTemplate(PYMarkPoint, PYMarkPointEffect, effect);
+PYPropertyEqualTemplate(PYMarkPoint, PYItemStyle, itemStyle);
 
 @end

@@ -7,7 +7,6 @@
 //
 
 #import "PYAxisLabel.h"
-#import "PYUtilities.h"
 
 @implementation PYAxisLabel
 
@@ -22,5 +21,9 @@
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYAxisLabel);
+
+PYPropertyEqualImpTemplate(PYAxisLabel, PYTextStyle, textStyle);
 
 @end

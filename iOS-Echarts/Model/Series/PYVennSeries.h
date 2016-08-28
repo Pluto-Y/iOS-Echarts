@@ -16,6 +16,10 @@
 @property (nonatomic, strong) NSNumber *value;
 @property (nonatomic, strong) PYItemStyle *itemStyle;
 
+PYInitializerTemplate(PYVennSeriesData, data);
+
+PYPropertyEqualTemplate(PYVennSeriesData, PYItemStyle, itemStyle);
+
 @end
 
 /**
@@ -25,5 +29,7 @@
  *
  */
 @interface PYVennSeries : PYSeries
+
+PYInitializerTemplate(PYVennSeries, series);
 
 @end

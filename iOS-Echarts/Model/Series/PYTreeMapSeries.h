@@ -20,4 +20,6 @@
 @property (nonatomic, copy) NSArray *size;
 @property (nonatomic, copy) NSString *root;
 
+PYInitializerTemplate(PYTreeMapSeries, series);
+
 @end

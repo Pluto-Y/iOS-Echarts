@@ -14,4 +14,9 @@
 @property (nonatomic, strong) PYItemStyleProp *normal;
 @property (nonatomic, strong) PYItemStyleProp *emphasis;
 
+PYInitializerTemplate(PYItemStyle, itemStyle);
+
+PYPropertyEqualTemplate(PYItemStyle, PYItemStyleProp, normal);
+PYPropertyEqualTemplate(PYItemStyle, PYItemStyleProp, emphasis);
+
 @end

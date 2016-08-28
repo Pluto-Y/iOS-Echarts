@@ -7,7 +7,7 @@
 //
 
 #import "PYNodes.h"
-#import "PYUtilities.h"
+#import "PYItemStyle.h"
 
 @implementation PYNodes
 
@@ -21,5 +21,9 @@
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYNodes);
+
+PYPropertyEqualImpTemplate(PYNodes, PYItemStyle, itemStyle);
 
 @end

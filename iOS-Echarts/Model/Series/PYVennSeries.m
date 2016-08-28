@@ -8,6 +8,14 @@
 
 #import "PYVennSeries.h"
 
+@implementation PYVennSeriesData
+
+PYInitializerImpTemplate(PYVennSeriesData);
+
+PYPropertyEqualImpTemplate(PYVennSeriesData, PYItemStyle, itemStyle);
+
+@end
+
 @implementation PYVennSeries
 
 - (instancetype)init
@@ -18,5 +26,7 @@
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYVennSeries);
 
 @end

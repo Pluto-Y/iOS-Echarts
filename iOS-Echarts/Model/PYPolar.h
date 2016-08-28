@@ -39,4 +39,11 @@ extern PYPolarType const PYPolarTypeCircle;
 @property (nonatomic, copy) PYPolarType type;
 @property (nonatomic, strong) NSMutableArray *indicator;
 
+PYInitializerTemplate(PYPolar, polar);
+
+PYPropertyEqualTemplate(PYPolar, PYLineStyle, axisLine);
+PYPropertyEqualTemplate(PYPolar, PYAxisLabel, axisLabel);
+PYPropertyEqualTemplate(PYPolar, PYLineStyle, spliteLine);
+PYPropertyEqualTemplate(PYPolar, PYAreaStyle, spliteArea);
+
 @end

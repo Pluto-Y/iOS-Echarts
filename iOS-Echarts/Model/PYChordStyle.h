@@ -21,4 +21,6 @@
 @property (nonatomic, copy) NSString *borderWidth;
 @property (nonatomic, copy) NSString *borderColor;
 
+PYInitializerTemplate(PYChordStyle, chordStyle);
+
 @end

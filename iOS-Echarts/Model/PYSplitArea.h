@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class PYAreaStyle;
+#import "PYAreaStyle.h"
 
 /**
  *
@@ -21,5 +20,9 @@
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, assign) BOOL onGap;
 @property (nonatomic, strong) PYAreaStyle *areaStyle;
+
+PYInitializerTemplate(PYSplitArea, splitArea);
+
+PYPropertyEqualTemplate(PYSplitArea, PYAreaStyle, areaStyle);
 
 @end

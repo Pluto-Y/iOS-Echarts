@@ -7,15 +7,23 @@
 //
 
 #import "PYSeries.h"
-#import "PYUtilities.h"
+#import "PYTextStyle.h"
+#import "PYAxisLine.h"
+#import "PYAxisLabel.h"
+#import "PYAxisTick.h"
+#import "PYLineStyle.h"
 
-@class PYAxisLine, PYAxisLabel, PYAxisTick, PYTextStyle, PYColor, PYLineStyle;
+@class PYColor;
 
 @interface PYGaugeSpliteLine : NSObject
 
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, strong) NSNumber *length;
 @property (nonatomic, strong) PYLineStyle *lineStyle;
+
+PYInitializerTemplate(PYGaugeSpliteLine, spliteLine);
+
+PYPropertyEqualTemplate(PYGaugeSpliteLine, PYLineStyle, lineStyle);
 
 @end
 
@@ -33,6 +41,10 @@
 @property (nonatomic, strong) id shadowColor;
 @property (nonatomic, strong) NSNumber *shadowBlur;
 
+PYInitializerTemplate(PYGaugeDetail, detail);
+
+PYPropertyEqualTemplate(PYGaugeDetail, PYTextStyle, textStyle);
+
 @end
 
 @interface PYGaugePointer : NSObject
@@ -42,6 +54,8 @@
 @property (nonatomic, strong) id color;
 @property (nonatomic, strong) id shadowColor;
 @property (nonatomic, strong) NSNumber *shadowBlur;
+
+PYInitializerTemplate(PYGaugePointer, pointer);
 
 @end
 
@@ -53,6 +67,10 @@
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, copy) NSArray *offsetCenter;
 @property (nonatomic, strong) PYTextStyle *textStyle;
+
+PYInitializerTemplate(PYGaugeTitle, title);
+
+PYPropertyEqualTemplate(PYGaugeTitle, PYTextStyle, textStyle);
 
 @end
 
@@ -79,5 +97,15 @@
 @property (nonatomic, strong) PYGaugeTitle *title;
 @property (nonatomic, strong) PYGaugeDetail *detail;
 @property (nonatomic, assign) BOOL legendHoverLink;
+
+PYInitializerTemplate(PYGaugeSeries, series);
+
+PYPropertyEqualTemplate(PYGaugeSeries, PYAxisLine, axisLine);
+PYPropertyEqualTemplate(PYGaugeSeries, PYAxisTick, axisTick);
+PYPropertyEqualTemplate(PYGaugeSeries, PYAxisLabel, axisLabel);
+PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeSpliteLine, splitLine);
+PYPropertyEqualTemplate(PYGaugeSeries, PYGaugePointer, pointer);
+PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeTitle, title);
+PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeDetail, detail);
 
 @end

@@ -33,4 +33,6 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYDataZoom);
+
 @end

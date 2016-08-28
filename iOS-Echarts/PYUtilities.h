@@ -16,6 +16,8 @@
 #define PYLog(...) do{} while(0)
 #endif
 
+#pragma mark - The global type and constant
+
 typedef NSString *PYInterval;
 static PYInterval PYIntervalAuto = @"auto";
 static PYInterval PYIntervalAll  = @"all";
@@ -40,5 +42,55 @@ typedef NSString *PYSort;
 static PYSort PYSortNone       = @"none";
 static PYSort PYSortAscending  = @"ascending";
 static PYSort PYSortDescending = @"descending";
+
+
+#pragma mark - The template marco
+
+/**
+ *  The template of custom initializer.
+ *  We can use this initializer to create the object,
+ *  then use the block to update the property of the object.
+ */
+#define PYInitializerTemplate(cls, name)                                        \
+    + (cls *)init##cls##WithBlock:(void(^)(cls * name))block;
+
+/**
+ *  The implemention of the custom initializer(above).
+ */
+#define PYInitializerImpTemplate(cls)                                           \
+    + (cls *)init##cls##WithBlock:(void(^)(cls *))block {                       \
+        cls *tmp = [[self alloc] init];                                         \
+        block(tmp);                                                             \
+        return tmp;                                                             \
+    }
+
+
+/**
+ *  The template of the interface which is property custom setter.
+ *  You can use this interface to set value for special property.
+ *
+ *  @param cls  The property is in this class
+ *  @param type The property's type
+ *  @param name The name of parameter which the property in the object.
+ */
+#define PYPropertyEqualTemplate(cls, type, name)                                 \
+    - (cls * (^) (type *name)) name##Eqaul;                                     \
+
+
+/**
+ *  The default implementation for the special the interface(above).
+ *  You can use this default in the object.
+ *
+ *  @param cls  The property is in this class
+ *  @param type The property's type
+ *  @param name The name of parameter which the property in the object.
+ */
+#define PYPropertyEqualImpTemplate(cls, type, name)                             \
+    - (cls * (^) (type *name))name##Eqaul{                                      \
+        return ^(type *name) {                                                  \
+            self.name         = name;                                           \
+            return self;                                                        \
+        };                                                                      \
+    }                                                                           \
 
 #endif /* PYUtilities_h */

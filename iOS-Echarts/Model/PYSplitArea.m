@@ -8,7 +8,6 @@
 
 #import "PYSplitArea.h"
 #import "PYColor.h"
-#import "PYAreaStyle.h"
 
 @implementation PYSplitArea
 
@@ -22,5 +21,9 @@
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYSplitArea);
+
+PYPropertyEqualImpTemplate(PYSplitArea, PYAreaStyle, areaStyle);
 
 @end

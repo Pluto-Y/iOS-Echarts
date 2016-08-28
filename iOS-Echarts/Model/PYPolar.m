@@ -58,4 +58,11 @@ static NSArray<PYPolarType> *polarTypeScope;
     _type = [type copy];
 }
 
+PYInitializerImpTemplate(PYPolar);
+
+PYPropertyEqualImpTemplate(PYPolar, PYLineStyle, axisLine);
+PYPropertyEqualImpTemplate(PYPolar, PYAxisLabel, axisLabel);
+PYPropertyEqualImpTemplate(PYPolar, PYLineStyle, spliteLine);
+PYPropertyEqualImpTemplate(PYPolar, PYAreaStyle, spliteArea);
+
 @end

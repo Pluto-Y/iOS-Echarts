@@ -24,4 +24,6 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYHeatmapSeries);
+
 @end

@@ -20,4 +20,8 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYDataRange);
+
+PYPropertyEqualImpTemplate(PYDataRange, PYTextStyle, textStyle);
+
 @end

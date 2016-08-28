@@ -51,5 +51,12 @@ extern PYSeriesType const PYSeriesTypeTree;
 @property (nonatomic, strong) PYMarkPoint *markPoint;
 @property (nonatomic, strong) PYMarkLine *markLine;
 
+PYInitializerTemplate(PYSeries, series);
+
+PYPropertyEqualTemplate(PYSeries, PYTooltip, tooltip);
+PYPropertyEqualTemplate(PYSeries, PYItemStyle, itemStyle);
+PYPropertyEqualTemplate(PYSeries, PYMarkPoint, markPoint);
+PYPropertyEqualTemplate(PYSeries, PYMarkLine, markLine);
+
 
 @end

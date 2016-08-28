@@ -28,4 +28,6 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYGrid);
+
 @end

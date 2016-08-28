@@ -8,7 +8,6 @@
 
 #import "PYSeries.h"
 #import "PYNodes.h"
-#import "PYUtilities.h"
 
 @class PYCategories, PYLinks;
 
@@ -24,6 +23,8 @@
 @property (nonatomic, assign) BOOL fixX;
 @property (nonatomic, assign) BOOL fixY;
 @property (nonatomic, assign) BOOL draggable;
+
+PYInitializerTemplate(PYForceNodes, nodes);
 
 @end
 
@@ -58,5 +59,7 @@ extern NSString * const PYForceSeriesRoamMove;
 @property (nonatomic, assign) BOOL useWorker;
 @property (nonatomic, strong) NSNumber *steps;
 @property (nonatomic, strong) id roam;
+
+PYInitializerTemplate(PYForceSeries, series);
 
 @end

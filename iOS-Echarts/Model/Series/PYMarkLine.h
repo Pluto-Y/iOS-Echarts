@@ -7,13 +7,16 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PYItemStyle.h"
 
-@class PYColor, PYItemStyle;
+@class PYColor;
 
 @interface PYBundling : NSObject
 
 @property (nonatomic, assign) BOOL enable;
 @property (nonatomic, strong) NSNumber *maxTurningAngle;
+
+PYInitializerTemplate(PYBundling, bundling);
 
 @end
 
@@ -26,6 +29,8 @@
 @property (nonatomic, strong) PYColor *color;
 @property (nonatomic, strong) PYColor *shadowColor;
 @property (nonatomic, strong) NSNumber *shadowBlur;
+
+PYInitializerTemplate(PYMarkLineEffect, effect);
 
 @end
 
@@ -51,5 +56,10 @@
 @property (nonatomic, strong) PYItemStyle *itemStyle;
 @property (nonatomic, copy) NSArray *data;
 
+PYInitializerTemplate(PYMarkLine, markLine);
+
+PYPropertyEqualTemplate(PYMarkLine, PYBundling, bundling);
+PYPropertyEqualTemplate(PYMarkLine, PYMarkLineEffect, effect);
+PYPropertyEqualTemplate(PYMarkLine, PYItemStyle, itemStyle);
 
 @end

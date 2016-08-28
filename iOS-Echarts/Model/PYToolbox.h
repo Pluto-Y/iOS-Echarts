@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "PYToolboxFeature.h"
+#import "PYTextStyle.h"
 
-@class PYColor, PYTextStyle;
+@class PYColor;
 
 /**
  *
@@ -37,5 +38,10 @@
 @property (nonatomic, assign) BOOL showTitle;
 @property (nonatomic, strong) PYTextStyle *textStyle;
 @property (nonatomic, strong) PYToolboxFeature *feature;
+
+PYInitializerTemplate(PYToolbox, toolbox);
+
+PYPropertyEqualTemplate(PYToolbox, PYTextStyle, textStyle);
+PYPropertyEqualTemplate(PYToolbox, PYToolboxFeature, feature);
 
 @end

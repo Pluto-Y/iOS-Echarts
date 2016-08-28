@@ -7,6 +7,7 @@
 //
 
 #import "PYLinks.h"
+#import "PYItemStyle.h"
 
 @implementation PYLinks
 
@@ -18,5 +19,9 @@
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYLinks);
+
+PYPropertyEqualImpTemplate(PYLinks, PYItemStyle, itemStyle);
 
 @end

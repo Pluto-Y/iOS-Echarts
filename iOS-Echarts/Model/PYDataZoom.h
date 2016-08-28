@@ -39,4 +39,6 @@
 @property (nonatomic, assign) BOOL realtime;
 @property (nonatomic, assign) BOOL zoomLock;
 
+PYInitializerTemplate(PYDataZoom, dataZoom);
+
 @end

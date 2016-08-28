@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class PYLineStyle;
+#import "PYLineStyle.h"
 
 /**
  *
@@ -21,5 +20,9 @@
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, assign) BOOL onGap;
 @property (nonatomic, strong) PYLineStyle *lineStyle;
+
+PYInitializerTemplate(PYAxisSplitLine, axisSpliteLine);
+
+PYPropertyEqualTemplate(PYAxisSplitLine, PYLineStyle, lineStyle);
 
 @end

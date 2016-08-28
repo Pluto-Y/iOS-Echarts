@@ -7,8 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "PYTextStyle.h"
 
-@class PYColor, PYTextStyle;
+@class PYColor;
+@protocol PYTextStyleMaker;
 
 /**
  *
@@ -37,5 +39,10 @@
 @property (nonatomic, strong) NSNumber *itemGap;
 @property (nonatomic, strong) PYTextStyle *textStyle;
 @property (nonatomic, strong) PYTextStyle *subtextStyle;
+
+PYInitializerTemplate(PYTitle, title);
+
+PYPropertyEqualTemplate(PYTitle, PYTextStyle, textStyle);
+PYPropertyEqualTemplate(PYTitle, PYTextStyle, subtextStyle);
 
 @end

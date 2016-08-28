@@ -19,4 +19,8 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYCategories);
+
+PYPropertyEqualImpTemplate(PYCategories, PYItemStyle, itemStyle);
+
 @end

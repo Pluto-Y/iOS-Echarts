@@ -21,4 +21,6 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYTreeMapSeries);
+
 @end

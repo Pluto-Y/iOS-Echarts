@@ -49,4 +49,6 @@ static NSArray<PYTextStyleFontStyle> *textStyleFontStyle;
     _fontStyle = [fontStyle copy];
 }
 
+PYInitializerImpTemplate(PYTextStyle);
+
 @end

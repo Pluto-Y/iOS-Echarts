@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYUtilities.h"
+#import "PYTextStyle.h"
+#import "PYLineStyle.h"
 
-@class PYColor, PYTextStyle, PYLineStyle;
+@class PYColor;
 
 @interface PYTimelineLabel : NSObject
 
@@ -18,6 +19,10 @@
 @property (strong, nonatomic) NSNumber *rotate;
 @property (strong, nonatomic) id formatter;
 @property (strong, nonatomic) PYTextStyle *textStyle;
+
+PYInitializerTemplate(PYTimelineLabel, timelineLabel);
+
+PYPropertyEqualTemplate(PYTimelineLabel, PYTextStyle, textStyle);
 
 @end
 
@@ -30,6 +35,10 @@
 @property (strong, nonatomic) id borderWidth;
 @property (strong, nonatomic) PYTimelineLabel *label;
 
+PYInitializerTemplate(PYTimelineCheckpointStyle, checkpointStyle);
+
+PYPropertyEqualTemplate(PYTimelineCheckpointStyle, PYTimelineLabel, label);
+
 @end
 
 @interface PYTimelineControlStyle : NSObject
@@ -38,6 +47,8 @@
 @property (strong, nonatomic) NSNumber *itemGap;
 @property (strong, nonatomic) NSDictionary *normal;
 @property (strong, nonatomic) NSDictionary *emphasis;
+
+PYInitializerTemplate(PYTimelineControlStyle, controlStyle);
 
 @end
 
@@ -82,5 +93,12 @@ extern PYTimelineType const PYTimelineTypeNumber;
 @property (nonatomic, strong) NSNumber *symbolSize;
 @property (nonatomic, strong) NSNumber *currentIndex;
 @property (nonatomic, strong) NSMutableArray *data;
+
+PYInitializerTemplate(PYTimeline, timeline);
+
+PYPropertyEqualTemplate(PYTimeline, PYLineStyle, lineStyle);
+PYPropertyEqualTemplate(PYTimeline, PYTimelineLabel, label);
+PYPropertyEqualTemplate(PYTimeline, PYTimelineCheckpointStyle, checkpointStyle);
+PYPropertyEqualTemplate(PYTimeline, PYTimelineControlStyle, controlStyle);
 
 @end

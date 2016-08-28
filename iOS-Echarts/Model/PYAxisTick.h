@@ -7,8 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-
-@class PYLineStyle;
+#import "PYLineStyle.h"
 
 /**
  *
@@ -25,5 +24,9 @@
 @property (nonatomic, assign) BOOL inside;
 @property (nonatomic, strong) NSNumber *length;
 @property (nonatomic, strong) PYLineStyle *lineStyle;
+
+PYInitializerTemplate(PYAxisTick, axisTick);
+
+PYPropertyEqualTemplate(PYAxisTick, PYLineStyle, lineStyle);
 
 @end

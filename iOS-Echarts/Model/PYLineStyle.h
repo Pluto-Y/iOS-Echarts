@@ -34,4 +34,6 @@ extern PYLineStyleType const PYLineStyleTypeBroken;
 @property (nonatomic, strong) NSNumber *shadowOffsetX;
 @property (nonatomic, strong) NSNumber *shadowOffsetY;
 
+PYInitializerTemplate(PYLineStyle, lineStyle);
+
 @end

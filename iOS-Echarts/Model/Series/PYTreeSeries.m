@@ -10,6 +10,10 @@
 
 @implementation PYTreeSeriesData
 
+PYInitializerImpTemplate(PYTreeSeriesData);
+
+PYPropertyEqualImpTemplate(PYTreeSeriesData, PYItemStyle, itemStyle);
+
 @end
 
 @implementation PYTreeSeries
@@ -28,5 +32,7 @@
     }
     return self;
 }
+
+PYInitializerImpTemplate(PYTreeSeries);
 
 @end

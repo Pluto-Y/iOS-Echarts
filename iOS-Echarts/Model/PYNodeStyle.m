@@ -22,4 +22,6 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYNodeStyle);
+
 @end

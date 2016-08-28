@@ -30,4 +30,6 @@
     return self;
 }
 
+PYInitializerImpTemplate(PYChordSeries);
+
 @end

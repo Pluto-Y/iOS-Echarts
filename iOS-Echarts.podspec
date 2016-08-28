@@ -10,5 +10,6 @@ Pod::Spec.new do |s|
   s.frameworks          = 'UIKit'
   s.source_files        = "iOS-Echarts/**/*.{h,m}"
   s.resource_bundles    = { 'iOS-Echarts' => 'iOS-Echarts/Resources/**' }
+  s.prefix_header_contents = '#import "PYUtilities.h"'
   s.requires_arc        = true
 end
