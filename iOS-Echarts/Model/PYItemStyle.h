@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYItemStyleProp.h"
+
+@class PYItemStyleProp;
 
 @interface PYItemStyle : NSObject
 

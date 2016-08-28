@@ -24,6 +24,9 @@
 
 PYInitializerTemplate(PYCategories, categories);
 
+PYPropertyEqualTemplate(PYCategories, NSString *, name);
+PYPropertyEqualTemplate(PYCategories, PYSymbol, symbol);
+PYPropertyEqualTemplate(PYCategories, id, symbolSize);
 PYPropertyEqualTemplate(PYCategories, PYItemStyle *, itemStyle);
 
 @end

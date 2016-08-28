@@ -7,15 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYNodeStyle.h"
-#import "PYLinkStyle.h"
-#import "PYLinks.h"
-#import "PYTextStyle.h"
-#import "PYLineStyle.h"
-#import "PYAreaStyle.h"
-#import "PYChordStyle.h"
 
-@class PYLabelLine;
+@class PYNodeStyle, PYLinkStyle, PYLinks, PYTextStyle, PYLineStyle, PYAreaStyle, PYChordStyle, PYLabelLine;
 
 @interface PYLabelLine : NSObject
 
@@ -25,6 +18,8 @@
 
 PYInitializerTemplate(PYLabelLine, labelLine);
 
+PYPropertyEqualTemplate(PYLabelLine, BOOL, show);
+PYPropertyEqualTemplate(PYLabelLine, NSNumber *, length);
 PYPropertyEqualTemplate(PYLabelLine, PYLineStyle *, lineStyle);
 
 @end
@@ -44,7 +39,14 @@ PYPropertyEqualTemplate(PYLabelLine, PYLineStyle *, lineStyle);
 
 PYInitializerTemplate(PYLabel, label);
 
+PYPropertyEqualTemplate(PYLabel, BOOL, show);
+PYPropertyEqualTemplate(PYLabel, NSString *, position);
+PYPropertyEqualTemplate(PYLabel, BOOL, rotate);
+PYPropertyEqualTemplate(PYLabel, NSNumber *, distance);
+PYPropertyEqualTemplate(PYLabel, id, formatter);
 PYPropertyEqualTemplate(PYLabel, PYTextStyle *, textStyle);
+PYPropertyEqualTemplate(PYLabel, NSNumber *, x);
+PYPropertyEqualTemplate(PYLabel, NSNumber *, y);
 
 @end
 
@@ -72,11 +74,17 @@ PYPropertyEqualTemplate(PYLabel, PYTextStyle *, textStyle);
 
 PYInitializerTemplate(PYItemStyleProp, itemStyleProp);
 
+PYPropertyEqualTemplate(PYItemStyleProp, id, color);
 PYPropertyEqualTemplate(PYItemStyleProp, PYLineStyle *, lineStyle);
 PYPropertyEqualTemplate(PYItemStyleProp, PYAreaStyle *, areaStyle);
 PYPropertyEqualTemplate(PYItemStyleProp, PYChordStyle *, chordStyle);
 PYPropertyEqualTemplate(PYItemStyleProp, PYNodeStyle *, nodeStyle);
 PYPropertyEqualTemplate(PYItemStyleProp, PYLinkStyle *, linkStyle);
+PYPropertyEqualTemplate(PYItemStyleProp, id, borderColor);
+PYPropertyEqualTemplate(PYItemStyleProp, NSNumber *, borderWidth);
+PYPropertyEqualTemplate(PYItemStyleProp, id, barBorderColor);
+PYPropertyEqualTemplate(PYItemStyleProp, id, barBorderRadius);
+PYPropertyEqualTemplate(PYItemStyleProp, NSNumber *, barBorderWidth);
 PYPropertyEqualTemplate(PYItemStyleProp, PYLabel *, label);
 PYPropertyEqualTemplate(PYItemStyleProp, PYLabelLine *, labelLine);
 

@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYTextStyle.h"
 
-@class PYColor;
+@class PYColor, PYTextStyle;
 
 /**
  *
@@ -49,6 +48,32 @@
 
 PYInitializerTemplate(PYDataRange, dataRange);
 
+PYPropertyEqualTemplate(PYDataRange, BOOL, show);
+PYPropertyEqualTemplate(PYDataRange, NSNumber *, zlevel);
+PYPropertyEqualTemplate(PYDataRange, NSNumber *, z);
+PYPropertyEqualTemplate(PYDataRange, NSString *, orient);
+PYPropertyEqualTemplate(PYDataRange, id, x);
+PYPropertyEqualTemplate(PYDataRange, id, y);
+PYPropertyEqualTemplate(PYDataRange, PYColor *, backgroundColor);
+PYPropertyEqualTemplate(PYDataRange, PYColor *, borderColor);
+PYPropertyEqualTemplate(PYDataRange, NSNumber *, borderWidth);
+PYPropertyEqualTemplate(PYDataRange, id, padding);
+PYPropertyEqualTemplate(PYDataRange, NSNumber *, itemGap);
+PYPropertyEqualTemplate(PYDataRange, NSNumber *, itemWidth);
+PYPropertyEqualTemplate(PYDataRange, NSNumber *, itemHeight);
+PYPropertyEqualTemplate(PYDataRange, NSNumber *, min);
+PYPropertyEqualTemplate(PYDataRange, NSNumber *, max);
+PYPropertyEqualTemplate(PYDataRange, NSNumber *, precision);
+PYPropertyEqualTemplate(PYDataRange, NSNumber *, splitNumber);
+PYPropertyEqualTemplate(PYDataRange, NSMutableArray *, splitList);
+PYPropertyEqualTemplate(PYDataRange, NSObject *, range);
+PYPropertyEqualTemplate(PYDataRange, id, selectedMode);
+PYPropertyEqualTemplate(PYDataRange, BOOL, calculable);
+PYPropertyEqualTemplate(PYDataRange, BOOL, hoverLink);
+PYPropertyEqualTemplate(PYDataRange, BOOL, realtime);
+PYPropertyEqualTemplate(PYDataRange, NSMutableArray *, color);
+PYPropertyEqualTemplate(PYDataRange, id, formatter);
+PYPropertyEqualTemplate(PYDataRange, NSMutableArray *, text);
 PYPropertyEqualTemplate(PYDataRange, PYTextStyle *, textStyle);
 
 @end

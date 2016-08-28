@@ -41,4 +41,25 @@
 
 PYInitializerTemplate(PYDataZoom, dataZoom);
 
+PYPropertyEqualTemplate(PYDataZoom, NSNumber *, zlevel);
+PYPropertyEqualTemplate(PYDataZoom, NSNumber *, z);
+PYPropertyEqualTemplate(PYDataZoom, BOOL, show);
+PYPropertyEqualTemplate(PYDataZoom, NSString *, orient);
+PYPropertyEqualTemplate(PYDataZoom, NSNumber *, x);
+PYPropertyEqualTemplate(PYDataZoom, NSNumber *, y);
+PYPropertyEqualTemplate(PYDataZoom, NSNumber *, width);
+PYPropertyEqualTemplate(PYDataZoom, NSNumber *, height);
+PYPropertyEqualTemplate(PYDataZoom, PYColor *, backgroundColor);
+PYPropertyEqualTemplate(PYDataZoom, PYColor *, dataBackgroundColor);
+PYPropertyEqualTemplate(PYDataZoom, PYColor *, fillerColor);
+PYPropertyEqualTemplate(PYDataZoom, PYColor *, handleColor);
+PYPropertyEqualTemplate(PYDataZoom, NSNumber *, handleSize);
+PYPropertyEqualTemplate(PYDataZoom, id, xAxisIndex);
+PYPropertyEqualTemplate(PYDataZoom, id, yAxisIndex);
+PYPropertyEqualTemplate(PYDataZoom, NSNumber *, start);
+PYPropertyEqualTemplate(PYDataZoom, NSNumber *, end);
+PYPropertyEqualTemplate(PYDataZoom, BOOL, showDetail);
+PYPropertyEqualTemplate(PYDataZoom, BOOL, realtime);
+PYPropertyEqualTemplate(PYDataZoom, BOOL, zoomLock);
+
 @end

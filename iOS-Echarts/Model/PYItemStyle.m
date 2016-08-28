@@ -7,6 +7,7 @@
 //
 
 #import "PYItemStyle.h"
+#import "PYItemStyleProp.h"
 
 @implementation PYItemStyle
 

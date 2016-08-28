@@ -32,4 +32,16 @@
 
 PYInitializerTemplate(PYGrid, grid);
 
+PYPropertyEqualTemplate(PYGrid, NSNumber *, zlevel);
+PYPropertyEqualTemplate(PYGrid, NSNumber *, z);
+PYPropertyEqualTemplate(PYGrid, id, x);
+PYPropertyEqualTemplate(PYGrid, id, y);
+PYPropertyEqualTemplate(PYGrid, id, x2);
+PYPropertyEqualTemplate(PYGrid, id, y2);
+PYPropertyEqualTemplate(PYGrid, NSNumber *, width);
+PYPropertyEqualTemplate(PYGrid, NSNumber *, height);
+PYPropertyEqualTemplate(PYGrid, PYColor *, backgroundColor);
+PYPropertyEqualTemplate(PYGrid, NSNumber *, borderWidth);
+PYPropertyEqualTemplate(PYGrid, PYColor *, borderColor);
+
 @end

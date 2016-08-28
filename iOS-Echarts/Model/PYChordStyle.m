@@ -12,4 +12,9 @@
 
 PYInitializerImpTemplate(PYChordStyle);
 
+PYPropertyEqualImpTemplate(PYChordStyle, NSNumber *, width);
+PYPropertyEqualImpTemplate(PYChordStyle, NSString *, color);
+PYPropertyEqualImpTemplate(PYChordStyle, NSString *, borderWidth);
+PYPropertyEqualImpTemplate(PYChordStyle, NSString *, borderColor);
+
 @end

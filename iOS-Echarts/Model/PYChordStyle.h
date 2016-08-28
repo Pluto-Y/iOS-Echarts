@@ -23,4 +23,9 @@
 
 PYInitializerTemplate(PYChordStyle, chordStyle);
 
+PYPropertyEqualTemplate(PYChordStyle, NSNumber *, width);
+PYPropertyEqualTemplate(PYChordStyle, NSString *, color);
+PYPropertyEqualTemplate(PYChordStyle, NSString *, borderWidth);
+PYPropertyEqualTemplate(PYChordStyle, NSString *, borderColor);
+
 @end

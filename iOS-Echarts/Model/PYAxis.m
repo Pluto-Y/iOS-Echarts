@@ -7,6 +7,12 @@
 //
 
 #import "PYAxis.h"
+#import "PYAxisLine.h"
+#import "PYAxisLabel.h"
+#import "PYAxisSplitLine.h"
+#import "PYAxisTick.h"
+#import "PYTextStyle.h"
+#import "PYSplitArea.h"
 
 PYAxisType const PYAxisTypeCategory = @"category";
 PYAxisType const PYAxisTypeValue = @"value";
