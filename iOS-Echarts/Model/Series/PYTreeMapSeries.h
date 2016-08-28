@@ -22,4 +22,8 @@
 
 PYInitializerTemplate(PYTreeMapSeries, series);
 
+PYPropertyEqualTemplate(PYTreeMapSeries, NSArray *, center);
+PYPropertyEqualTemplate(PYTreeMapSeries, NSArray *, size);
+PYPropertyEqualTemplate(PYTreeMapSeries, NSString *, root);
+
 @end

@@ -51,3 +51,7 @@
 #import "PYLineStyle.h"
 #import "PYAxisLine.h"
 #import "PYAxisLabel.h"
+#import "PYAxisTick.h"
+#import "PYTooltip.h"
+#import "PYMarkLine.h"
+#import "PYMarkPoint.h"

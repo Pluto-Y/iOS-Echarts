@@ -7,10 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYItemStyle.h"
-#import "PYTooltip.h"
-#import "PYMarkLine.h"
-#import "PYMarkPoint.h"
+
+@class PYItemStyle, PYTooltip, PYMarkLine, PYMarkPoint;
 
 typedef NSString *PYSeriesType;
 
@@ -53,8 +51,14 @@ extern PYSeriesType const PYSeriesTypeTree;
 
 PYInitializerTemplate(PYSeries, series);
 
+PYPropertyEqualTemplate(PYSeries, NSNumber *, zlevel);
+PYPropertyEqualTemplate(PYSeries, NSNumber *, z);
+PYPropertyEqualTemplate(PYSeries, PYSeriesType, type);
+PYPropertyEqualTemplate(PYSeries, NSString *, name);
 PYPropertyEqualTemplate(PYSeries, PYTooltip *, tooltip);
+PYPropertyEqualTemplate(PYSeries, BOOL, clickable);
 PYPropertyEqualTemplate(PYSeries, PYItemStyle *, itemStyle);
+PYPropertyEqualTemplate(PYSeries, id, data);
 PYPropertyEqualTemplate(PYSeries, PYMarkPoint *, markPoint);
 PYPropertyEqualTemplate(PYSeries, PYMarkLine *, markLine);
 

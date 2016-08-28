@@ -7,6 +7,10 @@
 //
 
 #import "PYSeries.h"
+#import "PYItemStyle.h"
+#import "PYTooltip.h"
+#import "PYMarkLine.h"
+#import "PYMarkPoint.h"
 
 PYSeriesType const PYSeriesTypeLine       = @"line";
 PYSeriesType const PYSeriesTypeBar        = @"bar";
@@ -63,8 +67,14 @@ static NSArray<PYSeriesType> *seriesTypeScope;
 
 PYInitializerImpTemplate(PYSeries);
 
+PYPropertyEqualImpTemplate(PYSeries, NSNumber *, zlevel);
+PYPropertyEqualImpTemplate(PYSeries, NSNumber *, z);
+PYPropertyEqualImpTemplate(PYSeries, PYSeriesType, type);
+PYPropertyEqualImpTemplate(PYSeries, NSString *, name);
 PYPropertyEqualImpTemplate(PYSeries, PYTooltip *, tooltip);
+PYPropertyEqualImpTemplate(PYSeries, BOOL, clickable);
 PYPropertyEqualImpTemplate(PYSeries, PYItemStyle *, itemStyle);
+PYPropertyEqualImpTemplate(PYSeries, id, data);
 PYPropertyEqualImpTemplate(PYSeries, PYMarkPoint *, markPoint);
 PYPropertyEqualImpTemplate(PYSeries, PYMarkLine *, markLine);
 

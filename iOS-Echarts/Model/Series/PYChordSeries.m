@@ -32,4 +32,22 @@
 
 PYInitializerImpTemplate(PYChordSeries);
 
+PYPropertyEqualImpTemplate(PYChordSeries, NSString *, insertToSerie);
+PYPropertyEqualImpTemplate(PYChordSeries, id, radius);
+PYPropertyEqualImpTemplate(PYChordSeries, NSArray *, categories);
+PYPropertyEqualImpTemplate(PYChordSeries, NSArray *, nodes);
+PYPropertyEqualImpTemplate(PYChordSeries, NSArray *, links);
+PYPropertyEqualImpTemplate(PYChordSeries, NSArray *, matrix);
+PYPropertyEqualImpTemplate(PYChordSeries, BOOL, ribbonType);
+PYPropertyEqualImpTemplate(PYChordSeries, PYSymbol, symbol);
+PYPropertyEqualImpTemplate(PYChordSeries, NSNumber *, symbolSize);
+PYPropertyEqualImpTemplate(PYChordSeries, NSNumber *, minRadius);
+PYPropertyEqualImpTemplate(PYChordSeries, NSNumber *, maxRadius);
+PYPropertyEqualImpTemplate(PYChordSeries, BOOL, showScale);
+PYPropertyEqualImpTemplate(PYChordSeries, BOOL, showScaleText);
+PYPropertyEqualImpTemplate(PYChordSeries, NSNumber *, padding);
+PYPropertyEqualImpTemplate(PYChordSeries, PYSort, sort);
+PYPropertyEqualImpTemplate(PYChordSeries, PYSort, sortSub);
+PYPropertyEqualImpTemplate(PYChordSeries, BOOL, clockWise);
+
 @end

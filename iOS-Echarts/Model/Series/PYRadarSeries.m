@@ -24,4 +24,10 @@
 
 PYInitializerImpTemplate(PYRadarSeries);
 
+PYPropertyEqualImpTemplate(PYRadarSeries, NSNumber *, polarIndex);
+PYPropertyEqualImpTemplate(PYRadarSeries, PYSymbol, symbol);
+PYPropertyEqualImpTemplate(PYRadarSeries, id, symbolSize);
+PYPropertyEqualImpTemplate(PYRadarSeries, NSNumber *, symbolRotate);
+PYPropertyEqualImpTemplate(PYRadarSeries, BOOL, legendHoverLink);
+
 @end

@@ -33,4 +33,14 @@ extern PYPieSeriesRoseType const PYPieSeriesRoseTypeArea;
 
 PYInitializerTemplate(PYPieSeries, series);
 
+PYPropertyEqualTemplate(PYPieSeries, NSArray *, center);
+PYPropertyEqualTemplate(PYPieSeries, id, radius);
+PYPropertyEqualTemplate(PYPieSeries, NSNumber *, startAngle);
+PYPropertyEqualTemplate(PYPieSeries, NSNumber *, minAngle);
+PYPropertyEqualTemplate(PYPieSeries, BOOL, clockWise);
+PYPropertyEqualTemplate(PYPieSeries, PYPieSeriesRoseType, roseType);
+PYPropertyEqualTemplate(PYPieSeries, NSNumber *, selectedOffset);
+PYPropertyEqualTemplate(PYPieSeries, id, selectedMode);
+PYPropertyEqualTemplate(PYPieSeries, BOOL, legendHoverLink);
+
 @end

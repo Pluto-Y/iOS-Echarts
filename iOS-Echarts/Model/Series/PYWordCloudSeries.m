@@ -21,4 +21,10 @@
 
 PYInitializerImpTemplate(PYWordCloudSeries);
 
+PYPropertyEqualImpTemplate(PYWordCloudSeries, NSArray *, center);
+PYPropertyEqualImpTemplate(PYWordCloudSeries, NSArray *, size);
+PYPropertyEqualImpTemplate(PYWordCloudSeries, NSArray *, textRotation);
+PYPropertyEqualImpTemplate(PYWordCloudSeries, NSDictionary *, autoSize);
+PYPropertyEqualImpTemplate(PYWordCloudSeries, NSNumber *, textPadding);
+
 @end

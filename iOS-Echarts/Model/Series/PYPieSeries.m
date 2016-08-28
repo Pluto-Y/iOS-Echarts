@@ -48,4 +48,14 @@ static NSArray<PYPieSeriesRoseType> *pieSeriesRoleTypeScope;
 
 PYInitializerImpTemplate(PYPieSeries);
 
+PYPropertyEqualImpTemplate(PYPieSeries, NSArray *, center);
+PYPropertyEqualImpTemplate(PYPieSeries, id, radius);
+PYPropertyEqualImpTemplate(PYPieSeries, NSNumber *, startAngle);
+PYPropertyEqualImpTemplate(PYPieSeries, NSNumber *, minAngle);
+PYPropertyEqualImpTemplate(PYPieSeries, BOOL, clockWise);
+PYPropertyEqualImpTemplate(PYPieSeries, PYPieSeriesRoseType, roseType);
+PYPropertyEqualImpTemplate(PYPieSeries, NSNumber *, selectedOffset);
+PYPropertyEqualImpTemplate(PYPieSeries, id, selectedMode);
+PYPropertyEqualImpTemplate(PYPieSeries, BOOL, legendHoverLink);
+
 @end

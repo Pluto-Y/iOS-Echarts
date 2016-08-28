@@ -21,6 +21,11 @@
 
 PYInitializerTemplate(PYTreeSeriesData, data);
 
+PYPropertyEqualTemplate(PYTreeSeriesData, NSString *, name);
+PYPropertyEqualTemplate(PYTreeSeriesData, NSNumber *, value);
+PYPropertyEqualTemplate(PYTreeSeriesData, NSString *, symbol);
+PYPropertyEqualTemplate(PYTreeSeriesData, id, symbolSize);
+PYPropertyEqualTemplate(PYTreeSeriesData, NSArray *, children);
 PYPropertyEqualTemplate(PYTreeSeriesData, PYItemStyle *, itemStyle);
 
 @end
@@ -44,5 +49,15 @@ PYPropertyEqualTemplate(PYTreeSeriesData, PYItemStyle *, itemStyle);
 @property (nonatomic, assign) BOOL hoverable;
 
 PYInitializerTemplate(PYTreeSeries, series);
+
+PYPropertyEqualTemplate(PYTreeSeries, NSDictionary *, rootLocation);
+PYPropertyEqualTemplate(PYTreeSeries, NSNumber *, layerPadding);
+PYPropertyEqualTemplate(PYTreeSeries, NSNumber *, nodePadding);
+PYPropertyEqualTemplate(PYTreeSeries, NSString *, orient);
+PYPropertyEqualTemplate(PYTreeSeries, NSString *, direction);
+PYPropertyEqualTemplate(PYTreeSeries, id, roam);
+PYPropertyEqualTemplate(PYTreeSeries, PYSymbol, symbol);
+PYPropertyEqualTemplate(PYTreeSeries, id, symbolSize);
+PYPropertyEqualTemplate(PYTreeSeries, BOOL, hoverable);
 
 @end

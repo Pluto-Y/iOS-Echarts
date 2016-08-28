@@ -12,6 +12,8 @@
 
 PYInitializerImpTemplate(PYVennSeriesData);
 
+PYPropertyEqualImpTemplate(PYVennSeriesData, NSString *, name);
+PYPropertyEqualImpTemplate(PYVennSeriesData, NSNumber *, value);
 PYPropertyEqualImpTemplate(PYVennSeriesData, PYItemStyle *, itemStyle);
 
 @end

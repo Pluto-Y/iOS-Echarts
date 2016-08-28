@@ -12,6 +12,11 @@
 
 PYInitializerImpTemplate(PYTreeSeriesData);
 
+PYPropertyEqualImpTemplate(PYTreeSeriesData, NSString *, name);
+PYPropertyEqualImpTemplate(PYTreeSeriesData, NSNumber *, value);
+PYPropertyEqualImpTemplate(PYTreeSeriesData, NSString *, symbol);
+PYPropertyEqualImpTemplate(PYTreeSeriesData, id, symbolSize);
+PYPropertyEqualImpTemplate(PYTreeSeriesData, NSArray *, children);
 PYPropertyEqualImpTemplate(PYTreeSeriesData, PYItemStyle *, itemStyle);
 
 @end
@@ -34,5 +39,15 @@ PYPropertyEqualImpTemplate(PYTreeSeriesData, PYItemStyle *, itemStyle);
 }
 
 PYInitializerImpTemplate(PYTreeSeries);
+
+PYPropertyEqualImpTemplate(PYTreeSeries, NSDictionary *, rootLocation);
+PYPropertyEqualImpTemplate(PYTreeSeries, NSNumber *, layerPadding);
+PYPropertyEqualImpTemplate(PYTreeSeries, NSNumber *, nodePadding);
+PYPropertyEqualImpTemplate(PYTreeSeries, NSString *, orient);
+PYPropertyEqualImpTemplate(PYTreeSeries, NSString *, direction);
+PYPropertyEqualImpTemplate(PYTreeSeries, id, roam);
+PYPropertyEqualImpTemplate(PYTreeSeries, PYSymbol, symbol);
+PYPropertyEqualImpTemplate(PYTreeSeries, id, symbolSize);
+PYPropertyEqualImpTemplate(PYTreeSeries, BOOL, hoverable);
 
 @end
