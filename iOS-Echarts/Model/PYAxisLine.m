@@ -7,6 +7,7 @@
 //
 
 #import "PYAxisLine.h"
+#import "PYLineStyle.h"
 
 @implementation PYAxisLine
 

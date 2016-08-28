@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYLineStyle.h"
 
 @class PYLineStyle;
 
