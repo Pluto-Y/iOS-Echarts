@@ -83,7 +83,7 @@ typedef NS_ENUM(NSInteger, TreeDemoTypeTag) {
     series.itemStyle.normal.lineStyle.shadowBlur = @3;
     series.itemStyle.normal.lineStyle.shadowOffsetX = @3;
     series.itemStyle.normal.lineStyle.shadowOffsetY = @5;
-    series.itemStyle.normal.lineStyle.type = PYLinkStyleTypeCurve;
+    series.itemStyle.normal.lineStyle.type = PYLineStyleTypeCurve;
     series.itemStyle.emphasis = [[PYItemStyleProp alloc] init];
     series.itemStyle.emphasis.label = [[PYLabel alloc] init];
     series.itemStyle.emphasis.label.show = YES;

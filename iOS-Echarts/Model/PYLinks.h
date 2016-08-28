@@ -25,6 +25,9 @@
 
 PYInitializerTemplate(PYLinks, links);
 
+PYPropertyEqualTemplate(PYLinks, id, source);
+PYPropertyEqualTemplate(PYLinks, id, target);
+PYPropertyEqualTemplate(PYLinks, NSNumber *, weight);
 PYPropertyEqualTemplate(PYLinks, PYItemStyle *, itemStyle);
 
 @end

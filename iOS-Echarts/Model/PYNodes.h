@@ -29,6 +29,13 @@
 
 PYInitializerTemplate(PYNodes, nodes);
 
+PYPropertyEqualTemplate(PYNodes, NSString *, name);
+PYPropertyEqualTemplate(PYNodes, NSString *, label);
+PYPropertyEqualTemplate(PYNodes, NSNumber *, value);
+PYPropertyEqualTemplate(PYNodes, BOOL, ignore);
+PYPropertyEqualTemplate(PYNodes, NSString *, symbol);
+PYPropertyEqualTemplate(PYNodes, id, symboleSize);
+PYPropertyEqualTemplate(PYNodes, NSNumber *, category);
 PYPropertyEqualTemplate(PYNodes, PYItemStyle *, itemStyle);
 
 @end

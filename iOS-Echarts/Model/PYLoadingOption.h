@@ -7,7 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYTextStyle.h"
+
+@class PYTextStyle;
 
 typedef NSString *PYLoadingOptionEffect;
 extern PYLoadingOptionEffect const PYLoadingOptionEffectSpin;
@@ -33,6 +34,13 @@ extern PYLoadingOptionEffect const PYLoadingOptionEffectBubble;
 @property (nonatomic, copy) NSDictionary *effectOption;
 @property (nonatomic, strong) NSNumber *progress;
 
+
+PYPropertyEqualTemplate(PYLoadingOption, NSString *, text);
+PYPropertyEqualTemplate(PYLoadingOption, id, x);
+PYPropertyEqualTemplate(PYLoadingOption, id, y);
 PYPropertyEqualTemplate(PYLoadingOption, PYTextStyle *, textStyle);
+PYPropertyEqualTemplate(PYLoadingOption, id, effect);
+PYPropertyEqualTemplate(PYLoadingOption, NSDictionary *, effectOption);
+PYPropertyEqualTemplate(PYLoadingOption, NSNumber *, progress);
 
 @end

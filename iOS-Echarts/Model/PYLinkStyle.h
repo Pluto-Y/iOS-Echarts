@@ -29,4 +29,8 @@ extern PYLinkStyleType const PYLinkStyleTypeCurve;
 
 PYInitializerTemplate(PYLinkStyle, linkStyle);
 
+PYPropertyEqualTemplate(PYLinkStyle, PYLinkStyleType, type);
+PYPropertyEqualTemplate(PYLinkStyle, PYColor *, color);
+PYPropertyEqualTemplate(PYLinkStyle, NSNumber *, width);
+
 @end

@@ -7,6 +7,7 @@
 //
 
 #import "PYLoadingOption.h"
+#import "PYTextStyle.h"
 
 PYLoadingOptionEffect const PYLoadingOptionEffectSpin        = @"spin";
 PYLoadingOptionEffect const PYLoadingOptionEffectBar         = @"bar";
@@ -29,6 +30,12 @@ PYLoadingOptionEffect const PYLoadingOptionEffectBubble      = @"bubble";
     return self;
 }
 
+PYPropertyEqualImpTemplate(PYLoadingOption, NSString *, text);
+PYPropertyEqualImpTemplate(PYLoadingOption, id, x);
+PYPropertyEqualImpTemplate(PYLoadingOption, id, y);
 PYPropertyEqualImpTemplate(PYLoadingOption, PYTextStyle *, textStyle);
+PYPropertyEqualImpTemplate(PYLoadingOption, id, effect);
+PYPropertyEqualImpTemplate(PYLoadingOption, NSDictionary *, effectOption);
+PYPropertyEqualImpTemplate(PYLoadingOption, NSNumber *, progress);
 
 @end

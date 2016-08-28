@@ -36,4 +36,12 @@ extern PYLineStyleType const PYLineStyleTypeBroken;
 
 PYInitializerTemplate(PYLineStyle, lineStyle);
 
+PYPropertyEqualTemplate(PYLineStyle, id, color);
+PYPropertyEqualTemplate(PYLineStyle, PYLineStyleType, type);
+PYPropertyEqualTemplate(PYLineStyle, NSNumber *, width);
+PYPropertyEqualTemplate(PYLineStyle, PYColor *, shadowColor);
+PYPropertyEqualTemplate(PYLineStyle, NSNumber *, shadowBlur);
+PYPropertyEqualTemplate(PYLineStyle, NSNumber *, shadowOffsetX);
+PYPropertyEqualTemplate(PYLineStyle, NSNumber *, shadowOffsetY);
+
 @end

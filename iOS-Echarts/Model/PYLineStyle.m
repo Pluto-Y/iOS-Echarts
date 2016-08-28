@@ -51,4 +51,12 @@ static NSArray<PYLineStyleType> *lineStyleTypeScope;
 
 PYInitializerImpTemplate(PYLineStyle);
 
+PYPropertyEqualImpTemplate(PYLineStyle, id, color);
+PYPropertyEqualImpTemplate(PYLineStyle, PYLineStyleType, type);
+PYPropertyEqualImpTemplate(PYLineStyle, NSNumber *, width);
+PYPropertyEqualImpTemplate(PYLineStyle, PYColor *, shadowColor);
+PYPropertyEqualImpTemplate(PYLineStyle, NSNumber *, shadowBlur);
+PYPropertyEqualImpTemplate(PYLineStyle, NSNumber *, shadowOffsetX);
+PYPropertyEqualImpTemplate(PYLineStyle, NSNumber *, shadowOffsetY);
+
 @end

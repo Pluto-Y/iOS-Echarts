@@ -44,4 +44,8 @@ static NSArray<PYLinkStyleType> *linkStyleTypeScope;
 
 PYInitializerImpTemplate(PYLinkStyle);
 
+PYPropertyEqualImpTemplate(PYLinkStyle, PYLinkStyleType, type);
+PYPropertyEqualImpTemplate(PYLinkStyle, PYColor *, color);
+PYPropertyEqualImpTemplate(PYLinkStyle, NSNumber *, width);
+
 @end

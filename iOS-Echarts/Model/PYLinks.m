@@ -22,6 +22,9 @@
 
 PYInitializerImpTemplate(PYLinks);
 
+PYPropertyEqualImpTemplate(PYLinks, id, source);
+PYPropertyEqualImpTemplate(PYLinks, id, target);
+PYPropertyEqualImpTemplate(PYLinks, NSNumber *, weight);
 PYPropertyEqualImpTemplate(PYLinks, PYItemStyle *, itemStyle);
 
 @end
