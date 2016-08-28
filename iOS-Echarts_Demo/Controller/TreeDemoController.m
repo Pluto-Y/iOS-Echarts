@@ -50,47 +50,55 @@ typedef NS_ENUM(NSInteger, TreeDemoTypeTag) {
 }
 
 - (void)showTreeDemo1 {
-    PYOption *option = [[PYOption alloc] init];
-    option.title = [[PYTitle alloc] init];
-    option.title.text = @"树图";
-    option.title.subtext = @"虚构数据";
-    option.toolbox = [[PYToolbox alloc] init];
-    option.toolbox.show = YES;
-    option.toolbox.feature = [[PYToolboxFeature alloc] init];
-    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
-    option.toolbox.feature.mark.show = YES;
-    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
-    option.toolbox.feature.dataView.show = YES;
-    option.toolbox.feature.dataView.readOnly = NO;
-    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
-    option.toolbox.feature.restore.show = YES;
-    option.calculable = NO;
-    
-    PYTreeSeries *series = [[PYTreeSeries alloc] init];
-    series.name = @"树图";
-    series.type = PYSeriesTypeTree;
-    series.orient = @"vertical";
-    series.rootLocation = @{@"x":@"center", @"y":@50};
-    series.nodePadding = @1;
-    series.itemStyle = [[PYItemStyle alloc] init];
-    series.itemStyle.normal = [[PYItemStyleProp alloc] init];
-    series.itemStyle.normal.label = [[PYLabel alloc] init];
-    series.itemStyle.normal.label.show = NO;
-    series.itemStyle.normal.label.formatter = @"{b}";
-    series.itemStyle.normal.lineStyle = [[PYLineStyle alloc] init];
-    series.itemStyle.normal.lineStyle.color = [PYColor colorWithHexString:@"#48b"];
-    series.itemStyle.normal.lineStyle.shadowColor = [PYColor colorWithHexString:@"#000"];
-    series.itemStyle.normal.lineStyle.shadowBlur = @3;
-    series.itemStyle.normal.lineStyle.shadowOffsetX = @3;
-    series.itemStyle.normal.lineStyle.shadowOffsetY = @5;
-    series.itemStyle.normal.lineStyle.type = PYLineStyleTypeCurve;
-    series.itemStyle.emphasis = [[PYItemStyleProp alloc] init];
-    series.itemStyle.emphasis.label = [[PYLabel alloc] init];
-    series.itemStyle.emphasis.label.show = YES;
-    NSDictionary *dataDic = @{@"name":@"根节点", @"value":@6, @"children":@[@{@"name":@"节点1", @"value":@4, @"children":@[@{@"name":@"叶子节点1", @"value":@4}, @{@"name":@"叶子节点2", @"value":@4}, @{@"name":@"叶子节点3", @"value":@2}, @{@"name":@"叶子节点4", @"value":@2}, @{@"name":@"叶子节点5", @"value":@2}, @{@"name":@"叶子节点6", @"value":@4}]}, @{@"name":@"节点2", @"value":@4, @"children":@[@{@"name":@"叶子节点7", @"value":@4}, @{@"name":@"叶子节点8", @"value":@4}]}, @{@"name":@"节点3", @"value":@1, @"children":@[@{@"name":@"叶子节点9", @"value":@4}, @{@"name":@"叶子节点10", @"value":@4}, @{@"name":@"叶子节点11", @"value":@2}, @{@"name":@"叶子节点12", @"value":@2}]}]};
-    series.data = @[dataDic];
-    
-    option.series = [[NSMutableArray alloc] initWithArray:@[series]];
+    PYOption *option = [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"树图").subtextEqual(@"虚构数据");
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.show = YES;
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(YES);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .calculableEqual(NO);
+        
+        PYTreeSeries *series = [PYTreeSeries initPYTreeSeriesWithBlock:^(PYTreeSeries *s) {
+            s.rootLocationEqual(@{@"x":@"center", @"y":@50}).nodePaddingEqual(@1).nameEqual(@"树图").typeEqual(PYSeriesTypeTree)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(NO).formatterEqual(@"{b}");
+                    }])
+                    .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                        lineStyle.colorEqual([PYColor colorWithHexString:@"#48b"])
+                        .shadowColorEqual([PYColor colorWithHexString:@"#000"])
+                        .shadowBlurEqual(@3)
+                        .shadowOffsetXEqual(@3)
+                        .shadowOffsetYEqual(@5)
+                        .typeEqual(PYLineStyleTypeCurve);
+                    }]);
+                }])
+                .emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+                    emphasis.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES);
+                    }]);
+                }]);
+            }]);
+        }];
+        
+        NSDictionary *dataDic = @{@"name":@"根节点", @"value":@6, @"children":@[@{@"name":@"节点1", @"value":@4, @"children":@[@{@"name":@"叶子节点1", @"value":@4}, @{@"name":@"叶子节点2", @"value":@4}, @{@"name":@"叶子节点3", @"value":@2}, @{@"name":@"叶子节点4", @"value":@2}, @{@"name":@"叶子节点5", @"value":@2}, @{@"name":@"叶子节点6", @"value":@4}]}, @{@"name":@"节点2", @"value":@4, @"children":@[@{@"name":@"叶子节点7", @"value":@4}, @{@"name":@"叶子节点8", @"value":@4}]}, @{@"name":@"节点3", @"value":@1, @"children":@[@{@"name":@"叶子节点9", @"value":@4}, @{@"name":@"叶子节点10", @"value":@4}, @{@"name":@"叶子节点11", @"value":@2}, @{@"name":@"叶子节点12", @"value":@2}]}]};
+        series.data = @[dataDic];
+        
+        option.series = [[NSMutableArray alloc] initWithArray:@[series]];
+    }];
     
     [_echartsView setOption:option];
 }
