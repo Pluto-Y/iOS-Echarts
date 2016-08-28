@@ -49,15 +49,15 @@
 
 PYInitializerTemplate(PYOption, option);
 
-PYPropertyEqualTemplate(PYOption, PYTimeline, timeline);
-PYPropertyEqualTemplate(PYOption, PYTitle, title);
-PYPropertyEqualTemplate(PYOption, PYToolbox, toolbox);
-PYPropertyEqualTemplate(PYOption, PYTooltip, tooltip);
-PYPropertyEqualTemplate(PYOption, PYLegend, legend);
-PYPropertyEqualTemplate(PYOption, PYDataRange, dataRange);
-PYPropertyEqualTemplate(PYOption, PYDataZoom, dataZoom);
-PYPropertyEqualTemplate(PYOption, PYRoamController, roamController);
-PYPropertyEqualTemplate(PYOption, PYGrid, grid);
+PYPropertyEqualTemplate(PYOption, PYTimeline *, timeline);
+PYPropertyEqualTemplate(PYOption, PYTitle *, title);
+PYPropertyEqualTemplate(PYOption, PYToolbox *, toolbox);
+PYPropertyEqualTemplate(PYOption, PYTooltip *, tooltip);
+PYPropertyEqualTemplate(PYOption, PYLegend *, legend);
+PYPropertyEqualTemplate(PYOption, PYDataRange *, dataRange);
+PYPropertyEqualTemplate(PYOption, PYDataZoom *, dataZoom);
+PYPropertyEqualTemplate(PYOption, PYRoamController *, roamController);
+PYPropertyEqualTemplate(PYOption, PYGrid *, grid);
 
 
 @end

@@ -42,7 +42,24 @@
 
 PYInitializerTemplate(PYTitle, title);
 
-PYPropertyEqualTemplate(PYTitle, PYTextStyle, textStyle);
-PYPropertyEqualTemplate(PYTitle, PYTextStyle, subtextStyle);
+PYPropertyEqualTemplate(PYTitle, BOOL, show);
+PYPropertyEqualTemplate(PYTitle, NSNumber *, zlevel);
+PYPropertyEqualTemplate(PYTitle, NSNumber *, z);
+PYPropertyEqualTemplate(PYTitle, NSString *, text);
+PYPropertyEqualTemplate(PYTitle, NSString *, link);
+PYPropertyEqualTemplate(PYTitle, NSString *, target);
+PYPropertyEqualTemplate(PYTitle, NSString *, subtext);
+PYPropertyEqualTemplate(PYTitle, NSString *, sublink);
+PYPropertyEqualTemplate(PYTitle, NSString *, subtarget);
+PYPropertyEqualTemplate(PYTitle, id, x);
+PYPropertyEqualTemplate(PYTitle, id, y);
+PYPropertyEqualTemplate(PYTitle, NSString *, textAlign);
+PYPropertyEqualTemplate(PYTitle, PYColor *, backgroundColor);
+PYPropertyEqualTemplate(PYTitle, PYColor *, borderColor);
+PYPropertyEqualTemplate(PYTitle, NSNumber *, borderWidth);
+PYPropertyEqualTemplate(PYTitle, id, padding);
+PYPropertyEqualTemplate(PYTitle, NSNumber *, itemGap);
+PYPropertyEqualTemplate(PYTitle, PYTextStyle *, textStyle);
+PYPropertyEqualTemplate(PYTitle, PYTextStyle *, subtextStyle);
 
 @end

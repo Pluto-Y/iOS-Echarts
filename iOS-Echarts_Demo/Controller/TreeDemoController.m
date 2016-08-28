@@ -158,16 +158,16 @@ typedef NS_ENUM(NSInteger, TreeDemoTypeTag) {
     
     PYOption *option = [PYOption initPYOptionWithBlock:^(PYOption *option) {
         option.calculable = NO;
-        option.titleEqaul([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
             title.text = @"手机品牌";
             title.subtext = @"线、节点样式";
         }])
-        .tooltipEqaul([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
             tooltip = [[PYTooltip alloc] init];
             tooltip.trigger = PYTooltipTriggerItem;
             tooltip.formatter = @"{b}: {c}";
         }])
-        .toolboxEqaul([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
             toolbox.feature = [[PYToolboxFeature alloc] init];
             toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
             toolbox.feature.mark.show = YES;
@@ -188,24 +188,24 @@ typedef NS_ENUM(NSInteger, TreeDemoTypeTag) {
             series.symbolSize = @20;
 
             series.itemStyle = [PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
-                itemStyle.normalEqaul([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
-                    normal.labelEqaul([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
                         label.show = YES;
                         label.position = @"inside";
-                        label.textStyleEqaul([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                        label.textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
                             textStyle.color = [PYColor colorWithHexString:@"#cc9999"];
                             textStyle.fontSize = @15;
                             textStyle.fontWeight = PYTextStyleFontWeightBolder;
                         }]);
                     }])
-                    .lineStyleEqaul([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
                         lineStyle = [[PYLineStyle alloc] init];
                         lineStyle.color = [PYColor colorWithHexString:@"#000"];
                         lineStyle.width = @1;
                         lineStyle.type = PYLineStyleTypeBroken;
                     }]);
                 }])
-                .emphasisEqaul([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+                .emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
                     emphasis = [[PYItemStyleProp alloc] init];
                     emphasis.label = [[PYLabel alloc] init];
                     emphasis.label.show = YES;

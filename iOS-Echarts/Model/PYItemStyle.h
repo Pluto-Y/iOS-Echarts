@@ -16,7 +16,7 @@
 
 PYInitializerTemplate(PYItemStyle, itemStyle);
 
-PYPropertyEqualTemplate(PYItemStyle, PYItemStyleProp, normal);
-PYPropertyEqualTemplate(PYItemStyle, PYItemStyleProp, emphasis);
+PYPropertyEqualTemplate(PYItemStyle, PYItemStyleProp *, normal);
+PYPropertyEqualTemplate(PYItemStyle, PYItemStyleProp *, emphasis);
 
 @end

@@ -41,9 +41,9 @@ extern PYPolarType const PYPolarTypeCircle;
 
 PYInitializerTemplate(PYPolar, polar);
 
-PYPropertyEqualTemplate(PYPolar, PYLineStyle, axisLine);
-PYPropertyEqualTemplate(PYPolar, PYAxisLabel, axisLabel);
-PYPropertyEqualTemplate(PYPolar, PYLineStyle, spliteLine);
-PYPropertyEqualTemplate(PYPolar, PYAreaStyle, spliteArea);
+PYPropertyEqualTemplate(PYPolar, PYLineStyle *, axisLine);
+PYPropertyEqualTemplate(PYPolar, PYAxisLabel *, axisLabel);
+PYPropertyEqualTemplate(PYPolar, PYLineStyle *, spliteLine);
+PYPropertyEqualTemplate(PYPolar, PYAreaStyle *, spliteArea);
 
 @end

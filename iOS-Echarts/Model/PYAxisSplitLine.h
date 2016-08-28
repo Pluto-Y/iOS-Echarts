@@ -23,6 +23,8 @@
 
 PYInitializerTemplate(PYAxisSplitLine, axisSpliteLine);
 
-PYPropertyEqualTemplate(PYAxisSplitLine, PYLineStyle, lineStyle);
+PYPropertyEqualTemplate(PYAxisSplitLine, BOOL, show);
+PYPropertyEqualTemplate(PYAxisSplitLine, BOOL, onGap);
+PYPropertyEqualTemplate(PYAxisSplitLine, PYLineStyle *, lineStyle);
 
 @end

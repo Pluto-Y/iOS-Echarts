@@ -29,6 +29,6 @@
 
 PYInitializerTemplate(PYNodes, nodes);
 
-PYPropertyEqualTemplate(PYNodes, PYItemStyle, itemStyle);
+PYPropertyEqualTemplate(PYNodes, PYItemStyle *, itemStyle);
 
 @end

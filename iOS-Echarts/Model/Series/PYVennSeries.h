@@ -18,7 +18,7 @@
 
 PYInitializerTemplate(PYVennSeriesData, data);
 
-PYPropertyEqualTemplate(PYVennSeriesData, PYItemStyle, itemStyle);
+PYPropertyEqualTemplate(PYVennSeriesData, PYItemStyle *, itemStyle);
 
 @end
 

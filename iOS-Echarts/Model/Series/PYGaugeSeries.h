@@ -23,7 +23,7 @@
 
 PYInitializerTemplate(PYGaugeSpliteLine, spliteLine);
 
-PYPropertyEqualTemplate(PYGaugeSpliteLine, PYLineStyle, lineStyle);
+PYPropertyEqualTemplate(PYGaugeSpliteLine, PYLineStyle *, lineStyle);
 
 @end
 
@@ -43,7 +43,7 @@ PYPropertyEqualTemplate(PYGaugeSpliteLine, PYLineStyle, lineStyle);
 
 PYInitializerTemplate(PYGaugeDetail, detail);
 
-PYPropertyEqualTemplate(PYGaugeDetail, PYTextStyle, textStyle);
+PYPropertyEqualTemplate(PYGaugeDetail, PYTextStyle *, textStyle);
 
 @end
 
@@ -70,7 +70,7 @@ PYInitializerTemplate(PYGaugePointer, pointer);
 
 PYInitializerTemplate(PYGaugeTitle, title);
 
-PYPropertyEqualTemplate(PYGaugeTitle, PYTextStyle, textStyle);
+PYPropertyEqualTemplate(PYGaugeTitle, PYTextStyle *, textStyle);
 
 @end
 
@@ -100,12 +100,12 @@ PYPropertyEqualTemplate(PYGaugeTitle, PYTextStyle, textStyle);
 
 PYInitializerTemplate(PYGaugeSeries, series);
 
-PYPropertyEqualTemplate(PYGaugeSeries, PYAxisLine, axisLine);
-PYPropertyEqualTemplate(PYGaugeSeries, PYAxisTick, axisTick);
-PYPropertyEqualTemplate(PYGaugeSeries, PYAxisLabel, axisLabel);
-PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeSpliteLine, splitLine);
-PYPropertyEqualTemplate(PYGaugeSeries, PYGaugePointer, pointer);
-PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeTitle, title);
-PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeDetail, detail);
+PYPropertyEqualTemplate(PYGaugeSeries, PYAxisLine *, axisLine);
+PYPropertyEqualTemplate(PYGaugeSeries, PYAxisTick *, axisTick);
+PYPropertyEqualTemplate(PYGaugeSeries, PYAxisLabel *, axisLabel);
+PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeSpliteLine *, splitLine);
+PYPropertyEqualTemplate(PYGaugeSeries, PYGaugePointer *, pointer);
+PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeTitle *, title);
+PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeDetail *, detail);
 
 @end

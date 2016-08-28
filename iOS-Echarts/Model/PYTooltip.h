@@ -47,7 +47,7 @@ extern PYTooltipTrigger const PYTooltipTriggerAxis;
 
 PYInitializerTemplate(PYTooltip, tooltip);
 
-PYPropertyEqualTemplate(PYTooltip, PYAxisPointer, axisPointer);
-PYPropertyEqualTemplate(PYTooltip, PYTextStyle, textStyle);
+PYPropertyEqualTemplate(PYTooltip, PYAxisPointer *, axisPointer);
+PYPropertyEqualTemplate(PYTooltip, PYTextStyle *, textStyle);
 
 @end

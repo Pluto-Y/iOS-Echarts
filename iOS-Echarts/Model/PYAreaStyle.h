@@ -25,5 +25,8 @@ extern PYAreaStyleType const PYAreaStyleTypeDefault;
 
 PYInitializerTemplate(PYAreaStyle, areaStyle);
 
+PYPropertyEqualTemplate(PYAreaStyle, id, color);
+PYPropertyEqualTemplate(PYAreaStyle, PYAreaStyleType, type);
+
 @end
 

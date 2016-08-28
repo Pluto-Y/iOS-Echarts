@@ -48,7 +48,7 @@ static NSArray<PYAxisPointerType> *axisPointScope;
 
 PYInitializerImpTemplate(PYAxisPointer);
 
-PYPropertyEqualImpTemplate(PYAxisPointer, PYLineStyle, lineStyle);
-PYPropertyEqualImpTemplate(PYAxisPointer, PYLineStyle, crossStyle);
+PYPropertyEqualImpTemplate(PYAxisPointer, PYLineStyle *, lineStyle);
+PYPropertyEqualImpTemplate(PYAxisPointer, PYLineStyle *, crossStyle);
 
 @end

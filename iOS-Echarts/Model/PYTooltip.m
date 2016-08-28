@@ -76,7 +76,7 @@ static NSArray<PYTooltipTrigger> *tooltipTriggerScope;
 
 PYInitializerImpTemplate(PYTooltip);
 
-PYPropertyEqualImpTemplate(PYTooltip, PYAxisPointer, axisPointer);
-PYPropertyEqualImpTemplate(PYTooltip, PYTextStyle, textStyle);
+PYPropertyEqualImpTemplate(PYTooltip, PYAxisPointer *, axisPointer);
+PYPropertyEqualImpTemplate(PYTooltip, PYTextStyle *, textStyle);
 
 @end

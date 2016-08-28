@@ -26,7 +26,7 @@
 
 PYInitializerImpTemplate(PYLabelLine);
 
-PYPropertyEqualImpTemplate(PYLabelLine, PYLineStyle, lineStyle);
+PYPropertyEqualImpTemplate(PYLabelLine, PYLineStyle *, lineStyle);
 
 @end
 
@@ -45,7 +45,7 @@ PYPropertyEqualImpTemplate(PYLabelLine, PYLineStyle, lineStyle);
 
 PYInitializerImpTemplate(PYLabel);
 
-PYPropertyEqualImpTemplate(PYLabel, PYTextStyle, textStyle)
+PYPropertyEqualImpTemplate(PYLabel, PYTextStyle *, textStyle)
 
 @end
 
@@ -67,12 +67,12 @@ PYPropertyEqualImpTemplate(PYLabel, PYTextStyle, textStyle)
 
 PYInitializerImpTemplate(PYItemStyleProp);
 
-PYPropertyEqualImpTemplate(PYItemStyleProp, PYLineStyle, lineStyle);
-PYPropertyEqualImpTemplate(PYItemStyleProp, PYAreaStyle, areaStyle);
-PYPropertyEqualImpTemplate(PYItemStyleProp, PYChordStyle, chordStyle);
-PYPropertyEqualImpTemplate(PYItemStyleProp, PYNodeStyle, nodeStyle);
-PYPropertyEqualImpTemplate(PYItemStyleProp, PYLinkStyle, linkStyle);
-PYPropertyEqualImpTemplate(PYItemStyleProp, PYLabel, label);
-PYPropertyEqualImpTemplate(PYItemStyleProp, PYLabelLine, labelLine);
+PYPropertyEqualImpTemplate(PYItemStyleProp, PYLineStyle *, lineStyle);
+PYPropertyEqualImpTemplate(PYItemStyleProp, PYAreaStyle *, areaStyle);
+PYPropertyEqualImpTemplate(PYItemStyleProp, PYChordStyle *, chordStyle);
+PYPropertyEqualImpTemplate(PYItemStyleProp, PYNodeStyle *, nodeStyle);
+PYPropertyEqualImpTemplate(PYItemStyleProp, PYLinkStyle *, linkStyle);
+PYPropertyEqualImpTemplate(PYItemStyleProp, PYLabel *, label);
+PYPropertyEqualImpTemplate(PYItemStyleProp, PYLabelLine *, labelLine);
 
 @end

@@ -21,6 +21,6 @@
 
 PYInitializerImpTemplate(PYCategories);
 
-PYPropertyEqualImpTemplate(PYCategories, PYItemStyle, itemStyle);
+PYPropertyEqualImpTemplate(PYCategories, PYItemStyle *, itemStyle);
 
 @end

@@ -22,7 +22,7 @@
 
 PYInitializerImpTemplate(PYItemStyle);
 
-PYPropertyEqualImpTemplate(PYItemStyle, PYItemStyleProp, normal);
-PYPropertyEqualImpTemplate(PYItemStyle, PYItemStyleProp, emphasis);
+PYPropertyEqualImpTemplate(PYItemStyle, PYItemStyleProp *, normal);
+PYPropertyEqualImpTemplate(PYItemStyle, PYItemStyleProp *, emphasis);
 
 @end

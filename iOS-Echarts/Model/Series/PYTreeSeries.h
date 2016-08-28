@@ -21,7 +21,7 @@
 
 PYInitializerTemplate(PYTreeSeriesData, data);
 
-PYPropertyEqualTemplate(PYTreeSeriesData, PYItemStyle, itemStyle);
+PYPropertyEqualTemplate(PYTreeSeriesData, PYItemStyle *, itemStyle);
 
 @end
 

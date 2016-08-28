@@ -33,7 +33,7 @@ extern PYAxisPointerType PYAxisPointerNone;
 
 PYInitializerTemplate(PYAxisPointer, axisPoint);
 
-PYPropertyEqualTemplate(PYAxisPointer, PYLineStyle, lineStyle);
-PYPropertyEqualTemplate(PYAxisPointer, PYLineStyle, crossStyle);
+PYPropertyEqualTemplate(PYAxisPointer, PYLineStyle *, lineStyle);
+PYPropertyEqualTemplate(PYAxisPointer, PYLineStyle *, crossStyle);
 
 @end

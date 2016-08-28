@@ -24,6 +24,6 @@
 
 PYInitializerImpTemplate(PYNodes);
 
-PYPropertyEqualImpTemplate(PYNodes, PYItemStyle, itemStyle);
+PYPropertyEqualImpTemplate(PYNodes, PYItemStyle *, itemStyle);
 
 @end

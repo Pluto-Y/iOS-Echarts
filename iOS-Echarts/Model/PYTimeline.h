@@ -22,7 +22,11 @@
 
 PYInitializerTemplate(PYTimelineLabel, timelineLabel);
 
-PYPropertyEqualTemplate(PYTimelineLabel, PYTextStyle, textStyle);
+PYPropertyEqualTemplate(PYTimelineLabel, BOOL, show);
+PYPropertyEqualTemplate(PYTimelineLabel, id, interval);
+PYPropertyEqualTemplate(PYTimelineLabel, NSNumber *, rotate);
+PYPropertyEqualTemplate(PYTimelineLabel, id, formatter);
+PYPropertyEqualTemplate(PYTimelineLabel, PYTextStyle *, textStyle);
 
 @end
 
@@ -37,7 +41,12 @@ PYPropertyEqualTemplate(PYTimelineLabel, PYTextStyle, textStyle);
 
 PYInitializerTemplate(PYTimelineCheckpointStyle, checkpointStyle);
 
-PYPropertyEqualTemplate(PYTimelineCheckpointStyle, PYTimelineLabel, label);
+PYPropertyEqualTemplate(PYTimelineCheckpointStyle, NSString *, symbol);
+PYPropertyEqualTemplate(PYTimelineCheckpointStyle, id, symbolSize);
+PYPropertyEqualTemplate(PYTimelineCheckpointStyle, PYColor *, color);
+PYPropertyEqualTemplate(PYTimelineCheckpointStyle, PYColor *, borderColor);
+PYPropertyEqualTemplate(PYTimelineCheckpointStyle, id, borderWidth);
+PYPropertyEqualTemplate(PYTimelineCheckpointStyle, PYTimelineLabel *, label);
 
 @end
 
@@ -49,6 +58,11 @@ PYPropertyEqualTemplate(PYTimelineCheckpointStyle, PYTimelineLabel, label);
 @property (strong, nonatomic) NSDictionary *emphasis;
 
 PYInitializerTemplate(PYTimelineControlStyle, controlStyle);
+
+PYPropertyEqualTemplate(PYTimelineControlStyle, NSNumber *, itemSize);
+PYPropertyEqualTemplate(PYTimelineControlStyle, NSNumber *, itemGap);
+PYPropertyEqualTemplate(PYTimelineControlStyle, NSDictionary *, normal);
+PYPropertyEqualTemplate(PYTimelineControlStyle, NSDictionary *, emphasis);
 
 @end
 
@@ -96,9 +110,33 @@ extern PYTimelineType const PYTimelineTypeNumber;
 
 PYInitializerTemplate(PYTimeline, timeline);
 
-PYPropertyEqualTemplate(PYTimeline, PYLineStyle, lineStyle);
-PYPropertyEqualTemplate(PYTimeline, PYTimelineLabel, label);
-PYPropertyEqualTemplate(PYTimeline, PYTimelineCheckpointStyle, checkpointStyle);
-PYPropertyEqualTemplate(PYTimeline, PYTimelineControlStyle, controlStyle);
+PYPropertyEqualTemplate(PYTimeline, BOOL, show);
+PYPropertyEqualTemplate(PYTimeline, NSNumber *, zlevel);
+PYPropertyEqualTemplate(PYTimeline, NSNumber *, z);
+PYPropertyEqualTemplate(PYTimeline, PYTimelineType, type);
+PYPropertyEqualTemplate(PYTimeline, BOOL, notMerge);
+PYPropertyEqualTemplate(PYTimeline, BOOL, realtime);
+PYPropertyEqualTemplate(PYTimeline, id, x);
+PYPropertyEqualTemplate(PYTimeline, id, y);
+PYPropertyEqualTemplate(PYTimeline, id, x2);
+PYPropertyEqualTemplate(PYTimeline, id, y2);
+PYPropertyEqualTemplate(PYTimeline, NSNumber *, width);
+PYPropertyEqualTemplate(PYTimeline, NSNumber *, height);
+PYPropertyEqualTemplate(PYTimeline, PYColor *, backgroundColor);
+PYPropertyEqualTemplate(PYTimeline, NSNumber *, borderWidth);
+PYPropertyEqualTemplate(PYTimeline, PYColor *, borderColor);
+PYPropertyEqualTemplate(PYTimeline, id, padding);
+PYPropertyEqualTemplate(PYTimeline, NSString *, controlPosition);
+PYPropertyEqualTemplate(PYTimeline, BOOL, autoPlay);
+PYPropertyEqualTemplate(PYTimeline, BOOL, loop);
+PYPropertyEqualTemplate(PYTimeline, NSNumber *, playInterval);
+PYPropertyEqualTemplate(PYTimeline, PYLineStyle *, lineStyle);
+PYPropertyEqualTemplate(PYTimeline, PYTimelineLabel *, label);
+PYPropertyEqualTemplate(PYTimeline, PYTimelineCheckpointStyle *, checkpointStyle);
+PYPropertyEqualTemplate(PYTimeline, PYTimelineControlStyle *, controlStyle);
+PYPropertyEqualTemplate(PYTimeline, PYSymbol, symbol);
+PYPropertyEqualTemplate(PYTimeline, NSNumber *, symbolSize);
+PYPropertyEqualTemplate(PYTimeline, NSNumber *, currentIndex);
+PYPropertyEqualTemplate(PYTimeline, NSMutableArray *, data);
 
 @end

@@ -38,6 +38,23 @@
 
 PYInitializerTemplate(PYLegend, legend);
 
-PYPropertyEqualTemplate(PYLegend, PYTextStyle, textStyle);
+PYPropertyEqualTemplate(PYLegend, BOOL, show);
+PYPropertyEqualTemplate(PYLegend, NSNumber *, zlevel);
+PYPropertyEqualTemplate(PYLegend, NSNumber *, z);
+PYPropertyEqualTemplate(PYLegend, NSString *, orient);
+PYPropertyEqualTemplate(PYLegend, id, x);
+PYPropertyEqualTemplate(PYLegend, id, y);
+PYPropertyEqualTemplate(PYLegend, PYColor *, backgroundColor);
+PYPropertyEqualTemplate(PYLegend, NSString *, borderColor);
+PYPropertyEqualTemplate(PYLegend, NSNumber *, borderWidth);
+PYPropertyEqualTemplate(PYLegend, id, padding);
+PYPropertyEqualTemplate(PYLegend, NSNumber *, itemGap);
+PYPropertyEqualTemplate(PYLegend, NSNumber *, itemWidth);
+PYPropertyEqualTemplate(PYLegend, NSNumber *, itemHeight);
+PYPropertyEqualTemplate(PYLegend, PYTextStyle *, textStyle);
+PYPropertyEqualTemplate(PYLegend, id, formatter);
+PYPropertyEqualTemplate(PYLegend, id, selectedMode);
+PYPropertyEqualTemplate(PYLegend, NSDictionary *, selected);
+PYPropertyEqualTemplate(PYLegend, NSArray *, data);
 
 @end

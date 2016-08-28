@@ -28,6 +28,12 @@
 
 PYInitializerImpTemplate(PYAxisTick);
 
-PYPropertyEqualImpTemplate(PYAxisTick, PYLineStyle, lineStyle);
+PYPropertyEqualImpTemplate(PYAxisTick, BOOL, show);
+PYPropertyEqualImpTemplate(PYAxisTick, id, interval);
+PYPropertyEqualImpTemplate(PYAxisTick, NSNumber *, splitNumber);
+PYPropertyEqualImpTemplate(PYAxisTick, BOOL, onGap);
+PYPropertyEqualImpTemplate(PYAxisTick, BOOL, inside);
+PYPropertyEqualImpTemplate(PYAxisTick, NSNumber *, length);
+PYPropertyEqualImpTemplate(PYAxisTick, PYLineStyle *, lineStyle);
 
 @end

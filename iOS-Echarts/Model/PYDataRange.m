@@ -22,6 +22,6 @@
 
 PYInitializerImpTemplate(PYDataRange);
 
-PYPropertyEqualImpTemplate(PYDataRange, PYTextStyle, textStyle);
+PYPropertyEqualImpTemplate(PYDataRange, PYTextStyle *, textStyle);
 
 @end

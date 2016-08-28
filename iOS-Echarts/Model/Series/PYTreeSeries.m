@@ -12,7 +12,7 @@
 
 PYInitializerImpTemplate(PYTreeSeriesData);
 
-PYPropertyEqualImpTemplate(PYTreeSeriesData, PYItemStyle, itemStyle);
+PYPropertyEqualImpTemplate(PYTreeSeriesData, PYItemStyle *, itemStyle);
 
 @end
 

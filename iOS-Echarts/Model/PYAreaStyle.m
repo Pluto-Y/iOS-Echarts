@@ -30,4 +30,7 @@ PYAreaStyleType const PYAreaStyleTypeDefault = @"default";
 
 PYInitializerImpTemplate(PYAreaStyle);
 
+PYPropertyEqualImpTemplate(PYAreaStyle, id, color);
+PYPropertyEqualImpTemplate(PYAreaStyle, PYAreaStyleType, type);
+
 @end

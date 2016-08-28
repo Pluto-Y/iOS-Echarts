@@ -24,6 +24,8 @@
 
 PYInitializerImpTemplate(PYSplitArea);
 
-PYPropertyEqualImpTemplate(PYSplitArea, PYAreaStyle, areaStyle);
+PYPropertyEqualImpTemplate(PYSplitArea, BOOL, show);
+PYPropertyEqualImpTemplate(PYSplitArea, BOOL, onGap);
+PYPropertyEqualImpTemplate(PYSplitArea, PYAreaStyle *, areaStyle);
 
 @end

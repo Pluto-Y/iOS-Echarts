@@ -53,12 +53,22 @@ extern PYAxisType const PYAxisTypeLog;
 
 PYInitializerTemplate(PYAxis, axis);
 
-PYPropertyEqualTemplate(PYAxis, PYTextStyle, nameTextStyle);
-PYPropertyEqualTemplate(PYAxis, PYAxisLine, axisLine);
-PYPropertyEqualTemplate(PYAxis, PYAxisTick, axisTick);
-PYPropertyEqualTemplate(PYAxis, PYAxisLabel, axisLabel);
-PYPropertyEqualTemplate(PYAxis, PYAxisSplitLine, splitLine);
-PYPropertyEqualTemplate(PYAxis, PYSplitArea, splitArea);
+PYPropertyEqualTemplate(PYAxis, PYAxisType, type);
+PYPropertyEqualTemplate(PYAxis, BOOL, show);
+PYPropertyEqualTemplate(PYAxis, NSNumber *, zlevel);
+PYPropertyEqualTemplate(PYAxis, NSNumber *, z);
+PYPropertyEqualTemplate(PYAxis, NSString *, position);
+PYPropertyEqualTemplate(PYAxis, NSString *, name);
+PYPropertyEqualTemplate(PYAxis, NSString *, nameLocation);
+PYPropertyEqualTemplate(PYAxis, PYTextStyle *, nameTextStyle);
+PYPropertyEqualTemplate(PYAxis, id, boundaryGap);
+PYPropertyEqualTemplate(PYAxis, NSNumber *, min);
+PYPropertyEqualTemplate(PYAxis, NSNumber *, max);
+PYPropertyEqualTemplate(PYAxis, PYAxisLine *, axisLine);
+PYPropertyEqualTemplate(PYAxis, PYAxisTick *, axisTick);
+PYPropertyEqualTemplate(PYAxis, PYAxisLabel *, axisLabel);
+PYPropertyEqualTemplate(PYAxis, PYAxisSplitLine *, splitLine);
+PYPropertyEqualTemplate(PYAxis, PYSplitArea *, splitArea);
 
 
 @end

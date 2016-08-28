@@ -49,6 +49,6 @@
 
 PYInitializerTemplate(PYDataRange, dataRange);
 
-PYPropertyEqualTemplate(PYDataRange, PYTextStyle, textStyle);
+PYPropertyEqualTemplate(PYDataRange, PYTextStyle *, textStyle);
 
 @end

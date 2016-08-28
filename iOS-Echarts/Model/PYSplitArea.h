@@ -23,6 +23,8 @@
 
 PYInitializerTemplate(PYSplitArea, splitArea);
 
-PYPropertyEqualTemplate(PYSplitArea, PYAreaStyle, areaStyle);
+PYPropertyEqualTemplate(PYSplitArea, BOOL, show);
+PYPropertyEqualTemplate(PYSplitArea, BOOL, onGap);
+PYPropertyEqualTemplate(PYSplitArea, PYAreaStyle *, areaStyle);
 
 @end

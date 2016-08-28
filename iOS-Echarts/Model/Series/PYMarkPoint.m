@@ -61,7 +61,7 @@ PYInitializerImpTemplate(PYMarkPointEffect);
 
 PYInitializerImpTemplate(PYMarkPoint);
 
-PYPropertyEqualImpTemplate(PYMarkPoint, PYMarkPointEffect, effect);
-PYPropertyEqualImpTemplate(PYMarkPoint, PYItemStyle, itemStyle);
+PYPropertyEqualImpTemplate(PYMarkPoint, PYMarkPointEffect *, effect);
+PYPropertyEqualImpTemplate(PYMarkPoint, PYItemStyle *, itemStyle);
 
 @end

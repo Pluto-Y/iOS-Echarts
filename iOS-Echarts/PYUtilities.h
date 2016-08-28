@@ -64,7 +64,6 @@ static PYSort PYSortDescending = @"descending";
         return tmp;                                                             \
     }
 
-
 /**
  *  The template of the interface which is property custom setter.
  *  You can use this interface to set value for special property.
@@ -73,8 +72,8 @@ static PYSort PYSortDescending = @"descending";
  *  @param type The property's type
  *  @param name The name of parameter which the property in the object.
  */
-#define PYPropertyEqualTemplate(cls, type, name)                                 \
-    - (cls * (^) (type *name)) name##Eqaul;                                     \
+#define PYPropertyEqualTemplate(cls, type, name)                                \
+    - (cls * (^) (type name)) name##Equal;                                      \
 
 
 /**
@@ -86,8 +85,8 @@ static PYSort PYSortDescending = @"descending";
  *  @param name The name of parameter which the property in the object.
  */
 #define PYPropertyEqualImpTemplate(cls, type, name)                             \
-    - (cls * (^) (type *name))name##Eqaul{                                      \
-        return ^(type *name) {                                                  \
+    - (cls * (^) (type name))name##Equal{                                       \
+        return ^(type name) {                                                   \
             self.name         = name;                                           \
             return self;                                                        \
         };                                                                      \

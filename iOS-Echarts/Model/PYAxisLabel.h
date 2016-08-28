@@ -27,6 +27,12 @@
 
 PYInitializerTemplate(PYAxisLabel, axisLabel);
 
-PYPropertyEqualTemplate(PYAxisLabel, PYTextStyle, textStyle);
+PYPropertyEqualTemplate(PYAxisLabel, BOOL, show);
+PYPropertyEqualTemplate(PYAxisLabel, id, interval);
+PYPropertyEqualTemplate(PYAxisLabel, NSNumber *, rotate);
+PYPropertyEqualTemplate(PYAxisLabel, NSNumber *, margin);
+PYPropertyEqualTemplate(PYAxisLabel, BOOL, clickable);
+PYPropertyEqualTemplate(PYAxisLabel, NSString *, formatter);
+PYPropertyEqualTemplate(PYAxisLabel, PYTextStyle *, textStyle);
 
 @end

@@ -14,13 +14,19 @@
 
 PYInitializerImpTemplate(PYToolboxFeatureMarkTitle);
 
+PYPropertyEqualImpTemplate(PYToolboxFeatureMarkTitle, NSString *, mark);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMarkTitle, NSString *, markUndo);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMarkTitle, NSString *, markClear);
+
 @end
 
 @implementation PYToolboxFeatureMark
 
 PYInitializerImpTemplate(PYToolboxFeatureMark);
 
-PYPropertyEqualImpTemplate(PYToolboxFeatureMark, PYToolboxFeatureMarkTitle, title);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMark, BOOL, show);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMark, PYToolboxFeatureMarkTitle *, title);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMark, PYLineStyle *, lineStyle);
 
 @end
 
@@ -28,13 +34,17 @@ PYPropertyEqualImpTemplate(PYToolboxFeatureMark, PYToolboxFeatureMarkTitle, titl
 
 PYInitializerImpTemplate(PYToolboxFeatureDataZoomTitle);
 
+PYPropertyEqualImpTemplate(PYToolboxFeatureDataZoomTitle, NSString *, dataZoom);
+PYPropertyEqualImpTemplate(PYToolboxFeatureDataZoomTitle, NSString *, dataZoomReset);
+
 @end
 
 @implementation PYToolboxFeatureDataZoom
 
 PYInitializerImpTemplate(PYToolboxFeatureDataZoom);
 
-PYPropertyEqualImpTemplate(PYToolboxFeatureDataZoom, PYToolboxFeatureDataZoomTitle, title);
+PYPropertyEqualImpTemplate(PYToolboxFeatureDataZoom, BOOL, show);
+PYPropertyEqualImpTemplate(PYToolboxFeatureDataZoom, PYToolboxFeatureDataZoomTitle *, title);
 
 @end
 
@@ -42,11 +52,25 @@ PYPropertyEqualImpTemplate(PYToolboxFeatureDataZoom, PYToolboxFeatureDataZoomTit
 
 PYInitializerImpTemplate(PYToolboxFeatureDataView);
 
+PYPropertyEqualImpTemplate(PYToolboxFeatureDataView, BOOL, show);
+PYPropertyEqualImpTemplate(PYToolboxFeatureDataView, NSString *, title);
+PYPropertyEqualImpTemplate(PYToolboxFeatureDataView, BOOL, readOnly);
+PYPropertyEqualImpTemplate(PYToolboxFeatureDataView, NSArray *, lang);
+
 @end
 
 @implementation PYToolboxFeatureMagicTypeTitle
 
 PYInitializerImpTemplate(PYToolboxFeatureMagicTypeTitle);
+
+PYPropertyEqualImpTemplate(PYToolboxFeatureMagicTypeTitle, NSString *, line);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMagicTypeTitle, NSString *, bar);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMagicTypeTitle, NSString *, stack);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMagicTypeTitle, NSString *, tiled);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMagicTypeTitle, NSString *, force);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMagicTypeTitle, NSString *, chord);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMagicTypeTitle, NSString *, pie);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMagicTypeTitle, NSString *, funnel);
 
 @end
 
@@ -54,13 +78,19 @@ PYInitializerImpTemplate(PYToolboxFeatureMagicTypeTitle);
 
 PYInitializerImpTemplate(PYToolboxFeatureMagicType);
 
-PYPropertyEqualImpTemplate(PYToolboxFeatureMagicType, PYToolboxFeatureMagicTypeTitle, title);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMagicType, BOOL, show);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMagicType, PYToolboxFeatureMagicTypeTitle *, title);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMagicType, NSDictionary *, option);
+PYPropertyEqualImpTemplate(PYToolboxFeatureMagicType, NSArray *, type);
 
 @end
 
 @implementation PYToolboxFeatureRestore
 
 PYInitializerImpTemplate(PYToolboxFeatureRestore);
+
+PYPropertyEqualImpTemplate(PYToolboxFeatureRestore, BOOL, show);
+PYPropertyEqualImpTemplate(PYToolboxFeatureRestore, NSString *, title);
 
 @end
 
@@ -131,10 +161,10 @@ PYInitializerImpTemplate(PYToolboxFeatureSaveAsImage);
 
 PYInitializerImpTemplate(PYToolboxFeature);
 
-PYPropertyEqualImpTemplate(PYToolboxFeature, PYToolboxFeatureMark, mark);
-PYPropertyEqualImpTemplate(PYToolboxFeature, PYToolboxFeatureDataZoom, dataZoom);
-PYPropertyEqualImpTemplate(PYToolboxFeature, PYToolboxFeatureDataView, dataView);
-PYPropertyEqualImpTemplate(PYToolboxFeature, PYToolboxFeatureMagicType, magicType);
-PYPropertyEqualImpTemplate(PYToolboxFeature, PYToolboxFeatureRestore, restore);
+PYPropertyEqualImpTemplate(PYToolboxFeature, PYToolboxFeatureMark *, mark);
+PYPropertyEqualImpTemplate(PYToolboxFeature, PYToolboxFeatureDataZoom *, dataZoom);
+PYPropertyEqualImpTemplate(PYToolboxFeature, PYToolboxFeatureDataView *, dataView);
+PYPropertyEqualImpTemplate(PYToolboxFeature, PYToolboxFeatureMagicType *, magicType);
+PYPropertyEqualImpTemplate(PYToolboxFeature, PYToolboxFeatureRestore *, restore);
 
 @end

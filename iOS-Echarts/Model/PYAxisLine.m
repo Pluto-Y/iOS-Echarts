@@ -22,6 +22,8 @@
 
 PYInitializerImpTemplate(PYAxisLine);
 
-PYPropertyEqualImpTemplate(PYAxisLine, PYLineStyle, lineStyle);
+PYPropertyEqualImpTemplate(PYAxisLine, BOOL, show);
+PYPropertyEqualImpTemplate(PYAxisLine, BOOL, onZero);
+PYPropertyEqualImpTemplate(PYAxisLine, PYLineStyle *, lineStyle);
 
 @end

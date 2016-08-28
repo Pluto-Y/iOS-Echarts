@@ -47,8 +47,8 @@ PYInitializerImpTemplate(PYMarkLineEffect);
 
 PYInitializerImpTemplate(PYMarkLine);
 
-PYPropertyEqualImpTemplate(PYMarkLine, PYBundling, bundling);
-PYPropertyEqualImpTemplate(PYMarkLine, PYMarkLineEffect, effect);
-PYPropertyEqualImpTemplate(PYMarkLine, PYItemStyle, itemStyle);
+PYPropertyEqualImpTemplate(PYMarkLine, PYBundling *, bundling);
+PYPropertyEqualImpTemplate(PYMarkLine, PYMarkLineEffect *, effect);
+PYPropertyEqualImpTemplate(PYMarkLine, PYItemStyle *, itemStyle);
 
 @end

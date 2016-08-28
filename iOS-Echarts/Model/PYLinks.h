@@ -25,6 +25,6 @@
 
 PYInitializerTemplate(PYLinks, links);
 
-PYPropertyEqualTemplate(PYLinks, PYItemStyle, itemStyle);
+PYPropertyEqualTemplate(PYLinks, PYItemStyle *, itemStyle);
 
 @end
