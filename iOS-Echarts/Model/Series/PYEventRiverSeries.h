@@ -22,4 +22,8 @@
 
 PYInitializerTemplate(PYEventRiverSeries, series);
 
+PYPropertyEqualTemplate(PYEventRiverSeries, NSNumber *, xAxisIndex);
+PYPropertyEqualTemplate(PYEventRiverSeries, NSNumber *, weight);
+PYPropertyEqualTemplate(PYEventRiverSeries, BOOL, legendHoverLink);
+
 @end

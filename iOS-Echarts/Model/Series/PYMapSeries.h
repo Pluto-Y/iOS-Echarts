@@ -38,4 +38,19 @@ extern PYMapSeriesMapValueCalculation const PYMapSeriesMapValueCalculationAverag
 
 PYInitializerTemplate(PYMapSeries, series);
 
+PYPropertyEqualTemplate(PYMapSeries, id, selectedMode);
+PYPropertyEqualTemplate(PYMapSeries, NSString *, mapType);
+PYPropertyEqualTemplate(PYMapSeries, BOOL, hoverable);
+PYPropertyEqualTemplate(PYMapSeries, BOOL, dataRangeHoverLink);
+PYPropertyEqualTemplate(PYMapSeries, NSDictionary *, mapLocation);
+PYPropertyEqualTemplate(PYMapSeries, PYMapSeriesMapValueCalculation, mapValueCalculation);
+PYPropertyEqualTemplate(PYMapSeries, NSNumber *, mapValuePrecision);
+PYPropertyEqualTemplate(PYMapSeries, BOOL, showLegendSymbol);
+PYPropertyEqualTemplate(PYMapSeries, id, roam);
+PYPropertyEqualTemplate(PYMapSeries, NSDictionary *, scaleLimit);
+PYPropertyEqualTemplate(PYMapSeries, NSDictionary *, nameMap);
+PYPropertyEqualTemplate(PYMapSeries, NSDictionary *, textFixed);
+PYPropertyEqualTemplate(PYMapSeries, NSDictionary *, geoCoord);
+PYPropertyEqualTemplate(PYMapSeries, NSDictionary *, heatmap);
+
 @end

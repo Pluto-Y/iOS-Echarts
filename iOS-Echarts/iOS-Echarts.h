@@ -48,3 +48,6 @@
 #import "PYDataZoom.h"
 #import "PYDataRange.h"
 #import "PYToolboxFeature.h"
+#import "PYLineStyle.h"
+#import "PYAxisLine.h"
+#import "PYAxisLabel.h"

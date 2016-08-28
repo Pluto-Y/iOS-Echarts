@@ -48,4 +48,19 @@ static NSArray<PYMapSeriesMapValueCalculation> *mapValueCalculationScope;
 
 PYInitializerImpTemplate(PYMapSeries);
 
+PYPropertyEqualImpTemplate(PYMapSeries, id, selectedMode);
+PYPropertyEqualImpTemplate(PYMapSeries, NSString *, mapType);
+PYPropertyEqualImpTemplate(PYMapSeries, BOOL, hoverable);
+PYPropertyEqualImpTemplate(PYMapSeries, BOOL, dataRangeHoverLink);
+PYPropertyEqualImpTemplate(PYMapSeries, NSDictionary *, mapLocation);
+PYPropertyEqualImpTemplate(PYMapSeries, PYMapSeriesMapValueCalculation, mapValueCalculation);
+PYPropertyEqualImpTemplate(PYMapSeries, NSNumber *, mapValuePrecision);
+PYPropertyEqualImpTemplate(PYMapSeries, BOOL, showLegendSymbol);
+PYPropertyEqualImpTemplate(PYMapSeries, id, roam);
+PYPropertyEqualImpTemplate(PYMapSeries, NSDictionary *, scaleLimit);
+PYPropertyEqualImpTemplate(PYMapSeries, NSDictionary *, nameMap);
+PYPropertyEqualImpTemplate(PYMapSeries, NSDictionary *, textFixed);
+PYPropertyEqualImpTemplate(PYMapSeries, NSDictionary *, geoCoord);
+PYPropertyEqualImpTemplate(PYMapSeries, NSDictionary *, heatmap);
+
 @end

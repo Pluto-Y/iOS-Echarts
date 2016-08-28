@@ -38,4 +38,19 @@ extern PYFunnelSeriesSort const PYFunnelSeriesSortDescending __deprecated_msg("U
 
 PYInitializerTemplate(PYFunnelSeries, series);
 
+PYPropertyEqualTemplate(PYFunnelSeries, id, x);
+PYPropertyEqualTemplate(PYFunnelSeries, id, y);
+PYPropertyEqualTemplate(PYFunnelSeries, id, x2);
+PYPropertyEqualTemplate(PYFunnelSeries, id, y2);
+PYPropertyEqualTemplate(PYFunnelSeries, id, width);
+PYPropertyEqualTemplate(PYFunnelSeries, id, height);
+PYPropertyEqualTemplate(PYFunnelSeries, NSString *, funnelAlign);
+PYPropertyEqualTemplate(PYFunnelSeries, NSNumber *, min);
+PYPropertyEqualTemplate(PYFunnelSeries, NSNumber *, max);
+PYPropertyEqualTemplate(PYFunnelSeries, NSString *, minSize);
+PYPropertyEqualTemplate(PYFunnelSeries, NSString *, maxSize);
+PYPropertyEqualTemplate(PYFunnelSeries, PYSort, sort);
+PYPropertyEqualTemplate(PYFunnelSeries, NSNumber *, gap);
+PYPropertyEqualTemplate(PYFunnelSeries, BOOL, legendHoverLink);
+
 @end

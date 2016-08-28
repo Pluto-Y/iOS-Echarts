@@ -24,4 +24,10 @@
 
 PYInitializerTemplate(PYHeatmapSeries, series);
 
+PYPropertyEqualTemplate(PYHeatmapSeries, NSNumber *, blurSize);
+PYPropertyEqualTemplate(PYHeatmapSeries, NSArray *, gradientColors);
+PYPropertyEqualTemplate(PYHeatmapSeries, NSNumber *, minAlpha);
+PYPropertyEqualTemplate(PYHeatmapSeries, NSNumber *, valueScale);
+PYPropertyEqualTemplate(PYHeatmapSeries, NSNumber *, opacity);
+
 @end

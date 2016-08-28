@@ -7,9 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYItemStyle.h"
 
-@class PYColor;
+@class PYColor, PYItemStyle;
 
 typedef NSString *PYMarkPointEffectType;
 
@@ -29,6 +28,16 @@ extern PYMarkPointEffectType const PYMarkPointEffectTypeBounce;
 @property (nonatomic, strong) NSNumber *shadowBlur;
 
 PYInitializerTemplate(PYMarkPointEffect, effect);
+
+PYPropertyEqualTemplate(PYMarkPointEffect, BOOL, show);
+PYPropertyEqualTemplate(PYMarkPointEffect, PYMarkPointEffectType, type);
+PYPropertyEqualTemplate(PYMarkPointEffect, BOOL, loop);
+PYPropertyEqualTemplate(PYMarkPointEffect, NSNumber *, period);
+PYPropertyEqualTemplate(PYMarkPointEffect, NSNumber *, scaleSize);
+PYPropertyEqualTemplate(PYMarkPointEffect, NSNumber *, bounceDistance);
+PYPropertyEqualTemplate(PYMarkPointEffect, PYColor *, color);
+PYPropertyEqualTemplate(PYMarkPointEffect, PYColor *, shadowColor);
+PYPropertyEqualTemplate(PYMarkPointEffect, NSNumber *, shadowBlur);
 
 @end
 
@@ -51,7 +60,13 @@ PYInitializerTemplate(PYMarkPointEffect, effect);
 
 PYInitializerTemplate(PYMarkPoint, point);
 
+PYPropertyEqualTemplate(PYMarkPoint, BOOL, clickable);
+PYPropertyEqualTemplate(PYMarkPoint, id, symbol);
+PYPropertyEqualTemplate(PYMarkPoint, id, symbolSize);
+PYPropertyEqualTemplate(PYMarkPoint, id, symbolRotate);
+PYPropertyEqualTemplate(PYMarkPoint, BOOL, large);
 PYPropertyEqualTemplate(PYMarkPoint, PYMarkPointEffect *, effect);
 PYPropertyEqualTemplate(PYMarkPoint, PYItemStyle *, itemStyle);
+PYPropertyEqualTemplate(PYMarkPoint, NSArray *, data);
 
 @end

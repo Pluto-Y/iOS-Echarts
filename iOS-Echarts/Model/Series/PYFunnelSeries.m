@@ -54,4 +54,19 @@ static NSArray *funnelSeriesSortScope;
 
 PYInitializerImpTemplate(PYFunnelSeries);
 
+PYPropertyEqualImpTemplate(PYFunnelSeries, id, x);
+PYPropertyEqualImpTemplate(PYFunnelSeries, id, y);
+PYPropertyEqualImpTemplate(PYFunnelSeries, id, x2);
+PYPropertyEqualImpTemplate(PYFunnelSeries, id, y2);
+PYPropertyEqualImpTemplate(PYFunnelSeries, id, width);
+PYPropertyEqualImpTemplate(PYFunnelSeries, id, height);
+PYPropertyEqualImpTemplate(PYFunnelSeries, NSString *, funnelAlign);
+PYPropertyEqualImpTemplate(PYFunnelSeries, NSNumber *, min);
+PYPropertyEqualImpTemplate(PYFunnelSeries, NSNumber *, max);
+PYPropertyEqualImpTemplate(PYFunnelSeries, NSString *, minSize);
+PYPropertyEqualImpTemplate(PYFunnelSeries, NSString *, maxSize);
+PYPropertyEqualImpTemplate(PYFunnelSeries, PYSort, sort);
+PYPropertyEqualImpTemplate(PYFunnelSeries, NSNumber *, gap);
+PYPropertyEqualImpTemplate(PYFunnelSeries, BOOL, legendHoverLink);
+
 @end

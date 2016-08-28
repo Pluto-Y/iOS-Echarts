@@ -43,4 +43,22 @@ extern PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterAverage;
 
 PYInitializerTemplate(PYCartesianSeries, series);
 
+PYPropertyEqualTemplate(PYCartesianSeries, NSString *, stack);
+PYPropertyEqualTemplate(PYCartesianSeries, NSNumber *, xAxisIndex);
+PYPropertyEqualTemplate(PYCartesianSeries, NSNumber *, yAxisIndex);
+PYPropertyEqualTemplate(PYCartesianSeries, NSString *, barGap);
+PYPropertyEqualTemplate(PYCartesianSeries, NSString *, barCategoryGap);
+PYPropertyEqualTemplate(PYCartesianSeries, NSNumber *, barMinHeight);
+PYPropertyEqualTemplate(PYCartesianSeries, NSNumber *, barWidth);
+PYPropertyEqualTemplate(PYCartesianSeries, NSNumber *, barMaxWidth);
+PYPropertyEqualTemplate(PYCartesianSeries, PYSymbol, symbol);
+PYPropertyEqualTemplate(PYCartesianSeries, id, symbolSize);
+PYPropertyEqualTemplate(PYCartesianSeries, NSNumber *, symbolRotate);
+PYPropertyEqualTemplate(PYCartesianSeries, BOOL, showAllSymbol);
+PYPropertyEqualTemplate(PYCartesianSeries, BOOL, smooth);
+PYPropertyEqualTemplate(PYCartesianSeries, PYCartesianSeriesDataFilter, dataFilter);
+PYPropertyEqualTemplate(PYCartesianSeries, BOOL, large);
+PYPropertyEqualTemplate(PYCartesianSeries, NSNumber *, largeThreshold);
+PYPropertyEqualTemplate(PYCartesianSeries, BOOL, legendHoverLink);
+
 @end

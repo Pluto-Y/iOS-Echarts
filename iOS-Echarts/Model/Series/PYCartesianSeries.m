@@ -51,4 +51,22 @@ static NSArray<PYCartesianSeriesDataFilter> *cartesianSeriesDataFilterScope;
 
 PYInitializerImpTemplate(PYCartesianSeries);
 
+PYPropertyEqualImpTemplate(PYCartesianSeries, NSString *, stack);
+PYPropertyEqualImpTemplate(PYCartesianSeries, NSNumber *, xAxisIndex);
+PYPropertyEqualImpTemplate(PYCartesianSeries, NSNumber *, yAxisIndex);
+PYPropertyEqualImpTemplate(PYCartesianSeries, NSString *, barGap);
+PYPropertyEqualImpTemplate(PYCartesianSeries, NSString *, barCategoryGap);
+PYPropertyEqualImpTemplate(PYCartesianSeries, NSNumber *, barMinHeight);
+PYPropertyEqualImpTemplate(PYCartesianSeries, NSNumber *, barWidth);
+PYPropertyEqualImpTemplate(PYCartesianSeries, NSNumber *, barMaxWidth);
+PYPropertyEqualImpTemplate(PYCartesianSeries, PYSymbol, symbol);
+PYPropertyEqualImpTemplate(PYCartesianSeries, id, symbolSize);
+PYPropertyEqualImpTemplate(PYCartesianSeries, NSNumber *, symbolRotate);
+PYPropertyEqualImpTemplate(PYCartesianSeries, BOOL, showAllSymbol);
+PYPropertyEqualImpTemplate(PYCartesianSeries, BOOL, smooth);
+PYPropertyEqualImpTemplate(PYCartesianSeries, PYCartesianSeriesDataFilter, dataFilter);
+PYPropertyEqualImpTemplate(PYCartesianSeries, BOOL, large);
+PYPropertyEqualImpTemplate(PYCartesianSeries, NSNumber *, largeThreshold);
+PYPropertyEqualImpTemplate(PYCartesianSeries, BOOL, legendHoverLink);
+
 @end

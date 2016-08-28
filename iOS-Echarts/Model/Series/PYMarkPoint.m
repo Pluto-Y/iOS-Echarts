@@ -7,6 +7,7 @@
 //
 
 #import "PYMarkPoint.h"
+#import "PYItemStyle.h"
 
 PYMarkPointEffectType const PYMarkPointEffectTypeScale  = @"scale";
 PYMarkPointEffectType const PYMarkPointEffectTypeBounce = @"bounce";
@@ -36,6 +37,16 @@ static NSArray<PYMarkPointEffectType> *markPointEffectTypeScope;
 
 PYInitializerImpTemplate(PYMarkPointEffect);
 
+PYPropertyEqualImpTemplate(PYMarkPointEffect, BOOL, show);
+PYPropertyEqualImpTemplate(PYMarkPointEffect, PYMarkPointEffectType, type);
+PYPropertyEqualImpTemplate(PYMarkPointEffect, BOOL, loop);
+PYPropertyEqualImpTemplate(PYMarkPointEffect, NSNumber *, period);
+PYPropertyEqualImpTemplate(PYMarkPointEffect, NSNumber *, scaleSize);
+PYPropertyEqualImpTemplate(PYMarkPointEffect, NSNumber *, bounceDistance);
+PYPropertyEqualImpTemplate(PYMarkPointEffect, PYColor *, color);
+PYPropertyEqualImpTemplate(PYMarkPointEffect, PYColor *, shadowColor);
+PYPropertyEqualImpTemplate(PYMarkPointEffect, NSNumber *, shadowBlur);
+
 @end
 
 @implementation PYMarkPoint
@@ -61,7 +72,13 @@ PYInitializerImpTemplate(PYMarkPointEffect);
 
 PYInitializerImpTemplate(PYMarkPoint);
 
+PYPropertyEqualImpTemplate(PYMarkPoint, BOOL, clickable);
+PYPropertyEqualImpTemplate(PYMarkPoint, id, symbol);
+PYPropertyEqualImpTemplate(PYMarkPoint, id, symbolSize);
+PYPropertyEqualImpTemplate(PYMarkPoint, id, symbolRotate);
+PYPropertyEqualImpTemplate(PYMarkPoint, BOOL, large);
 PYPropertyEqualImpTemplate(PYMarkPoint, PYMarkPointEffect *, effect);
 PYPropertyEqualImpTemplate(PYMarkPoint, PYItemStyle *, itemStyle);
+PYPropertyEqualImpTemplate(PYMarkPoint, NSArray *, data);
 
 @end

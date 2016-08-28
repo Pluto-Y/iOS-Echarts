@@ -7,13 +7,8 @@
 //
 
 #import "PYSeries.h"
-#import "PYTextStyle.h"
-#import "PYAxisLine.h"
-#import "PYAxisLabel.h"
-#import "PYAxisTick.h"
-#import "PYLineStyle.h"
 
-@class PYColor;
+@class PYColor, PYTextStyle, PYAxisLine, PYAxisLabel, PYAxisTick, PYLineStyle;
 
 @interface PYGaugeSpliteLine : NSObject
 
@@ -23,6 +18,8 @@
 
 PYInitializerTemplate(PYGaugeSpliteLine, spliteLine);
 
+PYPropertyEqualTemplate(PYGaugeSpliteLine, BOOL, show);
+PYPropertyEqualTemplate(PYGaugeSpliteLine, NSNumber *, length);
 PYPropertyEqualTemplate(PYGaugeSpliteLine, PYLineStyle *, lineStyle);
 
 @end
@@ -43,7 +40,17 @@ PYPropertyEqualTemplate(PYGaugeSpliteLine, PYLineStyle *, lineStyle);
 
 PYInitializerTemplate(PYGaugeDetail, detail);
 
+PYPropertyEqualTemplate(PYGaugeDetail, BOOL, show);
+PYPropertyEqualTemplate(PYGaugeDetail, PYColor *, backgroundColor);
+PYPropertyEqualTemplate(PYGaugeDetail, NSNumber *, borderWidth);
+PYPropertyEqualTemplate(PYGaugeDetail, PYColor *, borderColor);
+PYPropertyEqualTemplate(PYGaugeDetail, NSNumber *, width);
+PYPropertyEqualTemplate(PYGaugeDetail, NSNumber *, height);
+PYPropertyEqualTemplate(PYGaugeDetail, NSArray *, offsetCenter);
+PYPropertyEqualTemplate(PYGaugeDetail, id, formatter);
 PYPropertyEqualTemplate(PYGaugeDetail, PYTextStyle *, textStyle);
+PYPropertyEqualTemplate(PYGaugeDetail, id, shadowColor);
+PYPropertyEqualTemplate(PYGaugeDetail, NSNumber *, shadowBlur);
 
 @end
 
@@ -56,6 +63,13 @@ PYPropertyEqualTemplate(PYGaugeDetail, PYTextStyle *, textStyle);
 @property (nonatomic, strong) NSNumber *shadowBlur;
 
 PYInitializerTemplate(PYGaugePointer, pointer);
+
+
+PYPropertyEqualTemplate(PYGaugePointer, NSString *, length);
+PYPropertyEqualTemplate(PYGaugePointer, NSNumber *, width);
+PYPropertyEqualTemplate(PYGaugePointer, id, color);
+PYPropertyEqualTemplate(PYGaugePointer, id, shadowColor);
+PYPropertyEqualTemplate(PYGaugePointer, NSNumber *, shadowBlur);
 
 @end
 
@@ -70,6 +84,11 @@ PYInitializerTemplate(PYGaugePointer, pointer);
 
 PYInitializerTemplate(PYGaugeTitle, title);
 
+PYPropertyEqualTemplate(PYGaugeTitle, id, color);
+PYPropertyEqualTemplate(PYGaugeTitle, id, shadowColor);
+PYPropertyEqualTemplate(PYGaugeTitle, NSNumber *, shadowBlur);
+PYPropertyEqualTemplate(PYGaugeTitle, BOOL, show);
+PYPropertyEqualTemplate(PYGaugeTitle, NSArray *, offsetCenter);
 PYPropertyEqualTemplate(PYGaugeTitle, PYTextStyle *, textStyle);
 
 @end
@@ -100,6 +119,13 @@ PYPropertyEqualTemplate(PYGaugeTitle, PYTextStyle *, textStyle);
 
 PYInitializerTemplate(PYGaugeSeries, series);
 
+PYPropertyEqualTemplate(PYGaugeSeries, NSArray *, center);
+PYPropertyEqualTemplate(PYGaugeSeries, id, radius);
+PYPropertyEqualTemplate(PYGaugeSeries, NSNumber *, startAngle);
+PYPropertyEqualTemplate(PYGaugeSeries, NSNumber *, endAngle);
+PYPropertyEqualTemplate(PYGaugeSeries, NSNumber *, min);
+PYPropertyEqualTemplate(PYGaugeSeries, NSNumber *, max);
+PYPropertyEqualTemplate(PYGaugeSeries, NSNumber *, splitNumber);
 PYPropertyEqualTemplate(PYGaugeSeries, PYAxisLine *, axisLine);
 PYPropertyEqualTemplate(PYGaugeSeries, PYAxisTick *, axisTick);
 PYPropertyEqualTemplate(PYGaugeSeries, PYAxisLabel *, axisLabel);
@@ -107,5 +133,6 @@ PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeSpliteLine *, splitLine);
 PYPropertyEqualTemplate(PYGaugeSeries, PYGaugePointer *, pointer);
 PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeTitle *, title);
 PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeDetail *, detail);
+PYPropertyEqualTemplate(PYGaugeSeries, BOOL, legendHoverLink);
 
 @end

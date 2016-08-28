@@ -7,16 +7,28 @@
 //
 
 #import "PYMarkLine.h"
+#import "PYItemStyle.h"
 
 @implementation PYBundling
 
 PYInitializerImpTemplate(PYBundling);
+
+PYPropertyEqualImpTemplate(PYBundling, BOOL, enable);
+PYPropertyEqualImpTemplate(PYBundling, NSNumber *, maxTurningAngle);
 
 @end
 
 @implementation PYMarkLineEffect
 
 PYInitializerImpTemplate(PYMarkLineEffect);
+
+PYPropertyEqualImpTemplate(PYMarkLineEffect, BOOL, show);
+PYPropertyEqualImpTemplate(PYMarkLineEffect, BOOL, loop);
+PYPropertyEqualImpTemplate(PYMarkLineEffect, NSNumber *, period);
+PYPropertyEqualImpTemplate(PYMarkLineEffect, NSNumber *, scaleSize);
+PYPropertyEqualImpTemplate(PYMarkLineEffect, PYColor *, color);
+PYPropertyEqualImpTemplate(PYMarkLineEffect, PYColor *, shadowColor);
+PYPropertyEqualImpTemplate(PYMarkLineEffect, NSNumber *, shadowBlur);
 
 @end
 
@@ -47,8 +59,17 @@ PYInitializerImpTemplate(PYMarkLineEffect);
 
 PYInitializerImpTemplate(PYMarkLine);
 
+PYPropertyEqualImpTemplate(PYMarkLine, BOOL, clickable);
+PYPropertyEqualImpTemplate(PYMarkLine, id, symbol);
+PYPropertyEqualImpTemplate(PYMarkLine, id, symbolSize);
+PYPropertyEqualImpTemplate(PYMarkLine, id, symbolRotate);
+PYPropertyEqualImpTemplate(PYMarkLine, BOOL, large);
+PYPropertyEqualImpTemplate(PYMarkLine, BOOL, smooth);
+PYPropertyEqualImpTemplate(PYMarkLine, NSNumber *, smoothness);
+PYPropertyEqualImpTemplate(PYMarkLine, NSNumber *, precision);
 PYPropertyEqualImpTemplate(PYMarkLine, PYBundling *, bundling);
 PYPropertyEqualImpTemplate(PYMarkLine, PYMarkLineEffect *, effect);
 PYPropertyEqualImpTemplate(PYMarkLine, PYItemStyle *, itemStyle);
+PYPropertyEqualImpTemplate(PYMarkLine, NSArray *, data);
 
 @end

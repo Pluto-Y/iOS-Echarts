@@ -26,6 +26,11 @@
 
 PYInitializerTemplate(PYForceNodes, nodes);
 
+PYPropertyEqualTemplate(PYForceNodes, NSMutableArray *, initial);
+PYPropertyEqualTemplate(PYForceNodes, BOOL, fixX);
+PYPropertyEqualTemplate(PYForceNodes, BOOL, fixY);
+PYPropertyEqualTemplate(PYForceNodes, BOOL, draggable);
+
 @end
 
 extern NSString * const PYForceSeriesRoamScale;
@@ -61,5 +66,26 @@ extern NSString * const PYForceSeriesRoamMove;
 @property (nonatomic, strong) id roam;
 
 PYInitializerTemplate(PYForceSeries, series);
+
+PYPropertyEqualTemplate(PYForceSeries, BOOL, ribbonType);
+PYPropertyEqualTemplate(PYForceSeries, NSMutableArray *, categories);
+PYPropertyEqualTemplate(PYForceSeries, NSMutableArray *, nodes);
+PYPropertyEqualTemplate(PYForceSeries, NSMutableArray *, links);
+PYPropertyEqualTemplate(PYForceSeries, NSMutableArray *, matrix);
+PYPropertyEqualTemplate(PYForceSeries, NSArray *, center);
+PYPropertyEqualTemplate(PYForceSeries, NSNumber *, size);
+PYPropertyEqualTemplate(PYForceSeries, NSNumber *, minRadius);
+PYPropertyEqualTemplate(PYForceSeries, NSNumber *, maxRadius);
+PYPropertyEqualTemplate(PYForceSeries, PYSymbol, symbol);
+PYPropertyEqualTemplate(PYForceSeries, id, symbolSize);
+PYPropertyEqualTemplate(PYForceSeries, NSString *, linkSymbol);
+PYPropertyEqualTemplate(PYForceSeries, NSArray *, linkSymbolSize);
+PYPropertyEqualTemplate(PYForceSeries, NSNumber *, scaling);
+PYPropertyEqualTemplate(PYForceSeries, NSNumber *, gravity);
+PYPropertyEqualTemplate(PYForceSeries, BOOL, draggable);
+PYPropertyEqualTemplate(PYForceSeries, BOOL, large);
+PYPropertyEqualTemplate(PYForceSeries, BOOL, useWorker);
+PYPropertyEqualTemplate(PYForceSeries, NSNumber *, steps);
+PYPropertyEqualTemplate(PYForceSeries, id, roam);
 
 @end
