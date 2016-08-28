@@ -7,6 +7,8 @@
 //
 
 #import "PYAxisPointer.h"
+#import "PYLineStyle.h"
+#import "PYAreaStyle.h"
 
 PYAxisPointerType PYAxisPointerLine = @"line";
 PYAxisPointerType PYAxisPointerCross = @"cross";
@@ -48,7 +50,10 @@ static NSArray<PYAxisPointerType> *axisPointScope;
 
 PYInitializerImpTemplate(PYAxisPointer);
 
+PYPropertyEqualImpTemplate(PYAxisPointer, BOOL, show);
+PYPropertyEqualImpTemplate(PYAxisPointer, NSString *, type);
 PYPropertyEqualImpTemplate(PYAxisPointer, PYLineStyle *, lineStyle);
 PYPropertyEqualImpTemplate(PYAxisPointer, PYLineStyle *, crossStyle);
+PYPropertyEqualImpTemplate(PYAxisPointer, PYAreaStyle *, shadowStyle);
 
 @end

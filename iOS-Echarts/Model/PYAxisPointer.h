@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "PYLineStyle.h"
-#import "PYAreaStyle.h"
+
+@class PYLineStyle, PYAreaStyle;
 
 typedef NSString * PYAxisPointerType;
 
@@ -33,7 +33,10 @@ extern PYAxisPointerType PYAxisPointerNone;
 
 PYInitializerTemplate(PYAxisPointer, axisPoint);
 
+PYPropertyEqualTemplate(PYAxisPointer, BOOL, show);
+PYPropertyEqualTemplate(PYAxisPointer, NSString *, type);
 PYPropertyEqualTemplate(PYAxisPointer, PYLineStyle *, lineStyle);
 PYPropertyEqualTemplate(PYAxisPointer, PYLineStyle *, crossStyle);
+PYPropertyEqualTemplate(PYAxisPointer, PYAreaStyle *, shadowStyle);
 
 @end
