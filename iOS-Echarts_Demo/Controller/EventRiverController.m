@@ -377,7 +377,7 @@ typedef NS_ENUM(NSInteger, EventRiverDemoTypeTag) {
 }
 
 - (void)showEventRiverDemo2 {
-    
+    // 数据量太大， 暂时放弃
 }
 
 @end

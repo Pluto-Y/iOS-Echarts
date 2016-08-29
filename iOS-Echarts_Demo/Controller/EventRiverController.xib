@@ -23,7 +23,7 @@
                         <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="c5d-x9-3yE"/>
                     </connections>
                 </button>
-                <button opaque="NO" tag="40002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8If-O5-k8d">
+                <button hidden="YES" opaque="NO" tag="40002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8If-O5-k8d">
                     <rect key="frame" x="258" y="46" width="84" height="30"/>
                     <state key="normal" title="事件河流图2"/>
                     <connections>
