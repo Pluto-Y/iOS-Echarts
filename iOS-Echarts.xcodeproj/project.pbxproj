@@ -102,6 +102,8 @@
 		6FA439A91D64E4F500FE5D9F /* GaugesDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FA439A71D64E4F500FE5D9F /* GaugesDemoController.xib */; };
 		6FA439E91D6A084400FE5D9F /* FunnelDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA439E71D6A084400FE5D9F /* FunnelDemoController.m */; };
 		6FA439EA1D6A084400FE5D9F /* FunnelDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FA439E81D6A084400FE5D9F /* FunnelDemoController.xib */; };
+		6FBC67481D7407290016CB30 /* EventRiverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC67461D7407290016CB30 /* EventRiverController.m */; };
+		6FBC67491D7407290016CB30 /* EventRiverController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBC67471D7407290016CB30 /* EventRiverController.xib */; };
 		6FC0911B1D5A464200D52879 /* WordCloudDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC091191D5A464200D52879 /* WordCloudDemoController.m */; };
 		6FC0911C1D5A464200D52879 /* WordCloudDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC0911A1D5A464200D52879 /* WordCloudDemoController.xib */; };
 		6FC091321D60C39C00D52879 /* VennDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC091301D60C39C00D52879 /* VennDemoController.m */; };
@@ -298,6 +300,9 @@
 		6FA439E61D6A084400FE5D9F /* FunnelDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnelDemoController.h; sourceTree = "<group>"; };
 		6FA439E71D6A084400FE5D9F /* FunnelDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnelDemoController.m; sourceTree = "<group>"; };
 		6FA439E81D6A084400FE5D9F /* FunnelDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunnelDemoController.xib; sourceTree = "<group>"; };
+		6FBC67451D7407290016CB30 /* EventRiverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRiverController.h; sourceTree = "<group>"; };
+		6FBC67461D7407290016CB30 /* EventRiverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRiverController.m; sourceTree = "<group>"; };
+		6FBC67471D7407290016CB30 /* EventRiverController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventRiverController.xib; sourceTree = "<group>"; };
 		6FC091181D5A464200D52879 /* WordCloudDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordCloudDemoController.h; sourceTree = "<group>"; };
 		6FC091191D5A464200D52879 /* WordCloudDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordCloudDemoController.m; sourceTree = "<group>"; };
 		6FC0911A1D5A464200D52879 /* WordCloudDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordCloudDemoController.xib; sourceTree = "<group>"; };
@@ -408,6 +413,9 @@
 				6FF5EAB41D70B375000D275E /* TreeDemoController.h */,
 				6FF5EAB51D70B375000D275E /* TreeDemoController.m */,
 				6FF5EAB61D70B375000D275E /* TreeDemoController.xib */,
+				6FBC67451D7407290016CB30 /* EventRiverController.h */,
+				6FBC67461D7407290016CB30 /* EventRiverController.m */,
+				6FBC67471D7407290016CB30 /* EventRiverController.xib */,
 			);
 			name = Controller;
 			path = "iOS-Echarts_Demo/Controller";
@@ -750,6 +758,7 @@
 				6CF1AA331C02AF5600F1B773 /* ScatterDemoController.xib in Resources */,
 				6F4D590D1D4FE34F00246943 /* echarts.html in Resources */,
 				6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */,
+				6FBC67491D7407290016CB30 /* EventRiverController.xib in Resources */,
 				6C34720D1BF470E600C16B73 /* (null) in Resources */,
 				6FDCE6F91D61FED900F580FD /* TreemapDemoController.xib in Resources */,
 				6FC091331D60C39C00D52879 /* VennDemoController.xib in Resources */,
@@ -789,6 +798,7 @@
 				6FC0911B1D5A464200D52879 /* WordCloudDemoController.m in Sources */,
 				6F4D59051D4FE34F00246943 /* PYMarkPoint.m in Sources */,
 				6F4D58EC1D4FE34F00246943 /* PYLinks.m in Sources */,
+				6FBC67481D7407290016CB30 /* EventRiverController.m in Sources */,
 				6F8A3EFF1D49AFA5008268BD /* MultiEchartsController.m in Sources */,
 				6F4D58EE1D4FE34F00246943 /* PYLoadingOption.m in Sources */,
 				6C0658CE1BB85B29003CAAE5 /* main.m in Sources */,

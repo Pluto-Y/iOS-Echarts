@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EventRiverController">
+            <connections>
+                <outlet property="echartsView" destination="cSn-Mu-Se4" id="k53-Yb-tCz"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" tag="40001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="48u-ii-fsP">
+                    <rect key="frame" x="259" y="8" width="82" height="30"/>
+                    <state key="normal" title="事件河流图1"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="c5d-x9-3yE"/>
+                    </connections>
+                </button>
+                <button opaque="NO" tag="40002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8If-O5-k8d">
+                    <rect key="frame" x="258" y="46" width="84" height="30"/>
+                    <state key="normal" title="事件河流图2"/>
+                    <connections>
+                        <action selector="demoBtnClick:" destination="-1" eventType="touchUpInside" id="wvv-UO-QtG"/>
+                    </connections>
+                </button>
+                <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cSn-Mu-Se4" customClass="PYEchartsView">
+                    <rect key="frame" x="0.0" y="280" width="600" height="300"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="deviceRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="300" id="gTj-MS-RPg"/>
+                    </constraints>
+                </webView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="cSn-Mu-Se4" secondAttribute="bottom" constant="20" id="8KH-no-FMd"/>
+                <constraint firstAttribute="trailing" secondItem="cSn-Mu-Se4" secondAttribute="trailing" id="AOM-1m-pct"/>
+                <constraint firstItem="8If-O5-k8d" firstAttribute="centerX" secondItem="48u-ii-fsP" secondAttribute="centerX" id="SMz-c1-Hbi"/>
+                <constraint firstItem="cSn-Mu-Se4" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="TaL-Fc-Fi4"/>
+                <constraint firstItem="48u-ii-fsP" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="8" id="fkI-bY-0YU"/>
+                <constraint firstItem="8If-O5-k8d" firstAttribute="top" secondItem="48u-ii-fsP" secondAttribute="bottom" constant="8" id="oIO-C2-hNY"/>
+                <constraint firstItem="48u-ii-fsP" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="t14-8N-eIO"/>
+            </constraints>
+        </view>
+    </objects>
+</document>
