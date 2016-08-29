@@ -1,7 +1,20 @@
-1.2.3 Relase notes (2016-08-26)
+1.3.1 Release notes (2016-08-30)
 ============================================================
 
-### Add
+### Added
+* Add demos for Tree
+* Add demo for EventRiver
+* Add initializer for all types
+* Add some properties for some object
+* Add support for the chainable way
+
+### Fixed 
+* Restructure the codes by using `@class`
+
+1.2.3 Release notes (2016-08-26)
+============================================================
+
+### Added
 * Add demos for Gauge
 * Add demos for Funnel
 * Add demos for Chord
@@ -69,7 +82,3 @@
 * Add Radar and Map Demos
 * Replace js files and support all echarts types
 * Add PYZoomEchartsView
-
-
-
-
