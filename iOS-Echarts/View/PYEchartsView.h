@@ -38,12 +38,20 @@ extern PYEchartsViewImageType const PYEchartsViewImageTypeJEPG;
 extern PYEchartsViewImageType const PYEchartsViewImageTypePNG;
 
 typedef NSString *PYEchartAction;
+extern PYEchartAction const PYEchartActionResize;
 extern PYEchartAction const PYEchartActionClick;
 extern PYEchartAction const PYEchartActionDbClick;
-extern PYEchartAction const PYEchartActionMapSelected;
+extern PYEchartAction const PYEchartActionDataChanged;
 extern PYEchartAction const PYEchartActionDataZoom;
+extern PYEchartAction const PYEchartActionDataRange;
 extern PYEchartAction const PYEchartActionLegendSelected;
+extern PYEchartAction const PYEchartActionMapSelected;
+extern PYEchartAction const PYEchartActionPieSelected;
 extern PYEchartAction const PYEchartActionMagicTypeChange;
+extern PYEchartAction const PYEchartActionDataViewChanged;
+extern PYEchartAction const PYEchartActionTimelineChanged;
+extern PYEchartAction const PYEchartActionMapRoam;
+
 
 @class PYOption, PYLoadingOption, PYNoDataLoadingOption;
 

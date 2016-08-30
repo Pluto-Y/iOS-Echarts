@@ -16,12 +16,20 @@
 PYEchartsViewImageType const PYEchartsViewImageTypeJEPG = @"jpeg";
 PYEchartsViewImageType const PYEchartsViewImageTypePNG = @"png";
 
-PYEchartAction const PYEchartActionClick = @"click";
-PYEchartAction const PYEchartActionDbClick = @"dblclick";
-PYEchartAction const PYEchartActionMapSelected = @"mapSelected";
-PYEchartAction const PYEchartActionDataZoom = @"dataZoom";
-PYEchartAction const PYEchartActionLegendSelected = @"legendSelected";
+PYEchartAction const PYEchartActionResize          = @"resize";
+PYEchartAction const PYEchartActionClick           = @"click";
+PYEchartAction const PYEchartActionDbClick         = @"dblclick";
+PYEchartAction const PYEchartActionDataChanged     = @"dataChanged";
+PYEchartAction const PYEchartActionDataZoom        = @"dataZoom";
+PYEchartAction const PYEchartActionDataRange       = @"dataRange";
+PYEchartAction const PYEchartActionLegendSelected  = @"legendSelected";
+PYEchartAction const PYEchartActionMapSelected     = @"mapSelected";
+PYEchartAction const PYEchartActionPieSelected     = @"pieSelected";
 PYEchartAction const PYEchartActionMagicTypeChange = @"magicTypeChanged";
+PYEchartAction const PYEchartActionDataViewChanged = @"dataViewChanged";
+PYEchartAction const PYEchartActionTimelineChanged = @"timelineChanged";
+PYEchartAction const PYEchartActionMapRoam         = @"mapRoam";
+
 
 static NSString *const kEchartActionObtainImg = @"obtainImg";
 
