@@ -40,7 +40,7 @@ PYInitializerImpTemplate(PYLegend);
 PYPropertyEqualImpTemplate(PYLegend, BOOL, show);
 PYPropertyEqualImpTemplate(PYLegend, NSNumber *, zlevel);
 PYPropertyEqualImpTemplate(PYLegend, NSNumber *, z);
-PYPropertyEqualImpTemplate(PYLegend, NSString *, orient);
+PYPropertyEqualImpTemplate(PYLegend, PYOrient, orient);
 PYPropertyEqualImpTemplate(PYLegend, id, x);
 PYPropertyEqualImpTemplate(PYLegend, id, y);
 PYPropertyEqualImpTemplate(PYLegend, PYColor *, backgroundColor);

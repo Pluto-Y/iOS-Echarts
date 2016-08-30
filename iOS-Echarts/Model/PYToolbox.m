@@ -43,7 +43,7 @@ PYInitializerImpTemplate(PYToolbox);
 PYPropertyEqualImpTemplate(PYToolbox, BOOL, show);
 PYPropertyEqualImpTemplate(PYToolbox, NSNumber *, zlevel);
 PYPropertyEqualImpTemplate(PYToolbox, NSNumber *, z);
-PYPropertyEqualImpTemplate(PYToolbox, NSString *, orient);
+PYPropertyEqualImpTemplate(PYToolbox, PYOrient, orient);
 PYPropertyEqualImpTemplate(PYToolbox, id, x);
 PYPropertyEqualImpTemplate(PYToolbox, id, y);
 PYPropertyEqualImpTemplate(PYToolbox, PYColor *, backgroundColor);

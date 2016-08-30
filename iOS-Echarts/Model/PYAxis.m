@@ -15,9 +15,9 @@
 #import "PYSplitArea.h"
 
 PYAxisType const PYAxisTypeCategory = @"category";
-PYAxisType const PYAxisTypeValue = @"value";
-PYAxisType const PYAxisTypeTime = @"time";
-PYAxisType const PYAxisTypeLog = @"log";
+PYAxisType const PYAxisTypeValue    = @"value";
+PYAxisType const PYAxisTypeTime     = @"time";
+PYAxisType const PYAxisTypeLog      = @"log";
 
 static NSArray<PYAxisType> *axisTypeSupported;
 @interface PYAxis()

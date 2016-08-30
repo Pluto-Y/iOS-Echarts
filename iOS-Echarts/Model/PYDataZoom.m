@@ -38,7 +38,7 @@ PYInitializerImpTemplate(PYDataZoom);
 PYPropertyEqualImpTemplate(PYDataZoom, NSNumber *, zlevel);
 PYPropertyEqualImpTemplate(PYDataZoom, NSNumber *, z);
 PYPropertyEqualImpTemplate(PYDataZoom, BOOL, show);
-PYPropertyEqualImpTemplate(PYDataZoom, NSString *, orient);
+PYPropertyEqualImpTemplate(PYDataZoom, PYOrient, orient);
 PYPropertyEqualImpTemplate(PYDataZoom, NSNumber *, x);
 PYPropertyEqualImpTemplate(PYDataZoom, NSNumber *, y);
 PYPropertyEqualImpTemplate(PYDataZoom, NSNumber *, width);

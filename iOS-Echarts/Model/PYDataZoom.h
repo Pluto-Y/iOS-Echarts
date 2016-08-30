@@ -21,7 +21,7 @@
 @property (nonatomic, strong) NSNumber *zlevel;
 @property (nonatomic, strong) NSNumber *z;
 @property (nonatomic, assign) BOOL show;
-@property (nonatomic, copy) NSString *orient;
+@property (nonatomic, copy) PYOrient orient;
 @property (nonatomic, strong) NSNumber *x;
 @property (nonatomic, strong) NSNumber *y;
 @property (nonatomic, strong) NSNumber *width;
@@ -44,7 +44,7 @@ PYInitializerTemplate(PYDataZoom, dataZoom);
 PYPropertyEqualTemplate(PYDataZoom, NSNumber *, zlevel);
 PYPropertyEqualTemplate(PYDataZoom, NSNumber *, z);
 PYPropertyEqualTemplate(PYDataZoom, BOOL, show);
-PYPropertyEqualTemplate(PYDataZoom, NSString *, orient);
+PYPropertyEqualTemplate(PYDataZoom, PYOrient, orient);
 PYPropertyEqualTemplate(PYDataZoom, NSNumber *, x);
 PYPropertyEqualTemplate(PYDataZoom, NSNumber *, y);
 PYPropertyEqualTemplate(PYDataZoom, NSNumber *, width);

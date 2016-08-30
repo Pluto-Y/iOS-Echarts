@@ -26,7 +26,7 @@ PYInitializerImpTemplate(PYDataRange);
 PYPropertyEqualImpTemplate(PYDataRange, BOOL, show);
 PYPropertyEqualImpTemplate(PYDataRange, NSNumber *, zlevel);
 PYPropertyEqualImpTemplate(PYDataRange, NSNumber *, z);
-PYPropertyEqualImpTemplate(PYDataRange, NSString *, orient);
+PYPropertyEqualImpTemplate(PYDataRange, PYOrient, orient);
 PYPropertyEqualImpTemplate(PYDataRange, id, x);
 PYPropertyEqualImpTemplate(PYDataRange, id, y);
 PYPropertyEqualImpTemplate(PYDataRange, PYColor *, backgroundColor);

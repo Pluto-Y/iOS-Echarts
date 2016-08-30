@@ -17,6 +17,8 @@
 #endif
 
 #pragma mark - The global type and constant
+static NSString *PYAuto = @"auto";
+static NSString *PYNone = @"none";
 
 typedef NSString *PYInterval;
 static PYInterval PYIntervalAuto = @"auto";
@@ -42,6 +44,18 @@ typedef NSString *PYSort;
 static PYSort PYSortNone       = @"none";
 static PYSort PYSortAscending  = @"ascending";
 static PYSort PYSortDescending = @"descending";
+
+typedef NSString *PYPosition;
+static PYPosition PYPositionLeft   = @"left";
+static PYPosition PYPositionRight  = @"right";
+static PYPosition PYPositionCenter = @"center";
+static PYPosition PYPositionTop    = @"top";
+static PYPosition PYPositionBottom = @"bottom";
+
+typedef NSString *PYOrient;
+static PYOrient PYOrientHorizontal = @"horizontal";
+static PYOrient PYOrientVertical   = @"vertical";
+
 
 
 #pragma mark - The template marco

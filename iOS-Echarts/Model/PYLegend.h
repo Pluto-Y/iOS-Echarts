@@ -20,7 +20,7 @@
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, strong) NSNumber *zlevel;
 @property (nonatomic, strong) NSNumber *z;
-@property (nonatomic, copy) NSString *orient;
+@property (nonatomic, copy) PYOrient orient;
 @property (nonatomic, strong) id x;
 @property (nonatomic, strong) id y;
 @property (nonatomic, strong) PYColor *backgroundColor;
@@ -41,7 +41,7 @@ PYInitializerTemplate(PYLegend, legend);
 PYPropertyEqualTemplate(PYLegend, BOOL, show);
 PYPropertyEqualTemplate(PYLegend, NSNumber *, zlevel);
 PYPropertyEqualTemplate(PYLegend, NSNumber *, z);
-PYPropertyEqualTemplate(PYLegend, NSString *, orient);
+PYPropertyEqualTemplate(PYLegend, PYOrient, orient);
 PYPropertyEqualTemplate(PYLegend, id, x);
 PYPropertyEqualTemplate(PYLegend, id, y);
 PYPropertyEqualTemplate(PYLegend, PYColor *, backgroundColor);

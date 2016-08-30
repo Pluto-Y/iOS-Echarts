@@ -43,7 +43,7 @@ PYInitializerImpTemplate(PYTreeSeries);
 PYPropertyEqualImpTemplate(PYTreeSeries, NSDictionary *, rootLocation);
 PYPropertyEqualImpTemplate(PYTreeSeries, NSNumber *, layerPadding);
 PYPropertyEqualImpTemplate(PYTreeSeries, NSNumber *, nodePadding);
-PYPropertyEqualImpTemplate(PYTreeSeries, NSString *, orient);
+PYPropertyEqualImpTemplate(PYTreeSeries, PYOrient, orient);
 PYPropertyEqualImpTemplate(PYTreeSeries, NSString *, direction);
 PYPropertyEqualImpTemplate(PYTreeSeries, id, roam);
 PYPropertyEqualImpTemplate(PYTreeSeries, PYSymbol, symbol);
