@@ -79,57 +79,72 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
 }
 
 - (void)showLogarithmicDemo {
-    PYOption *option = [[PYOption alloc] init];
-    option.title = [[PYTitle alloc] init];
-    option.title.text = @"对数轴实例";
-    option.title.x = @"center";
-    option.tooltip = [[PYTooltip alloc] init];
-    option.tooltip.trigger = @"item";
-    option.tooltip.formatter = @"{a} <br/>{b} : {c}";
-    option.legend = [[PYLegend alloc] init];
-    option.legend.x = @"left";
-    option.legend.data = @[@"2的指数", @"3的指数"];
-    PYGrid *grid = [[PYGrid alloc] init];
-    grid.x = @(40);
-    grid.x2 = @(50);
-    option.grid = grid;
-    PYAxis *xAxis = [[PYAxis alloc] init];
-    xAxis.type = @"category";
-    xAxis.name = @"x";
-    xAxis.splitLine = [[PYAxisSplitLine alloc] init];
-    xAxis.splitLine.show = NO;
-    xAxis.data = @[@"一",@"二",@"三",@"四",@"五",@"六",@"七",@"八",@"九"];
-    option.xAxis = [[NSMutableArray alloc] initWithObjects:xAxis, nil];
-    PYAxis *yAxis = [[PYAxis alloc] init];
-    yAxis.type = @"log";
-    yAxis.name = @"y";
-    option.yAxis = [[NSMutableArray alloc] initWithObjects:yAxis, nil];
-    option.toolbox = [[PYToolbox alloc] init];
-    option.toolbox.show = YES;
-    option.toolbox.feature = [[PYToolboxFeature alloc] init];
-    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
-    option.toolbox.feature.mark.show = YES;
-    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
-    option.toolbox.feature.dataView.show = YES;
-    option.toolbox.feature.dataView.readOnly = NO;
-    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
-    option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar", @"stack", @"tiled"];
-    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
-    option.toolbox.feature.restore.show = YES;
-    option.calculable = YES;
-    NSMutableArray *serieses = [[NSMutableArray alloc] init];
-    PYSeries *series1 = [[PYSeries alloc] init];
-    series1.name = @"3的指数";
-    series1.type = PYSeriesTypeLine;
-    series1.data = @[@(1),@(3),@(9),@(27),@(81),@(247),@(741),@(2223),@(6669)];
-    [serieses addObject:series1];
-    PYSeries *series2 = [[PYSeries alloc] init];
-    series2.name = @"2的指数";
-    series2.type = PYSeriesTypeLine;
-    series2.data = @[@(1),@(2),@(4),@(8),@(16),@(32),@(64),@(128),@(256)];
-    [serieses addObject:series2];
-    option.series = serieses;
+    
+    PYOption *option = [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        
+        PYAxis *xAxis = [PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeCategory)
+            .nameEqual(@"x")
+            .splitLineEqual([PYAxisSplitLine initPYAxisSplitLineWithBlock:^(PYAxisSplitLine *axisSpliteLine) {
+                axisSpliteLine.showEqual(NO);
+            }]);
+            axis.data = @[@"一",@"二",@"三",@"四",@"五",@"六",@"七",@"八",@"九"];
+        }];
+        
+        PYAxis *yAxis = [PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeLog).nameEqual(@"y");
+        }];
+        
+        PYSeries *series1 = [PYSeries initPYSeriesWithBlock:^(PYSeries *series) {
+            series.nameEqual(@"3的指数")
+            .typeEqual(PYSeriesTypeLine)
+            .dataEqual([[NSMutableArray alloc] initWithArray:@[@(1),@(3),@(9),@(27),@(81),@(247),@(741),@(2223),@(6669)]]);
+        }];
+        
+        PYSeries *series2 = [PYSeries initPYSeriesWithBlock:^(PYSeries *series) {
+            series.nameEqual(@"2的指数")
+            .typeEqual(PYSeriesTypeLine)
+            .dataEqual([[NSMutableArray alloc] initWithArray:@[@(1),@(2),@(4),@(8),@(16),@(32),@(64),@(128),@(256)]]);
+        }];
+        
+        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"对数轴实例")
+            .xEqual(PYPositionCenter);
+        }])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerItem)
+            .formatterEqual(@"{a} <br/>{b} : {c}");
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.xEqual(PYPositionLeft)
+            .dataEqual(@[@"2的指数", @"3的指数"]);
+        }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.xEqual(@40).x2Equal(@50);
+        }])
+        .xAxisEqual([[NSMutableArray alloc] initWithArray:@[xAxis]])
+        .yAxisEqual([[NSMutableArray alloc] initWithArray:@[yAxis]])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .magicTypeEqual([PYToolboxFeatureMagicType initPYToolboxFeatureMagicTypeWithBlock:^(PYToolboxFeatureMagicType *magicType) {
+                    magicType.showEqual(YES).typeEqual(@[PYSeriesTypeLine, PYSeriesTypeBar, @"stack", @"tiled"]);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .calculableEqual(YES)
+        .seriesEqual([[NSMutableArray alloc] initWithArray:@[series1, series2]]);
+    }];
+    
     [_kEchartView setOption:option];
     
 }
