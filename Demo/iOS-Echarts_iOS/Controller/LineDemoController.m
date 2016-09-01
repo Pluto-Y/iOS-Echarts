@@ -33,7 +33,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
 
 - (void)initAll {
     self.title = @"折线图";
-    [self showStandardLineDemo];
+    [_kEchartView setOption:[PYLineDemoOptions standardLineOption]];
     [_kEchartView loadEcharts];
 }
 
@@ -42,7 +42,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     PYOption *option = nil;
     switch (btn.tag) {
         case LineDemoTypeBtnTagStandardLine:
-            [self showStandardLineDemo];
+            option = [PYLineDemoOptions standardLineOption];
             break;
         case LineDemoTypeBtnTagStackedLine:
             [self showStackedLineDemo];
