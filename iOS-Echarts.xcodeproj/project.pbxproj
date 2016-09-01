@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C34720D1BF470E600C16B73 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		6C4216961B98E310002D4B7A /* iOS_EchartsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4216951B98E310002D4B7A /* iOS_EchartsTests.m */; };
 		6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */; };
 		6F09E9D91D6CD106006A76CD /* PYChordSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F09E9D81D6CD106006A76CD /* PYChordSeries.m */; };
@@ -64,9 +63,15 @@
 		6F4D59101D4FE34F00246943 /* PYEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58D71D4FE34F00246943 /* PYEchartsView.m */; };
 		6F4D59111D4FE34F00246943 /* PYZoomEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58D91D4FE34F00246943 /* PYZoomEchartsView.m */; };
 		6F7352BD1D50A779006CD119 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 6F7352BC1D50A779006CD119 /* js */; };
+		6F743A4F1D78AFA500C94967 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F743A481D78AFA500C94967 /* Info.plist */; };
+		6F743A6A1D78B00400C94967 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743A491D78AFA500C94967 /* main.m */; };
+		6F743A6B1D78B00600C94967 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743A441D78AFA500C94967 /* AppDelegate.m */; };
+		6F743A6C1D78B00900C94967 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743A4B1D78AFA500C94967 /* ViewController.m */; };
+		6F743A6D1D78B01900C94967 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F743A451D78AFA500C94967 /* Assets.xcassets */; };
+		6F743A6E1D78B01B00C94967 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F743A461D78AFA500C94967 /* Main.storyboard */; };
+		6F743A6F1D78B1CF00C94967 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEB71D7841D6007CEAD2 /* Main.storyboard */; };
 		6F9DCF061D7841D6007CEAD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEB41D7841D6007CEAD2 /* AppDelegate.m */; };
 		6F9DCF071D7841D6007CEAD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEB51D7841D6007CEAD2 /* LaunchScreen.xib */; };
-		6F9DCF081D7841D6007CEAD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEB71D7841D6007CEAD2 /* Main.storyboard */; };
 		6F9DCF091D7841D6007CEAD2 /* EchartsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEBB1D7841D6007CEAD2 /* EchartsViewCell.m */; };
 		6F9DCF0A1D7841D6007CEAD2 /* EchartsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEBC1D7841D6007CEAD2 /* EchartsViewCell.xib */; };
 		6F9DCF0B1D7841D6007CEAD2 /* BarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEBF1D7841D6007CEAD2 /* BarDemoController.m */; };
@@ -130,7 +135,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6C4216761B98E310002D4B7A /* iOS-Echarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Echarts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6C4216761B98E310002D4B7A /* iOS-Echarts_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Echarts_iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C42168F1B98E310002D4B7A /* iOS-EchartsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-EchartsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C4216941B98E310002D4B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C4216951B98E310002D4B7A /* iOS_EchartsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_EchartsTests.m; sourceTree = "<group>"; };
@@ -242,6 +247,15 @@
 		6F4D58D81D4FE34F00246943 /* PYZoomEchartsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYZoomEchartsView.h; sourceTree = "<group>"; };
 		6F4D58D91D4FE34F00246943 /* PYZoomEchartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYZoomEchartsView.m; sourceTree = "<group>"; };
 		6F7352BC1D50A779006CD119 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
+		6F743A2E1D78AF9300C94967 /* iOS-Echarts_OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Echarts_OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6F743A431D78AFA500C94967 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6F743A441D78AFA500C94967 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6F743A451D78AFA500C94967 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6F743A471D78AFA500C94967 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6F743A481D78AFA500C94967 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F743A491D78AFA500C94967 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6F743A4A1D78AFA500C94967 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6F743A4B1D78AFA500C94967 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6F9DCEB31D7841D6007CEAD2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6F9DCEB41D7841D6007CEAD2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6F9DCEB61D7841D6007CEAD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -344,6 +358,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6F743A2B1D78AF9300C94967 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -362,8 +383,9 @@
 		6C4216771B98E310002D4B7A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				6C4216761B98E310002D4B7A /* iOS-Echarts.app */,
+				6C4216761B98E310002D4B7A /* iOS-Echarts_iOS.app */,
 				6C42168F1B98E310002D4B7A /* iOS-EchartsTests.xctest */,
+				6F743A2E1D78AF9300C94967 /* iOS-Echarts_OSX.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -543,9 +565,25 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		6F743A421D78AFA500C94967 /* iOS-Echarts_OSX */ = {
+			isa = PBXGroup;
+			children = (
+				6F743A431D78AFA500C94967 /* AppDelegate.h */,
+				6F743A441D78AFA500C94967 /* AppDelegate.m */,
+				6F743A451D78AFA500C94967 /* Assets.xcassets */,
+				6F743A461D78AFA500C94967 /* Main.storyboard */,
+				6F743A481D78AFA500C94967 /* Info.plist */,
+				6F743A491D78AFA500C94967 /* main.m */,
+				6F743A4A1D78AFA500C94967 /* ViewController.h */,
+				6F743A4B1D78AFA500C94967 /* ViewController.m */,
+			);
+			path = "iOS-Echarts_OSX";
+			sourceTree = "<group>";
+		};
 		6F9DCEB11D7841D6007CEAD2 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
+				6F743A421D78AFA500C94967 /* iOS-Echarts_OSX */,
 				6F9DCEB21D7841D6007CEAD2 /* iOS-Echarts_iOS */,
 			);
 			path = Demo;
@@ -689,9 +727,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		6C4216751B98E310002D4B7A /* iOS-Echarts */ = {
+		6C4216751B98E310002D4B7A /* iOS-Echarts_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6C4216991B98E310002D4B7A /* Build configuration list for PBXNativeTarget "iOS-Echarts" */;
+			buildConfigurationList = 6C4216991B98E310002D4B7A /* Build configuration list for PBXNativeTarget "iOS-Echarts_iOS" */;
 			buildPhases = (
 				6C4216721B98E310002D4B7A /* Sources */,
 				6C4216731B98E310002D4B7A /* Frameworks */,
@@ -701,9 +739,9 @@
 			);
 			dependencies = (
 			);
-			name = "iOS-Echarts";
+			name = "iOS-Echarts_iOS";
 			productName = "iOS-Echarts";
-			productReference = 6C4216761B98E310002D4B7A /* iOS-Echarts.app */;
+			productReference = 6C4216761B98E310002D4B7A /* iOS-Echarts_iOS.app */;
 			productType = "com.apple.product-type.application";
 		};
 		6C42168E1B98E310002D4B7A /* iOS-EchartsTests */ = {
@@ -724,6 +762,23 @@
 			productReference = 6C42168F1B98E310002D4B7A /* iOS-EchartsTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		6F743A2D1D78AF9300C94967 /* iOS-Echarts_OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6F743A411D78AF9300C94967 /* Build configuration list for PBXNativeTarget "iOS-Echarts_OSX" */;
+			buildPhases = (
+				6F743A2A1D78AF9300C94967 /* Sources */,
+				6F743A2B1D78AF9300C94967 /* Frameworks */,
+				6F743A2C1D78AF9300C94967 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "iOS-Echarts_OSX";
+			productName = "iOS-Echarts_OSX";
+			productReference = 6F743A2E1D78AF9300C94967 /* iOS-Echarts_OSX.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -741,6 +796,9 @@
 						CreatedOnToolsVersion = 6.4;
 						TestTargetID = 6C4216751B98E310002D4B7A;
 					};
+					6F743A2D1D78AF9300C94967 = {
+						CreatedOnToolsVersion = 7.3;
+					};
 				};
 			};
 			buildConfigurationList = 6C4216711B98E310002D4B7A /* Build configuration list for PBXProject "iOS-Echarts" */;
@@ -756,8 +814,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				6C4216751B98E310002D4B7A /* iOS-Echarts */,
+				6C4216751B98E310002D4B7A /* iOS-Echarts_iOS */,
 				6C42168E1B98E310002D4B7A /* iOS-EchartsTests */,
+				6F743A2D1D78AF9300C94967 /* iOS-Echarts_OSX */,
 			);
 		};
 /* End PBXProject section */
@@ -767,6 +826,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F743A6F1D78B1CF00C94967 /* Main.storyboard in Resources */,
 				6F9DCF181D7841D6007CEAD2 /* GaugesDemoController.xib in Resources */,
 				6F9DCF1A1D7841D6007CEAD2 /* LineDemoController.xib in Resources */,
 				6F9DCF271D7841D6007CEAD2 /* ScatterDemoController.xib in Resources */,
@@ -775,6 +835,7 @@
 				6F9DCF2B1D7841D6007CEAD2 /* TreemapDemoController.xib in Resources */,
 				6F9DCF291D7841D6007CEAD2 /* TreeDemoController.xib in Resources */,
 				6F9DCF101D7841D6007CEAD2 /* ChordDemoController.xib in Resources */,
+				6F743A4F1D78AFA500C94967 /* Info.plist in Resources */,
 				6F9DCF0E1D7841D6007CEAD2 /* CandlestickDemoController.xib in Resources */,
 				6F9DCF0A1D7841D6007CEAD2 /* EchartsViewCell.xib in Resources */,
 				6F9DCF141D7841D6007CEAD2 /* ForceDemoController.xib in Resources */,
@@ -788,11 +849,9 @@
 				6F9DCF121D7841D6007CEAD2 /* EventRiverController.xib in Resources */,
 				6F9DCF1F1D7841D6007CEAD2 /* MultiEchartsController.xib in Resources */,
 				6F9DCF321D7841D6007CEAD2 /* Info.plist in Resources */,
-				6F9DCF081D7841D6007CEAD2 /* Main.storyboard in Resources */,
 				6F9DCF1D1D7841D6007CEAD2 /* MapDemoController.xib in Resources */,
 				6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */,
 				6F9DCF301D7841D6007CEAD2 /* WordCloudDemoController.xib in Resources */,
-				6C34720D1BF470E600C16B73 /* (null) in Resources */,
 				6F9DCF2D1D7841D6007CEAD2 /* VennDemoController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -801,6 +860,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6F743A2C1D78AF9300C94967 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F743A6E1D78B01B00C94967 /* Main.storyboard in Resources */,
+				6F743A6D1D78B01900C94967 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -904,17 +972,35 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		6F743A2A1D78AF9300C94967 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6F743A6C1D78B00900C94967 /* ViewController.m in Sources */,
+				6F743A6B1D78B00600C94967 /* AppDelegate.m in Sources */,
+				6F743A6A1D78B00400C94967 /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		6C4216911B98E310002D4B7A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6C4216751B98E310002D4B7A /* iOS-Echarts */;
+			target = 6C4216751B98E310002D4B7A /* iOS-Echarts_iOS */;
 			targetProxy = 6C4216901B98E310002D4B7A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6F743A461D78AFA500C94967 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6F743A471D78AFA500C94967 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
 		6F9DCEB51D7841D6007CEAD2 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1079,6 +1165,39 @@
 			};
 			name = Release;
 		};
+		6F743A3F1D78AF9300C94967 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/iOS-Echarts_OSX/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pluto-y.iOS-Echarts-OSX";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		6F743A401D78AF9300C94967 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_NONNULL = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/iOS-Echarts_OSX/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.pluto-y.iOS-Echarts-OSX";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1091,7 +1210,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6C4216991B98E310002D4B7A /* Build configuration list for PBXNativeTarget "iOS-Echarts" */ = {
+		6C4216991B98E310002D4B7A /* Build configuration list for PBXNativeTarget "iOS-Echarts_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6C42169A1B98E310002D4B7A /* Debug */,
@@ -1108,6 +1227,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		6F743A411D78AF9300C94967 /* Build configuration list for PBXNativeTarget "iOS-Echarts_OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6F743A3F1D78AF9300C94967 /* Debug */,
+				6F743A401D78AF9300C94967 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};

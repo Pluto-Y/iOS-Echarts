@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "6C4216751B98E310002D4B7A"
-               BuildableName = "iOS-Echarts.app"
-               BlueprintName = "iOS-Echarts"
+               BuildableName = "iOS-Echarts_iOS.app"
+               BlueprintName = "iOS-Echarts_iOS"
                ReferencedContainer = "container:iOS-Echarts.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -43,8 +43,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6C4216751B98E310002D4B7A"
-            BuildableName = "iOS-Echarts.app"
-            BlueprintName = "iOS-Echarts"
+            BuildableName = "iOS-Echarts_iOS.app"
+            BlueprintName = "iOS-Echarts_iOS"
             ReferencedContainer = "container:iOS-Echarts.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -66,8 +66,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6C4216751B98E310002D4B7A"
-            BuildableName = "iOS-Echarts.app"
-            BlueprintName = "iOS-Echarts"
+            BuildableName = "iOS-Echarts_iOS.app"
+            BlueprintName = "iOS-Echarts_iOS"
             ReferencedContainer = "container:iOS-Echarts.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -90,8 +90,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "6C4216751B98E310002D4B7A"
-            BuildableName = "iOS-Echarts.app"
-            BlueprintName = "iOS-Echarts"
+            BuildableName = "iOS-Echarts_iOS.app"
+            BlueprintName = "iOS-Echarts_iOS"
             ReferencedContainer = "container:iOS-Echarts.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
