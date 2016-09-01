@@ -114,6 +114,7 @@
 		6F9DCF351D7841D6007CEAD2 /* NSUserDefaults+RMSaveCustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCF021D7841D6007CEAD2 /* NSUserDefaults+RMSaveCustomObject.m */; };
 		6F9DCF361D7841D6007CEAD2 /* RMMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCF041D7841D6007CEAD2 /* RMMapper.m */; };
 		6F9DCF371D7841D6007CEAD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCF051D7841D6007CEAD2 /* main.m */; };
+		6F9DCF3B1D7842FF007CEAD2 /* PYLineDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCF3A1D7842FF007CEAD2 /* PYLineDemoOptions.m */; };
 		6FEFF6EB1D56448300E8B77E /* NSObject+PYObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEFF6EA1D56448300E8B77E /* NSObject+PYObject.m */; };
 		6FEFF6F01D564D5C00E8B77E /* PYChordStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEFF6EF1D564D5C00E8B77E /* PYChordStyle.m */; };
 /* End PBXBuildFile section */
@@ -318,6 +319,9 @@
 		6F9DCF031D7841D6007CEAD2 /* RMMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMMapper.h; sourceTree = "<group>"; };
 		6F9DCF041D7841D6007CEAD2 /* RMMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMMapper.m; sourceTree = "<group>"; };
 		6F9DCF051D7841D6007CEAD2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6F9DCF391D7842FF007CEAD2 /* PYLineDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYLineDemoOptions.h; sourceTree = "<group>"; };
+		6F9DCF3A1D7842FF007CEAD2 /* PYLineDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYLineDemoOptions.m; sourceTree = "<group>"; };
+		6F9DCF3C1D784448007CEAD2 /* PYDemoOptions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYDemoOptions.h; sourceTree = "<group>"; };
 		6FEFF6E91D56448300E8B77E /* NSObject+PYObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PYObject.h"; sourceTree = "<group>"; };
 		6FEFF6EA1D56448300E8B77E /* NSObject+PYObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PYObject.m"; sourceTree = "<group>"; };
 		6FEFF6ED1D5644E500E8B77E /* PYUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYUtilities.h; sourceTree = "<group>"; };
@@ -346,6 +350,7 @@
 		6C42166D1B98E310002D4B7A = {
 			isa = PBXGroup;
 			children = (
+				6F9DCF381D7842FF007CEAD2 /* DemoOptions */,
 				6F9DCEB11D7841D6007CEAD2 /* Demo */,
 				6F4D58641D4FE34F00246943 /* iOS-Echarts */,
 				6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */,
@@ -662,6 +667,16 @@
 			path = RMMapper;
 			sourceTree = "<group>";
 		};
+		6F9DCF381D7842FF007CEAD2 /* DemoOptions */ = {
+			isa = PBXGroup;
+			children = (
+				6F9DCF391D7842FF007CEAD2 /* PYLineDemoOptions.h */,
+				6F9DCF3A1D7842FF007CEAD2 /* PYLineDemoOptions.m */,
+				6F9DCF3C1D784448007CEAD2 /* PYDemoOptions.h */,
+			);
+			path = DemoOptions;
+			sourceTree = "<group>";
+		};
 		6FEFF6E81D56446F00E8B77E /* Categories */ = {
 			isa = PBXGroup;
 			children = (
@@ -808,6 +823,7 @@
 				6F9DCF241D7841D6007CEAD2 /* RadarDemoController.m in Sources */,
 				6F9DCF2A1D7841D6007CEAD2 /* TreemapDemoController.m in Sources */,
 				6F4D58E71D4FE34F00246943 /* PYItemStyleProp.m in Sources */,
+				6F9DCF3B1D7842FF007CEAD2 /* PYLineDemoOptions.m in Sources */,
 				6F9DCF151D7841D6007CEAD2 /* FunnelDemoController.m in Sources */,
 				6F9DCF2F1D7841D6007CEAD2 /* WordCloudDemoController.m in Sources */,
 				6F4D58DE1D4FE34F00246943 /* PYAxisLine.m in Sources */,
