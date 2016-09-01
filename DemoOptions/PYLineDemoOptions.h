@@ -13,7 +13,7 @@
 
 + (PYOption *)standardLineOption;
 + (PYOption *)stackedLineOption;
-+ (PYOption *)basicLinOption;
++ (PYOption *)basicLineOption;
 + (PYOption *)basicAreaOption;
 + (PYOption *)stackedAreaOption;
 + (PYOption *)irregularLineOption;

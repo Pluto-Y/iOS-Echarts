@@ -48,7 +48,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
             option = [PYLineDemoOptions stackedLineOption];
             break;
         case LineDemoTypeBtnTagBasicLine:
-            [self showBasicLindeDemo];
+            option = [PYLineDemoOptions basicLineOption];
             break;
         case LindDemoTypeBtnTagBasicArea:
             [self showBasicAreaDemo];
@@ -461,124 +461,6 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     series3.data = @[@(1320),@(1132),@(601),@(234),@(120),@(90),@(20)];
     [serieses addObject:series3];
     [option setSeries:serieses];
-    [_kEchartView setOption:option];
-}
-
-- (void)showBasicLindeDemo {
-    PYOption *option = [[PYOption alloc] init];
-    option.legend = [[PYLegend alloc] init];
-    option.legend.data = @[@"高度(km)与气温(°C)变化关系"];
-    PYGrid *grid = [[PYGrid alloc] init];
-    grid.x = @(40);
-    grid.x2 = @(50);
-    option.grid = grid;
-    option.toolbox = [[PYToolbox alloc] init];
-    option.toolbox.show = YES;
-    option.toolbox.feature = [[PYToolboxFeature alloc] init];
-    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
-    option.toolbox.feature.mark.show = YES;
-    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
-    option.toolbox.feature.dataView.show = YES;
-    option.toolbox.feature.dataView.readOnly = NO;
-    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
-    option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar"];
-    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
-    option.toolbox.feature.restore.show = YES;
-    option.calculable = YES;
-    option.tooltip = [[PYTooltip alloc] init];
-    option.tooltip.trigger = @"axis";
-    option.tooltip.formatter = @"Temperature : <br/>{b}km : {c}°C";
-    PYAxis *xAxis = [[PYAxis alloc] init];
-    xAxis.type = @"value";
-    xAxis.axisLabel = [[PYAxisLabel alloc] init];
-    xAxis.axisLabel.formatter = @"{value} °C";
-    option.xAxis = [[NSMutableArray alloc] initWithObjects:xAxis, nil];
-    PYAxis *yAxis = [[PYAxis alloc] init];
-    yAxis.type = @"category";
-    yAxis.axisLine = [[PYAxisLine alloc] init];
-    yAxis.axisLine.onZero = NO;
-    yAxis.boundaryGap = @(NO);
-    yAxis.data = @[@"0", @"10", @"20", @"30", @"40", @"50", @"60", @"70", @"80"];
-    option.yAxis = [[NSMutableArray alloc] initWithObjects:yAxis, nil];
-    NSMutableArray *serieses = [[NSMutableArray alloc] init];
-    PYCartesianSeries *series1 = [[PYCartesianSeries alloc] init];
-    series1.name = @"高度(km)与气温(°C)变化关系";
-    series1.type = PYSeriesTypeLine;
-    series1.smooth = YES;
-    series1.itemStyle = [[PYItemStyle alloc] init];
-    series1.itemStyle.normal = [[PYItemStyleProp alloc] init];
-    series1.itemStyle.normal.lineStyle = [[PYLineStyle alloc] init];
-    series1.itemStyle.normal.lineStyle.shadowColor = PYRGBA(0, 0, 0, .4);
-    series1.data = @[@(15),@(-50),@(-56.5f),@(-46.5),@(-22.1),@(-2.5),@(-27.7),@(-55.7), @(-76.5)];
-    [serieses addObject:series1];
-    [option setSeries:serieses];
-    [_kEchartView setOption:option];
-}
-
-
-/**
- *  标准折线图
- */
-- (void)showStandardLineDemo {
-    PYOption *option = [[PYOption alloc] init];
-    PYTitle *title = [[PYTitle alloc] init];
-    title.text = @"未来一周气温变化";
-    title.subtext = @"纯属虚构";
-    option.title = title;
-    PYTooltip *tooltip = [[PYTooltip alloc] init];
-    tooltip.trigger = @"axis";
-    option.tooltip = tooltip;
-    PYGrid *grid = [[PYGrid alloc] init];
-    grid.x = @(40);
-    grid.x2 = @(50);
-    option.grid = grid;
-    PYLegend *legend = [[PYLegend alloc] init];
-    legend.data = @[@"最高温度",@"最低温度"];
-    option.legend = legend;
-    PYToolbox *toolbox = [[PYToolbox alloc] init];
-    toolbox.show = YES;
-    toolbox.x = @"right";
-    toolbox.y = @"top";
-    toolbox.z = @(100);
-    toolbox.feature.mark.show = YES;
-    toolbox.feature.dataView.show = YES;
-    toolbox.feature.dataView.readOnly = NO;
-    toolbox.feature.magicType.show = YES;
-    toolbox.feature.magicType.type = @[PYSeriesTypeLine, PYSeriesTypeBar];
-    toolbox.feature.restore.show = YES;
-    option.toolbox = toolbox;
-    option.calculable = YES;
-    PYAxis *xAxis = [[PYAxis  alloc] init];
-    xAxis.type = @"category";
-    xAxis.boundaryGap = @(NO);
-    xAxis.data = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
-    option.xAxis = [[NSMutableArray alloc] initWithObjects:xAxis, nil];
-    PYAxis *yAxis = [[PYAxis alloc] init];
-    yAxis.type = @"value";
-    yAxis.axisLabel.formatter = @"{value} ℃";
-    option.yAxis = [[NSMutableArray alloc] initWithObjects:yAxis, nil];
-    PYSeries *series1 = [[PYSeries alloc] init];
-    series1.name = @"最高温度";
-    series1.type = PYSeriesTypeLine;
-    series1.data = @[@(11),@(11),@(15),@(13),@(12),@(13),@(10)];
-    PYMarkPoint *markPoint = [[PYMarkPoint alloc] init];
-    markPoint.data = @[@{@"type" : @"max", @"name": @"最大值"},@{@"type" : @"min", @"name": @"最小值"}];
-    series1.markPoint = markPoint;
-    PYMarkLine *markLine = [[PYMarkLine alloc] init];
-    markLine.data = @[@{@"type" : @"average", @"name": @"平均值"}];
-    series1.markLine = markLine;
-    PYSeries *series2 = [[PYSeries alloc] init];
-    series2.name = @"最低温度";
-    series2.type = PYSeriesTypeLine;
-    series2.data = @[@(1),@(-2),@(2),@(5),@(3),@(2),@(0)];
-    PYMarkPoint *markPoint2 = [[PYMarkPoint alloc] init];
-    markPoint2.data = @[@{@"value" : @(2), @"name": @"周最低", @"xAxis":@(1), @"yAxis" : @(-1.5)}];
-    series2.markPoint = markPoint2;
-    PYMarkLine *markLine2 = [[PYMarkLine alloc] init];
-    markLine2.data = @[@{@"type" : @"average", @"name": @"平均值"}];
-    series2.markLine = markLine2;
-    option.series = [[NSMutableArray alloc] initWithObjects:series1, series2, nil];
     [_kEchartView setOption:option];
 }
 
