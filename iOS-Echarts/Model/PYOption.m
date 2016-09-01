@@ -52,4 +52,9 @@ PYPropertyEqualImpTemplate(PYOption, NSMutableArray *, yAxis);
 PYPropertyEqualImpTemplate(PYOption, NSMutableArray *, series);
 PYPropertyEqualImpTemplate(PYOption, PYOption *, options);
 
+PYAddMethodImpTemplate(PYOption, PYAxis, XAxis, xAxis);
+PYAddMethodImpTemplate(PYOption, PYAxis, YAxis, yAxis);
+PYAddMethodImpTemplate(PYOption, PYSeries, Series, series);
+PYAddMethodImpTemplate(PYOption, PYPolar, Polar, polar);
+
 @end
