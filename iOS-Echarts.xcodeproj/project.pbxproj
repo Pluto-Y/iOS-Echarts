@@ -7,38 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C0658CE1BB85B29003CAAE5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658CC1BB85B29003CAAE5 /* main.m */; };
-		6C0658D31BB85B34003CAAE5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658D01BB85B34003CAAE5 /* AppDelegate.m */; };
-		6C0658DA1BB85B46003CAAE5 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658D61BB85B46003CAAE5 /* LaunchScreen.xib */; };
-		6C0658DB1BB85B46003CAAE5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658D81BB85B46003CAAE5 /* Main.storyboard */; };
-		6C0658E51BB85B4F003CAAE5 /* BarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658DE1BB85B4F003CAAE5 /* BarDemoController.m */; };
-		6C0658E61BB85B4F003CAAE5 /* BarDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658DF1BB85B4F003CAAE5 /* BarDemoController.xib */; };
-		6C0658E71BB85B4F003CAAE5 /* LineDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658E11BB85B4F003CAAE5 /* LineDemoController.m */; };
-		6C0658E81BB85B4F003CAAE5 /* LineDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C0658E21BB85B4F003CAAE5 /* LineDemoController.xib */; };
-		6C0658E91BB85B4F003CAAE5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C0658E41BB85B4F003CAAE5 /* ViewController.m */; };
-		6C08828E1C303F4400EA0D34 /* MapDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C08828C1C303F4400EA0D34 /* MapDemoController.m */; };
-		6C08828F1C303F4400EA0D34 /* MapDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C08828D1C303F4400EA0D34 /* MapDemoController.xib */; };
-		6C2805A21C27BBF80076EAFB /* RadarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C2805A01C27BBF80076EAFB /* RadarDemoController.m */; };
-		6C2805A31C27BBF80076EAFB /* RadarDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C2805A11C27BBF80076EAFB /* RadarDemoController.xib */; };
 		6C34720D1BF470E600C16B73 /* (null) in Resources */ = {isa = PBXBuildFile; };
 		6C4216961B98E310002D4B7A /* iOS_EchartsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4216951B98E310002D4B7A /* iOS_EchartsTests.m */; };
-		6C6011AB1CC144710048F6F6 /* OtherDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C6011A91CC144710048F6F6 /* OtherDemoController.m */; };
-		6C6011AC1CC144710048F6F6 /* OtherDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6C6011AA1CC144710048F6F6 /* OtherDemoController.xib */; };
-		6CB02A7E1BBEAC66002E1126 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB02A7D1BBEAC66002E1126 /* MainController.m */; };
-		6CB02A821BBF7739002E1126 /* PieDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CB02A801BBF7739002E1126 /* PieDemoController.m */; };
-		6CB02A831BBF7739002E1126 /* PieDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CB02A811BBF7739002E1126 /* PieDemoController.xib */; };
-		6CC8465D1BC15E4D00947312 /* NSObject+RMArchivable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC846561BC15E4D00947312 /* NSObject+RMArchivable.m */; };
-		6CC8465E1BC15E4D00947312 /* NSObject+RMCopyable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC846581BC15E4D00947312 /* NSObject+RMCopyable.m */; };
-		6CC8465F1BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8465A1BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.m */; };
-		6CC846601BC15E4D00947312 /* RMMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CC8465C1BC15E4D00947312 /* RMMapper.m */; };
 		6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */; };
-		6CF1AA2D1C02A32600F1B773 /* CandlestickDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1AA2B1C02A32600F1B773 /* CandlestickDemoController.m */; };
-		6CF1AA2E1C02A32600F1B773 /* CandlestickDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF1AA2C1C02A32600F1B773 /* CandlestickDemoController.xib */; };
-		6CF1AA321C02AF5600F1B773 /* ScatterDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6CF1AA301C02AF5600F1B773 /* ScatterDemoController.m */; };
-		6CF1AA331C02AF5600F1B773 /* ScatterDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6CF1AA311C02AF5600F1B773 /* ScatterDemoController.xib */; };
 		6F09E9D91D6CD106006A76CD /* PYChordSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F09E9D81D6CD106006A76CD /* PYChordSeries.m */; };
-		6F09E9DD1D6CD8F6006A76CD /* ChordDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F09E9DB1D6CD8F6006A76CD /* ChordDemoController.m */; };
-		6F09E9DE1D6CD8F6006A76CD /* ChordDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F09E9DC1D6CD8F6006A76CD /* ChordDemoController.xib */; };
 		6F4D58DB1D4FE34F00246943 /* PYAreaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D586A1D4FE34F00246943 /* PYAreaStyle.m */; };
 		6F4D58DC1D4FE34F00246943 /* PYAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D586C1D4FE34F00246943 /* PYAxis.m */; };
 		6F4D58DD1D4FE34F00246943 /* PYAxisLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D586E1D4FE34F00246943 /* PYAxisLabel.m */; };
@@ -92,28 +64,58 @@
 		6F4D59101D4FE34F00246943 /* PYEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58D71D4FE34F00246943 /* PYEchartsView.m */; };
 		6F4D59111D4FE34F00246943 /* PYZoomEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58D91D4FE34F00246943 /* PYZoomEchartsView.m */; };
 		6F7352BD1D50A779006CD119 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 6F7352BC1D50A779006CD119 /* js */; };
-		6F8A3EFF1D49AFA5008268BD /* MultiEchartsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A3EFD1D49AFA5008268BD /* MultiEchartsController.m */; };
-		6F8A3F001D49AFA5008268BD /* MultiEchartsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F8A3EFE1D49AFA5008268BD /* MultiEchartsController.xib */; };
-		6F8A3F051D49B598008268BD /* EchartsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F8A3F031D49B598008268BD /* EchartsViewCell.m */; };
-		6F8A3F061D49B598008268BD /* EchartsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F8A3F041D49B598008268BD /* EchartsViewCell.xib */; };
-		6F9391AD1D42414800CD54FC /* ForceDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9391AB1D42414800CD54FC /* ForceDemoController.m */; };
-		6F9391AE1D42414800CD54FC /* ForceDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9391AC1D42414800CD54FC /* ForceDemoController.xib */; };
-		6FA439A81D64E4F500FE5D9F /* GaugesDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA439A61D64E4F500FE5D9F /* GaugesDemoController.m */; };
-		6FA439A91D64E4F500FE5D9F /* GaugesDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FA439A71D64E4F500FE5D9F /* GaugesDemoController.xib */; };
-		6FA439E91D6A084400FE5D9F /* FunnelDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FA439E71D6A084400FE5D9F /* FunnelDemoController.m */; };
-		6FA439EA1D6A084400FE5D9F /* FunnelDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FA439E81D6A084400FE5D9F /* FunnelDemoController.xib */; };
-		6FBC67481D7407290016CB30 /* EventRiverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FBC67461D7407290016CB30 /* EventRiverController.m */; };
-		6FBC67491D7407290016CB30 /* EventRiverController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FBC67471D7407290016CB30 /* EventRiverController.xib */; };
-		6FC0911B1D5A464200D52879 /* WordCloudDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC091191D5A464200D52879 /* WordCloudDemoController.m */; };
-		6FC0911C1D5A464200D52879 /* WordCloudDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC0911A1D5A464200D52879 /* WordCloudDemoController.xib */; };
-		6FC091321D60C39C00D52879 /* VennDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FC091301D60C39C00D52879 /* VennDemoController.m */; };
-		6FC091331D60C39C00D52879 /* VennDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FC091311D60C39C00D52879 /* VennDemoController.xib */; };
-		6FDCE6F81D61FED900F580FD /* TreemapDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FDCE6F61D61FED900F580FD /* TreemapDemoController.m */; };
-		6FDCE6F91D61FED900F580FD /* TreemapDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FDCE6F71D61FED900F580FD /* TreemapDemoController.xib */; };
+		6F9DCF061D7841D6007CEAD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEB41D7841D6007CEAD2 /* AppDelegate.m */; };
+		6F9DCF071D7841D6007CEAD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEB51D7841D6007CEAD2 /* LaunchScreen.xib */; };
+		6F9DCF081D7841D6007CEAD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEB71D7841D6007CEAD2 /* Main.storyboard */; };
+		6F9DCF091D7841D6007CEAD2 /* EchartsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEBB1D7841D6007CEAD2 /* EchartsViewCell.m */; };
+		6F9DCF0A1D7841D6007CEAD2 /* EchartsViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEBC1D7841D6007CEAD2 /* EchartsViewCell.xib */; };
+		6F9DCF0B1D7841D6007CEAD2 /* BarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEBF1D7841D6007CEAD2 /* BarDemoController.m */; };
+		6F9DCF0C1D7841D6007CEAD2 /* BarDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEC01D7841D6007CEAD2 /* BarDemoController.xib */; };
+		6F9DCF0D1D7841D6007CEAD2 /* CandlestickDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEC21D7841D6007CEAD2 /* CandlestickDemoController.m */; };
+		6F9DCF0E1D7841D6007CEAD2 /* CandlestickDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEC31D7841D6007CEAD2 /* CandlestickDemoController.xib */; };
+		6F9DCF0F1D7841D6007CEAD2 /* ChordDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEC51D7841D6007CEAD2 /* ChordDemoController.m */; };
+		6F9DCF101D7841D6007CEAD2 /* ChordDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEC61D7841D6007CEAD2 /* ChordDemoController.xib */; };
+		6F9DCF111D7841D6007CEAD2 /* EventRiverController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEC81D7841D6007CEAD2 /* EventRiverController.m */; };
+		6F9DCF121D7841D6007CEAD2 /* EventRiverController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEC91D7841D6007CEAD2 /* EventRiverController.xib */; };
+		6F9DCF131D7841D6007CEAD2 /* ForceDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCECB1D7841D6007CEAD2 /* ForceDemoController.m */; };
+		6F9DCF141D7841D6007CEAD2 /* ForceDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCECC1D7841D6007CEAD2 /* ForceDemoController.xib */; };
+		6F9DCF151D7841D6007CEAD2 /* FunnelDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCECE1D7841D6007CEAD2 /* FunnelDemoController.m */; };
+		6F9DCF161D7841D6007CEAD2 /* FunnelDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCECF1D7841D6007CEAD2 /* FunnelDemoController.xib */; };
+		6F9DCF171D7841D6007CEAD2 /* GaugesDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCED11D7841D6007CEAD2 /* GaugesDemoController.m */; };
+		6F9DCF181D7841D6007CEAD2 /* GaugesDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCED21D7841D6007CEAD2 /* GaugesDemoController.xib */; };
+		6F9DCF191D7841D6007CEAD2 /* LineDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCED41D7841D6007CEAD2 /* LineDemoController.m */; };
+		6F9DCF1A1D7841D6007CEAD2 /* LineDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCED51D7841D6007CEAD2 /* LineDemoController.xib */; };
+		6F9DCF1B1D7841D6007CEAD2 /* MainController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCED71D7841D6007CEAD2 /* MainController.m */; };
+		6F9DCF1C1D7841D6007CEAD2 /* MapDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCED91D7841D6007CEAD2 /* MapDemoController.m */; };
+		6F9DCF1D1D7841D6007CEAD2 /* MapDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEDA1D7841D6007CEAD2 /* MapDemoController.xib */; };
+		6F9DCF1E1D7841D6007CEAD2 /* MultiEchartsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEDC1D7841D6007CEAD2 /* MultiEchartsController.m */; };
+		6F9DCF1F1D7841D6007CEAD2 /* MultiEchartsController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEDD1D7841D6007CEAD2 /* MultiEchartsController.xib */; };
+		6F9DCF201D7841D6007CEAD2 /* OtherDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEDF1D7841D6007CEAD2 /* OtherDemoController.m */; };
+		6F9DCF211D7841D6007CEAD2 /* OtherDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEE01D7841D6007CEAD2 /* OtherDemoController.xib */; };
+		6F9DCF221D7841D6007CEAD2 /* PieDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEE21D7841D6007CEAD2 /* PieDemoController.m */; };
+		6F9DCF231D7841D6007CEAD2 /* PieDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEE31D7841D6007CEAD2 /* PieDemoController.xib */; };
+		6F9DCF241D7841D6007CEAD2 /* RadarDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEE51D7841D6007CEAD2 /* RadarDemoController.m */; };
+		6F9DCF251D7841D6007CEAD2 /* RadarDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEE61D7841D6007CEAD2 /* RadarDemoController.xib */; };
+		6F9DCF261D7841D6007CEAD2 /* ScatterDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEE81D7841D6007CEAD2 /* ScatterDemoController.m */; };
+		6F9DCF271D7841D6007CEAD2 /* ScatterDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEE91D7841D6007CEAD2 /* ScatterDemoController.xib */; };
+		6F9DCF281D7841D6007CEAD2 /* TreeDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEEB1D7841D6007CEAD2 /* TreeDemoController.m */; };
+		6F9DCF291D7841D6007CEAD2 /* TreeDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEEC1D7841D6007CEAD2 /* TreeDemoController.xib */; };
+		6F9DCF2A1D7841D6007CEAD2 /* TreemapDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEEE1D7841D6007CEAD2 /* TreemapDemoController.m */; };
+		6F9DCF2B1D7841D6007CEAD2 /* TreemapDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEEF1D7841D6007CEAD2 /* TreemapDemoController.xib */; };
+		6F9DCF2C1D7841D6007CEAD2 /* VennDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEF11D7841D6007CEAD2 /* VennDemoController.m */; };
+		6F9DCF2D1D7841D6007CEAD2 /* VennDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEF21D7841D6007CEAD2 /* VennDemoController.xib */; };
+		6F9DCF2E1D7841D6007CEAD2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEF41D7841D6007CEAD2 /* ViewController.m */; };
+		6F9DCF2F1D7841D6007CEAD2 /* WordCloudDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEF61D7841D6007CEAD2 /* WordCloudDemoController.m */; };
+		6F9DCF301D7841D6007CEAD2 /* WordCloudDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEF71D7841D6007CEAD2 /* WordCloudDemoController.xib */; };
+		6F9DCF311D7841D6007CEAD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEF81D7841D6007CEAD2 /* Images.xcassets */; };
+		6F9DCF321D7841D6007CEAD2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEF91D7841D6007CEAD2 /* Info.plist */; };
+		6F9DCF331D7841D6007CEAD2 /* NSObject+RMArchivable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEFE1D7841D6007CEAD2 /* NSObject+RMArchivable.m */; };
+		6F9DCF341D7841D6007CEAD2 /* NSObject+RMCopyable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCF001D7841D6007CEAD2 /* NSObject+RMCopyable.m */; };
+		6F9DCF351D7841D6007CEAD2 /* NSUserDefaults+RMSaveCustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCF021D7841D6007CEAD2 /* NSUserDefaults+RMSaveCustomObject.m */; };
+		6F9DCF361D7841D6007CEAD2 /* RMMapper.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCF041D7841D6007CEAD2 /* RMMapper.m */; };
+		6F9DCF371D7841D6007CEAD2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCF051D7841D6007CEAD2 /* main.m */; };
 		6FEFF6EB1D56448300E8B77E /* NSObject+PYObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEFF6EA1D56448300E8B77E /* NSObject+PYObject.m */; };
 		6FEFF6F01D564D5C00E8B77E /* PYChordStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEFF6EF1D564D5C00E8B77E /* PYChordStyle.m */; };
-		6FF5EAB71D70B375000D275E /* TreeDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5EAB51D70B375000D275E /* TreeDemoController.m */; };
-		6FF5EAB81D70B375000D275E /* TreeDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6FF5EAB61D70B375000D275E /* TreeDemoController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -127,59 +129,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		6C0658CA1BB85B29003CAAE5 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = "iOS-Echarts_Demo/Info.plist"; sourceTree = SOURCE_ROOT; };
-		6C0658CB1BB85B29003CAAE5 /* iOS-Echarts-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "iOS-Echarts-PrefixHeader.pch"; path = "iOS-Echarts_Demo/iOS-Echarts-PrefixHeader.pch"; sourceTree = SOURCE_ROOT; };
-		6C0658CC1BB85B29003CAAE5 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = "iOS-Echarts_Demo/main.m"; sourceTree = SOURCE_ROOT; };
-		6C0658CF1BB85B34003CAAE5 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = "iOS-Echarts_Demo/AppDelegate.h"; sourceTree = "<group>"; };
-		6C0658D01BB85B34003CAAE5 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = "iOS-Echarts_Demo/AppDelegate.m"; sourceTree = "<group>"; };
-		6C0658D71BB85B46003CAAE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = "iOS-Echarts_Demo/Base.lproj/LaunchScreen.xib"; sourceTree = "<group>"; };
-		6C0658D91BB85B46003CAAE5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "iOS-Echarts_Demo/Base.lproj/Main.storyboard"; sourceTree = "<group>"; };
-		6C0658DD1BB85B4F003CAAE5 /* BarDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarDemoController.h; sourceTree = "<group>"; };
-		6C0658DE1BB85B4F003CAAE5 /* BarDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarDemoController.m; sourceTree = "<group>"; };
-		6C0658DF1BB85B4F003CAAE5 /* BarDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarDemoController.xib; sourceTree = "<group>"; };
-		6C0658E01BB85B4F003CAAE5 /* LineDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDemoController.h; sourceTree = "<group>"; };
-		6C0658E11BB85B4F003CAAE5 /* LineDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDemoController.m; sourceTree = "<group>"; };
-		6C0658E21BB85B4F003CAAE5 /* LineDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineDemoController.xib; sourceTree = "<group>"; };
-		6C0658E31BB85B4F003CAAE5 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		6C0658E41BB85B4F003CAAE5 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		6C08828B1C303F4400EA0D34 /* MapDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDemoController.h; sourceTree = "<group>"; };
-		6C08828C1C303F4400EA0D34 /* MapDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDemoController.m; sourceTree = "<group>"; };
-		6C08828D1C303F4400EA0D34 /* MapDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapDemoController.xib; sourceTree = "<group>"; };
-		6C28059F1C27BBF80076EAFB /* RadarDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarDemoController.h; sourceTree = "<group>"; };
-		6C2805A01C27BBF80076EAFB /* RadarDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarDemoController.m; sourceTree = "<group>"; };
-		6C2805A11C27BBF80076EAFB /* RadarDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadarDemoController.xib; sourceTree = "<group>"; };
 		6C4216761B98E310002D4B7A /* iOS-Echarts.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Echarts.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C42168F1B98E310002D4B7A /* iOS-EchartsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-EchartsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C4216941B98E310002D4B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C4216951B98E310002D4B7A /* iOS_EchartsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS_EchartsTests.m; sourceTree = "<group>"; };
-		6C6011A81CC144710048F6F6 /* OtherDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherDemoController.h; sourceTree = "<group>"; };
-		6C6011A91CC144710048F6F6 /* OtherDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherDemoController.m; sourceTree = "<group>"; };
-		6C6011AA1CC144710048F6F6 /* OtherDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherDemoController.xib; sourceTree = "<group>"; };
-		6CB02A7C1BBEAC66002E1126 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
-		6CB02A7D1BBEAC66002E1126 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
-		6CB02A7F1BBF7739002E1126 /* PieDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieDemoController.h; sourceTree = "<group>"; };
-		6CB02A801BBF7739002E1126 /* PieDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieDemoController.m; sourceTree = "<group>"; };
-		6CB02A811BBF7739002E1126 /* PieDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PieDemoController.xib; sourceTree = "<group>"; };
-		6CC846551BC15E4D00947312 /* NSObject+RMArchivable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RMArchivable.h"; sourceTree = "<group>"; };
-		6CC846561BC15E4D00947312 /* NSObject+RMArchivable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RMArchivable.m"; sourceTree = "<group>"; };
-		6CC846571BC15E4D00947312 /* NSObject+RMCopyable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RMCopyable.h"; sourceTree = "<group>"; };
-		6CC846581BC15E4D00947312 /* NSObject+RMCopyable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RMCopyable.m"; sourceTree = "<group>"; };
-		6CC846591BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+RMSaveCustomObject.h"; sourceTree = "<group>"; };
-		6CC8465A1BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+RMSaveCustomObject.m"; sourceTree = "<group>"; };
-		6CC8465B1BC15E4D00947312 /* RMMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMMapper.h; sourceTree = "<group>"; };
-		6CC8465C1BC15E4D00947312 /* RMMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMMapper.m; sourceTree = "<group>"; };
 		6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iOS-Echarts.podspec"; sourceTree = "<group>"; };
-		6CF1AA2A1C02A32600F1B773 /* CandlestickDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandlestickDemoController.h; sourceTree = "<group>"; };
-		6CF1AA2B1C02A32600F1B773 /* CandlestickDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandlestickDemoController.m; sourceTree = "<group>"; };
-		6CF1AA2C1C02A32600F1B773 /* CandlestickDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CandlestickDemoController.xib; sourceTree = "<group>"; };
-		6CF1AA2F1C02AF5600F1B773 /* ScatterDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScatterDemoController.h; sourceTree = "<group>"; };
-		6CF1AA301C02AF5600F1B773 /* ScatterDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScatterDemoController.m; sourceTree = "<group>"; };
-		6CF1AA311C02AF5600F1B773 /* ScatterDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScatterDemoController.xib; sourceTree = "<group>"; };
 		6F09E9D71D6CD106006A76CD /* PYChordSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYChordSeries.h; sourceTree = "<group>"; };
 		6F09E9D81D6CD106006A76CD /* PYChordSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYChordSeries.m; sourceTree = "<group>"; };
-		6F09E9DA1D6CD8F6006A76CD /* ChordDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChordDemoController.h; sourceTree = "<group>"; };
-		6F09E9DB1D6CD8F6006A76CD /* ChordDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordDemoController.m; sourceTree = "<group>"; };
-		6F09E9DC1D6CD8F6006A76CD /* ChordDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChordDemoController.xib; sourceTree = "<group>"; };
 		6F4D58651D4FE34F00246943 /* iOS-Echarts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOS-Echarts.h"; sourceTree = "<group>"; };
 		6F4D58691D4FE34F00246943 /* PYAreaStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYAreaStyle.h; sourceTree = "<group>"; };
 		6F4D586A1D4FE34F00246943 /* PYAreaStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYAreaStyle.m; sourceTree = "<group>"; };
@@ -285,41 +241,88 @@
 		6F4D58D81D4FE34F00246943 /* PYZoomEchartsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYZoomEchartsView.h; sourceTree = "<group>"; };
 		6F4D58D91D4FE34F00246943 /* PYZoomEchartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYZoomEchartsView.m; sourceTree = "<group>"; };
 		6F7352BC1D50A779006CD119 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
-		6F8A3EFC1D49AFA5008268BD /* MultiEchartsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiEchartsController.h; sourceTree = "<group>"; };
-		6F8A3EFD1D49AFA5008268BD /* MultiEchartsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiEchartsController.m; sourceTree = "<group>"; };
-		6F8A3EFE1D49AFA5008268BD /* MultiEchartsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiEchartsController.xib; sourceTree = "<group>"; };
-		6F8A3F021D49B598008268BD /* EchartsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = EchartsViewCell.h; path = "iOS-Echarts_Demo/Cell/EchartsViewCell.h"; sourceTree = "<group>"; };
-		6F8A3F031D49B598008268BD /* EchartsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = EchartsViewCell.m; path = "iOS-Echarts_Demo/Cell/EchartsViewCell.m"; sourceTree = "<group>"; };
-		6F8A3F041D49B598008268BD /* EchartsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EchartsViewCell.xib; path = "iOS-Echarts_Demo/Cell/EchartsViewCell.xib"; sourceTree = "<group>"; };
-		6F9391AA1D42414800CD54FC /* ForceDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForceDemoController.h; sourceTree = "<group>"; };
-		6F9391AB1D42414800CD54FC /* ForceDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForceDemoController.m; sourceTree = "<group>"; };
-		6F9391AC1D42414800CD54FC /* ForceDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForceDemoController.xib; sourceTree = "<group>"; };
-		6FA439A51D64E4F500FE5D9F /* GaugesDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaugesDemoController.h; sourceTree = "<group>"; };
-		6FA439A61D64E4F500FE5D9F /* GaugesDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugesDemoController.m; sourceTree = "<group>"; };
-		6FA439A71D64E4F500FE5D9F /* GaugesDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GaugesDemoController.xib; sourceTree = "<group>"; };
-		6FA439E61D6A084400FE5D9F /* FunnelDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnelDemoController.h; sourceTree = "<group>"; };
-		6FA439E71D6A084400FE5D9F /* FunnelDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnelDemoController.m; sourceTree = "<group>"; };
-		6FA439E81D6A084400FE5D9F /* FunnelDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunnelDemoController.xib; sourceTree = "<group>"; };
-		6FBC67451D7407290016CB30 /* EventRiverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRiverController.h; sourceTree = "<group>"; };
-		6FBC67461D7407290016CB30 /* EventRiverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRiverController.m; sourceTree = "<group>"; };
-		6FBC67471D7407290016CB30 /* EventRiverController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventRiverController.xib; sourceTree = "<group>"; };
-		6FC091181D5A464200D52879 /* WordCloudDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordCloudDemoController.h; sourceTree = "<group>"; };
-		6FC091191D5A464200D52879 /* WordCloudDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordCloudDemoController.m; sourceTree = "<group>"; };
-		6FC0911A1D5A464200D52879 /* WordCloudDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordCloudDemoController.xib; sourceTree = "<group>"; };
-		6FC0912F1D60C39C00D52879 /* VennDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VennDemoController.h; sourceTree = "<group>"; };
-		6FC091301D60C39C00D52879 /* VennDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VennDemoController.m; sourceTree = "<group>"; };
-		6FC091311D60C39C00D52879 /* VennDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VennDemoController.xib; sourceTree = "<group>"; };
-		6FDCE6F51D61FED900F580FD /* TreemapDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreemapDemoController.h; sourceTree = "<group>"; };
-		6FDCE6F61D61FED900F580FD /* TreemapDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreemapDemoController.m; sourceTree = "<group>"; };
-		6FDCE6F71D61FED900F580FD /* TreemapDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TreemapDemoController.xib; sourceTree = "<group>"; };
+		6F9DCEB31D7841D6007CEAD2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6F9DCEB41D7841D6007CEAD2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6F9DCEB61D7841D6007CEAD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		6F9DCEB81D7841D6007CEAD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		6F9DCEBA1D7841D6007CEAD2 /* EchartsViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EchartsViewCell.h; sourceTree = "<group>"; };
+		6F9DCEBB1D7841D6007CEAD2 /* EchartsViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EchartsViewCell.m; sourceTree = "<group>"; };
+		6F9DCEBC1D7841D6007CEAD2 /* EchartsViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EchartsViewCell.xib; sourceTree = "<group>"; };
+		6F9DCEBE1D7841D6007CEAD2 /* BarDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BarDemoController.h; sourceTree = "<group>"; };
+		6F9DCEBF1D7841D6007CEAD2 /* BarDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BarDemoController.m; sourceTree = "<group>"; };
+		6F9DCEC01D7841D6007CEAD2 /* BarDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BarDemoController.xib; sourceTree = "<group>"; };
+		6F9DCEC11D7841D6007CEAD2 /* CandlestickDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CandlestickDemoController.h; sourceTree = "<group>"; };
+		6F9DCEC21D7841D6007CEAD2 /* CandlestickDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CandlestickDemoController.m; sourceTree = "<group>"; };
+		6F9DCEC31D7841D6007CEAD2 /* CandlestickDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CandlestickDemoController.xib; sourceTree = "<group>"; };
+		6F9DCEC41D7841D6007CEAD2 /* ChordDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChordDemoController.h; sourceTree = "<group>"; };
+		6F9DCEC51D7841D6007CEAD2 /* ChordDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChordDemoController.m; sourceTree = "<group>"; };
+		6F9DCEC61D7841D6007CEAD2 /* ChordDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ChordDemoController.xib; sourceTree = "<group>"; };
+		6F9DCEC71D7841D6007CEAD2 /* EventRiverController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EventRiverController.h; sourceTree = "<group>"; };
+		6F9DCEC81D7841D6007CEAD2 /* EventRiverController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EventRiverController.m; sourceTree = "<group>"; };
+		6F9DCEC91D7841D6007CEAD2 /* EventRiverController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = EventRiverController.xib; sourceTree = "<group>"; };
+		6F9DCECA1D7841D6007CEAD2 /* ForceDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ForceDemoController.h; sourceTree = "<group>"; };
+		6F9DCECB1D7841D6007CEAD2 /* ForceDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ForceDemoController.m; sourceTree = "<group>"; };
+		6F9DCECC1D7841D6007CEAD2 /* ForceDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ForceDemoController.xib; sourceTree = "<group>"; };
+		6F9DCECD1D7841D6007CEAD2 /* FunnelDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FunnelDemoController.h; sourceTree = "<group>"; };
+		6F9DCECE1D7841D6007CEAD2 /* FunnelDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FunnelDemoController.m; sourceTree = "<group>"; };
+		6F9DCECF1D7841D6007CEAD2 /* FunnelDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FunnelDemoController.xib; sourceTree = "<group>"; };
+		6F9DCED01D7841D6007CEAD2 /* GaugesDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaugesDemoController.h; sourceTree = "<group>"; };
+		6F9DCED11D7841D6007CEAD2 /* GaugesDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugesDemoController.m; sourceTree = "<group>"; };
+		6F9DCED21D7841D6007CEAD2 /* GaugesDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GaugesDemoController.xib; sourceTree = "<group>"; };
+		6F9DCED31D7841D6007CEAD2 /* LineDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LineDemoController.h; sourceTree = "<group>"; };
+		6F9DCED41D7841D6007CEAD2 /* LineDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LineDemoController.m; sourceTree = "<group>"; };
+		6F9DCED51D7841D6007CEAD2 /* LineDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LineDemoController.xib; sourceTree = "<group>"; };
+		6F9DCED61D7841D6007CEAD2 /* MainController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainController.h; sourceTree = "<group>"; };
+		6F9DCED71D7841D6007CEAD2 /* MainController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainController.m; sourceTree = "<group>"; };
+		6F9DCED81D7841D6007CEAD2 /* MapDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapDemoController.h; sourceTree = "<group>"; };
+		6F9DCED91D7841D6007CEAD2 /* MapDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapDemoController.m; sourceTree = "<group>"; };
+		6F9DCEDA1D7841D6007CEAD2 /* MapDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MapDemoController.xib; sourceTree = "<group>"; };
+		6F9DCEDB1D7841D6007CEAD2 /* MultiEchartsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiEchartsController.h; sourceTree = "<group>"; };
+		6F9DCEDC1D7841D6007CEAD2 /* MultiEchartsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiEchartsController.m; sourceTree = "<group>"; };
+		6F9DCEDD1D7841D6007CEAD2 /* MultiEchartsController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiEchartsController.xib; sourceTree = "<group>"; };
+		6F9DCEDE1D7841D6007CEAD2 /* OtherDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OtherDemoController.h; sourceTree = "<group>"; };
+		6F9DCEDF1D7841D6007CEAD2 /* OtherDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OtherDemoController.m; sourceTree = "<group>"; };
+		6F9DCEE01D7841D6007CEAD2 /* OtherDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OtherDemoController.xib; sourceTree = "<group>"; };
+		6F9DCEE11D7841D6007CEAD2 /* PieDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PieDemoController.h; sourceTree = "<group>"; };
+		6F9DCEE21D7841D6007CEAD2 /* PieDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PieDemoController.m; sourceTree = "<group>"; };
+		6F9DCEE31D7841D6007CEAD2 /* PieDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PieDemoController.xib; sourceTree = "<group>"; };
+		6F9DCEE41D7841D6007CEAD2 /* RadarDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RadarDemoController.h; sourceTree = "<group>"; };
+		6F9DCEE51D7841D6007CEAD2 /* RadarDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RadarDemoController.m; sourceTree = "<group>"; };
+		6F9DCEE61D7841D6007CEAD2 /* RadarDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RadarDemoController.xib; sourceTree = "<group>"; };
+		6F9DCEE71D7841D6007CEAD2 /* ScatterDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScatterDemoController.h; sourceTree = "<group>"; };
+		6F9DCEE81D7841D6007CEAD2 /* ScatterDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScatterDemoController.m; sourceTree = "<group>"; };
+		6F9DCEE91D7841D6007CEAD2 /* ScatterDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ScatterDemoController.xib; sourceTree = "<group>"; };
+		6F9DCEEA1D7841D6007CEAD2 /* TreeDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeDemoController.h; sourceTree = "<group>"; };
+		6F9DCEEB1D7841D6007CEAD2 /* TreeDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeDemoController.m; sourceTree = "<group>"; };
+		6F9DCEEC1D7841D6007CEAD2 /* TreeDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TreeDemoController.xib; sourceTree = "<group>"; };
+		6F9DCEED1D7841D6007CEAD2 /* TreemapDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreemapDemoController.h; sourceTree = "<group>"; };
+		6F9DCEEE1D7841D6007CEAD2 /* TreemapDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreemapDemoController.m; sourceTree = "<group>"; };
+		6F9DCEEF1D7841D6007CEAD2 /* TreemapDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TreemapDemoController.xib; sourceTree = "<group>"; };
+		6F9DCEF01D7841D6007CEAD2 /* VennDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VennDemoController.h; sourceTree = "<group>"; };
+		6F9DCEF11D7841D6007CEAD2 /* VennDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VennDemoController.m; sourceTree = "<group>"; };
+		6F9DCEF21D7841D6007CEAD2 /* VennDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VennDemoController.xib; sourceTree = "<group>"; };
+		6F9DCEF31D7841D6007CEAD2 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		6F9DCEF41D7841D6007CEAD2 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		6F9DCEF51D7841D6007CEAD2 /* WordCloudDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WordCloudDemoController.h; sourceTree = "<group>"; };
+		6F9DCEF61D7841D6007CEAD2 /* WordCloudDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WordCloudDemoController.m; sourceTree = "<group>"; };
+		6F9DCEF71D7841D6007CEAD2 /* WordCloudDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WordCloudDemoController.xib; sourceTree = "<group>"; };
+		6F9DCEF81D7841D6007CEAD2 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		6F9DCEF91D7841D6007CEAD2 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6F9DCEFA1D7841D6007CEAD2 /* iOS-Echarts-PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOS-Echarts-PrefixHeader.pch"; sourceTree = "<group>"; };
+		6F9DCEFD1D7841D6007CEAD2 /* NSObject+RMArchivable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RMArchivable.h"; sourceTree = "<group>"; };
+		6F9DCEFE1D7841D6007CEAD2 /* NSObject+RMArchivable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RMArchivable.m"; sourceTree = "<group>"; };
+		6F9DCEFF1D7841D6007CEAD2 /* NSObject+RMCopyable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+RMCopyable.h"; sourceTree = "<group>"; };
+		6F9DCF001D7841D6007CEAD2 /* NSObject+RMCopyable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+RMCopyable.m"; sourceTree = "<group>"; };
+		6F9DCF011D7841D6007CEAD2 /* NSUserDefaults+RMSaveCustomObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+RMSaveCustomObject.h"; sourceTree = "<group>"; };
+		6F9DCF021D7841D6007CEAD2 /* NSUserDefaults+RMSaveCustomObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+RMSaveCustomObject.m"; sourceTree = "<group>"; };
+		6F9DCF031D7841D6007CEAD2 /* RMMapper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RMMapper.h; sourceTree = "<group>"; };
+		6F9DCF041D7841D6007CEAD2 /* RMMapper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RMMapper.m; sourceTree = "<group>"; };
+		6F9DCF051D7841D6007CEAD2 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		6FEFF6E91D56448300E8B77E /* NSObject+PYObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+PYObject.h"; sourceTree = "<group>"; };
 		6FEFF6EA1D56448300E8B77E /* NSObject+PYObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+PYObject.m"; sourceTree = "<group>"; };
 		6FEFF6ED1D5644E500E8B77E /* PYUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYUtilities.h; sourceTree = "<group>"; };
 		6FEFF6EE1D564D5C00E8B77E /* PYChordStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYChordStyle.h; sourceTree = "<group>"; };
 		6FEFF6EF1D564D5C00E8B77E /* PYChordStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYChordStyle.m; sourceTree = "<group>"; };
-		6FF5EAB41D70B375000D275E /* TreeDemoController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TreeDemoController.h; sourceTree = "<group>"; };
-		6FF5EAB51D70B375000D275E /* TreeDemoController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TreeDemoController.m; sourceTree = "<group>"; };
-		6FF5EAB61D70B375000D275E /* TreeDemoController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TreeDemoController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -340,92 +343,11 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6C0658C91BB85A3E003CAAE5 /* iOS-Echarts_Demo */ = {
-			isa = PBXGroup;
-			children = (
-				6F8A3F011D49B571008268BD /* Cell */,
-				6CC846531BC15E4D00947312 /* Library */,
-				6C0658DC1BB85B4F003CAAE5 /* Controller */,
-				6C0658D61BB85B46003CAAE5 /* LaunchScreen.xib */,
-				6C0658D81BB85B46003CAAE5 /* Main.storyboard */,
-				6C0658CF1BB85B34003CAAE5 /* AppDelegate.h */,
-				6C0658D01BB85B34003CAAE5 /* AppDelegate.m */,
-				6C4216791B98E310002D4B7A /* Supporting Files */,
-			);
-			name = "iOS-Echarts_Demo";
-			sourceTree = "<group>";
-		};
-		6C0658DC1BB85B4F003CAAE5 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				6C0658DD1BB85B4F003CAAE5 /* BarDemoController.h */,
-				6C0658DE1BB85B4F003CAAE5 /* BarDemoController.m */,
-				6C0658DF1BB85B4F003CAAE5 /* BarDemoController.xib */,
-				6C0658E01BB85B4F003CAAE5 /* LineDemoController.h */,
-				6C0658E11BB85B4F003CAAE5 /* LineDemoController.m */,
-				6C0658E21BB85B4F003CAAE5 /* LineDemoController.xib */,
-				6C0658E31BB85B4F003CAAE5 /* ViewController.h */,
-				6C0658E41BB85B4F003CAAE5 /* ViewController.m */,
-				6CB02A7C1BBEAC66002E1126 /* MainController.h */,
-				6CB02A7D1BBEAC66002E1126 /* MainController.m */,
-				6CB02A7F1BBF7739002E1126 /* PieDemoController.h */,
-				6CB02A801BBF7739002E1126 /* PieDemoController.m */,
-				6CB02A811BBF7739002E1126 /* PieDemoController.xib */,
-				6CF1AA2A1C02A32600F1B773 /* CandlestickDemoController.h */,
-				6CF1AA2B1C02A32600F1B773 /* CandlestickDemoController.m */,
-				6CF1AA2C1C02A32600F1B773 /* CandlestickDemoController.xib */,
-				6CF1AA2F1C02AF5600F1B773 /* ScatterDemoController.h */,
-				6CF1AA301C02AF5600F1B773 /* ScatterDemoController.m */,
-				6CF1AA311C02AF5600F1B773 /* ScatterDemoController.xib */,
-				6C28059F1C27BBF80076EAFB /* RadarDemoController.h */,
-				6C2805A01C27BBF80076EAFB /* RadarDemoController.m */,
-				6C2805A11C27BBF80076EAFB /* RadarDemoController.xib */,
-				6C08828B1C303F4400EA0D34 /* MapDemoController.h */,
-				6C08828C1C303F4400EA0D34 /* MapDemoController.m */,
-				6C08828D1C303F4400EA0D34 /* MapDemoController.xib */,
-				6C6011A81CC144710048F6F6 /* OtherDemoController.h */,
-				6C6011A91CC144710048F6F6 /* OtherDemoController.m */,
-				6C6011AA1CC144710048F6F6 /* OtherDemoController.xib */,
-				6F9391AA1D42414800CD54FC /* ForceDemoController.h */,
-				6F9391AB1D42414800CD54FC /* ForceDemoController.m */,
-				6F9391AC1D42414800CD54FC /* ForceDemoController.xib */,
-				6F8A3EFC1D49AFA5008268BD /* MultiEchartsController.h */,
-				6F8A3EFD1D49AFA5008268BD /* MultiEchartsController.m */,
-				6F8A3EFE1D49AFA5008268BD /* MultiEchartsController.xib */,
-				6FC091181D5A464200D52879 /* WordCloudDemoController.h */,
-				6FC091191D5A464200D52879 /* WordCloudDemoController.m */,
-				6FC0911A1D5A464200D52879 /* WordCloudDemoController.xib */,
-				6FC0912F1D60C39C00D52879 /* VennDemoController.h */,
-				6FC091301D60C39C00D52879 /* VennDemoController.m */,
-				6FC091311D60C39C00D52879 /* VennDemoController.xib */,
-				6FDCE6F51D61FED900F580FD /* TreemapDemoController.h */,
-				6FDCE6F61D61FED900F580FD /* TreemapDemoController.m */,
-				6FDCE6F71D61FED900F580FD /* TreemapDemoController.xib */,
-				6FA439A51D64E4F500FE5D9F /* GaugesDemoController.h */,
-				6FA439A61D64E4F500FE5D9F /* GaugesDemoController.m */,
-				6FA439A71D64E4F500FE5D9F /* GaugesDemoController.xib */,
-				6FA439E61D6A084400FE5D9F /* FunnelDemoController.h */,
-				6FA439E71D6A084400FE5D9F /* FunnelDemoController.m */,
-				6FA439E81D6A084400FE5D9F /* FunnelDemoController.xib */,
-				6F09E9DA1D6CD8F6006A76CD /* ChordDemoController.h */,
-				6F09E9DB1D6CD8F6006A76CD /* ChordDemoController.m */,
-				6F09E9DC1D6CD8F6006A76CD /* ChordDemoController.xib */,
-				6FF5EAB41D70B375000D275E /* TreeDemoController.h */,
-				6FF5EAB51D70B375000D275E /* TreeDemoController.m */,
-				6FF5EAB61D70B375000D275E /* TreeDemoController.xib */,
-				6FBC67451D7407290016CB30 /* EventRiverController.h */,
-				6FBC67461D7407290016CB30 /* EventRiverController.m */,
-				6FBC67471D7407290016CB30 /* EventRiverController.xib */,
-			);
-			name = Controller;
-			path = "iOS-Echarts_Demo/Controller";
-			sourceTree = "<group>";
-		};
 		6C42166D1B98E310002D4B7A = {
 			isa = PBXGroup;
 			children = (
+				6F9DCEB11D7841D6007CEAD2 /* Demo */,
 				6F4D58641D4FE34F00246943 /* iOS-Echarts */,
-				6C0658C91BB85A3E003CAAE5 /* iOS-Echarts_Demo */,
 				6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */,
 				6C4216921B98E310002D4B7A /* iOS-EchartsTests */,
 				6C4216771B98E310002D4B7A /* Products */,
@@ -439,17 +361,6 @@
 				6C42168F1B98E310002D4B7A /* iOS-EchartsTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		6C4216791B98E310002D4B7A /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				6C0658CA1BB85B29003CAAE5 /* Info.plist */,
-				6C0658CB1BB85B29003CAAE5 /* iOS-Echarts-PrefixHeader.pch */,
-				6C0658CC1BB85B29003CAAE5 /* main.m */,
-			);
-			name = "Supporting Files";
-			path = "iOS-Echarts";
 			sourceTree = "<group>";
 		};
 		6C4216921B98E310002D4B7A /* iOS-EchartsTests */ = {
@@ -467,30 +378,6 @@
 				6C4216941B98E310002D4B7A /* Info.plist */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		6CC846531BC15E4D00947312 /* Library */ = {
-			isa = PBXGroup;
-			children = (
-				6CC846541BC15E4D00947312 /* RMMapper */,
-			);
-			name = Library;
-			path = "iOS-Echarts_Demo/Library";
-			sourceTree = "<group>";
-		};
-		6CC846541BC15E4D00947312 /* RMMapper */ = {
-			isa = PBXGroup;
-			children = (
-				6CC846551BC15E4D00947312 /* NSObject+RMArchivable.h */,
-				6CC846561BC15E4D00947312 /* NSObject+RMArchivable.m */,
-				6CC846571BC15E4D00947312 /* NSObject+RMCopyable.h */,
-				6CC846581BC15E4D00947312 /* NSObject+RMCopyable.m */,
-				6CC846591BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.h */,
-				6CC8465A1BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.m */,
-				6CC8465B1BC15E4D00947312 /* RMMapper.h */,
-				6CC8465C1BC15E4D00947312 /* RMMapper.m */,
-			);
-			path = RMMapper;
 			sourceTree = "<group>";
 		};
 		6F4D58641D4FE34F00246943 /* iOS-Echarts */ = {
@@ -651,14 +538,128 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		6F8A3F011D49B571008268BD /* Cell */ = {
+		6F9DCEB11D7841D6007CEAD2 /* Demo */ = {
 			isa = PBXGroup;
 			children = (
-				6F8A3F021D49B598008268BD /* EchartsViewCell.h */,
-				6F8A3F031D49B598008268BD /* EchartsViewCell.m */,
-				6F8A3F041D49B598008268BD /* EchartsViewCell.xib */,
+				6F9DCEB21D7841D6007CEAD2 /* iOS-Echarts_iOS */,
 			);
-			name = Cell;
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		6F9DCEB21D7841D6007CEAD2 /* iOS-Echarts_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				6F9DCEB31D7841D6007CEAD2 /* AppDelegate.h */,
+				6F9DCEB41D7841D6007CEAD2 /* AppDelegate.m */,
+				6F9DCEB51D7841D6007CEAD2 /* LaunchScreen.xib */,
+				6F9DCEB71D7841D6007CEAD2 /* Main.storyboard */,
+				6F9DCEB91D7841D6007CEAD2 /* Cell */,
+				6F9DCEBD1D7841D6007CEAD2 /* Controller */,
+				6F9DCEF81D7841D6007CEAD2 /* Images.xcassets */,
+				6F9DCEF91D7841D6007CEAD2 /* Info.plist */,
+				6F9DCEFA1D7841D6007CEAD2 /* iOS-Echarts-PrefixHeader.pch */,
+				6F9DCEFB1D7841D6007CEAD2 /* Library */,
+				6F9DCF051D7841D6007CEAD2 /* main.m */,
+			);
+			path = "iOS-Echarts_iOS";
+			sourceTree = "<group>";
+		};
+		6F9DCEB91D7841D6007CEAD2 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6F9DCEBA1D7841D6007CEAD2 /* EchartsViewCell.h */,
+				6F9DCEBB1D7841D6007CEAD2 /* EchartsViewCell.m */,
+				6F9DCEBC1D7841D6007CEAD2 /* EchartsViewCell.xib */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6F9DCEBD1D7841D6007CEAD2 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				6F9DCEBE1D7841D6007CEAD2 /* BarDemoController.h */,
+				6F9DCEBF1D7841D6007CEAD2 /* BarDemoController.m */,
+				6F9DCEC01D7841D6007CEAD2 /* BarDemoController.xib */,
+				6F9DCEC11D7841D6007CEAD2 /* CandlestickDemoController.h */,
+				6F9DCEC21D7841D6007CEAD2 /* CandlestickDemoController.m */,
+				6F9DCEC31D7841D6007CEAD2 /* CandlestickDemoController.xib */,
+				6F9DCEC41D7841D6007CEAD2 /* ChordDemoController.h */,
+				6F9DCEC51D7841D6007CEAD2 /* ChordDemoController.m */,
+				6F9DCEC61D7841D6007CEAD2 /* ChordDemoController.xib */,
+				6F9DCEC71D7841D6007CEAD2 /* EventRiverController.h */,
+				6F9DCEC81D7841D6007CEAD2 /* EventRiverController.m */,
+				6F9DCEC91D7841D6007CEAD2 /* EventRiverController.xib */,
+				6F9DCECA1D7841D6007CEAD2 /* ForceDemoController.h */,
+				6F9DCECB1D7841D6007CEAD2 /* ForceDemoController.m */,
+				6F9DCECC1D7841D6007CEAD2 /* ForceDemoController.xib */,
+				6F9DCECD1D7841D6007CEAD2 /* FunnelDemoController.h */,
+				6F9DCECE1D7841D6007CEAD2 /* FunnelDemoController.m */,
+				6F9DCECF1D7841D6007CEAD2 /* FunnelDemoController.xib */,
+				6F9DCED01D7841D6007CEAD2 /* GaugesDemoController.h */,
+				6F9DCED11D7841D6007CEAD2 /* GaugesDemoController.m */,
+				6F9DCED21D7841D6007CEAD2 /* GaugesDemoController.xib */,
+				6F9DCED31D7841D6007CEAD2 /* LineDemoController.h */,
+				6F9DCED41D7841D6007CEAD2 /* LineDemoController.m */,
+				6F9DCED51D7841D6007CEAD2 /* LineDemoController.xib */,
+				6F9DCED61D7841D6007CEAD2 /* MainController.h */,
+				6F9DCED71D7841D6007CEAD2 /* MainController.m */,
+				6F9DCED81D7841D6007CEAD2 /* MapDemoController.h */,
+				6F9DCED91D7841D6007CEAD2 /* MapDemoController.m */,
+				6F9DCEDA1D7841D6007CEAD2 /* MapDemoController.xib */,
+				6F9DCEDB1D7841D6007CEAD2 /* MultiEchartsController.h */,
+				6F9DCEDC1D7841D6007CEAD2 /* MultiEchartsController.m */,
+				6F9DCEDD1D7841D6007CEAD2 /* MultiEchartsController.xib */,
+				6F9DCEDE1D7841D6007CEAD2 /* OtherDemoController.h */,
+				6F9DCEDF1D7841D6007CEAD2 /* OtherDemoController.m */,
+				6F9DCEE01D7841D6007CEAD2 /* OtherDemoController.xib */,
+				6F9DCEE11D7841D6007CEAD2 /* PieDemoController.h */,
+				6F9DCEE21D7841D6007CEAD2 /* PieDemoController.m */,
+				6F9DCEE31D7841D6007CEAD2 /* PieDemoController.xib */,
+				6F9DCEE41D7841D6007CEAD2 /* RadarDemoController.h */,
+				6F9DCEE51D7841D6007CEAD2 /* RadarDemoController.m */,
+				6F9DCEE61D7841D6007CEAD2 /* RadarDemoController.xib */,
+				6F9DCEE71D7841D6007CEAD2 /* ScatterDemoController.h */,
+				6F9DCEE81D7841D6007CEAD2 /* ScatterDemoController.m */,
+				6F9DCEE91D7841D6007CEAD2 /* ScatterDemoController.xib */,
+				6F9DCEEA1D7841D6007CEAD2 /* TreeDemoController.h */,
+				6F9DCEEB1D7841D6007CEAD2 /* TreeDemoController.m */,
+				6F9DCEEC1D7841D6007CEAD2 /* TreeDemoController.xib */,
+				6F9DCEED1D7841D6007CEAD2 /* TreemapDemoController.h */,
+				6F9DCEEE1D7841D6007CEAD2 /* TreemapDemoController.m */,
+				6F9DCEEF1D7841D6007CEAD2 /* TreemapDemoController.xib */,
+				6F9DCEF01D7841D6007CEAD2 /* VennDemoController.h */,
+				6F9DCEF11D7841D6007CEAD2 /* VennDemoController.m */,
+				6F9DCEF21D7841D6007CEAD2 /* VennDemoController.xib */,
+				6F9DCEF31D7841D6007CEAD2 /* ViewController.h */,
+				6F9DCEF41D7841D6007CEAD2 /* ViewController.m */,
+				6F9DCEF51D7841D6007CEAD2 /* WordCloudDemoController.h */,
+				6F9DCEF61D7841D6007CEAD2 /* WordCloudDemoController.m */,
+				6F9DCEF71D7841D6007CEAD2 /* WordCloudDemoController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		6F9DCEFB1D7841D6007CEAD2 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				6F9DCEFC1D7841D6007CEAD2 /* RMMapper */,
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
+		6F9DCEFC1D7841D6007CEAD2 /* RMMapper */ = {
+			isa = PBXGroup;
+			children = (
+				6F9DCEFD1D7841D6007CEAD2 /* NSObject+RMArchivable.h */,
+				6F9DCEFE1D7841D6007CEAD2 /* NSObject+RMArchivable.m */,
+				6F9DCEFF1D7841D6007CEAD2 /* NSObject+RMCopyable.h */,
+				6F9DCF001D7841D6007CEAD2 /* NSObject+RMCopyable.m */,
+				6F9DCF011D7841D6007CEAD2 /* NSUserDefaults+RMSaveCustomObject.h */,
+				6F9DCF021D7841D6007CEAD2 /* NSUserDefaults+RMSaveCustomObject.m */,
+				6F9DCF031D7841D6007CEAD2 /* RMMapper.h */,
+				6F9DCF041D7841D6007CEAD2 /* RMMapper.m */,
+			);
+			path = RMMapper;
 			sourceTree = "<group>";
 		};
 		6FEFF6E81D56446F00E8B77E /* Categories */ = {
@@ -751,31 +752,33 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F9391AE1D42414800CD54FC /* ForceDemoController.xib in Resources */,
-				6F09E9DE1D6CD8F6006A76CD /* ChordDemoController.xib in Resources */,
+				6F9DCF181D7841D6007CEAD2 /* GaugesDemoController.xib in Resources */,
+				6F9DCF1A1D7841D6007CEAD2 /* LineDemoController.xib in Resources */,
+				6F9DCF271D7841D6007CEAD2 /* ScatterDemoController.xib in Resources */,
+				6F9DCF311D7841D6007CEAD2 /* Images.xcassets in Resources */,
+				6F9DCF071D7841D6007CEAD2 /* LaunchScreen.xib in Resources */,
+				6F9DCF2B1D7841D6007CEAD2 /* TreemapDemoController.xib in Resources */,
+				6F9DCF291D7841D6007CEAD2 /* TreeDemoController.xib in Resources */,
+				6F9DCF101D7841D6007CEAD2 /* ChordDemoController.xib in Resources */,
+				6F9DCF0E1D7841D6007CEAD2 /* CandlestickDemoController.xib in Resources */,
+				6F9DCF0A1D7841D6007CEAD2 /* EchartsViewCell.xib in Resources */,
+				6F9DCF141D7841D6007CEAD2 /* ForceDemoController.xib in Resources */,
 				6F7352BD1D50A779006CD119 /* js in Resources */,
-				6C0658E81BB85B4F003CAAE5 /* LineDemoController.xib in Resources */,
-				6CF1AA331C02AF5600F1B773 /* ScatterDemoController.xib in Resources */,
+				6F9DCF161D7841D6007CEAD2 /* FunnelDemoController.xib in Resources */,
+				6F9DCF231D7841D6007CEAD2 /* PieDemoController.xib in Resources */,
+				6F9DCF211D7841D6007CEAD2 /* OtherDemoController.xib in Resources */,
+				6F9DCF251D7841D6007CEAD2 /* RadarDemoController.xib in Resources */,
 				6F4D590D1D4FE34F00246943 /* echarts.html in Resources */,
+				6F9DCF0C1D7841D6007CEAD2 /* BarDemoController.xib in Resources */,
+				6F9DCF121D7841D6007CEAD2 /* EventRiverController.xib in Resources */,
+				6F9DCF1F1D7841D6007CEAD2 /* MultiEchartsController.xib in Resources */,
+				6F9DCF321D7841D6007CEAD2 /* Info.plist in Resources */,
+				6F9DCF081D7841D6007CEAD2 /* Main.storyboard in Resources */,
+				6F9DCF1D1D7841D6007CEAD2 /* MapDemoController.xib in Resources */,
 				6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */,
-				6FBC67491D7407290016CB30 /* EventRiverController.xib in Resources */,
+				6F9DCF301D7841D6007CEAD2 /* WordCloudDemoController.xib in Resources */,
 				6C34720D1BF470E600C16B73 /* (null) in Resources */,
-				6FDCE6F91D61FED900F580FD /* TreemapDemoController.xib in Resources */,
-				6FC091331D60C39C00D52879 /* VennDemoController.xib in Resources */,
-				6FC0911C1D5A464200D52879 /* WordCloudDemoController.xib in Resources */,
-				6FA439A91D64E4F500FE5D9F /* GaugesDemoController.xib in Resources */,
-				6C0658DA1BB85B46003CAAE5 /* LaunchScreen.xib in Resources */,
-				6C6011AC1CC144710048F6F6 /* OtherDemoController.xib in Resources */,
-				6C0658E61BB85B4F003CAAE5 /* BarDemoController.xib in Resources */,
-				6F8A3F001D49AFA5008268BD /* MultiEchartsController.xib in Resources */,
-				6FF5EAB81D70B375000D275E /* TreeDemoController.xib in Resources */,
-				6C08828F1C303F4400EA0D34 /* MapDemoController.xib in Resources */,
-				6CF1AA2E1C02A32600F1B773 /* CandlestickDemoController.xib in Resources */,
-				6C0658DB1BB85B46003CAAE5 /* Main.storyboard in Resources */,
-				6CB02A831BBF7739002E1126 /* PieDemoController.xib in Resources */,
-				6F8A3F061D49B598008268BD /* EchartsViewCell.xib in Resources */,
-				6FA439EA1D6A084400FE5D9F /* FunnelDemoController.xib in Resources */,
-				6C2805A31C27BBF80076EAFB /* RadarDemoController.xib in Resources */,
+				6F9DCF2D1D7841D6007CEAD2 /* VennDemoController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -793,87 +796,87 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F9DCF281D7841D6007CEAD2 /* TreeDemoController.m in Sources */,
 				6F4D58E21D4FE34F00246943 /* PYColor.m in Sources */,
-				6C0658E71BB85B4F003CAAE5 /* LineDemoController.m in Sources */,
-				6FC0911B1D5A464200D52879 /* WordCloudDemoController.m in Sources */,
 				6F4D59051D4FE34F00246943 /* PYMarkPoint.m in Sources */,
 				6F4D58EC1D4FE34F00246943 /* PYLinks.m in Sources */,
-				6FBC67481D7407290016CB30 /* EventRiverController.m in Sources */,
-				6F8A3EFF1D49AFA5008268BD /* MultiEchartsController.m in Sources */,
+				6F9DCF131D7841D6007CEAD2 /* ForceDemoController.m in Sources */,
 				6F4D58EE1D4FE34F00246943 /* PYLoadingOption.m in Sources */,
-				6C0658CE1BB85B29003CAAE5 /* main.m in Sources */,
-				6FF5EAB71D70B375000D275E /* TreeDemoController.m in Sources */,
-				6CC8465E1BC15E4D00947312 /* NSObject+RMCopyable.m in Sources */,
 				6F4D59031D4FE34F00246943 /* PYMapSeries.m in Sources */,
+				6F9DCF341D7841D6007CEAD2 /* NSObject+RMCopyable.m in Sources */,
 				6FEFF6F01D564D5C00E8B77E /* PYChordStyle.m in Sources */,
-				6C0658D31BB85B34003CAAE5 /* AppDelegate.m in Sources */,
+				6F9DCF241D7841D6007CEAD2 /* RadarDemoController.m in Sources */,
+				6F9DCF2A1D7841D6007CEAD2 /* TreemapDemoController.m in Sources */,
 				6F4D58E71D4FE34F00246943 /* PYItemStyleProp.m in Sources */,
+				6F9DCF151D7841D6007CEAD2 /* FunnelDemoController.m in Sources */,
+				6F9DCF2F1D7841D6007CEAD2 /* WordCloudDemoController.m in Sources */,
 				6F4D58DE1D4FE34F00246943 /* PYAxisLine.m in Sources */,
 				6F4D58ED1D4FE34F00246943 /* PYLinkStyle.m in Sources */,
+				6F9DCF201D7841D6007CEAD2 /* OtherDemoController.m in Sources */,
 				6F4D58F31D4FE34F00246943 /* PYPolar.m in Sources */,
-				6C2805A21C27BBF80076EAFB /* RadarDemoController.m in Sources */,
-				6F9391AD1D42414800CD54FC /* ForceDemoController.m in Sources */,
-				6F8A3F051D49B598008268BD /* EchartsViewCell.m in Sources */,
-				6CC8465F1BC15E4D00947312 /* NSUserDefaults+RMSaveCustomObject.m in Sources */,
-				6C08828E1C303F4400EA0D34 /* MapDemoController.m in Sources */,
-				6CC8465D1BC15E4D00947312 /* NSObject+RMArchivable.m in Sources */,
 				6F4D58FD1D4FE34F00246943 /* PYCartesianSeries.m in Sources */,
-				6FDCE6F81D61FED900F580FD /* TreemapDemoController.m in Sources */,
-				6C0658E51BB85B4F003CAAE5 /* BarDemoController.m in Sources */,
 				6F4D58F61D4FE34F00246943 /* PYAxisSplitLine.m in Sources */,
 				6F4D59001D4FE34F00246943 /* PYFunnelSeries.m in Sources */,
+				6F9DCF331D7841D6007CEAD2 /* NSObject+RMArchivable.m in Sources */,
 				6F4D59061D4FE34F00246943 /* PYPieSeries.m in Sources */,
 				6F4D58EB1D4FE34F00246943 /* PYLineStyle.m in Sources */,
-				6CB02A7E1BBEAC66002E1126 /* MainController.m in Sources */,
+				6F9DCF1E1D7841D6007CEAD2 /* MultiEchartsController.m in Sources */,
 				6F4D58E31D4FE34F00246943 /* PYDataRange.m in Sources */,
+				6F9DCF1B1D7841D6007CEAD2 /* MainController.m in Sources */,
+				6F9DCF2E1D7841D6007CEAD2 /* ViewController.m in Sources */,
 				6F4D58E61D4FE34F00246943 /* PYItemStyle.m in Sources */,
+				6F9DCF091D7841D6007CEAD2 /* EchartsViewCell.m in Sources */,
+				6F9DCF0B1D7841D6007CEAD2 /* BarDemoController.m in Sources */,
 				6F4D58FA1D4FE34F00246943 /* PYToolbox.m in Sources */,
-				6F09E9DD1D6CD8F6006A76CD /* ChordDemoController.m in Sources */,
 				6F4D59101D4FE34F00246943 /* PYEchartsView.m in Sources */,
 				6F4D58F41D4FE34F00246943 /* PYRoamController.m in Sources */,
-				6FA439E91D6A084400FE5D9F /* FunnelDemoController.m in Sources */,
 				6F4D58DF1D4FE34F00246943 /* PYAxisPointer.m in Sources */,
 				6F4D58EA1D4FE34F00246943 /* PYLegend.m in Sources */,
 				6F4D590F1D4FE34F00246943 /* PYJsonUtil.m in Sources */,
+				6F9DCF221D7841D6007CEAD2 /* PieDemoController.m in Sources */,
 				6F4D59041D4FE34F00246943 /* PYMarkLine.m in Sources */,
+				6F9DCF1C1D7841D6007CEAD2 /* MapDemoController.m in Sources */,
 				6F4D58F71D4FE34F00246943 /* PYTextStyle.m in Sources */,
 				6F4D58F91D4FE34F00246943 /* PYTitle.m in Sources */,
 				6F09E9D91D6CD106006A76CD /* PYChordSeries.m in Sources */,
 				6F4D58F51D4FE34F00246943 /* PYSplitArea.m in Sources */,
+				6F9DCF191D7841D6007CEAD2 /* LineDemoController.m in Sources */,
 				6F4D58E01D4FE34F00246943 /* PYAxisTick.m in Sources */,
 				6F4D59091D4FE34F00246943 /* PYTreeMapSeries.m in Sources */,
 				6F4D59111D4FE34F00246943 /* PYZoomEchartsView.m in Sources */,
+				6F9DCF261D7841D6007CEAD2 /* ScatterDemoController.m in Sources */,
 				6F4D590C1D4FE34F00246943 /* PYWordCloudSeries.m in Sources */,
-				6CB02A821BBF7739002E1126 /* PieDemoController.m in Sources */,
+				6F9DCF351D7841D6007CEAD2 /* NSUserDefaults+RMSaveCustomObject.m in Sources */,
 				6F4D58F81D4FE34F00246943 /* PYTimeline.m in Sources */,
-				6FC091321D60C39C00D52879 /* VennDemoController.m in Sources */,
+				6F9DCF2C1D7841D6007CEAD2 /* VennDemoController.m in Sources */,
 				6F4D58FE1D4FE34F00246943 /* PYEventRiverSeries.m in Sources */,
-				6C6011AB1CC144710048F6F6 /* OtherDemoController.m in Sources */,
 				6F4D58E41D4FE34F00246943 /* PYDataZoom.m in Sources */,
 				6F4D58F11D4FE34F00246943 /* PYNodeStyle.m in Sources */,
 				6F4D58F01D4FE34F00246943 /* PYNodes.m in Sources */,
+				6F9DCF361D7841D6007CEAD2 /* RMMapper.m in Sources */,
 				6F4D58FF1D4FE34F00246943 /* PYForceSeries.m in Sources */,
 				6F4D59021D4FE34F00246943 /* PYHeatmapSeries.m in Sources */,
-				6CF1AA2D1C02A32600F1B773 /* CandlestickDemoController.m in Sources */,
 				6F4D58DD1D4FE34F00246943 /* PYAxisLabel.m in Sources */,
-				6C0658E91BB85B4F003CAAE5 /* ViewController.m in Sources */,
+				6F9DCF0F1D7841D6007CEAD2 /* ChordDemoController.m in Sources */,
 				6F4D58EF1D4FE34F00246943 /* PYNoDataLoadingOption.m in Sources */,
+				6F9DCF171D7841D6007CEAD2 /* GaugesDemoController.m in Sources */,
 				6FEFF6EB1D56448300E8B77E /* NSObject+PYObject.m in Sources */,
-				6CC846601BC15E4D00947312 /* RMMapper.m in Sources */,
-				6FA439A81D64E4F500FE5D9F /* GaugesDemoController.m in Sources */,
 				6F4D58E51D4FE34F00246943 /* PYGrid.m in Sources */,
 				6F4D59011D4FE34F00246943 /* PYGaugeSeries.m in Sources */,
+				6F9DCF0D1D7841D6007CEAD2 /* CandlestickDemoController.m in Sources */,
+				6F9DCF061D7841D6007CEAD2 /* AppDelegate.m in Sources */,
 				6F4D58E11D4FE34F00246943 /* PYCategories.m in Sources */,
+				6F9DCF371D7841D6007CEAD2 /* main.m in Sources */,
 				6F4D59081D4FE34F00246943 /* PYSeries.m in Sources */,
 				6F4D58DB1D4FE34F00246943 /* PYAreaStyle.m in Sources */,
 				6F4D58FB1D4FE34F00246943 /* PYToolboxFeature.m in Sources */,
 				6F4D590A1D4FE34F00246943 /* PYTreeSeries.m in Sources */,
-				6CF1AA321C02AF5600F1B773 /* ScatterDemoController.m in Sources */,
 				6F4D58FC1D4FE34F00246943 /* PYTooltip.m in Sources */,
 				6F4D59071D4FE34F00246943 /* PYRadarSeries.m in Sources */,
 				6F4D590B1D4FE34F00246943 /* PYVennSeries.m in Sources */,
 				6F4D58DC1D4FE34F00246943 /* PYAxis.m in Sources */,
 				6F4D58F21D4FE34F00246943 /* PYOption.m in Sources */,
+				6F9DCF111D7841D6007CEAD2 /* EventRiverController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -896,18 +899,18 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		6C0658D61BB85B46003CAAE5 /* LaunchScreen.xib */ = {
+		6F9DCEB51D7841D6007CEAD2 /* LaunchScreen.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6C0658D71BB85B46003CAAE5 /* Base */,
+				6F9DCEB61D7841D6007CEAD2 /* Base */,
 			);
 			name = LaunchScreen.xib;
 			sourceTree = "<group>";
 		};
-		6C0658D81BB85B46003CAAE5 /* Main.storyboard */ = {
+		6F9DCEB71D7841D6007CEAD2 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				6C0658D91BB85B46003CAAE5 /* Base */,
+				6F9DCEB81D7841D6007CEAD2 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -1000,8 +1003,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS-Echarts_Demo/iOS-Echarts-PrefixHeader.pch";
-				INFOPLIST_FILE = "iOS-Echarts_Demo/Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Demo/iOS-Echarts_iOS/iOS-Echarts-PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/iOS-Echarts_iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pluto-y.$(PRODUCT_NAME:rfc1034identifier)";
@@ -1014,8 +1017,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				GCC_PREFIX_HEADER = "$(SRCROOT)/iOS-Echarts_Demo/iOS-Echarts-PrefixHeader.pch";
-				INFOPLIST_FILE = "iOS-Echarts_Demo/Info.plist";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Demo/iOS-Echarts_iOS/iOS-Echarts-PrefixHeader.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/Demo/iOS-Echarts_iOS/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.pluto-y.$(PRODUCT_NAME:rfc1034identifier)";
