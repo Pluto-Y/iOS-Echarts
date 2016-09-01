@@ -61,6 +61,29 @@ static PYOrient PYOrientVertical   = @"vertical";
 #pragma mark - The template marco
 
 /**
+ *  The template of the add methods.
+ *  Which can help user to add datas into the Array,
+ *  Eg: the xAxis in `PYOptions`
+ *  This can create a method named 'addXAxis'
+ */
+#define PYAddMethodTemplate(cls, type, mName, pName)        \
+    - (cls *(^)(type *pName))add##mName;
+
+/**
+ *  the template of implemetion of add methods.
+ */
+#define PYAddMethodImpTemplate(cls, type, mName, pName)     \
+    - (cls *(^)(type *pName))add##mName {                   \
+        if(_##pName == nil) {                               \
+            _##pName = [[NSMutableArray alloc] init];       \
+        }                                                   \
+        return ^id(type *val) {                             \
+            [_##pName addObject:val];                       \
+            return self;                                    \
+        };                                                  \
+    }
+
+/**
  *  The template of custom initializer.
  *  We can use this initializer to create the object,
  *  then use the block to update the property of the object.
