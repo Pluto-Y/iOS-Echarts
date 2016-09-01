@@ -76,5 +76,6 @@ PYPropertyEqualImpTemplate(PYAxis, PYAxisTick *, axisTick);
 PYPropertyEqualImpTemplate(PYAxis, PYAxisLabel *, axisLabel);
 PYPropertyEqualImpTemplate(PYAxis, PYAxisSplitLine *, splitLine);
 PYPropertyEqualImpTemplate(PYAxis, PYSplitArea *, splitArea);
+PYPropertyEqualImpTemplate(PYAxis, NSArray *, data);
 
 @end
