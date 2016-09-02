@@ -1,3 +1,15 @@
 language: objective-c
 osx_image: xcode7.3
-script: xcodebuild -project iOS-Echarts.xcodeproj -target iOS-Echarts -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO
+
+env:
+  matrix:
+    - TEST_TYPE=iOS
+    - TEST_TYPE=OSX
+
+script: 
+- |
+    if [ "$TEST_TYPE" = iOS ]; then
+      xcodebuild clean build -project iOS-Echarts.xcodeproj -target iOS-Echarts_iOS -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO
+    elif [ "$TEST_TYPE" = OSX]; then
+      xcodebuild clean build -project iOS-Echarts.xcodeproj -target iOS-Echarts_OSX -sdk macosx
+    fi
