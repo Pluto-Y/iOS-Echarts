@@ -66,21 +66,31 @@ static PYOrient PYOrientVertical   = @"vertical";
  *  Eg: the xAxis in `PYOptions`
  *  This can create a method named 'addXAxis'
  */
-#define PYAddMethodTemplate(cls, type, mName, pName)        \
-    - (cls *(^)(type *pName))add##mName;
+#define PYAddMethodTemplate(cls, type, mName, pName)                            \
+    - (cls *(^)(type *pName))add##mName;                                        \
+    - (cls *(^)(NSArray *arr))add##mName##Arr;                                  \
 
 /**
  *  the template of implemetion of add methods.
  */
-#define PYAddMethodImpTemplate(cls, type, mName, pName)     \
-    - (cls *(^)(type *pName))add##mName {                   \
-        if(_##pName == nil) {                               \
-            _##pName = [[NSMutableArray alloc] init];       \
-        }                                                   \
-        return ^id(type *val) {                             \
-            [_##pName addObject:val];                       \
-            return self;                                    \
-        };                                                  \
+#define PYAddMethodImpTemplate(cls, type, mName, pName)                         \
+    - (cls *(^)(type *pName))add##mName {                                       \
+        if(_##pName == nil) {                                                   \
+            _##pName = [[NSMutableArray alloc] init];                           \
+        }                                                                       \
+        return ^id(type *val) {                                                 \
+            [_##pName addObject:val];                                           \
+            return self;                                                        \
+        };                                                                      \
+    }                                                                           \
+    - (cls *(^)(NSArray *arr))add##mName##Arr {                                 \
+        if(_##pName == nil) {                                                   \
+            _##pName = [[NSMutableArray alloc] init];                           \
+        }                                                                       \
+        return ^id(NSArray *arr) {                                              \
+            [_##pName addObjectsFromArray:arr];                                 \
+            return self;                                                        \
+        };                                                                      \
     }
 
 /**
