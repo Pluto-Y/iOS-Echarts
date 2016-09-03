@@ -50,7 +50,7 @@ static NSArray<PYTooltipTrigger> *tooltipTriggerScope;
         _borderWidth = @(0);
         _padding = @(5);
         _axisPointer = [[PYAxisPointer alloc] init];
-        _axisPointer.type = PYAxisPointerLine;
+        _axisPointer.type = PYAxisPointerTypeLine;
         _axisPointer.lineStyle = [[PYLineStyle alloc] init];
         _axisPointer.lineStyle.color = PYRGBA(4, 8, 11, 1);
         _axisPointer.lineStyle.width = @(2);

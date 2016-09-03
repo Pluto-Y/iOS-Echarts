@@ -64,7 +64,7 @@
                 point.addDataArr(@[@{@"type" : @"max", @"name": @"最大值"},@{@"type" : @"min", @"name": @"最小值"}]);
             }])
             .markLineEqual([PYMarkLine initPYMarkLineWithBlock:^(PYMarkLine *markLine) {
-                markLine.dataEqual(@[@{@"type" : @"average", @"name": @"平均值"}]);
+                markLine.addDataArr(@[@{@"type" : @"average", @"name": @"平均值"}]);
             }]);
             
         }])
@@ -76,7 +76,7 @@
                 point.addDataArr(@[@{@"value" : @(2), @"name": @"周最低", @"xAxis":@(1), @"yAxis" : @(-1.5)}]);
             }])
             .markLineEqual([PYMarkLine initPYMarkLineWithBlock:^(PYMarkLine *markLine) {
-                markLine.dataEqual(@[@{@"type" : @"average", @"name": @"平均值"}]);
+                markLine.addDataArr(@[@{@"type" : @"average", @"name": @"平均值"}]);
             }]);
         }]);
     }];
@@ -465,6 +465,9 @@
                 .addData(@{@"type" : @"min", @"name": @"最小值",@"symbol": @"emptyCircle", @"itemStyle":@{@"normal":@{@"color":@"#dc143c",@"label":@{@"position":@"bottom"}}}})
                 .addData(@{@"type" : @"max", @"name": @"最大值", @"valueIndex" : @(0),@"symbol": @"emptyCircle", @"itemStyle":@{@"normal":@{@"color":@"#1e90ff",@"label":@{@"position":@"right"}}}})
                 .addData(@{@"type" : @"min", @"name": @"最小值", @"valueIndex" : @(0),@"symbol": @"emptyCircle", @"itemStyle":@{@"normal":@{@"color":@"#1e90ff",@"label":@{@"position":@"left"}}}});
+            }])
+            .markLineEqual([PYMarkLine initPYMarkLineWithBlock:^(PYMarkLine *markLine) {
+                
             }]);
         }]);
     }];

@@ -64,7 +64,7 @@ PYPropertyEqualTemplate(PYMarkLineEffect, NSNumber *, shadowBlur);
 @property (nonatomic, strong) PYBundling *bundling;
 @property (nonatomic, strong) PYMarkLineEffect *effect;
 @property (nonatomic, strong) PYItemStyle *itemStyle;
-@property (nonatomic, copy) NSArray *data;
+@property (nonatomic, copy) NSMutableArray *data;
 
 PYInitializerTemplate(PYMarkLine, markLine);
 
@@ -79,6 +79,8 @@ PYPropertyEqualTemplate(PYMarkLine, NSNumber *, precision);
 PYPropertyEqualTemplate(PYMarkLine, PYBundling *, bundling);
 PYPropertyEqualTemplate(PYMarkLine, PYMarkLineEffect *, effect);
 PYPropertyEqualTemplate(PYMarkLine, PYItemStyle *, itemStyle);
-PYPropertyEqualTemplate(PYMarkLine, NSArray *, data);
+PYPropertyEqualTemplate(PYMarkLine, NSMutableArray *, data);
+
+PYAddMethodTemplate(PYMarkLine, NSObject, Data, data);
 
 @end

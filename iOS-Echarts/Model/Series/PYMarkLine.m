@@ -70,6 +70,8 @@ PYPropertyEqualImpTemplate(PYMarkLine, NSNumber *, precision);
 PYPropertyEqualImpTemplate(PYMarkLine, PYBundling *, bundling);
 PYPropertyEqualImpTemplate(PYMarkLine, PYMarkLineEffect *, effect);
 PYPropertyEqualImpTemplate(PYMarkLine, PYItemStyle *, itemStyle);
-PYPropertyEqualImpTemplate(PYMarkLine, NSArray *, data);
+PYPropertyEqualImpTemplate(PYMarkLine, NSMutableArray *, data);
+
+PYAddMethodImpTemplate(PYMarkLine, NSObject, Data, data);
 
 @end
