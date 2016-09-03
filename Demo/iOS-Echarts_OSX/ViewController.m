@@ -22,7 +22,7 @@
 }
 
 - (void)initAll {
-    
+    [self reloadBtnClick:nil];
 }
 
 - (IBAction)reloadBtnClick:(id)sender {
