@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
+        <plugIn identifier="com.apple.WebKitIBPlugin" version="10116"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -672,7 +673,36 @@
                     <view key="view" wantsLayer="YES" id="m2S-Jp-Qdl">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <webView translatesAutoresizingMaskIntoConstraints="NO" id="3xv-gz-tiG" customClass="PYEchartsView">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="240"/>
+                                <webPreferences key="preferences" defaultFontSize="16" defaultFixedFontSize="13" minimumFontSize="0">
+                                    <nil key="identifier"/>
+                                </webPreferences>
+                            </webView>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="4bm-qf-cV1">
+                                <rect key="frame" x="384" y="237" width="82" height="32"/>
+                                <buttonCell key="cell" type="push" title="Reload" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="sAP-U4-OIU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="reloadBtnClick:" target="XfG-lQ-9wD" id="P6M-LF-Pgb"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstAttribute="bottom" secondItem="3xv-gz-tiG" secondAttribute="bottom" id="9Ji-jO-UkY"/>
+                            <constraint firstItem="3xv-gz-tiG" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="30" id="Nwr-Yd-ioq"/>
+                            <constraint firstAttribute="trailing" secondItem="3xv-gz-tiG" secondAttribute="trailing" id="OYc-Vu-8xy"/>
+                            <constraint firstItem="4bm-qf-cV1" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="5" id="SMJ-am-oG6"/>
+                            <constraint firstItem="3xv-gz-tiG" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="UHs-gH-8AG"/>
+                            <constraint firstAttribute="trailing" secondItem="4bm-qf-cV1" secondAttribute="trailing" constant="20" id="o9f-JC-fqP"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="echartsView" destination="3xv-gz-tiG" id="r4y-qH-wEz"/>
+                    </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -6,8 +6,6 @@
 //  Copyright (c) 2015年 Pluto Y. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
-
 @class PYEchartsView;
 
 @protocol PYEchartsViewDelegate <NSObject>
@@ -57,11 +55,11 @@ extern PYEchartAction const PYEchartActionMapRoam;
 
 typedef void (^PYEchartActionHandler) (NSDictionary *params);
 
-@interface PYEchartsView : UIWebView<UIWebViewDelegate> {
+@interface PYEchartsView : PY_WEB_VIEW<PY_WEB_DELEGATE> {
     PYOption *option;
 }
 
-@property (nonatomic, assign) UIEdgeInsets padding;
+@property (nonatomic, assign) PY_EDGE_INSET padding;
 @property (nonatomic, assign) CGSize divSize;
 @property (nonatomic, assign) CGFloat maxWidth;
 @property (nonatomic, assign) BOOL scalable;
@@ -147,6 +145,6 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
  *  @param type           The type you want get, now just support `PYEchartsViewImageTypeJEPG` and `PYEchartsViewImageTypePNG`.
  *  @param completedBlock A block called when get the image from echarts.
  */
-- (void)obtainEchartsImageWithType:(PYEchartsViewImageType)type completed:(void(^)(UIImage *image))completedBlock;
+- (void)obtainEchartsImageWithType:(PYEchartsViewImageType)type completed:(void(^)(PY_IMAGE *image))completedBlock;
 
 @end

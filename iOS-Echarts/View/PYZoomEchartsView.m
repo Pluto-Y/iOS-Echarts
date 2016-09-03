@@ -25,11 +25,14 @@
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
+#if TARGET_OS_IPHONE || TARGET_OS_TV
         UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchHandle:)];
         [self addGestureRecognizer:pinchGesture];
         
         UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panHandle:)];
         [self addGestureRecognizer:panGesture];
+#elif TARGET_OS_MAC
+#endif
     }
     return self;
 }
@@ -37,15 +40,19 @@
 - (instancetype)initWithCoder:(NSCoder *)coder {
     self = [super initWithCoder:coder];
     if (self) {
+#if TARGET_OS_IPHONE || TARGET_OS_TV
         UIPinchGestureRecognizer *pinchGesture = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchHandle:)];
         [self addGestureRecognizer:pinchGesture];
         
         UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panHandle:)];
         [self addGestureRecognizer:panGesture];
+#elif TARGET_OS_MAC
+#endif
     }
     return self;
 }
 
+#if TARGET_OS_IPHONE || TARGET_OS_TV
 /**
  *  The pinch gesture handle scription
  *  To deal with the data zoom
@@ -121,6 +128,9 @@
             break;
     }
 }
+
+#elif TARGET_OS_MAC
+#endif
 
 - (void)setOption:(PYOption *)pyOption {
     if (pyOption.dataZoom == nil) {

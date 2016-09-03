@@ -1,0 +1,15 @@
+//
+//  iOS-Echarts-OSX-PrefixHeader.pch
+//  iOS-Echarts
+//
+//  Created by Pluto Y on 9/3/16.
+//  Copyright © 2016 pluto-y. All rights reserved.
+//
+
+#ifndef iOS_Echarts_OSX_PrefixHeader_pch
+#define iOS_Echarts_OSX_PrefixHeader_pch
+
+#import "iOS-Echarts.h"
+#import "PYDemoOptions.h"
+
+#endif /* iOS_Echarts_OSX_PrefixHeader_pch */

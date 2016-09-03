@@ -9,7 +9,7 @@
 #import "PYColor.h"
 
 @interface PYColor() {
-    UIColor *color;
+    PY_COLOR *color;
     NSString *colorStr;
 }
 
@@ -20,16 +20,16 @@
 - (instancetype)init {
     self = [super init];
     if (self) {
-        color = [UIColor clearColor];
+        color = [PY_COLOR clearColor];
         colorStr = @"";
     }
     return self;
 }
 
-- (instancetype)initWithColor:(UIColor *)uiColor {
+- (instancetype)initWithColor:(PY_COLOR *)pyColor {
     self = [super init];
     if (self) {
-        color = uiColor;
+        color = pyColor;
         colorStr = @"";
     }
     return self;
@@ -67,7 +67,7 @@
             [NSException raise:@"Invalid color value" format: @"Color value %@ is invalid.  It should be a hex value of the form #RBG, #ARGB, #RRGGBB, or #AARRGGBB", hexString];
             break;
     }
-    return [[PYColor alloc] initWithColor:[UIColor colorWithRed: red green: green blue: blue alpha: alpha]];
+    return [[PYColor alloc] initWithColor:[PY_COLOR colorWithRed: red green: green blue: blue alpha: alpha]];
 }
 
 + (CGFloat)colorComponentFrom:(NSString *)string start:(NSUInteger)start length:(NSUInteger)length {
@@ -84,8 +84,8 @@
  *
  *  @param uiColor 颜色
  */
-- (void)setColor:(UIColor *) uiColor {
-    color = uiColor;
+- (void)setColor:(PY_COLOR *) pyColor {
+    color = pyColor;
 }
 
 - (NSString *)description {

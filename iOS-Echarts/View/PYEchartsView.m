@@ -42,7 +42,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     // This params store the handler of the echart actions
     NSMutableDictionary<NSString *, PYEchartActionHandler> *actionHandleBlocks;
     // This block will store for get image from echarts and will clear when the block is called
-    void (^obtainImgCompletedBlock)(UIImage *image);
+    void (^obtainImgCompletedBlock)(PY_IMAGE *image);
 }
 
 @end
@@ -74,7 +74,11 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     if (bundlePath != nil) { // If 'iOS-Echarts' is installed by Cocoapods and don't use 'use_frameworks!' command
         echartsBundle = [NSBundle bundleWithPath:bundlePath];
     } else { // If 'iOS-Echarts' is installed manually or use 'use_frameworks!' command
+#if TARGET_OS_IPHONE || TARGET_OS_TV
         echartsBundle = [NSBundle mainBundle];
+#elif TARGET_OS_MAC
+        echartsBundle = [NSBundle bundleWithPath:[NSBundle mainBundle].resourcePath];
+#endif
         
         // If 'iOS-Echarts' is install by Cocoapods and use 'use_frameworks!' command
         if ([echartsBundle pathForResource:@"echarts" ofType:@"html"] == nil) {
@@ -96,6 +100,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
         NSLog(@"Error: Can't load echart's files.");
     }
     
+#if TARGET_OS_IPHONE || TARGET_OS_TV
     self.delegate = self;
     self.scrollView.bounces = NO;
     self.scrollView.scrollEnabled = NO;
@@ -103,7 +108,13 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     // set the view background is transparent
     self.opaque = NO;
     self.backgroundColor = [UIColor clearColor];
-    
+    UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchGestureHandle:)];
+    pinchGestureRecognizer.cancelsTouchesInView = NO;
+    [self addGestureRecognizer:pinchGestureRecognizer];
+   
+#elif TARGET_OS_MAC
+    self.frameLoadDelegate = self;
+#endif
     _divSize = CGSizeZero;
     minWidth = self.frame.size.width - 10;
     _scalable = NO;
@@ -111,10 +122,6 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     
     _maxWidth = NSIntegerMax;
     actionHandleBlocks = [[NSMutableDictionary alloc] init];
-    
-    UIPinchGestureRecognizer *pinchGestureRecognizer = [[UIPinchGestureRecognizer alloc] initWithTarget:self action:@selector(pinchGestureHandle:)];
-    pinchGestureRecognizer.cancelsTouchesInView = NO;
-    [self addGestureRecognizer:pinchGestureRecognizer];
     
 }
 
@@ -131,7 +138,11 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  *  Load the web view request
  */
 - (void)loadEcharts {
+#if TARGET_OS_IPHONE || TARGET_OS_TV
     [self loadHTMLString:localHtmlContents baseURL:[NSURL fileURLWithPath: bundlePath]];
+#elif TARGET_OS_MAC
+    [[self mainFrame] loadHTMLString:localHtmlContents baseURL:[NSURL fileURLWithPath: bundlePath]];
+#endif
 }
 
 /**
@@ -140,7 +151,11 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  *  @param methodWithParam The format:`[instance.]methodname(params)`
  */
 - (void)callJsMethods:(NSString *)methodWithParam {
+#if TARGET_OS_IPHONE ||TARGET_OS_TV
     [self stringByEvaluatingJavaScriptFromString:methodWithParam];
+#elif TARGET_OS_MAC
+    [[self windowScriptObject] evaluateWebScript:methodWithParam];
+#endif
 }
 
 /**
@@ -166,7 +181,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  *  @param type           The type you want get, now just support `PYEchartsViewImageTypeJEPG` and `PYEchartsViewImageTypePNG`.
  *  @param completedBlock A block called when get the image from echarts.
  */
-- (void)obtainEchartsImageWithType:(PYEchartsViewImageType)type completed:(void(^)(UIImage *image))completedBlock {
+- (void)obtainEchartsImageWithType:(PYEchartsViewImageType)type completed:(void(^)(PY_IMAGE *image))completedBlock {
     if (![type isEqualToString:PYEchartsViewImageTypePNG] && ![type isEqualToString:PYEchartsViewImageTypeJEPG]) {
         NSLog(@"Error: Echarts does not support this type --- %@, so it will be obtain JEPG type", type);
         type = PYEchartsViewImageTypeJEPG;
@@ -246,6 +261,8 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
 }
 
 #pragma mark - Delegate
+
+#if TARGET_OS_IPHONE || TARGET_OS_TV
 #pragma mark UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     if (option == nil) {
@@ -303,11 +320,11 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
         if (obtainImgCompletedBlock != nil) {
             __weak typeof(obtainImgCompletedBlock) block = obtainImgCompletedBlock;
             dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-                UIImage *image = nil;
+                PY_IMAGE *image = nil;
                 NSString *imgBase64Str = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
                 NSURL *url = [NSURL URLWithString:imgBase64Str];
                 NSData *imgData = [NSData dataWithContentsOfURL:url];
-                image = [UIImage imageWithData:imgData];
+                image = [PY_IMAGE imageWithData:imgData];
                 dispatch_sync(dispatch_get_main_queue(), ^{
                     block(image);
                 });
@@ -338,6 +355,44 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     return NO;
 }
 
+#elif TARGET_OS_MAC
+
+- (void)webView:(WebView *)webView didFinishLoadForFrame:(WebFrame *)frame {
+    if (option == nil) {
+        NSLog(@"Warning: The option is nil.");
+        [self callJsMethods:@"initEchartView()"];
+        return ;
+    }
+    [self resizeDiv];
+    
+    NSString *jsonStr = [PYJsonUtil getJSONString:option];
+    NSString *js;
+    PYLog(@"%@",jsonStr);
+    
+    if (_noDataLoadingOption != nil) {
+        PYLog(@"nodataLoadingOption:%@", [PYJsonUtil getJSONString:_noDataLoadingOption]);
+        NSString *noDataLoadingOptionString = [NSString stringWithFormat:@"{\"noDataLoadingOption\":%@ \n}", [PYJsonUtil getJSONString:_noDataLoadingOption]];
+        js = [NSString stringWithFormat:@"%@(%@, %@)", @"loadEcharts", jsonStr, noDataLoadingOptionString];
+    } else {
+        js = [NSString stringWithFormat:@"%@(%@)", @"loadEcharts", jsonStr];
+    }
+    //    [webView stringByEvaluatingJavaScriptFromString:js];
+    [[webView windowScriptObject] evaluateWebScript:@"alert('123')"];
+    [[webView windowScriptObject] callWebScriptMethod:@"alert" withArguments:@[@"234"]];
+    [[webView windowScriptObject] evaluateWebScript:js];
+    
+    for (NSString * name in actionHandleBlocks.allKeys) {
+        PYLog(@"%@", [NSString stringWithFormat:@"addEchartActionHandler('%@')",name]);
+        [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler('%@')",name]];//
+    }
+    if (self.eDelegate && [self.eDelegate respondsToSelector:@selector(echartsViewDidFinishLoad:)]) {
+        [self.eDelegate echartsViewDidFinishLoad:self];
+    }
+}
+
+#endif
+
+#if TARGET_OS_IPHONE || TARGET_OS_TV
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return YES;
 }
@@ -381,5 +436,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     
     lastScale = [recognizer scale];
 }
+
+#endif
 
 @end
