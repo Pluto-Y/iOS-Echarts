@@ -10,10 +10,10 @@
 #import "PYLineStyle.h"
 #import "PYAreaStyle.h"
 
-PYAxisPointerType PYAxisPointerLine = @"line";
-PYAxisPointerType PYAxisPointerCross = @"cross";
-PYAxisPointerType PYAxisPointerShadow = @"shadow";
-PYAxisPointerType PYAxisPointerNone = @"none";
+PYAxisPointerType PYAxisPointerTypeLine = @"line";
+PYAxisPointerType PYAxisPointerTypeCross = @"cross";
+PYAxisPointerType PYAxisPointerTypeShadow = @"shadow";
+PYAxisPointerType PYAxisPointerTypeNone = @"none";
 
 static NSArray<PYAxisPointerType> *axisPointScope;
 @interface PYAxisPointer()
@@ -26,7 +26,7 @@ static NSArray<PYAxisPointerType> *axisPointScope;
 + (void)initialize
 {
     if (self == [PYAxisPointer class]) {
-        axisPointScope = @[PYAxisPointerLine, PYAxisPointerCross, PYAxisPointerShadow, PYAxisPointerNone];
+        axisPointScope = @[PYAxisPointerTypeLine, PYAxisPointerTypeCross, PYAxisPointerTypeShadow, PYAxisPointerTypeNone];
     }
 }
 
@@ -34,7 +34,7 @@ static NSArray<PYAxisPointerType> *axisPointScope;
 {
     self = [super init];
     if (self) {
-        _type = PYAxisPointerLine;
+        _type = PYAxisPointerTypeLine;
     }
     return self;
 }
@@ -42,7 +42,7 @@ static NSArray<PYAxisPointerType> *axisPointScope;
 - (void)setType:(NSString *)type {
     if (![axisPointScope containsObject:type]) {
         NSLog(@"ERROR: AxisPoint does not support the type --- %@", type);
-        _type = PYAxisPointerLine;
+        _type = PYAxisPointerTypeLine;
         return;
     }
     _type = [type copy];
