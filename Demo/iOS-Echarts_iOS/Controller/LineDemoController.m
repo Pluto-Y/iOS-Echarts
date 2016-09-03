@@ -60,10 +60,10 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
             option = [PYLineDemoOptions irregularLineOption];
             break;
         case LineDemoTypeBtnTagIrregularLine2:
-            [self showIrregularLine2Demo];
+            option = [PYLineDemoOptions irregularLine2Option];
             break;
         case LineDemoTypeBtnTagLine:
-            [self showLineDemo];
+            option = [PYLineDemoOptions lineOption];
             break;
         case LineDemoTypeBtnTagLogarithmic:
             option = [PYLineDemoOptions logarithmicOption];
@@ -79,148 +79,6 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
 
 - (void)showAreaDemo {
     
-}
-
-- (void)showLineDemo {
-    PYOption *option = [[PYOption alloc] init];
-    option.tooltip = [[PYTooltip alloc] init];
-    option.tooltip.trigger = @"axis";
-    option.legend = [[PYLegend alloc] init];
-    option.legend.data = @[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",@"搜索引擎"];
-    PYGrid *grid = [[PYGrid alloc] init];
-    grid.x = @(40);
-    grid.x2 = @(50);
-    option.grid = grid;
-    option.toolbox = [[PYToolbox alloc] init];
-    option.toolbox.show = YES;
-    option.toolbox.feature = [[PYToolboxFeature alloc] init];
-    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
-    option.toolbox.feature.mark.show = YES;
-    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
-    option.toolbox.feature.dataView.show = YES;
-    option.toolbox.feature.dataView.readOnly = NO;
-    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
-    option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar", @"stack", @"tiled"];
-    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
-    option.toolbox.feature.restore.show = YES;
-    option.calculable = YES;
-    PYAxis *xAxis = [[PYAxis alloc] init];
-    xAxis.type = @"category";
-    xAxis.boundaryGap = @(NO);
-    xAxis.data = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
-    option.xAxis = [[NSMutableArray alloc] initWithObjects:xAxis, nil];
-    PYAxis *yAxis = [[PYAxis alloc] init];
-    yAxis.type = @"value";
-    option.yAxis = [[NSMutableArray alloc] initWithObjects:yAxis, nil];
-    NSMutableArray *serieses = [[NSMutableArray alloc] init];
-    PYCartesianSeries *series1 = [[PYCartesianSeries alloc] init];
-    series1.name = @"邮件营销";
-    series1.type = PYSeriesTypeLine;
-    series1.stack = @"总量";
-    series1.itemStyle = [[PYItemStyle alloc] init];
-    series1.itemStyle.normal = [[PYItemStyleProp alloc] init];
-    series1.itemStyle.normal.areaStyle = [[PYAreaStyle alloc] init];
-    series1.itemStyle.normal.areaStyle.color = @" (function (){var zrColor = require('zrender/tool/color');return zrColor.getLinearGradient(0, 200, 0, 400,[[0, 'rgba(255,0,0,0.8)'],[0.8, 'rgba(255,255,255,0.1)']])})()";
-    series1.data = @[@(120),@(132),@(101),@(134),@{@"value":@(90), @"symbol":@"droplet", @"symbolSize":@(5)},@(230),@(210)];
-    [serieses addObject:series1];
-    PYCartesianSeries *series2 = [[PYCartesianSeries alloc] init];
-    series2.name = @"联盟广告";
-    series2.type = PYSeriesTypeLine;
-    series2.stack = @"总量";
-    series2.smooth = YES;
-    series2.symbol = @"image://../asset/ico/favicon.png";
-    series2.symbolSize = @(8);
-    series2.itemStyle = [[PYItemStyle alloc] init];
-    series2.itemStyle.normal = [[PYItemStyleProp alloc] init];
-    series2.itemStyle.normal.areaStyle = [[PYAreaStyle alloc] init];
-    series2.itemStyle.normal.areaStyle.type = @"default";
-    series2.data = @[@(120), @(82), @{@"value":@(201), @"symbol":@"start", @"symbolSize":@(15),@"itemStyle":@{@"normal":@{@"label":@{@"show":@(YES),@"textStyle":@{@"fontSize":@(20),@"fontFamily":@"微软雅黑",@"fontWeight":@"bold"}}}}}, @{@"value":@(134),@"symbol":@"none"}, @(190), @{@"value":@(230),@"symbol":@"emptypin",@"symbolSize":@(8)}, @(110)];
-    [serieses addObject:series2];
-    PYCartesianSeries *series4 = [[PYCartesianSeries alloc] init];
-    series4.name = @"直接访问";
-    series4.type = PYSeriesTypeLine;
-    series4.stack = @"总量";
-    series4.symbol = @"arrow";
-    series4.symbolSize = @(6);
-    series4.symbolRotate = @(-45);
-    series4.itemStyle = [[PYItemStyle alloc] init];
-    series4.itemStyle.normal = [[PYItemStyleProp alloc] init];
-    series4.itemStyle.normal.color = PYRGBA(255, 0, 0, 1);
-    series4.itemStyle.normal.lineStyle = [[PYLineStyle alloc] init];
-    series4.itemStyle.normal.lineStyle.width = @(2);
-    series4.itemStyle.normal.lineStyle.type = @"dashed";
-    series4.itemStyle.emphasis = [[PYItemStyleProp alloc] init];
-    series4.itemStyle.emphasis.color = PYRGBA(0, 0, 255, 1);
-    series4.data = @[@(320), @(332), @"-", @(334), @{@"value":@(390),@"symbol":@"star6",@"symbolSize":@(20),@"symbolRotate":@(10),@"itemStyle":@{@"normal":@{@"color":@"yellowgreen"},@"emphasis":@{@"color":@"orange",@"lable":@{@"show":@(YES),@"position":@"inside",@"textStyle":@{@"fontSize":@(20)}}}}}, @(330), @(320)];
-    [serieses addObject:series4];
-    PYCartesianSeries *series5 = [[PYCartesianSeries alloc] init];
-    series5.name = @"搜索引擎";
-    series5.type = PYSeriesTypeLine;
-    series5.stack = @"总量";
-    series5.symbol = @"emptyCircle";
-    series5.itemStyle = [[PYItemStyle alloc] init];
-    series5.itemStyle.normal = [[PYItemStyleProp alloc] init];
-    series5.itemStyle.normal.lineStyle = [[PYLineStyle alloc] init];
-    series5.itemStyle.normal.lineStyle.width = @(2);
-    series5.itemStyle.normal.lineStyle.color = @"(function (){var zrColor = require('zrender/tool/color');return zrColor.getLinearGradient(0, 0, 1000, 0,[[0, 'rgba(255,0,0,0.8)'],[0.8, 'rgba(255,255,0,0.8)']])})()";
-    series5.itemStyle.normal.lineStyle.shadowColor = PYRGBA(0, 0, 0, .5);
-    series5.itemStyle.normal.lineStyle.shadowBlur = @(10);
-    series5.itemStyle.normal.lineStyle.shadowOffsetX = @(8);
-    series5.itemStyle.normal.lineStyle.shadowOffsetY = @(8);
-    series5.itemStyle.emphasis = [[PYItemStyleProp alloc] init];
-    series5.itemStyle.emphasis.label = [[PYLabel alloc] init];
-    series5.itemStyle.emphasis.label.show = YES;
-    series5.data = @[@(620), @(732), @(791), @{@"value":@(734),@"symbol":@"emptyHeart",@"symbolSize":@(10)}, @(890), @(930), @(820)];
-    [serieses addObject:series5];
-    [option setSeries:serieses];
-    [_kEchartView setOption:option];
-}
-
-- (void)showIrregularLine2Demo {
-    PYOption *option = [[PYOption alloc] init];
-    option.title = [[PYTitle alloc] init];
-    option.title.text = @"时间坐标折线图";
-    option.title.subtext = @"dataZoom支持";
-    PYGrid *grid = [[PYGrid alloc] init];
-    grid.x = @(40);
-    grid.x2 = @(50);
-    option.grid = grid;
-    option.tooltip = [[PYTooltip alloc] init];
-    option.tooltip.trigger = @"item";
-    option.tooltip.formatter = @"(function(params){var date = new Date(params.value[0]);data = date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes(); return data + '<br/>' + params.value[1] + ',' + params.value[2]})";
-    option.toolbox = [[PYToolbox alloc] init];
-    option.toolbox.show = YES;
-    option.toolbox.feature = [[PYToolboxFeature alloc] init];
-    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
-    option.toolbox.feature.mark.show = YES;
-    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
-    option.toolbox.feature.dataView.show = YES;
-    option.toolbox.feature.dataView.readOnly = NO;
-    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
-    option.toolbox.feature.restore.show = YES;
-    option.dataZoom = [[PYDataZoom alloc] init];
-    option.dataZoom.show = YES;
-    option.dataZoom.start = @(70);
-    option.legend = [[PYLegend alloc] init];
-    option.legend.data = @[@"series1"];
-    option.grid = [[PYGrid alloc] init];
-    option.grid.y2 = @(80);
-    PYAxis *xAxis = [[PYAxis alloc] init];
-    xAxis.type = PYAxisTypeTime;
-    xAxis.splitNumber = @(10);
-    option.xAxis = [[NSMutableArray alloc] initWithObjects:xAxis, nil];
-    PYAxis *yAxis = [[PYAxis alloc] init];
-    yAxis.type = PYAxisTypeValue;
-    option.yAxis = [[NSMutableArray alloc] initWithObjects:yAxis, nil];
-    PYCartesianSeries *series = [[PYCartesianSeries alloc] init];
-    series.name = @"series1";
-    series.type = PYSeriesTypeLine;
-    series.showAllSymbol = YES;
-    series.symbolSize = @"(function(value) {return Math.round(value[2]/100) + 2;})";
-    series.data = @"(function () {var d = [];var len = 0;var now = new Date();var value;while (len++ < 200) {d.push([new Date(2014, 9, 1, 0, len * 10000),(Math.random()*30).toFixed(2) - 0,(Math.random()*100).toFixed(2) - 0]);}return d;})()";
-    option.series = [[NSMutableArray alloc] initWithObjects:series, nil];
-    [_kEchartView setOption:option];
 }
 
 @end

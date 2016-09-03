@@ -485,11 +485,159 @@
 }
 
 + (PYOption *)irregularLine2Option {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"时间坐标折线图")
+            .subtextEqual(@"dataZoom支持");
+        }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.xEqual(@40).x2Equal(@50).y2Equal(@80);
+        }])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerItem)
+            .formatterEqual(@"(function(params){var date = new Date(params.value[0]);data = date.getFullYear() + \'-\' + (date.getMonth() + 1) + \'-\' + date.getDate() + \' \' + date.getHours() + \':\' + date.getMinutes(); return data + \'<br/>\' + params.value[1] + \',\' + params.value[2]})");
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .dataZoomEqual([PYDataZoom initPYDataZoomWithBlock:^(PYDataZoom *dataZoom) {
+            dataZoom.showEqual(YES).startEqual(@70);
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.dataEqual(@[@"series1"]);
+        }])
+        .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeTime)
+            .splitNumberEqual(@10);
+        }])
+        .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.symbolSizeEqual(@"(function(value) {return Math.round(value[2]/100) + 2;})").showAllSymbolEqual(YES).nameEqual(@"series1").typeEqual(PYSeriesTypeLine).dataEqual(@"(function () {var d = [];var len = 0;var now = new Date();var value;while (len++ < 200) {d.push([new Date(2014, 9, 1, 0, len * 10000),(Math.random()*30).toFixed(2) - 0,(Math.random()*100).toFixed(2) - 0]);}return d;})()");
+        }]);
+    }];
 }
 
 + (PYOption *)lineOption {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerAxis);
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.dataEqual(@[@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",@"搜索引擎"]);
+        }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.xEqual(@40).x2Equal(@50).y2Equal(@80);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .magicTypeEqual([PYToolboxFeatureMagicType initPYToolboxFeatureMagicTypeWithBlock:^(PYToolboxFeatureMagicType *magicType) {
+                    magicType.showEqual(YES).typeEqual(@[PYSeriesTypeLine, PYSeriesTypeBar, @"stack", @"tiled"]);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .calculableEqual(YES)
+        .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeCategory).boundaryGapEqual(@NO).dataEqual(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"]);
+        }])
+        .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.stackEqual(@"总量")
+            .nameEqual(@"邮件营销")
+            .typeEqual(PYSeriesTypeLine)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.areaStyleEqual([PYAreaStyle initPYAreaStyleWithBlock:^(PYAreaStyle *areaStyle) {
+                        areaStyle.colorEqual(@" (function (){var zrColor = require('zrender/tool/color');return zrColor.getLinearGradient(0, 200, 0, 400,[[0, 'rgba(255,0,0,0.8)'],[0.8, 'rgba(255,255,255,0.1)']])})()");
+                    }]);
+                }]);
+            }])
+            .dataEqual(@[@(120),@(132),@(101),@(134),@{@"value":@(90), @"symbol":@"droplet", @"symbolSize":@(5)},@(230),@(210)]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.stackEqual(@"总量")
+            .smoothEqual(YES)
+            .symbolEqual(@"image://../asset/ico/favicon.png")
+            .symbolSizeEqual(@8)
+            .nameEqual(@"联盟广告")
+            .typeEqual(PYSeriesTypeLine)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.areaStyleEqual([PYAreaStyle initPYAreaStyleWithBlock:^(PYAreaStyle *areaStyle) {
+                        areaStyle.typeEqual(PYAreaStyleTypeDefault);
+                    }]);
+                }]);
+            }])
+            .dataEqual(@[@(120), @(82), @{@"value":@(201), @"symbol":@"start", @"symbolSize":@(15),@"itemStyle":@{@"normal":@{@"label":@{@"show":@(YES),@"textStyle":@{@"fontSize":@(20),@"fontFamily":@"微软雅黑",@"fontWeight":@"bold"}}}}}, @{@"value":@(134),@"symbol":@"none"}, @(190), @{@"value":@(230),@"symbol":@"emptypin",@"symbolSize":@(8)}, @(110)]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.stackEqual(@"总量")
+            .smoothEqual(YES)
+            .symbolEqual(PYSymbolArrow)
+            .symbolSizeEqual(@6)
+            .symbolRotateEqual(@(-45))
+            .nameEqual(@"直接访问")
+            .typeEqual(PYSeriesTypeLine)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.colorEqual(PYRGBA(255, 0, 0, 1))
+                    .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                        lineStyle.widthEqual(@2).typeEqual(PYLineStyleTypeDashed);
+                    }]);
+                }]).emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+                    emphasis.colorEqual(PYRGBA(0, 0, 255, 1));
+                }]);
+            }])
+            .dataEqual(@[@(320), @(332), @"-", @(334), @{@"value":@(390),@"symbol":@"star6",@"symbolSize":@(20),@"symbolRotate":@(10),@"itemStyle":@{@"normal":@{@"color":@"yellowgreen"},@"emphasis":@{@"color":@"orange",@"lable":@{@"show":@(YES),@"position":@"inside",@"textStyle":@{@"fontSize":@(20)}}}}}, @(330), @(320)]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.stackEqual(@"总量")
+            .symbolEqual(PYSymbolEmptyCircle)
+            .nameEqual(@"搜索引擎")
+            .typeEqual(PYSeriesTypeLine)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                        lineStyle.widthEqual(@2)
+                        .colorEqual(@"(function (){var zrColor = require('zrender/tool/color');return zrColor.getLinearGradient(0, 0, 1000, 0,[[0, 'rgba(255,0,0,0.8)'],[0.8, 'rgba(255,255,0,0.8)']])})()")
+                        .shadowColorEqual(PYRGBA(0, 0, 0, .5))
+                        .shadowBlurEqual(@10)
+                        .shadowOffsetXEqual(@8)
+                        .shadowOffsetYEqual(@8);
+                    }]);
+                }]).emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+                    emphasis.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES);
+                    }]);
+                }]);
+            }])
+            .dataEqual(@[@(620), @(732), @(791), @{@"value":@(734),@"symbol":@"emptyHeart",@"symbolSize":@(10)}, @(890), @(930), @(820)]);
+        }]);
+    }];
 }
 
 + (PYOption *)logarithmicOption {
