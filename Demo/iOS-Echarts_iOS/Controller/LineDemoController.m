@@ -57,7 +57,7 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
             option = [PYLineDemoOptions stackedAreaOption];
             break;
         case LindDemoTypeBtnTagIrregularLine:
-            [self showIrregularLineDemo];
+            option = [PYLineDemoOptions irregularLineOption];
             break;
         case LineDemoTypeBtnTagIrregularLine2:
             [self showIrregularLine2Demo];
@@ -220,90 +220,6 @@ typedef NS_ENUM(NSInteger, LineDemoTypeBtnTag) {
     series.symbolSize = @"(function(value) {return Math.round(value[2]/100) + 2;})";
     series.data = @"(function () {var d = [];var len = 0;var now = new Date();var value;while (len++ < 200) {d.push([new Date(2014, 9, 1, 0, len * 10000),(Math.random()*30).toFixed(2) - 0,(Math.random()*100).toFixed(2) - 0]);}return d;})()";
     option.series = [[NSMutableArray alloc] initWithObjects:series, nil];
-    [_kEchartView setOption:option];
-}
-
-- (void)showIrregularLineDemo {
-    PYOption *option = [[PYOption alloc] init];
-    option.title = [[PYTitle alloc] init];
-    option.title.text = @"双数值轴折线";
-    option.title.subtext = @"纯属虚构";
-    PYGrid *grid = [[PYGrid alloc] init];
-    grid.x = @(40);
-    grid.x2 = @(50);
-    option.grid = grid;
-    option.tooltip = [[PYTooltip alloc] init];
-    option.tooltip.trigger = @"axis";
-    option.tooltip.axisPointer = [[PYAxisPointer alloc] init];
-    option.tooltip.axisPointer.show = YES;
-    option.tooltip.axisPointer.type = @"cross";
-    option.tooltip.axisPointer.lineStyle = [[PYLineStyle alloc] init];
-    option.tooltip.axisPointer.lineStyle.type = @"dashed";
-    option.tooltip.axisPointer.lineStyle.width = @(1);
-    option.tooltip.formatter = @"(function(params){return params.seriesName + ':[' + params.value[0] + ',' + params.value[1] + ']'})";
-    option.legend = [[PYLegend alloc] init];
-    option.legend.data = @[@"数据1",@"数据2"];
-    option.toolbox = [[PYToolbox alloc] init];
-    option.toolbox.show = YES;
-    option.toolbox.feature = [[PYToolboxFeature alloc] init];
-    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
-    option.toolbox.feature.mark.show = YES;
-    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
-    option.toolbox.feature.dataView.show = YES;
-    option.toolbox.feature.dataView.readOnly = NO;
-    option.toolbox.feature.magicType = [[PYToolboxFeatureMagicType alloc] init];
-    option.toolbox.feature.magicType.show = YES;
-    option.toolbox.feature.magicType.type = @[PYSeriesTypeLine, @"bar"];
-    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
-    option.toolbox.feature.restore.show = YES;
-    option.calculable = YES;
-    PYAxis *xAxis = [[PYAxis alloc] init];
-    xAxis.type = @"value";
-    option.xAxis = [[NSMutableArray alloc] initWithObjects:xAxis, nil];
-    PYAxis *yAxis = [[PYAxis alloc] init];
-    yAxis.type = @"value";
-    yAxis.axisLine = [[PYAxisLine alloc] init];
-    yAxis.axisLine.lineStyle = [[PYLineStyle alloc] init];
-    yAxis.axisLine.lineStyle.color = PYRGBA(220, 20, 60, 1);
-    option.yAxis = [[NSMutableArray alloc] initWithObjects:yAxis, nil];
-    NSMutableArray *serieses = [[NSMutableArray alloc] init];
-    PYCartesianSeries *series1 = [[PYCartesianSeries alloc] init];
-    series1.name = @"数据1";
-    series1.smooth = YES;
-    series1.type = PYSeriesTypeLine;
-    series1.itemStyle = [[PYItemStyle alloc] init];
-    series1.itemStyle.normal = [[PYItemStyleProp alloc] init];
-    series1.itemStyle.normal.areaStyle = [[PYAreaStyle alloc] init];
-    series1.itemStyle.normal.areaStyle.type = @"default";
-    series1.data = @[@[@(1.5), @(10)],@[@(5), @(7)],@[@(8),@(8)],@[@(12),@(6)],@[@(11),@(12)],@[@(16),@(9)],@[@(17),@(4)],@[@(19),@(9)]];
-    series1.markPoint = [[PYMarkPoint alloc] init];
-    series1.markPoint.data = @[
-                               // 纵轴，默认
-                               @{@"type" : @"max", @"name": @"最大值",@"symbol": @"emptyCircle", @"itemStyle":@{@"normal":@{@"color":@"#dc143c",@"label":@{@"position":@"top"}}}},
-                               @{@"type" : @"min", @"name": @"最小值",@"symbol": @"emptyCircle", @"itemStyle":@{@"normal":@{@"color":@"#dc143c",@"label":@{@"position":@"bottom"}}}},
-                               // 横轴
-                               @{@"type" : @"max", @"name": @"最大值", @"valueIndex" : @(0),@"symbol": @"emptyCircle", @"itemStyle":@{@"normal":@{@"color":@"#1e90ff",@"label":@{@"position":@"right"}}}},
-                               @{@"type" : @"min", @"name": @"最小值", @"valueIndex" : @(0),@"symbol": @"emptyCircle", @"itemStyle":@{@"normal":@{@"color":@"#1e90ff",@"label":@{@"position":@"left"}}}}
-                               ];
-    series1.markLine = [[PYMarkLine alloc] init];
-    series1.markLine.data = @[
-                              // 纵轴，默认
-                              @{@"type" : @"max", @"name": @"最大值", @"itemStyle":@{@"normal":@{@"color":@"#dc143c"}}},
-                              @{@"type" : @"min", @"name": @"最小值", @"itemStyle":@{@"normal":@{@"color":@"#dc143c"}}},
-                              @{@"type" : @"average", @"name" : @"平均值", @"itemStyle":@{@"normal":@{@"color":@"#dc143c"}}},
-                              // 横轴
-                              @{@"type" : @"max", @"name": @"最大值", @"valueIndex": @(0), @"itemStyle":@{@"normal":@{@"color":@"#1e90ff"}}},
-                              @{@"type" : @"min", @"name": @"最小值", @"valueIndex": @(0), @"itemStyle":@{@"normal":@{@"color":@"#1e90ff"}}},
-                              @{@"type" : @"average", @"name" : @"平均值", @"valueIndex": @(0), @"itemStyle":@{@"normal":@{@"color":@"#1e90ff"}}}
-                              ];
-    [serieses addObject:series1];
-    PYCartesianSeries *series2 = [[PYCartesianSeries alloc] init];
-    series2.name = @"数据2";
-    series2.smooth = YES;
-    series2.type = PYSeriesTypeLine;
-    series2.data = @[@[@(1),@(2)],@[@(2),@(3)],@[@(4),@(2)],@[@(7), @(5)],@[@(11), @(2)],@[@(18), @(3)]];
-    [serieses addObject:series2];
-    [option setSeries:serieses];
     [_kEchartView setOption:option];
 }
 
