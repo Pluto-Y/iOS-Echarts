@@ -69,4 +69,6 @@ PYPropertyEqualTemplate(PYMarkPoint, PYMarkPointEffect *, effect);
 PYPropertyEqualTemplate(PYMarkPoint, PYItemStyle *, itemStyle);
 PYPropertyEqualTemplate(PYMarkPoint, NSMutableArray *, data);
 
+PYAddMethodTemplate(PYMarkPoint, NSObject, Data, data);
+
 @end
