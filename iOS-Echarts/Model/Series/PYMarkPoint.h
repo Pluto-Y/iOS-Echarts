@@ -56,7 +56,7 @@ PYPropertyEqualTemplate(PYMarkPointEffect, NSNumber *, shadowBlur);
 @property (nonatomic, assign) BOOL large;
 @property (nonatomic, strong) PYMarkPointEffect *effect;
 @property (nonatomic, strong) PYItemStyle *itemStyle;
-@property (nonatomic, copy) NSArray *data;
+@property (nonatomic, copy) NSMutableArray *data;
 
 PYInitializerTemplate(PYMarkPoint, point);
 
@@ -67,6 +67,6 @@ PYPropertyEqualTemplate(PYMarkPoint, id, symbolRotate);
 PYPropertyEqualTemplate(PYMarkPoint, BOOL, large);
 PYPropertyEqualTemplate(PYMarkPoint, PYMarkPointEffect *, effect);
 PYPropertyEqualTemplate(PYMarkPoint, PYItemStyle *, itemStyle);
-PYPropertyEqualTemplate(PYMarkPoint, NSArray *, data);
+PYPropertyEqualTemplate(PYMarkPoint, NSMutableArray *, data);
 
 @end

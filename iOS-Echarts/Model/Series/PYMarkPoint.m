@@ -79,6 +79,6 @@ PYPropertyEqualImpTemplate(PYMarkPoint, id, symbolRotate);
 PYPropertyEqualImpTemplate(PYMarkPoint, BOOL, large);
 PYPropertyEqualImpTemplate(PYMarkPoint, PYMarkPointEffect *, effect);
 PYPropertyEqualImpTemplate(PYMarkPoint, PYItemStyle *, itemStyle);
-PYPropertyEqualImpTemplate(PYMarkPoint, NSArray *, data);
+PYPropertyEqualImpTemplate(PYMarkPoint, NSMutableArray *, data);
 
 @end
