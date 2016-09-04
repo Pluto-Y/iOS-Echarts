@@ -133,7 +133,7 @@ static NSArray *effect;
     yAxis.axisLine = [[PYAxisLine alloc] init];
     yAxis.axisLine.onZero = NO;
     yAxis.boundaryGap = @(NO);
-    yAxis.data = @[@"0", @"10", @"20", @"30", @"40", @"50", @"60", @"70", @"80"];
+    yAxis.data = [[NSMutableArray alloc] initWithArray:@[@"0", @"10", @"20", @"30", @"40", @"50", @"60", @"70", @"80"]];
     option.yAxis = [[NSMutableArray alloc] initWithObjects:yAxis, nil];
     NSMutableArray *serieses = [[NSMutableArray alloc] init];
     PYCartesianSeries *series1 = [[PYCartesianSeries alloc] init];

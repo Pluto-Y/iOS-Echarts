@@ -37,11 +37,11 @@ static NSArray<PYAxisType> *axisTypeSupported;
         _show = YES;
         _zlevel = @(0);
         _z = @(0);
-        _position = @"'bottom'|'left'";
+        _position = [NSString stringWithFormat:@"'%@'|'%@'", PYPositionBottom, PYPositionLeft];
         _name = @"";
         _nameLocation = @"end";
         _scale = false;
-        _data = [[NSArray alloc] init];
+        _data = [[NSMutableArray alloc] init];
         _axisLine = [[PYAxisLine alloc] init];
         _axisLabel = [[PYAxisLabel alloc] init];
         _splitLine = [[PYAxisSplitLine alloc] init];
@@ -80,6 +80,8 @@ PYPropertyEqualImpTemplate(PYAxis, PYAxisTick *, axisTick);
 PYPropertyEqualImpTemplate(PYAxis, PYAxisLabel *, axisLabel);
 PYPropertyEqualImpTemplate(PYAxis, PYAxisSplitLine *, splitLine);
 PYPropertyEqualImpTemplate(PYAxis, PYSplitArea *, splitArea);
-PYPropertyEqualImpTemplate(PYAxis, NSArray *, data);
+PYPropertyEqualImpTemplate(PYAxis, NSMutableArray *, data);
+
+PYAddMethodImpTemplate(PYAxis, NSObject, Data, data);
 
 @end

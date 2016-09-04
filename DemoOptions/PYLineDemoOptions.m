@@ -47,8 +47,8 @@
         }])
         .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
             axis.typeEqual(PYAxisTypeCategory)
-            .boundaryGapEqual(@NO);
-            axis.data = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
+            .boundaryGapEqual(@NO)
+            .addDataArr(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"]);
         }])
         .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
             axis.typeEqual(PYAxisTypeValue)
@@ -112,8 +112,8 @@
         }])
         .calculableEqual(NO)
         .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
-            axis.typeEqual(PYAxisTypeCategory).boundaryGapEqual(@NO);
-            axis.data = @[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"];
+            axis.typeEqual(PYAxisTypeCategory).boundaryGapEqual(@NO)
+            .addDataArr(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"]);
         }])
         .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
             axis.typeEqual(PYAxisTypeValue);
@@ -193,7 +193,7 @@
                 axisLine.onZeroEqual(NO);
             }])
             .boundaryGapEqual(@NO)
-            .dataEqual(@[@"0", @"10", @"20", @"30", @"40", @"50", @"60", @"70", @"80"]);
+            .addDataArr(@[@"0", @"10", @"20", @"30", @"40", @"50", @"60", @"70", @"80"]);
         }])
         .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
             series.smoothEqual(YES)
@@ -244,7 +244,7 @@
         }])
         .calculableEqual(YES)
         .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
-            axis.typeEqual(PYAxisTypeCategory).boundaryGapEqual(@NO).dataEqual(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"]);
+            axis.typeEqual(PYAxisTypeCategory).boundaryGapEqual(@NO).addDataArr(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"]);
         }])
         .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
             axis.typeEqual(PYAxisTypeValue);
@@ -322,7 +322,7 @@
         .calculableEqual(YES)
         .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
             axis.typeEqual(PYAxisTypeCategory)
-            .boundaryGapEqual(@NO).dataEqual(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"]);
+            .boundaryGapEqual(@NO).addDataArr(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"]);
         }])
         .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
             axis.typeEqual(PYAxisTypeValue);
@@ -560,7 +560,7 @@
         }])
         .calculableEqual(YES)
         .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
-            axis.typeEqual(PYAxisTypeCategory).boundaryGapEqual(@NO).dataEqual(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"]);
+            axis.typeEqual(PYAxisTypeCategory).boundaryGapEqual(@NO).addDataArr(@[@"周一",@"周二",@"周三",@"周四",@"周五",@"周六",@"周日"]);
         }])
         .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
             axis.typeEqual(PYAxisTypeValue);
@@ -648,8 +648,8 @@
             .nameEqual(@"x")
             .splitLineEqual([PYAxisSplitLine initPYAxisSplitLineWithBlock:^(PYAxisSplitLine *axisSpliteLine) {
                 axisSpliteLine.showEqual(NO);
-            }]);
-            axis.data = @[@"一",@"二",@"三",@"四",@"五",@"六",@"七",@"八",@"九"];
+            }])
+            .addDataArr(@[@"一",@"二",@"三",@"四",@"五",@"六",@"七",@"八",@"九"]);
         }];
         
         PYAxis *yAxis = [PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
