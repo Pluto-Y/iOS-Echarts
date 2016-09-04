@@ -127,6 +127,7 @@
 		6F743AD51D7B052400C94967 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 6F7352BC1D50A779006CD119 /* js */; };
 		6F743AD61D7B052700C94967 /* echarts.html in Resources */ = {isa = PBXBuildFile; fileRef = 6F4D58CF1D4FE34F00246943 /* echarts.html */; };
 		6F743AD71D7B40FA00C94967 /* PYLineDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCF3A1D7842FF007CEAD2 /* PYLineDemoOptions.m */; };
+		6F743ADA1D7C6C2B00C94967 /* PYBarDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743AD91D7C6C2B00C94967 /* PYBarDemoOptions.m */; };
 		6F9DCF061D7841D6007CEAD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEB41D7841D6007CEAD2 /* AppDelegate.m */; };
 		6F9DCF071D7841D6007CEAD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEB51D7841D6007CEAD2 /* LaunchScreen.xib */; };
 		6F9DCF091D7841D6007CEAD2 /* EchartsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEBB1D7841D6007CEAD2 /* EchartsViewCell.m */; };
@@ -314,6 +315,8 @@
 		6F743A4A1D78AFA500C94967 /* ViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		6F743A4B1D78AFA500C94967 /* ViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		6F743AD41D7B04B800C94967 /* iOS-Echarts-OSX-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-Echarts-OSX-PrefixHeader.pch"; sourceTree = "<group>"; };
+		6F743AD81D7C6C2B00C94967 /* PYBarDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYBarDemoOptions.h; sourceTree = "<group>"; };
+		6F743AD91D7C6C2B00C94967 /* PYBarDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYBarDemoOptions.m; sourceTree = "<group>"; };
 		6F9DCEB31D7841D6007CEAD2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6F9DCEB41D7841D6007CEAD2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6F9DCEB61D7841D6007CEAD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -770,6 +773,8 @@
 				6F9DCF391D7842FF007CEAD2 /* PYLineDemoOptions.h */,
 				6F9DCF3A1D7842FF007CEAD2 /* PYLineDemoOptions.m */,
 				6F9DCF3C1D784448007CEAD2 /* PYDemoOptions.h */,
+				6F743AD81D7C6C2B00C94967 /* PYBarDemoOptions.h */,
+				6F743AD91D7C6C2B00C94967 /* PYBarDemoOptions.m */,
 			);
 			path = DemoOptions;
 			sourceTree = "<group>";
@@ -955,6 +960,7 @@
 				6F9DCF3B1D7842FF007CEAD2 /* PYLineDemoOptions.m in Sources */,
 				6F9DCF151D7841D6007CEAD2 /* FunnelDemoController.m in Sources */,
 				6F9DCF2F1D7841D6007CEAD2 /* WordCloudDemoController.m in Sources */,
+				6F743ADA1D7C6C2B00C94967 /* PYBarDemoOptions.m in Sources */,
 				6F4D58DE1D4FE34F00246943 /* PYAxisLine.m in Sources */,
 				6F4D58ED1D4FE34F00246943 /* PYLinkStyle.m in Sources */,
 				6F9DCF201D7841D6007CEAD2 /* OtherDemoController.m in Sources */,

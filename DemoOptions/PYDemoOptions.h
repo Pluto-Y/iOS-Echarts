@@ -10,6 +10,7 @@
 #define PYDemoOptions_h
 
 #import "PYLineDemoOptions.h"
+#import "PYBarDemoOptions.h"
 
 
 #endif /* PYDemoOptions_h */
