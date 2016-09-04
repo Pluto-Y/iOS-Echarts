@@ -20,9 +20,9 @@
         _show = NO;
         _zlevel = @(0);
         _z = @(6);
-        _orient = @"horizontal";
-        _x = @"right";
-        _y = @"top";
+        _orient = PYOrientHorizontal;
+        _x = PYPositionRight;
+        _y = PYPositionTop;
         _backgroundColor = PYRGBA(0, 0, 0, 0);
         _borderColor = PYRGBA(12, 12, 12, 1);
         _borderWidth = @(0);

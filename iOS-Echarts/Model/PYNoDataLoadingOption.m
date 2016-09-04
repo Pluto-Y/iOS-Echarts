@@ -16,8 +16,8 @@
     self = [super init];
     if (self) {
         self.text = @"暂无数据";
-        self.x = @"center";
-        self.y = @"center";
+        self.x = PYPositionCenter;
+        self.y = PYPositionCenter;
         self.effect = PYLoadingOptionEffectBubble;
     }
     return self;

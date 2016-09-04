@@ -23,8 +23,8 @@ PYLoadingOptionEffect const PYLoadingOptionEffectBubble      = @"bubble";
     self = [super init];
     if (self) {
         _text = @"数据读取中...";
-        _x = @"center";
-        _y = @"center";
+        _x = PYPositionCenter;
+        _y = PYPositionCenter;
         _effect = PYLoadingOptionEffectSpin;
     }
     return self;

@@ -30,7 +30,7 @@ PYPropertyEqualImpTemplate(PYTreeSeriesData, PYItemStyle *, itemStyle);
         self.type = PYSeriesTypeTree;
         _layerPadding = @100;
         _nodePadding = @30;
-        _orient = @"vertical";
+        _orient = PYOrientVertical;
         _roam = @NO;
         _symbol = PYSymbolCircle;
         _symbolSize = @20;

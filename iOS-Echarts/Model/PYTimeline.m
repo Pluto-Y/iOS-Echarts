@@ -116,7 +116,7 @@ static NSArray<PYTimelineType> *timelineTypeScope;
         _borderWidth = @(0);
         _borderColor = PYRGBA(12, 12, 12, 1);
         _padding = @(5);
-        _controlPosition = @"left";
+        _controlPosition = PYPositionLeft;
         _autoPlay = NO;
         _loop = YES;
         _playInterval = @(2000);

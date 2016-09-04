@@ -18,9 +18,9 @@
         _show = YES;
         _zlevel = 0;
         _z = @(4);
-        _orient = @"horizontal";
-        _x = @"center";
-        _y = @"top";
+        _orient = PYOrientHorizontal;
+        _x = PYPositionCenter;
+        _y = PYPositionTop;
 //        _backgroundColor = PYRGBA(0, 0, 0, 0);
         _borderColor = @"#ccc";
         _borderWidth = 0;

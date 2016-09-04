@@ -23,8 +23,8 @@
         _link = @"";
         _subtext = @"";
         _sublink = @"";
-        _x = @"left";
-        _y = @"top";
+        _x = PYPositionLeft;
+        _y = PYPositionTop;
         _backgroundColor = PYRGBA(0, 0, 0, 0);
         _borderColor = PYRGBA(12, 12, 12, 1);
         _borderWidth = @(0);

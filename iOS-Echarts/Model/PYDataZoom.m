@@ -18,7 +18,7 @@
         _zlevel = @(0);
         _z = @(4);
         _show = NO;
-        _orient = @"horizontal";
+        _orient = PYOrientHorizontal;
         _backgroundColor = PYRGBA(0, 0, 0, 0);
         _dataBackgroundColor = PYRGBA(14, 14, 14, 1);
         _fillerColor = PYRGBA(144, 197, 237, .2);

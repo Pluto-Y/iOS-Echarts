@@ -29,7 +29,7 @@ static NSArray<PYMapSeriesMapValueCalculation> *mapValueCalculationScope;
         _mapType = @"China";
         _hoverable = YES;
         _dataRangeHoverLink = YES;
-        _mapLocation = @{@"x":@"center", @"y":@"center"};
+        _mapLocation = @{@"x":PYPositionCenter, @"y":PYPositionCenter};
         _mapValueCalculation = PYMapSeriesMapValueCalculationSum;
         _showLegendSymbol = YES;
         _roam = @(NO);

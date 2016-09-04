@@ -17,8 +17,8 @@
         _show = YES;
         _zlevel = @0;
         _z = @4;
-        _x = @"left";
-        _y = @"top";
+        _x = PYPositionLeft;
+        _y = PYPositionTop;
         _width = @80;
         _height = @120;
         _backgroundColor = PYRGBA(0, 0, 0, 0);

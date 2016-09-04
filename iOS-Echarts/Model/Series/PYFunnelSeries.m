@@ -32,7 +32,7 @@ static NSArray *funnelSeriesSortScope;
         _y = @(60);
         _x2 = @(80);
         _y2 = @(60);
-        _funnelAlign = @"center";
+        _funnelAlign = PYPositionCenter;
         _min = 0;
         _max = @(100);
         _minSize = @"0%";
