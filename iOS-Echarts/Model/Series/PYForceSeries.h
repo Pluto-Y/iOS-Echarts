@@ -88,4 +88,8 @@ PYPropertyEqualTemplate(PYForceSeries, BOOL, useWorker);
 PYPropertyEqualTemplate(PYForceSeries, NSNumber *, steps);
 PYPropertyEqualTemplate(PYForceSeries, id, roam);
 
+PYAddMethodTemplate(PYForceSeries, PYCategories, Categories, categories);
+PYAddMethodTemplate(PYForceSeries, PYForceNodes, Nodes, nodes);
+PYAddMethodTemplate(PYForceSeries, PYLinks, Links, links);
+
 @end

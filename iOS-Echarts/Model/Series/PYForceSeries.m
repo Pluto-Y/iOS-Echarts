@@ -76,4 +76,8 @@ PYPropertyEqualImpTemplate(PYForceSeries, BOOL, useWorker);
 PYPropertyEqualImpTemplate(PYForceSeries, NSNumber *, steps);
 PYPropertyEqualImpTemplate(PYForceSeries, id, roam);
 
+PYAddMethodImpTemplate(PYForceSeries, PYCategories, Categories, categories);
+PYAddMethodImpTemplate(PYForceSeries, PYForceNodes, Nodes, nodes);
+PYAddMethodImpTemplate(PYForceSeries, PYLinks, Links, links);
+
 @end

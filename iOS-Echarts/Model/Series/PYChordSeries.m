@@ -34,9 +34,9 @@ PYInitializerImpTemplate(PYChordSeries);
 
 PYPropertyEqualImpTemplate(PYChordSeries, NSString *, insertToSerie);
 PYPropertyEqualImpTemplate(PYChordSeries, id, radius);
-PYPropertyEqualImpTemplate(PYChordSeries, NSArray *, categories);
-PYPropertyEqualImpTemplate(PYChordSeries, NSArray *, nodes);
-PYPropertyEqualImpTemplate(PYChordSeries, NSArray *, links);
+PYPropertyEqualImpTemplate(PYChordSeries, NSMutableArray *, categories);
+PYPropertyEqualImpTemplate(PYChordSeries, NSMutableArray *, nodes);
+PYPropertyEqualImpTemplate(PYChordSeries, NSMutableArray *, links);
 PYPropertyEqualImpTemplate(PYChordSeries, NSArray *, matrix);
 PYPropertyEqualImpTemplate(PYChordSeries, BOOL, ribbonType);
 PYPropertyEqualImpTemplate(PYChordSeries, PYSymbol, symbol);
@@ -49,5 +49,9 @@ PYPropertyEqualImpTemplate(PYChordSeries, NSNumber *, padding);
 PYPropertyEqualImpTemplate(PYChordSeries, PYSort, sort);
 PYPropertyEqualImpTemplate(PYChordSeries, PYSort, sortSub);
 PYPropertyEqualImpTemplate(PYChordSeries, BOOL, clockWise);
+
+PYAddMethodImpTemplate(PYChordSeries, PYCategories, Categories, categories);
+PYAddMethodImpTemplate(PYChordSeries, PYForceNodes, Nodes, nodes);
+PYAddMethodImpTemplate(PYChordSeries, PYLinks, Links, links);
 
 @end

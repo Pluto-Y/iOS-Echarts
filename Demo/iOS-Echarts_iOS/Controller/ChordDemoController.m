@@ -242,7 +242,7 @@ typedef NS_ENUM(NSInteger, ChordDemoTypeTag) {
     series.itemStyle.normal = [[PYItemStyleProp alloc] init];
     series.itemStyle.normal.label = [[PYLabel alloc] init];
     series.itemStyle.normal.label.rotate = YES;
-    series.nodes = @[
+    series.nodes = [[NSMutableArray alloc] initWithArray:@[
                      @{@"name":@"默特萨克"},
                      @{@"name":@"厄齐尔"},
                      @{@"name":@"波多尔斯基"},
@@ -260,9 +260,9 @@ typedef NS_ENUM(NSInteger, ChordDemoTypeTag) {
                      @{@"name":@"阿森纳"},
                      @{@"name":@"拜仁慕尼黑"},
                      @{@"name":@"多特蒙德"}
-                     ];
+                     ]];
     
-    series.links = @[
+    series.links = [[NSMutableArray alloc] initWithArray:@[
                      @{@"source":@"阿森纳", @"target":@"默特萨克", @"weight": @0.9, @"name":@"效力"},
                      @{@"source":@"阿森纳", @"target":@"厄齐尔", @"weight": @0.9, @"name":@"效力"},
                      @{@"source":@"阿森纳", @"target":@"波多尔斯基", @"weight": @0.9, @"name":@"效力"},
@@ -293,7 +293,7 @@ typedef NS_ENUM(NSInteger, ChordDemoTypeTag) {
                      @{@"target":@"多特蒙德", @"source":@"魏登费勒", @"weight": @1},
                      @{@"target":@"多特蒙德", @"source":@"杜尔姆", @"weight": @1},
                      @{@"target":@"多特蒙德", @"source":@"格罗斯克罗伊茨", @"weight": @1}
-                     ];
+                     ]];
     option.series = [[NSMutableArray alloc] initWithArray:@[series]];
     
     [_echartsView setOption:option];
@@ -336,7 +336,7 @@ typedef NS_ENUM(NSInteger, ChordDemoTypeTag) {
     series.itemStyle.normal.label.rotate = YES;
     series.minRadius = @7;
     series.maxRadius = @20;
-    series.nodes = @[
+    series.nodes = [[NSMutableArray alloc] initWithArray:@[
                      @{@"name":@"默特萨克"},
                      @{@"name":@"厄齐尔"},
                      @{@"name":@"波多尔斯基"},
@@ -354,9 +354,9 @@ typedef NS_ENUM(NSInteger, ChordDemoTypeTag) {
                      @{@"name":@"阿森纳"},
                      @{@"name":@"拜仁慕尼黑"},
                      @{@"name":@"多特蒙德"}
-                     ];
+                     ]];
     
-    series.links = @[
+    series.links = [[NSMutableArray alloc] initWithArray:@[
                      @{@"target":@"阿森纳", @"source":@"默特萨克", @"weight": @1},
                      @{@"target":@"阿森纳", @"source":@"厄齐尔", @"weight": @1},
                      @{@"target":@"阿森纳", @"source":@"波多尔斯基", @"weight": @1},
@@ -371,7 +371,7 @@ typedef NS_ENUM(NSInteger, ChordDemoTypeTag) {
                      @{@"target":@"多特蒙德", @"source":@"魏登费勒", @"weight": @1},
                      @{@"target":@"多特蒙德", @"source":@"杜尔姆", @"weight": @1},
                      @{@"target":@"多特蒙德", @"source":@"格罗斯克罗伊茨", @"weight": @1}
-                     ];
+                     ]];
     option.series = [[NSMutableArray alloc] initWithArray:@[series]];
     
     [_echartsView setOption:option];

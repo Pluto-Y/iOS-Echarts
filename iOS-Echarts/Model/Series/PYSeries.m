@@ -78,4 +78,6 @@ PYPropertyEqualImpTemplate(PYSeries, id, data);
 PYPropertyEqualImpTemplate(PYSeries, PYMarkPoint *, markPoint);
 PYPropertyEqualImpTemplate(PYSeries, PYMarkLine *, markLine);
 
+PYAddMethodImpTemplate(PYSeries, NSObject, Data, data);
+
 @end

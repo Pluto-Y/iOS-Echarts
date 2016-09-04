@@ -20,9 +20,9 @@
 
 @property (nonatomic, copy) NSString *insertToSerie;
 @property (nonatomic, strong) id radius;
-@property (nonatomic, copy) NSArray<PYCategories *> *categories;
-@property (nonatomic, copy) NSArray<PYNodes *> *nodes;
-@property (nonatomic, copy) NSArray<PYLinks *> *links;
+@property (nonatomic, copy) NSMutableArray<PYCategories *> *categories;
+@property (nonatomic, copy) NSMutableArray<PYNodes *> *nodes;
+@property (nonatomic, copy) NSMutableArray<PYLinks *> *links;
 @property (nonatomic, copy) NSArray *matrix;
 @property (nonatomic, assign) BOOL ribbonType;
 @property (nonatomic, copy) PYSymbol symbol;
@@ -40,9 +40,9 @@ PYInitializerTemplate(PYChordSeries, series);
 
 PYPropertyEqualTemplate(PYChordSeries, NSString *, insertToSerie);
 PYPropertyEqualTemplate(PYChordSeries, id, radius);
-PYPropertyEqualTemplate(PYChordSeries, NSArray *, categories);
-PYPropertyEqualTemplate(PYChordSeries, NSArray *, nodes);
-PYPropertyEqualTemplate(PYChordSeries, NSArray *, links);
+PYPropertyEqualTemplate(PYChordSeries, NSMutableArray *, categories);
+PYPropertyEqualTemplate(PYChordSeries, NSMutableArray *, nodes);
+PYPropertyEqualTemplate(PYChordSeries, NSMutableArray *, links);
 PYPropertyEqualTemplate(PYChordSeries, NSArray *, matrix);
 PYPropertyEqualTemplate(PYChordSeries, BOOL, ribbonType);
 PYPropertyEqualTemplate(PYChordSeries, PYSymbol, symbol);
@@ -55,5 +55,9 @@ PYPropertyEqualTemplate(PYChordSeries, NSNumber *, padding);
 PYPropertyEqualTemplate(PYChordSeries, PYSort, sort);
 PYPropertyEqualTemplate(PYChordSeries, PYSort, sortSub);
 PYPropertyEqualTemplate(PYChordSeries, BOOL, clockWise);
+
+PYAddMethodTemplate(PYChordSeries, PYCategories, Categories, categories);
+PYAddMethodTemplate(PYChordSeries, PYForceNodes, Nodes, nodes);
+PYAddMethodTemplate(PYChordSeries, PYLinks, Links, links);
 
 @end
