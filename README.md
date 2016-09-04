@@ -5,7 +5,7 @@
 
 ____
 
-This is a highly custom chart control for iOS apps, which build with the EChart(Echart2). It just encapsulate the conrol of the javascript. It provides a chainable way of describing your configurations for the echarts.  It's convinient for foucing on the logic of the app and optimizing the code. It avoid diverting developers' mind on the interaction between javascript and Objective-C.
+This is a highly custom chart control for iOS and Mac apps, which build with the EChart(Echart2). It just encapsulate the conrol of the javascript. It provides a chainable way of describing your configurations for the echarts.  It's convinient for foucing on the logic of the app and optimizing the code. It avoid diverting developers' mind on the interaction between javascript and Objective-C.
 
 If you like this control, please star it. It can make me pay more attention on it.
 
@@ -93,6 +93,41 @@ PYOption *option = [PYOption initPYOptionWithBlock:^(PYOption *option) {
 }];
 ```
 
+### Many properties support add[Name] and add[Name]Arr methods, when you use properties which type is  `NSMutableArray`, you should try `add` method first
+
+```
+option.addXAxis(//Something about PYAxis)
+.addYAxis(//Something about PYAxis)
+.addSeries(//Something about PYSeries or sub class of PYSeries)
+```
+
+### When you use the instance which is subclass of `PYSeries`, you should assign value for the property of subclass, then assign value for `PYSeries`, like this:
+
+```
+.addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+    series.stackEqual(@"总量")
+    .smoothEqual(YES)
+    .symbolEqual(PYSymbolArrow)
+    .symbolSizeEqual(@6)
+    .symbolRotateEqual(@(-45))
+    .nameEqual(@"直接访问")
+    .typeEqual(PYSeriesTypeLine)
+    .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+        itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+            normal.colorEqual(PYRGBA(255, 0, 0, 1))
+            .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                lineStyle.widthEqual(@2).typeEqual(PYLineStyleTypeDashed);
+            }]);
+        }]).emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+            emphasis.colorEqual(PYRGBA(0, 0, 255, 1));
+        }]);
+    }])
+    .dataEqual(@[@(320), @(332), @"-", @(334), @{@"value":@(390),@"symbol":@"star6",@"symbolSize":@(20),@"symbolRotate":@(10),@"itemStyle":@{@"normal":@{@"color":@"yellowgreen"},@"emphasis":@{@"color":@"orange",@"lable":@{@"show":@(YES),@"position":@"inside",@"textStyle":@{@"fontSize":@(20)}}}}}, @(330), @(320)]);
+}])
+```
+
+The `PYCartesianSeries` is subclass of `PYSeries`, and `stack`, `smooth`, `symbol`, `symbolSize` and `symbol` are the properties of `PYCartesianSeries`. So you should assign them before the properies of `PYSeries`.
+
 ### You also can assign all values one by one:
 
 
@@ -125,3 +160,4 @@ If you have QQ, you can join the group which number is 485591970.
 ___
 
 All source code is licensed under the MIT License.
+
