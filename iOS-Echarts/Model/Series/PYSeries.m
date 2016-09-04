@@ -51,7 +51,7 @@ static NSArray<PYSeriesType> *seriesTypeScope;
         _zlevel = 0;
         _z = @(2);
         _clickable = YES;
-        _data = @[];
+        _data = [[NSMutableArray alloc] init];;
     }
     return self;
 }

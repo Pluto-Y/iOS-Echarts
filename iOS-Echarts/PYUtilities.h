@@ -95,11 +95,6 @@ static PYOrient PYOrientVertical   = @"vertical";
  */
 #define PYAddMethodImpTemplate(cls, type, mName, pName)                         \
     - (cls *(^)(type *pName))add##mName {                                       \
-        if (_##pName != nil                                                     \
-            && ![_##pName isMemberOfClass:[NSMutableArray class]]) {            \
-            NSLog(@"ERROR:##pName## is not the type named 'NSMutableArray'");   \
-            return nil;                                                         \
-        }                                                                       \
         if(_##pName == nil) {                                                   \
             _##pName = [[NSMutableArray alloc] init];                           \
         }                                                                       \
@@ -109,11 +104,6 @@ static PYOrient PYOrientVertical   = @"vertical";
         };                                                                      \
     }                                                                           \
     - (cls *(^)(NSArray *arr))add##mName##Arr {                                 \
-        if (_##pName != nil                                                     \
-            && ![_##pName isMemberOfClass:[NSMutableArray class]]) {            \
-            NSLog(@"ERROR:##pName## is not the type named 'NSMutableArray'");   \
-            return nil;                                                         \
-        }                                                                       \
         if(_##pName == nil) {                                                   \
             _##pName = [[NSMutableArray alloc] init];                           \
         }                                                                       \
@@ -122,6 +112,14 @@ static PYOrient PYOrientVertical   = @"vertical";
             return self;                                                        \
         };                                                                      \
     }
+
+/*
+ if (_##pName != nil                                                     \
+ && ![_##pName isMemberOfClass:[NSArray class]]) {            \
+ NSLog(@"ERROR:##pName## is not the type named 'NSMutableArray'");   \
+ return nil;                                                         \
+ }                                                                       \
+ */
 
 /**
  *  The template of custom initializer.
