@@ -4,7 +4,7 @@
 
 ___
 
-本项目是将百度的ECharts(echarts2)工具封装成对应的iOS的控件，并且将其中javascript的属性封装成对应的对象。并且提供了链式编程，方面大家进行配置Echarts的属性。方便程序员在编写程序的过程中更加关注OC的代码，避免在使用百度的ECharts工具的过程中过多的关注javascript语法和与javascript之间的交互。
+本项目是将百度的ECharts(echarts2)工具封装成对应的iOS和Mac的控件，并且将其中javascript的属性封装成对应的对象。并且提供了链式编程，方面大家进行配置Echarts的属性。方便程序员在编写程序的过程中更加关注OC的代码，避免在使用百度的ECharts工具的过程中过多的关注javascript语法和与javascript之间的交互。
 
 注：如果小伙伴觉得这个工具有用的话，麻烦点一下star，你的star是我继续的动力！
 
@@ -93,6 +93,41 @@ PYOption *option = [PYOption initPYOptionWithBlock:^(PYOption *option) {
     }]);
 }];
 ```
+
+### 许多属性都支持 add[Name] 和 add[Name]Arr 方法，当你准备用一个 `NSMutableArray` 类型的属性的时候，你可以先尝试用一下`add`方法
+
+```
+option.addXAxis(//Something about PYAxis)
+.addYAxis(//Something about PYAxis)
+.addSeries(//Something about PYSeries or sub class of PYSeries)
+```
+
+### 当你为 `PYSeries` 的子类赋值是，你应该先为子类的属性赋值，再为 `PYSereis` 的属性赋值，就像这样:
+
+```
+.addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+    series.stackEqual(@"总量")
+    .smoothEqual(YES)
+    .symbolEqual(PYSymbolArrow)
+    .symbolSizeEqual(@6)
+    .symbolRotateEqual(@(-45))
+    .nameEqual(@"直接访问")
+    .typeEqual(PYSeriesTypeLine)
+    .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+        itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+            normal.colorEqual(PYRGBA(255, 0, 0, 1))
+            .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                lineStyle.widthEqual(@2).typeEqual(PYLineStyleTypeDashed);
+            }]);
+        }]).emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+            emphasis.colorEqual(PYRGBA(0, 0, 255, 1));
+        }]);
+    }])
+    .dataEqual(@[@(320), @(332), @"-", @(334), @{@"value":@(390),@"symbol":@"star6",@"symbolSize":@(20),@"symbolRotate":@(10),@"itemStyle":@{@"normal":@{@"color":@"yellowgreen"},@"emphasis":@{@"color":@"orange",@"lable":@{@"show":@(YES),@"position":@"inside",@"textStyle":@{@"fontSize":@(20)}}}}}, @(330), @(320)]);
+}])
+```
+
+其中`PYCartesianSeries` 是 `PYSeries` 的子类，并且`stack`, `smooth`, `symbol`, `symbolSize` 和 `symbol`都是 `PYCartesianSeries` 的属性，所以你应该在 `PYSeries` 的属性前赋值。
 
 ### 当然你也可以一个一个的赋值:
 
