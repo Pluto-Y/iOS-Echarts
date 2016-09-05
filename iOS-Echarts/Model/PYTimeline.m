@@ -174,4 +174,6 @@ PYPropertyEqualImpTemplate(PYTimeline, NSNumber *, symbolSize);
 PYPropertyEqualImpTemplate(PYTimeline, NSNumber *, currentIndex);
 PYPropertyEqualImpTemplate(PYTimeline, NSMutableArray *, data);
 
+PYAddMethodImpTemplate(PYTimeline, NSObject, Data, data);
+
 @end

@@ -137,4 +137,6 @@ PYPropertyEqualTemplate(PYTimeline, NSNumber *, symbolSize);
 PYPropertyEqualTemplate(PYTimeline, NSNumber *, currentIndex);
 PYPropertyEqualTemplate(PYTimeline, NSMutableArray *, data);
 
+PYAddMethodTemplate(PYTimeline, NSObject, Data, data);
+
 @end
