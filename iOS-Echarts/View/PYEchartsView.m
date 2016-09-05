@@ -30,6 +30,20 @@ PYEchartAction const PYEchartActionDataViewChanged = @"dataViewChanged";
 PYEchartAction const PYEchartActionTimelineChanged = @"timelineChanged";
 PYEchartAction const PYEchartActionMapRoam         = @"mapRoam";
 
+PYEchartTheme const PYEchartThemeMacarons    = @"macarons";
+PYEchartTheme const PYEchartThemeInfographic = @"infographic";
+PYEchartTheme const PYEchartThemeShine       = @"shine";
+PYEchartTheme const PYEchartThemeDark        = @"dark";
+PYEchartTheme const PYEchartThemeBlue        = @"blue";
+PYEchartTheme const PYEchartThemeGreen       = @"green";
+PYEchartTheme const PYEchartThemeRed         = @"red";
+PYEchartTheme const PYEchartThemeGray        = @"gray";
+PYEchartTheme const PYEchartThemeHelianthus  = @"helianthus";
+PYEchartTheme const PYEchartThemeRoma        = @"roma";
+PYEchartTheme const PYEchartThemeMint        = @"mint";
+PYEchartTheme const PYEchartThemeMacarons2   = @"macarons2";
+PYEchartTheme const PYEchartThemeSakura      = @"sakura";
+PYEchartTheme const PYEchartThemeDefault     = @"default";
 
 static NSString *const kEchartActionObtainImg = @"obtainImg";
 
@@ -43,6 +57,8 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     NSMutableDictionary<NSString *, PYEchartActionHandler> *actionHandleBlocks;
     // This block will store for get image from echarts and will clear when the block is called
     void (^obtainImgCompletedBlock)(PY_IMAGE *image);
+    
+    PYEchartTheme _theme;
 }
 
 @end
@@ -175,24 +191,6 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     [self stringByEvaluatingJavaScriptFromString:js];
 }
 
-/**
- *  Obtain the screen of echarts view with type
- *
- *  @param type           The type you want get, now just support `PYEchartsViewImageTypeJEPG` and `PYEchartsViewImageTypePNG`.
- *  @param completedBlock A block called when get the image from echarts.
- */
-- (void)obtainEchartsImageWithType:(PYEchartsViewImageType)type completed:(void(^)(PY_IMAGE *image))completedBlock {
-    if (![type isEqualToString:PYEchartsViewImageTypePNG] && ![type isEqualToString:PYEchartsViewImageTypeJEPG]) {
-        NSLog(@"Error: Echarts does not support this type --- %@, so it will be obtain JEPG type", type);
-        type = PYEchartsViewImageTypeJEPG;
-    }
-    if (completedBlock != nil) {
-        obtainImgCompletedBlock = completedBlock;
-        NSString *js = [NSString stringWithFormat:@"%@('%@')", @"obtainEchartsImage", type];
-        [self stringByEvaluatingJavaScriptFromString:js];
-    }
-}
-
 #pragma mark - Echarts methods
 /**
  *  Refresh echarts not re-load echarts
@@ -203,7 +201,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
 }
 
 /**
- *  Refresh echar with the option
+ *  Refresh echart with the option
  *  You can call this method for refreshing not re-load the echart
  *
  *  @param newOption EChart's option
@@ -212,6 +210,18 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     NSString *jsonStr = [PYJsonUtil getJSONString:newOption];
     PYLog(@"jsonStr:%@", jsonStr);
     [self callJsMethods:[NSString stringWithFormat:@"refreshWithOption(%@)", jsonStr]];
+}
+
+/**
+ *  Set theme for echarts
+ *  You can set the themes by echarts support, which prefix is `PYEchartTheme`
+ *
+ *  @param theme The theme name
+ */
+- (void)setTheme:(PYEchartTheme) theme {
+    _theme = theme;
+    PYLog(@"Theme is %@", theme);
+    [self callJsMethods:[NSString stringWithFormat:@"myChart.setTheme(eval('%@'));", _theme]];
 }
 
 /**
@@ -233,6 +243,24 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
 - (void)removeHandlerForAction:(NSString *)name {
     [actionHandleBlocks removeObjectForKey:name];
     [self callJsMethods:[NSString stringWithFormat:@"removeEchartActionHandler(%@)",name]];
+}
+
+/**
+ *  Obtain the screen of echarts view with type
+ *
+ *  @param type           The type you want get, now just support `PYEchartsViewImageTypeJEPG` and `PYEchartsViewImageTypePNG`.
+ *  @param completedBlock A block called when get the image from echarts.
+ */
+- (void)obtainEchartsImageWithType:(PYEchartsViewImageType)type completed:(void(^)(PY_IMAGE *image))completedBlock {
+    if (![type isEqualToString:PYEchartsViewImageTypePNG] && ![type isEqualToString:PYEchartsViewImageTypeJEPG]) {
+        NSLog(@"Error: Echarts does not support this type --- %@, so it will be obtain JEPG type", type);
+        type = PYEchartsViewImageTypeJEPG;
+    }
+    if (completedBlock != nil) {
+        obtainImgCompletedBlock = completedBlock;
+        NSString *js = [NSString stringWithFormat:@"%@('%@')", @"obtainEchartsImage", type];
+        [self stringByEvaluatingJavaScriptFromString:js];
+    }
 }
 
 /**
@@ -284,6 +312,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
         js = [NSString stringWithFormat:@"%@(%@)", @"loadEcharts", jsonStr];
     }
     [webView stringByEvaluatingJavaScriptFromString:js];
+    [self setTheme:_theme];
     for (NSString * name in actionHandleBlocks.allKeys) {
         PYLog(@"%@", [NSString stringWithFormat:@"addEchartActionHandler('%@')",name]);
         [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler('%@')",name]];//
@@ -376,9 +405,9 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     } else {
         js = [NSString stringWithFormat:@"%@(%@)", @"loadEcharts", jsonStr];
     }
-    //    [webView stringByEvaluatingJavaScriptFromString:js];
-    [[webView windowScriptObject] evaluateWebScript:@"alert('123')"];
-    [[webView windowScriptObject] callWebScriptMethod:@"alert" withArguments:@[@"234"]];
+//    //    [webView stringByEvaluatingJavaScriptFromString:js];
+//    [[webView windowScriptObject] evaluateWebScript:@"alert('123')"];
+//    [[webView windowScriptObject] callWebScriptMethod:@"alert" withArguments:@[@"234"]];
     [[webView windowScriptObject] evaluateWebScript:js];
     
     for (NSString * name in actionHandleBlocks.allKeys) {

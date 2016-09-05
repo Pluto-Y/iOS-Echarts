@@ -129,6 +129,8 @@
 		6F743ADA1D7C6C2B00C94967 /* PYBarDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743AD91D7C6C2B00C94967 /* PYBarDemoOptions.m */; };
 		6F743AE21D7D8ADA00C94967 /* PYPieDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743AE11D7D8ADA00C94967 /* PYPieDemoOptions.m */; };
 		6F743AE31D7DD54600C94967 /* PYPieDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743AE11D7D8ADA00C94967 /* PYPieDemoOptions.m */; };
+		6F743AEB1D7E1C2D00C94967 /* theme in Resources */ = {isa = PBXBuildFile; fileRef = 6F743AEA1D7E1C2D00C94967 /* theme */; };
+		6F743AEC1D7E1C2D00C94967 /* theme in Resources */ = {isa = PBXBuildFile; fileRef = 6F743AEA1D7E1C2D00C94967 /* theme */; };
 		6F9DCF061D7841D6007CEAD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEB41D7841D6007CEAD2 /* AppDelegate.m */; };
 		6F9DCF071D7841D6007CEAD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEB51D7841D6007CEAD2 /* LaunchScreen.xib */; };
 		6F9DCF091D7841D6007CEAD2 /* EchartsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEBB1D7841D6007CEAD2 /* EchartsViewCell.m */; };
@@ -319,6 +321,7 @@
 		6F743AD91D7C6C2B00C94967 /* PYBarDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYBarDemoOptions.m; sourceTree = "<group>"; };
 		6F743AE01D7D8ADA00C94967 /* PYPieDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYPieDemoOptions.h; sourceTree = "<group>"; };
 		6F743AE11D7D8ADA00C94967 /* PYPieDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYPieDemoOptions.m; sourceTree = "<group>"; };
+		6F743AEA1D7E1C2D00C94967 /* theme */ = {isa = PBXFileReference; lastKnownFileType = folder; path = theme; sourceTree = "<group>"; };
 		6F9DCEB31D7841D6007CEAD2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6F9DCEB41D7841D6007CEAD2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6F9DCEB61D7841D6007CEAD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -602,6 +605,7 @@
 		6F4D58CE1D4FE34F00246943 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				6F743AEA1D7E1C2D00C94967 /* theme */,
 				6F7352BC1D50A779006CD119 /* js */,
 				6F4D58CF1D4FE34F00246943 /* echarts.html */,
 			);
@@ -902,6 +906,7 @@
 				6F9DCF071D7841D6007CEAD2 /* LaunchScreen.xib in Resources */,
 				6F9DCF2B1D7841D6007CEAD2 /* TreemapDemoController.xib in Resources */,
 				6F9DCF291D7841D6007CEAD2 /* TreeDemoController.xib in Resources */,
+				6F743AEB1D7E1C2D00C94967 /* theme in Resources */,
 				6F9DCF101D7841D6007CEAD2 /* ChordDemoController.xib in Resources */,
 				6F9DCF0E1D7841D6007CEAD2 /* CandlestickDemoController.xib in Resources */,
 				6F9DCF0A1D7841D6007CEAD2 /* EchartsViewCell.xib in Resources */,
@@ -936,6 +941,7 @@
 				6F743A6E1D78B01B00C94967 /* Main.storyboard in Resources */,
 				6F743AD61D7B052700C94967 /* echarts.html in Resources */,
 				6F743AD51D7B052400C94967 /* js in Resources */,
+				6F743AEC1D7E1C2D00C94967 /* theme in Resources */,
 				6F743A6D1D78B01900C94967 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

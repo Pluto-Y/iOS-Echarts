@@ -50,6 +50,21 @@ extern PYEchartAction const PYEchartActionDataViewChanged;
 extern PYEchartAction const PYEchartActionTimelineChanged;
 extern PYEchartAction const PYEchartActionMapRoam;
 
+typedef NSString * PYEchartTheme;
+extern PYEchartTheme const PYEchartThemeMacarons;
+extern PYEchartTheme const PYEchartThemeInfographic;
+extern PYEchartTheme const PYEchartThemeShine;
+extern PYEchartTheme const PYEchartThemeDark;
+extern PYEchartTheme const PYEchartThemeBlue;
+extern PYEchartTheme const PYEchartThemeGreen;
+extern PYEchartTheme const PYEchartThemeRed;
+extern PYEchartTheme const PYEchartThemeGray;
+extern PYEchartTheme const PYEchartThemeHelianthus;
+extern PYEchartTheme const PYEchartThemeRoma;
+extern PYEchartTheme const PYEchartThemeMint;
+extern PYEchartTheme const PYEchartThemeMacarons2;
+extern PYEchartTheme const PYEchartThemeSakura;
+extern PYEchartTheme const PYEchartThemeDefault;
 
 @class PYOption, PYLoadingOption, PYNoDataLoadingOption;
 
@@ -95,6 +110,14 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
 - (void)refreshEchartsWithOption:(PYOption *)newOption;
 
 /**
+ *  Set theme for echarts
+ *  You can set the themes by echarts support, which prefix is `PYEchartTheme`
+ *
+ *  @param theme The theme name
+ */
+- (void)setTheme:(PYEchartTheme) theme;
+
+/**
  *  Refresh echarts not re-load echarts
  *  The option is the last option you had set
  */
@@ -123,6 +146,14 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
 - (void)removeHandlerForAction:(NSString *)name;
 
 /**
+ *  Obtain the screen of echarts view with type
+ *
+ *  @param type           The type you want get, now just support `PYEchartsViewImageTypeJEPG` and `PYEchartsViewImageTypePNG`.
+ *  @param completedBlock A block called when get the image from echarts.
+ */
+- (void)obtainEchartsImageWithType:(PYEchartsViewImageType)type completed:(void(^)(PY_IMAGE *image))completedBlock;
+
+/**
  *  Option for the loading screen, show a loading label text.
  *
  *  @param loadingOption The loading options control the appearance of the loading screen that covers the plot area on chart operations.
@@ -138,13 +169,5 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
  *  Clear the drawing content. Instances are available after Clearing.
  */
 - (void)clearEcharts;
-
-/**
- *  Obtain the screen of echarts view with type
- *
- *  @param type           The type you want get, now just support `PYEchartsViewImageTypeJEPG` and `PYEchartsViewImageTypePNG`.
- *  @param completedBlock A block called when get the image from echarts.
- */
-- (void)obtainEchartsImageWithType:(PYEchartsViewImageType)type completed:(void(^)(PY_IMAGE *image))completedBlock;
 
 @end
