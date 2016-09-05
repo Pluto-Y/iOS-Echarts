@@ -439,7 +439,158 @@
 }
 
 + (PYOption *)stackedAndClusteredColumnOption {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"ECharts2 vs ECharts1")
+            .subtextEqual(@"Chrome下测试数据");
+        }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.xEqual(@55).x2Equal(@30);
+        }])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerAxis);
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.dataEqual(@[@"ECharts1 - 2k数据",@"ECharts1 - 2w数据",@"ECharts1 - 20w数据",@"",
+                               @"ECharts2 - 2k数据",@"ECharts2 - 2w数据",@"ECharts2 - 20w数据"]);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .magicTypeEqual([PYToolboxFeatureMagicType initPYToolboxFeatureMagicTypeWithBlock:^(PYToolboxFeatureMagicType *magicType) {
+                    magicType.showEqual(YES).typeEqual(@[PYSeriesTypeLine, PYSeriesTypeBar]);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .calculableEqual(YES)
+        .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeCategory)
+            .addDataArr(@[@"Line",@"Bar",@"Scatter",@"K",@"Map"]);
+        }])
+        .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeCategory)
+            .axisLineEqual([PYAxisLine initPYAxisLineWithBlock:^(PYAxisLine *axisLine) {
+                axisLine.showEqual(NO);
+            }])
+            .axisTickEqual([PYAxisTick initPYAxisTickWithBlock:^(PYAxisTick *axisTick) {
+                axisTick.showEqual(NO);
+            }])
+            .axisLabelEqual([PYAxisLabel initPYAxisLabelWithBlock:^(PYAxisLabel *axisLabel) {
+                axisLabel.showEqual(NO);
+            }])
+            .splitAreaEqual([PYSplitArea initPYSplitAreaWithBlock:^(PYSplitArea *splitArea) {
+                splitArea.showEqual(NO);
+            }])
+            .splitLineEqual([PYAxisSplitLine initPYAxisSplitLineWithBlock:^(PYAxisSplitLine *axisSpliteLine) {
+                axisSpliteLine.showEqual(NO);
+            }])
+            .addDataArr(@[@"Line",@"Bar",@"Scatter",@"K",@"Map"]);
+        }])
+        .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue)
+            .axisLabelEqual([PYAxisLabel initPYAxisLabelWithBlock:^(PYAxisLabel *axisLabel) {
+                axisLabel.formatterEqual(@"{value} ms");
+            }]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.nameEqual(@"ECharts2 - 2k数据")
+            .typeEqual(PYSeriesTypeBar)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.colorEqual(PYRGBA(193, 35, 43, 1))
+                    .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES);
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@40, @155, @95, @75, @0]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.nameEqual(@"ECharts2 - 2w数据")
+            .typeEqual(PYSeriesTypeBar)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.colorEqual(PYRGBA(181, 195, 52, 1))
+                    .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES)
+                        .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                            textStyle.colorEqual([PYColor colorWithHexString:@"#27727B"]);
+                        }]);
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@100, @200, @105, @100, @156]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.nameEqual(@"ECharts2 - 20w数据")
+            .typeEqual(PYSeriesTypeBar)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.colorEqual(PYRGBA(252, 206, 16, 1))
+                    .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES)
+                        .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                            textStyle.colorEqual([PYColor colorWithHexString:@"#E87C25"]);
+                        }]);
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@906, @911, @908, @778, @0]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.xAxisIndexEqual(@1)
+            .nameEqual(@"ECharts1 - 2k数据")
+            .typeEqual(PYSeriesTypeBar)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.colorEqual(PYRGBA(193, 35, 43, 0.5))
+                    .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES)
+                        .formatterEqual(@"(function(p){return p.value > 0 ? (p.value +\'\\n\'):\'\';})");
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@96, @224, @164, @124, @0]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.xAxisIndexEqual(@1)
+            .nameEqual(@"ECharts1 - 2w数据")
+            .typeEqual(PYSeriesTypeBar)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.colorEqual(PYRGBA(181, 195, 52, 0.5))
+                    .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES);
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@491, @2035, @389, @955, @347]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.xAxisIndexEqual(@1)
+            .nameEqual(@"ECharts1 - 20w数据")
+            .typeEqual(PYSeriesTypeBar)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.colorEqual(PYRGBA(252, 206, 16, 0.5))
+                    .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES)
+                        .formatterEqual(@"(function(p){return p.value > 0 ? (p.value +\'+\'):\'\';})");
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@3000, @3000, @2817, @3000, @0]);
+        }]);
+    }];
 }
 
 + (PYOption *)basicBarOption {

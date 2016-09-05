@@ -56,3 +56,4 @@
 #import "PYMarkLine.h"
 #import "PYMarkPoint.h"
 #import "PYTimeline.h"
+#import "PYSplitArea.h"
