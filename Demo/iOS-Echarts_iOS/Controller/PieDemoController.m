@@ -67,6 +67,7 @@ typedef NS_ENUM(NSInteger, PieDemoTypeBtnTag) {
             option = [PYPieDemoOptions nightingalesRoseDiagramPieOption];
             break;
         case PieDemoTypeBtnTagDoughnut2:
+            option = [PYPieDemoOptions doughnut2PieOption];
             break;
         case PieDemoTypeBtnTagDoughnut3:
             option = [PYPieDemoOptions doughnut3PieOption];

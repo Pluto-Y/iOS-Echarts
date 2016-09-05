@@ -129,6 +129,7 @@
 		6F743AD71D7B40FA00C94967 /* PYLineDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCF3A1D7842FF007CEAD2 /* PYLineDemoOptions.m */; };
 		6F743ADA1D7C6C2B00C94967 /* PYBarDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743AD91D7C6C2B00C94967 /* PYBarDemoOptions.m */; };
 		6F743AE21D7D8ADA00C94967 /* PYPieDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743AE11D7D8ADA00C94967 /* PYPieDemoOptions.m */; };
+		6F743AE31D7DD54600C94967 /* PYPieDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743AE11D7D8ADA00C94967 /* PYPieDemoOptions.m */; };
 		6F9DCF061D7841D6007CEAD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEB41D7841D6007CEAD2 /* AppDelegate.m */; };
 		6F9DCF071D7841D6007CEAD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEB51D7841D6007CEAD2 /* LaunchScreen.xib */; };
 		6F9DCF091D7841D6007CEAD2 /* EchartsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEBB1D7841D6007CEAD2 /* EchartsViewCell.m */; };
@@ -1106,6 +1107,7 @@
 				6F743ABE1D7B03F700C94967 /* PYToolboxFeature.m in Sources */,
 				6F743AAD1D7B03F700C94967 /* PYLegend.m in Sources */,
 				6F743AC51D7B03F700C94967 /* PYHeatmapSeries.m in Sources */,
+				6F743AE31D7DD54600C94967 /* PYPieDemoOptions.m in Sources */,
 				6F743AA61D7B03F700C94967 /* PYChordStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

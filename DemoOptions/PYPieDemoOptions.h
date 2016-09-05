@@ -19,6 +19,8 @@
 /**  南丁格尔玫瑰图 */
 + (PYOption *)nightingalesRoseDiagramPieOption;
 /**  环形图2 */
++ (PYOption *)doughnut2PieOption;
+/**  环形图3 */
 + (PYOption *)doughnut3PieOption;
 /**  时间轴饼图 */
 + (PYOption *)timelinePieOption;

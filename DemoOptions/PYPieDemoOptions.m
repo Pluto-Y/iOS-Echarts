@@ -249,6 +249,170 @@
 }
 
 /**  环形图2 */
++ (PYOption *)doughnut2PieOption {
+    NSArray *radius = @[@20, @35];
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.xEqual(PYPositionCenter).yEqual(PYPositionCenter)
+            .dataEqual(@[ @"GoogleMaps",@"Facebook",@"Youtube",@"Google+",@"Weixin",
+                          @"Twitter", @"Skype", @"Messenger", @"Whatsapp", @"Instagram"]);
+        }])
+        .titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"The App World")
+            .subtextEqual(@"from global web index")
+            .xEqual(PYPositionCenter);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .magicTypeEqual([PYToolboxFeatureMagicType initPYToolboxFeatureMagicTypeWithBlock:^(PYToolboxFeatureMagicType *magicType) {
+                    magicType.showEqual(YES).typeEqual(@[PYSeriesTypePie, PYSeriesTypeFunnel]).optionEqual(@{@"funnel":@{@"x":@"20%",@"width":@"30%",@"itemStyle":@{@"normal":@{@"label":@{@"formatter":@"formatter : function (params){return \'other\\n\' + params.value + \'%\\n\'}",@"textStyle":@{@"baseline":@"middle"}}}}}});
+                    
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+            series.centerEqual(@[@"10%", @"30%"])
+            .radiusEqual(radius)
+            .typeEqual(PYSeriesTypePie)
+            .itemStyleEqual([self createLabelFromatter])
+            .addData(@{@"name":@"other", @"value":@46, @"itemStyle":[self createLabelBottom]})
+            .addData(@{@"name":@"GoogleMaps", @"value":@54, @"itemStyle":[self createLabelTop]});
+        }])
+        .addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+            series.centerEqual(@[@"30%", @"30%"])
+            .radiusEqual(radius)
+            .typeEqual(PYSeriesTypePie)
+            .itemStyleEqual([self createLabelFromatter])
+            .addData(@{@"name":@"other", @"value":@56, @"itemStyle":[self createLabelBottom]})
+            .addData(@{@"name":@"Facebook", @"value":@44, @"itemStyle":[self createLabelTop]});
+        }])
+        .addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+            series.centerEqual(@[@"50%", @"30%"])
+            .radiusEqual(radius)
+            .typeEqual(PYSeriesTypePie)
+            .itemStyleEqual([self createLabelFromatter])
+            .addData(@{@"name":@"other", @"value":@65, @"itemStyle":[self createLabelBottom]})
+            .addData(@{@"name":@"Youtube", @"value":@35, @"itemStyle":[self createLabelTop]});
+        }])
+        .addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+            series.centerEqual(@[@"70%", @"30%"])
+            .radiusEqual(radius)
+            .typeEqual(PYSeriesTypePie)
+            .itemStyleEqual([self createLabelFromatter])
+            .addData(@{@"name":@"other", @"value":@70, @"itemStyle":[self createLabelBottom]})
+            .addData(@{@"name":@"Google+", @"value":@30, @"itemStyle":[self createLabelTop]});
+        }])
+        .addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+            series.centerEqual(@[@"90%", @"30%"])
+            .radiusEqual(radius)
+            .typeEqual(PYSeriesTypePie)
+            .itemStyleEqual([self createLabelFromatter])
+            .addData(@{@"name":@"other", @"value":@73, @"itemStyle":[self createLabelBottom]})
+            .addData(@{@"name":@"Weixin", @"value":@27, @"itemStyle":[self createLabelTop]});
+        }])
+        .addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+            series.centerEqual(@[@"10%", @"70%"])
+            .radiusEqual(radius)
+            .typeEqual(PYSeriesTypePie)
+            .itemStyleEqual([self createLabelFromatter])
+            .addData(@{@"name":@"other", @"value":@78, @"itemStyle":[self createLabelBottom]})
+            .addData(@{@"name":@"Twitter", @"value":@22, @"itemStyle":[self createLabelTop]});
+        }])
+        .addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+            series.centerEqual(@[@"30%", @"70%"])
+            .radiusEqual(radius)
+            .typeEqual(PYSeriesTypePie)
+            .itemStyleEqual([self createLabelFromatter])
+            .addData(@{@"name":@"other", @"value":@78, @"itemStyle":[self createLabelBottom]})
+            .addData(@{@"name":@"Skype", @"value":@22, @"itemStyle":[self createLabelTop]});
+        }])
+        .addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+            series.centerEqual(@[@"50%", @"70%"])
+            .radiusEqual(radius)
+            .typeEqual(PYSeriesTypePie)
+            .itemStyleEqual([self createLabelFromatter])
+            .addData(@{@"name":@"other", @"value":@78, @"itemStyle":[self createLabelBottom]})
+            .addData(@{@"name":@"Messenger", @"value":@22, @"itemStyle":[self createLabelTop]});
+        }])
+        .addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+            series.centerEqual(@[@"70%", @"70%"])
+            .radiusEqual(radius)
+            .typeEqual(PYSeriesTypePie)
+            .itemStyleEqual([self createLabelFromatter])
+            .addData(@{@"name":@"other", @"value":@83, @"itemStyle":[self createLabelBottom]})
+            .addData(@{@"name":@"Whatsapp", @"value":@17, @"itemStyle":[self createLabelTop]});
+        }])
+        .addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+            series.centerEqual(@[@"90%", @"70%"])
+            .radiusEqual(radius)
+            .typeEqual(PYSeriesTypePie)
+            .itemStyleEqual([self createLabelFromatter])
+            .addData(@{@"name":@"other", @"value":@89, @"itemStyle":[self createLabelBottom]})
+            .addData(@{@"name":@"Instagram", @"value":@11, @"itemStyle":[self createLabelTop]});
+        }]);
+    }];
+}
+
++ (PYItemStyle *)createLabelTop {
+    return [PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+        itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+            normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                label.showEqual(YES)
+                .positionEqual(PYPositionCenter)
+                .formatterEqual(@"{b}")
+                .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.baseLineEqual(PYPositionBottom)
+                    .fontSizeEqual(@6);
+                }]);
+            }])
+            .labelLineEqual([PYLabelLine initPYLabelLineWithBlock:^(PYLabelLine *labelLine) {
+                labelLine.showEqual(NO);
+            }]);
+        }]);
+    }];
+}
+
++ (PYItemStyle *)createLabelFromatter {
+    return [PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+        itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+            normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                label.formatterEqual(@"(function (params){return 100 - params.value + '%'})")
+                .positionEqual(PYPositionCenter)
+                .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.baseLineEqual(PYPositionTop)
+                    .fontSizeEqual(@6);
+                }]);
+            }]);
+        }]);
+    }];
+}
+
++ (PYItemStyle *)createLabelBottom {
+    return [PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+        itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+            normal.colorEqual([PYColor colorWithHexString:@"#ccc"])
+            .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                label.showEqual(YES)
+                .positionEqual(PYPositionCenter);
+            }])
+            .labelLineEqual([PYLabelLine initPYLabelLineWithBlock:^(PYLabelLine *labelLine) {
+                labelLine.showEqual(NO);
+            }]);
+        }])
+        .emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+            emphasis.colorEqual(PYRGBA(0, 0, 0, 0));
+        }]);
+    }];
+}
+
+/**  环形图3 */
 + (PYOption *)doughnut3PieOption{
 
     return nil;
