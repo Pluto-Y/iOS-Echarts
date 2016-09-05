@@ -71,7 +71,7 @@ typedef NS_ENUM(NSInteger, BarDemoTypeTag) {
             option = [PYBarDemoOptions stackedAndClusteredColumnOption];
             break;
         case BarDemoTypeTagBasicBar:
-            [self showBasicBarDemo];
+            option = [PYBarDemoOptions basicBarOption];
             break;
         case BarDemoTypeTagStackedBar:
             [self showStackedBarDemo];
@@ -103,17 +103,6 @@ typedef NS_ENUM(NSInteger, BarDemoTypeTag) {
         [_kEchartView setOption:option];
     }
     [_kEchartView loadEcharts];
-}
-
-/**
- *  标准条形图
- */
-- (void)showBasicBarDemo {
-    NSString *basicBarJson = @"{\"grid\":{\"x\":30,\"x2\":45},\"title\":{\"text\":\"世界人口总量\",\"subtext\":\"数据来自网络\"},\"tooltip\":{\"trigger\":\"axis\"},\"legend\":{\"data\":[\"2011年\",\"2012年\"]},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"magicType\":{\"show\":true,\"type\":[\"line\",\"bar\"]},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"calculable\":true,\"xAxis\":[{\"type\":\"value\",\"boundaryGap\":[0,0.01]}],\"yAxis\":[{\"type\":\"category\",\"data\":[\"巴西\",\"印尼\",\"美国\",\"印度\",\"中国\",\"世界人口(万)\"]}],\"series\":[{\"name\":\"2011年\",\"type\":\"bar\",\"data\":[18203,23489,29034,104970,131744,630230]},{\"name\":\"2012年\",\"type\":\"bar\",\"data\":[19325,23438,31000,121594,134141,681807]}]}";
-    NSData *jsonData = [basicBarJson dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
-    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
-    [_kEchartView setOption:option];
 }
 
 /**
