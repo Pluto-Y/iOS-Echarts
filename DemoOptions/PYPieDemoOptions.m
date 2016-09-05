@@ -414,8 +414,103 @@
 
 /**  环形图3 */
 + (PYOption *)doughnut3PieOption{
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"你幸福吗？")
+            .subtextEqual(@"From ExcelHome")
+            .sublinkEqual(@"http://e.weibo.com/1341556070/AhQXtjbqh")
+            .xEqual(PYPositionCenter)
+            .yEqual(PYPositionCenter)
+            .itemGapEqual(@5)
+            .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                textStyle.colorEqual(PYRGBA(30, 144, 255, 0.8))
+                .fontFamilyEqual(@"微软雅黑")
+                .fontSizeEqual(@10)
+                .fontWeightEqual(PYTextStyleFontWeightBolder);
+            }]);
+        }])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.showEqual(YES).formatterEqual(@"{a} <br/>{b} : {c} ({d}%)");
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.orientEqual(PYOrientVertical)
+            .xEqual(@"52%")
+            .yEqual(@45)
+            .itemGapEqual(@12)
+            .dataEqual(@[@"68%的人表示过的不错",@"29%的人表示生活压力很大",@"3%的人表示“我姓曾”"]);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+            series.clockWiseEqual(NO)
+            .radiusEqual(@[@65, @90])
+            .nameEqual(@"1")
+            .typeEqual(PYSeriesTypePie)
+            .itemStyleEqual([self createDataStyle])
+            .addData(@{@"value":@68, @"name":@"68%的人表示过的不错"})
+            .addData(@{@"value":@32, @"name":@"invisible", @"itemStyle":[self createPlaceHolderStyle]});
+        }])
+        .addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+            series.clockWiseEqual(NO)
+            .radiusEqual(@[@40, @65])
+            .nameEqual(@"2")
+            .typeEqual(PYSeriesTypePie)
+            .itemStyleEqual([self createDataStyle])
+            .addData(@{@"value":@29, @"name":@"29%的人表示生活压力很大"})
+            .addData(@{@"value":@71, @"name":@"invisible", @"itemStyle":[self createPlaceHolderStyle]});
+        }])
+        .addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+            series.clockWiseEqual(NO)
+            .radiusEqual(@[@15, @40])
+            .nameEqual(@"3")
+            .typeEqual(PYSeriesTypePie)
+            .itemStyleEqual([self createDataStyle])
+            .addData(@{@"value":@3, @"name":@"3%的人表示“我姓曾"})
+            .addData(@{@"value":@97, @"name":@"invisible", @"itemStyle":[self createPlaceHolderStyle]});
+        }]);
+    }];
+}
 
-    return nil;
++ (PYItemStyle *)createDataStyle {
+    return [PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+        itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+            normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                label.showEqual(NO);
+            }])
+            .labelLineEqual([PYLabelLine initPYLabelLineWithBlock:^(PYLabelLine *labelLine) {
+                labelLine.showEqual(NO);
+            }]);
+        }]);
+    }];
+}
+
++ (PYItemStyle *)createPlaceHolderStyle {
+    return [PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+        itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+            normal.colorEqual(PYRGBA(0, 0, 0, 0))
+            .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                label.showEqual(NO);
+            }])
+            .labelLineEqual([PYLabelLine initPYLabelLineWithBlock:^(PYLabelLine *labelLine) {
+                labelLine.showEqual(NO);
+            }]);
+        }])
+        .emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+            emphasis.colorEqual(PYRGBA(0, 0, 0, 0));
+        }]);
+    }];
 }
 
 /**  时间轴饼图 */
