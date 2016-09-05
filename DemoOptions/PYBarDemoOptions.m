@@ -182,7 +182,91 @@
 }
 
 + (PYOption *)termometerOption {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"温度计式图表")
+            .subtextEqual(@"From ExcelHome")
+            .sublinkEqual(@"http://e.weibo.com/1341556070/AizJXrAEa");
+        }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.xEqual(@40).x2Equal(@50);
+        }])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerAxis)
+            .axisPointerEqual([PYAxisPointer initPYAxisPointerWithBlock:^(PYAxisPointer *axisPoint) {
+                axisPoint.typeEqual(PYAxisPointerTypeShadow);
+            }])
+            .formatterEqual(@"(function (params){return params[0].name + '<br/>'+ params[0].seriesName + ' : ' + params[0].value + '<br/>'+ params[1].seriesName + ' : ' + (params[1].value + params[0].value);})");
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.selectedModeEqual(@NO)
+            .dataEqual(@[@"Acutal", @"Forecast"]);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .calculableEqual(YES)
+        .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeCategory)
+            .addDataArr(@[@"Cosco",@"CMA",@"APL",@"OOCL",@"Wanhai",@"Zim"]);
+        }])
+        .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue)
+            .boundaryGapEqual(@[@0, @0.1]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.stackEqual(@"sum")
+            .barCategoryGapEqual(@"50%")
+            .nameEqual(@"Acutal")
+            .typeEqual(PYSeriesTypeBar)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.colorEqual(@"tomato")
+                    .barBorderColorEqual(@"tomato")
+                    .barBorderWidthEqual(@6)
+                    .barBorderRadiusEqual(@0)
+                    .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES)
+                        .positionEqual(@"insideTop");
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@260, @200, @220, @120, @100, @80]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.stackEqual(@"sum")
+            .nameEqual(@"Forecast")
+            .typeEqual(PYSeriesTypeBar)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.colorEqual([PYColor colorWithHexString:@"#fff"])
+                    .barBorderColorEqual(@"tomato")
+                    .barBorderWidthEqual(@6)
+                    .barBorderRadiusEqual(@0)
+                    .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES)
+                        .positionEqual(@"top")
+                        .formatterEqual(@"(function (params) {for (var i = 0, l = option.xAxis[0].data.length; i < l; i++) {if (option.xAxis[0].data[i] == params.name) {return option.series[0].data[i] + params.value;}}})")
+                        .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                            textStyle.colorEqual(@"tomato");
+                        }]);
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@40, @80, @50, @80, @80, @70]);
+        }]);
+    }];
 }
 
 + (PYOption *)compositiveWaterfallOption {
