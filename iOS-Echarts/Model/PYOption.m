@@ -50,7 +50,7 @@ PYPropertyEqualImpTemplate(PYOption, PYGrid *, grid);
 PYPropertyEqualImpTemplate(PYOption, NSMutableArray *, xAxis);
 PYPropertyEqualImpTemplate(PYOption, NSMutableArray *, yAxis);
 PYPropertyEqualImpTemplate(PYOption, NSMutableArray *, series);
-PYPropertyEqualImpTemplate(PYOption, PYOption *, options);
+PYPropertyEqualImpTemplate(PYOption, NSMutableArray *, options);
 
 PYAddMethodImpTemplate(PYOption, PYAxis, XAxis, xAxis);
 PYAddMethodImpTemplate(PYOption, PYAxis, YAxis, yAxis);

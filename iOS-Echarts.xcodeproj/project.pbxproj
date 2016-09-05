@@ -63,7 +63,6 @@
 		6F4D59101D4FE34F00246943 /* PYEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58D71D4FE34F00246943 /* PYEchartsView.m */; };
 		6F4D59111D4FE34F00246943 /* PYZoomEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58D91D4FE34F00246943 /* PYZoomEchartsView.m */; };
 		6F7352BD1D50A779006CD119 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 6F7352BC1D50A779006CD119 /* js */; };
-		6F743A4F1D78AFA500C94967 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F743A481D78AFA500C94967 /* Info.plist */; };
 		6F743A6A1D78B00400C94967 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743A491D78AFA500C94967 /* main.m */; };
 		6F743A6B1D78B00600C94967 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743A441D78AFA500C94967 /* AppDelegate.m */; };
 		6F743A6C1D78B00900C94967 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743A4B1D78AFA500C94967 /* ViewController.m */; };
@@ -173,7 +172,6 @@
 		6F9DCF2F1D7841D6007CEAD2 /* WordCloudDemoController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEF61D7841D6007CEAD2 /* WordCloudDemoController.m */; };
 		6F9DCF301D7841D6007CEAD2 /* WordCloudDemoController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEF71D7841D6007CEAD2 /* WordCloudDemoController.xib */; };
 		6F9DCF311D7841D6007CEAD2 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEF81D7841D6007CEAD2 /* Images.xcassets */; };
-		6F9DCF321D7841D6007CEAD2 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEF91D7841D6007CEAD2 /* Info.plist */; };
 		6F9DCF331D7841D6007CEAD2 /* NSObject+RMArchivable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEFE1D7841D6007CEAD2 /* NSObject+RMArchivable.m */; };
 		6F9DCF341D7841D6007CEAD2 /* NSObject+RMCopyable.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCF001D7841D6007CEAD2 /* NSObject+RMCopyable.m */; };
 		6F9DCF351D7841D6007CEAD2 /* NSUserDefaults+RMSaveCustomObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCF021D7841D6007CEAD2 /* NSUserDefaults+RMSaveCustomObject.m */; };
@@ -905,7 +903,6 @@
 				6F9DCF2B1D7841D6007CEAD2 /* TreemapDemoController.xib in Resources */,
 				6F9DCF291D7841D6007CEAD2 /* TreeDemoController.xib in Resources */,
 				6F9DCF101D7841D6007CEAD2 /* ChordDemoController.xib in Resources */,
-				6F743A4F1D78AFA500C94967 /* Info.plist in Resources */,
 				6F9DCF0E1D7841D6007CEAD2 /* CandlestickDemoController.xib in Resources */,
 				6F9DCF0A1D7841D6007CEAD2 /* EchartsViewCell.xib in Resources */,
 				6F9DCF141D7841D6007CEAD2 /* ForceDemoController.xib in Resources */,
@@ -918,7 +915,6 @@
 				6F9DCF0C1D7841D6007CEAD2 /* BarDemoController.xib in Resources */,
 				6F9DCF121D7841D6007CEAD2 /* EventRiverController.xib in Resources */,
 				6F9DCF1F1D7841D6007CEAD2 /* MultiEchartsController.xib in Resources */,
-				6F9DCF321D7841D6007CEAD2 /* Info.plist in Resources */,
 				6F9DCF1D1D7841D6007CEAD2 /* MapDemoController.xib in Resources */,
 				6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */,
 				6F9DCF301D7841D6007CEAD2 /* WordCloudDemoController.xib in Resources */,

@@ -109,7 +109,7 @@ typedef NS_ENUM(NSInteger, GaugesDemoTypeTag) {
 }
 
 - (void)basicAngularGaugeTimerTicket {
-    PYGaugeSeries *series = _option.series[0];
+    PYGaugeSeries *series = (PYGaugeSeries *)_option.series[0];
     NSMutableDictionary *dataDic = [[NSMutableDictionary alloc] initWithDictionary:series.data[0]];
     float value = arc4random_uniform(10000)/100.0;
     dataDic[@"value"] = @(value);
@@ -398,25 +398,25 @@ typedef NS_ENUM(NSInteger, GaugesDemoTypeTag) {
 }
 
 - (void)multipleAngularGaugesTimerTick {
-    PYGaugeSeries *series1 = _option.series[0];
+    PYGaugeSeries *series1 = (PYGaugeSeries *)_option.series[0];
     NSMutableDictionary *dataDic1 = [[NSMutableDictionary alloc] initWithDictionary:series1.data[0]];
     float value1 = arc4random_uniform(10000)/100.0;
     dataDic1[@"value"] = @(value1);
     series1.data = @[dataDic1];
     
-    PYGaugeSeries *series2 = _option.series[1];
+    PYGaugeSeries *series2 = (PYGaugeSeries *)_option.series[1];
     NSMutableDictionary *dataDic2 = [[NSMutableDictionary alloc] initWithDictionary:series2.data[0]];
     float value2 = arc4random_uniform(700)/100.0;
     dataDic2[@"value"] = @(value2);
     series2.data = @[dataDic2];
     
-    PYGaugeSeries *series3 = _option.series[2];
+    PYGaugeSeries *series3 = (PYGaugeSeries *)_option.series[2];
     NSMutableDictionary *dataDic3 = [[NSMutableDictionary alloc] initWithDictionary:series3.data[0]];
     float value3 = arc4random_uniform(200)/100.0;
     dataDic3[@"value"] = @(value3);
     series3.data = @[dataDic3];
     
-    PYGaugeSeries *series4 = _option.series[3];
+    PYGaugeSeries *series4 = (PYGaugeSeries *)_option.series[3];
     NSMutableDictionary *dataDic4 = [[NSMutableDictionary alloc] initWithDictionary:series4.data[0]];
     float value4 = arc4random_uniform(200)/100.0;
     dataDic4[@"value"] = @(value4);
