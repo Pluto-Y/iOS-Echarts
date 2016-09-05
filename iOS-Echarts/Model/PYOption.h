@@ -33,10 +33,10 @@
 @property (nonatomic, strong) PYDataZoom *dataZoom;
 @property (nonatomic, strong) PYRoamController *roamController;
 @property (nonatomic, strong) PYGrid *grid;
-@property (nonatomic, strong) NSMutableArray *xAxis;
-@property (nonatomic, strong) NSMutableArray *yAxis;
-@property (nonatomic, strong) NSMutableArray *series;
-@property (nonatomic, strong) PYOption *options;
+@property (nonatomic, strong) NSMutableArray<PYAxis *> *xAxis;
+@property (nonatomic, strong) NSMutableArray<PYAxis *> *yAxis;
+@property (nonatomic, strong) NSMutableArray<PYSeries *> *series;
+@property (nonatomic, strong) NSMutableArray<PYOption *> *options;
 
 PYInitializerTemplate(PYOption, option);
 
@@ -58,11 +58,12 @@ PYPropertyEqualTemplate(PYOption, PYGrid *, grid);
 PYPropertyEqualTemplate(PYOption, NSMutableArray *, xAxis);
 PYPropertyEqualTemplate(PYOption, NSMutableArray *, yAxis);
 PYPropertyEqualTemplate(PYOption, NSMutableArray *, series);
-PYPropertyEqualTemplate(PYOption, PYOption *, options);
+PYPropertyEqualTemplate(PYOption, NSMutableArray *, options);
 
 PYAddMethodTemplate(PYOption, PYAxis, XAxis, xAxis);
 PYAddMethodTemplate(PYOption, PYAxis, YAxis, yAxis);
 PYAddMethodTemplate(PYOption, PYSeries, Series, series);
 PYAddMethodTemplate(PYOption, PYPolar, Polar, polar);
+PYAddMethodTemplate(PYOption, PYOption, Options, options);
 
 @end

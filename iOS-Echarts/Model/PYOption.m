@@ -56,5 +56,6 @@ PYAddMethodImpTemplate(PYOption, PYAxis, XAxis, xAxis);
 PYAddMethodImpTemplate(PYOption, PYAxis, YAxis, yAxis);
 PYAddMethodImpTemplate(PYOption, PYSeries, Series, series);
 PYAddMethodImpTemplate(PYOption, PYPolar, Polar, polar);
+PYAddMethodImpTemplate(PYOption, PYOption, Options, options);
 
 @end
