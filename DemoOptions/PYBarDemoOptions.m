@@ -15,6 +15,9 @@
         option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
             title.textEqual(@"某地区蒸发量和降水量").subtextEqual(@"纯属虚构");
         }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.xEqual(@40).x2Equal(@50);
+        }])
         .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
             tooltip.triggerEqual(PYTooltipTriggerAxis);
         }])
@@ -343,7 +346,96 @@
 }
 
 + (PYOption *)changeWaterfallOption {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"阶梯瀑布图")
+            .subtextEqual(@"From ExcelHome")
+            .sublinkEqual(@"http://e.weibo.com/1341556070/Aj1J2x5a5");
+        }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.xEqual(@40).x2Equal(@50);
+        }])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerAxis)
+            .axisPointerEqual([PYAxisPointer initPYAxisPointerWithBlock:^(PYAxisPointer *axisPoint) {
+                axisPoint.typeEqual(PYAxisPointerTypeShadow);
+            }])
+            .formatterEqual(@"(function (params) {var tar;if (params[1].value != \'-\') {tar = params[1];}else {tar = params[0];}return tar.name + \'<br/>\' + tar.seriesName + \' : \' + tar.value;})");
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.dataEqual(@[@"支出",@"收入"]);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            NSMutableArray *list = [NSMutableArray new];
+            for (int i = 1; i<= 11; i++) {
+                [list addObject:[NSString stringWithFormat:@"11月%d日", i]];
+            }
+            axis.typeEqual(PYAxisTypeCategory)
+            .splitLineEqual([PYAxisSplitLine initPYAxisSplitLineWithBlock:^(PYAxisSplitLine *axisSpliteLine) {
+                axisSpliteLine.showEqual(NO);
+            }])
+            .dataEqual(list);
+        }])
+        .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.stackEqual(@"总量")
+            .nameEqual(@"辅助")
+            .typeEqual(PYSeriesTypeBar)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.barBorderColorEqual(PYRGBA(0, 0, 0, 0))
+                    .colorEqual(PYRGBA(0, 0, 0, 0));
+                }])
+                .emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+                    emphasis.barBorderColorEqual(PYRGBA(0, 0, 0, 0))
+                    .colorEqual(PYRGBA(0, 0, 0, 0));
+                }]);
+            }])
+            .addDataArr(@[@0, @900, @1245, @1530, @1376, @1376, @1511, @1689, @1856, @1495, @1292]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.stackEqual(@"总量")
+            .nameEqual(@"收入")
+            .typeEqual(PYSeriesTypeBar)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES).positionEqual(PYPositionTop);
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@900, @345, @393, @"-", @"-", @135, @178, @286, @"-", @"-", @"-"]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.stackEqual(@"总量")
+            .nameEqual(@"支出")
+            .typeEqual(PYSeriesTypeBar)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES).positionEqual(PYPositionTop);
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@"-", @"-", @"-", @108, @154, @"-", @"-", @"-", @119, @361, @203]);
+        }]);
+    }];
 }
 
 + (PYOption *)stackedAndClusteredColumnOption {
