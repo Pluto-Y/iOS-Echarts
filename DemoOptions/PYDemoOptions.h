@@ -11,6 +11,7 @@
 
 #import "PYLineDemoOptions.h"
 #import "PYBarDemoOptions.h"
+#import "PYPieDemoOptions.h"
 
 
 #endif /* PYDemoOptions_h */

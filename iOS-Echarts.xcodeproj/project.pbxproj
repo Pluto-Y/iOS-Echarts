@@ -128,6 +128,7 @@
 		6F743AD61D7B052700C94967 /* echarts.html in Resources */ = {isa = PBXBuildFile; fileRef = 6F4D58CF1D4FE34F00246943 /* echarts.html */; };
 		6F743AD71D7B40FA00C94967 /* PYLineDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCF3A1D7842FF007CEAD2 /* PYLineDemoOptions.m */; };
 		6F743ADA1D7C6C2B00C94967 /* PYBarDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743AD91D7C6C2B00C94967 /* PYBarDemoOptions.m */; };
+		6F743AE21D7D8ADA00C94967 /* PYPieDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743AE11D7D8ADA00C94967 /* PYPieDemoOptions.m */; };
 		6F9DCF061D7841D6007CEAD2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEB41D7841D6007CEAD2 /* AppDelegate.m */; };
 		6F9DCF071D7841D6007CEAD2 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F9DCEB51D7841D6007CEAD2 /* LaunchScreen.xib */; };
 		6F9DCF091D7841D6007CEAD2 /* EchartsViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCEBB1D7841D6007CEAD2 /* EchartsViewCell.m */; };
@@ -317,6 +318,8 @@
 		6F743AD41D7B04B800C94967 /* iOS-Echarts-OSX-PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "iOS-Echarts-OSX-PrefixHeader.pch"; sourceTree = "<group>"; };
 		6F743AD81D7C6C2B00C94967 /* PYBarDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYBarDemoOptions.h; sourceTree = "<group>"; };
 		6F743AD91D7C6C2B00C94967 /* PYBarDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYBarDemoOptions.m; sourceTree = "<group>"; };
+		6F743AE01D7D8ADA00C94967 /* PYPieDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYPieDemoOptions.h; sourceTree = "<group>"; };
+		6F743AE11D7D8ADA00C94967 /* PYPieDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYPieDemoOptions.m; sourceTree = "<group>"; };
 		6F9DCEB31D7841D6007CEAD2 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		6F9DCEB41D7841D6007CEAD2 /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		6F9DCEB61D7841D6007CEAD2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -770,6 +773,8 @@
 		6F9DCF381D7842FF007CEAD2 /* DemoOptions */ = {
 			isa = PBXGroup;
 			children = (
+				6F743AE01D7D8ADA00C94967 /* PYPieDemoOptions.h */,
+				6F743AE11D7D8ADA00C94967 /* PYPieDemoOptions.m */,
 				6F9DCF391D7842FF007CEAD2 /* PYLineDemoOptions.h */,
 				6F9DCF3A1D7842FF007CEAD2 /* PYLineDemoOptions.m */,
 				6F9DCF3C1D784448007CEAD2 /* PYDemoOptions.h */,
@@ -994,6 +999,7 @@
 				6F9DCF191D7841D6007CEAD2 /* LineDemoController.m in Sources */,
 				6F4D58E01D4FE34F00246943 /* PYAxisTick.m in Sources */,
 				6F4D59091D4FE34F00246943 /* PYTreeMapSeries.m in Sources */,
+				6F743AE21D7D8ADA00C94967 /* PYPieDemoOptions.m in Sources */,
 				6F4D59111D4FE34F00246943 /* PYZoomEchartsView.m in Sources */,
 				6F9DCF261D7841D6007CEAD2 /* ScatterDemoController.m in Sources */,
 				6F4D590C1D4FE34F00246943 /* PYWordCloudSeries.m in Sources */,
