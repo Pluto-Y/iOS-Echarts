@@ -515,8 +515,202 @@
 
 /**  时间轴饼图 */
 + (PYOption *)timelinePieOption{
-
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        __block NSUInteger idx = 1;
+        option.timelineEqual([PYTimeline initPYTimelineWithBlock:^(PYTimeline *timeline) {
+            timeline.addDataArr(@[
+                                  @"2013-01-01", @"2013-02-01", @"2013-03-01", @"2013-04-01", @"2013-05-01",
+                                  @{ @"name":@"2013-06-01", @"symbol":@"emptyStar6", @"symbolSize":@8 },
+                                  @"2013-07-01", @"2013-08-01", @"2013-09-01", @"2013-10-01", @"2013-11-01",
+                                  @{ @"name":@"2013-12-01", @"symbol":@"star6", @"symbolSize":@8 }
+                                  ])
+            .labelEqual([PYTimelineLabel initPYTimelineLabelWithBlock:^(PYTimelineLabel *label) {
+                label.formatterEqual(@"(function(s) {return s.slice(0, 7);})");
+            }]);
+        }])
+        .addOptions([PYOption initPYOptionWithBlock:^(PYOption *option) {
+            option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+                title.textEqual(@"浏览器占比变化")
+                .subtextEqual(@"纯属虚构");
+            }])
+            .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+                tooltip.triggerEqual(PYTooltipTriggerItem)
+                .formatterEqual(@"{a} <br/>{b} : {c} ({d}%)");
+            }])
+            .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+                legend.dataEqual(@[@"Chrome",@"Firefox",@"Safari",@"IE9+",@"IE8-"]);
+            }])
+            .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+                toolbox.showEqual(YES)
+                .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                    feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                        mark.showEqual(YES);
+                    }])
+                    .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                        dataView.showEqual(YES).readOnlyEqual(NO);
+                    }])
+                    .magicTypeEqual([PYToolboxFeatureMagicType initPYToolboxFeatureMagicTypeWithBlock:^(PYToolboxFeatureMagicType *magicType) {
+                        magicType.showEqual(YES)
+                        .typeEqual(@[PYSeriesTypePie, PYSeriesTypeFunnel])
+                        .optionEqual(@{
+                                       @"funnel":@{
+                                               @"x":@"25%",
+                                               @"width":@"50%",
+                                               @"funnelAlign":PYPositionLeft,
+                                               @"max":@1700
+                                           }
+                                       });
+                    }])
+                    .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                        restore.showEqual(YES);
+                    }]);
+                }]);
+            }])
+            .addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+                series.centerEqual(@[@"50%", @"45%"])
+                .radiusEqual(@"50%")
+                .nameEqual(@"浏览器（数据纯属虚构）")
+                .typeEqual(PYSeriesTypePie)
+                .addData(@{@"value":@(idx * 128 + 80), @"name":@"Chrome"})
+                .addData(@{@"value":@(idx * 64 + 160), @"name":@"Firefox"})
+                .addData(@{@"value":@(idx * 32 + 320), @"name":@"Safari"})
+                .addData(@{@"value":@(idx * 16 + 640), @"name":@"IE9+"})
+                .addData(@{@"value":@((idx++) * 8 + 1280), @"name":@"IE8-"});
+            }]);
+        }])
+        .addOptions([PYOption initPYOptionWithBlock:^(PYOption *option) {
+            option.addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+                series.radiusEqual(@"50%")
+                .nameEqual(@"浏览器（数据纯属虚构）")
+                .typeEqual(PYSeriesTypePie)
+                .addData(@{@"value":@(idx * 128 + 80), @"name":@"Chrome"})
+                .addData(@{@"value":@(idx * 64 + 160), @"name":@"Firefox"})
+                .addData(@{@"value":@(idx * 32 + 320), @"name":@"Safari"})
+                .addData(@{@"value":@(idx * 16 + 640), @"name":@"IE9+"})
+                .addData(@{@"value":@((idx++) * 8 + 1280), @"name":@"IE8-"});
+            }]);
+        }])
+        .addOptions([PYOption initPYOptionWithBlock:^(PYOption *option) {
+            option.addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+                series.radiusEqual(@"50%")
+                .nameEqual(@"浏览器（数据纯属虚构）")
+                .typeEqual(PYSeriesTypePie)
+                .addData(@{@"value":@(idx * 128 + 80), @"name":@"Chrome"})
+                .addData(@{@"value":@(idx * 64 + 160), @"name":@"Firefox"})
+                .addData(@{@"value":@(idx * 32 + 320), @"name":@"Safari"})
+                .addData(@{@"value":@(idx * 16 + 640), @"name":@"IE9+"})
+                .addData(@{@"value":@((idx++) * 8 + 1280), @"name":@"IE8-"});
+            }]);
+        }])
+        .addOptions([PYOption initPYOptionWithBlock:^(PYOption *option) {
+            option.addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+                series.radiusEqual(@"50%")
+                .nameEqual(@"浏览器（数据纯属虚构）")
+                .typeEqual(PYSeriesTypePie)
+                .addData(@{@"value":@(idx * 128 + 80), @"name":@"Chrome"})
+                .addData(@{@"value":@(idx * 64 + 160), @"name":@"Firefox"})
+                .addData(@{@"value":@(idx * 32 + 320), @"name":@"Safari"})
+                .addData(@{@"value":@(idx * 16 + 640), @"name":@"IE9+"})
+                .addData(@{@"value":@((idx++) * 8 + 1280), @"name":@"IE8-"});
+            }]);
+        }])
+        .addOptions([PYOption initPYOptionWithBlock:^(PYOption *option) {
+            option.addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+                series.radiusEqual(@"50%")
+                .nameEqual(@"浏览器（数据纯属虚构）")
+                .typeEqual(PYSeriesTypePie)
+                .addData(@{@"value":@(idx * 128 + 80), @"name":@"Chrome"})
+                .addData(@{@"value":@(idx * 64 + 160), @"name":@"Firefox"})
+                .addData(@{@"value":@(idx * 32 + 320), @"name":@"Safari"})
+                .addData(@{@"value":@(idx * 16 + 640), @"name":@"IE9+"})
+                .addData(@{@"value":@((idx++) * 8 + 1280), @"name":@"IE8-"});
+            }]);
+        }])
+        .addOptions([PYOption initPYOptionWithBlock:^(PYOption *option) {
+            option.addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+                series.radiusEqual(@"50%")
+                .nameEqual(@"浏览器（数据纯属虚构）")
+                .typeEqual(PYSeriesTypePie)
+                .addData(@{@"value":@(idx * 128 + 80), @"name":@"Chrome"})
+                .addData(@{@"value":@(idx * 64 + 160), @"name":@"Firefox"})
+                .addData(@{@"value":@(idx * 32 + 320), @"name":@"Safari"})
+                .addData(@{@"value":@(idx * 16 + 640), @"name":@"IE9+"})
+                .addData(@{@"value":@((idx++) * 8 + 1280), @"name":@"IE8-"});
+            }]);
+        }])
+        .addOptions([PYOption initPYOptionWithBlock:^(PYOption *option) {
+            option.addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+                series.radiusEqual(@"50%")
+                .nameEqual(@"浏览器（数据纯属虚构）")
+                .typeEqual(PYSeriesTypePie)
+                .addData(@{@"value":@(idx * 128 + 80), @"name":@"Chrome"})
+                .addData(@{@"value":@(idx * 64 + 160), @"name":@"Firefox"})
+                .addData(@{@"value":@(idx * 32 + 320), @"name":@"Safari"})
+                .addData(@{@"value":@(idx * 16 + 640), @"name":@"IE9+"})
+                .addData(@{@"value":@((idx++) * 8 + 1280), @"name":@"IE8-"});
+            }]);
+        }])
+        .addOptions([PYOption initPYOptionWithBlock:^(PYOption *option) {
+            option.addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+                series.radiusEqual(@"50%")
+                .nameEqual(@"浏览器（数据纯属虚构）")
+                .typeEqual(PYSeriesTypePie)
+                .addData(@{@"value":@(idx * 128 + 80), @"name":@"Chrome"})
+                .addData(@{@"value":@(idx * 64 + 160), @"name":@"Firefox"})
+                .addData(@{@"value":@(idx * 32 + 320), @"name":@"Safari"})
+                .addData(@{@"value":@(idx * 16 + 640), @"name":@"IE9+"})
+                .addData(@{@"value":@((idx++) * 8 + 1280), @"name":@"IE8-"});
+            }]);
+        }])
+        .addOptions([PYOption initPYOptionWithBlock:^(PYOption *option) {
+            option.addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+                series.radiusEqual(@"50%")
+                .nameEqual(@"浏览器（数据纯属虚构）")
+                .typeEqual(PYSeriesTypePie)
+                .addData(@{@"value":@(idx * 128 + 80), @"name":@"Chrome"})
+                .addData(@{@"value":@(idx * 64 + 160), @"name":@"Firefox"})
+                .addData(@{@"value":@(idx * 32 + 320), @"name":@"Safari"})
+                .addData(@{@"value":@(idx * 16 + 640), @"name":@"IE9+"})
+                .addData(@{@"value":@((idx++) * 8 + 1280), @"name":@"IE8-"});
+            }]);
+        }])
+        .addOptions([PYOption initPYOptionWithBlock:^(PYOption *option) {
+            option.addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+                series.radiusEqual(@"50%")
+                .nameEqual(@"浏览器（数据纯属虚构）")
+                .typeEqual(PYSeriesTypePie)
+                .addData(@{@"value":@(idx * 128 + 80), @"name":@"Chrome"})
+                .addData(@{@"value":@(idx * 64 + 160), @"name":@"Firefox"})
+                .addData(@{@"value":@(idx * 32 + 320), @"name":@"Safari"})
+                .addData(@{@"value":@(idx * 16 + 640), @"name":@"IE9+"})
+                .addData(@{@"value":@((idx++) * 8 + 1280), @"name":@"IE8-"});
+            }]);
+        }])
+        .addOptions([PYOption initPYOptionWithBlock:^(PYOption *option) {
+            option.addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+                series.radiusEqual(@"50%")
+                .nameEqual(@"浏览器（数据纯属虚构）")
+                .typeEqual(PYSeriesTypePie)
+                .addData(@{@"value":@(idx * 128 + 80), @"name":@"Chrome"})
+                .addData(@{@"value":@(idx * 64 + 160), @"name":@"Firefox"})
+                .addData(@{@"value":@(idx * 32 + 320), @"name":@"Safari"})
+                .addData(@{@"value":@(idx * 16 + 640), @"name":@"IE9+"})
+                .addData(@{@"value":@((idx++) * 8 + 1280), @"name":@"IE8-"});
+            }]);
+        }])
+        .addOptions([PYOption initPYOptionWithBlock:^(PYOption *option) {
+            option.addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
+                series.radiusEqual(@"50%")
+                .nameEqual(@"浏览器（数据纯属虚构）")
+                .typeEqual(PYSeriesTypePie)
+                .addData(@{@"value":@(idx * 128 + 80), @"name":@"Chrome"})
+                .addData(@{@"value":@(idx * 64 + 160), @"name":@"Firefox"})
+                .addData(@{@"value":@(idx * 32 + 320), @"name":@"Safari"})
+                .addData(@{@"value":@(idx * 16 + 640), @"name":@"IE9+"})
+                .addData(@{@"value":@((idx++) * 8 + 1280), @"name":@"IE8-"});
+            }]);
+        }]);
+    }];
 }
 
 /**  饼图 */
@@ -529,7 +723,7 @@
         .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
             legend.orientEqual(PYOrientVertical)
             .xEqual(PYPositionLeft)
-            .dataEqual(@[@"直达",@"营销广告",@"百度",@"谷歌",@"必应",@"其他",@"邮件营销",@"联盟广告",@"视频广告",@"直接访问",@"搜索引擎"]);
+            .dataEqual(@[@"直达",@"营销广告",@"搜索引擎",@"邮件营销",@"联盟广告",@"视频广告",@"百度",@"谷歌",@"必应",@"其他"]);
         }])
         .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
             toolbox.showEqual(YES)
@@ -539,10 +733,6 @@
                 }])
                 .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
                     dataView.showEqual(YES).readOnlyEqual(NO);
-                }])
-                .magicTypeEqual([PYToolboxFeatureMagicType initPYToolboxFeatureMagicTypeWithBlock:^(PYToolboxFeatureMagicType *magicType) {
-                    magicType.showEqual(YES).typeEqual(@[PYSeriesTypePie, PYSeriesTypeFunnel]);
-                    
                 }])
                 .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
                     restore.showEqual(YES);
@@ -555,7 +745,10 @@
             .radiusEqual(@(15))
             .nameEqual(@"访问来源")
             .typeEqual(PYSeriesTypePie)
-            .dataEqual(@[@{@"value":@(335),@"name":@"直达"},@{@"value":@(679),@"name":@"营销广告"},@{@"value":@(1548),@"name":@"搜索引擎"}])
+            .dataEqual(@[
+                         @{@"value":@(335),@"name":@"直达"},
+                         @{@"value":@(679),@"name":@"营销广告"},
+                         @{@"value":@(1548),@"name":@"搜索引擎"}])
             .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
                 itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *itemStyleProp){
                     itemStyleProp.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
@@ -579,7 +772,55 @@
             .radiusEqual(@[@(30),@(50)])
             .nameEqual(@"访问来源")
             .typeEqual(PYSeriesTypePie)
-            .dataEqual(@[@{@"value":@(335),@"name":@"直达"},@{@"value":@(310),@"name":@"营销广告"},@{@"value":@(234),@"name":@"联盟广告"},@{@"value":@(135),@"name":@"视频广告"},@{@"value":@(1048),@"name":@"百度",@"itemStyle":@{@"normal":@{@"color":@"(function (){var zrColor = require(\'zrender/tool/color\');return zrColor.getRadialGradient(300, 200, 110, 300, 200, 140,[[0, \'rgba(255,255,0,1)\'],[1, \'rgba(30,144,250,1)\']])})()",@"label":@{@"textStyle":@{@"color":@"rgba(30,144,255,0.8)",@"align":@"center",@"baseline":@"middle",@"fontFamily":@"微软雅黑",@"fontSize":@(30),@"fpntWeight":@"bolder"}}}}},@{@"value":@(251),@"name":@"谷歌"},@{@"value":@(102),@"name":@"必应"},@{@"value":@(147),@"name":@"其它"}]);
+            .dataEqual(@[
+                         @{@"value":@(335),@"name":@"直达"},
+                         @{@"value":@(310),@"name":@"邮件营销"},
+                         @{@"value":@(234),@"name":@"联盟广告"},
+                         @{@"value":@(135),@"name":@"视频广告"},
+                         @{@"value":@(1048),@"name":@"百度", @"itemStyle":[PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                                    normal//.colorEqual(@"(function (){var zrColor = require(\'zrender/tool/color\');return zrColor.getRadialGradient(300, 200, 110, 300, 200, 140,[[0, \'rgba(255,255,0,1)\'],[1, \'rgba(30,144,250,1)\']]);})()")
+                                    .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                                        label.textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                                            textStyle.colorEqual(PYRGBA(30, 144, 255, 0.8))
+                                            .alignEqual(PYPositionCenter)
+                                            .baseLineEqual(@"middle")
+                                            .fontFamilyEqual(@"微软雅黑")
+                                            .fontWeightEqual(PYTextStyleFontWeightBolder);
+                                        }]);
+                                    }])
+                                    .labelLineEqual([PYLabelLine initPYLabelLineWithBlock:^(PYLabelLine *labelLine) {
+                                        labelLine.lengthEqual(@40)
+                                        .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                                            lineStyle.colorEqual([PYColor colorWithHexString:@"#f0f"])
+                                            .widthEqual(@3)
+                                            .typeEqual(PYLineStyleTypeDotted);
+                                        }]);
+                                    }]);
+                                }]);
+                            }]
+                           },
+                         @{@"value":@(251),@"name":@"谷歌"},
+                         @{@"value":@(102),@"name":@"必应", @"itemStyle":[PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                            itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                                normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                                    label.showEqual(NO);
+                                }])
+                                .labelLineEqual([PYLabelLine initPYLabelLineWithBlock:^(PYLabelLine *labelLine) {
+                                    labelLine.showEqual(NO);
+                                }]);
+                            }])
+                            .emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+                                emphasis.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                                    label.showEqual(YES);
+                                }])
+                                .labelLineEqual([PYLabelLine initPYLabelLineWithBlock:^(PYLabelLine *labelLine) {
+                                    labelLine.showEqual(YES).lengthEqual(@50);
+                                }]);
+                            }]);
+                        }]},
+                         @{@"value":@(147),@"name":@"其他"}
+                         ]);
         }])
         .addSeries([PYPieSeries initPYPieSeriesWithBlock:^(PYPieSeries *series) {
             series.centerEqual(@[@"75%",@(100)])
@@ -613,9 +854,15 @@
             }])
             .markPointEqual([PYMarkPoint initPYMarkPointWithBlock:^(PYMarkPoint *point) {
                 point.symbolEqual(PYSymbolStar5)
-                .addDataArr(@[@{@"name":@"最大",@"value":@(1548),@"x":@"80%",@"y":@(40),@"symbolSize":@(14)}]);
+                .addData(@{@"name":@"最大",@"value":@(1548),@"x":@"80%",@"y":@(40),@"symbolSize":@(20)});
             }])
-            .dataEqual(@[@{@"value":@(335),@"name":@"直达"},@{@"value":@(310),@"name":@"营销广告"},@{@"value":@(234),@"name":@"联盟广告"},@{@"value":@(135),@"name":@"视频广告"},@{@"value":@(1548),@"name":@"搜索引擎"}]);
+            .dataEqual(@[
+                         @{@"value":@(335),@"name":@"直达"},
+                         @{@"value":@(310),@"name":@"邮件营销"},
+                         @{@"value":@(234),@"name":@"联盟广告"},
+                         @{@"value":@(135),@"name":@"视频广告"},
+                         @{@"value":@(1548),@"name":@"搜索引擎"}
+                         ]);
         }]);
     }];
 
