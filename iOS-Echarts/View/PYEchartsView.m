@@ -108,7 +108,11 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
             }
         }
     }
+#if TARGET_OS_IPHONE
     bundlePath = [echartsBundle bundlePath];
+#elif TARGET_OS_MAC
+    bundlePath = [echartsBundle resourcePath];
+#endif
     NSString *urlString = [echartsBundle pathForResource:@"echarts" ofType:@"html"];
     localHtmlContents =[[NSString alloc] initWithContentsOfFile:urlString encoding:NSUTF8StringEncoding error:nil];
     
