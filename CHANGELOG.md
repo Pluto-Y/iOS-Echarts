@@ -1,3 +1,22 @@
+1.3.2 Release notes (2016-09-06)
+============================================================
+
+### Added
+* Add some actions support
+* Add some `add[Name]` and `add[Name]Arr` for some properties
+* Add support for Mac
+* Add support for themes
+
+### Changed
+* Changed the way of js call oc functions, by using iframe
+* Changed the type of data in PYMarkPoint from NSArray into NSMutableArray
+* Changed the name of constant in PYAxisPointer
+* Changed type of options in `PYOption` into NSMutableArray
+
+### Modify
+* Rewrite some demo use new features
+* Rewrite action by using iframe
+
 1.3.1 Release notes (2016-08-30)
 ============================================================
 
@@ -82,3 +101,7 @@
 * Add Radar and Map Demos
 * Replace js files and support all echarts types
 * Add PYZoomEchartsView
+
+
+
+
