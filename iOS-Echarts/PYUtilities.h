@@ -18,7 +18,7 @@
 
 #import <Foundation/Foundation.h>
 
-#if TARGET_OS_IPHONE || TARGET_OS_TV
+#if TARGET_OS_IPHONE
     #import <UIKit/UIKit.h>
     #define PY_WEB_VIEW UIWebView
     #define PY_WEB_DELEGATE UIWebViewDelegate

@@ -90,7 +90,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
     if (bundlePath != nil) { // If 'iOS-Echarts' is installed by Cocoapods and don't use 'use_frameworks!' command
         echartsBundle = [NSBundle bundleWithPath:bundlePath];
     } else { // If 'iOS-Echarts' is installed manually or use 'use_frameworks!' command
-#if TARGET_OS_IPHONE || TARGET_OS_TV
+#if TARGET_OS_IPHONE
         echartsBundle = [NSBundle mainBundle];
 #elif TARGET_OS_MAC
         echartsBundle = [NSBundle bundleWithPath:[NSBundle mainBundle].resourcePath];
@@ -116,7 +116,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
         NSLog(@"Error: Can't load echart's files.");
     }
     
-#if TARGET_OS_IPHONE || TARGET_OS_TV
+#if TARGET_OS_IPHONE
     self.delegate = self;
     self.scrollView.bounces = NO;
     self.scrollView.scrollEnabled = NO;
@@ -154,7 +154,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  *  Load the web view request
  */
 - (void)loadEcharts {
-#if TARGET_OS_IPHONE || TARGET_OS_TV
+#if TARGET_OS_IPHONE
     [self loadHTMLString:localHtmlContents baseURL:[NSURL fileURLWithPath: bundlePath]];
 #elif TARGET_OS_MAC
     [[self mainFrame] loadHTMLString:localHtmlContents baseURL:[NSURL fileURLWithPath: bundlePath]];
@@ -167,7 +167,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  *  @param methodWithParam The format:`[instance.]methodname(params)`
  */
 - (void)callJsMethods:(NSString *)methodWithParam {
-#if TARGET_OS_IPHONE ||TARGET_OS_TV
+#if TARGET_OS_IPHONE
     [self stringByEvaluatingJavaScriptFromString:methodWithParam];
 #elif TARGET_OS_MAC
     [[self windowScriptObject] evaluateWebScript:methodWithParam];
@@ -290,7 +290,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
 
 #pragma mark - Delegate
 
-#if TARGET_OS_IPHONE || TARGET_OS_TV
+#if TARGET_OS_IPHONE
 #pragma mark UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
     if (option == nil) {
@@ -421,7 +421,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
 
 #endif
 
-#if TARGET_OS_IPHONE || TARGET_OS_TV
+#if TARGET_OS_IPHONE
 - (BOOL)gestureRecognizer:(UIGestureRecognizer *)gestureRecognizer shouldRecognizeSimultaneouslyWithGestureRecognizer:(UIGestureRecognizer *)otherGestureRecognizer {
     return YES;
 }
