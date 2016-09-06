@@ -57,7 +57,7 @@ PYPropertyEqualTemplate(PYChordSeries, PYSort, sortSub);
 PYPropertyEqualTemplate(PYChordSeries, BOOL, clockWise);
 
 PYAddMethodTemplate(PYChordSeries, PYCategories, Categories, categories);
-PYAddMethodTemplate(PYChordSeries, PYForceNodes, Nodes, nodes);
+PYAddMethodTemplate(PYChordSeries, PYNodes, Nodes, nodes);
 PYAddMethodTemplate(PYChordSeries, PYLinks, Links, links);
 
 @end

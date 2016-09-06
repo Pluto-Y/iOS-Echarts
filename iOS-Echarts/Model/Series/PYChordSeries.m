@@ -51,7 +51,7 @@ PYPropertyEqualImpTemplate(PYChordSeries, PYSort, sortSub);
 PYPropertyEqualImpTemplate(PYChordSeries, BOOL, clockWise);
 
 PYAddMethodImpTemplate(PYChordSeries, PYCategories, Categories, categories);
-PYAddMethodImpTemplate(PYChordSeries, PYForceNodes, Nodes, nodes);
+PYAddMethodImpTemplate(PYChordSeries, PYNodes, Nodes, nodes);
 PYAddMethodImpTemplate(PYChordSeries, PYLinks, Links, links);
 
 @end
