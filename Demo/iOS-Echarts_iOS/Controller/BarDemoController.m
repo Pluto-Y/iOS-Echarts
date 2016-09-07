@@ -77,7 +77,7 @@ typedef NS_ENUM(NSInteger, BarDemoTypeTag) {
             option = [PYBarDemoOptions stackedBarOption];
             break;
         case BarDemoTypeTagStackedFloatingBar:
-            [self showStackedFloatingBarDemo];
+            option = [PYBarDemoOptions stackedFloatingBarOption];
             break;
         case BarDemoTypeTagTornado:
             [self showTornadoDemo];
@@ -103,37 +103,6 @@ typedef NS_ENUM(NSInteger, BarDemoTypeTag) {
         [_kEchartView setOption:option];
     }
     [_kEchartView loadEcharts];
-}
-
-/**
- *  多维条形图
- */
-- (void)showStackedFloatingBarDemo {
-    NSString *placeHoldStyleJson = @"{\"normal\":{\"barBorderColor\":\"rgba(0,0,0,0)\",\"color\":\"rgba(0,0,0,0)\"},\"emphasis\":{\"barBorderColor\":\"rgba(0,0,0,0)\",\"color\":\"rgba(0,0,0,0)\"}}";
-    NSData *placeHoldStyleJsonData = [placeHoldStyleJson dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *placeHoldStyleJsonDic = [NSJSONSerialization JSONObjectWithData:placeHoldStyleJsonData options:NSJSONReadingAllowFragments error:nil];
-    PYItemStyle *placeHoldStyle = [RMMapper objectWithClass:[PYItemStyle class] fromDictionary:placeHoldStyleJsonDic];
-    NSString *dataStyleJson = @"{\"normal\":{\"label\":{\"show\":true,\"position\":\"insideLeft\",\"formatter\":\"{c}%\"}}}";
-    NSData *dataStyleJsonData = [dataStyleJson dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *dataStyleJsonDic = [NSJSONSerialization JSONObjectWithData:dataStyleJsonData options:NSJSONReadingAllowFragments error:nil];
-    PYItemStyle *dataStyle = [RMMapper objectWithClass:[PYItemStyle class] fromDictionary:dataStyleJsonDic];
-    NSString *stackedFloatingBarJson = @"{\"title\":{\"text\":\"多维条形图\",\"subtext\":\"From ExcelHome\",\"sublink\":\"http://e.weibo.com/1341556070/AiEscco0H\"},\"tooltip\":{\"trigger\":\"axis\",\"axisPointer\":{\"type\":\"shadow\"},\"formatter\":\"{b}<br/>{a0}:{c0}%<br/>{a2}:{c2}%<br/>{a4}:{c4}%<br/>{a6}:{c6}%\"},\"legend\":{\"y\":55,\"itemGap\":\"(funtion(){return document.getElementById(\'main\').offsetWidth / 8;})()\",\"data\":[\"GML\",\"PYP\",\"WTC\",\"ZTW\"]},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"grid\":{\"x\":30,\"x2\":30,\"y\":80,\"y2\":30},\"xAxis\":[{\"type\":\"value\",\"position\":\"top\",\"splitLine\":{\"show\":false},\"axisLabel\":{\"show\":false}}],\"yAxis\":[{\"type\":\"category\",\"splitLine\":{\"show\":false},\"data\":[\"重庆\",\"天津\",\"上海\",\"北京\"]}],\"series\":[{\"name\":\"GML\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[38,50,33,72]},{\"name\":\"GML\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[62,50,67,28]},{\"name\":\"PYP\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[61,41,42,30]},{\"name\":\"PYP\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[39,59,58,70]},{\"name\":\"WTC\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[37,35,44,60]},{\"name\":\"WTC\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[63,65,56,40]},{\"name\":\"ZTW\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[71,50,31,39]},{\"name\":\"ZTW\",\"type\":\"bar\",\"stack\":\"总量\",\"data\":[29,50,69,61]}]}\n";
-    NSData *jsonData = [stackedFloatingBarJson dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
-    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
-    option.series = [RMMapper mutableArrayOfClass:[PYCartesianSeries class] fromArrayOfDictionary:option.series];
-    int i = 1;
-    NSMutableArray *serieses = [[NSMutableArray alloc] init];
-    for (PYSeries *series in option.series) {
-        if (i++ % 2 == 1) {
-            series.itemStyle = dataStyle;
-        } else {
-            series.itemStyle = placeHoldStyle;
-        }
-        [serieses addObject:series];
-    }
-    option.series = serieses;
-    [_kEchartView setOption:option];
 }
 
 /**
