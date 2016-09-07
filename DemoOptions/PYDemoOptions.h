@@ -12,6 +12,7 @@
 #import "PYLineDemoOptions.h"
 #import "PYBarDemoOptions.h"
 #import "PYPieDemoOptions.h"
+#import "PYWorldCloudDemoOptions.h"
 
 
 #endif /* PYDemoOptions_h */
