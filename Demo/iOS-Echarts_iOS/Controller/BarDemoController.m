@@ -81,14 +81,12 @@ typedef NS_ENUM(NSInteger, BarDemoTypeTag) {
             break;
         case BarDemoTypeTagTornado:
             option = [PYBarDemoOptions tornadoOption];
-//            [self showTornadoDemo];
             break;
         case BarDemoTypeTagTornado2:
             option = [PYBarDemoOptions tornado2Option];
-//            [self showTornado2Demo];
             break;
         case BarDemoTypeTagIrrgularBar:
-            [self showIrrgularBarDemo];
+            option = [PYBarDemoOptions irrgularBarOption];
             break;
         case BarDemoTypeTagTimeline:
             break;
@@ -105,39 +103,6 @@ typedef NS_ENUM(NSInteger, BarDemoTypeTag) {
         [_kEchartView setOption:option];
     }
     [_kEchartView loadEcharts];
-}
-
-/**
- *  旋风条形图
- */
-- (void)showTornadoDemo {
-    NSString *tornadoJson = @"{\"grid\":{\"x\":30,\"x2\":45},\"tooltip\":{\"trigger\":\"axis\",\"axisPointer\":{\"type\":\"shadow\"}},\"legend\":{\"data\":[\"利润\",\"支出\",\"收入\"]},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"magicType\":{\"show\":true,\"type\":[\"line\",\"bar\"]},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"calculable\":true,\"xAxis\":[{\"type\":\"value\"}],\"yAxis\":[{\"type\":\"category\",\"axisTick\":{\"show\":false},\"data\":[\"周一\",\"周二\",\"周三\",\"周四\",\"周五\",\"周六\",\"周日\"]}],\"series\":[{\"name\":\"利润\",\"type\":\"bar\",\"itemStyle\":{\"normal\":{\"label\":{\"show\":true,\"position\":\"inside\"}}},\"data\":[200,170,240,244,200,220,210]},{\"name\":\"收入\",\"type\":\"bar\",\"stack\":\"总量\",\"barWidth\":5,\"itemStyle\":{\"normal\":{\"label\":{\"show\":true}}},\"data\":[320,302,341,374,390,450,420]},{\"name\":\"支出\",\"type\":\"bar\",\"stack\":\"总量\",\"itemStyle\":{\"normal\":{\"label\":{\"show\":true,\"position\":\"left\"}}},\"data\":[-120,-132,-101,-134,-190,-230,-210]}]}";
-    NSData *jsonData = [tornadoJson dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
-    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
-    [_kEchartView setOption:option];
-}
-
-/**
- *  旋风条形图2
- */
-- (void)showTornado2Demo {
-    NSString *tornadoJson = @"{\"title\":{\"text\":\"交错正负轴标签\",\"subtext\":\"From ExcelHome\",\"sublink\":\"http://e.weibo.com/1341556070/AjwF2AgQm\"},\"tooltip\":{\"trigger\":\"axis\",\"axisPointer\":{\"type\":\"shadow\"}},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"magicType\":{\"show\":true,\"type\":[\"line\",\"bar\"]},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"grid\":{\"x\":30,\"x2\":30,\"y\":80,\"y2\":30},\"xAxis\":[{\"type\":\"value\",\"position\":\"top\",\"splitLine\":{\"lineStyle\":{\"type\":\"dashed\"}}}],\"yAxis\":[{\"type\":\"category\",\"axisLine\":{\"show\":false},\"axisLabel\":{\"show\":false},\"axisTick\":{\"show\":false},\"splitLine\":{\"show\":false},\"data\":[\"ten\",\"nine\",\"eight\",\"seven\",\"six\",\"five\",\"four\",\"three\",\"two\",\"one\"]}],\"series\":[{\"name\":\"生活费\",\"type\":\"bar\",\"stack\":\"总量\",\"itemStyle\":{\"normal\":{\"color\":\"orange\",\"borderRadius\":5,\"label\":{\"show\":true,\"position\":\"left\",\"formatter\":\"{b}\"}}},\"data\":[{\"value\":-0.07,\"itemStyle\":{\"normal\":{\"label\":{\"position\":\"right\"}}}},{\"value\":-0.09,\"itemStyle\":{\"normal\":{\"label\":{\"position\":\"right\"}}}},0.2,0.44,{\"value\":-0.23,\"itemStyle\":{\"normal\":{\"label\":{\"position\":\"right\"}}}},0.08,{\"value\":-0.17,\"itemStyle\":{\"normal\":{\"label\":{\"position\":\"right\"}}}},0.47,{\"value\":-0.36,\"itemStyle\":{\"normal\":{\"label\":{\"position\":\"right\"}}}},0.18]}]}";
-    NSData *jsonData = [tornadoJson dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
-    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
-    [_kEchartView setOption:option];
-}
-
-/**
- *  不等距柱形图
- */
-- (void)showIrrgularBarDemo {
-    NSString *irrgularBarJson = @"{\"grid\":{\"x\":30,\"x2\":45},\"title\":{\"text\":\"双数值柱形图\",\"subtext\":\"纯属虚构\"},\"tooltip\":{\"trigger\":\"axis\",\"axisPointer\":{\"show\":true,\"type\":\"cross\",\"lineStyle\":{\"type\":\"dashed\",\"width\":1}}, \"formatter\" : \"(function (params) {return params.seriesName + ' : [ '+ params.value[0] + ', ' + params.value[1] + ' ]';})\"},\"legend\":{\"data\":[\"数据1\",\"数据2\"]},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"magicType\":{\"show\":true,\"type\":[\"line\",\"bar\"]},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"calculable\":true,\"xAxis\":[{\"type\":\"value\"}],\"yAxis\":[{\"type\":\"value\",\"axisLine\":{\"lineStyle\":{\"color\":\"#dc143c\"}}}],\"series\":[{\"name\":\"数据1\",\"type\":\"bar\",\"data\":[[1.5,10],[5,7],[8,8],[12,6],[11,12],[16,9],[14,6],[17,4],[19,9]],\"markPoint\":{\"data\":[{\"type\":\"max\",\"name\":\"最大值\",\"symbol\":\"emptyCircle\",\"itemStyle\":{\"normal\":{\"color\":\"#dc143c\",\"label\":{\"position\":\"top\"}}}},{\"type\":\"min\",\"name\":\"最小值\",\"symbol\":\"emptyCircle\",\"itemStyle\":{\"normal\":{\"color\":\"#dc143c\",\"label\":{\"position\":\"bottom\"}}}},{\"type\":\"max\",\"name\":\"最大值\",\"valueIndex\":0,\"symbol\":\"emptyCircle\",\"itemStyle\":{\"normal\":{\"color\":\"#1e90ff\",\"label\":{\"position\":\"right\"}}}},{\"type\":\"min\",\"name\":\"最小值\",\"valueIndex\":0,\"symbol\":\"emptyCircle\",\"itemStyle\":{\"normal\":{\"color\":\"#1e90ff\",\"label\":{\"position\":\"left\"}}}}]},\"markLine\":{\"data\":[{\"type\":\"max\",\"name\":\"最大值\",\"itemStyle\":{\"normal\":{\"color\":\"#dc143c\"}}},{\"type\":\"min\",\"name\":\"最小值\",\"itemStyle\":{\"normal\":{\"color\":\"#dc143c\"}}},{\"type\":\"average\",\"name\":\"平均值\",\"itemStyle\":{\"normal\":{\"color\":\"#dc143c\"}}},{\"type\":\"max\",\"name\":\"最大值\",\"valueIndex\":0,\"itemStyle\":{\"normal\":{\"color\":\"#1e90ff\"}}},{\"type\":\"min\",\"name\":\"最小值\",\"valueIndex\":0,\"itemStyle\":{\"normal\":{\"color\":\"#1e90ff\"}}},{\"type\":\"average\",\"name\":\"平均值\",\"valueIndex\":0,\"itemStyle\":{\"normal\":{\"color\":\"#1e90ff\"}}}]}},{\"name\":\"数据2\",\"type\":\"bar\",\"barHeight\":10,\"data\":[[1,2],[2,3],[4,4],[7,5],[11,11],[18,15]]}]}";
-    NSData *jsonData = [irrgularBarJson dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
-    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
-    [_kEchartView setOption:option];
 }
 
 // 缺少搭配时间轴的测试

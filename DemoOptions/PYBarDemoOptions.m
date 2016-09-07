@@ -1081,7 +1081,148 @@
 }
 
 + (PYOption *)irrgularBarOption {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"双数值柱形图")
+            .subtextEqual(@"纯属虚构");
+        }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.xEqual(@40).x2Equal(@40);
+        }])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerAxis)
+            .axisPointerEqual([PYAxisPointer initPYAxisPointerWithBlock:^(PYAxisPointer *axisPoint) {
+                axisPoint.showEqual(YES)
+                .typeEqual(PYAxisPointerTypeCross)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.typeEqual(PYLineStyleTypeDashed)
+                    .widthEqual(@1);
+                }]);
+            }])
+            .formatterEqual(@"(function (params) {return params.seriesName + \' : [ \' + params.value[0] + \', \' + params.value[1] + \' ]\';})");
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.dataEqual(@[@"数据1", @"数据2"]);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .magicTypeEqual([PYToolboxFeatureMagicType initPYToolboxFeatureMagicTypeWithBlock:^(PYToolboxFeatureMagicType *magicType) {
+                    magicType.showEqual(YES).typeEqual(@[PYSeriesTypeLine, PYSeriesTypeBar]);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .calculableEqual(YES)
+        .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue);
+        }])
+        .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue)
+            .axisLineEqual([PYAxisLine initPYAxisLineWithBlock:^(PYAxisLine *axisLine) {
+                axisLine.lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.colorEqual([PYColor colorWithHexString:@"#dc143c"]);
+                }]);
+            }]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.nameEqual(@"数据1")
+            .typeEqual(PYSeriesTypeBar)
+            .addDataArr(@[
+                          @[@1.5, @10],
+                          @[@5, @7],
+                          @[@8, @8],
+                          @[@12, @6],
+                          @[@11, @12],
+                          @[@16, @9],
+                          @[@14, @6],
+                          @[@17, @4],
+                          @[@19, @9]
+                          ])
+            .markPointEqual([PYMarkPoint initPYMarkPointWithBlock:^(PYMarkPoint *point) {
+                point.addData(@{@"type":@"max", @"name":@"最大值", @"symbol":PYSymbolEmptyCircle, @"itemStyle":[PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                    itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                        normal.colorEqual([PYColor colorWithHexString:@"#dc143c"])
+                        .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                            label.positionEqual(PYPositionTop);
+                        }]);
+                    }]);
+                }]})
+                .addData(@{@"type":@"min", @"name":@"最小值", @"symbol":PYSymbolEmptyCircle, @"itemStyle":[PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                    itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                        normal.colorEqual([PYColor colorWithHexString:@"#dc143c"])
+                        .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                            label.positionEqual(PYPositionBottom);
+                        }]);
+                    }]);
+                }]})
+                .addData(@{@"type":@"max", @"name":@"最大值", @"valueIndex":@0, @"symbol":PYSymbolEmptyCircle, @"itemStyle":[PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                    itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                        normal.colorEqual([PYColor colorWithHexString:@"#1e90ff"])
+                        .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                            label.positionEqual(PYPositionRight);
+                        }]);
+                    }]);
+                }]})
+                .addData(@{@"type":@"min", @"name":@"最小值", @"valueIndex":@0, @"symbol":PYSymbolEmptyCircle, @"itemStyle":[PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                    itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                        normal.colorEqual([PYColor colorWithHexString:@"#1e90ff"])
+                        .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                            label.positionEqual(PYPositionLeft);
+                        }]);
+                    }]);
+                }]});
+            }])
+            .markLineEqual([PYMarkLine initPYMarkLineWithBlock:^(PYMarkLine *markLine) {
+                markLine.addData(@{@"type":@"max", @"name":@"最大值", @"itemStyle":[PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                    itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                        normal.colorEqual([PYColor colorWithHexString:@"#dc143c"]);
+                    }]);
+                }]})
+                .addData(@{@"type":@"min", @"name":@"最小值", @"itemStyle":[PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                    itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                        normal.colorEqual([PYColor colorWithHexString:@"#dc143c"]);
+                    }]);
+                }]})
+                .addData(@{@"type":@"average", @"name":@"平均值", @"itemStyle":[PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                    itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                        normal.colorEqual([PYColor colorWithHexString:@"#dc143c"]);
+                    }]);
+                }]})
+                .addData(@{@"type":@"max", @"name":@"最大值", @"valueIndex":@0, @"itemStyle":[PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                    itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                        normal.colorEqual([PYColor colorWithHexString:@"#1e90ff"]);
+                    }]);
+                }]})
+                .addData(@{@"type":@"min", @"name":@"最小值", @"valueIndex":@0, @"itemStyle":[PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                    itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                        normal.colorEqual([PYColor colorWithHexString:@"#1e90ff"]);
+                    }]);
+                }]})
+                .addData(@{@"type":@"average", @"name":@"平均值", @"valueIndex":@0, @"itemStyle":[PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                    itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                        normal.colorEqual([PYColor colorWithHexString:@"#1e90ff"]);
+                    }]);
+                }]});
+            }]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.barMinHeightEqual(@10)
+            .nameEqual(@"数据2")
+            .typeEqual(PYSeriesTypeBar)
+            .addDataArr(@[
+                          @[@1, @2], @[@2, @3], @[@4, @4], @[@7, @5], @[@11, @11], @[@18, @15]
+                          ]);
+        }]);
+    }];
 }
 
 
