@@ -898,7 +898,89 @@
 }
 
 + (PYOption *)tornadoOption {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerAxis)
+            .axisPointerEqual([PYAxisPointer initPYAxisPointerWithBlock:^(PYAxisPointer *axisPoint) {
+                axisPoint.typeEqual(PYAxisPointerTypeShadow);
+            }]);
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.dataEqual(@[@"利润", @"支出", @"收入"]);
+        }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.xEqual(@40).x2Equal(@50);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .magicTypeEqual([PYToolboxFeatureMagicType initPYToolboxFeatureMagicTypeWithBlock:^(PYToolboxFeatureMagicType *magicType) {
+                    magicType.showEqual(YES).typeEqual(@[PYSeriesTypeLine, PYSeriesTypeBar]);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .calculableEqual(YES)
+        .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue);
+        }])
+        .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeCategory)
+            .axisTickEqual([PYAxisTick initPYAxisTickWithBlock:^(PYAxisTick *axisTick) {
+                axisTick.showEqual(NO);
+            }])
+            .addDataArr(@[@"周一", @"周二", @"周三", @"周四", @"周五", @"周六", @"周日"]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.nameEqual(@"利润")
+            .typeEqual(PYSeriesTypeBar)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES)
+                        .positionEqual(@"inside");
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@200, @170, @240, @244, @200, @220, @210]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.stackEqual(@"总量")
+            .barWidthEqual(@5)
+            .nameEqual(@"收入")
+            .typeEqual(PYSeriesTypeBar)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES);
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@320, @302, @341, @374, @390, @450, @420]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.stackEqual(@"总量")
+            .nameEqual(@"支出")
+            .typeEqual(PYSeriesTypeBar)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES)
+                        .positionEqual(PYPositionLeft);
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@(-120), @(-132), @(-101), @(-134), @(-190), @(-230), @(-210)]);
+        }]);
+    }];
 }
 
 + (PYOption *)tornado2Option {

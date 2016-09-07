@@ -80,7 +80,8 @@ typedef NS_ENUM(NSInteger, BarDemoTypeTag) {
             option = [PYBarDemoOptions stackedFloatingBarOption];
             break;
         case BarDemoTypeTagTornado:
-            [self showTornadoDemo];
+            option = [PYBarDemoOptions tornadoOption];
+//            [self showTornadoDemo];
             break;
         case BarDemoTypeTagTornado2:
             [self showTornado2Demo];
