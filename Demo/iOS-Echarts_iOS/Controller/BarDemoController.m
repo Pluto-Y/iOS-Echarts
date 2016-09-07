@@ -84,7 +84,8 @@ typedef NS_ENUM(NSInteger, BarDemoTypeTag) {
 //            [self showTornadoDemo];
             break;
         case BarDemoTypeTagTornado2:
-            [self showTornado2Demo];
+            option = [PYBarDemoOptions tornado2Option];
+//            [self showTornado2Demo];
             break;
         case BarDemoTypeTagIrrgularBar:
             [self showIrrgularBarDemo];

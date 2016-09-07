@@ -984,7 +984,100 @@
 }
 
 + (PYOption *)tornado2Option {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"交错正负轴标签")
+            .subtextEqual(@"From ExcelHome")
+            .sublinkEqual(@"http://e.weibo.com/1341556070/AjwF2AgQm");
+        }])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerAxis)
+            .axisPointerEqual([PYAxisPointer initPYAxisPointerWithBlock:^(PYAxisPointer *axisPoint) {
+                axisPoint.typeEqual(PYAxisPointerTypeShadow);
+            }]);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .magicTypeEqual([PYToolboxFeatureMagicType initPYToolboxFeatureMagicTypeWithBlock:^(PYToolboxFeatureMagicType *magicType) {
+                    magicType.showEqual(YES).typeEqual(@[PYSeriesTypeLine, PYSeriesTypeBar]);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.yEqual(@80).y2Equal(@30).xEqual(@40).x2Equal(@50);
+        }])
+        .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue)
+            .positionEqual(PYPositionTop)
+            .splitLineEqual([PYAxisSplitLine initPYAxisSplitLineWithBlock:^(PYAxisSplitLine *axisSpliteLine) {
+                axisSpliteLine.lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.typeEqual(PYLineStyleTypeDashed);
+                }]);
+            }]);
+        }])
+        .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeCategory)
+            .axisLineEqual([PYAxisLine initPYAxisLineWithBlock:^(PYAxisLine *axisLine) {
+                axisLine.showEqual(NO);
+            }])
+            .axisLabelEqual([PYAxisLabel initPYAxisLabelWithBlock:^(PYAxisLabel *axisLabel) {
+                axisLabel.showEqual(NO);
+            }])
+            .axisTickEqual([PYAxisTick initPYAxisTickWithBlock:^(PYAxisTick *axisTick) {
+                axisTick.showEqual(NO);
+            }])
+            .splitLineEqual([PYAxisSplitLine initPYAxisSplitLineWithBlock:^(PYAxisSplitLine *axisSpliteLine) {
+                axisSpliteLine.showEqual(NO);
+            }])
+            .addDataArr(@[@"ten", @"nine", @"eight", @"seven", @"six", @"five", @"four", @"three", @"two", @"one"]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.stackEqual(@"总量")
+            .nameEqual(@"生活费")
+            .typeEqual(PYSeriesTypeBar)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.colorEqual(@"orange")
+                    .barBorderRadiusEqual(@5)
+                    .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES)
+                        .positionEqual(PYPositionLeft)
+                        .formatterEqual(@"{b}");
+                    }]);
+                }]);
+            }])
+            .addData(@{@"value":@(-0.07), @"itemStyle":[self createLabelRight]})
+            .addData(@{@"value":@(-0.09), @"itemStyle":[self createLabelRight]})
+            .addData(@0.2)
+            .addData(@0.44)
+            .addData(@{@"value":@(-0.23), @"itemStyle":[self createLabelRight]})
+            .addData(@0.08)
+            .addData(@{@"value":@(-0.17), @"itemStyle":[self createLabelRight]})
+            .addData(@0.47)
+            .addData(@{@"value":@(-0.36), @"itemStyle":[self createLabelRight]})
+            .addData(@0.18);
+        }]);
+    }];
+}
+
++ (PYItemStyle *)createLabelRight {
+    return [PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+        itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+            normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                label.positionEqual(PYPositionRight);
+            }]);
+        }]);
+    }];
 }
 
 + (PYOption *)irrgularBarOption {
