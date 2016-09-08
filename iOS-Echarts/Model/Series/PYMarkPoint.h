@@ -58,7 +58,7 @@ PYPropertyEqualTemplate(PYMarkPointEffect, NSNumber *, shadowBlur);
 @property (nonatomic, strong) PYItemStyle *itemStyle;
 @property (nonatomic, copy) NSMutableArray *data;
 
-PYInitializerTemplate(PYMarkPoint, point);
+PYInitializerTemplate(PYMarkPoint, markPoint);
 
 PYPropertyEqualTemplate(PYMarkPoint, BOOL, clickable);
 PYPropertyEqualTemplate(PYMarkPoint, id, symbol);
