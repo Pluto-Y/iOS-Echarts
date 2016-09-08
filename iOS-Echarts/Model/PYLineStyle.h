@@ -27,6 +27,7 @@ extern PYLineStyleType const PYLineStyleTypeBroken;
 @interface PYLineStyle : NSObject
 
 @property (nonatomic, strong) id color;
+@property (nonatomic, strong) id color0;
 @property (nonatomic, copy) PYLineStyleType type;
 @property (nonatomic, strong) NSNumber *width;
 @property (nonatomic, strong) PYColor *shadowColor;
@@ -37,6 +38,7 @@ extern PYLineStyleType const PYLineStyleTypeBroken;
 PYInitializerTemplate(PYLineStyle, lineStyle);
 
 PYPropertyEqualTemplate(PYLineStyle, id, color);
+PYPropertyEqualTemplate(PYLineStyle, id, color0);
 PYPropertyEqualTemplate(PYLineStyle, PYLineStyleType, type);
 PYPropertyEqualTemplate(PYLineStyle, NSNumber *, width);
 PYPropertyEqualTemplate(PYLineStyle, PYColor *, shadowColor);

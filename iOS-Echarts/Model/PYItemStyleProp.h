@@ -59,6 +59,7 @@ PYPropertyEqualTemplate(PYLabel, NSNumber *, y);
 @interface PYItemStyleProp : NSObject
 
 @property (nonatomic, strong) id color;
+@property (nonatomic, strong) id color0;
 @property (nonatomic, strong) PYLineStyle *lineStyle;
 @property (nonatomic, strong) PYAreaStyle *areaStyle;
 @property (nonatomic, strong) PYChordStyle *chordStyle;
@@ -75,6 +76,7 @@ PYPropertyEqualTemplate(PYLabel, NSNumber *, y);
 PYInitializerTemplate(PYItemStyleProp, itemStyleProp);
 
 PYPropertyEqualTemplate(PYItemStyleProp, id, color);
+PYPropertyEqualTemplate(PYItemStyleProp, id, color0);
 PYPropertyEqualTemplate(PYItemStyleProp, PYLineStyle *, lineStyle);
 PYPropertyEqualTemplate(PYItemStyleProp, PYAreaStyle *, areaStyle);
 PYPropertyEqualTemplate(PYItemStyleProp, PYChordStyle *, chordStyle);

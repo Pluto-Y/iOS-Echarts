@@ -82,6 +82,7 @@ PYPropertyEqualImpTemplate(PYLabel, NSNumber *, y);
 PYInitializerImpTemplate(PYItemStyleProp);
 
 PYPropertyEqualImpTemplate(PYItemStyleProp, id, color);
+PYPropertyEqualImpTemplate(PYItemStyleProp, id, color0);
 PYPropertyEqualImpTemplate(PYItemStyleProp, PYLineStyle *, lineStyle);
 PYPropertyEqualImpTemplate(PYItemStyleProp, PYAreaStyle *, areaStyle);
 PYPropertyEqualImpTemplate(PYItemStyleProp, PYChordStyle *, chordStyle);
