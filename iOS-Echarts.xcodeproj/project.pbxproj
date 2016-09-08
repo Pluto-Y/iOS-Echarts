@@ -65,6 +65,7 @@
 		6F65DB4B1D80A02D00950EC5 /* PYWorldCloudDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F65DB4A1D80A02D00950EC5 /* PYWorldCloudDemoOptions.m */; };
 		6F65DC141D820E2200950EC5 /* PYCandlestickDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F65DC131D820E2200950EC5 /* PYCandlestickDemoOptions.m */; };
 		6F65DC171D8217B700950EC5 /* PYVennDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F65DC161D8217B700950EC5 /* PYVennDemoOptions.m */; };
+		6F65DC1A1D821CA400950EC5 /* PYTreemapDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F65DC191D821CA400950EC5 /* PYTreemapDemoOptions.m */; };
 		6F7352BD1D50A779006CD119 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 6F7352BC1D50A779006CD119 /* js */; };
 		6F743A6A1D78B00400C94967 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743A491D78AFA500C94967 /* main.m */; };
 		6F743A6B1D78B00600C94967 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743A441D78AFA500C94967 /* AppDelegate.m */; };
@@ -315,6 +316,8 @@
 		6F65DC131D820E2200950EC5 /* PYCandlestickDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYCandlestickDemoOptions.m; sourceTree = "<group>"; };
 		6F65DC151D8217B700950EC5 /* PYVennDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYVennDemoOptions.h; sourceTree = "<group>"; };
 		6F65DC161D8217B700950EC5 /* PYVennDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYVennDemoOptions.m; sourceTree = "<group>"; };
+		6F65DC181D821CA400950EC5 /* PYTreemapDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYTreemapDemoOptions.h; sourceTree = "<group>"; };
+		6F65DC191D821CA400950EC5 /* PYTreemapDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYTreemapDemoOptions.m; sourceTree = "<group>"; };
 		6F7352BC1D50A779006CD119 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
 		6F743A2E1D78AF9300C94967 /* iOS-Echarts_OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Echarts_OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F743A431D78AFA500C94967 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -785,19 +788,21 @@
 		6F9DCF381D7842FF007CEAD2 /* DemoOptions */ = {
 			isa = PBXGroup;
 			children = (
-				6F743AE01D7D8ADA00C94967 /* PYPieDemoOptions.h */,
-				6F743AE11D7D8ADA00C94967 /* PYPieDemoOptions.m */,
-				6F9DCF391D7842FF007CEAD2 /* PYLineDemoOptions.h */,
-				6F9DCF3A1D7842FF007CEAD2 /* PYLineDemoOptions.m */,
-				6F9DCF3C1D784448007CEAD2 /* PYDemoOptions.h */,
 				6F743AD81D7C6C2B00C94967 /* PYBarDemoOptions.h */,
 				6F743AD91D7C6C2B00C94967 /* PYBarDemoOptions.m */,
-				6F65DB491D80A02D00950EC5 /* PYWorldCloudDemoOptions.h */,
-				6F65DB4A1D80A02D00950EC5 /* PYWorldCloudDemoOptions.m */,
 				6F65DC121D820E2200950EC5 /* PYCandlestickDemoOptions.h */,
 				6F65DC131D820E2200950EC5 /* PYCandlestickDemoOptions.m */,
+				6F9DCF3C1D784448007CEAD2 /* PYDemoOptions.h */,
+				6F9DCF391D7842FF007CEAD2 /* PYLineDemoOptions.h */,
+				6F9DCF3A1D7842FF007CEAD2 /* PYLineDemoOptions.m */,
+				6F743AE01D7D8ADA00C94967 /* PYPieDemoOptions.h */,
+				6F743AE11D7D8ADA00C94967 /* PYPieDemoOptions.m */,
+				6F65DC181D821CA400950EC5 /* PYTreemapDemoOptions.h */,
+				6F65DC191D821CA400950EC5 /* PYTreemapDemoOptions.m */,
 				6F65DC151D8217B700950EC5 /* PYVennDemoOptions.h */,
 				6F65DC161D8217B700950EC5 /* PYVennDemoOptions.m */,
+				6F65DB491D80A02D00950EC5 /* PYWorldCloudDemoOptions.h */,
+				6F65DB4A1D80A02D00950EC5 /* PYWorldCloudDemoOptions.m */,
 			);
 			path = DemoOptions;
 			sourceTree = "<group>";
@@ -1041,6 +1046,7 @@
 				6F4D58E51D4FE34F00246943 /* PYGrid.m in Sources */,
 				6F4D59011D4FE34F00246943 /* PYGaugeSeries.m in Sources */,
 				6F9DCF0D1D7841D6007CEAD2 /* CandlestickDemoController.m in Sources */,
+				6F65DC1A1D821CA400950EC5 /* PYTreemapDemoOptions.m in Sources */,
 				6F9DCF061D7841D6007CEAD2 /* AppDelegate.m in Sources */,
 				6F4D58E11D4FE34F00246943 /* PYCategories.m in Sources */,
 				6F9DCF371D7841D6007CEAD2 /* main.m in Sources */,
