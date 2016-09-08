@@ -13,6 +13,7 @@
 #import "PYBarDemoOptions.h"
 #import "PYPieDemoOptions.h"
 #import "PYWorldCloudDemoOptions.h"
+#import "PYCandlestickDemoOptions.h"
 
 
 #endif /* PYDemoOptions_h */

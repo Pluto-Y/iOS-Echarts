@@ -63,6 +63,7 @@
 		6F4D59101D4FE34F00246943 /* PYEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58D71D4FE34F00246943 /* PYEchartsView.m */; };
 		6F4D59111D4FE34F00246943 /* PYZoomEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58D91D4FE34F00246943 /* PYZoomEchartsView.m */; };
 		6F65DB4B1D80A02D00950EC5 /* PYWorldCloudDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F65DB4A1D80A02D00950EC5 /* PYWorldCloudDemoOptions.m */; };
+		6F65DC141D820E2200950EC5 /* PYCandlestickDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F65DC131D820E2200950EC5 /* PYCandlestickDemoOptions.m */; };
 		6F7352BD1D50A779006CD119 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 6F7352BC1D50A779006CD119 /* js */; };
 		6F743A6A1D78B00400C94967 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743A491D78AFA500C94967 /* main.m */; };
 		6F743A6B1D78B00600C94967 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743A441D78AFA500C94967 /* AppDelegate.m */; };
@@ -309,6 +310,8 @@
 		6F4D58D91D4FE34F00246943 /* PYZoomEchartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYZoomEchartsView.m; sourceTree = "<group>"; };
 		6F65DB491D80A02D00950EC5 /* PYWorldCloudDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYWorldCloudDemoOptions.h; sourceTree = "<group>"; };
 		6F65DB4A1D80A02D00950EC5 /* PYWorldCloudDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYWorldCloudDemoOptions.m; sourceTree = "<group>"; };
+		6F65DC121D820E2200950EC5 /* PYCandlestickDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYCandlestickDemoOptions.h; sourceTree = "<group>"; };
+		6F65DC131D820E2200950EC5 /* PYCandlestickDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYCandlestickDemoOptions.m; sourceTree = "<group>"; };
 		6F7352BC1D50A779006CD119 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
 		6F743A2E1D78AF9300C94967 /* iOS-Echarts_OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Echarts_OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F743A431D78AFA500C94967 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -788,6 +791,8 @@
 				6F743AD91D7C6C2B00C94967 /* PYBarDemoOptions.m */,
 				6F65DB491D80A02D00950EC5 /* PYWorldCloudDemoOptions.h */,
 				6F65DB4A1D80A02D00950EC5 /* PYWorldCloudDemoOptions.m */,
+				6F65DC121D820E2200950EC5 /* PYCandlestickDemoOptions.h */,
+				6F65DC131D820E2200950EC5 /* PYCandlestickDemoOptions.m */,
 			);
 			path = DemoOptions;
 			sourceTree = "<group>";
@@ -1026,6 +1031,7 @@
 				6F4D58EF1D4FE34F00246943 /* PYNoDataLoadingOption.m in Sources */,
 				6F9DCF171D7841D6007CEAD2 /* GaugesDemoController.m in Sources */,
 				6FEFF6EB1D56448300E8B77E /* NSObject+PYObject.m in Sources */,
+				6F65DC141D820E2200950EC5 /* PYCandlestickDemoOptions.m in Sources */,
 				6F4D58E51D4FE34F00246943 /* PYGrid.m in Sources */,
 				6F4D59011D4FE34F00246943 /* PYGaugeSeries.m in Sources */,
 				6F9DCF0D1D7841D6007CEAD2 /* CandlestickDemoController.m in Sources */,
