@@ -64,6 +64,7 @@
 		6F4D59111D4FE34F00246943 /* PYZoomEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D58D91D4FE34F00246943 /* PYZoomEchartsView.m */; };
 		6F65DB4B1D80A02D00950EC5 /* PYWorldCloudDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F65DB4A1D80A02D00950EC5 /* PYWorldCloudDemoOptions.m */; };
 		6F65DC141D820E2200950EC5 /* PYCandlestickDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F65DC131D820E2200950EC5 /* PYCandlestickDemoOptions.m */; };
+		6F65DC171D8217B700950EC5 /* PYVennDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F65DC161D8217B700950EC5 /* PYVennDemoOptions.m */; };
 		6F7352BD1D50A779006CD119 /* js in Resources */ = {isa = PBXBuildFile; fileRef = 6F7352BC1D50A779006CD119 /* js */; };
 		6F743A6A1D78B00400C94967 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743A491D78AFA500C94967 /* main.m */; };
 		6F743A6B1D78B00600C94967 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F743A441D78AFA500C94967 /* AppDelegate.m */; };
@@ -312,6 +313,8 @@
 		6F65DB4A1D80A02D00950EC5 /* PYWorldCloudDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYWorldCloudDemoOptions.m; sourceTree = "<group>"; };
 		6F65DC121D820E2200950EC5 /* PYCandlestickDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYCandlestickDemoOptions.h; sourceTree = "<group>"; };
 		6F65DC131D820E2200950EC5 /* PYCandlestickDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYCandlestickDemoOptions.m; sourceTree = "<group>"; };
+		6F65DC151D8217B700950EC5 /* PYVennDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYVennDemoOptions.h; sourceTree = "<group>"; };
+		6F65DC161D8217B700950EC5 /* PYVennDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYVennDemoOptions.m; sourceTree = "<group>"; };
 		6F7352BC1D50A779006CD119 /* js */ = {isa = PBXFileReference; lastKnownFileType = folder; path = js; sourceTree = "<group>"; };
 		6F743A2E1D78AF9300C94967 /* iOS-Echarts_OSX.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Echarts_OSX.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F743A431D78AFA500C94967 /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -793,6 +796,8 @@
 				6F65DB4A1D80A02D00950EC5 /* PYWorldCloudDemoOptions.m */,
 				6F65DC121D820E2200950EC5 /* PYCandlestickDemoOptions.h */,
 				6F65DC131D820E2200950EC5 /* PYCandlestickDemoOptions.m */,
+				6F65DC151D8217B700950EC5 /* PYVennDemoOptions.h */,
+				6F65DC161D8217B700950EC5 /* PYVennDemoOptions.m */,
 			);
 			path = DemoOptions;
 			sourceTree = "<group>";
@@ -963,6 +968,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6F65DC171D8217B700950EC5 /* PYVennDemoOptions.m in Sources */,
 				6F9DCF281D7841D6007CEAD2 /* TreeDemoController.m in Sources */,
 				6F4D58E21D4FE34F00246943 /* PYColor.m in Sources */,
 				6F4D59051D4FE34F00246943 /* PYMarkPoint.m in Sources */,

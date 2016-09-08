@@ -14,6 +14,7 @@
 #import "PYPieDemoOptions.h"
 #import "PYWorldCloudDemoOptions.h"
 #import "PYCandlestickDemoOptions.h"
+#import "PYVennDemoOptions.h"
 
 
 #endif /* PYDemoOptions_h */
