@@ -382,7 +382,279 @@
 }
 
 + (PYOption *)multipleAngularGauges2Option {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.backgroundColorEqual([PYColor colorWithHexString:@"#1b1b1b"])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.formatterEqual(@"{a} <br/>{b} : {c}%");
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.show = YES;
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .addSeries([PYGaugeSeries initPYGaugeSeriesWithBlock:^(PYGaugeSeries *series) {
+            series.minEqual(@0)
+            .maxEqual(@220)
+            .radiusEqual(@"60%")
+            .splitNumberEqual(@11)
+            .axisLineEqual([PYAxisLine initPYAxisLineWithBlock:^(PYAxisLine *axisLine) {
+                axisLine.lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.colorEqual(@[
+                                           @[@0.09, @"lime"],
+                                           @[@0.82, [PYColor colorWithHexString:@"#1e90ff"]],
+                                           @[@1, [PYColor colorWithHexString:@"ff4500"]]
+                                           ])
+                    .widthEqual(@3)
+                    .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowBlurEqual(@10);
+                }]);
+            }])
+            .axisLabelEqual([PYAxisLabel initPYAxisLabelWithBlock:^(PYAxisLabel *axisLabel) {
+                axisLabel.textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.fontWeightEqual(PYTextStyleFontWeightBolder)
+                    .colorEqual([PYColor colorWithHexString:@"#fff"]);
+                }]);
+            }])
+            .axisTickEqual([PYAxisTick initPYAxisTickWithBlock:^(PYAxisTick *axisTick) {
+                axisTick.lengthEqual(@8)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.colorEqual(@"auto")
+                    .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowBlurEqual(@10);
+                }]);
+            }])
+            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
+                spliteLine.lengthEqual(@10)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.widthEqual(@3)
+                    .colorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowBlurEqual(@10);
+                }]);
+            }])
+            .pointerEqual([PYGaugePointer initPYGaugePointerWithBlock:^(PYGaugePointer *pointer) {
+                pointer.shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                .shadowBlurEqual(@5);
+            }])
+            .titleEqual([PYGaugeTitle initPYGaugeTitleWithBlock:^(PYGaugeTitle *title) {
+                title.offsetCenterEqual(@[@"0", @"-35%"])
+                .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.fontWeightEqual(PYTextStyleFontWeightBolder)
+                    .fontSizeEqual(@12)
+                    .fontStyleEqual(PYTextStyleFontStyleItalic)
+                    .colorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowBlurEqual(@10);
+                }]);
+            }])
+            .detailEqual([PYGaugeDetail initPYGaugeDetailWithBlock:^(PYGaugeDetail *detail) {
+                detail.backgroundColorEqual(PYRGBA(30, 144, 255, 0.8))
+                .borderWidthEqual(@1)
+                .borderColorEqual([PYColor colorWithHexString:@"#fff"])
+                .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                .shadowBlurEqual(@5)
+                .widthEqual(@40)
+                .heightEqual(@15)
+                .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.fontWeightEqual(PYTextStyleFontWeightBolder)
+                    .colorEqual([PYColor colorWithHexString:@"#fff"]);
+                }]);
+            }])
+            .zEqual(@3)
+            .nameEqual(@"速度")
+            .typeEqual(PYSeriesTypeGauge)
+            .addData(@{@"value":@40, @"name":@"km/h"});
+        }])
+        .addSeries([PYGaugeSeries initPYGaugeSeriesWithBlock:^(PYGaugeSeries *series) {
+            series.centerEqual(@[@"15%", @"55%"])
+            .radiusEqual(@"45%")
+            .minEqual(@0)
+            .maxEqual(@7)
+            .endAngleEqual(@45)
+            .splitNumberEqual(@7)
+            .axisLineEqual([PYAxisLine initPYAxisLineWithBlock:^(PYAxisLine *axisLine) {
+                axisLine.lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.colorEqual(@[
+                                           @[@0.09, @"lime"],
+                                           @[@0.82, [PYColor colorWithHexString:@"#1e90ff"]],
+                                           @[@1, [PYColor colorWithHexString:@"ff4500"]]
+                                           ])
+                    .widthEqual(@2)
+                    .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowBlurEqual(@10);
+                }]);
+            }])
+            .axisLabelEqual([PYAxisLabel initPYAxisLabelWithBlock:^(PYAxisLabel *axisLabel) {
+                axisLabel.textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.fontWeightEqual(PYTextStyleFontWeightBolder)
+                    .shadowColorEqual([PYColor colorWithHexString:@"#fff"]);
+                }]);
+            }])
+            .axisTickEqual([PYAxisTick initPYAxisTickWithBlock:^(PYAxisTick *axisTick) {
+                axisTick.lengthEqual(@12)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.colorEqual(@"auto");
+                }]);
+            }])
+            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
+                spliteLine.lengthEqual(@10)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.widthEqual(@3)
+                    .colorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowBlurEqual(@10);
+                }]);
+            }])
+            .pointerEqual([PYGaugePointer initPYGaugePointerWithBlock:^(PYGaugePointer *pointer) {
+                pointer.widthEqual(@5)
+                .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                .shadowBlurEqual(@5);
+            }])
+            .titleEqual([PYGaugeTitle initPYGaugeTitleWithBlock:^(PYGaugeTitle *title) {
+                title.offsetCenterEqual(@[@0, @"-20%"])
+                .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.fontSizeEqual(@8)
+                    .fontStyleEqual(PYTextStyleFontStyleItalic)
+                    .colorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowBlurEqual(@10);
+                }]);
+            }])
+            .detailEqual([PYGaugeDetail initPYGaugeDetailWithBlock:^(PYGaugeDetail *detail) {
+                detail.borderColorEqual([PYColor colorWithHexString:@"#fff"])
+                .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                .shadowBlurEqual(@5)
+                .widthEqual(@80)
+                .heightEqual(@30)
+                .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.fontWeightEqual(PYTextStyleFontWeightBolder)
+                    .colorEqual([PYColor colorWithHexString:@"#fff"]);
+                }]);
+            }])
+            .nameEqual(@"转速")
+            .typeEqual(PYSeriesTypeGauge)
+            .addData(@{@"value":@1.5, @"name":@"x1000 r/min"});
+        }])
+        .addSeries([PYGaugeSeries initPYGaugeSeriesWithBlock:^(PYGaugeSeries *series) {
+            series.radiusEqual(@"45%")
+            .minEqual(@0)
+            .maxEqual(@2)
+            .startAngleEqual(@135)
+            .endAngleEqual(@45)
+            .splitNumberEqual(@2)
+            .axisLineEqual([PYAxisLine initPYAxisLineWithBlock:^(PYAxisLine *axisLine) {
+                axisLine.lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.colorEqual(@[
+                                           @[@0.09, @"lime"],
+                                           @[@0.82, [PYColor colorWithHexString:@"#1e90ff"]],
+                                           @[@1, [PYColor colorWithHexString:@"ff4500"]]
+                                           ])
+                    .widthEqual(@2)
+                    .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowBlurEqual(@10);
+                }]);
+            }])
+            .axisTickEqual([PYAxisTick initPYAxisTickWithBlock:^(PYAxisTick *axisTick) {
+                axisTick.lengthEqual(@12)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.colorEqual(@"auto")
+                    .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowBlurEqual(@10);
+                }]);
+            }])
+            .axisLabelEqual([PYAxisLabel initPYAxisLabelWithBlock:^(PYAxisLabel *axisLabel) {
+                axisLabel.formatterEqual(@"(function(v){switch (v + \'\') {case \'0\' : return \'E\';case \'1\' : return \'Gas\';case \'2\' : return \'F\';}})")
+                .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.fontWeightEqual(PYTextStyleFontWeightBolder)
+                    .shadowColorEqual([PYColor colorWithHexString:@"#fff"]);
+                }]);
+            }])
+            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
+                spliteLine.lengthEqual(@15)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.widthEqual(@3)
+                    .colorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowBlurEqual(@10);
+                }]);
+            }])
+            .pointerEqual([PYGaugePointer initPYGaugePointerWithBlock:^(PYGaugePointer *pointer) {
+                pointer.widthEqual(@2)
+                .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                .shadowBlurEqual(@5);
+            }])
+            .titleEqual([PYGaugeTitle initPYGaugeTitleWithBlock:^(PYGaugeTitle *title) {
+                title.showEqual(NO);
+            }])
+            .detailEqual([PYGaugeDetail initPYGaugeDetailWithBlock:^(PYGaugeDetail *detail) {
+                detail.showEqual(NO);
+            }])
+            .centerEqual(@[@"85%", @"50%"])
+            .typeEqual(PYSeriesTypeGauge)
+            .nameEqual(@"油表")
+            .addData(@{@"value":@0.5, @"name":@"gas"});
+        }])
+        .addSeries([PYGaugeSeries initPYGaugeSeriesWithBlock:^(PYGaugeSeries *series) {
+            series.centerEqual(@[@"85%", @"50%"])
+            .radiusEqual(@"45%")
+            .minEqual(@0)
+            .maxEqual(@2)
+            .startAngleEqual(@315)
+            .endAngleEqual(@225)
+            .splitNumberEqual(@2)
+            .axisLineEqual([PYAxisLine initPYAxisLineWithBlock:^(PYAxisLine *axisLine) {
+                axisLine.lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.colorEqual(@[
+                                           @[@0.09, @"lime"],
+                                           @[@0.82, [PYColor colorWithHexString:@"#1e90ff"]],
+                                           @[@1, [PYColor colorWithHexString:@"ff4500"]]
+                                           ])
+                    .widthEqual(@2)
+                    .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowBlurEqual(@10);
+                }]);
+            }])
+            .axisTickEqual([PYAxisTick initPYAxisTickWithBlock:^(PYAxisTick *axisTick) {
+                axisTick.showEqual(NO);
+            }])
+            .axisLabelEqual([PYAxisLabel initPYAxisLabelWithBlock:^(PYAxisLabel *axisLabel) {
+                axisLabel.formatterEqual(@"(function(v){switch (v + \'\') {case \'0\' : return \'H\';case \'1\' : return \'Water\';case \'2\' : return \'C\';}})")
+                .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.fontWeightEqual(PYTextStyleFontWeightBolder)
+                    .colorEqual([PYColor colorWithHexString:@"#fff"]);
+                }]);
+            }])
+            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
+                spliteLine.lengthEqual(@10)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.widthEqual(@3)
+                    .colorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                    .shadowBlurEqual(@10);
+                }]);
+            }])
+            .pointerEqual([PYGaugePointer initPYGaugePointerWithBlock:^(PYGaugePointer *pointer) {
+                pointer.widthEqual(@2)
+                .shadowColorEqual([PYColor colorWithHexString:@"#fff"])
+                .shadowBlurEqual(@5);
+            }])
+            .titleEqual([PYGaugeTitle initPYGaugeTitleWithBlock:^(PYGaugeTitle *title) {
+                title.showEqual(NO);
+            }])
+            .detailEqual([PYGaugeDetail initPYGaugeDetailWithBlock:^(PYGaugeDetail *detail) {
+                detail.showEqual(NO);
+            }])
+            .nameEqual(@"水表")
+            .typeEqual(PYSeriesTypeGauge)
+            .addData(@{@"value":@0.5, @"name":@"gas"});
+        }]);
+    }];
 }
 
 + (PYOption *)basicAngularGauge4Option {
