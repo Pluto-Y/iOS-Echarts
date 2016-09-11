@@ -186,6 +186,7 @@
 		6F9DCF3B1D7842FF007CEAD2 /* PYLineDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F9DCF3A1D7842FF007CEAD2 /* PYLineDemoOptions.m */; };
 		6FEFF6EB1D56448300E8B77E /* NSObject+PYObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEFF6EA1D56448300E8B77E /* NSObject+PYObject.m */; };
 		6FEFF6F01D564D5C00E8B77E /* PYChordStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEFF6EF1D564D5C00E8B77E /* PYChordStyle.m */; };
+		6FF5709E1D85A720007AA7A6 /* PYTreeDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5709D1D85A720007AA7A6 /* PYTreeDemoOptions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -419,6 +420,8 @@
 		6FEFF6ED1D5644E500E8B77E /* PYUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PYUtilities.h; sourceTree = "<group>"; };
 		6FEFF6EE1D564D5C00E8B77E /* PYChordStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYChordStyle.h; sourceTree = "<group>"; };
 		6FEFF6EF1D564D5C00E8B77E /* PYChordStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYChordStyle.m; sourceTree = "<group>"; };
+		6FF5709C1D85A720007AA7A6 /* PYTreeDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYTreeDemoOptions.h; sourceTree = "<group>"; };
+		6FF5709D1D85A720007AA7A6 /* PYTreeDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYTreeDemoOptions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -803,6 +806,8 @@
 				6F65DC161D8217B700950EC5 /* PYVennDemoOptions.m */,
 				6F65DB491D80A02D00950EC5 /* PYWorldCloudDemoOptions.h */,
 				6F65DB4A1D80A02D00950EC5 /* PYWorldCloudDemoOptions.m */,
+				6FF5709C1D85A720007AA7A6 /* PYTreeDemoOptions.h */,
+				6FF5709D1D85A720007AA7A6 /* PYTreeDemoOptions.m */,
 			);
 			path = DemoOptions;
 			sourceTree = "<group>";
@@ -1006,6 +1011,7 @@
 				6F9DCF2E1D7841D6007CEAD2 /* ViewController.m in Sources */,
 				6F4D58E61D4FE34F00246943 /* PYItemStyle.m in Sources */,
 				6F9DCF091D7841D6007CEAD2 /* EchartsViewCell.m in Sources */,
+				6FF5709E1D85A720007AA7A6 /* PYTreeDemoOptions.m in Sources */,
 				6F9DCF0B1D7841D6007CEAD2 /* BarDemoController.m in Sources */,
 				6F4D58FA1D4FE34F00246943 /* PYToolbox.m in Sources */,
 				6F4D59101D4FE34F00246943 /* PYEchartsView.m in Sources */,

@@ -29,15 +29,16 @@ typedef NS_ENUM(NSInteger, TreeDemoTypeTag) {
 
 - (void) initAll {
     self.title = @"树图";
-    [self showTreeDemo1];
+    [_echartsView setOption:[PYTreeDemoOptions tree1Option]];
     [_echartsView loadEcharts];
 }
 
 - (IBAction)demoBtnClick:(id)sender {
     UIButton *btn = (UIButton *)sender;
+    PYOption *option;
     switch (btn.tag) {
         case TreeDemoTypeTagTree1:
-            [self showTreeDemo1];
+            option = [PYTreeDemoOptions tree1Option];
             break;
         case TreeDemoTypeTagTree2:
             [self showTreeDemo2];
@@ -46,61 +47,10 @@ typedef NS_ENUM(NSInteger, TreeDemoTypeTag) {
             [self showTreeDemo3];
             break;
     }
+    if (option != nil) {
+        [_echartsView setOption:option];
+    }
     [_echartsView loadEcharts];
-}
-
-- (void)showTreeDemo1 {
-    PYOption *option = [PYOption initPYOptionWithBlock:^(PYOption *option) {
-        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
-            title.textEqual(@"树图").subtextEqual(@"虚构数据");
-        }])
-        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
-            toolbox.showEqual(YES)
-            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
-                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
-                    mark.show = YES;
-                }])
-                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
-                    dataView.showEqual(YES).readOnlyEqual(YES);
-                }])
-                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
-                    restore.showEqual(YES);
-                }]);
-            }]);
-        }])
-        .calculableEqual(NO);
-        
-        PYTreeSeries *series = [PYTreeSeries initPYTreeSeriesWithBlock:^(PYTreeSeries *s) {
-            s.rootLocationEqual(@{@"x":@"center", @"y":@50}).nodePaddingEqual(@1).nameEqual(@"树图").typeEqual(PYSeriesTypeTree)
-            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
-                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
-                    normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
-                        label.showEqual(NO).formatterEqual(@"{b}");
-                    }])
-                    .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
-                        lineStyle.colorEqual([PYColor colorWithHexString:@"#48b"])
-                        .shadowColorEqual([PYColor colorWithHexString:@"#000"])
-                        .shadowBlurEqual(@3)
-                        .shadowOffsetXEqual(@3)
-                        .shadowOffsetYEqual(@5)
-                        .typeEqual(PYLineStyleTypeCurve);
-                    }]);
-                }])
-                .emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
-                    emphasis.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
-                        label.showEqual(YES);
-                    }]);
-                }]);
-            }]);
-        }];
-        
-        NSDictionary *dataDic = @{@"name":@"根节点", @"value":@6, @"children":@[@{@"name":@"节点1", @"value":@4, @"children":@[@{@"name":@"叶子节点1", @"value":@4}, @{@"name":@"叶子节点2", @"value":@4}, @{@"name":@"叶子节点3", @"value":@2}, @{@"name":@"叶子节点4", @"value":@2}, @{@"name":@"叶子节点5", @"value":@2}, @{@"name":@"叶子节点6", @"value":@4}]}, @{@"name":@"节点2", @"value":@4, @"children":@[@{@"name":@"叶子节点7", @"value":@4}, @{@"name":@"叶子节点8", @"value":@4}]}, @{@"name":@"节点3", @"value":@1, @"children":@[@{@"name":@"叶子节点9", @"value":@4}, @{@"name":@"叶子节点10", @"value":@4}, @{@"name":@"叶子节点11", @"value":@2}, @{@"name":@"叶子节点12", @"value":@2}]}]};
-        series.data = @[dataDic];
-        
-        option.series = [[NSMutableArray alloc] initWithArray:@[series]];
-    }];
-    
-    [_echartsView setOption:option];
 }
 
 - (void)showTreeDemo2 {

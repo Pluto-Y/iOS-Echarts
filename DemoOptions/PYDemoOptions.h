@@ -16,6 +16,7 @@
 #import "PYCandlestickDemoOptions.h"
 #import "PYVennDemoOptions.h"
 #import "PYTreemapDemoOptions.h"
+#import "PYTreeDemoOptions.h"
 
 
 #endif /* PYDemoOptions_h */
