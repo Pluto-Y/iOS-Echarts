@@ -658,7 +658,97 @@
 }
 
 + (PYOption *)basicAngularGauge4Option {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.formatterEqual(@"{a} <br/>{b} : {c}%");
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.show = YES;
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .addSeries([PYGaugeSeries initPYGaugeSeriesWithBlock:^(PYGaugeSeries *series) {
+            series.centerEqual(@[@"50%", @"50%"])
+            .radiusEqual(@[@0, @"75%"])
+            .startAngleEqual(@140)
+            .endAngleEqual(@(-140))
+            .minEqual(@0)
+            .maxEqual(@100)
+            .splitNumberEqual(@10)
+            .axisLineEqual([PYAxisLine initPYAxisLineWithBlock:^(PYAxisLine *axisLine) {
+                axisLine.showEqual(YES)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.colorEqual(@[
+                                           @[@0.2, @"lightgreen"],
+                                           @[@0.4, @"orange"],
+                                           @[@0.8, @"skyblue"],
+                                           @[@1, [PYColor colorWithHexString:@"ff4500"]]
+                                           ])
+                    .widthEqual(@30);
+                }]);
+            }])
+            .axisTickEqual([PYAxisTick initPYAxisTickWithBlock:^(PYAxisTick *axisTick) {
+                axisTick.showEqual(YES)
+                .splitNumberEqual(@5)
+                .lengthEqual(@8)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.colorEqual([PYColor colorWithHexString:@"#eee"])
+                    .widthEqual(@1)
+                    .typeEqual(PYLineStyleTypeSolid);
+                }]);
+            }])
+            .axisLabelEqual([PYAxisLabel initPYAxisLabelWithBlock:^(PYAxisLabel *axisLabel) {
+                axisLabel.showEqual(YES)
+                .formatterEqual(@"(function(v){switch (v+\'\'){case \'10\': return \'弱\';case \'30\': return \'低\';case \'60\': return \'中\';case \'90\': return \'高\';default: return \'\';}})")
+                .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.colorEqual([PYColor colorWithHexString:@"#333"]);
+                }]);
+            }])
+            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
+                spliteLine.showEqual(YES)
+                .lengthEqual(@30)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.colorEqual([PYColor colorWithHexString:@"#eee"])
+                    .widthEqual(@2)
+                    .typeEqual(PYLineStyleTypeSolid);
+                }]);
+            }])
+            .pointerEqual([PYGaugePointer initPYGaugePointerWithBlock:^(PYGaugePointer *pointer) {
+                pointer.lengthEqual(@"80%").widthEqual(@8).colorEqual(@"auto");
+            }])
+            .titleEqual([PYGaugeTitle initPYGaugeTitleWithBlock:^(PYGaugeTitle *title) {
+                title.showEqual(YES)
+                .offsetCenterEqual(@[@"-65%", @(-10)])
+                .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.colorEqual([PYColor colorWithHexString:@"#333"])
+                    .fontSizeEqual(@15);
+                }]);
+            }])
+            .detailEqual([PYGaugeDetail initPYGaugeDetailWithBlock:^(PYGaugeDetail *detail) {
+                detail.showEqual(YES)
+                .backgroundColorEqual(PYRGBA(0, 0, 0, 0))
+                .borderWidthEqual(@0)
+                .borderColorEqual([PYColor colorWithHexString:@"#ccc"])
+                .widthEqual(@100)
+                .heightEqual(@40)
+                .offsetCenterEqual(@[@"-60%", @0])
+                .formatterEqual(@"{value}%")
+                .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.colorEqual(@"auto")
+                    .fontSizeEqual(@30);
+                }]);
+            }])
+            .nameEqual(@"个性化仪表盘")
+            .typeEqual(PYSeriesTypeGauge)
+            .addData(@{@"value":@50, @"name":@"仪表盘"});
+        }]);
+    }];
 }
 
 @end
