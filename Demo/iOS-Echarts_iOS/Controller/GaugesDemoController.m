@@ -59,7 +59,9 @@ typedef NS_ENUM(NSInteger, GaugesDemoTypeTag) {
             _timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(basicAngularGaugeTimerTicket) userInfo:nil repeats:YES];
             break;
         case GaugesDemoTypeTagBasicAngularGauge3:
-            [self showBasicAngularGauge3Demo];
+            option = [PYGaugesDemoOptions basicAngularGauge3Option];
+            _option = option;
+            _timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(basicAngularGaugeTimerTicket) userInfo:nil repeats:YES];
             break;
         case GaugesDemoTypeTagMultipleAngularGauges1:
             [self showMultipleAngularGauges1Demo];
@@ -88,72 +90,6 @@ typedef NS_ENUM(NSInteger, GaugesDemoTypeTag) {
     series.data = @[dataDic];
     _option.series = [[NSMutableArray alloc] initWithObjects:series, nil];
     [_echartsView refreshEchartsWithOption:_option];
-}
-
-- (void)showBasicAngularGauge3Demo {
-    PYOption *option = [[PYOption alloc] init];
-    option.tooltip = [[PYTooltip alloc] init];
-    option.tooltip.formatter = @"{a} <br/>{b} : {c}%";
-    option.toolbox = [[PYToolbox alloc] init];
-    option.toolbox.show = YES;
-    option.toolbox.feature = [[PYToolboxFeature alloc] init];
-    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
-    option.toolbox.feature.mark.show = YES;
-    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
-    option.toolbox.feature.restore.show = YES;
-    PYGaugeSeries *series = [[PYGaugeSeries alloc] init];
-    series.name = @"业务指标";
-    series.type = PYSeriesTypeGauge;
-    series.startAngle = @180;
-    series.endAngle = @0;
-    series.center = @[@"50%", @"70%"];
-    series.radius = @160;
-    
-    series.axisLine = [[PYAxisLine alloc] init];
-    series.axisLine.lineStyle = [[PYLineStyle alloc] init];
-    series.axisLine.lineStyle.width = @100;
-    
-    series.axisTick = [[PYAxisTick alloc] init];
-    series.axisTick.splitNumber = @10;
-    series.axisTick.length = @12;
-    
-    series.axisLabel = [[PYAxisLabel alloc] init];
-    series.axisLabel.formatter = @"(function(v){\n                    switch (v+\'\'){\n                        case \'10\': return \'低\';\n                        case \'50\': return \'中\';\n                        case \'90\': return \'高\';\n                        default: return \'\';\n                    }\n                })";
-    series.axisLabel.textStyle = [[PYTextStyle alloc] init];
-    series.axisLabel.textStyle.color = [PYColor colorWithHexString:@"#fff"];
-    series.axisLabel.textStyle.fontSize = @10;
-    series.axisLabel.textStyle.fontWeight = PYTextStyleFontWeightBolder;
-    
-    series.pointer = [[PYGaugePointer alloc] init];
-    series.pointer.width = @25;
-    series.pointer.length = @"90%";
-    series.pointer.color = PYRGBA(255, 255, 255, 0.8);
-    series.title = [[PYGaugeTitle alloc] init];
-    series.title.show = YES;
-    series.title.offsetCenter = @[@0, @"-50%"];
-    series.title.textStyle = [[PYTextStyle alloc] init];
-    series.title.textStyle.color = [PYColor colorWithHexString:@"#fff"];
-    series.title.textStyle.fontSize = @20;
-    
-    series.detail = [[PYGaugeDetail alloc] init];
-    series.detail.show = YES;
-    series.detail.backgroundColor = [PYColor colorWithHexString:@"#0000"];
-    series.detail.borderWidth = @0;
-    series.detail.borderColor = [PYColor colorWithHexString:@"#ccc"];
-    series.detail.width = @75;
-    series.detail.height = @40;
-    series.detail.offsetCenter = @[@0, @(-20)];
-    series.detail.formatter = @"{value}%";
-    series.detail.textStyle = [[PYTextStyle alloc] init];
-    series.detail.textStyle.fontSize = @20;
-    
-    series.data = @[@{@"value":@50, @"name":@"完成率"}];
-    
-    option.series = [[NSMutableArray alloc] initWithObjects:series, nil];
-    _option = option;
-    [_echartsView setOption:_option];
-    
-    _timer = [NSTimer scheduledTimerWithTimeInterval:2 target:self selector:@selector(basicAngularGaugeTimerTicket) userInfo:nil repeats:YES];
 }
 
 - (void)showMultipleAngularGauges1Demo {

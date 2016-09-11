@@ -123,7 +123,74 @@
 }
 
 + (PYOption *)basicAngularGauge3Option {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.formatterEqual(@"{a} <br/>{b} : {c}%");
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.show = YES;
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .addSeries([PYGaugeSeries initPYGaugeSeriesWithBlock:^(PYGaugeSeries *series) {
+            series.startAngleEqual(@180)
+            .endAngleEqual(@0)
+            .centerEqual(@[@"50%", @"70%"])
+            .radiusEqual(@160)
+            .axisLineEqual([PYAxisLine initPYAxisLineWithBlock:^(PYAxisLine *axisLine) {
+                axisLine.lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.widthEqual(@100);
+                }]);
+            }])
+            .axisTickEqual([PYAxisTick initPYAxisTickWithBlock:^(PYAxisTick *axisTick) {
+                axisTick.splitNumberEqual(@10)
+                .lengthEqual(@12);
+            }])
+            .axisLabelEqual([PYAxisLabel initPYAxisLabelWithBlock:^(PYAxisLabel *axisLabel) {
+                axisLabel.formatterEqual(@"(function(v){\n                    switch (v+\'\'){\n                        case \'10\': return \'低\';\n                        case \'50\': return \'中\';\n                        case \'90\': return \'高\';\n                        default: return \'\';\n                    }\n                })")
+                .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.colorEqual([PYColor colorWithHexString:@"#fff"])
+                    .fontSizeEqual(@10)
+                    .fontWeightEqual(PYTextStyleFontWeightBolder);
+                }]);
+            }])
+            .pointerEqual([PYGaugePointer initPYGaugePointerWithBlock:^(PYGaugePointer *pointer) {
+                pointer.widthEqual(@25)
+                .lengthEqual(@"90%")
+                .colorEqual(PYRGBA(255, 255, 255, 0.8));
+            }])
+            .titleEqual([PYGaugeTitle initPYGaugeTitleWithBlock:^(PYGaugeTitle *title) {
+                title.showEqual(YES)
+                .offsetCenterEqual(@[@0, @"-50%"])
+                .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.colorEqual([PYColor colorWithHexString:@"#fff"])
+                    .fontSizeEqual(@20);
+                }]);
+            }])
+            .detailEqual([PYGaugeDetail initPYGaugeDetailWithBlock:^(PYGaugeDetail *detail) {
+                detail.showEqual(YES)
+                .backgroundColorEqual([PYColor colorWithHexString:@"#0000"])
+                .borderWidthEqual(@0)
+                .borderColorEqual([PYColor colorWithHexString:@"#ccc"])
+                .widthEqual(@75)
+                .heightEqual(@40)
+                .offsetCenterEqual(@[@0, @(-20)])
+                .formatterEqual(@"{value}%")
+                .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                    textStyle.fontSizeEqual(@20);
+                }]);
+            }])
+            .nameEqual(@"业务指标")
+            .typeEqual(PYSeriesTypeGauge)
+            .addData(@{@"value":@50, @"name":@"完成率"});
+        }]);
+    }];
 }
 
 + (PYOption *)multipleAngularGauges1Option {
