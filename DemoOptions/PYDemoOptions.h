@@ -17,6 +17,7 @@
 #import "PYVennDemoOptions.h"
 #import "PYTreemapDemoOptions.h"
 #import "PYTreeDemoOptions.h"
+#import "PYGaugesDemoOptions.h"
 
 
 #endif /* PYDemoOptions_h */
