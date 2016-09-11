@@ -115,7 +115,73 @@
 }
 
 + (PYOption *)treemap3Option {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"手机占有率")
+            .subtextEqual(@"虚构数据");
+        }])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerItem)
+            .formatterEqual(@"{b}: {c}");
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .addSeries([PYTreeMapSeries initPYTreeMapSeriesWithBlock:^(PYTreeMapSeries *series) {
+            series.nameEqual(@"矩形图")
+            .typeEqual(PYSeriesTypeTreemap)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES)
+                        .formatterEqual(@"{b}: {c}")
+                        .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                            textStyle.colorEqual([PYColor colorWithHexString:@"#00ffdd"])
+                            .fontFamilyEqual(@"Times New Roman\",Georgia,Serif")
+                            .fontSizeEqual(@20)
+                            .fontStyleEqual(PYTextStyleFontStyleItalic)
+                            .fontWeightEqual(PYTextStyleFontWeightBolder);
+                        }]);
+                    }])
+                    .borderWidthEqual(@1)
+                    .borderColorEqual([PYColor colorWithHexString:@"#000"]);
+                }])
+                .emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+                    emphasis.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES)
+                        .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                            textStyle.colorEqual([PYColor colorWithHexString:@"#0000ff"])
+                            .fontFamilyEqual(@"Times New Roman\",Georgia,Serif")
+                            .fontSizeEqual(@18)
+                            .fontStyleEqual(PYTextStyleFontStyleNormal)
+                            .fontWeightEqual(PYTextStyleFontWeightBold);
+                        }]);
+                    }])
+                    .colorEqual([PYColor colorWithHexString:@"#cc99cc"])
+                    .borderWidthEqual(@3)
+                    .borderColorEqual([PYColor colorWithHexString:@"#996699"]);
+                }]);
+            }])
+            .addData(@{@"name":@"三星", @"value":@6, @"itemStyle":@{@"normal":@{@"label":@{@"show":@YES, @"formatter":@"{b}最多", @"x":@60, @"y":@65, @"textStyle":@{@"color":@"#ccc", @"fontSize":@16}}, @"color":@"#ccff99", @"borderWidth":@1}, @"emphasis":@{@"label":@{@"show":@YES, @"formatter":@"{b}-{c}", @"x":@80, @"y":@85, @"textStyle":@{@"color":@"red", @"fontSize":@18}}, @"color":@"#cc9999", @"borderWidth":@3, @"borderColor":@"#999999"}}, @"children":@[@{@"name":@"S4", @"value":@6, @"children":@[@{@"name":@"2012", @"value":@6}, @{@"name":@"2013", @"value":@4}, @{@"name":@"2014", @"value":@3}]}, @{@"name":@"note 3", @"value":@6}, @{@"name":@"S5", @"value":@4}, @{@"name":@"S6", @"value":@3}]})
+            .addData(@{@"name":@"小米", @"value":@4, @"itemStyle":@{@"normal":@{@"color":@"#99ccff"}, @"emphasis":@{@"label":@{@"show":@NO}}}})
+            .addData(@{@"name":@"苹果", @"value":@4, @"itemStyle":@{@"normal":@{@"color":@"#9999cc"}}})
+            .addData(@{@"name":@"魅族", @"value":@3, @"itemStyle":@{@"normal":@{@"color":@"#99cccc"}}})
+            .addData(@{@"name":@"华为", @"value":@2, @"itemStyle":@{@"normal":@{@"color":@"#ccffcc"}}})
+            .addData(@{@"name":@"联想", @"value":@2, @"itemStyle":@{@"normal":@{@"color":@"#ccccff"}}})
+            .addData(@{@"name":@"中兴", @"value":@1, @"itemStyle":@{@"normal":@{@"label":@{@"show":@YES, @"formatter":@"{b}: {c}"}, @"borderWidth":@3}, @"emphasis":@{@"label":@{@"show":@YES}, @"color":@"#cc9999", @"borderWidth":@3, @"borderColor":@"#999999"}}});
+        }]);
+    }];
 }
 
 @end
