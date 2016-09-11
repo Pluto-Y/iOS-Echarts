@@ -188,6 +188,7 @@
 		6FEFF6F01D564D5C00E8B77E /* PYChordStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FEFF6EF1D564D5C00E8B77E /* PYChordStyle.m */; };
 		6FF5709E1D85A720007AA7A6 /* PYTreeDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5709D1D85A720007AA7A6 /* PYTreeDemoOptions.m */; };
 		6FF570A11D85B0A5007AA7A6 /* PYGaugesDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF570A01D85B0A5007AA7A6 /* PYGaugesDemoOptions.m */; };
+		6FF570A41D861842007AA7A6 /* PYFunnelDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF570A31D861842007AA7A6 /* PYFunnelDemoOptions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -425,6 +426,8 @@
 		6FF5709D1D85A720007AA7A6 /* PYTreeDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYTreeDemoOptions.m; sourceTree = "<group>"; };
 		6FF5709F1D85B0A5007AA7A6 /* PYGaugesDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYGaugesDemoOptions.h; sourceTree = "<group>"; };
 		6FF570A01D85B0A5007AA7A6 /* PYGaugesDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYGaugesDemoOptions.m; sourceTree = "<group>"; };
+		6FF570A21D861842007AA7A6 /* PYFunnelDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYFunnelDemoOptions.h; sourceTree = "<group>"; };
+		6FF570A31D861842007AA7A6 /* PYFunnelDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYFunnelDemoOptions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -813,6 +816,8 @@
 				6FF5709D1D85A720007AA7A6 /* PYTreeDemoOptions.m */,
 				6FF5709F1D85B0A5007AA7A6 /* PYGaugesDemoOptions.h */,
 				6FF570A01D85B0A5007AA7A6 /* PYGaugesDemoOptions.m */,
+				6FF570A21D861842007AA7A6 /* PYFunnelDemoOptions.h */,
+				6FF570A31D861842007AA7A6 /* PYFunnelDemoOptions.m */,
 			);
 			path = DemoOptions;
 			sourceTree = "<group>";
@@ -1064,6 +1069,7 @@
 				6F9DCF371D7841D6007CEAD2 /* main.m in Sources */,
 				6F4D59081D4FE34F00246943 /* PYSeries.m in Sources */,
 				6F4D58DB1D4FE34F00246943 /* PYAreaStyle.m in Sources */,
+				6FF570A41D861842007AA7A6 /* PYFunnelDemoOptions.m in Sources */,
 				6F4D58FB1D4FE34F00246943 /* PYToolboxFeature.m in Sources */,
 				6F4D590A1D4FE34F00246943 /* PYTreeSeries.m in Sources */,
 				6F4D58FC1D4FE34F00246943 /* PYTooltip.m in Sources */,
