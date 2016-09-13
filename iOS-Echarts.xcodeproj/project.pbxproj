@@ -189,6 +189,7 @@
 		6FF5709E1D85A720007AA7A6 /* PYTreeDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF5709D1D85A720007AA7A6 /* PYTreeDemoOptions.m */; };
 		6FF570A11D85B0A5007AA7A6 /* PYGaugesDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF570A01D85B0A5007AA7A6 /* PYGaugesDemoOptions.m */; };
 		6FF570A41D861842007AA7A6 /* PYFunnelDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF570A31D861842007AA7A6 /* PYFunnelDemoOptions.m */; };
+		6FF570A71D88597B007AA7A6 /* PYScatterDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6FF570A61D88597B007AA7A6 /* PYScatterDemoOptions.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -428,6 +429,8 @@
 		6FF570A01D85B0A5007AA7A6 /* PYGaugesDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYGaugesDemoOptions.m; sourceTree = "<group>"; };
 		6FF570A21D861842007AA7A6 /* PYFunnelDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYFunnelDemoOptions.h; sourceTree = "<group>"; };
 		6FF570A31D861842007AA7A6 /* PYFunnelDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYFunnelDemoOptions.m; sourceTree = "<group>"; };
+		6FF570A51D88597B007AA7A6 /* PYScatterDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYScatterDemoOptions.h; sourceTree = "<group>"; };
+		6FF570A61D88597B007AA7A6 /* PYScatterDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYScatterDemoOptions.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -818,6 +821,8 @@
 				6FF570A01D85B0A5007AA7A6 /* PYGaugesDemoOptions.m */,
 				6FF570A21D861842007AA7A6 /* PYFunnelDemoOptions.h */,
 				6FF570A31D861842007AA7A6 /* PYFunnelDemoOptions.m */,
+				6FF570A51D88597B007AA7A6 /* PYScatterDemoOptions.h */,
+				6FF570A61D88597B007AA7A6 /* PYScatterDemoOptions.m */,
 			);
 			path = DemoOptions;
 			sourceTree = "<group>";
@@ -1057,6 +1062,7 @@
 				6F4D58DD1D4FE34F00246943 /* PYAxisLabel.m in Sources */,
 				6F9DCF0F1D7841D6007CEAD2 /* ChordDemoController.m in Sources */,
 				6F4D58EF1D4FE34F00246943 /* PYNoDataLoadingOption.m in Sources */,
+				6FF570A71D88597B007AA7A6 /* PYScatterDemoOptions.m in Sources */,
 				6F9DCF171D7841D6007CEAD2 /* GaugesDemoController.m in Sources */,
 				6FEFF6EB1D56448300E8B77E /* NSObject+PYObject.m in Sources */,
 				6F65DC141D820E2200950EC5 /* PYCandlestickDemoOptions.m in Sources */,

@@ -19,6 +19,7 @@
 #import "PYTreeDemoOptions.h"
 #import "PYGaugesDemoOptions.h"
 #import "PYFunnelDemoOptions.h"
+#import "PYScatterDemoOptions.h"
 
 
 #endif /* PYDemoOptions_h */
