@@ -242,7 +242,96 @@
 }
 
 + (PYOption *)multipleFunnel3Option {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"漏斗图")
+            .subtextEqual(@"纯属虚构")
+            .xEqual(PYPositionLeft)
+            .yEqual(PYPositionBottom);
+        }])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerItem)
+            .formatterEqual(@"{a} <br/>{b} : {c}%");
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .orientEqual(PYOrientVertical)
+            .yEqual(PYPositionCenter)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.dataEqual(@[@"产品A", @"产品B", @"产品C", @"产品D", @"产品E"])
+            .xEqual(PYPositionLeft)
+            .orientEqual(PYOrientVertical);
+        }])
+        .calculableEqual(YES)
+        .addSeries([PYFunnelSeries initPYFunnelSeriesWithBlock:^(PYFunnelSeries *series) {
+            series.widthEqual(@"30%")
+            .heightEqual(@"45%")
+            .xEqual(@"5%")
+            .yEqual(@"50%")
+            .funnelAlignEqual(PYPositionRight)
+            .nameEqual(@"漏斗图")
+            .typeEqual(PYSeriesTypeFunnel)
+            .addDataArr(@[@{@"value":@60, @"name":@"产品C"}, @{@"value":@30, @"name":@"产品D"}, @{@"value":@10, @"name":@"产品E"}, @{@"value":@80, @"name":@"产品B"}, @{@"value":@100, @"name":@"产品A"}]);
+        }])
+        .addSeries([PYFunnelSeries initPYFunnelSeriesWithBlock:^(PYFunnelSeries *series) {
+            series.widthEqual(@"30%")
+            .heightEqual(@"45%")
+            .xEqual(@"5%")
+            .yEqual(@"5%")
+            .funnelAlignEqual(PYPositionRight)
+            .sortEqual(PYSortAscending)
+            .nameEqual(@"金字塔")
+            .typeEqual(PYSeriesTypeFunnel)
+            .addDataArr(@[@{@"value":@60, @"name":@"产品C"}, @{@"value":@30, @"name":@"产品D"}, @{@"value":@10, @"name":@"产品E"}, @{@"value":@80, @"name":@"产品B"}, @{@"value":@100, @"name":@"产品A"}]);
+        }])
+        .addSeries([PYFunnelSeries initPYFunnelSeriesWithBlock:^(PYFunnelSeries *series) {
+            series.widthEqual(@"30%")
+            .heightEqual(@"45%")
+            .xEqual(@"65%")
+            .yEqual(@"5%")
+            .funnelAlignEqual(PYPositionLeft)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.positionEqual(PYPositionLeft);
+                    }]);
+                }]);
+            }])
+            .nameEqual(@"漏斗图")
+            .typeEqual(PYSeriesTypeFunnel)
+            .addDataArr(@[@{@"value":@60, @"name":@"产品C"}, @{@"value":@30, @"name":@"产品D"}, @{@"value":@10, @"name":@"产品E"}, @{@"value":@80, @"name":@"产品B"}, @{@"value":@100, @"name":@"产品A"}]);
+        }])
+        .addSeries([PYFunnelSeries initPYFunnelSeriesWithBlock:^(PYFunnelSeries *series) {
+            series.widthEqual(@"30%")
+            .heightEqual(@"45%")
+            .xEqual(@"65%")
+            .yEqual(@"50%")
+            .funnelAlignEqual(PYPositionLeft)
+            .sortEqual(PYSortAscending)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.positionEqual(PYPositionLeft);
+                    }]);
+                }]);
+            }])
+            .nameEqual(@"金字塔")
+            .typeEqual(PYSeriesTypeFunnel)
+            .addDataArr(@[@{@"value":@60, @"name":@"产品C"}, @{@"value":@30, @"name":@"产品D"}, @{@"value":@10, @"name":@"产品E"}, @{@"value":@80, @"name":@"产品B"}, @{@"value":@100, @"name":@"产品A"}]);
+        }]);
+    }];;
 }
 
 + (PYOption *)basicFunnel2Option {
