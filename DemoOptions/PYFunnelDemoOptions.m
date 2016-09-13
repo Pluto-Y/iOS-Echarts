@@ -335,7 +335,82 @@
 }
 
 + (PYOption *)basicFunnel2Option {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"漏斗图")
+            .subtextEqual(@"纯属虚构");
+        }])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerItem)
+            .formatterEqual(@"{a} <br/>{b} : {c}%");
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .orientEqual(PYOrientVertical)
+            .yEqual(PYPositionCenter)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.dataEqual(@[@"展现", @"点击", @"访问", @"咨询", @"订单"]);
+        }])
+        .calculableEqual(YES)
+        .addSeries([PYFunnelSeries initPYFunnelSeriesWithBlock:^(PYFunnelSeries *series) {
+            series.xEqual(@"10%")
+            .yEqual(@60)
+            .minEqual(@0)
+            .maxEqual(@100)
+            .widthEqual(@"80%")
+            .minSizeEqual(@"0%")
+            .maxSizeEqual(@"100%")
+            .sortEqual(PYSortDescending)
+            .gapEqual(@10)
+            .nameEqual(@"漏斗图")
+            .typeEqual(PYSeriesTypeFunnel)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.borderColorEqual([PYColor colorWithHexString:@"#fff"])
+                    .borderWidthEqual(@1)
+                    .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES)
+                        .positionEqual(@"inside");
+                    }])
+                    .labelLineEqual([PYLabelLine initPYLabelLineWithBlock:^(PYLabelLine *labelLine) {
+                        labelLine.showEqual(NO)
+                        .lengthEqual(@10)
+                        .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                            lineStyle.widthEqual(@10)
+                            .typeEqual(PYLineStyleTypeSolid);
+                        }]);
+                    }]);
+                }])
+                .emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+                    emphasis.borderColorEqual(@"red")
+                    .borderWidthEqual(@5)
+                    .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES)
+                        .formatterEqual(@"{b}:{c}%")
+                        .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                            textStyle.fontSizeEqual(@20);
+                        }]);
+                    }])
+                    .labelLineEqual([PYLabelLine initPYLabelLineWithBlock:^(PYLabelLine *labelLine) {
+                        labelLine.showEqual(YES);
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@{@"value":@60, @"name":@"访问"}, @{@"value":@40, @"name":@"咨询"}, @{@"value":@20, @"name":@"订单"}, @{@"value":@80, @"name":@"点击"}, @{@"value":@100, @"name":@"展现"}]);
+        }]);
+    }];
 }
 
 @end
