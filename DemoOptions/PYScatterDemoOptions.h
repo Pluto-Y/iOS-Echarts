@@ -11,4 +11,13 @@
 
 @interface PYScatterDemoOptions : NSObject
 
++ (PYOption *)basicScatterOption;
++ (PYOption *)basicBubbleOption;
++ (PYOption *)largeScaleScatterOption;
++ (PYOption *)categoryScatterOption;
++ (PYOption *)timeDataOption;
++ (PYOption *)timeLineOption;
++ (PYOption *)scaleRoamingOption;
++ (PYOption *)scatterOption;
+
 @end
