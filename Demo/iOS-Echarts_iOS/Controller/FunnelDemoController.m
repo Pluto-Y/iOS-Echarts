@@ -46,7 +46,7 @@ typedef NS_ENUM(NSInteger, FunnelDemoTypeTag) {
             option = [PYFunnelDemoOptions multipleFunnel1Option];
             break;
         case FunnelDemoTypeTagMultipleFunnel2:
-            [self showMultipleFunnelDemo2];
+            option = [PYFunnelDemoOptions multipleFunnel2Option];
             break;
         case FunnelDemoTypeTagMultipleFunnel3:
             [self showMultipleFunnelDemo3];
@@ -59,85 +59,6 @@ typedef NS_ENUM(NSInteger, FunnelDemoTypeTag) {
         [_echartsView setOption:option];
     }
     [_echartsView loadEcharts];
-}
-
-- (void)showMultipleFunnelDemo2 {
-    PYOption *option = [[PYOption alloc] init];
-    option.title = [[PYTitle alloc] init];
-    option.title.text = @"漏斗图";
-    option.title.subtext = @"纯属虚构";
-    option.title.x = @"left";
-    option.title.y = @"bottom";
-    option.tooltip = [[PYTooltip alloc] init];
-    option.tooltip.trigger = PYTooltipTriggerItem;
-    option.tooltip.formatter = @"{a} <br/>{b} : {c}%";
-    option.toolbox = [[PYToolbox alloc] init];
-    option.toolbox.show = YES;
-    option.toolbox.orient = @"vertical";
-    option.toolbox.y = @"center";
-    option.toolbox.feature = [[PYToolboxFeature alloc] init];
-    option.toolbox.feature.mark = [[PYToolboxFeatureMark alloc] init];
-    option.toolbox.feature.mark.show = YES;
-    option.toolbox.feature.dataView = [[PYToolboxFeatureDataView alloc] init];
-    option.toolbox.feature.dataView.show = YES;
-    option.toolbox.feature.dataView.readOnly = NO;
-    option.toolbox.feature.restore = [[PYToolboxFeatureRestore alloc] init];
-    option.toolbox.feature.restore.show = YES;
-    option.legend = [[PYLegend alloc] init];
-    option.legend.data = @[@"展现", @"点击", @"访问", @"咨询", @"订单"];
-    option.legend.x = @"left";
-    option.legend.orient = @"vertical";
-    option.calculable = YES;
-    
-    PYFunnelSeries *series1 = [[PYFunnelSeries alloc] init];
-    series1.name = @"漏斗图";
-    series1.type = PYSeriesTypeFunnel;
-    series1.width = @"40%";
-    series1.height = @"45%";
-    series1.x = @"5%";
-    series1.y = @"50%";
-    series1.data = @[@{@"value":@60, @"name":@"访问"}, @{@"value":@30, @"name":@"咨询"}, @{@"value":@10, @"name":@"订单"}, @{@"value":@80, @"name":@"点击"}, @{@"value":@100, @"name":@"展现"}];
-    
-    PYFunnelSeries *series2 = [[PYFunnelSeries alloc] init];
-    series2.name = @"金字塔";
-    series2.type = PYSeriesTypeFunnel;
-    series2.width = @"40%";
-    series2.height = @"45%";
-    series2.x = @"5%";
-    series2.y = @"5%";
-    series2.sort = PYSortAscending;
-    series2.data = @[@{@"value":@60, @"name":@"访问"}, @{@"value":@30, @"name":@"咨询"}, @{@"value":@10, @"name":@"订单"}, @{@"value":@80, @"name":@"点击"}, @{@"value":@100, @"name":@"展现"}];
-    
-    PYFunnelSeries *series3 = [[PYFunnelSeries alloc] init];
-    series3.name = @"漏斗图";
-    series3.type = PYSeriesTypeFunnel;
-    series3.width = @"40%";
-    series3.height = @"45%";
-    series3.x = @"55%";
-    series3.y = @"5%";
-    series3.itemStyle = [[PYItemStyle alloc] init];
-    series3.itemStyle.normal = [[PYItemStyleProp alloc] init];
-    series3.itemStyle.normal.label = [[PYLabel alloc] init];
-    series3.itemStyle.normal.label.position = @"left";
-    series3.data = @[@{@"value":@60, @"name":@"访问"}, @{@"value":@30, @"name":@"咨询"}, @{@"value":@10, @"name":@"订单"}, @{@"value":@80, @"name":@"点击"}, @{@"value":@100, @"name":@"展现"}];
-    
-    PYFunnelSeries *series4 = [[PYFunnelSeries alloc] init];
-    series4.name = @"金字塔";
-    series4.type = PYSeriesTypeFunnel;
-    series4.width = @"40%";
-    series4.height = @"45%";
-    series4.x = @"55%";
-    series4.y = @"50%";
-    series4.sort = PYSortAscending;
-    series4.itemStyle = [[PYItemStyle alloc] init];
-    series4.itemStyle.normal = [[PYItemStyleProp alloc] init];
-    series4.itemStyle.normal.label = [[PYLabel alloc] init];
-    series4.itemStyle.normal.label.position = @"left";
-    series4.data = @[@{@"value":@60, @"name":@"访问"}, @{@"value":@30, @"name":@"咨询"}, @{@"value":@10, @"name":@"订单"}, @{@"value":@80, @"name":@"点击"}, @{@"value":@100, @"name":@"展现"}];
-    
-    option.series = [[NSMutableArray alloc] initWithArray:@[series1, series2, series3, series4]];
-    
-    [_echartsView setOption:option];
 }
 
 - (void)showMultipleFunnelDemo3 {
