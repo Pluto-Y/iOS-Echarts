@@ -65,9 +65,95 @@
         }]);
     }];
 }
+
 + (PYOption *)multipleFunnel1Option {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.colorEqual(@[
+                            PYRGBA(255, 69, 0, 0.5),
+                            PYRGBA(255, 150, 0, 0.5),
+                            PYRGBA(255, 200, 0, 0.5),
+                            PYRGBA(155, 200, 50, 0.5),
+                            PYRGBA(55, 200, 100, 0.5)
+                            ])
+        .titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"漏斗图")
+            .subtextEqual(@"纯属虚构");
+        }])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerItem)
+            .formatterEqual(@"{a} <br/>{b} : {c}%");
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.dataEqual(@[@"展现", @"点击", @"访问", @"咨询", @"订单"]);
+        }])
+        .calculableEqual(YES)
+        .addSeries([PYFunnelSeries initPYFunnelSeriesWithBlock:^(PYFunnelSeries *series) {
+            series.xEqual(@"15%")
+            .widthEqual(@"70%")
+            .nameEqual(@"预产")
+            .typeEqual(PYSeriesTypeFunnel)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.formatterEqual(@"{b}预期");
+                    }])
+                    .labelLineEqual([PYLabelLine initPYLabelLineWithBlock:^(PYLabelLine *labelLine) {
+                        labelLine.showEqual(NO);
+                    }]);
+                }])
+                .emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+                    emphasis.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.positionEqual(@"inside")
+                        .formatterEqual(@"{b}预期 : {c}%");
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@{@"value":@60, @"name":@"访问"}, @{@"value":@40, @"name":@"咨询"}, @{@"value":@20, @"name":@"订单"}, @{@"value":@80, @"name":@"点击"}, @{@"value":@100, @"name":@"展现"}]);
+        }])
+        .addSeries([PYFunnelSeries initPYFunnelSeriesWithBlock:^(PYFunnelSeries *series) {
+            series.xEqual(@"15%")
+            .widthEqual(@"70%")
+            .maxSizeEqual(@"70%")
+            .nameEqual(@"实际")
+            .typeEqual(PYSeriesTypeFunnel)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.borderColorEqual([PYColor colorWithHexString:@"#fff"])
+                    .borderWidthEqual(@2)
+                    .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.positionEqual(@"inside")
+                        .formatterEqual(@"{c}%")
+                        .textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
+                            textStyle.colorEqual([PYColor colorWithHexString:@"#fff"]);
+                        }]);
+                    }]);
+                }])
+                .emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+                    emphasis.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.positionEqual(@"inside")
+                        .formatterEqual(@"{b}实际 : {c}%");
+                    }]);
+                }]);
+            }])
+            .addDataArr(@[@{@"value":@30, @"name":@"访问"}, @{@"value":@10, @"name":@"咨询"}, @{@"value":@5, @"name":@"订单"}, @{@"value":@50, @"name":@"点击"}, @{@"value":@80, @"name":@"展现"}]);
+        }]);
+    }];
 }
+
 + (PYOption *)multipleFunnel2Option {
     return nil;
 }
