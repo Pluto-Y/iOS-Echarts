@@ -269,7 +269,63 @@
 }
 
 + (PYOption *)largeScaleScatterOption {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerAxis)
+            .showDelayEqual(@0)
+            .axisPointerEqual([PYAxisPointer initPYAxisPointerWithBlock:^(PYAxisPointer *axisPoint) {
+                axisPoint.showEqual(YES)
+                .typeEqual(PYAxisPointerTypeCross)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.typeEqual(PYLineStyleTypeDashed)
+                    .widthEqual(@1);
+                }]);
+            }]);
+        }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.xEqual(@30).x2Equal(@30);
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.dataEqual(@[@"sin", @"cos"]);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataZoomEqual([PYToolboxFeatureDataZoom initPYToolboxFeatureDataZoomWithBlock:^(PYToolboxFeatureDataZoom *dataZoom) {
+                    dataZoom.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue)
+            .scaleEqual(YES);
+        }])
+        .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue)
+            .scaleEqual(YES);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.largeEqual(YES)
+            .dataEqual(@"(function () {var d = [];var len = 10000;var x = 0;while (len--) {x = (Math.random() * 10).toFixed(3) - 0;d.push([x,(Math.sin(x) - x * (len % 2 ? 0.1 : -0.1) * Math.random()).toFixed(3) - 0]);}return d;})()")
+            .nameEqual(@"sin")
+            .typeEqual(PYSeriesTypeScatter);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.largeEqual(YES)
+            .dataEqual(@"(function () {var d = [];var len = 10000;var x = 0;while (len--) {x = (Math.random() * 10).toFixed(3) - 0;d.push([x,(Math.cos(x) - x * (len % 2 ? 0.1 : -0.1) * Math.random()).toFixed(3) - 0]);}return d;})()")
+            .nameEqual(@"cos")
+            .typeEqual(PYSeriesTypeScatter);
+        }]);
+    }];
 }
 
 + (PYOption *)categoryScatterOption {

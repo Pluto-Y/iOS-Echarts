@@ -54,7 +54,7 @@ typedef NS_ENUM(NSInteger, ScatterDemoTypeBtnTag) {
             option = [PYScatterDemoOptions basicBubbleOption];
             break;
         case ScatterDemoTypeBtnTagLargeScaleScatter:
-            [self showLargeScaleScatterDemo];
+            option = [PYScatterDemoOptions largeScaleScatterOption];
             break;
         case ScatterDemoTypeBtnTagCategoryScatter:
             [self showCategoryScatterDemo];
@@ -78,17 +78,6 @@ typedef NS_ENUM(NSInteger, ScatterDemoTypeBtnTag) {
         [_kEchartView setOption:option];
     }
     [_kEchartView loadEcharts];
-}
-
-/**
- *  大规模散点图
- */
-- (void)showLargeScaleScatterDemo {
-    NSString *json = @"{\"grid\":{\"x\":30,\"x2\":20},\"tooltip\":{\"trigger\":\"axis\",\"showDelay\":0,\"axisPointer\":{\"show\":true,\"type\":\"cross\",\"lineStyle\":{\"type\":\"dashed\",\"width\":1}}},\"legend\":{\"data\":[\"sin\",\"cos\"]},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataZoom\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"xAxis\":[{\"type\":\"value\",\"scale\":true}],\"yAxis\":[{\"type\":\"value\",\"scale\":true}],\"series\":[{\"name\":\"sin\",\"type\":\"scatter\",\"large\":true,\"data\":\"(function () {var d = [];var len = 10000;var x = 0;while (len--) {x = (Math.random() * 10).toFixed(3) - 0;d.push([x,(Math.sin(x) - x * (len % 2 ? 0.1 : -0.1) * Math.random()).toFixed(3) - 0]);}return d;})()\"},{\"name\":\"cos\",\"type\":\"scatter\",\"large\":true,\"data\":\"(function () {var d = [];var len = 10000;var x = 0;while (len--) {x = (Math.random() * 10).toFixed(3) - 0;d.push([x,(Math.cos(x) - x * (len % 2 ? 0.1 : -0.1) * Math.random()).toFixed(3) - 0]);}return d;})()\"}]}";
-    NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
-    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
-    [_kEchartView setOption:option];
 }
 
 /**
