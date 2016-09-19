@@ -51,7 +51,7 @@ typedef NS_ENUM(NSInteger, ScatterDemoTypeBtnTag) {
             option = [PYScatterDemoOptions basicScatterOption];
             break;
         case ScatterDemoTypeBtnTagBasicBubble:
-            [self showBasicBubbleDemo];
+            option = [PYScatterDemoOptions basicBubbleOption];
             break;
         case ScatterDemoTypeBtnTagLargeScaleScatter:
             [self showLargeScaleScatterDemo];
@@ -78,18 +78,6 @@ typedef NS_ENUM(NSInteger, ScatterDemoTypeBtnTag) {
         [_kEchartView setOption:option];
     }
     [_kEchartView loadEcharts];
-}
-
-/**
- *  标准气泡图
- */
-- (void)showBasicBubbleDemo {
-    NSString *json = @"{\"grid\":{\"x\":30,\"x2\":20},\"tooltip\":{\"trigger\":\"axis\",\"showDelay\":0,\"axisPointer\":{\"show\":true,\"type\":\"cross\",\"lineStyle\":{\"type\":\"dashed\",\"width\":1}}},\"legend\":{\"data\":[\"scatter1\",\"scatter2\"]},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataZoom\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"xAxis\":[{\"type\":\"value\",\"splitNumber\":4,\"scale\":true}],\"yAxis\":[{\"type\":\"value\",\"splitNumber\":4,\"scale\":true}],\"series\":[{\"name\":\"scatter1\",\"type\":\"scatter\",\"symbolSize\":\"(function (value){return Math.round(value[2] / 15);})\",\"data\":\"(function (){var d = [];var len = 100; while (len--) {var r1 = Math.round(Math.random() * 100); r1 = (r1 * (r1 %2 == 0 ? 1 : -1));var r2 = Math.round(Math.random() * 100); r2 = (r2 * (r2 %2 == 0 ? 1 : -1));var r3 = Math.round(Math.random() * 100); r3 = (r3 * (r3 %2 == 0 ? 1 : -1)); d.push([ r1,r2,Math.abs(r3) ]); } return d; })()\"},{\"name\":\"scatter2\",\"type\":\"scatter\",\"symbolSize\":\"(function (value){return Math.round(value[2] / 15);})\",\"data\":\"(function (){var d = [];var len = 100; while (len--) {var r1 = Math.round(Math.random() * 100); r1 = (r1 * (r1 %2 == 0 ? 1 : -1));var r2 = Math.round(Math.random() * 100); r2 = (r2 * (r2 %2 == 0 ? 1 : -1));var r3 = Math.round(Math.random() * 100); r3 = (r3 * (r3 %2 == 0 ? 1 : -1)); d.push([ r1,r2,Math.abs(r3) ]); } return d; })()\"}]}";
-    NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
-    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
-    [_kEchartView setOption:option];
-    
 }
 
 /**

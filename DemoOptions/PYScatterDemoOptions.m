@@ -193,7 +193,79 @@
 }
 
 + (PYOption *)basicBubbleOption {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerAxis)
+            .showDelayEqual(@0)
+            .axisPointerEqual([PYAxisPointer initPYAxisPointerWithBlock:^(PYAxisPointer *axisPoint) {
+                axisPoint.showEqual(YES)
+                .typeEqual(PYAxisPointerTypeCross)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.typeEqual(PYLineStyleTypeDashed)
+                    .widthEqual(@1);
+                }]);
+            }]);
+        }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.xEqual(@50).x2Equal(@40);
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.dataEqual(@[@"scatter1", @"scatter2"]);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataZoomEqual([PYToolboxFeatureDataZoom initPYToolboxFeatureDataZoomWithBlock:^(PYToolboxFeatureDataZoom *dataZoom) {
+                    dataZoom.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue)
+            .splitNumberEqual(@4)
+            .scaleEqual(YES);
+        }])
+        .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue)
+            .splitNumberEqual(@4)
+            .scaleEqual(YES);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.symbolSizeEqual(@"(function (value){return Math.round(value[2] / 15);})")
+            .nameEqual(@"scatter1")
+            .typeEqual(PYSeriesTypeScatter)
+            .dataEqual([self randomDataArray]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.symbolSizeEqual(@"(function (value){return Math.round(value[2] / 15);})")
+            .nameEqual(@"scatter2")
+            .typeEqual(PYSeriesTypeScatter)
+            .dataEqual([self randomDataArray]);
+        }]);
+    }];
+}
+
++ (CGFloat) random {
+    CGFloat r = round(arc4random_uniform(100) + 1);
+    return (r * ((NSInteger)r % 2 == 0 ? 1 : -1));
+}
+
++ (NSArray *)randomDataArray {
+    NSMutableArray *d = [NSMutableArray new];
+    NSUInteger len = 100;
+    while (len --) {
+        [d addObject:@[@([self random]), @([self random]), @(fabs([self random]))]];
+    }
+    return d;
 }
 
 + (PYOption *)largeScaleScatterOption {
