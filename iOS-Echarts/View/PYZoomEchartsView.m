@@ -102,13 +102,13 @@
     switch ([gesture state]) {
         case UIGestureRecognizerStateBegan: {
             panStartPointX = [gesture translationInView:self].x;
-            NSLog(@"lastStart: %.2f, lastEnd: %.2f", lastStart, lastEnd);
+            PYLog(@"lastStart: %.2f, lastEnd: %.2f", lastStart, lastEnd);
             break;
         }
         case UIGestureRecognizerStateChanged: {
             CGFloat currentPointX = [gesture translationInView:self].x;
             CGFloat deltaX = (currentPointX - panStartPointX) / self.frame.size.width * 100;
-            NSLog(@"%.2f", deltaX);
+            PYLog(@"%.2f", deltaX);
             if (deltaX > 0 && [dataZoom.end floatValue] + deltaX > 100 ) {
                 return;
             } else if (deltaX < 0 && [dataZoom.start floatValue] + deltaX < 0) {
