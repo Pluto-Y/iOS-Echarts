@@ -329,7 +329,109 @@
 }
 
 + (PYOption *)categoryScatterOption {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"类目坐标散点图")
+            .subtextEqual(@"dataZoom支持");
+        }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.xEqual(@30).x2Equal(@30);
+        }])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerAxis)
+            .axisPointerEqual([PYAxisPointer initPYAxisPointerWithBlock:^(PYAxisPointer *axisPoint) {
+                axisPoint.showEqual(YES)
+                .typeEqual(PYAxisPointerTypeCross)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.typeEqual(PYLineStyleTypeDashed)
+                    .widthEqual(@1);
+                }]);
+            }]);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .dataZoomEqual([PYDataZoom initPYDataZoomWithBlock:^(PYDataZoom *dataZoom) {
+            dataZoom.showEqual(YES)
+            .startEqual(@30)
+            .endEqual(@70);
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.dataEqual(@[@"series1", @"series2"]);
+        }])
+        .dataRangeEqual([PYDataRange initPYDataRangeWithBlock:^(PYDataRange *dataRange) {
+            dataRange.minEqual(@0)
+            .maxEqual(@100)
+            .orientEqual(PYOrientHorizontal)
+            .yEqual(@30)
+            .xEqual(PYPositionCenter)
+            .colorEqual([[NSMutableArray alloc] initWithArray:@[@"lightgreen", @"orange"]])
+            .splitNumberEqual(@5);
+        }])
+        .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            NSMutableArray *datas = [NSMutableArray new];
+            NSUInteger len = 0;
+            while (len ++ < 500) {
+                [datas addObject:@(len)];
+            }
+            axis.typeEqual(PYAxisTypeCategory)
+            .axisLabelEqual([PYAxisLabel initPYAxisLabelWithBlock:^(PYAxisLabel *axisLabel) {
+                axisLabel.formatterEqual(@"(function(v) {return \'类目\' + v;})");
+            }])
+            .dataEqual(datas);
+        }])
+        .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue);
+        }])
+        .animationEqual(NO)
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            NSMutableArray *datas = [NSMutableArray new];
+            NSUInteger len = 0;
+            while (len++ < 500) {
+                [datas addObject:@[@(len), [NSString stringWithFormat:@"%.2f", (float)((arc4random_uniform(10000)/10000.0) * 30)], [NSString stringWithFormat:@"%.2f", (float)((arc4random_uniform(10000)/10000.0) * 100)]]];
+            }
+            series.symbolSizeEqual(@"(function (value){return Math.round(value[2] / 10);})")
+            .nameEqual(@"series1")
+            .typeEqual(PYSeriesTypeScatter)
+            .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+                tooltip.triggerEqual(PYTooltipTriggerItem)
+                .formatterEqual(@"(function (params) {return params.seriesName + ' （'  + '类目' + params.value[0] + '）<br/>' + params.value[1] + ', ' + params.value[2];})")
+                .axisPointerEqual([PYAxisPointer initPYAxisPointerWithBlock:^(PYAxisPointer *axisPoint) {
+                    axisPoint.showEqual(YES);
+                }]);
+            }])
+            .addDataArr(datas);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            NSMutableArray *datas = [NSMutableArray new];
+            NSUInteger len = 0;
+            while (len++ < 500) {
+                [datas addObject:@[@(len), [NSString stringWithFormat:@"%.2f", (float)((arc4random_uniform(10000)/10000.0) * 30)], [NSString stringWithFormat:@"%.2f", (float)((arc4random_uniform(10000)/10000.0) * 100)]]];
+            }
+            series.symbolSizeEqual(@"(function (value){return Math.round(value[2] / 10);})")
+            .nameEqual(@"series2")
+            .typeEqual(PYSeriesTypeScatter)
+            .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+                tooltip.triggerEqual(PYTooltipTriggerItem)
+                .formatterEqual(@"(function (params) {return params.seriesName + ' （'  + '类目' + params.value[0] + '）<br/>' + params.value[1] + ', ' + params.value[2];})")
+                .axisPointerEqual([PYAxisPointer initPYAxisPointerWithBlock:^(PYAxisPointer *axisPoint) {
+                    axisPoint.showEqual(YES);
+                }]);
+            }])
+            .addDataArr(datas);
+        }]);
+    }];
 }
 
 + (PYOption *)timeDataOption {
