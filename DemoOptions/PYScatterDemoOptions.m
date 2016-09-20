@@ -435,7 +435,85 @@
 }
 
 + (PYOption *)timeDataOption {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"时间坐标散点图")
+            .subtextEqual(@"dataZoom支持");
+        }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.xEqual(@30).x2Equal(@30).yEqual(@80);
+        }])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerAxis)
+            .axisPointerEqual([PYAxisPointer initPYAxisPointerWithBlock:^(PYAxisPointer *axisPoint) {
+                axisPoint.showEqual(YES)
+                .typeEqual(PYAxisPointerTypeCross)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.typeEqual(PYLineStyleTypeDashed)
+                    .widthEqual(@1);
+                }]);
+            }]);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataZoomEqual([PYToolboxFeatureDataZoom initPYToolboxFeatureDataZoomWithBlock:^(PYToolboxFeatureDataZoom *dataZoom) {
+                    dataZoom.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .dataZoomEqual([PYDataZoom initPYDataZoomWithBlock:^(PYDataZoom *dataZoom) {
+            dataZoom.showEqual(YES)
+            .startEqual(@30)
+            .endEqual(@70);
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.dataEqual(@[@"series1"]);
+        }])
+        .dataRangeEqual([PYDataRange initPYDataRangeWithBlock:^(PYDataRange *dataRange) {
+            dataRange.minEqual(@0)
+            .maxEqual(@100)
+            .orientEqual(PYOrientHorizontal)
+            .yEqual(@30)
+            .xEqual(PYPositionCenter)
+            .colorEqual([[NSMutableArray alloc] initWithArray:@[@"lightgreen", @"orange"]])
+            .splitNumberEqual(@5);
+        }])
+        .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeTime)
+            .splitNumberEqual(@10);
+        }])
+        .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue);
+        }])
+        .animationEqual(NO)
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.symbolSizeEqual(@"(function (value){return Math.round(value[2]/20);})")
+            .nameEqual(@"series1")
+            .typeEqual(PYSeriesTypeScatter)
+            .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+                tooltip.triggerEqual(PYTooltipTriggerAxis)
+                .formatterEqual(@"(function (params) { var date = new Date(params.value[0]); return params.seriesName + ' （' + date.getFullYear() + '-' + (date.getMonth() + 1) + '-' + date.getDate() + ' ' + date.getHours() + ':' + date.getMinutes() +  '）<br/>' + params.value[1] + ', ' + params.value[2];})")
+                .axisPointerEqual([PYAxisPointer initPYAxisPointerWithBlock:^(PYAxisPointer *axisPoint) {
+                    axisPoint.typeEqual(PYAxisPointerTypeCross)
+                    .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                        lineStyle.typeEqual(PYLineStyleTypeDashed)
+                        .widthEqual(@1);
+                    }]);
+                }]);
+            }])
+            .dataEqual(@"(function () {var d = [];var len = 0;var now = new Date();var value;while (len++ < 1500) {d.push([new Date(2014, 9, 1, 0, Math.round(Math.random()*10000)),(Math.random()*30).toFixed(2) - 0,(Math.random()*100).toFixed(2) - 0]);}return d;})()");
+        }]);
+    }];
 }
 
 + (PYOption *)timeLineOption {
