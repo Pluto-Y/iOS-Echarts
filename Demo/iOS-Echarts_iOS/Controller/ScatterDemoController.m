@@ -69,7 +69,7 @@ typedef NS_ENUM(NSInteger, ScatterDemoTypeBtnTag) {
             [self showScaleRoamingDemo];
             break;
         case ScatterDemoTypeBtnTagScatter:
-            [self showScatterDemo];
+            option = [PYScatterDemoOptions scatterOption];
             break;
         default:
             break;
@@ -96,17 +96,6 @@ typedef NS_ENUM(NSInteger, ScatterDemoTypeBtnTag) {
  */
 - (void)showScaleRoamingDemo {
     NSString *json = @"{\"grid\":{\"x\":40,\"x2\":45},\"tooltip\":{\"trigger\":\"item\"},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataZoom\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"dataRange\":{\"show\":true,\"min\":0,\"max\":100,\"y\":\"center\",\"text\":[\"高\",\"低\"],\"color\":[\"lightgreen\",\"yellow\"],\"calculable\":true},\"xAxis\":[{\"type\":\"value\",\"scale\":true}],\"yAxis\":[{\"type\":\"value\",\"position\":\"right\",\"scale\":true}],\"animation\":false,\"series\":[{\"name\":\"scatter1\",\"type\":\"scatter\",\"symbolSize\":5,\"data\":\"(function () {var d = [];var len = 500;var value;while (len--) {value = (Math.random()*100).toFixed(2) - 0;d.push([(Math.random()*value + value).toFixed(2) - 0,(Math.random()*value).toFixed(2) - 0,value]);}return d;})()\"}]}";
-    NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
-    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
-    [_kEchartView setOption:option];
-}
-
-/**
- *  散点图
- */
-- (void)showScatterDemo {
-    NSString *json = @"{\"grid\":{\"x\":30,\"x2\":45},\"tooltip\":{\"trigger\":\"axis\",\"axisPointer\":{\"show\":true,\"type\":\"cross\",\"lineStyle\":{\"type\":\"dashed\",\"width\":1}}},\"legend\":{\"data\":[\"scatter1\",\"scatter2\"]},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"calculable\":true,\"xAxis\":[{\"type\":\"value\"}],\"yAxis\":[{\"type\":\"value\"}],\"series\":[{\"name\":\"scatter1\",\"type\":\"scatter\",\"symbol\":\"emptyCircle\",\"symbolSize\":\"(function (value){if (value[0] < 2) {return 2;}else if (value[0] < 8) {return Math.round(value[2] * 3/5);}else {return 8;}})\",\"itemStyle\":{\"normal\":{\"color\":\"lightblue\",\"borderWidth\":4,\"label\":{\"show\":true}},\"emphasis\":{\"color\":\"lightgreen\"}},\"data\":\"(function () {var d = [];var len = 20;while (len--) {d.push([(Math.random()*10).toFixed(2) - 0,(Math.random()*10).toFixed(2) - 0,(Math.random()*10).toFixed(2) - 0]);}return d;})()\",\"markPoint\":{\"data\":[{\"type\":\"max\",\"name\":\"y最大值\"},{\"type\":\"min\",\"name\":\"y最小值\"},{\"type\":\"max\",\"name\":\"x最大值\",\"valueIndex\":0,\"symbol\":\"arrow\",\"itemStyle\":{\"normal\":{\"borderColor\":\"red\"}}},{\"type\":\"min\",\"name\":\"x最小值\",\"valueIndex\":0,\"symbol\":\"arrow\",\"itemStyle\":{\"normal\":{\"borderColor\":\"red\"}}}]},\"markLine\":{\"data\":[{\"type\":\"average\",\"name\":\"y平均值\"},{\"type\":\"average\",\"name\":\"x平均值\",\"valueIndex\":0,\"itemStyle\":{\"normal\":{\"borderColor\":\"red\"}}}]}},{\"name\":\"scatter2\",\"type\":\"scatter\",\"symbol\":\"image://../asset/ico/favicon.png\",\"symbolSize\": \"(function (value){return Math.round(value[2] * 3/5);})\",\"itemStyle\":{\"emphasis\":{\"label\":{\"show\":true}}},\"data\":\"(function () {var d = [];var len = 20;while (len--) {d.push([(Math.random()*10).toFixed(2) - 0,(Math.random()*10).toFixed(2) - 0,(Math.random()*10).toFixed(2) - 0]);}d.push({value : [5,5,1000],itemStyle: {normal: {borderWidth: 8,color: \'orange\'},emphasis: {borderWidth: 10,color: \'#ff4500\'}},symbol: \'emptyTriangle\',symbolRotate:90,symbolSize:5})return d;})()\",\"markPoint\":{\"symbol\":\"emptyCircle\",\"itemStyle\":{\"normal\":{\"label\":{\"position\":\"top\"}}},\"data\":[{\"name\":\"有个东西\",\"value\":1000,\"xAxis\":5,\"yAxis\":5,\"symbolSize\":20}]}}]}";
     NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
     NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
     PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];

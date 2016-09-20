@@ -525,7 +525,100 @@
 }
 
 + (PYOption *)scatterOption {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerAxis)
+            .axisPointerEqual([PYAxisPointer initPYAxisPointerWithBlock:^(PYAxisPointer *axisPoint) {
+                axisPoint.showEqual(YES)
+                .typeEqual(PYAxisPointerTypeCross)
+                .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
+                    lineStyle.typeEqual(PYLineStyleTypeDashed)
+                    .widthEqual(@1);
+                }]);
+            }]);
+        }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.xEqual(@30).x2Equal(@30);
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.dataEqual(@[@"scatter1", @"scatter2"]);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .calculableEqual(YES)
+        .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue);
+        }])
+        .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.symbolEqual(PYSymbolEmptyCircle)
+            .symbolSizeEqual(@"(function (value){if (value[0] < 2) {return 2;}else if (value[0] < 8) {return Math.round(value[2] * 3);}else {return 20;}})")
+            .nameEqual(@"scatter1")
+            .typeEqual(PYSeriesTypeScatter)
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                    normal.colorEqual(@"lightblue")
+                    .borderWidthEqual(@4)
+                    .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES);
+                    }]);
+                }])
+                .emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+                    emphasis.colorEqual(@"lightblue");
+                }]);
+            }])
+            .dataEqual(@"(function () {var d = [];var len = 20;while (len--) {d.push([(Math.random()*10).toFixed(2) - 0,(Math.random()*10).toFixed(2) - 0,(Math.random()*10).toFixed(2) - 0]);}return d;})()")
+            .markPointEqual([PYMarkPoint initPYMarkPointWithBlock:^(PYMarkPoint *markPoint) {
+                markPoint.addData(@{@"type" : @"max", @"name": @"y最大值"})
+                .addData(@{@"type" : @"min", @"name": @"y最小值"})
+                .addData(@{@"type" : @"max", @"name": @"x最大值", @"valueIndex" : @0, @"symbol":@"arrow",@"itemStyle":@{@"normal":@{@"borderColor":@"red"}}})
+                .addData(@{@"type" : @"min", @"name": @"x最小值", @"valueIndex" : @0, @"symbol":@"arrow",@"itemStyle":@{@"normal":@{@"borderColor":@"red"}}});
+            }])
+            .markLineEqual([PYMarkLine initPYMarkLineWithBlock:^(PYMarkLine *markLine) {
+                markLine.addData( @{@"type" : @"average", @"name": @"y平均值"})
+                .addData(@{@"type" : @"average", @"name": @"x平均值", @"valueIndex" : @0, @"itemStyle":@{@"normal":@{@"borderColor":@"red"}}});
+            }]);
+        }])
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.symbolEqual(@"image://http://echarts.baidu.com/echarts2/doc/asset/ico/favicon.png")
+            .symbolSizeEqual(@"(function (value){return Math.round(value[2] * 3);})")
+            .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                itemStyle.emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *emphasis) {
+                    emphasis.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                        label.showEqual(YES);
+                    }]);
+                }]);
+            }])
+            .nameEqual(@"scatter2")
+            .typeEqual(PYSeriesTypeScatter)
+            .dataEqual(@"(function () {var d = [];var len = 20;while (len--) {d.push([(Math.random()*10).toFixed(2) - 0,(Math.random()*10).toFixed(2) - 0,(Math.random()*10).toFixed(2) - 0]);}d.push({value : [5,5,1000],itemStyle: {normal: {borderWidth: 8,color: 'orange'},emphasis: {borderWidth: 10,color: '#ff4500'}},symbol: 'emptyTriangle',symbolRotate:90,symbolSize:30})return d;})()")
+            .markPointEqual([PYMarkPoint initPYMarkPointWithBlock:^(PYMarkPoint *markPoint) {
+                markPoint.symbolEqual(PYSymbolEmptyCircle)
+                .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
+                    itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
+                        normal.labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
+                            label.positionEqual(PYPositionTop);
+                        }]);
+                    }]);
+                }])
+                .addDataArr(@[@{@"name" : @"有个东西", @"value" : @1000, @"xAxis": @5, @"yAxis": @5, @"symbolSize":@80}]);
+            }]);
+        }]);
+    }];
 }
 
 @end
