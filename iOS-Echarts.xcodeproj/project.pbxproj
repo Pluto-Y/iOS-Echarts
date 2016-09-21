@@ -10,6 +10,7 @@
 		6C4216961B98E310002D4B7A /* iOS_EchartsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4216951B98E310002D4B7A /* iOS_EchartsTests.m */; };
 		6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */; };
 		6F09E9D91D6CD106006A76CD /* PYChordSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F09E9D81D6CD106006A76CD /* PYChordSeries.m */; };
+		6F1325611D930E190006F114 /* PYEventRiverDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1325601D930E190006F114 /* PYEventRiverDemoOptions.m */; };
 		6F4D58DB1D4FE34F00246943 /* PYAreaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D586A1D4FE34F00246943 /* PYAreaStyle.m */; };
 		6F4D58DC1D4FE34F00246943 /* PYAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D586C1D4FE34F00246943 /* PYAxis.m */; };
 		6F4D58DD1D4FE34F00246943 /* PYAxisLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D586E1D4FE34F00246943 /* PYAxisLabel.m */; };
@@ -210,6 +211,8 @@
 		6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "iOS-Echarts.podspec"; sourceTree = "<group>"; };
 		6F09E9D71D6CD106006A76CD /* PYChordSeries.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYChordSeries.h; sourceTree = "<group>"; };
 		6F09E9D81D6CD106006A76CD /* PYChordSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYChordSeries.m; sourceTree = "<group>"; };
+		6F13255F1D930E190006F114 /* PYEventRiverDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYEventRiverDemoOptions.h; sourceTree = "<group>"; };
+		6F1325601D930E190006F114 /* PYEventRiverDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYEventRiverDemoOptions.m; sourceTree = "<group>"; };
 		6F4D58651D4FE34F00246943 /* iOS-Echarts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOS-Echarts.h"; sourceTree = "<group>"; };
 		6F4D58691D4FE34F00246943 /* PYAreaStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYAreaStyle.h; sourceTree = "<group>"; };
 		6F4D586A1D4FE34F00246943 /* PYAreaStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYAreaStyle.m; sourceTree = "<group>"; };
@@ -805,24 +808,26 @@
 				6F65DC121D820E2200950EC5 /* PYCandlestickDemoOptions.h */,
 				6F65DC131D820E2200950EC5 /* PYCandlestickDemoOptions.m */,
 				6F9DCF3C1D784448007CEAD2 /* PYDemoOptions.h */,
+				6F13255F1D930E190006F114 /* PYEventRiverDemoOptions.h */,
+				6F1325601D930E190006F114 /* PYEventRiverDemoOptions.m */,
+				6FF570A21D861842007AA7A6 /* PYFunnelDemoOptions.h */,
+				6FF570A31D861842007AA7A6 /* PYFunnelDemoOptions.m */,
+				6FF5709F1D85B0A5007AA7A6 /* PYGaugesDemoOptions.h */,
+				6FF570A01D85B0A5007AA7A6 /* PYGaugesDemoOptions.m */,
 				6F9DCF391D7842FF007CEAD2 /* PYLineDemoOptions.h */,
 				6F9DCF3A1D7842FF007CEAD2 /* PYLineDemoOptions.m */,
 				6F743AE01D7D8ADA00C94967 /* PYPieDemoOptions.h */,
 				6F743AE11D7D8ADA00C94967 /* PYPieDemoOptions.m */,
+				6FF570A51D88597B007AA7A6 /* PYScatterDemoOptions.h */,
+				6FF570A61D88597B007AA7A6 /* PYScatterDemoOptions.m */,
+				6FF5709C1D85A720007AA7A6 /* PYTreeDemoOptions.h */,
+				6FF5709D1D85A720007AA7A6 /* PYTreeDemoOptions.m */,
 				6F65DC181D821CA400950EC5 /* PYTreemapDemoOptions.h */,
 				6F65DC191D821CA400950EC5 /* PYTreemapDemoOptions.m */,
 				6F65DC151D8217B700950EC5 /* PYVennDemoOptions.h */,
 				6F65DC161D8217B700950EC5 /* PYVennDemoOptions.m */,
 				6F65DB491D80A02D00950EC5 /* PYWorldCloudDemoOptions.h */,
 				6F65DB4A1D80A02D00950EC5 /* PYWorldCloudDemoOptions.m */,
-				6FF5709C1D85A720007AA7A6 /* PYTreeDemoOptions.h */,
-				6FF5709D1D85A720007AA7A6 /* PYTreeDemoOptions.m */,
-				6FF5709F1D85B0A5007AA7A6 /* PYGaugesDemoOptions.h */,
-				6FF570A01D85B0A5007AA7A6 /* PYGaugesDemoOptions.m */,
-				6FF570A21D861842007AA7A6 /* PYFunnelDemoOptions.h */,
-				6FF570A31D861842007AA7A6 /* PYFunnelDemoOptions.m */,
-				6FF570A51D88597B007AA7A6 /* PYScatterDemoOptions.h */,
-				6FF570A61D88597B007AA7A6 /* PYScatterDemoOptions.m */,
 			);
 			path = DemoOptions;
 			sourceTree = "<group>";
@@ -1057,6 +1062,7 @@
 				6F4D58F11D4FE34F00246943 /* PYNodeStyle.m in Sources */,
 				6F4D58F01D4FE34F00246943 /* PYNodes.m in Sources */,
 				6F9DCF361D7841D6007CEAD2 /* RMMapper.m in Sources */,
+				6F1325611D930E190006F114 /* PYEventRiverDemoOptions.m in Sources */,
 				6F4D58FF1D4FE34F00246943 /* PYForceSeries.m in Sources */,
 				6F4D59021D4FE34F00246943 /* PYHeatmapSeries.m in Sources */,
 				6F4D58DD1D4FE34F00246943 /* PYAxisLabel.m in Sources */,
