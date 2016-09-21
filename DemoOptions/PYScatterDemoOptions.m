@@ -521,7 +521,55 @@
 }
 
 + (PYOption *)scaleRoamingOption {
-    return nil;
+    return [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerItem);
+        }])
+        .gridEqual([PYGrid initPYGridWithBlock:^(PYGrid *grid) {
+            grid.xEqual(@60).x2Equal(@40);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES)
+            .featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataZoomEqual([PYToolboxFeatureDataZoom initPYToolboxFeatureDataZoomWithBlock:^(PYToolboxFeatureDataZoom *dataZoom) {
+                    dataZoom.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .dataRangeEqual([PYDataRange initPYDataRangeWithBlock:^(PYDataRange *dataRange) {
+            dataRange.minEqual(@0)
+            .maxEqual(@100)
+            .yEqual(PYPositionCenter)
+            .textEqual([[NSMutableArray alloc] initWithArray:@[@"高", @"低"]])
+            .colorEqual([[NSMutableArray alloc] initWithArray:@[@"lightgreen", @"yellow"]])
+            .calculableEqual(YES);
+        }])
+        .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue)
+            .scaleEqual(YES);
+        }])
+        .addYAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
+            axis.typeEqual(PYAxisTypeValue)
+            .positionEqual(PYPositionRight)
+            .scaleEqual(YES);
+        }])
+        .animationEqual(NO)
+        .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
+            series.symbolSizeEqual(@5)
+            .nameEqual(@"scatter1")
+            .typeEqual(PYSeriesTypeScatter)
+            .dataEqual(@"(function () {var d = [];var len = 500;var value;while (len--) {value = (Math.random()*100).toFixed(2) - 0;d.push([(Math.random()*value + value).toFixed(2) - 0,(Math.random()*value).toFixed(2) - 0,value]);}return d;})()");
+        }]);
+    }];
 }
 
 + (PYOption *)scatterOption {
