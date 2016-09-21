@@ -32,39 +32,39 @@
 @end
 
 typedef NSString *PYEchartsViewImageType;
-extern PYEchartsViewImageType const PYEchartsViewImageTypeJEPG;
-extern PYEchartsViewImageType const PYEchartsViewImageTypePNG;
+FOUNDATION_EXPORT PYEchartsViewImageType const PYEchartsViewImageTypeJEPG;
+FOUNDATION_EXPORT PYEchartsViewImageType const PYEchartsViewImageTypePNG;
 
 typedef NSString *PYEchartAction;
-extern PYEchartAction const PYEchartActionResize;
-extern PYEchartAction const PYEchartActionClick;
-extern PYEchartAction const PYEchartActionDbClick;
-extern PYEchartAction const PYEchartActionDataChanged;
-extern PYEchartAction const PYEchartActionDataZoom;
-extern PYEchartAction const PYEchartActionDataRange;
-extern PYEchartAction const PYEchartActionLegendSelected;
-extern PYEchartAction const PYEchartActionMapSelected;
-extern PYEchartAction const PYEchartActionPieSelected;
-extern PYEchartAction const PYEchartActionMagicTypeChange;
-extern PYEchartAction const PYEchartActionDataViewChanged;
-extern PYEchartAction const PYEchartActionTimelineChanged;
-extern PYEchartAction const PYEchartActionMapRoam;
+FOUNDATION_EXPORT PYEchartAction const PYEchartActionResize;
+FOUNDATION_EXPORT PYEchartAction const PYEchartActionClick;
+FOUNDATION_EXPORT PYEchartAction const PYEchartActionDbClick;
+FOUNDATION_EXPORT PYEchartAction const PYEchartActionDataChanged;
+FOUNDATION_EXPORT PYEchartAction const PYEchartActionDataZoom;
+FOUNDATION_EXPORT PYEchartAction const PYEchartActionDataRange;
+FOUNDATION_EXPORT PYEchartAction const PYEchartActionLegendSelected;
+FOUNDATION_EXPORT PYEchartAction const PYEchartActionMapSelected;
+FOUNDATION_EXPORT PYEchartAction const PYEchartActionPieSelected;
+FOUNDATION_EXPORT PYEchartAction const PYEchartActionMagicTypeChange;
+FOUNDATION_EXPORT PYEchartAction const PYEchartActionDataViewChanged;
+FOUNDATION_EXPORT PYEchartAction const PYEchartActionTimelineChanged;
+FOUNDATION_EXPORT PYEchartAction const PYEchartActionMapRoam;
 
 typedef NSString * PYEchartTheme;
-extern PYEchartTheme const PYEchartThemeMacarons;
-extern PYEchartTheme const PYEchartThemeInfographic;
-extern PYEchartTheme const PYEchartThemeShine;
-extern PYEchartTheme const PYEchartThemeDark;
-extern PYEchartTheme const PYEchartThemeBlue;
-extern PYEchartTheme const PYEchartThemeGreen;
-extern PYEchartTheme const PYEchartThemeRed;
-extern PYEchartTheme const PYEchartThemeGray;
-extern PYEchartTheme const PYEchartThemeHelianthus;
-extern PYEchartTheme const PYEchartThemeRoma;
-extern PYEchartTheme const PYEchartThemeMint;
-extern PYEchartTheme const PYEchartThemeMacarons2;
-extern PYEchartTheme const PYEchartThemeSakura;
-extern PYEchartTheme const PYEchartThemeDefault;
+FOUNDATION_EXPORT PYEchartTheme const PYEchartThemeMacarons;
+FOUNDATION_EXPORT PYEchartTheme const PYEchartThemeInfographic;
+FOUNDATION_EXPORT PYEchartTheme const PYEchartThemeShine;
+FOUNDATION_EXPORT PYEchartTheme const PYEchartThemeDark;
+FOUNDATION_EXPORT PYEchartTheme const PYEchartThemeBlue;
+FOUNDATION_EXPORT PYEchartTheme const PYEchartThemeGreen;
+FOUNDATION_EXPORT PYEchartTheme const PYEchartThemeRed;
+FOUNDATION_EXPORT PYEchartTheme const PYEchartThemeGray;
+FOUNDATION_EXPORT PYEchartTheme const PYEchartThemeHelianthus;
+FOUNDATION_EXPORT PYEchartTheme const PYEchartThemeRoma;
+FOUNDATION_EXPORT PYEchartTheme const PYEchartThemeMint;
+FOUNDATION_EXPORT PYEchartTheme const PYEchartThemeMacarons2;
+FOUNDATION_EXPORT PYEchartTheme const PYEchartThemeSakura;
+FOUNDATION_EXPORT PYEchartTheme const PYEchartThemeDefault;
 
 @class PYOption, PYLoadingOption, PYNoDataLoadingOption;
 

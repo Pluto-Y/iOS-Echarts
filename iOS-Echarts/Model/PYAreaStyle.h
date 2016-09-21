@@ -10,7 +10,7 @@
 
 typedef NSString *PYAreaStyleType;
 
-extern PYAreaStyleType const PYAreaStyleTypeDefault;
+FOUNDATION_EXPORT PYAreaStyleType const PYAreaStyleTypeDefault;
 
 /**
  *

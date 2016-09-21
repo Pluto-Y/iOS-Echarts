@@ -12,8 +12,8 @@
 
 typedef NSString *PYTooltipTrigger;
 
-extern PYTooltipTrigger const PYTooltipTriggerItem;
-extern PYTooltipTrigger const PYTooltipTriggerAxis;
+FOUNDATION_EXPORT PYTooltipTrigger const PYTooltipTriggerItem;
+FOUNDATION_EXPORT PYTooltipTrigger const PYTooltipTriggerAxis;
 
 /**
  *

@@ -12,23 +12,23 @@
 
 typedef NSString *PYSeriesType;
 
-extern PYSeriesType const PYSeriesTypeLine;
-extern PYSeriesType const PYSeriesTypeBar;
-extern PYSeriesType const PYSeriesTypeScatter;
-extern PYSeriesType const PYSeriesTypeK;
-extern PYSeriesType const PYSeriesTypePie;
-extern PYSeriesType const PYSeriesTypeRadar;
-extern PYSeriesType const PYSeriesTypeChord;
-extern PYSeriesType const PYSeriesTypeForce;
-extern PYSeriesType const PYSeriesTypeMap;
-extern PYSeriesType const PYSeriesTypeWordCloud;
-extern PYSeriesType const PYSeriesTypeVenn;
-extern PYSeriesType const PYSeriesTypeTreemap;
-extern PYSeriesType const PYSeriesTypeGauge;
-extern PYSeriesType const PYSeriesTypeEventRiver;
-extern PYSeriesType const PYSeriesTypeFunnel;
-extern PYSeriesType const PYSeriesTypeHeatmap;
-extern PYSeriesType const PYSeriesTypeTree;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeLine;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeBar;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeScatter;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeK;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypePie;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeRadar;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeChord;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeForce;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeMap;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeWordCloud;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeVenn;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeTreemap;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeGauge;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeEventRiver;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeFunnel;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeHeatmap;
+FOUNDATION_EXPORT PYSeriesType const PYSeriesTypeTree;
 
 /**
  *

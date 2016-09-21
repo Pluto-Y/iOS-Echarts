@@ -12,11 +12,11 @@
 
 typedef NSString *PYLineStyleType;
 
-extern PYLineStyleType const PYLineStyleTypeSolid;
-extern PYLineStyleType const PYLineStyleTypeDotted;
-extern PYLineStyleType const PYLineStyleTypeDashed;
-extern PYLineStyleType const PYLineStyleTypeCurve;
-extern PYLineStyleType const PYLineStyleTypeBroken;
+FOUNDATION_EXPORT PYLineStyleType const PYLineStyleTypeSolid;
+FOUNDATION_EXPORT PYLineStyleType const PYLineStyleTypeDotted;
+FOUNDATION_EXPORT PYLineStyleType const PYLineStyleTypeDashed;
+FOUNDATION_EXPORT PYLineStyleType const PYLineStyleTypeCurve;
+FOUNDATION_EXPORT PYLineStyleType const PYLineStyleTypeBroken;
 
 /**
  *

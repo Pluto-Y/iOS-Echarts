@@ -12,10 +12,10 @@
 
 typedef NSString * PYAxisPointerType;
 
-extern PYAxisPointerType PYAxisPointerTypeLine;
-extern PYAxisPointerType PYAxisPointerTypeCross;
-extern PYAxisPointerType PYAxisPointerTypeShadow;
-extern PYAxisPointerType PYAxisPointerTypeNone;
+FOUNDATION_EXPORT PYAxisPointerType PYAxisPointerTypeLine;
+FOUNDATION_EXPORT PYAxisPointerType PYAxisPointerTypeCross;
+FOUNDATION_EXPORT PYAxisPointerType PYAxisPointerTypeShadow;
+FOUNDATION_EXPORT PYAxisPointerType PYAxisPointerTypeNone;
 
 /**
  *

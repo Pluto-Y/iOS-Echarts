@@ -12,10 +12,10 @@
 
 typedef NSString *PYAxisType;
 
-extern PYAxisType const PYAxisTypeCategory;
-extern PYAxisType const PYAxisTypeValue;
-extern PYAxisType const PYAxisTypeTime;
-extern PYAxisType const PYAxisTypeLog;
+FOUNDATION_EXPORT PYAxisType const PYAxisTypeCategory;
+FOUNDATION_EXPORT PYAxisType const PYAxisTypeValue;
+FOUNDATION_EXPORT PYAxisType const PYAxisTypeTime;
+FOUNDATION_EXPORT PYAxisType const PYAxisTypeLog;
 
 /**
  *

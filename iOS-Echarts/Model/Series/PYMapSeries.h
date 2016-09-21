@@ -10,8 +10,8 @@
 
 typedef NSString *PYMapSeriesMapValueCalculation;
 
-extern PYMapSeriesMapValueCalculation const PYMapSeriesMapValueCalculationSum;
-extern PYMapSeriesMapValueCalculation const PYMapSeriesMapValueCalculationAverage;
+FOUNDATION_EXPORT PYMapSeriesMapValueCalculation const PYMapSeriesMapValueCalculationSum;
+FOUNDATION_EXPORT PYMapSeriesMapValueCalculation const PYMapSeriesMapValueCalculationAverage;
 
 /**
  *

@@ -10,8 +10,8 @@
 
 typedef NSString *PYPieSeriesRoseType;
 
-extern PYPieSeriesRoseType const PYPieSeriesRoseTypeRadius;
-extern PYPieSeriesRoseType const PYPieSeriesRoseTypeArea;
+FOUNDATION_EXPORT PYPieSeriesRoseType const PYPieSeriesRoseTypeRadius;
+FOUNDATION_EXPORT PYPieSeriesRoseType const PYPieSeriesRoseTypeArea;
 
 /**
  *

@@ -11,8 +11,8 @@
 @class PYLineStyle, PYAxisLabel, PYAreaStyle;
 
 typedef NSString *PYPolarType;
-extern PYPolarType const PYPolarTypePolygon;
-extern PYPolarType const PYPolarTypeCircle;
+FOUNDATION_EXPORT PYPolarType const PYPolarTypePolygon;
+FOUNDATION_EXPORT PYPolarType const PYPolarTypeCircle;
 
 /**
  *

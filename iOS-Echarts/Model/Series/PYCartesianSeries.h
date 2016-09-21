@@ -10,10 +10,10 @@
 
 typedef NSString *PYCartesianSeriesDataFilter;
 
-extern PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterNearest;
-extern PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterMin;
-extern PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterMax;
-extern PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterAverage;
+FOUNDATION_EXPORT PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterNearest;
+FOUNDATION_EXPORT PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterMin;
+FOUNDATION_EXPORT PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterMax;
+FOUNDATION_EXPORT PYCartesianSeriesDataFilter const PYCartesianSeriesDataFilterAverage;
 
 /**
  *

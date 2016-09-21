@@ -13,14 +13,14 @@
 typedef NSString *PYTextStyleFontStyle;
 typedef NSString *PYTextStyleFontWeight;
 
-extern PYTextStyleFontStyle const PYTextStyleFontStyleNormal;
-extern PYTextStyleFontStyle const PYTextStyleFontStyleItalic;
-extern PYTextStyleFontStyle const PYTextStyleFontStyleOblique;
+FOUNDATION_EXPORT PYTextStyleFontStyle const PYTextStyleFontStyleNormal;
+FOUNDATION_EXPORT PYTextStyleFontStyle const PYTextStyleFontStyleItalic;
+FOUNDATION_EXPORT PYTextStyleFontStyle const PYTextStyleFontStyleOblique;
 
-extern PYTextStyleFontWeight const PYTextStyleFontWeightNormal;
-extern PYTextStyleFontWeight const PYTextStyleFontWeightBold;
-extern PYTextStyleFontWeight const PYTextStyleFontWeightBolder;
-extern PYTextStyleFontWeight const PYTextStyleFontWeightLighter;
+FOUNDATION_EXPORT PYTextStyleFontWeight const PYTextStyleFontWeightNormal;
+FOUNDATION_EXPORT PYTextStyleFontWeight const PYTextStyleFontWeightBold;
+FOUNDATION_EXPORT PYTextStyleFontWeight const PYTextStyleFontWeightBolder;
+FOUNDATION_EXPORT PYTextStyleFontWeight const PYTextStyleFontWeightLighter;
 
 /**
  *

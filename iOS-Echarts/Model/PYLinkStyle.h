@@ -12,8 +12,8 @@
 
 typedef NSString *PYLinkStyleType;
 
-extern PYLinkStyleType const PYLinkStyleTypeLine;
-extern PYLinkStyleType const PYLinkStyleTypeCurve;
+FOUNDATION_EXPORT PYLinkStyleType const PYLinkStyleTypeLine;
+FOUNDATION_EXPORT PYLinkStyleType const PYLinkStyleTypeCurve;
 
 /**
  *

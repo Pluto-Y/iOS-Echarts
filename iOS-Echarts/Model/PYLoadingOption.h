@@ -11,12 +11,12 @@
 @class PYTextStyle;
 
 typedef NSString *PYLoadingOptionEffect;
-extern PYLoadingOptionEffect const PYLoadingOptionEffectSpin;
-extern PYLoadingOptionEffect const PYLoadingOptionEffectBar;
-extern PYLoadingOptionEffect const PYLoadingOptionEffectRing;
-extern PYLoadingOptionEffect const PYLoadingOptionEffectWhirling;
-extern PYLoadingOptionEffect const PYLoadingOptionEffectDynamicLine;
-extern PYLoadingOptionEffect const PYLoadingOptionEffectBubble;
+FOUNDATION_EXPORT PYLoadingOptionEffect const PYLoadingOptionEffectSpin;
+FOUNDATION_EXPORT PYLoadingOptionEffect const PYLoadingOptionEffectBar;
+FOUNDATION_EXPORT PYLoadingOptionEffect const PYLoadingOptionEffectRing;
+FOUNDATION_EXPORT PYLoadingOptionEffect const PYLoadingOptionEffectWhirling;
+FOUNDATION_EXPORT PYLoadingOptionEffect const PYLoadingOptionEffectDynamicLine;
+FOUNDATION_EXPORT PYLoadingOptionEffect const PYLoadingOptionEffectBubble;
 
 /**
  *

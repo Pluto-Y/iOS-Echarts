@@ -66,8 +66,8 @@ PYPropertyEqualTemplate(PYTimelineControlStyle, NSDictionary *, emphasis);
 
 typedef NSString *PYTimelineType;
 
-extern PYTimelineType const PYTimelineTypeTime;
-extern PYTimelineType const PYTimelineTypeNumber;
+FOUNDATION_EXPORT PYTimelineType const PYTimelineTypeTime;
+FOUNDATION_EXPORT PYTimelineType const PYTimelineTypeNumber;
 
 /**
  *

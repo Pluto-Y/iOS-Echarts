@@ -33,8 +33,8 @@ PYPropertyEqualTemplate(PYForceNodes, BOOL, draggable);
 
 @end
 
-extern NSString * const PYForceSeriesRoamScale;
-extern NSString * const PYForceSeriesRoamMove;
+FOUNDATION_EXPORT NSString * const PYForceSeriesRoamScale;
+FOUNDATION_EXPORT NSString * const PYForceSeriesRoamMove;
 
 /**
  *

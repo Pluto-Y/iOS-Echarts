@@ -12,8 +12,8 @@
 
 typedef NSString *PYMarkPointEffectType;
 
-extern PYMarkPointEffectType const PYMarkPointEffectTypeScale;
-extern PYMarkPointEffectType const PYMarkPointEffectTypeBounce;
+FOUNDATION_EXPORT PYMarkPointEffectType const PYMarkPointEffectTypeScale;
+FOUNDATION_EXPORT PYMarkPointEffectType const PYMarkPointEffectTypeBounce;
 
 @interface PYMarkPointEffect : NSObject
 

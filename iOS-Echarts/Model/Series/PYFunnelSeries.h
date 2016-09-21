@@ -10,8 +10,8 @@
 
 typedef NSString *PYFunnelSeriesSort __deprecated_msg("Use PYSort instead");
 
-extern PYFunnelSeriesSort const PYFunnelSeriesSortAscending __deprecated_msg("Use PYSortAscending instead");
-extern PYFunnelSeriesSort const PYFunnelSeriesSortDescending __deprecated_msg("Use PYSortDescending instead");
+FOUNDATION_EXPORT PYFunnelSeriesSort const PYFunnelSeriesSortAscending __deprecated_msg("Use PYSortAscending instead");
+FOUNDATION_EXPORT PYFunnelSeriesSort const PYFunnelSeriesSortDescending __deprecated_msg("Use PYSortDescending instead");
 
 /**
  *
