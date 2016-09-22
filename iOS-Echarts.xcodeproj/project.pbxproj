@@ -11,6 +11,8 @@
 		6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */; };
 		6F09E9D91D6CD106006A76CD /* PYChordSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F09E9D81D6CD106006A76CD /* PYChordSeries.m */; };
 		6F1325611D930E190006F114 /* PYEventRiverDemoOptions.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F1325601D930E190006F114 /* PYEventRiverDemoOptions.m */; };
+		6F13257E1D93D0650006F114 /* MultiEcharts2Controller.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F13257C1D93D0650006F114 /* MultiEcharts2Controller.m */; };
+		6F13257F1D93D0650006F114 /* MultiEcharts2Controller.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6F13257D1D93D0650006F114 /* MultiEcharts2Controller.xib */; };
 		6F4D58DB1D4FE34F00246943 /* PYAreaStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D586A1D4FE34F00246943 /* PYAreaStyle.m */; };
 		6F4D58DC1D4FE34F00246943 /* PYAxis.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D586C1D4FE34F00246943 /* PYAxis.m */; };
 		6F4D58DD1D4FE34F00246943 /* PYAxisLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F4D586E1D4FE34F00246943 /* PYAxisLabel.m */; };
@@ -213,6 +215,9 @@
 		6F09E9D81D6CD106006A76CD /* PYChordSeries.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYChordSeries.m; sourceTree = "<group>"; };
 		6F13255F1D930E190006F114 /* PYEventRiverDemoOptions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYEventRiverDemoOptions.h; sourceTree = "<group>"; };
 		6F1325601D930E190006F114 /* PYEventRiverDemoOptions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYEventRiverDemoOptions.m; sourceTree = "<group>"; };
+		6F13257B1D93D0650006F114 /* MultiEcharts2Controller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiEcharts2Controller.h; sourceTree = "<group>"; };
+		6F13257C1D93D0650006F114 /* MultiEcharts2Controller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiEcharts2Controller.m; sourceTree = "<group>"; };
+		6F13257D1D93D0650006F114 /* MultiEcharts2Controller.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiEcharts2Controller.xib; sourceTree = "<group>"; };
 		6F4D58651D4FE34F00246943 /* iOS-Echarts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "iOS-Echarts.h"; sourceTree = "<group>"; };
 		6F4D58691D4FE34F00246943 /* PYAreaStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PYAreaStyle.h; sourceTree = "<group>"; };
 		6F4D586A1D4FE34F00246943 /* PYAreaStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PYAreaStyle.m; sourceTree = "<group>"; };
@@ -744,6 +749,9 @@
 				6F9DCED81D7841D6007CEAD2 /* MapDemoController.h */,
 				6F9DCED91D7841D6007CEAD2 /* MapDemoController.m */,
 				6F9DCEDA1D7841D6007CEAD2 /* MapDemoController.xib */,
+				6F13257B1D93D0650006F114 /* MultiEcharts2Controller.h */,
+				6F13257C1D93D0650006F114 /* MultiEcharts2Controller.m */,
+				6F13257D1D93D0650006F114 /* MultiEcharts2Controller.xib */,
 				6F9DCEDB1D7841D6007CEAD2 /* MultiEchartsController.h */,
 				6F9DCEDC1D7841D6007CEAD2 /* MultiEchartsController.m */,
 				6F9DCEDD1D7841D6007CEAD2 /* MultiEchartsController.xib */,
@@ -944,6 +952,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6F743A6F1D78B1CF00C94967 /* Main.storyboard in Resources */,
+				6F13257F1D93D0650006F114 /* MultiEcharts2Controller.xib in Resources */,
 				6F9DCF181D7841D6007CEAD2 /* GaugesDemoController.xib in Resources */,
 				6F9DCF1A1D7841D6007CEAD2 /* LineDemoController.xib in Resources */,
 				6F9DCF271D7841D6007CEAD2 /* ScatterDemoController.xib in Resources */,
@@ -1051,6 +1060,7 @@
 				6F4D58E01D4FE34F00246943 /* PYAxisTick.m in Sources */,
 				6F4D59091D4FE34F00246943 /* PYTreeMapSeries.m in Sources */,
 				6F743AE21D7D8ADA00C94967 /* PYPieDemoOptions.m in Sources */,
+				6F13257E1D93D0650006F114 /* MultiEcharts2Controller.m in Sources */,
 				6F4D59111D4FE34F00246943 /* PYZoomEchartsView.m in Sources */,
 				6F9DCF261D7841D6007CEAD2 /* ScatterDemoController.m in Sources */,
 				6F4D590C1D4FE34F00246943 /* PYWordCloudSeries.m in Sources */,

@@ -10,6 +10,7 @@
 #import "PYLoadingOption.h"
 #import "PYNoDataLoadingOption.h"
 #import "MultiEchartsController.h"
+#import "MultiEcharts2Controller.h"
 
 static int effectIndex = 0;
 static NSArray *effect;
@@ -69,7 +70,11 @@ static NSArray *effect;
                 [weakSelf.view addSubview:imgView];
             } copy]];
         }
-            
+        case 90005: {
+            MultiEcharts2Controller *controller = [[MultiEcharts2Controller alloc] init];
+            [self.navigationController pushViewController:controller animated:YES];
+            return;
+        }
         default:
             break;
     }

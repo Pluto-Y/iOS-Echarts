@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MultiEcharts2Controller">
+            <connections>
+                <outlet property="echartsView1" destination="7pp-vd-q18" id="9rL-Pf-dbf"/>
+                <outlet property="echartsView2" destination="ITN-db-3lp" id="0fQ-8B-K3o"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BG0-Va-4X5">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pp-vd-q18" customClass="PYEchartsView">
+                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="fsm-Kw-Voa"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITN-db-3lp" customClass="PYEchartsView">
+                            <rect key="frame" x="0.0" y="320" width="600" height="300"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="uqP-TP-S8u"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="ITN-db-3lp" secondAttribute="bottom" id="27a-hI-32S"/>
+                        <constraint firstItem="7pp-vd-q18" firstAttribute="top" secondItem="BG0-Va-4X5" secondAttribute="top" id="GaJ-sc-05x"/>
+                        <constraint firstAttribute="trailing" secondItem="ITN-db-3lp" secondAttribute="trailing" id="L6h-ZU-JTv"/>
+                        <constraint firstItem="ITN-db-3lp" firstAttribute="top" secondItem="7pp-vd-q18" secondAttribute="bottom" constant="20" id="Wsm-Wg-k6f"/>
+                        <constraint firstItem="7pp-vd-q18" firstAttribute="leading" secondItem="BG0-Va-4X5" secondAttribute="leading" id="cHk-iM-sAm"/>
+                        <constraint firstAttribute="trailing" secondItem="7pp-vd-q18" secondAttribute="trailing" id="mL9-VP-A7i"/>
+                        <constraint firstItem="ITN-db-3lp" firstAttribute="leading" secondItem="BG0-Va-4X5" secondAttribute="leading" id="mfE-ZH-Efd"/>
+                    </constraints>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="BG0-Va-4X5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1I6-yu-Apf"/>
+                <constraint firstAttribute="bottom" secondItem="BG0-Va-4X5" secondAttribute="bottom" id="F21-7P-bg7"/>
+                <constraint firstItem="BG0-Va-4X5" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="dDG-OQ-0NC"/>
+                <constraint firstAttribute="trailing" secondItem="BG0-Va-4X5" secondAttribute="trailing" id="gQP-qN-6qk"/>
+                <constraint firstItem="7pp-vd-q18" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" id="uB1-Sh-uhP"/>
+            </constraints>
+        </view>
+    </objects>
+</document>

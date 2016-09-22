@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -52,6 +52,13 @@
                         <action selector="showOtherDemo:" destination="-1" eventType="touchUpInside" id="Jrs-0u-PMl"/>
                     </connections>
                 </button>
+                <button opaque="NO" tag="90005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CeS-9U-ak7">
+                    <rect key="frame" x="67" y="184" width="54" height="30"/>
+                    <state key="normal" title="多图表2"/>
+                    <connections>
+                        <action selector="showOtherDemo:" destination="-1" eventType="touchUpInside" id="GIl-N4-qE8"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -64,6 +71,8 @@
                 <constraint firstItem="tB8-y5-rpI" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.5" id="XjO-F2-aOj"/>
                 <constraint firstItem="lyc-2x-o5o" firstAttribute="top" secondItem="tB8-y5-rpI" secondAttribute="bottom" constant="8" id="YNP-TC-fOa"/>
                 <constraint firstItem="lyc-2x-o5o" firstAttribute="centerX" secondItem="tB8-y5-rpI" secondAttribute="centerX" id="czY-1Y-1JX"/>
+                <constraint firstItem="CeS-9U-ak7" firstAttribute="centerX" secondItem="i5H-ZE-g7M" secondAttribute="centerX" id="d2Z-P3-Bn1"/>
+                <constraint firstItem="CeS-9U-ak7" firstAttribute="top" secondItem="i5H-ZE-g7M" secondAttribute="bottom" constant="8" id="q16-88-R2g"/>
                 <constraint firstItem="tB8-y5-rpI" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="32" id="u13-68-3pN"/>
                 <constraint firstItem="i5H-ZE-g7M" firstAttribute="centerX" secondItem="g0C-B1-6Z8" secondAttribute="centerX" id="xbW-JF-oNH"/>
             </constraints>
