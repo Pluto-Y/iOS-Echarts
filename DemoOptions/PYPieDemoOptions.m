@@ -779,7 +779,7 @@
                          @{@"value":@(135),@"name":@"视频广告"},
                          @{@"value":@(1048),@"name":@"百度", @"itemStyle":[PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
                                 itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
-                                    normal//.colorEqual(@"(function (){var zrColor = require(\'zrender/tool/color\');return zrColor.getRadialGradient(300, 200, 110, 300, 200, 140,[[0, \'rgba(255,255,0,1)\'],[1, \'rgba(30,144,250,1)\']]);})()")
+                                    normal.colorEqual(@"(function (){var zrColor = zrender.tool.color;return zrColor.getRadialGradient(160, 75, 55, 160, 75, 70,[[0, 'rgba(255,255,0,1)'],[1, 'rgba(30,144,250,1)']]);})()")
                                     .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
                                         label.textStyleEqual([PYTextStyle initPYTextStyleWithBlock:^(PYTextStyle *textStyle) {
                                             textStyle.colorEqual(PYRGBA(30, 144, 255, 0.8))
@@ -839,7 +839,7 @@
                     }]);
                 }])
                 .emphasisEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *itemStyleProp){
-                    itemStyleProp.colorEqual(@"(function (){var zrColor = require(\'zrender/tool/color\');return zrColor.getRadialGradient(650, 200, 80, 650, 200, 120,[[0, \'rgba(255,255,0,1)\'],[1, \'rgba(255,0,0,1)\']])})()")
+                    itemStyleProp.colorEqual(@"(function (){var zrColor = zrender.tool.color;return zrColor.getRadialGradient(650, 200, 80, 650, 200, 120,[[0, 'rgba(255,255,0,1)'],[1, 'rgba(255,0,0,1)']])})()")
                     .labelEqual([PYLabel initPYLabelWithBlock:^(PYLabel *label) {
                         label.showEqual(YES).positionEqual(PYPositionCenter)
                         .formatterEqual(@"{d}%")
