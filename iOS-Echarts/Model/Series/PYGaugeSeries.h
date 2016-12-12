@@ -112,7 +112,7 @@ PYPropertyEqualTemplate(PYGaugeTitle, PYTextStyle *, textStyle);
 @property (nonatomic, strong) PYAxisTick *axisTick;
 @property (nonatomic, strong) PYAxisLabel *axisLabel;
 @property (nonatomic, strong) PYGaugeSpliteLine *splitLine;
-@property (nonatomic, copy) PYGaugePointer *pointer;
+@property (nonatomic, strong) PYGaugePointer *pointer;
 @property (nonatomic, strong) PYGaugeTitle *title;
 @property (nonatomic, strong) PYGaugeDetail *detail;
 @property (nonatomic, assign) BOOL legendHoverLink;
