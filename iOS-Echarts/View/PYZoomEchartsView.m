@@ -31,6 +31,7 @@
         
         UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panHandle:)];
         [self addGestureRecognizer:panGesture];
+        self.minPercent = 20;
 #elif TARGET_OS_MAC
 #endif
     }
@@ -46,6 +47,7 @@
         
         UIPanGestureRecognizer *panGesture = [[UIPanGestureRecognizer alloc] initWithTarget:self action:@selector(panHandle:)];
         [self addGestureRecognizer:panGesture];
+        self.minPercent = 20;
 #elif TARGET_OS_MAC
 #endif
     }
@@ -70,15 +72,15 @@
     
     if (rangeWidth >= 100 && scale > 1) {
         return;
-    } else if (rangeWidth <= 0 && scale < 1) {
+    } else if (rangeWidth <= self.minPercent && scale < 1) {
         return;
     }
     
     rangeWidth = scale * lastRangeWidth;
     if (rangeWidth > 100) {
         rangeWidth = 100;
-    } else if (rangeWidth < 0) {
-        rangeWidth = 0;
+    } else if (rangeWidth < self.minPercent) {
+        rangeWidth = self.minPercent;
     }
     
     if (middle - (rangeWidth / 2.0) < 0) {
@@ -131,6 +133,16 @@
 
 #elif TARGET_OS_MAC
 #endif
+
+- (void)setMinPercent:(float)minPercent {
+    if (minPercent < 0) {
+        _minPercent = 0;
+    } else if (minPercent > 100) {
+        _minPercent = 100;
+    } else {
+        _minPercent = minPercent;
+    }
+}
 
 - (void)setOption:(PYOption *)pyOption {
     if (pyOption.dataZoom == nil) {
