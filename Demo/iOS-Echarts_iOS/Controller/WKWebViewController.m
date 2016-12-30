@@ -30,6 +30,8 @@
     
     PYOption *option = [PYLineDemoOptions basicLineOption];
     
+    [_echartsView setTheme:PYEchartThemeGray];
+    
     [_echartsView setOption:option];
     [_echartsView loadEcharts];
 }

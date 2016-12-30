@@ -139,6 +139,17 @@
 }
 
 /**
+ *  Set theme for echarts
+ *  You can set the themes by echarts support, which prefix is `PYEchartTheme`
+ *
+ *  @param theme The theme name
+ */
+- (void)setTheme:(PYEchartTheme) theme {
+    _theme = theme;
+    PYLog(@"Theme is %@", theme);
+    [self callJsMethods:[NSString stringWithFormat:@"myChart.setTheme(eval('%@'));", _theme]];
+}
+
 /**
  *  Set the option for echart
  *

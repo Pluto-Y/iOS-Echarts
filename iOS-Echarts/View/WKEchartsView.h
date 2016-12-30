@@ -20,6 +20,13 @@
  */
 - (void)resizeDiv;
 
+/**
+ *  Set theme for echarts
+ *  You can set the themes by echarts support, which prefix is `PYEchartTheme`
+ *
+ *  @param theme The theme name
+ */
+- (void)setTheme:(PYEchartTheme) theme;
 
 /**
  *  Load echart
