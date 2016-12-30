@@ -10,10 +10,4 @@
 
 @interface PYZoomEchartsView : PYEchartsView
 
-/**
- The min percent of the (end - start) of the dataZoom
- It depends the echarts will show the mininus percent of the whole view.
- */
-@property (nonatomic, assign) float minPercent;
-
 @end
