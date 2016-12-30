@@ -139,6 +139,7 @@
 }
 
 /**
+/**
  *  Set the option for echart
  *
  *  @param pyOption The echart option

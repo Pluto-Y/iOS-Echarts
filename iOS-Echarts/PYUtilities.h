@@ -41,42 +41,40 @@ static NSString *PYAuto = @"auto";
 static NSString *PYNone = @"none";
 
 typedef NSString *PYInterval;
-static PYInterval PYIntervalAuto = @"auto";
-static PYInterval PYIntervalAll  = @"all";
+static PYInterval const PYIntervalAuto = @"auto";
+static PYInterval const PYIntervalAll  = @"all";
 
 typedef NSString *PYSymbol;
-static PYSymbol PYSymbolNone           = @"none";
-static PYSymbol PYSymbolCircle         = @"circle";
-static PYSymbol PYSymbolRectangle      = @"rectangle";
-static PYSymbol PYSymbolTriangle       = @"triangle";
-static PYSymbol PYSymbolDiamond        = @"diamond";
-static PYSymbol PYSymbolEmptyCircle    = @"emptyCircle";
-static PYSymbol PYSymbolEmptyRectangle = @"emptyRectangle";
-static PYSymbol PYSymbolEmptyTriangle  = @"emptyTriangle";
-static PYSymbol PYSymbolEmptyDiamond   = @"emptyDiamond";
-static PYSymbol PYSymbolHeart          = @"heart";
-static PYSymbol PYSymbolDroplet        = @"droplet";
-static PYSymbol PYSymbolPin            = @"pin";
-static PYSymbol PYSymbolArrow          = @"arrow";
-static PYSymbol PYSymbolStar5          = @"star5";
+static PYSymbol const PYSymbolNone           = @"none";
+static PYSymbol const PYSymbolCircle         = @"circle";
+static PYSymbol const PYSymbolRectangle      = @"rectangle";
+static PYSymbol const PYSymbolTriangle       = @"triangle";
+static PYSymbol const PYSymbolDiamond        = @"diamond";
+static PYSymbol const PYSymbolEmptyCircle    = @"emptyCircle";
+static PYSymbol const PYSymbolEmptyRectangle = @"emptyRectangle";
+static PYSymbol const PYSymbolEmptyTriangle  = @"emptyTriangle";
+static PYSymbol const PYSymbolEmptyDiamond   = @"emptyDiamond";
+static PYSymbol const PYSymbolHeart          = @"heart";
+static PYSymbol const PYSymbolDroplet        = @"droplet";
+static PYSymbol const PYSymbolPin            = @"pin";
+static PYSymbol const PYSymbolArrow          = @"arrow";
+static PYSymbol const PYSymbolStar5          = @"star5";
 
 typedef NSString *PYSort;
-static PYSort PYSortNone       = @"none";
-static PYSort PYSortAscending  = @"ascending";
-static PYSort PYSortDescending = @"descending";
+static PYSort const PYSortNone       = @"none";
+static PYSort const PYSortAscending  = @"ascending";
+static PYSort const PYSortDescending = @"descending";
 
 typedef NSString *PYPosition;
-static PYPosition PYPositionLeft   = @"left";
-static PYPosition PYPositionRight  = @"right";
-static PYPosition PYPositionCenter = @"center";
-static PYPosition PYPositionTop    = @"top";
-static PYPosition PYPositionBottom = @"bottom";
+static PYPosition const PYPositionLeft   = @"left";
+static PYPosition const PYPositionRight  = @"right";
+static PYPosition const PYPositionCenter = @"center";
+static PYPosition const PYPositionTop    = @"top";
+static PYPosition const PYPositionBottom = @"bottom";
 
 typedef NSString *PYOrient;
-static PYOrient PYOrientHorizontal = @"horizontal";
-static PYOrient PYOrientVertical   = @"vertical";
-
-
+static PYOrient const PYOrientHorizontal = @"horizontal";
+static PYOrient const PYOrientVertical   = @"vertical";
 
 #pragma mark - The template marco
 
