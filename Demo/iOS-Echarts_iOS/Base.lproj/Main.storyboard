@@ -1,16 +1,19 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Main Controller-->
         <scene sceneID="dwR-vm-hTT">
             <objects>
                 <navigationController storyboardIdentifier="MainController" id="AK5-ye-Ki1" customClass="MainController" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="OOI-5z-FNr">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -33,34 +36,34 @@
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
-                        <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                        <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Z0s-pS-3OI">
-                                <rect key="frame" x="120" y="0.0" width="80" height="21"/>
+                                <rect key="frame" x="147.5" y="0.0" width="80" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="80" id="UDL-xd-Mtz"/>
                                     <constraint firstAttribute="height" constant="21" id="q68-nc-9nw"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" tag="10000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S5W-J3-r7t">
-                                <rect key="frame" x="57" y="21" width="46" height="30"/>
+                                <rect key="frame" x="71" y="21" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="LYE-g0-wVq"/>
                                     <constraint firstAttribute="width" constant="46" id="w04-6j-d0c"/>
                                 </constraints>
                                 <state key="normal" title="折线图">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="fPS-Xv-UdX"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AiU-vF-ufv">
-                                <rect key="frame" x="57" y="59" width="46" height="30"/>
+                                <rect key="frame" x="71" y="59" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="Gyj-39-1wY"/>
                                     <constraint firstAttribute="width" constant="46" id="lxy-7d-YaV"/>
@@ -71,7 +74,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10002" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aJX-aJ-ZQR">
-                                <rect key="frame" x="57" y="97" width="46" height="30"/>
+                                <rect key="frame" x="71" y="97" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="46" id="dl2-Qt-FaJ"/>
                                     <constraint firstAttribute="height" constant="30" id="opy-Pr-lkI"/>
@@ -82,7 +85,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10003" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CbF-qF-UwD">
-                                <rect key="frame" x="60" y="135" width="40" height="30"/>
+                                <rect key="frame" x="73.5" y="135" width="41" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="dZ4-S0-5Ie"/>
                                 </constraints>
@@ -92,7 +95,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10004" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DWi-xk-cHA">
-                                <rect key="frame" x="57" y="173" width="45" height="30"/>
+                                <rect key="frame" x="71" y="173" width="46" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="Cio-Rf-0vR"/>
                                 </constraints>
@@ -102,92 +105,100 @@
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10005" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x9J-ow-V3G">
-                                <rect key="frame" x="57" y="211" width="45" height="30"/>
+                                <rect key="frame" x="71" y="211" width="46" height="30"/>
                                 <state key="normal" title="雷达图"/>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="gbs-9p-h1E"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10006" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtY-4D-J1e">
-                                <rect key="frame" x="225" y="21" width="30" height="30"/>
+                                <rect key="frame" x="266" y="21" width="31" height="30"/>
                                 <state key="normal" title="地图"/>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xv2-n1-Rv8"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10007" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icm-JT-9P3">
-                                <rect key="frame" x="195" y="59" width="90" height="30"/>
+                                <rect key="frame" x="235.5" y="59" width="92" height="30"/>
                                 <state key="normal" title="力导向布局图"/>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="KMZ-JG-gK7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10008" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qpi-4Q-kVe">
-                                <rect key="frame" x="217" y="97" width="45" height="30"/>
+                                <rect key="frame" x="258" y="97" width="46" height="30"/>
                                 <state key="normal" title="字符云"/>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="3PI-oG-CfM"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10009" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJ0-jm-4Cy">
-                                <rect key="frame" x="217" y="135" width="45" height="30"/>
+                                <rect key="frame" x="258" y="135" width="46" height="30"/>
                                 <state key="normal" title="韦恩图"/>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="tWz-lS-f66"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10010" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29j-oJ-6g2">
-                                <rect key="frame" x="210" y="173" width="60" height="30"/>
+                                <rect key="frame" x="250.5" y="173" width="62" height="30"/>
                                 <state key="normal" title="矩形树图"/>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Fx0-eI-o59"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10011" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4iR-tp-UNC">
-                                <rect key="frame" x="218" y="211" width="45" height="30"/>
+                                <rect key="frame" x="259" y="211" width="46" height="30"/>
                                 <state key="normal" title="仪表盘"/>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="kdd-Fm-Rul"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10012" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EQ3-xg-ofq">
-                                <rect key="frame" x="218" y="249" width="45" height="30"/>
+                                <rect key="frame" x="259" y="249" width="46" height="30"/>
                                 <state key="normal" title="漏斗图"/>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="HxD-rE-i8d"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10013" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHu-RG-oWf">
-                                <rect key="frame" x="57" y="249" width="45" height="30"/>
+                                <rect key="frame" x="71" y="249" width="46" height="30"/>
                                 <state key="normal" title="和弦图"/>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="nRm-ix-V4V"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10014" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA7-Sc-KVi">
-                                <rect key="frame" x="226" y="287" width="30" height="30"/>
+                                <rect key="frame" x="267" y="287" width="31" height="30"/>
                                 <state key="normal" title="树图"/>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="mR1-hL-iiK"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="10015" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFk-uc-Rkp">
-                                <rect key="frame" x="42" y="287" width="75" height="30"/>
+                                <rect key="frame" x="55.5" y="287" width="77" height="30"/>
                                 <state key="normal" title="事件河流图"/>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="dot-J2-QW3"/>
                                 </connections>
                             </button>
                             <button opaque="NO" tag="11000" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NUG-2Q-8qE">
-                                <rect key="frame" x="64" y="325" width="30" height="30"/>
+                                <rect key="frame" x="78" y="325" width="31" height="30"/>
                                 <state key="normal" title="其他"/>
                                 <connections>
                                     <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="AGA-yJ-zxh"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" tag="11001" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6rj-DS-bks">
+                                <rect key="frame" x="238.5" y="325" width="88" height="30"/>
+                                <state key="normal" title="WKWebView"/>
+                                <connections>
+                                    <action selector="gotoDetailDemos:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="xSP-cZ-Cvr"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="6rj-DS-bks" firstAttribute="centerX" secondItem="cA7-Sc-KVi" secondAttribute="centerX" id="2iE-D4-vqL"/>
                             <constraint firstAttribute="centerX" secondItem="Z0s-pS-3OI" secondAttribute="centerX" id="3qd-DQ-sqD"/>
                             <constraint firstItem="29j-oJ-6g2" firstAttribute="top" secondItem="TJ0-jm-4Cy" secondAttribute="bottom" constant="8" id="4ww-ot-Rkp"/>
                             <constraint firstItem="zFk-uc-Rkp" firstAttribute="centerX" secondItem="hHu-RG-oWf" secondAttribute="centerX" id="76E-k5-oDV"/>
@@ -211,6 +222,7 @@
                             <constraint firstItem="TJ0-jm-4Cy" firstAttribute="top" secondItem="qpi-4Q-kVe" secondAttribute="bottom" constant="8" id="n0n-Lp-ykD"/>
                             <constraint firstItem="DWi-xk-cHA" firstAttribute="top" secondItem="CbF-qF-UwD" secondAttribute="bottom" constant="8" id="oFc-S2-NWA"/>
                             <constraint firstItem="AiU-vF-ufv" firstAttribute="top" secondItem="S5W-J3-r7t" secondAttribute="bottom" constant="8" id="oZl-Fe-CxG"/>
+                            <constraint firstItem="6rj-DS-bks" firstAttribute="top" secondItem="cA7-Sc-KVi" secondAttribute="bottom" constant="8" id="oda-Zq-JZp"/>
                             <constraint firstItem="TJ0-jm-4Cy" firstAttribute="centerX" secondItem="qpi-4Q-kVe" secondAttribute="centerX" id="pIR-GS-kxH"/>
                             <constraint firstItem="x9J-ow-V3G" firstAttribute="centerX" secondItem="DWi-xk-cHA" secondAttribute="centerX" id="q3c-1J-7Xj"/>
                             <constraint firstItem="aJX-aJ-ZQR" firstAttribute="top" secondItem="AiU-vF-ufv" secondAttribute="bottom" constant="8" id="r68-Vc-M3p"/>
@@ -228,7 +240,6 @@
                     </view>
                     <navigationItem key="navigationItem" id="sSa-nS-qdn"/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

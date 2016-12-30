@@ -46,6 +46,8 @@
 #import "TreeDemoController.h"
 // Event River
 #import "EventRiverController.h"
+// WKWebView
+#import "WKWebViewController.h"
 
 
 @interface ViewController ()
@@ -120,6 +122,9 @@
             break;
         case 11000: // 其他
             controller = [[OtherDemoController alloc] init];
+            break;
+        case 11001: // WKWebView
+            controller = [[WKWebViewController alloc] init];
             break;
         default:
             break;

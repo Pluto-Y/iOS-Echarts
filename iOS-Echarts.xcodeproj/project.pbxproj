@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		542992691E161CA50082986D /* WKEchartsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 542992681E161CA50082986D /* WKEchartsView.m */; };
+		5429926C1E1621F60082986D /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5429926B1E1621F60082986D /* WebKit.framework */; };
+		542992701E1622E50082986D /* WKWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5429926E1E1622E50082986D /* WKWebViewController.m */; };
+		542992711E1622E50082986D /* WKWebViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5429926F1E1622E50082986D /* WKWebViewController.xib */; };
 		6C4216961B98E310002D4B7A /* iOS_EchartsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6C4216951B98E310002D4B7A /* iOS_EchartsTests.m */; };
 		6CC846641BC1BEB000947312 /* iOS-Echarts.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */; };
 		6F09E9D91D6CD106006A76CD /* PYChordSeries.m in Sources */ = {isa = PBXBuildFile; fileRef = 6F09E9D81D6CD106006A76CD /* PYChordSeries.m */; };
@@ -206,6 +210,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		542992671E161CA50082986D /* WKEchartsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKEchartsView.h; sourceTree = "<group>"; };
+		542992681E161CA50082986D /* WKEchartsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKEchartsView.m; sourceTree = "<group>"; };
+		5429926B1E1621F60082986D /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		5429926D1E1622E50082986D /* WKWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WKWebViewController.h; sourceTree = "<group>"; };
+		5429926E1E1622E50082986D /* WKWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WKWebViewController.m; sourceTree = "<group>"; };
+		5429926F1E1622E50082986D /* WKWebViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WKWebViewController.xib; sourceTree = "<group>"; };
 		6C4216761B98E310002D4B7A /* iOS-Echarts_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS-Echarts_iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C42168F1B98E310002D4B7A /* iOS-EchartsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "iOS-EchartsTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C4216941B98E310002D4B7A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -446,6 +456,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5429926C1E1621F60082986D /* WebKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +477,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5429926A1E1621F60082986D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5429926B1E1621F60082986D /* WebKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		6C42166D1B98E310002D4B7A = {
 			isa = PBXGroup;
 			children = (
@@ -475,6 +494,7 @@
 				6CC846631BC1BEB000947312 /* iOS-Echarts.podspec */,
 				6C4216921B98E310002D4B7A /* iOS-EchartsTests */,
 				6C4216771B98E310002D4B7A /* Products */,
+				5429926A1E1621F60082986D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -660,6 +680,8 @@
 				6F4D58D71D4FE34F00246943 /* PYEchartsView.m */,
 				6F4D58D81D4FE34F00246943 /* PYZoomEchartsView.h */,
 				6F4D58D91D4FE34F00246943 /* PYZoomEchartsView.m */,
+				542992671E161CA50082986D /* WKEchartsView.h */,
+				542992681E161CA50082986D /* WKEchartsView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -781,6 +803,9 @@
 				6F9DCEF51D7841D6007CEAD2 /* WordCloudDemoController.h */,
 				6F9DCEF61D7841D6007CEAD2 /* WordCloudDemoController.m */,
 				6F9DCEF71D7841D6007CEAD2 /* WordCloudDemoController.xib */,
+				5429926D1E1622E50082986D /* WKWebViewController.h */,
+				5429926E1E1622E50082986D /* WKWebViewController.m */,
+				5429926F1E1622E50082986D /* WKWebViewController.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -958,6 +983,7 @@
 				6F9DCF271D7841D6007CEAD2 /* ScatterDemoController.xib in Resources */,
 				6F9DCF311D7841D6007CEAD2 /* Images.xcassets in Resources */,
 				6F9DCF071D7841D6007CEAD2 /* LaunchScreen.xib in Resources */,
+				542992711E1622E50082986D /* WKWebViewController.xib in Resources */,
 				6F9DCF2B1D7841D6007CEAD2 /* TreemapDemoController.xib in Resources */,
 				6F9DCF291D7841D6007CEAD2 /* TreeDemoController.xib in Resources */,
 				6F743AEB1D7E1C2D00C94967 /* theme in Resources */,
@@ -1047,12 +1073,14 @@
 				6F4D59101D4FE34F00246943 /* PYEchartsView.m in Sources */,
 				6F4D58F41D4FE34F00246943 /* PYRoamController.m in Sources */,
 				6F4D58DF1D4FE34F00246943 /* PYAxisPointer.m in Sources */,
+				542992691E161CA50082986D /* WKEchartsView.m in Sources */,
 				6F4D58EA1D4FE34F00246943 /* PYLegend.m in Sources */,
 				6F4D590F1D4FE34F00246943 /* PYJsonUtil.m in Sources */,
 				6F9DCF221D7841D6007CEAD2 /* PieDemoController.m in Sources */,
 				6F4D59041D4FE34F00246943 /* PYMarkLine.m in Sources */,
 				6F9DCF1C1D7841D6007CEAD2 /* MapDemoController.m in Sources */,
 				6F4D58F71D4FE34F00246943 /* PYTextStyle.m in Sources */,
+				542992701E1622E50082986D /* WKWebViewController.m in Sources */,
 				6F4D58F91D4FE34F00246943 /* PYTitle.m in Sources */,
 				6F09E9D91D6CD106006A76CD /* PYChordSeries.m in Sources */,
 				6F4D58F51D4FE34F00246943 /* PYSplitArea.m in Sources */,
