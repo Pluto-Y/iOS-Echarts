@@ -76,6 +76,41 @@ typedef NSString *PYOrient;
 static PYOrient const PYOrientHorizontal = @"horizontal";
 static PYOrient const PYOrientVertical   = @"vertical";
 
+typedef NSString * PYEchartTheme;
+static PYEchartTheme const PYEchartThemeMacarons    = @"macarons";
+static PYEchartTheme const PYEchartThemeInfographic = @"infographic";
+static PYEchartTheme const PYEchartThemeShine       = @"shine";
+static PYEchartTheme const PYEchartThemeDark        = @"dark";
+static PYEchartTheme const PYEchartThemeBlue        = @"blue";
+static PYEchartTheme const PYEchartThemeGreen       = @"green";
+static PYEchartTheme const PYEchartThemeRed         = @"red";
+static PYEchartTheme const PYEchartThemeGray        = @"gray";
+static PYEchartTheme const PYEchartThemeHelianthus  = @"helianthus";
+static PYEchartTheme const PYEchartThemeRoma        = @"roma";
+static PYEchartTheme const PYEchartThemeMint        = @"mint";
+static PYEchartTheme const PYEchartThemeMacarons2   = @"macarons2";
+static PYEchartTheme const PYEchartThemeSakura      = @"sakura";
+static PYEchartTheme const PYEchartThemeDefault     = @"default";
+
+typedef NSString *PYEchartAction;
+static PYEchartAction const PYEchartActionResize          = @"resize";
+static PYEchartAction const PYEchartActionClick           = @"click";
+static PYEchartAction const PYEchartActionDbClick         = @"dblclick";
+static PYEchartAction const PYEchartActionDataChanged     = @"dataChanged";
+static PYEchartAction const PYEchartActionDataZoom        = @"dataZoom";
+static PYEchartAction const PYEchartActionDataRange       = @"dataRange";
+static PYEchartAction const PYEchartActionLegendSelected  = @"legendSelected";
+static PYEchartAction const PYEchartActionMapSelected     = @"mapSelected";
+static PYEchartAction const PYEchartActionPieSelected     = @"pieSelected";
+static PYEchartAction const PYEchartActionMagicTypeChange = @"magicTypeChanged";
+static PYEchartAction const PYEchartActionDataViewChanged = @"dataViewChanged";
+static PYEchartAction const PYEchartActionTimelineChanged = @"timelineChanged";
+static PYEchartAction const PYEchartActionMapRoam         = @"mapRoam";
+
+typedef NSString *PYEchartsViewImageType;
+static PYEchartsViewImageType const PYEchartsViewImageTypeJEPG = @"jpeg";
+static PYEchartsViewImageType const PYEchartsViewImageTypePNG = @"png";
+
 #pragma mark - The template marco
 
 /**

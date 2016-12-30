@@ -13,38 +13,6 @@
 #import "PYJsonUtil.h"
 #import "PYLoadingOption.h"
 
-PYEchartsViewImageType const PYEchartsViewImageTypeJEPG = @"jpeg";
-PYEchartsViewImageType const PYEchartsViewImageTypePNG = @"png";
-
-PYEchartAction const PYEchartActionResize          = @"resize";
-PYEchartAction const PYEchartActionClick           = @"click";
-PYEchartAction const PYEchartActionDbClick         = @"dblclick";
-PYEchartAction const PYEchartActionDataChanged     = @"dataChanged";
-PYEchartAction const PYEchartActionDataZoom        = @"dataZoom";
-PYEchartAction const PYEchartActionDataRange       = @"dataRange";
-PYEchartAction const PYEchartActionLegendSelected  = @"legendSelected";
-PYEchartAction const PYEchartActionMapSelected     = @"mapSelected";
-PYEchartAction const PYEchartActionPieSelected     = @"pieSelected";
-PYEchartAction const PYEchartActionMagicTypeChange = @"magicTypeChanged";
-PYEchartAction const PYEchartActionDataViewChanged = @"dataViewChanged";
-PYEchartAction const PYEchartActionTimelineChanged = @"timelineChanged";
-PYEchartAction const PYEchartActionMapRoam         = @"mapRoam";
-
-PYEchartTheme const PYEchartThemeMacarons    = @"macarons";
-PYEchartTheme const PYEchartThemeInfographic = @"infographic";
-PYEchartTheme const PYEchartThemeShine       = @"shine";
-PYEchartTheme const PYEchartThemeDark        = @"dark";
-PYEchartTheme const PYEchartThemeBlue        = @"blue";
-PYEchartTheme const PYEchartThemeGreen       = @"green";
-PYEchartTheme const PYEchartThemeRed         = @"red";
-PYEchartTheme const PYEchartThemeGray        = @"gray";
-PYEchartTheme const PYEchartThemeHelianthus  = @"helianthus";
-PYEchartTheme const PYEchartThemeRoma        = @"roma";
-PYEchartTheme const PYEchartThemeMint        = @"mint";
-PYEchartTheme const PYEchartThemeMacarons2   = @"macarons2";
-PYEchartTheme const PYEchartThemeSakura      = @"sakura";
-PYEchartTheme const PYEchartThemeDefault     = @"default";
-
 static NSString *const kEchartActionObtainImg = @"obtainImg";
 
 @interface PYEchartsView() {
