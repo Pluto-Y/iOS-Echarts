@@ -12,6 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WKWebViewController">
             <connections>
+                <outlet property="imageView" destination="51m-Yy-sS9" id="P0K-xT-fou"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -34,12 +35,30 @@
                         <action selector="changeDatas:" destination="-1" eventType="touchUpInside" id="79C-BS-jYg"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9kW-Bv-XWG">
+                    <rect key="frame" x="63" y="96" width="62" height="30"/>
+                    <state key="normal" title="获取截图"/>
+                    <connections>
+                        <action selector="obtainDumpscreen:" destination="-1" eventType="touchUpInside" id="RaK-uz-Nhf"/>
+                    </connections>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="51m-Yy-sS9">
+                    <rect key="frame" x="187.5" y="20" width="187.5" height="150"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="150" id="IOt-mH-lyu"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="lbd-0C-fgG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.5" id="434-cc-7m6"/>
+                <constraint firstItem="9kW-Bv-XWG" firstAttribute="top" secondItem="b1c-Q7-diQ" secondAttribute="bottom" constant="8" id="Hhl-5m-I6Y"/>
+                <constraint firstItem="9kW-Bv-XWG" firstAttribute="centerX" secondItem="b1c-Q7-diQ" secondAttribute="centerX" id="JhA-Zl-hDj"/>
                 <constraint firstItem="lbd-0C-fgG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="bWC-pP-JxZ"/>
+                <constraint firstItem="51m-Yy-sS9" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="brl-zJ-7En"/>
                 <constraint firstItem="b1c-Q7-diQ" firstAttribute="top" secondItem="lbd-0C-fgG" secondAttribute="bottom" constant="8" id="dWA-H7-5Mw"/>
+                <constraint firstItem="51m-Yy-sS9" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="h21-0t-2NX"/>
+                <constraint firstAttribute="trailing" secondItem="51m-Yy-sS9" secondAttribute="trailing" id="qUw-nH-Ru8"/>
                 <constraint firstItem="b1c-Q7-diQ" firstAttribute="centerX" secondItem="lbd-0C-fgG" secondAttribute="centerX" id="y2q-Hl-bTP"/>
             </constraints>
         </view>

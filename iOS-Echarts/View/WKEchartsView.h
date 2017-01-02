@@ -58,6 +58,14 @@
 - (void)removeHandlerForAction:(PYEchartAction)name;
 
 /**
+ *  Obtain the screen of echarts view with type
+ *
+ *  @param type           The type you want get, now just support `PYEchartsViewImageTypeJEPG` and `PYEchartsViewImageTypePNG`.
+ *  @param completedBlock A block called when get the image from echarts.
+ */
+- (void)obtainEchartsImageWithType:(PYEchartsViewImageType)type completed:(void(^)(PY_IMAGE *image))completedBlock;
+
+/**
  *  Load echart
  */
 - (void)loadEcharts;

@@ -18,6 +18,8 @@
 @interface WKEchartsView() {
     // This params store the handler of the echart actions
     NSMutableDictionary<PYEchartAction, PYEchartActionHandler> *actionHandleBlocks;
+    // This block will store for get image from echarts and will clear when the block is called
+    void (^obtainImgCompletedBlock)(PY_IMAGE *image);
     PYOption *option;
     NSString *bundlePath;
     NSString *localHtmlContents;
@@ -186,6 +188,8 @@
  *  @param block The block handler
  */
 - (void)addHandlerForAction:(PYEchartAction)name withBlock:(PYEchartActionHandler)block {
+    // If the handler is exists, remove it firtly.
+    [[self configuration].userContentController removeScriptMessageHandlerForName:name];
     [[self configuration].userContentController addScriptMessageHandler:self name:name];
     [actionHandleBlocks setObject:block forKey:name];
     [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler(%@)",name]];
@@ -200,6 +204,27 @@
     [[self configuration].userContentController removeScriptMessageHandlerForName:name];
     [actionHandleBlocks removeObjectForKey:name];
     [self callJsMethods:[NSString stringWithFormat:@"removeEchartActionHandler(%@)",name]];
+}
+
+/**
+ *  Obtain the screen of echarts view with type
+ *
+ *  @param type           The type you want get, now just support `PYEchartsViewImageTypeJEPG` and `PYEchartsViewImageTypePNG`.
+ *  @param completedBlock A block called when get the image from echarts.
+ */
+- (void)obtainEchartsImageWithType:(PYEchartsViewImageType)type completed:(void(^)(PY_IMAGE *image))completedBlock {
+    if (![type isEqualToString:PYEchartsViewImageTypePNG] && ![type isEqualToString:PYEchartsViewImageTypeJEPG]) {
+        NSLog(@"Error: Echarts does not support this type --- %@, so it will be obtain JEPG type", type);
+        type = PYEchartsViewImageTypeJEPG;
+    }
+    if (completedBlock != nil) {
+        // If the handler is exists, remove it firtly.
+        [[self configuration].userContentController removeScriptMessageHandlerForName:kEchartActionObtainImg];
+        [[self configuration].userContentController addScriptMessageHandler:self name:kEchartActionObtainImg];
+        obtainImgCompletedBlock = completedBlock;
+        NSString *js = [NSString stringWithFormat:@"%@('%@')", @"obtainEchartsImage", type];
+        [self callJsMethods:js];
+    }
 }
 
 /**
@@ -251,25 +276,6 @@
         decisionHandler(WKNavigationActionPolicyAllow);
         return;
     }
-    // get the action from the path
-//    NSString *actionType = url.host;
-// 
-//    if ([kEchartActionObtainImg isEqualToString:actionType]) {
-//        if (obtainImgCompletedBlock != nil) {
-//            __weak typeof(obtainImgCompletedBlock) block = obtainImgCompletedBlock;
-//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
-//                PY_IMAGE *image = nil;
-//                NSString *imgBase64Str = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
-//                NSURL *url = [NSURL URLWithString:imgBase64Str];
-//                NSData *imgData = [NSData dataWithContentsOfURL:url];
-//                image = [PY_IMAGE imageWithData:imgData];
-//                dispatch_sync(dispatch_get_main_queue(), ^{
-//                    block(image);
-//                });
-//            });
-//            
-//        }
-//    }
     decisionHandler(WKNavigationActionPolicyCancel);
 }
 
@@ -281,11 +287,28 @@
 #pragma mark WKScriptMessageHandler
 - (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
     PYLog(@"name:%@, body:%@", message.name, message.body);
-    PYEchartActionHandler block = actionHandleBlocks[message.name];
-    // Check the action handle actions, if exists the block the invoke the block
-    if (block != nil) {
-        NSDictionary *params = (NSDictionary *)message.body;
-        block(params);
+    if ([kEchartActionObtainImg isEqualToString:message.name]) {
+        if (obtainImgCompletedBlock != nil) {
+            __weak typeof(obtainImgCompletedBlock) block = obtainImgCompletedBlock;
+            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+                PY_IMAGE *image = nil;
+                NSString *imgBase64Str = message.body;
+                NSURL *url = [NSURL URLWithString:imgBase64Str];
+                NSData *imgData = [NSData dataWithContentsOfURL:url];
+                image = [PY_IMAGE imageWithData:imgData];
+                dispatch_sync(dispatch_get_main_queue(), ^{
+                    block(image);
+                });
+            });
+            [[self configuration].userContentController removeScriptMessageHandlerForName:kEchartActionObtainImg];
+        }
+    } else {
+        PYEchartActionHandler block = actionHandleBlocks[message.name];
+        // Check the action handle actions, if exists the block the invoke the block
+        if (block != nil) {
+            NSDictionary *params = (NSDictionary *)message.body;
+            block(params);
+        }
     }
 }
 

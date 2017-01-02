@@ -16,6 +16,7 @@
 }
 
 @property (nonatomic, strong) WKEchartsView *echartsView;
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -53,6 +54,13 @@
     NSArray *minDatas = @[@(arc4random() % 10), @(arc4random() % 10), @(arc4random() % 10), @(arc4random() % 10), @(arc4random() % 10), @(arc4random() % 10), @(arc4random() % 10)];
     option.series[1].dataEqual(minDatas);
     [_echartsView refreshEchartsWithOption:option];
+}
+
+- (IBAction)obtainDumpscreen:(id)sender {
+    __weak __typeof(self) weakSelf = self;
+    [_echartsView obtainEchartsImageWithType:PYEchartsViewImageTypePNG completed:^(UIImage *image) {
+        weakSelf.imageView.image = image;
+    }];
 }
 
 @end

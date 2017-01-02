@@ -13,8 +13,6 @@
 #import "PYJsonUtil.h"
 #import "PYLoadingOption.h"
 
-static NSString *const kEchartActionObtainImg = @"obtainImg";
-
 @interface PYEchartsView() {
     NSString *bundlePath;
     NSString *localHtmlContents;

@@ -113,6 +113,8 @@ typedef NSString *PYEchartsViewImageType;
 static PYEchartsViewImageType const PYEchartsViewImageTypeJEPG = @"jpeg";
 static PYEchartsViewImageType const PYEchartsViewImageTypePNG = @"png";
 
+static NSString *const kEchartActionObtainImg = @"obtainImg";
+
 #pragma mark - The template marco
 
 /**
