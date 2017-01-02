@@ -48,12 +48,21 @@
                         <constraint firstAttribute="height" constant="150" id="IOt-mH-lyu"/>
                     </constraints>
                 </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DN8-Ax-yaG">
+                    <rect key="frame" x="56" y="134" width="77" height="30"/>
+                    <state key="normal" title="显示加载中"/>
+                    <connections>
+                        <action selector="showLoadingOption:" destination="-1" eventType="touchUpInside" id="7eD-fi-eeF"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="lbd-0C-fgG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" multiplier="0.5" id="434-cc-7m6"/>
                 <constraint firstItem="9kW-Bv-XWG" firstAttribute="top" secondItem="b1c-Q7-diQ" secondAttribute="bottom" constant="8" id="Hhl-5m-I6Y"/>
                 <constraint firstItem="9kW-Bv-XWG" firstAttribute="centerX" secondItem="b1c-Q7-diQ" secondAttribute="centerX" id="JhA-Zl-hDj"/>
+                <constraint firstItem="DN8-Ax-yaG" firstAttribute="top" secondItem="9kW-Bv-XWG" secondAttribute="bottom" constant="8" id="NLM-RC-TiO"/>
+                <constraint firstItem="DN8-Ax-yaG" firstAttribute="centerX" secondItem="9kW-Bv-XWG" secondAttribute="centerX" id="Oga-I0-rRn"/>
                 <constraint firstItem="lbd-0C-fgG" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="20" id="bWC-pP-JxZ"/>
                 <constraint firstItem="51m-Yy-sS9" firstAttribute="width" secondItem="i5M-Pr-FkT" secondAttribute="width" multiplier="0.5" id="brl-zJ-7En"/>
                 <constraint firstItem="b1c-Q7-diQ" firstAttribute="top" secondItem="lbd-0C-fgG" secondAttribute="bottom" constant="8" id="dWA-H7-5Mw"/>

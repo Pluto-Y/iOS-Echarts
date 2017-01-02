@@ -12,7 +12,9 @@
 
 @interface WKWebViewController () {
     NSArray *_allSupportThemes;
+    NSArray *_allSupportLoadingEffects;
     PYOption *option;
+    NSTimer *loadingTimer;
 }
 
 @property (nonatomic, strong) WKEchartsView *echartsView;
@@ -24,12 +26,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    loadingTimer = [NSTimer scheduledTimerWithTimeInterval:10 target:self selector:@selector(clearLoading) userInfo:nil repeats:YES];
+    loadingTimer.fireDate = [NSDate distantFuture];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     _allSupportThemes = @[PYEchartThemeMacarons, PYEchartThemeInfographic, PYEchartThemeShine, PYEchartThemeDark, PYEchartThemeBlue, PYEchartThemeGreen, PYEchartThemeRed, PYEchartThemeGray, PYEchartThemeHelianthus, PYEchartThemeRoma, PYEchartThemeMint, PYEchartThemeMacarons2, PYEchartThemeSakura, PYEchartThemeDefault];
+    _allSupportLoadingEffects = @[PYLoadingOptionEffectSpin, PYLoadingOptionEffectBar, PYLoadingOptionEffectRing, PYLoadingOptionEffectWhirling, PYLoadingOptionEffectDynamicLine, PYLoadingOptionEffectBubble];
     
     _echartsView = [[WKEchartsView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - 320, self.view.bounds.size.width, 300)];
     [self.view addSubview:_echartsView];
@@ -39,6 +44,12 @@
     option = [PYLineDemoOptions standardLineOption];
     [_echartsView setOption:option];
     [_echartsView loadEcharts];
+}
+
+- (void)clearLoading {
+    [_echartsView hideLoading];
+    [_echartsView loadEcharts];
+    loadingTimer.fireDate = [NSDate distantFuture];
 }
 
 - (IBAction)changeThemes:(id)sender {
@@ -62,5 +73,16 @@
         weakSelf.imageView.image = image;
     }];
 }
+
+- (IBAction)showLoadingOption:(id)sender {
+    [_echartsView clearEcharts];
+    loadingTimer.fireDate = [NSDate dateWithTimeIntervalSinceNow:2];
+    int effectIndex = arc4random() % (int)_allSupportLoadingEffects.count;
+    PYLoadingOption *loadingOption = [[PYLoadingOption alloc] init];
+    loadingOption.text = _allSupportLoadingEffects[effectIndex];
+    loadingOption.effect = _allSupportLoadingEffects[effectIndex];
+    [_echartsView showLoading:loadingOption];
+}
+
 
 @end

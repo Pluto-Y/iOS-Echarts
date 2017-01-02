@@ -77,4 +77,21 @@
  */
 - (void)setOption:(PYOption *)pyOption;
 
+/**
+ *  Option for the loading screen, show a loading label text.
+ *
+ *  @param loadingOption The loading options control the appearance of the loading screen that covers the plot area on chart operations.
+ */
+- (void)showLoading:(PYLoadingOption *)loadingOption;
+
+/**
+ *  Hide loading screen
+ */
+- (void)hideLoading;
+
+/**
+ *  Clear the drawing content. Instances are available after Clearing.
+ */
+- (void)clearEcharts;
+
 @end

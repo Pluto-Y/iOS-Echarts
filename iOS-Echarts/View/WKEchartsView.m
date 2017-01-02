@@ -228,6 +228,31 @@
 }
 
 /**
+ *  Option for the loading screen, show a loading label text.
+ *
+ *  @param loadingOption The loading options control the appearance of the loading screen that covers the plot area on chart operations.
+ */
+- (void)showLoading:(PYLoadingOption *)loadingOption {
+    NSString *loadingOptionStr = [PYJsonUtil getJSONString:loadingOption];
+    PYLog(@"loadingOption:%@", loadingOptionStr);
+    [self callJsMethods:[NSString stringWithFormat:@"myChart.showLoading(%@)",loadingOptionStr]];
+}
+
+/**
+ *  Hide loading screen
+ */
+- (void)hideLoading {
+    [self callJsMethods:@"myChart.hideLoading()"];
+}
+
+/**
+ *  Clear the drawing content. Instances are available after Clearing.
+ */
+- (void)clearEcharts {
+    [self callJsMethods:@"myChart.clear()"];
+}
+
+/**
  *  Set the option for echart
  *
  *  @param pyOption The echart option
