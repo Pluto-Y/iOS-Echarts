@@ -44,9 +44,15 @@
     var myChart;
     var ecConfig;
     function echartViewAction(param) {
-//        alert(JSON.stringify(param));
+        // alert(JSON.stringify(param));
+        alert(window.webkit);
+        if(window.webkit == undefined) {
+            window.parent.frames['action_frame'].location.href = 'pyEchartAction://' + param.type + '#' + JSON.stringify(param) + ''; // Support for UIWebView
+            
+        } else {
+            eval("window.webkit.messageHandlers." + param.type + ".postMessage(" + JSON.stringify(param) + ")"); // Support for WKWebView
+        }
         //document.location.href = 'pyEchartAction://' + param.type + '#' + JSON.stringify(param) + '';
-        window.parent.frames['action_frame'].location.href = 'pyEchartAction://' + param.type + '#' + JSON.stringify(param) + '';
     }
     function preTask(obj) {
         var result;

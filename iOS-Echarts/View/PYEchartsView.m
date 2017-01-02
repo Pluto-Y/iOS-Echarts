@@ -303,7 +303,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType {
     NSURL *url = request.URL;
     PYLog(@"%@", url);
-    if ([[url.scheme lowercaseString] hasPrefix:@"http"]) { // Just open with the safari
+    if ([[url.scheme lowercaseString] hasPrefix:@"http"]) {
         if (_eDelegate != nil && [_eDelegate respondsToSelector:@selector(echartsView:didReceivedLinkURL:)]) {
             PYLog(@"Delegate will resolve the request!");
             return [_eDelegate echartsView:self didReceivedLinkURL:url];

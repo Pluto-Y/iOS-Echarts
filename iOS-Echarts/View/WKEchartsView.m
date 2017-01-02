@@ -9,7 +9,7 @@
 #import "WKEchartsView.h"
 #import "PYJsonUtil.h"
 
-@interface WKWebView()
+@interface WKWebView() <WKScriptMessageHandler>
 
 @property (readwrite, copy) WKWebViewConfiguration *configuration;
 
@@ -34,6 +34,10 @@
         [self initAll];
     }
     return self;
+}
+
+- (void)dealloc {
+    [[self configuration].userContentController removeAllUserScripts];
 }
 
 #pragma mark - custom functions
@@ -103,6 +107,8 @@
     // set the view background is transparent
     self.opaque = NO;
     self.backgroundColor = [UIColor clearColor];
+    
+    actionHandleBlocks = [[NSMutableDictionary alloc] init];
 
 }
 
@@ -180,6 +186,7 @@
  *  @param block The block handler
  */
 - (void)addHandlerForAction:(PYEchartAction)name withBlock:(PYEchartActionHandler)block {
+    [[self configuration].userContentController addScriptMessageHandler:self name:name];
     [actionHandleBlocks setObject:block forKey:name];
     [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler(%@)",name]];
 }
@@ -190,6 +197,7 @@
  *  @param name The echart event name
  */
 - (void)removeHandlerForAction:(PYEchartAction)name {
+    [[self configuration].userContentController removeScriptMessageHandlerForName:name];
     [actionHandleBlocks removeObjectForKey:name];
     [self callJsMethods:[NSString stringWithFormat:@"removeEchartActionHandler(%@)",name]];
 }
@@ -218,7 +226,7 @@
     PYLog(@"%@",jsonStr);
     
     if (_noDataLoadingOption != nil) {
-        PYLog(@"nodataLoadingOption:%@", [PYJsonUtil g JSONString:_noDataLoadingOption]);
+        PYLog(@"nodataLoadingOption:%@", [PYJsonUtil getJSONString:_noDataLoadingOption]);
         NSString *noDataLoadingOptionString = [NSString stringWithFormat:@"{\"noDataLoadingOption\":%@ \n}", [PYJsonUtil getJSONString:_noDataLoadingOption]];
         js = [NSString stringWithFormat:@"%@(%@, %@)", @"loadEcharts", jsonStr, noDataLoadingOptionString];
     } else {
@@ -226,18 +234,59 @@
     }
     [self callJsMethods:js];
     [self setTheme:_theme];
-//    for (NSString * name in actionHandleBlocks.allKeys) {
-//        PYLog(@"%@", [NSString stringWithFormat:@"addEchartActionHandler('%@')",name]);
-//        [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler('%@')",name]];//
-//    }
+    for (NSString * name in actionHandleBlocks.allKeys) {
+        PYLog(@"%@", [NSString stringWithFormat:@"addEchartActionHandler('%@')",name]);
+        [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler('%@')",name]];//
+    }
 //    if (self.eDelegate && [self.eDelegate respondsToSelector:@selector(echartsViewDidFinishLoad:)]) {
 //        [self.eDelegate echartsViewDidFinishLoadz:self];
 //    }
 }
 
+- (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
+    NSURL *url = webView.URL;
+    PYLog(@"%@", url);
+    
+    if (![[url.scheme lowercaseString] hasPrefix:@"pyechartaction"]) {
+        decisionHandler(WKNavigationActionPolicyAllow);
+        return;
+    }
+    // get the action from the path
+//    NSString *actionType = url.host;
+// 
+//    if ([kEchartActionObtainImg isEqualToString:actionType]) {
+//        if (obtainImgCompletedBlock != nil) {
+//            __weak typeof(obtainImgCompletedBlock) block = obtainImgCompletedBlock;
+//            dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+//                PY_IMAGE *image = nil;
+//                NSString *imgBase64Str = [url.fragment stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+//                NSURL *url = [NSURL URLWithString:imgBase64Str];
+//                NSData *imgData = [NSData dataWithContentsOfURL:url];
+//                image = [PY_IMAGE imageWithData:imgData];
+//                dispatch_sync(dispatch_get_main_queue(), ^{
+//                    block(image);
+//                });
+//            });
+//            
+//        }
+//    }
+    decisionHandler(WKNavigationActionPolicyCancel);
+}
+
 - (void)webView:(WKWebView *)webView runJavaScriptAlertPanelWithMessage:(NSString *)message initiatedByFrame:(WKFrameInfo *)frame completionHandler:(void (^)(void))completionHandler {
     completionHandler();
-    NSLog(@"%@", message);
+    PYLog(@"%@", message);
+}
+
+#pragma mark WKScriptMessageHandler
+- (void)userContentController:(WKUserContentController *)userContentController didReceiveScriptMessage:(WKScriptMessage *)message {
+    PYLog(@"name:%@, body:%@", message.name, message.body);
+    PYEchartActionHandler block = actionHandleBlocks[message.name];
+    // Check the action handle actions, if exists the block the invoke the block
+    if (block != nil) {
+        NSDictionary *params = (NSDictionary *)message.body;
+        block(params);
+    }
 }
 
 

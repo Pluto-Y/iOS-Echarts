@@ -32,7 +32,9 @@
     
     _echartsView = [[WKEchartsView alloc] initWithFrame:CGRectMake(0, self.view.bounds.size.height - 320, self.view.bounds.size.width, 300)];
     [self.view addSubview:_echartsView];
-    
+    [_echartsView addHandlerForAction:PYEchartActionClick withBlock:^(NSDictionary *params) {
+        NSLog(@"The params from Echarts:\n%@", params);
+    }];
     option = [PYLineDemoOptions standardLineOption];
     [_echartsView setOption:option];
     [_echartsView loadEcharts];
