@@ -174,6 +174,27 @@
 }
 
 /**
+ *  Add the echart action handler
+ *
+ *  @param name  The echart event name
+ *  @param block The block handler
+ */
+- (void)addHandlerForAction:(PYEchartAction)name withBlock:(PYEchartActionHandler)block {
+    [actionHandleBlocks setObject:block forKey:name];
+    [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler(%@)",name]];
+}
+
+/**
+ *  Remove the echart action hander
+ *
+ *  @param name The echart event name
+ */
+- (void)removeHandlerForAction:(PYEchartAction)name {
+    [actionHandleBlocks removeObjectForKey:name];
+    [self callJsMethods:[NSString stringWithFormat:@"removeEchartActionHandler(%@)",name]];
+}
+
+/**
  *  Set the option for echart
  *
  *  @param pyOption The echart option

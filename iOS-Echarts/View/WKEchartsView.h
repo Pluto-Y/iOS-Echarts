@@ -43,6 +43,21 @@
 - (void)setTheme:(PYEchartTheme) theme;
 
 /**
+ *  Add the echart action handler
+ *
+ *  @param name  The echart event name
+ *  @param block The block handler
+ */
+- (void)addHandlerForAction:(PYEchartAction)name withBlock:(PYEchartActionHandler)block;
+
+/**
+ *  Remove the echart action hander
+ *
+ *  @param name The echart event name
+ */
+- (void)removeHandlerForAction:(PYEchartAction)name;
+
+/**
  *  Load echart
  */
 - (void)loadEcharts;

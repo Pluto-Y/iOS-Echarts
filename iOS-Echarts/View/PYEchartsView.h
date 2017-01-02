@@ -33,8 +33,6 @@
 
 @class PYOption, PYLoadingOption, PYNoDataLoadingOption;
 
-typedef void (^PYEchartActionHandler) (NSDictionary *params);
-
 @interface PYEchartsView : PY_WEB_VIEW<PY_WEB_DELEGATE> {
     PYOption *option;
 }
@@ -108,7 +106,7 @@ typedef void (^PYEchartActionHandler) (NSDictionary *params);
  *
  *  @param name The echart event name
  */
-- (void)removeHandlerForAction:(NSString *)name;
+- (void)removeHandlerForAction:(PYEchartAction)name;
 
 /**
  *  Obtain the screen of echarts view with type

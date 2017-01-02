@@ -92,6 +92,8 @@ static PYEchartTheme const PYEchartThemeMacarons2   = @"macarons2";
 static PYEchartTheme const PYEchartThemeSakura      = @"sakura";
 static PYEchartTheme const PYEchartThemeDefault     = @"default";
 
+typedef void (^PYEchartActionHandler) (NSDictionary *params);
+
 typedef NSString *PYEchartAction;
 static PYEchartAction const PYEchartActionResize          = @"resize";
 static PYEchartAction const PYEchartActionClick           = @"click";

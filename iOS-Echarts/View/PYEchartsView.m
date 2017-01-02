@@ -212,7 +212,7 @@ static NSString *const kEchartActionObtainImg = @"obtainImg";
  *
  *  @param name The echart event name
  */
-- (void)removeHandlerForAction:(NSString *)name {
+- (void)removeHandlerForAction:(PYEchartAction)name {
     [actionHandleBlocks removeObjectForKey:name];
     [self callJsMethods:[NSString stringWithFormat:@"removeEchartActionHandler(%@)",name]];
 }
