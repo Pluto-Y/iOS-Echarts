@@ -16,6 +16,8 @@
 @end
 
 @interface WKEchartsView() {
+    // This params store the handler of the echart actions
+    NSMutableDictionary<PYEchartAction, PYEchartActionHandler> *actionHandleBlocks;
     PYOption *option;
     NSString *bundlePath;
     NSString *localHtmlContents;
@@ -136,6 +138,27 @@
     NSString *divSizeCss = [NSString stringWithFormat:@"'height:%.0fpx;width:%.0fpx;'", height, width];
     NSString *js = [NSString stringWithFormat:@"%@(%@)", @"resizeDiv", divSizeCss];
     [self callJsMethods:js];
+}
+
+#pragma mark - Echarts methods
+/**
+ *  Refresh echarts not re-load echarts
+ *  The option is the last option you had set
+ */
+- (void)refreshEcharts {
+    [self callJsMethods:@"myChart.refresh()"];
+}
+
+/**
+ *  Refresh echart with the option
+ *  You can call this method for refreshing not re-load the echart
+ *
+ *  @param newOption EChart's option
+ */
+- (void)refreshEchartsWithOption:(PYOption *)newOption {
+    NSString *jsonStr = [PYJsonUtil getJSONString:newOption];
+    PYLog(@"jsonStr:%@", jsonStr);
+    [self callJsMethods:[NSString stringWithFormat:@"refreshWithOption(%@)", jsonStr]];
 }
 
 /**

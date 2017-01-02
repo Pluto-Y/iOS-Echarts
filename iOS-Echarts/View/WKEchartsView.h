@@ -21,6 +21,20 @@
 - (void)resizeDiv;
 
 /**
+ *  Refresh echarts not re-load echarts
+ *  The option is the last option you had set
+ */
+- (void)refreshEcharts;
+
+/**
+ *  Refresh echart with the option
+ *  You can call this method for refreshing not re-load the echart
+ *
+ *  @param newOption EChart's option
+ */
+- (void)refreshEchartsWithOption:(PYOption *)newOption;
+
+/**
  *  Set theme for echarts
  *  You can set the themes by echarts support, which prefix is `PYEchartTheme`
  *
