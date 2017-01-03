@@ -286,14 +286,28 @@
         PYLog(@"%@", [NSString stringWithFormat:@"addEchartActionHandler('%@')",name]);
         [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler('%@')",name]];//
     }
-//    if (self.eDelegate && [self.eDelegate respondsToSelector:@selector(echartsViewDidFinishLoad:)]) {
-//        [self.eDelegate echartsViewDidFinishLoadz:self];
-//    }
+    if (self.eDelegate && [self.eDelegate respondsToSelector:@selector(echartsViewDidFinishLoad:)]) {
+        [self.eDelegate echartsViewDidFinishLoad:self];
+    }
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
     NSURL *url = webView.URL;
     PYLog(@"%@", url);
+    
+    if ([[url.scheme lowercaseString] hasPrefix:@"http"]) {
+        if (_eDelegate != nil && [_eDelegate respondsToSelector:@selector(echartsView:didReceivedLinkURL:)]) {
+            PYLog(@"Delegate will resolve the request!");
+            if ([_eDelegate echartsView:self didReceivedLinkURL:url]) {
+                decisionHandler(WKNavigationActionPolicyAllow);
+            } else {
+                decisionHandler(WKNavigationActionPolicyCancel);
+            }
+            return;
+        }
+        decisionHandler(WKNavigationActionPolicyCancel);
+        return;
+    }
     
     if (![[url.scheme lowercaseString] hasPrefix:@"pyechartaction"]) {
         decisionHandler(WKNavigationActionPolicyAllow);
