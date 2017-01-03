@@ -10,6 +10,7 @@
 
 #import "PYEchartsView.h"
 #import "PYZoomEchartsView.h"
+#import "WKEchartsView.h"
 
 #import "PYOption.h"
 #import "PYColor.h"

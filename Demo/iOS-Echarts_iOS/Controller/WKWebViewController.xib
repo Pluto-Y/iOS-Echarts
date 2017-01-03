@@ -55,6 +55,14 @@
                         <action selector="showLoadingOption:" destination="-1" eventType="touchUpInside" id="7eD-fi-eeF"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CIO-GL-7tX">
+                    <rect key="frame" x="48" y="172" width="92" height="30"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="显示暂无数据"/>
+                    <connections>
+                        <action selector="showNoData:" destination="-1" eventType="touchUpInside" id="uKg-iQ-BjE"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>

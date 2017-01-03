@@ -86,11 +86,9 @@
     self.scrollView.bounces = NO;
     self.scrollView.scrollEnabled = NO;
     
-    
-    
+    // The userScript is used for the property which named `scalesPageToFit` in `UIWebView`
     NSString *js = @"var meta = document.createElement('meta'); meta.setAttribute('name', 'viewport'); meta.setAttribute('content', 'width=device-width'); document.getElementsByTagName('head')[0].appendChild(meta);";
 
-    
     WKUserContentController *userContentController = self.configuration.userContentController;
     NSMutableArray<WKUserScript *> *array = [userContentController.userScripts mutableCopy];
     WKUserScript* fitWKUScript = nil;
