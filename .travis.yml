@@ -9,7 +9,7 @@ env:
 script: 
 - |
     if [ "$TEST_TYPE" = iOS ]; then
-      xcodebuild clean build -project iOS-Echarts.xcodeproj -target iOS-Echarts_iOS -sdk iphonesimulator9.3 ONLY_ACTIVE_ARCH=NO
+      xcodebuild clean build -project iOS-Echarts.xcodeproj -target iOS-Echarts_iOS -sdk iphonesimulator10.1 ONLY_ACTIVE_ARCH=NO
     elif [ "$TEST_TYPE" = OSX]; then
       xcodebuild clean build -project iOS-Echarts.xcodeproj -target iOS-Echarts_OSX -sdk macosx
     fi
