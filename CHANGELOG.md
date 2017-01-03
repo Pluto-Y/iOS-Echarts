@@ -1,3 +1,11 @@
+1.4.1 Release notes (2017-01-03)
+===========================================================
+
+### Added
+
+* Add new property to decide the min percent of the zoom in.
+* Add support for `WKWebView`
+
 1.3.4 Release notes (2016-12-12)
 ===========================================================
 
