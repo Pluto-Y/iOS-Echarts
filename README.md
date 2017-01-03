@@ -5,7 +5,9 @@
 
 ____
 
-This is a highly custom chart control for iOS and Mac apps, which build with the EChart(Echart2). It just encapsulate the conrol of the javascript. It provides a chainable way of describing your configurations for the echarts.  It's convinient for foucing on the logic of the app and optimizing the code. It avoid diverting developers' mind on the interaction between javascript and Objective-C.
+This is a highly custom chart control for iOS and Mac apps, which build with the Echart(Echart2). It just encapsulate the conrol of the javascript. It provides a chainable way of describing your configurations for the echarts.  It's convinient for foucing on the logic of the app and optimizing the code. It avoid diverting developers' mind on the interaction between javascript and Objective-C.
+
+> Tips: If you want to use even iOS8.0, I suggest you use `WKEchartsView` which is based on `WKWebView`. The interface of `WKEchartsView` is same as `PYEchartsView`, so if you are using `PYEchartsView`, you just change `PYEchartsView` into `WKEchartsView`.
 
 If you like this control, please star it. It can make me pay more attention on it.
 

@@ -6,6 +6,8 @@ ___
 
 本项目是将百度的ECharts(echarts2)工具封装成对应的iOS和Mac的控件，并且将其中javascript的属性封装成对应的对象。并且提供了链式编程，方面大家进行配置Echarts的属性。方便程序员在编写程序的过程中更加关注OC的代码，避免在使用百度的ECharts工具的过程中过多的关注javascript语法和与javascript之间的交互。
 
+> 注意: 如果你App最低支持到iOS8.0, 我建议您使用 `WKEchartsView`, 因为 `WKEchartsView` 是基于 `WKWebView` 的。 而 `WKEchartsView` 的接口与 `PYEchartsView` 的接口是一样的，所以如果你想从之前的替换到 `WKEchartsView`， 只需将 `PYEchartsView` 替换成`WKEchartsView` 即可。
+
 注：如果小伙伴觉得这个工具有用的话，麻烦点一下star，你的star是我继续的动力！
 
 如果你遇到什么问题可以添加一个[Issue](https://github.com/Pluto-Y/iOS-Echarts/issues/new)给我。当然同时欢迎大家给我一个Pull Request。
