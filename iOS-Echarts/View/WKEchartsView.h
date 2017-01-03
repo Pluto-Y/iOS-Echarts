@@ -32,6 +32,8 @@
 - (void)echartsViewDidFinishLoad:(WKEchartsView *)echartsView;
 @end
 
+@class PYOption, PYLoadingOption, PYNoDataLoadingOption;
+
 @interface WKEchartsView : WKWebView<WKNavigationDelegate, WKUIDelegate>
 
 @property (nonatomic, assign) CGSize divSize;

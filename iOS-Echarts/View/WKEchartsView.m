@@ -83,8 +83,14 @@
     
     self.navigationDelegate = self;
     self.UIDelegate = self;
+#if TARGET_OS_IPHONE
     self.scrollView.bounces = NO;
     self.scrollView.scrollEnabled = NO;
+    
+    // set the view background is transparent
+    self.opaque = NO;
+    self.backgroundColor = [UIColor clearColor];
+#endif
     
     // The userScript is used for the property which named `scalesPageToFit` in `UIWebView`
     NSString *js = @"var meta = document.createElement('meta'); meta.setAttribute('name', 'viewport'); meta.setAttribute('content', 'width=device-width'); document.getElementsByTagName('head')[0].appendChild(meta);";
@@ -104,9 +110,7 @@
     }
 
 
-    // set the view background is transparent
-    self.opaque = NO;
-    self.backgroundColor = [UIColor clearColor];
+    
     
     actionHandleBlocks = [[NSMutableDictionary alloc] init];
 
@@ -332,7 +336,11 @@
                 NSString *imgBase64Str = message.body;
                 NSURL *url = [NSURL URLWithString:imgBase64Str];
                 NSData *imgData = [NSData dataWithContentsOfURL:url];
+#if TARGET_OS_IPHONE
                 image = [PY_IMAGE imageWithData:imgData];
+#elif TARGET_OS_MAC
+                image = [[PY_IMAGE alloc] initWithData:imgData];
+#endif
                 dispatch_sync(dispatch_get_main_queue(), ^{
                     block(image);
                 });
