@@ -93,27 +93,19 @@
 #endif
     
     // The userScript is used for the property which named `scalesPageToFit` in `UIWebView`
-    NSString *js = @"var meta = document.createElement('meta'); meta.setAttribute('name', 'viewport'); meta.setAttribute('content', 'width=device-width'); document.getElementsByTagName('head')[0].appendChild(meta);";
+    NSString *fitJS = @"var meta = document.createElement('meta'); "
+    "meta.setAttribute('name', 'viewport'); "
+    "meta.setAttribute('content', 'width=device-width'); "
+    "document.getElementsByTagName('head')[0].appendChild(meta);";
 
     WKUserContentController *userContentController = self.configuration.userContentController;
-    NSMutableArray<WKUserScript *> *array = [userContentController.userScripts mutableCopy];
-    WKUserScript* fitWKUScript = nil;
-    for (WKUserScript* wkUScript in array) {
-        if ([wkUScript.source isEqual:js]) {
-            fitWKUScript = wkUScript;
-            break;
-        }
+    NSArray *fitUserScripts = [userContentController.userScripts filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF.source = %@", fitJS]];
+    if (0 == fitUserScripts.count) {
+        WKUserScript *fitUserScript = [[WKUserScript alloc] initWithSource:fitJS injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO];
+        [userContentController addUserScript:fitUserScript];
     }
-    if (!fitWKUScript) {
-        fitWKUScript = [[NSClassFromString(@"WKUserScript") alloc] initWithSource:js injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO];
-        [userContentController addUserScript:fitWKUScript];
-    }
-
-
-    
     
     actionHandleBlocks = [[NSMutableDictionary alloc] init];
-
 }
 
 /**
