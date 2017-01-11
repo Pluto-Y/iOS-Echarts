@@ -137,10 +137,10 @@
  *  Resize the main div in the `echarts.html`
  */
 - (void)resizeDiv {
-    float height = self.frame.size.height - 20;
+    float height = self.frame.size.height;
     float width = self.frame.size.width;
     if (!CGSizeEqualToSize(_divSize, CGSizeZero)) {
-        height = _divSize.height - 20;
+        height = _divSize.height;
         width = _divSize.width;
     } else {
         _divSize = CGSizeMake(width, height);
