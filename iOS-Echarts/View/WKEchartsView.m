@@ -92,6 +92,7 @@
     self.backgroundColor = [UIColor clearColor];
 #endif
     
+    // Disable magnification in WKWebView.
     // The userScript is used for the property which named `scalesPageToFit` in `UIWebView`
     NSString *fitJS = @"var meta = document.createElement('meta'); "
     "meta.setAttribute('name', 'viewport'); "
@@ -103,6 +104,20 @@
     if (0 == fitUserScripts.count) {
         WKUserScript *fitUserScript = [[WKUserScript alloc] initWithSource:fitJS injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO];
         [userContentController addUserScript:fitUserScript];
+    }
+    
+    // Disable callouts in WKWebView.
+    // Javascript that disables pinch-to-zoom by inserting the HTML viewport meta tag into <head>
+    NSString *calloutJS = @"var style = document.createElement('style'); "
+    "style.type = 'text/css'; "
+    "style.innerText = '*:not(input):not(textarea) { -webkit-user-select: none; -webkit-touch-callout: none; }'; "
+    "var head = document.getElementsByTagName('head')[0]; "
+    "head.appendChild(style);";
+    
+    NSArray *calloutScripts = [userContentController.userScripts filteredArrayUsingPredicate:[NSPredicate predicateWithFormat:@"SELF.source = %@", calloutJS]];
+    if (0 == calloutScripts.count) {
+        WKUserScript *calloutScript = [[WKUserScript alloc] initWithSource:calloutJS injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO];
+        [userContentController addUserScript:calloutScript];
     }
     
     actionHandleBlocks = [[NSMutableDictionary alloc] init];
