@@ -1,52 +1,144 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10116" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16C67" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MultiEcharts2Controller">
             <connections>
                 <outlet property="echartsView1" destination="7pp-vd-q18" id="9rL-Pf-dbf"/>
+                <outlet property="echartsView10" destination="Gz6-c8-gC9" id="xsr-ue-kQu"/>
                 <outlet property="echartsView2" destination="ITN-db-3lp" id="0fQ-8B-K3o"/>
+                <outlet property="echartsView3" destination="Asm-r4-gwb" id="yMR-oF-n9t"/>
+                <outlet property="echartsView4" destination="lnb-VO-nyS" id="Lyc-59-4Ec"/>
+                <outlet property="echartsView5" destination="m6K-Lb-t2y" id="9X9-FK-v7P"/>
+                <outlet property="echartsView6" destination="BX9-no-WbY" id="9mj-GL-xAQ"/>
+                <outlet property="echartsView7" destination="ND4-Ct-PfC" id="dhv-gW-Yr6"/>
+                <outlet property="echartsView8" destination="ClT-R3-9aB" id="SuG-uM-G1I"/>
+                <outlet property="echartsView9" destination="19K-Dr-KeF" id="myr-Kb-3vl"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BG0-Va-4X5">
-                    <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7pp-vd-q18" customClass="PYEchartsView">
-                            <rect key="frame" x="0.0" y="0.0" width="600" height="300"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="300"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="300" id="fsm-Kw-Voa"/>
                             </constraints>
                         </view>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ITN-db-3lp" customClass="PYEchartsView">
-                            <rect key="frame" x="0.0" y="320" width="600" height="300"/>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <rect key="frame" x="0.0" y="320" width="375" height="300"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="300" id="uqP-TP-S8u"/>
                             </constraints>
                         </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Asm-r4-gwb" customClass="PYEchartsView">
+                            <rect key="frame" x="0.0" y="600" width="375" height="300"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="QOi-ht-pAY"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnb-VO-nyS" customClass="PYEchartsView">
+                            <rect key="frame" x="0.0" y="920" width="375" height="300"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="6g8-RE-l9p"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="m6K-Lb-t2y" customClass="PYEchartsView">
+                            <rect key="frame" x="0.0" y="1240" width="375" height="300"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="mBQ-84-fNb"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BX9-no-WbY" customClass="PYEchartsView">
+                            <rect key="frame" x="0.0" y="1520" width="375" height="300"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="8Jf-pj-aoS"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ND4-Ct-PfC" customClass="PYEchartsView">
+                            <rect key="frame" x="0.0" y="1800" width="375" height="300"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="4vO-XF-nsu"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ClT-R3-9aB" customClass="PYEchartsView">
+                            <rect key="frame" x="0.0" y="2080" width="375" height="300"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="NfE-7X-Efg"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="19K-Dr-KeF" customClass="PYEchartsView">
+                            <rect key="frame" x="0.0" y="2360" width="375" height="300"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="bcW-jv-OHq"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gz6-c8-gC9" customClass="PYEchartsView">
+                            <rect key="frame" x="0.0" y="2640" width="375" height="300"/>
+                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="300" id="XDu-2M-kmm"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="bottom" secondItem="ITN-db-3lp" secondAttribute="bottom" id="27a-hI-32S"/>
+                        <constraint firstItem="Gz6-c8-gC9" firstAttribute="centerX" secondItem="19K-Dr-KeF" secondAttribute="centerX" id="5I3-IX-bmt"/>
+                        <constraint firstItem="m6K-Lb-t2y" firstAttribute="centerX" secondItem="lnb-VO-nyS" secondAttribute="centerX" id="8Bo-I0-wrj"/>
+                        <constraint firstItem="lnb-VO-nyS" firstAttribute="top" secondItem="Asm-r4-gwb" secondAttribute="bottom" constant="20" id="98c-Oc-kIG"/>
+                        <constraint firstItem="Asm-r4-gwb" firstAttribute="centerX" secondItem="ITN-db-3lp" secondAttribute="centerX" id="CQm-IZ-GPT"/>
                         <constraint firstItem="7pp-vd-q18" firstAttribute="top" secondItem="BG0-Va-4X5" secondAttribute="top" id="GaJ-sc-05x"/>
+                        <constraint firstItem="ClT-R3-9aB" firstAttribute="centerX" secondItem="ND4-Ct-PfC" secondAttribute="centerX" id="Guo-ci-cX7"/>
+                        <constraint firstItem="lnb-VO-nyS" firstAttribute="centerX" secondItem="Asm-r4-gwb" secondAttribute="centerX" id="KYg-JK-05K"/>
                         <constraint firstAttribute="trailing" secondItem="ITN-db-3lp" secondAttribute="trailing" id="L6h-ZU-JTv"/>
+                        <constraint firstItem="BX9-no-WbY" firstAttribute="bottom" secondItem="ND4-Ct-PfC" secondAttribute="top" constant="20" id="LNs-EZ-THf"/>
+                        <constraint firstItem="ND4-Ct-PfC" firstAttribute="bottom" secondItem="ClT-R3-9aB" secondAttribute="top" constant="20" id="NNd-Zv-gFS"/>
+                        <constraint firstAttribute="bottom" secondItem="Gz6-c8-gC9" secondAttribute="bottom" constant="20" id="NYx-8z-uW5"/>
+                        <constraint firstItem="ND4-Ct-PfC" firstAttribute="centerX" secondItem="BX9-no-WbY" secondAttribute="centerX" id="Nk1-mF-kmg"/>
+                        <constraint firstItem="Gz6-c8-gC9" firstAttribute="width" secondItem="19K-Dr-KeF" secondAttribute="width" id="NqJ-S5-0uY"/>
+                        <constraint firstItem="ITN-db-3lp" firstAttribute="bottom" secondItem="Asm-r4-gwb" secondAttribute="top" constant="20" id="Oj3-6T-IHk"/>
+                        <constraint firstItem="m6K-Lb-t2y" firstAttribute="top" secondItem="lnb-VO-nyS" secondAttribute="bottom" constant="20" id="Q7N-pD-bIb"/>
+                        <constraint firstItem="lnb-VO-nyS" firstAttribute="width" secondItem="Asm-r4-gwb" secondAttribute="width" id="UpK-yI-1xE"/>
+                        <constraint firstItem="ND4-Ct-PfC" firstAttribute="width" secondItem="BX9-no-WbY" secondAttribute="width" id="Us8-RK-yKO"/>
                         <constraint firstItem="ITN-db-3lp" firstAttribute="top" secondItem="7pp-vd-q18" secondAttribute="bottom" constant="20" id="Wsm-Wg-k6f"/>
+                        <constraint firstItem="m6K-Lb-t2y" firstAttribute="bottom" secondItem="BX9-no-WbY" secondAttribute="top" constant="20" id="XbE-ww-gBH"/>
                         <constraint firstItem="7pp-vd-q18" firstAttribute="leading" secondItem="BG0-Va-4X5" secondAttribute="leading" id="cHk-iM-sAm"/>
+                        <constraint firstItem="BX9-no-WbY" firstAttribute="centerX" secondItem="m6K-Lb-t2y" secondAttribute="centerX" id="d7h-Ky-uHi"/>
+                        <constraint firstItem="m6K-Lb-t2y" firstAttribute="width" secondItem="lnb-VO-nyS" secondAttribute="width" id="e5Y-iM-aAV"/>
+                        <constraint firstItem="ClT-R3-9aB" firstAttribute="width" secondItem="ND4-Ct-PfC" secondAttribute="width" id="fm5-Nk-89o"/>
+                        <constraint firstItem="19K-Dr-KeF" firstAttribute="centerX" secondItem="ClT-R3-9aB" secondAttribute="centerX" id="gJP-Ng-Tvx"/>
+                        <constraint firstItem="BX9-no-WbY" firstAttribute="width" secondItem="m6K-Lb-t2y" secondAttribute="width" id="ikA-aB-CuY"/>
+                        <constraint firstItem="19K-Dr-KeF" firstAttribute="bottom" secondItem="Gz6-c8-gC9" secondAttribute="top" constant="20" id="jSK-kn-SeJ"/>
+                        <constraint firstItem="19K-Dr-KeF" firstAttribute="width" secondItem="ClT-R3-9aB" secondAttribute="width" id="lUU-3d-JJM"/>
                         <constraint firstAttribute="trailing" secondItem="7pp-vd-q18" secondAttribute="trailing" id="mL9-VP-A7i"/>
                         <constraint firstItem="ITN-db-3lp" firstAttribute="leading" secondItem="BG0-Va-4X5" secondAttribute="leading" id="mfE-ZH-Efd"/>
+                        <constraint firstItem="ClT-R3-9aB" firstAttribute="bottom" secondItem="19K-Dr-KeF" secondAttribute="top" constant="20" id="obL-C5-y3x"/>
+                        <constraint firstItem="Asm-r4-gwb" firstAttribute="width" secondItem="ITN-db-3lp" secondAttribute="width" id="qwa-kZ-tzb"/>
                     </constraints>
                 </scrollView>
             </subviews>
-            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="BG0-Va-4X5" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="1I6-yu-Apf"/>
                 <constraint firstAttribute="bottom" secondItem="BG0-Va-4X5" secondAttribute="bottom" id="F21-7P-bg7"/>
