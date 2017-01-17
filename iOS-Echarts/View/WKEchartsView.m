@@ -26,6 +26,8 @@
     PYEchartTheme _theme;
 }
 
+@property (nonatomic, assign) BOOL finishRender;
+
 @end
 
 @implementation WKEchartsView
@@ -119,6 +121,8 @@
         WKUserScript *calloutScript = [[WKUserScript alloc] initWithSource:calloutJS injectionTime:WKUserScriptInjectionTimeAtDocumentEnd forMainFrameOnly:NO];
         [userContentController addUserScript:calloutScript];
     }
+    
+    _finishRender = NO;
     
     actionHandleBlocks = [[NSMutableDictionary alloc] init];
 }
@@ -273,33 +277,47 @@
 #pragma mark - Delegate
 #pragma mark WKNavigationDelegate
 - (void)webView:(WKWebView *)webView didFinishNavigation:(WKNavigation *)navigation {
-    if (option == nil) {
-        NSLog(@"Warning: The option is nil.");
-        [self callJsMethods:@"initEchartView()"];
-        return ;
-    }
-    [self resizeDiv];
-    
-    NSString *jsonStr = [PYJsonUtil getJSONString:option];
-    NSString *js;
-    PYLog(@"%@",jsonStr);
-    
-    if (_noDataLoadingOption != nil) {
-        PYLog(@"nodataLoadingOption:%@", [PYJsonUtil getJSONString:_noDataLoadingOption]);
-        NSString *noDataLoadingOptionString = [NSString stringWithFormat:@"{\"noDataLoadingOption\":%@ \n}", [PYJsonUtil getJSONString:_noDataLoadingOption]];
-        js = [NSString stringWithFormat:@"%@(%@, %@)", @"loadEcharts", jsonStr, noDataLoadingOptionString];
-    } else {
-        js = [NSString stringWithFormat:@"%@(%@)", @"loadEcharts", jsonStr];
-    }
-    [self callJsMethods:js];
-    [self setTheme:_theme];
-    for (NSString * name in actionHandleBlocks.allKeys) {
-        PYLog(@"%@", [NSString stringWithFormat:@"addEchartActionHandler('%@')",name]);
-        [self callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler('%@')",name]];//
-    }
-    if (self.eDelegate && [self.eDelegate respondsToSelector:@selector(echartsViewDidFinishLoad:)]) {
-        [self.eDelegate echartsViewDidFinishLoad:self];
-    }
+    __weak __typeof(self) weakSelf = self;
+    [webView evaluateJavaScript:@"document.readyState" completionHandler:^(id result, NSError *error) {
+        // UIWebView object has fully loaded.
+        __typeof(self) strongSelf = weakSelf;
+        if ([result isEqualToString:@"complete"]) {
+            strongSelf.finishRender = YES;
+            if (option == nil) {
+                NSLog(@"Warning: The option is nil.");
+                [strongSelf callJsMethods:@"initEchartView()"];
+                return ;
+            }
+            [strongSelf resizeDiv];
+            
+            NSString *jsonStr = [PYJsonUtil getJSONString:option];
+            NSString *js;
+            PYLog(@"%@",jsonStr);
+            
+            if (strongSelf.noDataLoadingOption != nil) {
+                PYLog(@"nodataLoadingOption:%@", [PYJsonUtil getJSONString:strongSelf.noDataLoadingOption]);
+                NSString *noDataLoadingOptionString = [NSString stringWithFormat:@"{\"noDataLoadingOption\":%@ \n}", [PYJsonUtil getJSONString:strongSelf.noDataLoadingOption]];
+                js = [NSString stringWithFormat:@"%@(%@, %@)", @"loadEcharts", jsonStr, noDataLoadingOptionString];
+            } else {
+                js = [NSString stringWithFormat:@"%@(%@)", @"loadEcharts", jsonStr];
+            }
+            [strongSelf callJsMethods:js];
+            [strongSelf setTheme:_theme];
+            for (NSString * name in actionHandleBlocks.allKeys) {
+                PYLog(@"%@", [NSString stringWithFormat:@"addEchartActionHandler('%@')",name]);
+                [strongSelf callJsMethods:[NSString stringWithFormat:@"addEchartActionHandler('%@')",name]];//
+            }
+            if (strongSelf.eDelegate && [strongSelf.eDelegate respondsToSelector:@selector(echartsViewDidFinishLoad:)]) {
+                [strongSelf.eDelegate echartsViewDidFinishLoad:strongSelf];
+            }
+        } else {
+            dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.05 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+                if (!strongSelf.finishRender) {
+                    [self loadEcharts];
+                }
+            });
+        }
+    }];
 }
 
 - (void)webView:(WKWebView *)webView decidePolicyForNavigationAction:(WKNavigationAction *)navigationAction decisionHandler:(void (^)(WKNavigationActionPolicy))decisionHandler {
