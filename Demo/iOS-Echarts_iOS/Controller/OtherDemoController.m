@@ -69,6 +69,7 @@ static NSArray *effect;
                 [imgView addGestureRecognizer:tapRecognizer];
                 [weakSelf.view addSubview:imgView];
             } copy]];
+            break;
         }
         case 90005: {
             MultiEcharts2Controller *controller = [[MultiEcharts2Controller alloc] init];

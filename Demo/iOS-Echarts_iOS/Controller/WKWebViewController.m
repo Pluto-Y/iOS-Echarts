@@ -70,10 +70,13 @@
 }
 
 - (IBAction)obtainDumpscreen:(id)sender {
-    [_echartsView clearEcharts];
     __weak __typeof(self) weakSelf = self;
-    [_echartsView obtainEchartsImageWithType:PYEchartsViewImageTypePNG completed:^(UIImage *image) {
+    [_echartsView obtainEchartsImageWithType:PYEchartsViewImageTypeJEPG completed:^(UIImage *image) {
         weakSelf.imageView.image = image;
+        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, 300)];
+        imageView.image = image;
+        [weakSelf.view addSubview:imageView];
+        
     }];
 }
 
