@@ -1,3 +1,12 @@
+1.4.2 Release notes (2017-01-18)
+===========================================================
+
+### Fixed
+
+* Fix the multipe echarts view in one view controller's bug
+* Fix the magnification in echarts view
+* Fix the margin bug in echarts.html
+
 1.4.1 Release notes (2017-01-03)
 ===========================================================
 
