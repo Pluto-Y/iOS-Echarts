@@ -60,3 +60,4 @@
 #import "PYSplitArea.h"
 #import "PYNodeStyle.h"
 #import "PYLinkStyle.h"
+#import "PYPolar.h"
