@@ -5,7 +5,6 @@
 //  Created by Pluto Y on 15/12/21.
 //  Copyright © 2015年 pluto-y. All rights reserved.
 //
-
 #import "RadarDemoController.h"
 
 typedef NS_ENUM(NSInteger, RadarDemoTypeTag) {
@@ -59,11 +58,58 @@ typedef NS_ENUM(NSInteger, RadarDemoTypeTag) {
  *  标准雷达图
  */
 - (void)showBasicRadarDemo {
-    NSString *json = @"{\"title\":{\"text\":\"预算 vs 开销（Budget vs spending）\",\"subtext\":\"纯属虚构\"},\"tooltip\":{\"trigger\":\"axis\"},\"legend\":{\"orient\":\"vertical\",\"x\":\"right\",\"y\":\"bottom\",\"data\":[\"预算分配（Allocated Budget）\",\"实际开销（Actual Spending）\"]},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"polar\":[{\"radius\":\"50%\",\"indicator\":[{\"text\":\"销售（sales）\",\"max\":6000},{\"text\":\"管理（Admin）\",\"max\":16000},{\"text\":\"信息技术（Infor Tec）\",\"max\":30000},{\"text\":\"客服（Customer Support）\",\"max\":38000},{\"text\":\"研发（Development）\",\"max\":52000},{\"text\":\"市场（Marketing）\",\"max\":25000}]}],\"calculable\":true,\"series\":[{\"name\":\"预算 vs 开销（Budget vs spending）\",\"type\":\"radar\",\"data\":[{\"value\":[4300,10000,28000,35000,50000,19000],\"name\":\"预算分配（Allocated Budget）\"},{\"value\":[5000,14000,28000,31000,42000,21000],\"name\":\"实际开销（Actual Spending）\"}]}]}";
-    NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
-    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
-    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
+    PYOption *option = [PYOption initPYOptionWithBlock:^(PYOption *option) {
+        option.calculableEqual(YES).titleEqual([PYTitle initPYTitleWithBlock:^(PYTitle *title) {
+            title.textEqual(@"预算 vs 开销（Budget vs spending）").subtextEqual(@"纯属虚构");
+        }])
+        .tooltipEqual([PYTooltip initPYTooltipWithBlock:^(PYTooltip *tooltip) {
+            tooltip.triggerEqual(PYTooltipTriggerAxis);
+        }])
+        .legendEqual([PYLegend initPYLegendWithBlock:^(PYLegend *legend) {
+            legend.orientEqual(PYOrientVertical).xEqual(PYPositionRight).yEqual(PYPositionBottom).dataEqual(@[@"预算分配（Allocated Budget）",@"实际开销（Actual Spending）"]);
+        }])
+        .toolboxEqual([PYToolbox initPYToolboxWithBlock:^(PYToolbox *toolbox) {
+            toolbox.showEqual(YES).featureEqual([PYToolboxFeature initPYToolboxFeatureWithBlock:^(PYToolboxFeature *feature) {
+                feature.markEqual([PYToolboxFeatureMark initPYToolboxFeatureMarkWithBlock:^(PYToolboxFeatureMark *mark) {
+                    mark.showEqual(YES);
+                }])
+                .dataViewEqual([PYToolboxFeatureDataView initPYToolboxFeatureDataViewWithBlock:^(PYToolboxFeatureDataView *dataView) {
+                    dataView.showEqual(YES).readOnlyEqual(NO);
+                }])
+                .restoreEqual([PYToolboxFeatureRestore initPYToolboxFeatureRestoreWithBlock:^(PYToolboxFeatureRestore *restore) {
+                    restore.showEqual(YES);
+                }]);
+            }]);
+        }])
+        .addPolar([PYPolar initPYPolarWithBlock:^(PYPolar *polar) {
+            polar.indicatorEqual([[NSMutableArray alloc] initWithArray:@[
+                                                                         @{ @"text": @"销售（sales）", @"max": @6000},
+                                                                         @{ @"text": @"管理（Administration）", @"max": @16000},
+                                                                         @{ @"text": @"信息技术（Information Techology）", @"max": @30000},
+                                                                         @{ @"text": @"客服（Customer Support）", @"max": @38000},
+                                                                         @{ @"text": @"研发（Development）", @"max": @52000},
+                                                                         @{ @"text": @"市场（Marketing）", @"max": @25000}
+                                                                         ]]);
+        }])
+        .addSeries([PYRadarSeries initPYRadarSeriesWithBlock:^(PYRadarSeries *series) {
+            series.addData(@{
+                             @"value" : @[@4300, @10000, @28000, @35000, @50000, @19000],
+                             @"name" : @"预算分配（Allocated Budget）"
+                             })
+            .addData(@{
+                       @"value" : @[@5000, @14000, @28000, @31000, @42000, @21000],
+                       @"name" : @"实际开销（Actual Spending）"
+                       })
+            .nameEqual(@"预算 vs 开销（Budget vs spending）")
+            .typeEqual(PYSeriesTypeRadar);
+        }]);
+    }];
     [_kEchartView setOption:option];
+//    NSString *json = @"{\"title\":{\"text\":\"预算 vs 开销（Budget vs spending）\",\"subtext\":\"纯属虚构\"},\"tooltip\":{\"trigger\":\"axis\"},\"legend\":{\"orient\":\"vertical\",\"x\":\"right\",\"y\":\"bottom\",\"data\":[\"预算分配（Allocated Budget）\",\"实际开销（Actual Spending）\"]},\"toolbox\":{\"show\":true,\"feature\":{\"mark\":{\"show\":true},\"dataView\":{\"show\":true,\"readOnly\":false},\"restore\":{\"show\":true},\"saveAsImage\":{\"show\":true}}},\"polar\":[{\"radius\":\"50%\",\"indicator\":[{\"text\":\"销售（sales）\",\"max\":6000},{\"text\":\"管理（Admin）\",\"max\":16000},{\"text\":\"信息技术（Infor Tec）\",\"max\":30000},{\"text\":\"客服（Customer Support）\",\"max\":38000},{\"text\":\"研发（Development）\",\"max\":52000},{\"text\":\"市场（Marketing）\",\"max\":25000}]}],\"calculable\":true,\"series\":[{\"name\":\"预算 vs 开销（Budget vs spending）\",\"type\":\"radar\",\"data\":[{\"value\":[4300,10000,28000,35000,50000,19000],\"name\":\"预算分配（Allocated Budget）\"},{\"value\":[5000,14000,28000,31000,42000,21000],\"name\":\"实际开销（Actual Spending）\"}]}]}";
+//    NSData *jsonData = [json dataUsingEncoding:NSUTF8StringEncoding];
+//    NSDictionary *jsonDic = [NSJSONSerialization JSONObjectWithData:jsonData options:NSJSONReadingAllowFragments error:nil];
+//    PYOption *option = [RMMapper objectWithClass:[PYOption class] fromDictionary:jsonDic];
+//    [_kEchartView setOption:option];
 }
 
 /**
