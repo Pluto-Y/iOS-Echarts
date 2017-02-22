@@ -29,7 +29,6 @@ static NSArray<PYPolarType> *polarTypeScope;
     self = [super init];
     if (self) {
         _center = [[NSMutableArray alloc] initWithArray:@[@"50%", @"50%"]];
-        _radius = @(0.75);
         _startAngle = @(90);
         _spliteNumber = @(5);
         _name = @{@"show":@(YES), @"textStyle":@{@"color":@"#333"}};
@@ -66,7 +65,7 @@ PYInitializerImpTemplate(PYPolar);
 PYPropertyEqualImpTemplate(PYPolar, NSNumber *, zlevel);
 PYPropertyEqualImpTemplate(PYPolar, NSNumber *, z);
 PYPropertyEqualImpTemplate(PYPolar, NSMutableArray *, center);
-PYPropertyEqualImpTemplate(PYPolar, NSNumber *, radius);
+PYPropertyEqualImpTemplate(PYPolar, id, radius);
 PYPropertyEqualImpTemplate(PYPolar, NSNumber *, startAngle);
 PYPropertyEqualImpTemplate(PYPolar, NSNumber *, spliteNumber);
 PYPropertyEqualImpTemplate(PYPolar, id, name);
