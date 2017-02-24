@@ -1,6 +1,17 @@
 1.4.2 Release notes (2017-01-18)
 ===========================================================
 
+### Fixed 
+* Fix the error name
+* Fix not import for PYPolar
+
+
+### Update
+* Update one demo for `Radar`
+
+1.4.2 Release notes (2017-01-18)
+===========================================================
+
 ### Fixed
 
 * Fix the multipe echarts view in one view controller's bug
