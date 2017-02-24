@@ -30,7 +30,7 @@ static NSArray<PYPolarType> *polarTypeScope;
     if (self) {
         _center = [[NSMutableArray alloc] initWithArray:@[@"50%", @"50%"]];
         _startAngle = @(90);
-        _spliteNumber = @(5);
+        _splitNumber = @(5);
         _name = @{@"show":@(YES), @"textStyle":@{@"color":@"#333"}};
         _scale = NO;
         _type = PYPolarTypePolygon;
@@ -67,7 +67,7 @@ PYPropertyEqualImpTemplate(PYPolar, NSNumber *, z);
 PYPropertyEqualImpTemplate(PYPolar, NSMutableArray *, center);
 PYPropertyEqualImpTemplate(PYPolar, id, radius);
 PYPropertyEqualImpTemplate(PYPolar, NSNumber *, startAngle);
-PYPropertyEqualImpTemplate(PYPolar, NSNumber *, spliteNumber);
+PYPropertyEqualImpTemplate(PYPolar, NSNumber *, splitNumber);
 PYPropertyEqualImpTemplate(PYPolar, id, name);
 PYPropertyEqualImpTemplate(PYPolar, NSMutableArray *, boundaryGap);
 PYPropertyEqualImpTemplate(PYPolar, BOOL, scale);
