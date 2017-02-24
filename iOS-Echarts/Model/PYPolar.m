@@ -73,8 +73,8 @@ PYPropertyEqualImpTemplate(PYPolar, NSMutableArray *, boundaryGap);
 PYPropertyEqualImpTemplate(PYPolar, BOOL, scale);
 PYPropertyEqualImpTemplate(PYPolar, PYLineStyle *, axisLine);
 PYPropertyEqualImpTemplate(PYPolar, PYAxisLabel *, axisLabel);
-PYPropertyEqualImpTemplate(PYPolar, PYLineStyle *, spliteLine);
-PYPropertyEqualImpTemplate(PYPolar, PYAreaStyle *, spliteArea);
+PYPropertyEqualImpTemplate(PYPolar, PYLineStyle *, splitLine);
+PYPropertyEqualImpTemplate(PYPolar, PYAreaStyle *, splitArea);
 PYPropertyEqualImpTemplate(PYPolar, NSMutableArray *, indicator);
 
 @end

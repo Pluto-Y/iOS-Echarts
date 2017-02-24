@@ -22,7 +22,7 @@
 @property (nonatomic, assign) BOOL onGap;
 @property (nonatomic, strong) PYLineStyle *lineStyle;
 
-PYInitializerTemplate(PYAxisSplitLine, spliteLine);
+PYInitializerTemplate(PYAxisSplitLine, splitLine);
 
 PYPropertyEqualTemplate(PYAxisSplitLine, BOOL, show);
 PYPropertyEqualTemplate(PYAxisSplitLine, BOOL, onGap);

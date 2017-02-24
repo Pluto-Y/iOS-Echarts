@@ -33,8 +33,8 @@ FOUNDATION_EXPORT PYPolarType const PYPolarTypeCircle;
 @property (nonatomic, assign) BOOL scale;
 @property (nonatomic, strong) PYLineStyle *axisLine;
 @property (nonatomic, strong) PYAxisLabel *axisLabel;
-@property (nonatomic, strong) PYLineStyle *spliteLine;
-@property (nonatomic, strong) PYAreaStyle *spliteArea;
+@property (nonatomic, strong) PYLineStyle *splitLine;
+@property (nonatomic, strong) PYAreaStyle *splitArea;
 @property (nonatomic, copy) PYPolarType type;
 @property (nonatomic, strong) NSMutableArray *indicator;
 
@@ -51,8 +51,8 @@ PYPropertyEqualTemplate(PYPolar, NSMutableArray *, boundaryGap);
 PYPropertyEqualTemplate(PYPolar, BOOL, scale);
 PYPropertyEqualTemplate(PYPolar, PYLineStyle *, axisLine);
 PYPropertyEqualTemplate(PYPolar, PYAxisLabel *, axisLabel);
-PYPropertyEqualTemplate(PYPolar, PYLineStyle *, spliteLine);
-PYPropertyEqualTemplate(PYPolar, PYAreaStyle *, spliteArea);
+PYPropertyEqualTemplate(PYPolar, PYLineStyle *, splitLine);
+PYPropertyEqualTemplate(PYPolar, PYAreaStyle *, splitArea);
 PYPropertyEqualTemplate(PYPolar, NSMutableArray *, indicator);
 
 @end

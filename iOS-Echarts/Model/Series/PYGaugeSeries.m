@@ -14,7 +14,7 @@
 #import "PYAxisTick.h"
 #import "PYLineStyle.h"
 
-@implementation PYGaugeSpliteLine
+@implementation PYGaugeSplitLine
 
 - (instancetype)init
 {
@@ -30,11 +30,11 @@
     return self;
 }
 
-PYInitializerImpTemplate(PYGaugeSpliteLine);
+PYInitializerImpTemplate(PYGaugeSplitLine);
 
-PYPropertyEqualImpTemplate(PYGaugeSpliteLine, BOOL, show);
-PYPropertyEqualImpTemplate(PYGaugeSpliteLine, NSNumber *, length);
-PYPropertyEqualImpTemplate(PYGaugeSpliteLine, PYLineStyle *, lineStyle);
+PYPropertyEqualImpTemplate(PYGaugeSplitLine, BOOL, show);
+PYPropertyEqualImpTemplate(PYGaugeSplitLine, NSNumber *, length);
+PYPropertyEqualImpTemplate(PYGaugeSplitLine, PYLineStyle *, lineStyle);
 
 @end
 
@@ -150,7 +150,7 @@ PYPropertyEqualImpTemplate(PYGaugeSeries, NSNumber *, splitNumber);
 PYPropertyEqualImpTemplate(PYGaugeSeries, PYAxisLine *, axisLine);
 PYPropertyEqualImpTemplate(PYGaugeSeries, PYAxisTick *, axisTick);
 PYPropertyEqualImpTemplate(PYGaugeSeries, PYAxisLabel *, axisLabel);
-PYPropertyEqualImpTemplate(PYGaugeSeries, PYGaugeSpliteLine *, splitLine);
+PYPropertyEqualImpTemplate(PYGaugeSeries, PYGaugeSplitLine *, splitLine);
 PYPropertyEqualImpTemplate(PYGaugeSeries, PYGaugePointer *, pointer);
 PYPropertyEqualImpTemplate(PYGaugeSeries, PYGaugeTitle *, title);
 PYPropertyEqualImpTemplate(PYGaugeSeries, PYGaugeDetail *, detail);

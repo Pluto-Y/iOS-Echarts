@@ -305,8 +305,8 @@
         }])
         .addXAxis([PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
             axis.typeEqual(PYAxisTypeCategory)
-            .splitLineEqual([PYAxisSplitLine initPYAxisSplitLineWithBlock:^(PYAxisSplitLine *axisSpliteLine) {
-                axisSpliteLine.showEqual(NO);
+            .splitLineEqual([PYAxisSplitLine initPYAxisSplitLineWithBlock:^(PYAxisSplitLine *axisSplitLine) {
+                axisSplitLine.showEqual(NO);
             }])
             .addDataArr(@[@"总费用",@"房租",@"水电费",@"交通费",@"伙食费",@"日用品数"]);
         }])

@@ -10,17 +10,17 @@
 
 @class PYColor, PYTextStyle, PYAxisLine, PYAxisLabel, PYAxisTick, PYLineStyle;
 
-@interface PYGaugeSpliteLine : NSObject
+@interface PYGaugeSplitLine : NSObject
 
 @property (nonatomic, assign) BOOL show;
 @property (nonatomic, strong) NSNumber *length;
 @property (nonatomic, strong) PYLineStyle *lineStyle;
 
-PYInitializerTemplate(PYGaugeSpliteLine, spliteLine);
+PYInitializerTemplate(PYGaugeSplitLine, splitLine);
 
-PYPropertyEqualTemplate(PYGaugeSpliteLine, BOOL, show);
-PYPropertyEqualTemplate(PYGaugeSpliteLine, NSNumber *, length);
-PYPropertyEqualTemplate(PYGaugeSpliteLine, PYLineStyle *, lineStyle);
+PYPropertyEqualTemplate(PYGaugeSplitLine, BOOL, show);
+PYPropertyEqualTemplate(PYGaugeSplitLine, NSNumber *, length);
+PYPropertyEqualTemplate(PYGaugeSplitLine, PYLineStyle *, lineStyle);
 
 @end
 
@@ -111,7 +111,7 @@ PYPropertyEqualTemplate(PYGaugeTitle, PYTextStyle *, textStyle);
 @property (nonatomic, strong) PYAxisLine *axisLine;
 @property (nonatomic, strong) PYAxisTick *axisTick;
 @property (nonatomic, strong) PYAxisLabel *axisLabel;
-@property (nonatomic, strong) PYGaugeSpliteLine *splitLine;
+@property (nonatomic, strong) PYGaugeSplitLine *splitLine;
 @property (nonatomic, strong) PYGaugePointer *pointer;
 @property (nonatomic, strong) PYGaugeTitle *title;
 @property (nonatomic, strong) PYGaugeDetail *detail;
@@ -129,7 +129,7 @@ PYPropertyEqualTemplate(PYGaugeSeries, NSNumber *, splitNumber);
 PYPropertyEqualTemplate(PYGaugeSeries, PYAxisLine *, axisLine);
 PYPropertyEqualTemplate(PYGaugeSeries, PYAxisTick *, axisTick);
 PYPropertyEqualTemplate(PYGaugeSeries, PYAxisLabel *, axisLabel);
-PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeSpliteLine *, splitLine);
+PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeSplitLine *, splitLine);
 PYPropertyEqualTemplate(PYGaugeSeries, PYGaugePointer *, pointer);
 PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeTitle *, title);
 PYPropertyEqualTemplate(PYGaugeSeries, PYGaugeDetail *, detail);

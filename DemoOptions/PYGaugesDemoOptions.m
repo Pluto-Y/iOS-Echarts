@@ -42,8 +42,8 @@
                     .typeEqual(PYLineStyleTypeSolid);
                 }]);
             }])
-            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
-                spliteLine.lengthEqual(@20);
+            .splitLineEqual([PYGaugeSplitLine initPYGaugeSplitLineWithBlock:^(PYGaugeSplitLine *splitLine) {
+                splitLine.lengthEqual(@20);
             }])
             .detailEqual([PYGaugeDetail initPYGaugeDetailWithBlock:^(PYGaugeDetail *detail) {
                 detail.formatterEqual(@"{value}%");
@@ -94,8 +94,8 @@
                     textStyle.colorEqual(@"auto");
                 }]);
             }])
-            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
-                spliteLine.showEqual(YES)
+            .splitLineEqual([PYGaugeSplitLine initPYGaugeSplitLineWithBlock:^(PYGaugeSplitLine *splitLine) {
+                splitLine.showEqual(YES)
                 .lengthEqual(@20)
                 .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
                     lineStyle.colorEqual(@"auto");
@@ -225,8 +225,8 @@
                     lineStyle.colorEqual(@"auto");
                 }]);
             }])
-            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
-                spliteLine.lengthEqual(@20);
+            .splitLineEqual([PYGaugeSplitLine initPYGaugeSplitLineWithBlock:^(PYGaugeSplitLine *splitLine) {
+                splitLine.lengthEqual(@20);
             }])
             .titleEqual([PYGaugeTitle initPYGaugeTitleWithBlock:^(PYGaugeTitle *title) {
                 title.offsetCenterEqual(@[@"0", @"-35%"])
@@ -264,8 +264,8 @@
                     lineStyle.colorEqual(@"auto");
                 }]);
             }])
-            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
-                spliteLine.lengthEqual(@20)
+            .splitLineEqual([PYGaugeSplitLine initPYGaugeSplitLineWithBlock:^(PYGaugeSplitLine *splitLine) {
+                splitLine.lengthEqual(@20)
                 .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
                     lineStyle.colorEqual(@"auto");
                 }]);
@@ -315,8 +315,8 @@
             .axisLabelEqual([PYAxisLabel initPYAxisLabelWithBlock:^(PYAxisLabel *axisLabel) {
                 axisLabel.formatterEqual(@"(function(v){switch (v + \'\') {case \'0\' : return \'E\';case \'1\' : return \'Gas\';case \'2\' : return \'F\';}})");
             }])
-            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
-                spliteLine.lengthEqual(@15)
+            .splitLineEqual([PYGaugeSplitLine initPYGaugeSplitLineWithBlock:^(PYGaugeSplitLine *splitLine) {
+                splitLine.lengthEqual(@15)
                 .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
                     lineStyle.colorEqual(@"auto");
                 }]);
@@ -359,8 +359,8 @@
             .axisLabelEqual([PYAxisLabel initPYAxisLabelWithBlock:^(PYAxisLabel *axisLabel) {
                 axisLabel.formatterEqual(@"(function(v){switch (v + \'\') {case \'0\' : return \'H\';case \'1\' : return \'Water\';case \'2\' : return \'C\';}})");
             }])
-            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
-                spliteLine.lengthEqual(@15)
+            .splitLineEqual([PYGaugeSplitLine initPYGaugeSplitLineWithBlock:^(PYGaugeSplitLine *splitLine) {
+                splitLine.lengthEqual(@15)
                 .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
                     lineStyle.colorEqual(@"auto");
                 }]);
@@ -429,8 +429,8 @@
                     .shadowBlurEqual(@10);
                 }]);
             }])
-            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
-                spliteLine.lengthEqual(@10)
+            .splitLineEqual([PYGaugeSplitLine initPYGaugeSplitLineWithBlock:^(PYGaugeSplitLine *splitLine) {
+                splitLine.lengthEqual(@10)
                 .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
                     lineStyle.widthEqual(@3)
                     .colorEqual([PYColor colorWithHexString:@"#fff"])
@@ -502,8 +502,8 @@
                     lineStyle.colorEqual(@"auto");
                 }]);
             }])
-            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
-                spliteLine.lengthEqual(@10)
+            .splitLineEqual([PYGaugeSplitLine initPYGaugeSplitLineWithBlock:^(PYGaugeSplitLine *splitLine) {
+                splitLine.lengthEqual(@10)
                 .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
                     lineStyle.widthEqual(@3)
                     .colorEqual([PYColor colorWithHexString:@"#fff"])
@@ -575,8 +575,8 @@
                     .shadowColorEqual([PYColor colorWithHexString:@"#fff"]);
                 }]);
             }])
-            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
-                spliteLine.lengthEqual(@15)
+            .splitLineEqual([PYGaugeSplitLine initPYGaugeSplitLineWithBlock:^(PYGaugeSplitLine *splitLine) {
+                splitLine.lengthEqual(@15)
                 .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
                     lineStyle.widthEqual(@3)
                     .colorEqual([PYColor colorWithHexString:@"#fff"])
@@ -630,8 +630,8 @@
                     .colorEqual([PYColor colorWithHexString:@"#fff"]);
                 }]);
             }])
-            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
-                spliteLine.lengthEqual(@10)
+            .splitLineEqual([PYGaugeSplitLine initPYGaugeSplitLineWithBlock:^(PYGaugeSplitLine *splitLine) {
+                splitLine.lengthEqual(@10)
                 .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
                     lineStyle.widthEqual(@3)
                     .colorEqual([PYColor colorWithHexString:@"#fff"])
@@ -710,8 +710,8 @@
                     textStyle.colorEqual([PYColor colorWithHexString:@"#333"]);
                 }]);
             }])
-            .splitLineEqual([PYGaugeSpliteLine initPYGaugeSpliteLineWithBlock:^(PYGaugeSpliteLine *spliteLine) {
-                spliteLine.showEqual(YES)
+            .splitLineEqual([PYGaugeSplitLine initPYGaugeSplitLineWithBlock:^(PYGaugeSplitLine *splitLine) {
+                splitLine.showEqual(YES)
                 .lengthEqual(@30)
                 .lineStyleEqual([PYLineStyle initPYLineStyleWithBlock:^(PYLineStyle *lineStyle) {
                     lineStyle.colorEqual([PYColor colorWithHexString:@"#eee"])
