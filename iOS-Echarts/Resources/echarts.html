@@ -136,7 +136,11 @@
         myChart.un(name, echartViewAction);
     }
     function changeDataZoomRange(start, end) {
+        option = myChart.getOption();
+        option.dataZoom.start = start;
+        option.dataZoom.end = end;
         myChart.component.dataZoom.absoluteZoom({'start':start, 'end': end});
+        myChart.setOption(option, true);
     }
     </script>
 </head>
