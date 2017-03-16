@@ -37,12 +37,14 @@ ___
     * 将项目下的`iOS-Echarts`目录拷贝到项目中
     * `Remove References`移除js目录，然后通过`create floder references`的方式添加js目录
 
-*** 请确保js目录是蓝色的 ***
+⚠️  *** 请确保js目录是蓝色的 *** ⚠️ 
 
 在需要使用的地方引入`iOS-Echarts.h`即可。
 最后只需通过对图表的属性进行配置即可。
 
 至于其中的参数与文档可以参考上方的[Echart官网](http://echarts.baidu.com/echarts2/)中的文档进行查看与配置。
+
+> FAQ: 如果在引入之后又非常多的编译错误，可以参考 [预编译](http://www.jianshu.com/p/0e638bedb612) 的文章 
 
 # 用法
 
@@ -158,4 +160,3 @@ ___
 由于这个项目需要封装的内容有点多，希望有小伙伴一起来封装，有兴趣的小伙伴可以通过联系[@叫什么都都不如叫Pluto-Y](http://weibo.com/5690716723/info)来联系我。
 
 同时也欢迎加入QQ群485591970进行讨论。
-

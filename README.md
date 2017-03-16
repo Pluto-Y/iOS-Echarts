@@ -37,7 +37,7 @@ There are two ways to use iOS-Echarts in you project:
     * Second, `Remove references`the directory named 'js'
     * Finnaly, add the directory named 'js' by `create floder references`
 
-*** Please Be Sure The Color Of `js` Directory Is Blue. ***
+⚠️  *** Please Be Sure The Color Of `js` Directory Is Blue. *** ⚠️  
 
 You should import one header file in your project:`iOS-Echarts.h` when you will use it.
 Finally you just need to initialze the PYEchartsView and PYOption you need. 
@@ -107,12 +107,12 @@ option.addXAxis(//Something about PYAxis)
 
 ```
 .addSeries([PYCartesianSeries initPYCartesianSeriesWithBlock:^(PYCartesianSeries *series) {
-    series.stackEqual(@"总量")
+    series.stackEqual(@"Total")
     .smoothEqual(YES)
     .symbolEqual(PYSymbolArrow)
     .symbolSizeEqual(@6)
     .symbolRotateEqual(@(-45))
-    .nameEqual(@"直接访问")
+    .nameEqual(@"Data1")
     .typeEqual(PYSeriesTypeLine)
     .itemStyleEqual([PYItemStyle initPYItemStyleWithBlock:^(PYItemStyle *itemStyle) {
         itemStyle.normalEqual([PYItemStyleProp initPYItemStylePropWithBlock:^(PYItemStyleProp *normal) {
@@ -162,4 +162,3 @@ If you have QQ, you can join the group which number is 485591970.
 ___
 
 All source code is licensed under the MIT License.
-
