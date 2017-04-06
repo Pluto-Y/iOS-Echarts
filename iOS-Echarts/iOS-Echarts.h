@@ -61,3 +61,4 @@
 #import "PYNodeStyle.h"
 #import "PYLinkStyle.h"
 #import "PYPolar.h"
+#import "PYChordStyle.h"

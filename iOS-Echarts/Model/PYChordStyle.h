@@ -8,6 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
+@class PYColor;
+
 /**
  *
  *  You can goto this website for references:
@@ -17,15 +19,15 @@
 @interface PYChordStyle : NSObject
 
 @property (nonatomic, strong) NSNumber *width;
-@property (nonatomic, copy) NSString *color;
+@property (nonatomic, strong) PYColor *color;
 @property (nonatomic, copy) NSString *borderWidth;
-@property (nonatomic, copy) NSString *borderColor;
+@property (nonatomic, copy) PYColor *borderColor;
 
 PYInitializerTemplate(PYChordStyle, chordStyle);
 
 PYPropertyEqualTemplate(PYChordStyle, NSNumber *, width);
-PYPropertyEqualTemplate(PYChordStyle, NSString *, color);
+PYPropertyEqualTemplate(PYChordStyle, PYColor *, color);
 PYPropertyEqualTemplate(PYChordStyle, NSString *, borderWidth);
-PYPropertyEqualTemplate(PYChordStyle, NSString *, borderColor);
+PYPropertyEqualTemplate(PYChordStyle, PYColor *, borderColor);
 
 @end

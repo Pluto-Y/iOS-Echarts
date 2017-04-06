@@ -13,8 +13,8 @@
 PYInitializerImpTemplate(PYChordStyle);
 
 PYPropertyEqualImpTemplate(PYChordStyle, NSNumber *, width);
-PYPropertyEqualImpTemplate(PYChordStyle, NSString *, color);
+PYPropertyEqualImpTemplate(PYChordStyle, PYColor *, color);
 PYPropertyEqualImpTemplate(PYChordStyle, NSString *, borderWidth);
-PYPropertyEqualImpTemplate(PYChordStyle, NSString *, borderColor);
+PYPropertyEqualImpTemplate(PYChordStyle, PYColor *, borderColor);
 
 @end
