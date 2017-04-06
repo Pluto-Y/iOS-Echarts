@@ -35,9 +35,9 @@ ___
 * 通过`cocoapods`进行导入：`pod 'iOS-Echarts' `
 * 手动导入：
     * 将项目下的`iOS-Echarts`目录拷贝到项目中
-    * `Remove References`移除js目录，然后通过`create floder references`的方式添加js目录
+    * `Remove References`移除js和theme目录，然后通过`create floder references`的方式添加js目录
 
-⚠️  *** 请确保js目录是蓝色的 *** ⚠️ 
+⚠️  *** 请确保js和theme目录是蓝色的 *** ⚠️ 
 
 在需要使用的地方引入`iOS-Echarts.h`即可。
 最后只需通过对图表的属性进行配置即可。
