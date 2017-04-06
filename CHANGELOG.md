@@ -1,3 +1,16 @@
+1.4.4 Release notes (2017-04-06)
+===========================================================
+
+### Fixed
+* Fix the error type for the PYChordStyle
+
+### Added 
+* Add missing import in the framework header file
+
+### Updated
+* Update README.md files
+
+
 1.4.3 Release notes (2017-02-24)
 ===========================================================
 
