@@ -1,11 +1,11 @@
-# iOS- Echarts - A control build with echarts  
+# iOS- Echarts - A control build with ECharts 2  
 [中文文档](https://github.com/Pluto-Y/iOS-Echarts/tree/master/Doc) 
 
 [![Build Status](https://travis-ci.org/Pluto-Y/iOS-Echarts.svg)](https://travis-ci.org/Pluto-Y/iOS-Echarts)  [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/iOS-Echarts.svg)](https://img.shields.io/cocoapods/v/iOS-Echarts.svg)
 
 ____
 
-This is a highly custom chart control for iOS and Mac apps, which build with the Echart(Echart2). It just encapsulate the conrol of the javascript. It provides a chainable way of describing your configurations for the echarts.  It's convinient for foucing on the logic of the app and optimizing the code. It avoid diverting developers' mind on the interaction between javascript and Objective-C.
+This is a highly custom chart control for iOS and Mac apps, which build with the ECharts(ECharts 2). It just encapsulate the conrol of the javascript. It provides a chainable way of describing your configurations for the echarts.  It's convinient for foucing on the logic of the app and optimizing the code. It avoid diverting developers' mind on the interaction between javascript and Objective-C.
 
 > Tips: If you want to use even iOS8.0, I suggest you use `WKEchartsView` which is based on `WKWebView`. The interface of `WKEchartsView` is same as `PYEchartsView`, so if you are using `PYEchartsView`, you just change `PYEchartsView` into `WKEchartsView`.
 
@@ -16,13 +16,13 @@ Pull requests are warmly welcome as well.
 
 ![screen-shot](https://raw.githubusercontent.com/Pluto-Y/iOS-Echarts/master/Doc/Demos.gif) ![screen-shot](https://raw.githubusercontent.com/Pluto-Y/iOS-Echarts/master/Doc/Demos1.gif)
 
-# Echarts Informations
+# ECharts Informations
 
 ___
 
-[Echarts Github](https://github.com/ecomfe/echarts)
+[ECharts Github](https://github.com/ecomfe/echarts)
 
-[Echarts WebSite(English)](http://echarts.baidu.com/echarts2/index-en.html)
+[ECharts WebSite(English)](http://echarts.baidu.com/echarts2/index-en.html)
 
 
 # Installation
