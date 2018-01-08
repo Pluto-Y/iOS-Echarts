@@ -45,7 +45,6 @@ PYPropertyEqualImpTemplate(PYLabelLine, PYLineStyle *, lineStyle);
     if (self) {
         _show = YES;
         _rotate = NO;
-        _distance = @(10);
     }
     return self;
 }
