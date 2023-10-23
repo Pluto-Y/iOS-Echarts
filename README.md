@@ -5,7 +5,7 @@
 
 ____
 
-This is a highly custom chart control for iOS and Mac apps, which build with the Echart(Echart2). It just encapsulate the conrol of the javascript. It provides a chainable way of describing your configurations for the echarts.  It's convinient for foucing on the logic of the app and optimizing the code. It avoid diverting developers' mind on the interaction between javascript and Objective-C.
+This is a highly custom chart control for iOS and Mac apps, which build with the Echart(Echart2). It just encapsulate the conrol of the javascript. It provides a chainable way of describing your configurations for the echarts.  It's convenient for focusing on the logic of the app and optimizing the code. It avoid diverting developers' mind on the interaction between javascript and Objective-C.
 
 > Tips: If you want to use even iOS8.0, I suggest you use `WKEchartsView` which is based on `WKWebView`. The interface of `WKEchartsView` is same as `PYEchartsView`, so if you are using `PYEchartsView`, you just change `PYEchartsView` into `WKEchartsView`.
 
@@ -35,12 +35,12 @@ There are two ways to use iOS-Echarts in you project:
 * Manually:
     * First, copying all the files into you project
     * Second, `Remove references`the directory named 'js'
-    * Finnaly, add the directory named 'js' and 'theme' by `create floder references`
+    * Finally, add the directory named 'js' and 'theme' by `create floder references`
 
 ⚠️  *** Please Be Sure The Color Of `js` and `theme` Directory Is Blue. *** ⚠️  
 
 You should import one header file in your project:`iOS-Echarts.h` when you will use it.
-Finally you just need to initialze the PYEchartsView and PYOption you need. 
+Finally you just need to initialize the PYEchartsView and PYOption you need. 
 
 If you don't know how to set the right value for the option, you can check the documents in the [EChart Website](http://echarts.baidu.com/echarts2/).
 
@@ -128,7 +128,7 @@ option.addXAxis(//Something about PYAxis)
 }])
 ```
 
-The `PYCartesianSeries` is subclass of `PYSeries`, and `stack`, `smooth`, `symbol`, `symbolSize` and `symbol` are the properties of `PYCartesianSeries`. So you should assign them before the properies of `PYSeries`.
+The `PYCartesianSeries` is subclass of `PYSeries`, and `stack`, `smooth`, `symbol`, `symbolSize` and `symbol` are the properties of `PYCartesianSeries`. So you should assign them before the properties of `PYSeries`.
 
 ### You also can assign all values one by one:
 
@@ -141,7 +141,7 @@ PYEventRiverSeries *series1 = [PYEventRiverSeries initPYEventRiverSeriesWithBloc
 }];
 ```
 
-### All propertis can use `init[Type]WithBlock` for creation:
+### All properties can use `init[Type]WithBlock` for creation:
 
 ```
 PYAxis *axis = [PYAxis initPYAxisWithBlock:^(PYAxis *axis) {
